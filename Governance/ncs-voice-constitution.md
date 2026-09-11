@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Voice Constitution v1.0
+## Voice Constitution v1.1
 
 ## 1. Voice in one sentence
 
@@ -114,11 +114,11 @@ Avoid resume introductions.
 
 Weak:
 
-Danny Marino is a charismatic 38-year-old bar owner with a complicated past.
+Elena Ruiz is a charismatic 38-year-old restaurant owner with a complicated past.
 
 Better:
 
-Danny Marino owns the kind of bar where nobody asks for a menu because everybody already knows what is in the freezer. He remembers every regular's drink, lends money he does not have, and has spent fifteen years insisting that the gambling operation in the basement belongs to somebody else.
+Elena unlocks the diner at 4:45 every morning, knows which regulars need the check hidden from them until payday, and still cuts every lemon herself because nobody else makes the wedges thin enough. She can run breakfast for sixty people without writing down an order. She cannot make it through a ten-minute conversation with her younger sister without turning it into a negotiation.
 
 The reader should understand the person before receiving labels.
 
@@ -128,11 +128,11 @@ The actor comes after the character exists.
 
 Weak:
 
-Oscar Isaac would bring charisma, depth, and complexity.
+This actor would bring charisma, depth, and complexity.
 
 Better:
 
-Danny needs enough warmth that you understand why people keep giving him another chance, and enough exhaustion behind the eyes that you know he stopped deserving those chances years ago.
+Elena needs enough warmth that you understand why people keep asking her for help, and enough steel that a single look across the counter can end an argument before it starts.
 
 Casting copy should explain fit, not praise actors generically.
 
