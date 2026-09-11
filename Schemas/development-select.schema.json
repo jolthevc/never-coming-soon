@@ -2,77 +2,305 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Never Coming Soon Development Select",
   "type": "object",
-  "required": ["decisions"],
+  "required": [
+    "decisions"
+  ],
   "properties": {
     "decisions": {
       "type": "array",
+      "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["idea_id", "status", "rationale", "development_packet"],
+        "required": [
+          "idea_id",
+          "status",
+          "rationale",
+          "development_packet"
+        ],
         "properties": {
-          "idea_id": {"type": "string"},
-          "status": {"type": "string", "enum": ["DEVELOPMENT_SELECT", "PROMISING", "HOLD"]},
-          "rationale": {"type": "string"},
+          "idea_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "DEVELOPMENT_SELECT",
+              "PROMISING",
+              "HOLD"
+            ]
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          },
           "development_packet": {
             "anyOf": [
-              {"type": "null"},
+              {
+                "type": "null"
+              },
               {
                 "type": "object",
                 "required": [
                   "idea_id",
                   "working_title",
-                  "working_title_is_provisional",
                   "format",
-                  "format_is_provisional",
                   "genre",
                   "premise",
                   "creative_kernel",
                   "why_exciting",
+                  "short_pitch",
+                  "creative_context",
                   "emotional_promise",
                   "genre_promise",
                   "promising_human_material",
                   "promising_story_material",
+                  "development_questions",
                   "avoid",
-                  "creative_freedom",
                   "handoff_instruction"
                 ],
                 "properties": {
-                  "idea_id": {"type": "string"},
-                  "working_title": {"type": "string"},
-                  "working_title_is_provisional": {"type": "boolean"},
-                  "format": {"type": "string", "enum": ["FILM", "SERIES", "LIMITED_SERIES"]},
-                  "format_is_provisional": {"type": "boolean"},
-                  "genre": {"type": "string"},
-                  "premise": {"type": "string"},
-                  "creative_kernel": {"type": "string"},
-                  "why_exciting": {"type": "string"},
-                  "emotional_promise": {"type": "string"},
-                  "genre_promise": {"type": "string"},
-                  "promising_human_material": {"type": "object"},
-                  "promising_story_material": {"type": "object"},
-                  "avoid": {"type": "array", "items": {"type": "string"}},
-                  "creative_freedom": {
+                  "idea_id": {
+                    "type": "string"
+                  },
+                  "working_title": {
+                    "type": "string"
+                  },
+                  "format": {
+                    "type": "string",
+                    "enum": [
+                      "FILM",
+                      "SERIES",
+                      "LIMITED_SERIES"
+                    ]
+                  },
+                  "genre": {
+                    "type": "string"
+                  },
+                  "premise": {
+                    "type": "string"
+                  },
+                  "creative_kernel": {
+                    "type": "string"
+                  },
+                  "why_exciting": {
+                    "type": "string"
+                  },
+                  "creative_context": {
                     "type": "object",
-                    "required": ["title_may_change", "characters_may_change", "plot_may_change", "setting_may_change", "ending_may_change", "format_may_change", "casting_may_change"],
+                    "required": [
+                      "secondary_genre",
+                      "arena",
+                      "tone",
+                      "era",
+                      "setting",
+                      "scale",
+                      "audience",
+                      "narrative_engine"
+                    ],
                     "properties": {
-                      "title_may_change": {"const": true},
-                      "characters_may_change": {"const": true},
-                      "plot_may_change": {"const": true},
-                      "setting_may_change": {"const": true},
-                      "ending_may_change": {"const": true},
-                      "format_may_change": {"const": true},
-                      "casting_may_change": {"const": true}
+                      "secondary_genre": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "arena": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "tone": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "era": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "setting": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "scale": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "audience": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "narrative_engine": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
                     },
                     "additionalProperties": false
                   },
-                  "handoff_instruction": {"type": "string"}
+                  "emotional_promise": {
+                    "type": "string"
+                  },
+                  "genre_promise": {
+                    "type": "string"
+                  },
+                  "promising_human_material": {
+                    "type": "object",
+                    "required": [
+                      "protagonist",
+                      "central_relationship",
+                      "supporting_possibilities"
+                    ],
+                    "properties": {
+                      "protagonist": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "central_relationship": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "supporting_possibilities": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "maxItems": 5
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "promising_story_material": {
+                    "type": "object",
+                    "required": [
+                      "possible_setup",
+                      "possible_directions",
+                      "signature_scene_seeds",
+                      "format_opportunity",
+                      "recurring_engine",
+                      "season_one_possibility",
+                      "ending_possibility"
+                    ],
+                    "properties": {
+                      "possible_setup": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "possible_directions": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "maxItems": 4
+                      },
+                      "signature_scene_seeds": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        },
+                        "maxItems": 4
+                      },
+                      "recurring_engine": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "season_one_possibility": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "ending_possibility": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "format_opportunity": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "additionalProperties": false
+                  },
+                  "development_questions": {
+                    "type": "array",
+                    "maxItems": 5,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "avoid": {
+                    "type": "array",
+                    "maxItems": 4,
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "handoff_instruction": {
+                    "type": "string",
+                    "const": "Preserve or improve the creative kernel. Treat every other element as provisional. Generation owns the actual storytelling and may change the title, format, characters, relationships, setting, plot, scenes, ending, casting, and any other developmental choice if the result is better."
+                  },
+                  "short_pitch": {
+                    "type": "string"
+                  }
                 },
                 "additionalProperties": false
               }
             ]
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "DEVELOPMENT_SELECT"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "then": {
+              "properties": {
+                "development_packet": {
+                  "type": "object"
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "development_packet": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        ]
       }
     }
   },
