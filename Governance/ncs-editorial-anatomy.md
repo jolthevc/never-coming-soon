@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Editorial Anatomy v1.0
+## Editorial Anatomy v1.1
 
 ## 1. Governing principle
 
