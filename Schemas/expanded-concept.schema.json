@@ -15,39 +15,254 @@
     "characters",
     "story_core",
     "signature_scenes",
-    "interrogation"
+    "interrogation",
+    "normalized_signature"
   ],
   "properties": {
-    "idea_id": {"type": "string"},
-    "working_title": {"type": "string"},
-    "format": {"type": "string", "enum": ["FILM", "SERIES", "LIMITED_SERIES"]},
-    "genre": {"type": "string"},
-    "creative_tags": {"type": "object"},
-    "premise": {"type": "string"},
-    "creative_kernel": {"type": "string"},
-    "why_exciting": {"type": "string"},
-    "short_pitch": {"type": "string"},
+    "idea_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "working_title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "format": {
+      "type": "string",
+      "enum": [
+        "FILM",
+        "SERIES",
+        "LIMITED_SERIES"
+      ]
+    },
+    "genre": {
+      "type": "string",
+      "minLength": 1
+    },
+    "creative_tags": {
+      "type": "object",
+      "required": [
+        "secondary_genre",
+        "arena",
+        "tone",
+        "era",
+        "setting",
+        "scale",
+        "audience",
+        "narrative_engine"
+      ],
+      "properties": {
+        "secondary_genre": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "arena": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tone": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "era": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "setting": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scale": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "audience": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "narrative_engine": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "premise": {
+      "type": "string",
+      "minLength": 1
+    },
+    "creative_kernel": {
+      "type": "string",
+      "minLength": 1
+    },
+    "why_exciting": {
+      "type": "string",
+      "minLength": 1
+    },
+    "short_pitch": {
+      "type": "string",
+      "minLength": 1
+    },
     "characters": {
       "type": "object",
-      "required": ["protagonist", "central_relationship", "supporting"],
+      "required": [
+        "protagonist",
+        "central_relationship",
+        "supporting"
+      ],
       "properties": {
-        "protagonist": {"type": "object"},
-        "central_relationship": {"type": "object"},
-        "supporting": {"type": "array"}
+        "protagonist": {
+          "type": "object",
+          "required": [
+            "name",
+            "core",
+            "desire",
+            "contradiction"
+          ],
+          "properties": {
+            "name": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "core": {
+              "type": "string",
+              "minLength": 1
+            },
+            "desire": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "contradiction": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "central_relationship": {
+          "type": "object",
+          "required": [
+            "with",
+            "dynamic"
+          ],
+          "properties": {
+            "with": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "dynamic": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "supporting": {
+          "type": "array",
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "required": [
+              "name",
+              "core"
+            ],
+            "properties": {
+              "name": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "core": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
       },
       "additionalProperties": false
     },
     "story_core": {
       "type": "object",
-      "required": ["possible_setup", "dramatic_question", "possible_escalations", "possible_climax_direction", "possible_ending_direction", "tv_engine", "season_one_direction"],
+      "required": [
+        "possible_setup",
+        "dramatic_question",
+        "possible_escalations",
+        "possible_climax_direction",
+        "possible_ending_direction",
+        "tv_engine",
+        "season_one_direction"
+      ],
       "properties": {
-        "possible_setup": {"type": ["string", "null"]},
-        "dramatic_question": {"type": ["string", "null"]},
-        "possible_escalations": {"type": "array", "items": {"type": "string"}},
-        "possible_climax_direction": {"type": ["string", "null"]},
-        "possible_ending_direction": {"type": ["string", "null"]},
-        "tv_engine": {"type": ["string", "null"]},
-        "season_one_direction": {"type": ["string", "null"]}
+        "possible_setup": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "dramatic_question": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "possible_escalations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "possible_climax_direction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "possible_ending_direction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tv_engine": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "season_one_direction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       },
       "additionalProperties": false
     },
@@ -55,19 +270,130 @@
       "type": "array",
       "minItems": 2,
       "maxItems": 4,
-      "items": {"type": "string"}
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
     },
     "interrogation": {
       "type": "object",
-      "required": ["human_anchor", "possible_story_directions", "scenes_that_appear_naturally", "obvious_bad_version", "creative_opportunity", "format_note", "open_questions"],
+      "required": [
+        "human_anchor",
+        "possible_story_directions",
+        "scenes_that_appear_naturally",
+        "obvious_bad_version",
+        "creative_opportunity",
+        "format_note",
+        "open_questions"
+      ],
       "properties": {
-        "human_anchor": {"type": ["string", "null"]},
-        "possible_story_directions": {"type": "array", "items": {"type": "string"}},
-        "scenes_that_appear_naturally": {"type": "array", "items": {"type": "string"}},
-        "obvious_bad_version": {"type": ["string", "null"]},
-        "creative_opportunity": {"type": ["string", "null"]},
-        "format_note": {"type": ["string", "null"]},
-        "open_questions": {"type": "array", "items": {"type": "string"}}
+        "human_anchor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "possible_story_directions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "scenes_that_appear_naturally": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "obvious_bad_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "creative_opportunity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "format_note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "open_questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "normalized_signature": {
+      "type": "object",
+      "required": [
+        "format",
+        "genre",
+        "arena",
+        "protagonist_archetype",
+        "central_relationship",
+        "core_situation",
+        "story_engine",
+        "setting"
+      ],
+      "properties": {
+        "format": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "genre": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "arena": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "protagonist_archetype": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "central_relationship": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "core_situation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "story_engine": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "setting": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       },
       "additionalProperties": false
     }
