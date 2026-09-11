@@ -1,25 +1,119 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Never Coming Soon Duplicate Audit",
+  "title": "Never Coming Soon Duplicate Audit Batch",
   "type": "object",
-  "required": ["idea_id", "status", "similar_ideas", "judgment"],
+  "required": [
+    "results"
+  ],
   "properties": {
-    "idea_id": {"type": "string"},
-    "status": {"type": "string", "enum": ["CLEAR", "OVERLAP", "DUPLICATE"]},
-    "similar_ideas": {
+    "results": {
       "type": "array",
+      "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["idea_id", "similarity", "reason"],
+        "required": [
+          "idea_id",
+          "status",
+          "duplicate_of",
+          "similar_ideas",
+          "judgment"
+        ],
         "properties": {
-          "idea_id": {"type": "string"},
-          "similarity": {"type": "string", "enum": ["LOW", "MEDIUM", "HIGH"]},
-          "reason": {"type": "string"}
+          "idea_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "CLEAR",
+              "OVERLAP",
+              "DUPLICATE"
+            ]
+          },
+          "duplicate_of": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "minLength": 1
+          },
+          "similar_ideas": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "idea_id",
+                "source",
+                "similarity",
+                "reason"
+              ],
+              "properties": {
+                "idea_id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source": {
+                  "type": "string",
+                  "enum": [
+                    "CATALOG",
+                    "CURRENT_BATCH"
+                  ]
+                },
+                "similarity": {
+                  "type": "string",
+                  "enum": [
+                    "LOW",
+                    "MEDIUM",
+                    "HIGH"
+                  ]
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "additionalProperties": false
+            },
+            "maxItems": 5
+          },
+          "judgment": {
+            "type": "string",
+            "minLength": 1
+          }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "DUPLICATE"
+                }
+              },
+              "required": [
+                "status"
+              ]
+            },
+            "then": {
+              "properties": {
+                "duplicate_of": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "duplicate_of": {
+                  "type": "null"
+                }
+              }
+            }
+          }
+        ]
       }
-    },
-    "judgment": {"type": "string"}
+    }
   },
   "additionalProperties": false
 }
