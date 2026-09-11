@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Never Coming Soon Expanded Concept",
+  "type": "object",
+  "required": [
+    "idea_id",
+    "working_title",
+    "format",
+    "genre",
+    "creative_tags",
+    "premise",
+    "creative_kernel",
+    "why_exciting",
+    "short_pitch",
+    "characters",
+    "story_core",
+    "signature_scenes",
+    "interrogation"
+  ],
+  "properties": {
+    "idea_id": {"type": "string"},
+    "working_title": {"type": "string"},
+    "format": {"type": "string", "enum": ["FILM", "SERIES", "LIMITED_SERIES"]},
+    "genre": {"type": "string"},
+    "creative_tags": {"type": "object"},
+    "premise": {"type": "string"},
+    "creative_kernel": {"type": "string"},
+    "why_exciting": {"type": "string"},
+    "short_pitch": {"type": "string"},
+    "characters": {
+      "type": "object",
+      "required": ["protagonist", "central_relationship", "supporting"],
+      "properties": {
+        "protagonist": {"type": "object"},
+        "central_relationship": {"type": "object"},
+        "supporting": {"type": "array"}
+      },
+      "additionalProperties": false
+    },
+    "story_core": {
+      "type": "object",
+      "required": ["possible_setup", "dramatic_question", "possible_escalations", "possible_climax_direction", "possible_ending_direction", "tv_engine", "season_one_direction"],
+      "properties": {
+        "possible_setup": {"type": ["string", "null"]},
+        "dramatic_question": {"type": ["string", "null"]},
+        "possible_escalations": {"type": "array", "items": {"type": "string"}},
+        "possible_climax_direction": {"type": ["string", "null"]},
+        "possible_ending_direction": {"type": ["string", "null"]},
+        "tv_engine": {"type": ["string", "null"]},
+        "season_one_direction": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "signature_scenes": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "items": {"type": "string"}
+    },
+    "interrogation": {
+      "type": "object",
+      "required": ["human_anchor", "possible_story_directions", "scenes_that_appear_naturally", "obvious_bad_version", "creative_opportunity", "format_note", "open_questions"],
+      "properties": {
+        "human_anchor": {"type": ["string", "null"]},
+        "possible_story_directions": {"type": "array", "items": {"type": "string"}},
+        "scenes_that_appear_naturally": {"type": "array", "items": {"type": "string"}},
+        "obvious_bad_version": {"type": ["string", "null"]},
+        "creative_opportunity": {"type": ["string", "null"]},
+        "format_note": {"type": ["string", "null"]},
+        "open_questions": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
