@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Never Coming Soon Development Select",
+  "type": "object",
+  "required": ["decisions"],
+  "properties": {
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["idea_id", "status", "rationale", "development_packet"],
+        "properties": {
+          "idea_id": {"type": "string"},
+          "status": {"type": "string", "enum": ["DEVELOPMENT_SELECT", "PROMISING", "HOLD"]},
+          "rationale": {"type": "string"},
+          "development_packet": {
+            "anyOf": [
+              {"type": "null"},
+              {
+                "type": "object",
+                "required": [
+                  "idea_id",
+                  "working_title",
+                  "working_title_is_provisional",
+                  "format",
+                  "format_is_provisional",
+                  "genre",
+                  "premise",
+                  "creative_kernel",
+                  "why_exciting",
+                  "emotional_promise",
+                  "genre_promise",
+                  "promising_human_material",
+                  "promising_story_material",
+                  "avoid",
+                  "creative_freedom",
+                  "handoff_instruction"
+                ],
+                "properties": {
+                  "idea_id": {"type": "string"},
+                  "working_title": {"type": "string"},
+                  "working_title_is_provisional": {"type": "boolean"},
+                  "format": {"type": "string", "enum": ["FILM", "SERIES", "LIMITED_SERIES"]},
+                  "format_is_provisional": {"type": "boolean"},
+                  "genre": {"type": "string"},
+                  "premise": {"type": "string"},
+                  "creative_kernel": {"type": "string"},
+                  "why_exciting": {"type": "string"},
+                  "emotional_promise": {"type": "string"},
+                  "genre_promise": {"type": "string"},
+                  "promising_human_material": {"type": "object"},
+                  "promising_story_material": {"type": "object"},
+                  "avoid": {"type": "array", "items": {"type": "string"}},
+                  "creative_freedom": {
+                    "type": "object",
+                    "required": ["title_may_change", "characters_may_change", "plot_may_change", "setting_may_change", "ending_may_change", "format_may_change", "casting_may_change"],
+                    "properties": {
+                      "title_may_change": {"const": true},
+                      "characters_may_change": {"const": true},
+                      "plot_may_change": {"const": true},
+                      "setting_may_change": {"const": true},
+                      "ending_may_change": {"const": true},
+                      "format_may_change": {"const": true},
+                      "casting_may_change": {"const": true}
+                    },
+                    "additionalProperties": false
+                  },
+                  "handoff_instruction": {"type": "string"}
+                },
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}
