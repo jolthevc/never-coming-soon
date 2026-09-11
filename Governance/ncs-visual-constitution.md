@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Visual Constitution v1.0
+## Visual Constitution v1.1
 
 ## 1. Visual north star
 
@@ -64,45 +64,49 @@ Directional usage across house-branded surfaces:
 - Reel Orange: roughly 10 percent
 - Electric Cobalt: roughly 5 percent
 
+These percentages are directional, not layout rules.
+
 The productions themselves may use any colors appropriate to their worlds.
 
-## 5. Typography
+## 5. Typography status
 
-### House display
+Do not treat a standard font family as locked brand governance yet.
 
-Archivo Narrow, Bold or ExtraBold.
+The approved logo establishes an elegant, high-contrast serif personality for the master studio identity, but the broader house typography system remains open until it is intentionally finalized.
 
-Use for large hooks, metadata moments, studio labels, and house typography when the production does not require a bespoke title treatment.
+Until then, typography should follow these behaviors:
 
-### House sans
+- strong editorial hierarchy
+- high legibility
+- premium but accessible character
+- clean functional sans-serif treatment for metadata when useful
+- expressive serif treatment for editorial prose when useful
+- production-specific title typography whenever the fictional production benefits from it
 
-Archivo, Regular through Bold.
-
-Use for metadata, navigation, labels, captions, names, and functional information.
-
-### Editorial serif
-
-Newsreader, Regular through Medium, including italics.
-
-Use for body prose, character descriptions, episode descriptions, pull quotes, and narrative copy.
+Do not let temporary implementation fonts become permanent brand law by accident.
 
 ## 6. Logo
 
-The approved primary logo is the custom retro-cinematic Never Coming Soon lockup using navy, orange, and cream.
+The approved master direction is the custom retro-cinematic Never Coming Soon lockup using warm cream, deep navy, and bright orange, with the elegant serif wordmark, orange reel detail, line frame, star, and slogan treatment.
 
-The logo artwork is treated as a fixed brand asset. Do not attempt to recreate it from a standard typeface.
+The logo artwork is a fixed brand asset. Do not attempt to recreate it from a standard typeface.
 
-Required practical variants:
+Current priority lockups are:
 
-- horizontal with tagline
-- horizontal without tagline
-- square / stacked with tagline
-- square / stacked without tagline
-- compact NCS mark
+- horizontal master logo
+- square / stacked master logo
+
+Useful production variants may include:
+
+- tagline-free horizontal
+- tagline-free square
 - dark-background treatment
-- cream-background treatment
+- transparent treatment
 - one-color navy
 - one-color cream / white
+- a compact mark if and when one is explicitly approved
+
+Only approved exported assets should be treated as canonical.
 
 ## 7. Production title treatment
 
@@ -154,6 +158,8 @@ Use contrast between imagery, quiet editorial pages, artifacts, and house cards.
 
 Visual rhythm should mirror prose rhythm.
 
+A carousel should feel like a miniature trailer in stills, not a repeated template with different copy.
+
 ## 11. Character imagery
 
 Default rule:
@@ -162,18 +168,25 @@ Default rule:
 
 Do not create mandatory character portraits.
 
+Use explicit character imagery only when costume, creature design, transformation, animation, or another visual fact materially benefits from it.
+
 ## 12. End card
 
 The end card should become one of the brand's most recognizable surfaces.
 
-Preferred structure:
+A recurring line such as:
 
-- Midnight Navy background
-- small Reel Orange NCS mark
-- large Warm Ivory typography
-- a recurring line such as "UNFORTUNATELY, YOU CAN'T WATCH IT."
-- secondary copy such as "You can read the whole thing."
-- slogan and CTA
+**UNFORTUNATELY, YOU CAN'T WATCH IT.**
+
+can anchor the joke.
+
+Secondary language such as:
+
+**You can read the whole thing.**
+
+can carry the CTA.
+
+The end card may use navy or cream depending on the preceding visual rhythm. Do not force one inversion onto every production.
 
 ## 13. Avoid cinema cliches
 
@@ -181,15 +194,17 @@ Do not rely on constant film reels, sprocket holes, clapperboards, projector ico
 
 The fact that the brand is about movies should come from the movies.
 
+The approved reel detail inside the logo is an intentional brand asset, not permission to repeat reel imagery everywhere else.
+
 ## 14. Final visual test
 
 Ask:
 
-- Does this feel cinematic?
-- Does this feel contemporary?
+- Does this create anticipation?
+- Does this feel like real promotional art rather than generic concept art?
 - Does the production still have its own personality?
 - Is NCS recognizable without dominating?
 - Is there enough breathing room?
 - Does this make the imaginary production feel more real?
 
-If not, simplify.
+If not, simplify or rethink the visual choice.
