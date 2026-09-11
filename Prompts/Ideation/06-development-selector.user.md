@@ -1,10 +1,16 @@
 EXPANDED CONCEPTS
 {{expanded_concepts_json}}
 
-Recent catalog context:
+Latest duplicate audits:
+{{duplicate_audits_json}}
+
+Compact catalog context:
 {{catalog_context_json}}
 
-Human priorities, if any:
+Human notes by idea, if any:
+{{human_notes_by_idea_json}}
+
+Human direction for this run, if any:
 {{human_direction}}
 
-Choose the strongest concepts for development and create Development Packets for selected ideas. Return only valid JSON matching the development-select schema.
+Select every concept that genuinely deserves a Generation attempt. Do not impose an artificial quota. Return only valid JSON matching the development-select schema.
