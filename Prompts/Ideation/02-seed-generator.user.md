@@ -1,4 +1,4 @@
-RUN CONTEXT
+CREATIVE ROOM
 
 Ideation mode:
 {{ideation_mode}}
@@ -6,16 +6,13 @@ Ideation mode:
 Director provocation:
 {{provocation}}
 
+Director creative permission:
+{{creative_permission}}
+
 Requested seed count:
 {{count}}
-
-Catalog observations:
-{{catalog_observations_json}}
-
-Relevant prior concepts to avoid recreating:
-{{relevant_ideas_json}}
 
 Human direction, if any:
 {{human_direction}}
 
-Generate the requested number of concepts. Return only valid JSON matching the seed batch schema.
+Generate exactly the requested number of strong, materially distinct seeds. Work from this room rather than from historical NCS concepts. Return only valid JSON matching the seed-batch schema.
