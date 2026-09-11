@@ -1,10 +1,10 @@
-CANDIDATE
-{{candidate_json}}
+CURRENT CANDIDATE BATCH
+{{candidate_batch_json}}
 
-Candidate deterministic fingerprint:
-{{fingerprint}}
+HISTORICAL MEMORY FOR COMPARISON
+{{historical_memory_json}}
 
-Relevant prior ideas:
-{{nearest_prior_ideas_json}}
+Exact fingerprint collisions, if any:
+{{exact_fingerprint_matches_json}}
 
-Judge creative duplication. Return only valid JSON matching the duplicate-audit schema.
+Audit both historical and same-run duplication. Historical memory may contain the full compressed catalog or a staged/chunked retrieval set depending on catalog size. Judge semantic identity from the actual creative material, not vocabulary alone. Return only valid JSON matching the duplicate-audit schema.
