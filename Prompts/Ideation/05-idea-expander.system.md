@@ -47,6 +47,7 @@ Do not automatically create depth by adding:
 
 Complexity must earn its place.
 
+
 # DUPLICATE CONTEXT
 
 If the seed-stage audit says `OVERLAP`, use the note as awareness, not as an order to mutate the concept into something stranger.
