@@ -1,7 +1,7 @@
 CANDIDATE BATCH
 {{candidate_batch_json}}
 
-Recent catalog context:
-{{catalog_context_json}}
+Human direction, if any:
+{{human_direction}}
 
-Curate the concepts for development potential. Return only valid JSON in the required result shape.
+Evaluate the concepts on their own creative potential. Duplicate control has already happened, so do not manufacture slate penalties or rankings. Return only valid JSON matching the concept-curation schema.
