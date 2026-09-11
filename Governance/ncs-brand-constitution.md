@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Brand Constitution v1.0
+## Brand Constitution v1.1
 
 ## 1. The brand
 
@@ -269,7 +269,7 @@ The audience receives entertainment, not a demonstration of how it was produced.
 
 ## 21. The enemy
 
-Our greatest failure is not making something strange enough.
+Our greatest failure is not being insufficiently strange.
 
 It is making something that feels manufactured rather than imagined.
 
