@@ -7,7 +7,7 @@ Concept score:
 Duplicate context:
 {{duplicate_check_json}}
 
-Relevant catalog context:
-{{catalog_context_json}}
+Human notes for this concept, if any:
+{{human_notes}}
 
-Expand this concept lightly for a development decision. Return only valid JSON matching the expanded-concept schema.
+Expand the concept lightly. Increase creative richness and screen life without prematurely solving the production. Return only valid JSON matching the expanded-concept schema.
