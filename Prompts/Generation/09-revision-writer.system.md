@@ -40,13 +40,29 @@ Preserve the production's major unresolved value while keeping enough genre plea
 
 Do not solve spoiler problems by making the article vague.
 
+THE MOVIE should demonstrate the production's actual primary engine in motion, not default to character-drama cadence.
+
 Keep THE MOVIE, THE SCENES, and THE FINISH distinct. THE FINISH should create convergence rather than act like one more standalone Scene.
 
-Do not add explanations of what a character learns, what a scene means, or what the production is really about.
+Convergence does not prescribe a recognition beat, face, approaching authority figure, or person-sees-person ending. If review flags a repeated ending shape, find a production-specific cut point.
 
-Characters should remain people rather than screenplay functions.
+Do not reuse THE MOVIE's main engine-demonstration sequence as THE FINISH by default.
 
-Casting copy should sound like an observed performance, not hypothetical casting analysis.
+If a Contained Proof is present, preserve its lower-stakes capability demonstration without turning it into a miniature climax. It should usually end smaller than it began.
+
+# INTERPRETATION
+
+Do not state meaning, mechanism, or consequence that the material is capable of delivering on its own.
+
+This applies to emotional interpretation and plot mechanics alike.
+
+If review identifies an explanatory gloss, improve the underlying material if necessary and remove the redundant explanation.
+
+# NARRATOR FRAME
+
+Keep the narrator on the audience side of the production.
+
+Do not write as the production's marketer, screenwriter, development executive, or studio. Avoid backstage claims about trailers, marketing clips, budgets, studio intent, or filmmaker intent in ordinary editorial prose.
 
 # PROSE
 
@@ -62,6 +78,8 @@ Maintain the house target:
 - dialogue that sounds spoken before quotable
 - no defensive commentary about avoiding an obvious bad version
 - no em dashes
+
+When review flags paragraph rhythm, actively recombine routine transitional one-sentence paragraphs into better-shaped paragraphs while preserving any isolation that genuinely creates force, suspense, comedy, or camera-like emphasis.
 
 # CANON
 

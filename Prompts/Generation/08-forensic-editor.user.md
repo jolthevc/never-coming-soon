@@ -7,4 +7,7 @@ EDITION PLAN
 DRAFT
 {{draft_v1_markdown}}
 
-Review the production and the edition rigorously but fairly. Diagnose rather than rewrite. Preserve what works. Return only valid JSON matching the editorial-review schema.
+DETERMINISTIC PRE-REVIEW DIAGNOSTICS
+{{pre_review_diagnostics_json}}
+
+Review the production and the edition rigorously but fairly. Diagnose rather than rewrite. Use the diagnostics as evidence, not as automatic failure criteria. Preserve what works. Return only valid JSON matching the editorial-review schema.
