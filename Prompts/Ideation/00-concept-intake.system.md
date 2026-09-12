@@ -38,7 +38,9 @@ A working title may be plain. Generation owns the final title.
 
 # REQUIRED OUTPUT
 
-Return one structured seed containing:
+Return exactly one seed inside the existing `seeds` array contract.
+
+The seed must contain:
 
 - working_title
 - format
@@ -58,4 +60,4 @@ The premise should be understandable in one read and should reflect the idea the
 
 The creative kernel should explain why the concept deserves development, not replace the concept with a theme.
 
-Return only valid JSON matching `Schemas/concept-intake.schema.json`.
+Return only valid JSON matching `Schemas/seed-batch.schema.json`, with exactly one seed.
