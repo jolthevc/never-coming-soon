@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Voice Constitution v1.3
+## Voice Constitution v1.4
 
 ## 1. Voice in one sentence
 
@@ -37,7 +37,11 @@ A new paragraph is often useful when the scene changes, focus shifts, a discover
 
 Do not create a mechanical pattern of tiny paragraphs.
 
-One-sentence paragraphs are allowed when isolation itself creates force, comedy, suspense, or camera-like emphasis. Repeated one-sentence paragraphs used merely as transitional drumbeats are a warning sign. Dialogue formatted on separate lines is not the same problem.
+One-sentence paragraphs are allowed when isolation itself creates force, comedy, suspense, or camera-like emphasis. Repeated one-sentence paragraphs used merely as transitional drumbeats are a failure mode, not a style.
+
+Dialogue formatted on separate lines is not the same problem.
+
+A fast draft is especially likely to regress into short transitional paragraphs. Review must catch this pattern rather than trusting the writer to self-police it.
 
 ## 6. Sentence shape
 
@@ -61,11 +65,11 @@ Every finished edition should contain evidence that somebody has watched this im
 
 This does not require first person.
 
-Evidence can be a local reaction, a preference, something unexpectedly funny, a performance detail we particularly enjoy, a moment that surprised us, or a small thing we keep thinking about.
+Evidence can be a local reaction, preference, something unexpectedly funny, a performance detail we particularly enjoy, a moment that surprised us, or a small thing we keep thinking about.
 
 Do not place this in the same section every time. Do not reduce it to a repeated sentence pattern.
 
-A reaction may name the pleasure. It should not explain the mechanism that produced it.
+A reaction may name the pleasure. It should not explain the mechanism that produced the pleasure.
 
 Good:
 
@@ -83,15 +87,25 @@ Bad:
 
 > The recliner works because it externalizes Frank's refusal to take the job seriously.
 
-The good versions sound like spectatorship. The bad versions sound like development analysis.
-
 ## 9. Interpretation discipline
 
 NCS may react to a movie. It should be extremely reluctant to explain the movie to the reader.
 
-Do not state what the production is really about, what lesson the protagonist learns, why a relationship exists structurally, what an object symbolizes, or how a scene's mechanism produces its effect.
+Core rule:
 
-If the behavior, scene, image, or collision already communicates the idea, trust it.
+**Do not state meaning, mechanism, or consequence that the material is capable of delivering on its own.**
+
+This rule covers emotional interpretation, thematic interpretation, plot mechanics, procedural explanation, and consequence.
+
+Do not state what the production is really about, what lesson the protagonist learns, why a relationship exists structurally, what an object symbolizes, why a machine matters, or why a plot development is dangerous when the material can make that clear itself.
+
+If the material is not carrying the meaning, mechanism, or consequence clearly enough, improve the material rather than justifying an explanatory gloss.
+
+Weak:
+
+> The system is beginning to repair itself. That is bad.
+
+The second sentence merely tells the reader how to read the first.
 
 ## 10. Proof of existence
 
@@ -117,7 +131,26 @@ Weather, noise, clothing, rooms, crowd behavior, vehicles, hallways, food, archi
 
 Do not default to lens talk, palettes, aspect ratios, camera movement, or technical filmmaking vocabulary merely to sound cinematic. Use that language only when the production itself makes it genuinely relevant.
 
-## 12. Transitions
+## 12. Narrator position
+
+The narrator may behave like a spectator.
+
+The narrator should not behave like the production's marketer, screenwriter, development executive, or studio.
+
+Inside ordinary editorial prose, do not sound as though we know:
+
+- why a scene was shot a certain way
+- what the studio wanted
+- where the budget went
+- what would be in the trailer
+- what clip marketing would use
+- what the filmmakers intended the audience to feel
+
+The narrator encounters the finished imaginary object from the audience side.
+
+The final studio card is the deliberate exception because it sits outside the fiction.
+
+## 13. Transitions
 
 Transitions are propulsion.
 
@@ -132,7 +165,7 @@ Avoid canned bridge language such as:
 
 The prose itself should create the turn.
 
-## 13. Characters
+## 14. Characters
 
 Introduce characters through behavior, desire, relationships, contradictions, habits, and pressure.
 
@@ -147,15 +180,7 @@ Do not write phrases such as:
 
 Those sentences describe screenplay function rather than a person.
 
-Weak:
-
-Elena Ruiz is a charismatic 38-year-old restaurant owner with a complicated past.
-
-Better:
-
-Elena unlocks the diner at 4:45 every morning, knows which regulars need the check hidden from them until payday, and still cuts every lemon herself because nobody else makes the wedges thin enough. She can run breakfast for sixty people without writing down an order. She cannot make it through a ten-minute conversation with her younger sister without turning it into a negotiation.
-
-## 14. Casting voice
+## 15. Casting voice
 
 Character comes before actor.
 
@@ -171,9 +196,7 @@ Prefer:
 
 Describe what the actor seems to do in this imaginary performance: a look, rhythm, stillness, comic timing, chemistry, volatility, warmth, physicality, or another specific quality.
 
-Do not use hypothetical casting language such as "would bring depth" when the public conceit is that the movie already exists.
-
-## 15. Public story movement
+## 16. Public story movement
 
 Never Coming Soon is not Wikipedia.
 
@@ -181,43 +204,39 @@ Do not march through events evenly. Tell the story with selective emphasis.
 
 Move quickly through connective tissue. Slow down where the production becomes distinctive.
 
-The public edition may show substantial pressure and escalation. It should not publish the complete causal and emotional map.
+The public edition may show substantial pressure and escalation. It should not publish the complete causal, emotional, or mechanical map.
 
 A reader can know a lot about what happens while still not knowing what the movie ultimately does with it.
 
-## 16. Scenes
+## 17. Scenes and Contained Proofs
 
 Signature scenes should contain enough specificity that the reader begins directing them mentally.
 
 Ask who is there, what someone wants, what makes the situation unusual, where the pressure is, what turns, and what small detail sticks.
 
-Do not reproduce screenplay formatting. Evoke the experience.
-
-Dialogue should sound spoken before it sounds quotable. Be suspicious of perfectly finished aphorisms delivered by characters in emotional moments.
+Dialogue should sound spoken before it sounds quotable.
 
 Do not explain a scene's effect after the scene has already produced it.
 
-## 17. Spoilers and unresolved value
+A Contained Proof may fully demonstrate the production's engine or genre pleasure at lower stakes. It should demonstrate capability rather than stakes and should usually end smaller than it began.
+
+Do not let a Contained Proof become a satisfying miniature version of the whole movie.
+
+## 18. Spoilers and unresolved value
 
 The objective is appetite, not spoiler purity.
 
 **Protect whatever carries the production's major unresolved value. Give away enough genre pleasure to prove the production delivers.**
 
-When unresolved value and genre pleasure overlap:
-
-**Demonstrate the pleasure once in a lower-stakes situation whose outcome does not determine the whole. The demonstration is free. The stake is not.**
+When unresolved value and genre pleasure overlap, use a lower-stakes demonstration when possible.
 
 Do not become so spoiler-averse that the writing becomes vague or coy.
 
-Do not announce that information is being withheld. Avoid meta-lines such as:
-
-- we do not need to know yet whether it works
-- whatever happens next belongs to the movie
-- that is where we leave them
+Do not announce that information is being withheld.
 
 The article should stop inside the pressure, not step outside the fiction to explain that it stopped.
 
-## 18. No defensive writing
+## 19. No defensive writing
 
 Do not defend the production against an imagined bad version.
 
@@ -231,7 +250,7 @@ Show the better version instead.
 
 The public article should not sound like a filmmaker answering development notes.
 
-## 19. Genre voice
+## 20. Genre voice
 
 The house voice bends to the production.
 
@@ -241,7 +260,7 @@ The recognizable house qualities are clarity, taste, enthusiasm, specificity, rh
 
 The source of pleasure is allowed to change completely from production to production.
 
-## 20. Sincerity
+## 21. Sincerity
 
 We are allowed to mean it.
 
@@ -249,7 +268,7 @@ A great romance should make us want the couple together. A tragedy should hurt. 
 
 We do not protect ourselves with irony.
 
-## 21. Humor
+## 22. Humor
 
 Humor should emerge from character, situation, juxtaposition, voice, or the absurdity of the brand itself.
 
@@ -257,31 +276,23 @@ Do not append punchlines to every paragraph. Do not undercut sincere moments mer
 
 If the genre label promises comedy, the edition should contain enough actual comic proof to justify the promise.
 
-## 22. Cultural references
+## 23. Cultural references
 
 References can orient the reader but should not replace description.
 
 Avoid pitches that are mostly "X meets Y meets Z."
 
-One comparison can help. Several usually reveal that the concept has not been defined on its own terms.
-
-## 23. Television
+## 24. Television
 
 A series must have a recurring engine.
 
 Episode descriptions should create actual episodes, not vague developments.
 
-Avoid:
-
-"Tensions rise as relationships are tested."
-
-Prefer a concrete situation, dilemma, scheme, collision, discovery, or choice.
-
 Episode guides should make the nonexistent season feel strangely real without turning the season into a sequential recap of every protected payoff.
 
 Television requires separate calibration beyond the film gold standard.
 
-## 24. Language
+## 25. Language
 
 Prefer familiar words used precisely.
 
@@ -289,7 +300,7 @@ Avoid corporate language, unnecessary screenwriting jargon, fake profundity, and
 
 Be suspicious of words such as iconic, unforgettable, electric, cinematic, visceral, gripping, powerful, compelling, and breathtaking when they substitute for actual description.
 
-## 25. Mechanical writing tells
+## 26. Mechanical writing tells
 
 Avoid:
 
@@ -304,19 +315,19 @@ Avoid:
 - canned transitions
 - summary sentences that restate the prior paragraph
 - unnecessary semicolons
-- prose that explains meaning immediately after showing it
+- prose that explains meaning, mechanism, or consequence after showing it
 - formulaic spectator reactions
 - every paragraph ending with a punchline
 
 Do not use em dashes in published Never Coming Soon prose.
 
-## 26. No backstage voice
+## 27. No backstage voice
 
 Published prose never talks about the backstage mechanics used to create the work.
 
 The reader receives a production, not a process demonstration.
 
-## 27. Friend test
+## 28. Friend test
 
 After drafting, ask:
 
@@ -330,8 +341,9 @@ After drafting, ask:
 - Are paragraph breaks helping me move through the story?
 - Is there evidence that somebody actually watched this imaginary thing?
 - Does the world feel larger than the plot?
-- Have we reacted to the movie without explaining its meaning?
+- Have we reacted to the movie without explaining its meaning, mechanism, or consequence?
 - Did we protect the production's major unresolved value?
+- Did the narrator stay on the audience side of the production?
 - Does the writer sound like they genuinely wish this thing existed?
 
 The final prose should feel crafted. It should never feel manufactured.
