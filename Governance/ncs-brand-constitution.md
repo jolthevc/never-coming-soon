@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Brand Constitution v1.1
+## Brand Constitution v1.2
 
 ## 1. The brand
 
@@ -131,7 +131,7 @@ The publication should feel like someone sharing something they cannot stop thin
 
 Never Coming Soon has a personality. Its productions have their own personalities.
 
-The publication never forces the same irony, humor, or cleverness onto every production.
+The publication never forces the same irony, humor, cleverness, restraint, or sentence rhythm onto every production.
 
 A horror movie should sincerely try to scare.
 
@@ -144,6 +144,10 @@ A family movie can be earnest.
 A comedy should actually be funny.
 
 A sports movie should care about the competition.
+
+A heist should take pleasure in mechanism and problem solving.
+
+A musical should let music and spectacle be part of the product.
 
 A superhero movie should be allowed to think superheroes are cool.
 
@@ -225,19 +229,37 @@ We cast the character, not the marketing fantasy.
 
 Repetition should be noticed. If the same handful of actors keep appearing, the imagination has narrowed.
 
-## 17. Spoiler philosophy
+## 17. Public appetite and spoiler philosophy
 
 Never Coming Soon sells the experience rather than exhaustively documenting the plot.
 
-We reveal enough to make the production feel real and protect enough to preserve curiosity.
+The internal production should know the complete story. The public edition should know what not to spend.
 
-Default rule:
+Primary rule:
 
-**Reveal the situation. Protect the payoff.**
+**Protect whatever carries the production's major unresolved value. Give away enough genre pleasure to prove the production delivers.**
 
-Exceptions are allowed when the ending is essential to understanding why the concept works.
+When unresolved value and genre pleasure overlap:
 
-## 18. Internal canon
+**Demonstrate the pleasure once in a lower-stakes situation whose outcome does not determine the whole. The demonstration is free. The stake is not.**
+
+A reader can know substantial story movement and still desperately want the movie.
+
+Protecting literal outcomes is not enough if the article has already explained what the protagonist learns, what the story means, or how the decisive mechanism works.
+
+Do not become so spoiler-averse that the production feels vague or unfinished.
+
+## 18. Proof that the production exists
+
+Because the production does not literally exist, withholding needs a counterweight.
+
+The edition should contain ordinary evidence that the world is larger than the plot: routines, institutional details, logistical residue, background observers, sensory facts, or artifacts of other people's attention.
+
+These details should generally feel discovered rather than charming on purpose.
+
+The imaginary production should have leftovers.
+
+## 19. Internal canon
 
 Every developed production should exist more fully internally than it does publicly.
 
@@ -247,7 +269,23 @@ For television, internal canon may include complete season logic and possible fu
 
 The public edition is a curated window, not the entire development file.
 
-## 19. Future IP optionality
+## 20. Final studio-card confidence
+
+The final studio card sits outside the fiction and may acknowledge the central joke directly.
+
+It should not apologize for the fact that the production is imaginary.
+
+The current approved closing brand beat is:
+
+**NOW PLAYING NOWHERE**
+
+followed by:
+
+**The best movies and shows that don't exist.**
+
+The line may evolve as the brand develops, but the posture should remain confident rather than sheepish.
+
+## 21. Future IP optionality
 
 Never Coming Soon is a media publication first.
 
@@ -259,15 +297,15 @@ But concepts should be developed carefully enough that one could someday travel 
 
 If a Never Coming Soon production eventually becomes real, that is the best possible punchline.
 
-## 20. Production process
+## 22. Production process
 
-Never Coming Soon does not publicly frame its work around prompts, models, AI, generation, drafting systems, or production tooling.
+Never Coming Soon does not publicly frame its work around the backstage mechanics used to create it.
 
 We do not market technological novelty.
 
 The audience receives entertainment, not a demonstration of how it was produced.
 
-## 21. The enemy
+## 23. The enemy
 
 Our greatest failure is not being insufficiently strange.
 
@@ -287,7 +325,7 @@ Watch for:
 
 Specificity, human pull, and genuine desire matter more than novelty.
 
-## 22. Final brand test
+## 24. Final brand test
 
 Before any production joins the catalog, ask:
 
@@ -298,6 +336,8 @@ Before any production joins the catalog, ask:
 - Does the genre work sincerely?
 - Does the casting make it better?
 - Does the idea have more underneath it than its hook?
+- Does the world feel larger than the plot?
+- Did the public edition prove the pleasure without spending the major unresolved value?
 - Does it feel meaningfully alive?
 - Did we make it because we genuinely thought it would be awesome?
 
