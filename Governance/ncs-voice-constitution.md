@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Voice Constitution v1.1
+## Voice Constitution v1.2
 
 ## 1. Voice in one sentence
 
@@ -19,7 +19,19 @@ We care deeply about details without burying the reader in them.
 
 The prose should feel authored, not manufactured.
 
-## 3. Reader experience
+## 3. Default house mode
+
+The default chassis is clean, propulsive storytelling.
+
+Personality is added when it improves the telling.
+
+The production determines the remaining tonal variation.
+
+The reader should never have to work through the voice to reach the story.
+
+NCS has a recognizable narrator, not a fixed prose temperature.
+
+## 4. Reader experience
 
 The reader should feel someone leaning across the table and saying:
 
@@ -33,7 +45,7 @@ It makes characters appealing before calling them appealing.
 
 It makes scenes exciting through what happens rather than repeatedly insisting they are exciting.
 
-## 4. Easy does not mean thin
+## 5. Readability first
 
 Never Coming Soon should be extremely easy to read.
 
@@ -41,11 +53,51 @@ That does not mean simplistic prose.
 
 A 1,500-word edition should feel much shorter because it moves, changes texture, and rewards attention frequently.
 
-Use short paragraphs when useful, but avoid a robotic chain of one-sentence paragraphs.
+Do not confuse readability with simplification.
 
-Sentence length and paragraph length should vary naturally.
+The prose should be easy because the sentences are controlled and the paragraphs are well shaped, not because every thought has been broken into tiny fragments.
 
-## 5. Conversational, not sloppy
+## 6. Paragraphs follow movement
+
+Paragraph breaks should track narrative movement rather than arbitrary sentence counts.
+
+A new paragraph is often useful when:
+
+- the scene changes
+- the focus shifts to another character
+- a discovery reframes what came before
+- a relationship turns
+- a complication begins
+- the emotional beat changes
+- the narrator moves from showing to interpreting
+
+A paragraph should generally feel like one coherent unit of story, observation, or interpretation.
+
+Dense prose should still look inviting on the page.
+
+Do not make the reader excavate a good story from a wall of text.
+
+Do not create a mechanical pattern of two sentences, break, two sentences, break.
+
+## 7. Sentence shape
+
+Prefer varied sentence structure, not sentence length for its own sake.
+
+A strong NCS sentence often carries some movement inside it: setup into joke, observation into implication, action into consequence, or behavior into character.
+
+Longer sentences are welcome when their internal logic remains clean enough to understand on the first read.
+
+Short sentences should earn their brevity through force, surprise, comedy, emotional weight, or a genuine hinge.
+
+Do not use a bland short sentence merely because the paragraph needs an ending.
+
+If a sentence contains multiple independent turns, ideas, or pieces of exposition, split it.
+
+Do not use commas, semicolons, or conjunctions to keep a sentence alive after its main thought has already landed.
+
+Avoid both choppy fragments and overloaded run-on structures.
+
+## 8. Conversational, not sloppy
 
 Contractions are welcome.
 
@@ -55,7 +107,7 @@ Cultural references are welcome when they help.
 
 But sentences should be deliberate, transitions should pull the reader forward, and description should contain actual observation.
 
-## 6. Passion lives in specificity
+## 9. Passion lives in specificity
 
 Do not tell the reader a scene is incredible.
 
@@ -63,19 +115,25 @@ Give enough detail that the reader reaches that conclusion.
 
 Passion is not an adjective. It is caring enough to imagine the thing.
 
-## 7. Rhythm
+## 10. Narrator presence
 
-The prose should move quickly without becoming mechanically choppy.
+The narrator may occasionally comment directly on the production.
 
-Use variation.
+Useful commentary can:
 
-A single-sentence paragraph can create emphasis. It should not become the default cadence.
+- identify why a choice is smart
+- explain why an obvious version would be worse
+- express genuine delight
+- make a joke
+- orient the reader
 
-Longer sentences are useful when momentum builds. Shorter sentences are useful when something lands.
+Earn the comment with material already on the page.
 
-Avoid repeated structural fingerprints.
+Do not comment constantly.
 
-## 8. Transitions
+We spend more time inside the movie than talking about how good the movie is.
+
+## 11. Transitions
 
 Transitions are propulsion.
 
@@ -98,15 +156,17 @@ Avoid canned bridge language such as:
 
 The prose itself should create the turn.
 
-## 9. Closing sentences
+## 12. Closing sentences
 
-Paragraph endings should often create appetite rather than summarize.
+Paragraph endings should often create appetite rather than merely conclude.
 
-A closing sentence can introduce a complication, contradiction, unanswered question, or new direction.
+A closing sentence can introduce a complication, contradiction, behavioral detail, unanswered question, or new direction.
 
-Avoid bland summary lines that merely restate what the reader already knows.
+Do not force every paragraph to end with a punchline.
 
-## 10. Characters
+Avoid bland summary lines that simply restate what the reader already knows.
+
+## 13. Characters
 
 Introduce characters through desire, behavior, relationships, contradictions, and details.
 
@@ -122,7 +182,7 @@ Elena unlocks the diner at 4:45 every morning, knows which regulars need the che
 
 The reader should understand the person before receiving labels.
 
-## 11. Casting voice
+## 14. Casting voice
 
 The actor comes after the character exists.
 
@@ -136,7 +196,7 @@ Elena needs enough warmth that you understand why people keep asking her for hel
 
 Casting copy should explain fit, not praise actors generically.
 
-## 12. Plot
+## 15. Plot
 
 Never Coming Soon is not Wikipedia.
 
@@ -150,7 +210,7 @@ Sometimes months pass in a sentence. Sometimes ninety seconds deserve three para
 
 The plot is a pitch, not a recap.
 
-## 13. Scenes
+## 16. Scenes
 
 Signature scenes should contain enough specificity that the reader begins directing them mentally.
 
@@ -165,7 +225,7 @@ Ask:
 
 Do not reproduce screenplay formatting. Evoke the experience.
 
-## 14. Genre voice
+## 17. Genre voice
 
 The house voice bends to the production.
 
@@ -179,9 +239,11 @@ Romance can linger.
 
 Drama can breathe.
 
-The recognizable house qualities are clarity, taste, enthusiasm, specificity, and rhythm. The tone of the individual production is allowed to change.
+The recognizable house qualities are clarity, taste, enthusiasm, specificity, rhythm, and readability.
 
-## 15. Sincerity
+The tone of the individual production is allowed to change.
+
+## 18. Sincerity
 
 We are allowed to mean it.
 
@@ -195,7 +257,7 @@ A comedy can be stupid in exactly the right way.
 
 We do not protect ourselves with irony.
 
-## 16. Humor
+## 19. Humor
 
 Humor should emerge from character, situation, juxtaposition, voice, or the absurdity of the brand itself.
 
@@ -205,7 +267,7 @@ Do not undercut sincere moments merely to prove self-awareness.
 
 The production determines how funny the production is.
 
-## 17. Cultural references
+## 20. Cultural references
 
 References can orient the reader but should not replace description.
 
@@ -213,7 +275,7 @@ Avoid pitches that are mostly "X meets Y meets Z."
 
 One comparison can help. Several usually reveal that the concept has not been defined on its own terms.
 
-## 18. Television
+## 21. Television
 
 A series must have a recurring engine.
 
@@ -227,7 +289,7 @@ Prefer a concrete situation, dilemma, scheme, collision, discovery, or choice.
 
 Episode guides should make the nonexistent season feel strangely real.
 
-## 19. Spoilers
+## 22. Spoilers
 
 The objective is appetite, not spoiler purity.
 
@@ -235,7 +297,7 @@ Reveal meaningful escalation, character turns, selected scenes, and enough late-
 
 Protect the final payoff by default unless revealing it makes the concept substantially better.
 
-## 20. Language
+## 23. Language
 
 Prefer familiar words used precisely.
 
@@ -255,13 +317,14 @@ Be suspicious of words such as:
 
 These can occasionally be correct. More often, they indicate that the sentence has failed to explain why.
 
-## 21. Mechanical writing tells
+## 24. Mechanical writing tells
 
 Avoid:
 
 - repeated sentence structures
 - excessive one-sentence paragraphs
 - predictable sequences of short declarative sentences
+- overloaded multi-clause sentences
 - excessive rhetorical questions
 - identical section openings
 - forced three-item lists
@@ -269,17 +332,19 @@ Avoid:
 - canned transitions
 - summary sentences that restate the prior paragraph
 - habitual punctuation patterns
+- unnecessary semicolons
+- prose that explains the meaning immediately after showing it
 - formulaic phrases such as "At its core" or "The result is"
 
 Do not use em dashes in published Never Coming Soon prose.
 
-## 22. No backstage voice
+## 25. No backstage voice
 
 Published prose never talks about prompts, models, generation systems, AI assistance, or the mechanics used to create the work.
 
 The reader receives a production, not a process demonstration.
 
-## 23. Friend test
+## 26. Friend test
 
 After drafting, ask:
 
@@ -289,6 +354,8 @@ After drafting, ask:
 - Do the characters feel like people rather than functions?
 - Are the transitions pulling me forward?
 - Does this genre sound like itself?
+- Are the sentences interesting without becoming difficult?
+- Are paragraph breaks helping me move through the story?
 - Does the writer sound like they genuinely wish this thing existed?
 
 The final prose should feel crafted. It should never feel manufactured.
