@@ -1,67 +1,297 @@
 # Never Coming Soon
-## Generation, Review and Revision Operating System v1.1
+## Generation, Review and Revision Operating System v2.0
 
-## 1. Status of this document
+## 1. Purpose
 
-This document defines the durable creative principles for the future Generation workflow.
+Generation begins after an idea becomes `DEVELOPMENT_SELECT`.
 
-It is not yet the complete node-level Generation workflow specification.
+Its job is not to write an article immediately.
 
-Generation prompts, schemas, and orchestration should be designed separately after Ideation is stable.
+Its job is to create the strongest possible imaginary movie or show, understand it more deeply than the reader ever will, and only then turn that production into a Never Coming Soon edition.
 
-## 2. Purpose
+**Generation is a production-development workflow that eventually writes an article.**
 
-The Generation workflow begins after a concept becomes a Development Select.
+## 2. Input
 
-Its job is to transform a promising seed into the strongest possible Never Coming Soon production, then draft, review, revise, and reach a publish decision.
+Required input:
+
+- `development_packet_json`
+- source `idea_id`
+- nonblank human notes attached to that idea, if any
+
+The Development Packet is a creative brief.
+
+It explains why Ideation cared and carries promising material forward.
+
+It is not a locked outline.
+
+## 3. Creative authority
 
 Generation owns actual storytelling.
 
-## 3. Input
-
-The required creative input is `development_packet_json` from the Ideation workflow.
-
-If the source Sheet row contains nonblank `human_notes`, Generation should also receive those notes as high-authority human context.
-
-The Development Packet is a creative brief, not a locked outline.
-
-Its purpose is to explain what was exciting enough to deserve development and to provide useful starting material.
-
-It is not a list of creative obligations.
-
-## 4. Creative authority
-
-Generation may change:
+It may change:
 
 - working title
 - format
 - genre emphasis
-- setting
-- era
 - protagonist
 - supporting characters
 - relationships
+- setting
+- era
+- world logic
 - plot mechanics
-- midpoint
+- midpoint or major turn
 - climax
 - ending
 - episode structure
-- casting
 - signature scenes
+- casting
 
-Generation should understand why the idea was selected and preserve or improve the creative kernel.
+The governing obligation is:
 
-If a provisional element weakens the production, replace it.
+**Preserve or improve the creative kernel. Treat every other element as provisional.**
 
-Do not preserve a mediocre character, title, scene, or plot turn merely because Ideation invented it first.
+Do not preserve weak choices out of loyalty to Ideation.
 
-## 5. Development principle
+## 4. Core development principle
 
 **Preserve the reason we cared, not the accident of the first draft.**
 
-The best Generation pass may make the final production look materially different from the original seed while remaining recognizably powered by the same exciting idea.
+The strongest final production may look materially different from the original seed while remaining powered by the same exciting idea.
 
-## 6. Three quality layers
+## 5. Workflow stages
+
+Generation should move through distinct stages:
+
+1. Production Development
+2. Optional Grounding Research
+3. Independent Story Challenge
+4. Canon Building
+5. Canon Freeze
+6. Casting
+7. Edition Architecture
+8. Edition Drafting
+9. Forensic Editorial Review
+10. Targeted Revision or Controlled Rescue
+11. Deterministic QA
+12. Human Review
+
+Each stage has a different job.
+
+Do not collapse them into one giant prompt.
+
+## 6. Production development before prose
+
+The Production Developer creates the first serious version of the movie or show.
+
+It should establish enough internal story to expose whether the production actually works.
+
+Do not begin public prose while major creative decisions remain vague merely because the original packet was promising.
+
+## 7. Selective research
+
+Research is conditional.
+
+If the production depends on real-world rules, history, professions, institutions, sports, technical systems, medicine, law, culture, geography, or another factual system, request focused grounding research.
+
+Do not research everything automatically.
+
+Research should reveal usable dramatic texture and constraints rather than accumulate trivia.
+
+## 8. Independent challenge
+
+A Story Challenger should attack the developed production before canon is frozen.
+
+Its purpose is to identify:
+
+- dead story sections
+- generic character functions
+- weak causality
+- false complexity
+- derivative patterns
+- unearned endings
+- wrong format
+- missed opportunities
+- genre failures
+
+The Challenger diagnoses.
+
+It does not own the replacement story.
+
+A second model family may be useful here because intellectual independence is valuable.
+
+## 9. Canon Builder
+
+The Canon Builder receives the Development Packet, first blueprint, relevant research, and challenge memo.
+
+Its job is not to apply every note mechanically.
+
+Its job is to make the production better.
+
+It decides which criticism is valid, rebuilds where necessary, and produces the authoritative internal canon.
+
+## 10. Canon Freeze
+
+After the Canon Builder, the imaginary production should meaningfully exist.
+
+For film, canon should know:
+
+- the characters
+- relationships
+- world
+- complete story trajectory
+- actual ending
+- emotional resolution
+- signature scenes
+- tone
+- genre delivery
+
+For series, canon should also know:
+
+- recurring engine
+- Season One spine
+- major character movement
+- concrete episode purposes
+- actual Season One finale
+- future engine when relevant
+
+For limited series, canon should know the full contained ending and why the material needs multiple chapters.
+
+Once frozen, downstream agents represent the production rather than casually reinventing it.
+
+Canon can reopen only through an explicit rescue route.
+
+## 11. Casting after canon
+
+Dream casting happens after characters exist.
+
+The Casting Director should evaluate fit, chemistry, screen energy, role age, ensemble logic, and NCS casting repetition.
+
+Casting should make the production more vivid, not retroactively define the character.
+
+## 12. Edition architecture before drafting
+
+Do not move directly from canon to prose.
+
+The Edition Architect decides how the reader should discover the production.
+
+It chooses:
+
+- opening strategy
+- public section flow
+- what plot material to reveal
+- what payoff to protect
+- where to slow down
+- what connective material to compress
+- which scenes deserve close treatment
+- where casting belongs
+- the emotional rhythm of the edition
+
+The public article is a curated pitch, not a transcript of the canon bible.
+
+## 13. Clean writer context
+
+The Edition Writer should receive the clean truth of the production, not developmental debris.
+
+It should normally see:
+
+- canon bible
+- casting plan
+- edition plan
+- Brand Constitution
+- Voice Constitution
+- Editorial Anatomy
+- approved gold-standard style examples when available
+
+It should not receive:
+
+- Ideation scores
+- duplicate audits
+- discarded concepts
+- Story Challenger memo
+- old development alternatives
+- broad catalog history
+
+The writer should know this production extremely well, not thirty other NCS pieces.
+
+## 14. House prose philosophy
+
+The default prose mode is clean, propulsive storytelling.
+
+Personality is added when it improves the telling.
+
+The narrator should feel smart, funny, enthusiastic, and tasteful without becoming the main attraction.
+
+The production determines the remaining tonal variation.
+
+Comedy can loosen.
+
+Horror can quiet down.
+
+Romance can linger.
+
+Action can accelerate.
+
+Drama can breathe.
+
+## 15. Forensic editorial review
+
+The Forensic Editor reviews in this order:
+
+1. production
+2. edition strategy
+3. prose
+4. surface issues
+
+It should identify both weaknesses and strengths worth preserving.
+
+The review is a diagnosis, not a rewrite.
+
+A second model family may be useful here for an independent cold read.
+
+## 16. Revision routes
+
+The Forensic Editor chooses the deepest necessary route:
+
+- `NONE`
+- `PROSE`
+- `EDITION`
+- `CANON`
+
+### NONE
+
+No meaningful creative rewrite is needed. Proceed to deterministic QA and human review.
+
+### PROSE
+
+The production and edition architecture work. Revise language locally while preserving strong passages.
+
+### EDITION
+
+The production works, but public presentation is wrong. Rebuild the edition plan, redraft, and review once more.
+
+### CANON
+
+The article exposed a foundational production problem. Reopen canon, solve the creative issue, then recast/replan/redraft/review as needed.
+
+Limit automated rescue to one reentry cycle in v1.
+
+Do not create endless self-revision loops.
+
+## 17. Revision philosophy
+
+Revision should preserve what already works.
+
+Do not reflexively rewrite every sentence.
+
+Do not flatten unusual rhythm into generic clarity.
+
+Do not remove jokes, specificity, character texture, or scene detail merely because a cleaner sentence is available.
+
+Fix the actual issue named by the review.
+
+## 18. Three quality layers
 
 Every finished edition must clear three tests.
 
@@ -75,88 +305,41 @@ Did Never Coming Soon make the reader desperately want to watch it?
 
 ### Catalog quality
 
-Does this strengthen the Never Coming Soon slate?
+Does this strengthen the NCS slate rather than repeat it mechanically?
 
-## 7. Internal development
+Catalog quality is a final awareness check, not permission to ruin a great individual production for artificial balance.
 
-Before public drafting, build enough internal canon to understand the production more deeply than the reader will.
+## 19. Deterministic QA
 
-Film should know the actual ending, the major turns, the central relationships, and the scenes that define the experience.
+After final automated revision, run noncreative checks such as:
 
-Series should know the recurring engine, Season One trajectory, episode purposes, character movement, and actual finale resolution.
+- draft exists
+- reasonable word count for format
+- no em dash character in published prose
+- no backstage process references such as prompts, model usage, AI assistance, generation systems, or production tooling
+- title and major character names are internally consistent where deterministically checkable
+- series episode counts are not obviously inconsistent with the edition plan
 
-Limited series should clearly build toward a contained ending.
+QA should create warnings, not secretly rewrite creative prose.
 
-Internal canon is a working creative model, not a reason to over-explain the public edition.
+## 20. Human review
 
-## 8. Production quality priorities
+Generation ends at:
 
-Evaluate:
+`READY_FOR_HUMAN_REVIEW`
 
-- want-to-watch factor
-- story
-- characters
-- emotional power
-- genre execution
-- scene quality
-- distinctive identity
-- world when relevant
-- ending
-- casting
-- passion
+The human editor remains the final creative authority.
 
-A beautiful article about a mediocre imagined movie is still a failure.
+The workflow does not automatically publish.
 
-## 9. Genre integrity
+The human may:
 
-Development should intensify the pleasure of the chosen genre before attempting to transcend it.
-
-A comedy must produce comedy.
-
-A horror movie must contain fear.
-
-A romance must care about chemistry and emotional consequence.
-
-A sports production must care about the competition.
-
-Prestige is not a substitute for genre satisfaction.
-
-## 10. Drafting priorities
-
-The public edition should:
-
-- hook quickly
-- remain easy to follow
-- move fast without feeling thin
-- present characters before casting
-- tell rather than summarize
-- include specific scenes
-- reveal enough without exhausting the story
-- communicate passion through detail
-- adapt voice to genre
-- finish with appetite
-
-## 11. Revision order
-
-Revise in this order:
-
-1. production
-2. edition structure
-3. prose
-4. surface polish
-
-Do not polish sentences when the character is broken.
-
-Do not restructure the article when the movie itself has no second act.
-
-Fix causes before symptoms.
-
-## 12. Publish standard
+- approve
+- request revision
+- reopen development
+- hold
+- abandon
 
 Development effort is sunk cost.
 
-If repeated revision cannot solve a foundational problem, do not publish.
-
-A trusted catalog is worth more than filling a calendar slot.
-
-The human editor remains free to reject a fully developed production even when Ideation and Generation both believed in it.
+A trusted catalog matters more than filling a calendar slot.
