@@ -34,6 +34,7 @@ Decide:
 - which signature scenes deserve close treatment
 - what major unresolved value remains protected
 - which genre pleasure should be demonstrated publicly
+- whether a Contained Proof would help
 - where ordinary proof-of-existence detail can make the production feel larger than the plot
 - where evidence of spectatorship can appear naturally
 - where casting belongs
@@ -52,8 +53,6 @@ For FILM, use these visible top-level headings exactly:
 - THE SCENES
 - THE FINISH
 
-Do not invent plot-stage top-level headings.
-
 Standardize the reader's navigation, not the storytelling inside it.
 
 # SECTION JOBS
@@ -64,45 +63,61 @@ THE CHARACTERS makes the people exist through behavior, relationships, wants, ha
 
 THE CAST makes the performances imaginable. Public copy should sound as though the performance was watched, not as though the role is still being cast.
 
-THE MOVIE makes the production feel like an experience rather than a premise. Plan engine, movement, collisions, texture, pressure, and enough causality to prove a full movie exists without producing a chronological synopsis.
+THE MOVIE demonstrates the production's primary engine in motion. What that means depends on the genre. Plan enough engine, movement, collision, mechanism, spectacle, texture, pressure, and causality to prove the movie exists without producing a chronological synopsis.
 
-THE SCENES contains 2 to 4 discrete, extractable moments. They may come from anywhere in the production and should not merely repeat material already fully staged in THE MOVIE.
+THE SCENES contains 2 to 4 discrete, extractable moments. They should not merely repeat material already fully staged in THE MOVIE.
 
-THE FINISH is convergence. Bring major pressures, relationships, stakes, and unresolved values into the same final movement, then stop before the decisive response or payoff.
+THE FINISH is convergence. Bring major pressures, relationships, stakes, mechanisms, and unresolved values into the same final movement, then stop before the decisive response or payoff.
+
+Convergence defines what THE FINISH does, not how it cuts. Do not default to a recognition beat, a face, an approaching authority figure, or one character noticing another.
+
+# CONTAINED PROOF
+
+A Contained Proof is a lower-stakes sequence that fully demonstrates the production's primary engine or genre pleasure without spending the major unresolved value.
+
+It demonstrates capability, not stakes, and should usually end smaller than it began.
+
+Use one only when useful.
+
+Do not plan a Contained Proof that becomes the whole movie in miniature. If it has its own major escalation, climax, and satisfying closure, it may reduce appetite for the larger production.
+
+Do not automatically reuse the Contained Proof or main THE MOVIE engine demonstration as THE FINISH.
 
 # SPOILER DOCTRINE
 
-Primary rule:
+Protect whatever carries the production's major unresolved value. Give away enough genre pleasure to prove the production delivers.
 
-**Protect whatever carries the production's major unresolved value. Give away enough genre pleasure to prove the production delivers.**
-
-When unresolved value and genre pleasure overlap:
-
-**Demonstrate the pleasure once in a lower-stakes situation whose outcome does not determine the whole. The demonstration is free. The stake is not.**
+When unresolved value and genre pleasure overlap, use a lower-stakes demonstration when possible.
 
 Do not protect so much that the article becomes vague.
 
 Do not expose the protagonist's lesson, the meaning of the arc, the decisive response, or the central answer merely because the literal ending remains hidden.
 
-Interpretive spoilers can be more expensive than event spoilers.
+# INTERPRETATION DISCIPLINE
+
+Do not plan prose that states meaning, mechanism, or consequence the material is capable of delivering on its own.
+
+If an important consequence would otherwise be unclear, plan stronger material rather than an explanatory sentence after the fact.
 
 # PROOF OF EXISTENCE
 
-Plan at least a few ordinary details that make the world feel larger than the plot.
+Plan selected ordinary details that make the world feel larger than the plot.
 
 Prefer routines, institutional habits, logistical residue, background observers, ordinary sensory facts, and artifacts of offscreen attention.
-
-Do not fill the edition with quirky props or charming invented business.
 
 Character detail and proof-of-existence detail are different jobs.
 
 # EVIDENCE OF SPECTATORSHIP
 
-Plan for at least some natural evidence that somebody watched this imaginary production and formed an opinion.
+Plan some natural evidence that somebody watched this imaginary production and formed an opinion.
 
 Do not create a fixed spectatorship section or repeated line pattern.
 
-A reaction may name what was enjoyed, surprising, funny, or memorable. It should not explain the mechanism that produced the effect.
+# NARRATOR FRAME
+
+The narrator may behave like a spectator. Do not plan language that makes the narrator sound like the production's marketer, screenwriter, development executive, or studio.
+
+Avoid backstage claims about what belongs in the trailer, what the budget bought, what the studio wanted, or what filmmakers intended.
 
 # IMPORTANT
 
@@ -110,9 +125,9 @@ The public edition is not a chronological dump of the canon bible.
 
 It is a curated entertainment object designed to make the reader desperately want the production.
 
-Do not spend the same scene twice. If a Scene will receive close treatment in THE SCENES, keep any earlier appearance light.
+Do not spend the same scene twice.
 
-Do not plan meta-withholding language such as "we do not need to know yet" or "that is where we leave them."
+Do not plan meta-withholding language.
 
 # SERIES AND LIMITED SERIES
 
