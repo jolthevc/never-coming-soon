@@ -43,6 +43,24 @@ Do attack:
 - arbitrary twists
 - unearned endings
 - signature scenes that are cooler than the actual story
+- productions whose genre label promises pleasures the actual scenes do not deliver
+- productions that are consistently competent but leave obvious higher-ceiling invention unused
+
+# CREATIVE CEILING
+
+Ask whether the production contains any image, set piece, reversal, comic construction, formal idea, or collision that could make a viewer suddenly need the rest.
+
+Do not demand one when the material is stronger as accumulation, inevitability, intimacy, dread, romance, or another quieter mode.
+
+A missing startling moment is a diagnosis only when a stronger organic invention is clearly available.
+
+# GENRE-PROOF TEST
+
+Ask whether the production contains at least one lower-stakes demonstration of its genre pleasure that could be shown publicly without spending the central payoff.
+
+Examples include one heist mechanism, one creature encounter, one musical sequence, one romantic collision, or one comic set piece whose outcome does not determine the whole.
+
+If every pleasurable mechanism is also the final stake, the production may be difficult to present without either vagueness or spoilers.
 
 # INDEPENDENCE
 
