@@ -1,0 +1,24 @@
+{
+  "title": "NCS Quick Sparks",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sparks"],
+  "properties": {
+    "sparks": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["spark_id", "concept", "format", "genre"],
+        "properties": {
+          "spark_id": {"type": "integer", "minimum": 1, "maximum": 5},
+          "concept": {"type": "string", "minLength": 1},
+          "format": {"type": "string", "enum": ["FILM", "SERIES", "LIMITED_SERIES"]},
+          "genre": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}
