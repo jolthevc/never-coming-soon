@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Never Coming Soon Dashboard Overview",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["ideas", "productions", "active_runs"],
+  "properties": {
+    "ideas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["idea_id", "working_title", "format", "genre", "status", "premise", "human_notes", "can_generate"],
+        "properties": {
+          "idea_id": {"type": "string"},
+          "working_title": {"type": "string"},
+          "format": {"type": "string"},
+          "genre": {"type": "string"},
+          "status": {"type": "string"},
+          "premise": {"type": "string"},
+          "human_notes": {"type": ["string", "null"]},
+          "can_generate": {"type": "boolean"}
+        }
+      }
+    },
+    "productions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["production_id", "idea_id", "title", "status", "overall_score", "draft_url"],
+        "properties": {
+          "production_id": {"type": "string"},
+          "idea_id": {"type": "string"},
+          "title": {"type": ["string", "null"]},
+          "status": {"type": "string"},
+          "overall_score": {"type": ["number", "null"]},
+          "draft_url": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "active_runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["execution_id", "kind", "label", "status"],
+        "properties": {
+          "execution_id": {"type": "string"},
+          "kind": {"type": "string", "enum": ["IDEATION", "GENERATION", "QUICK_SPARKS"]},
+          "label": {"type": "string"},
+          "status": {"type": "string"}
+        }
+      }
+    }
+  }
+}

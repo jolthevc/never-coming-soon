@@ -1,1 +1,74 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"NCS Editorial Review","type":"object","additionalProperties":false,"required":["idea_id","revision_route","production_assessment","edition_assessment","prose_assessment","scores","strengths_to_preserve","revision_requirements","surface_flags","overall_judgment"],"properties":{"idea_id":{"type":"string","minLength":1},"revision_route":{"enum":["NONE","PROSE","EDITION","CANON"]},"production_assessment":{"type":"string","minLength":1},"edition_assessment":{"type":"string","minLength":1},"prose_assessment":{"type":"string","minLength":1},"scores":{"type":"object","additionalProperties":false,"required":["want_to_watch","story","characters","genre_execution","scene_quality","opening_pull","clarity","pace","spoiler_calibration","voice","readability","casting_pleasure"],"properties":{"want_to_watch":{"type":"number","minimum":1,"maximum":10},"story":{"type":"number","minimum":1,"maximum":10},"characters":{"type":"number","minimum":1,"maximum":10},"genre_execution":{"type":"number","minimum":1,"maximum":10},"scene_quality":{"type":"number","minimum":1,"maximum":10},"opening_pull":{"type":"number","minimum":1,"maximum":10},"clarity":{"type":"number","minimum":1,"maximum":10},"pace":{"type":"number","minimum":1,"maximum":10},"spoiler_calibration":{"type":"number","minimum":1,"maximum":10},"voice":{"type":"number","minimum":1,"maximum":10},"readability":{"type":"number","minimum":1,"maximum":10},"casting_pleasure":{"type":"number","minimum":1,"maximum":10}}},"strengths_to_preserve":{"type":"array","minItems":1,"maxItems":10,"items":{"type":"string"}},"revision_requirements":{"type":"array","maxItems":12,"items":{"type":"object","additionalProperties":false,"required":["priority","locus","issue","fix_goal","preserve"],"properties":{"priority":{"enum":["LOW","MEDIUM","HIGH","FOUNDATIONAL"]},"locus":{"enum":["CANON","STRUCTURE","CHARACTER","SCENE","CASTING","SPOILER","PROSE","RHYTHM","OTHER"]},"issue":{"type":"string","minLength":1},"fix_goal":{"type":"string","minLength":1},"preserve":{"type":["string","null"]}}}},"surface_flags":{"type":"array","maxItems":12,"items":{"type":"string"}},"overall_judgment":{"type":"string","minLength":1}}}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NCS Editorial Review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "idea_id",
+    "revision_route",
+    "production_assessment",
+    "edition_assessment",
+    "prose_assessment",
+    "overall_score",
+    "scores",
+    "strengths_to_preserve",
+    "revision_requirements",
+    "surface_flags",
+    "overall_judgment"
+  ],
+  "properties": {
+    "idea_id": {"type": "string", "minLength": 1},
+    "revision_route": {"enum": ["NONE", "PROSE", "EDITION", "CANON"]},
+    "production_assessment": {"type": "string", "minLength": 1},
+    "edition_assessment": {"type": "string", "minLength": 1},
+    "prose_assessment": {"type": "string", "minLength": 1},
+    "overall_score": {"type": "number", "minimum": 1, "maximum": 10},
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["want_to_watch", "story", "characters", "genre_execution", "scene_quality", "opening_pull", "clarity", "pace", "spoiler_calibration", "voice", "readability", "casting_pleasure"],
+      "properties": {
+        "want_to_watch": {"type": "number", "minimum": 1, "maximum": 10},
+        "story": {"type": "number", "minimum": 1, "maximum": 10},
+        "characters": {"type": "number", "minimum": 1, "maximum": 10},
+        "genre_execution": {"type": "number", "minimum": 1, "maximum": 10},
+        "scene_quality": {"type": "number", "minimum": 1, "maximum": 10},
+        "opening_pull": {"type": "number", "minimum": 1, "maximum": 10},
+        "clarity": {"type": "number", "minimum": 1, "maximum": 10},
+        "pace": {"type": "number", "minimum": 1, "maximum": 10},
+        "spoiler_calibration": {"type": "number", "minimum": 1, "maximum": 10},
+        "voice": {"type": "number", "minimum": 1, "maximum": 10},
+        "readability": {"type": "number", "minimum": 1, "maximum": 10},
+        "casting_pleasure": {"type": "number", "minimum": 1, "maximum": 10}
+      }
+    },
+    "strengths_to_preserve": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {"type": "string"}
+    },
+    "revision_requirements": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["priority", "locus", "issue", "fix_goal", "preserve"],
+        "properties": {
+          "priority": {"enum": ["LOW", "MEDIUM", "HIGH", "FOUNDATIONAL"]},
+          "locus": {"enum": ["CANON", "STRUCTURE", "CHARACTER", "SCENE", "CASTING", "SPOILER", "PROSE", "RHYTHM", "OTHER"]},
+          "issue": {"type": "string", "minLength": 1},
+          "fix_goal": {"type": "string", "minLength": 1},
+          "preserve": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "surface_flags": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {"type": "string"}
+    },
+    "overall_judgment": {"type": "string", "minLength": 1}
+  }
+}
