@@ -1,0 +1,22 @@
+{
+  "title": "NCS Concept Intake",
+  "type": "object",
+  "required": ["seed"],
+  "properties": {
+    "seed": {
+      "type": "object",
+      "required": ["working_title", "format", "genre", "premise", "creative_kernel", "why_exciting", "initial_possibilities", "creative_tags", "normalized_signature"],
+      "properties": {
+        "working_title": {"type": "string"},
+        "format": {"type": "string"},
+        "genre": {"type": "string"},
+        "premise": {"type": "string"},
+        "creative_kernel": {"type": "string"},
+        "why_exciting": {"type": "string"},
+        "initial_possibilities": {"type": "array"},
+        "creative_tags": {"type": "object"},
+        "normalized_signature": {"type": "object"}
+      }
+    }
+  }
+}
