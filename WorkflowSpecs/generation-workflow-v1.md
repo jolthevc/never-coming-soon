@@ -15,7 +15,7 @@ The workflow does not publish automatically.
 
 ## 2. Systems
 
-- GitHub: source of truth for governance, prompts, schemas, and this specification
+- GitHub: source of truth for governance, prompts, schemas, approved gold examples, and this specification
 - Ideation Google Sheet: source Development Packet and idea-level human notes
 - Productions Google Sheet: persistent Generation state
 - Primary LLM: strongest available OpenAI reasoning/creative model
@@ -70,6 +70,14 @@ Load:
 - `Schemas/editorial-review.schema.json`
 - `Schemas/revision-output.schema.json`
 
+### Approved writing calibration
+
+Load:
+
+- `Examples/Gold/film-01-the-tell.md`
+
+Only files explicitly designated as approved Generation writing calibration belong in this list. Do not automatically add every completed NCS edition.
+
 Fail the run if required source files cannot be loaded.
 
 Do not silently substitute stale hard-coded prompt text.
@@ -87,6 +95,8 @@ For each model call:
 Do not inject unrelated governance.
 
 More context is not automatically better.
+
+Gold examples are loaded separately and supplied only to the writing stages specified below.
 
 ## 6. Trigger
 
@@ -146,7 +156,7 @@ Resolve `main` HEAD and store `source_commit_sha`.
 
 ### Node 3: Load Runtime Files
 
-Fetch all required governance, prompts, and schemas at `source_commit_sha`.
+Fetch all required governance, prompts, schemas, and approved calibration files at `source_commit_sha`.
 
 ### Node 4: Read Ideation Source Row
 
@@ -307,11 +317,15 @@ Set status `EDITION_PLANNED`.
 
 ### Node 15: Load Gold-Standard Style Examples
 
-When approved style-example files exist in GitHub, load only the files explicitly designated as Generation writing calibration.
+Load the explicitly approved calibration files from the runtime snapshot.
 
-At initial v1, this node may return blank until the first gold-standard NCS edition is added.
+Current approved film example:
+
+- `Examples/Gold/film-01-the-tell.md`
 
 Do not use random historical NCS pieces as style examples.
+
+Gold examples teach craft and judgment. They are not story templates and should not cause every production to inherit the same genre temperature, scene shapes, jokes, or ending rhythm.
 
 ### Node 16: Edition Writer
 
@@ -326,7 +340,7 @@ Clean input only:
 - canon bible
 - casting plan
 - edition plan
-- approved style examples if configured
+- approved style examples
 
 Do not send:
 
