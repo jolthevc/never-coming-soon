@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Never Coming Soon Quick Sparks",
+  "type": "object",
+  "required": ["sparks"],
+  "properties": {
+    "sparks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["spark_id", "format", "genre", "brief"],
+        "properties": {
+          "spark_id": {"type": "string", "minLength": 1},
+          "format": {"type": "string", "enum": ["FILM", "SERIES", "LIMITED_SERIES"]},
+          "genre": {"type": "string", "minLength": 1},
+          "brief": {"type": "string", "minLength": 1, "maxLength": 500}
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

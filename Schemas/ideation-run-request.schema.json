@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Never Coming Soon Ideation Run Request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_type"],
+  "properties": {
+    "run_type": {"type": "string", "enum": ["GENERAL", "DIRECTED", "CONCEPT_INTAKE"]},
+    "target_seed_count": {"type": "integer", "minimum": 1, "maximum": 100},
+    "human_direction": {"type": ["string", "null"]},
+    "concept_text": {"type": ["string", "null"]},
+    "target_format": {"type": ["string", "null"]},
+    "target_genre": {"type": ["string", "null"]},
+    "preferred_ideation_mode": {"type": ["string", "null"]},
+    "anchor_strength": {"type": "string", "enum": ["LOOSE", "CENTERED", "STRICT"]},
+    "human_notes": {"type": ["string", "null"]}
+  }
+}
