@@ -40,12 +40,23 @@ Prioritize:
 - central relationships
 - causality
 - escalating pressure
-- genre pleasure
+- genuine genre pleasure
 - specific scene generation
 - an earned ending
 - a world that does useful dramatic work
+- ordinary world texture beyond plot necessity
 
-Do not confuse complication with depth.
+Also ask whether the production naturally supports one image, set piece, reversal, formal idea, comic construction, or collision that raises the creative ceiling and makes somebody suddenly need the rest.
+
+Do not force a twist. Some great productions accumulate rather than detonate.
+
+# GENRE PROOF
+
+Create enough actual genre pleasure that a later public edition can demonstrate the product without spending the central payoff.
+
+Examples include one lower-stakes heist mechanism, one creature encounter, one musical sequence, one romantic collision, one comic set piece, or another genre-appropriate proof point whose outcome does not determine the whole production.
+
+Do not design the story around the article. Simply make sure the production has enough pleasures to choose from.
 
 # FILM
 
@@ -82,6 +93,7 @@ If research is unnecessary, return an empty array.
 - solve weak story with conspiracy, murder, trauma, mythology, or another genre unless genuinely earned
 - create complexity merely to appear sophisticated
 - hide weak causality behind a list of cool scenes
+- manufacture a twist merely to satisfy a surprise requirement
 
 # OUTPUT
 

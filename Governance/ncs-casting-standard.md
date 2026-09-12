@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Casting Standard v1.0
+## Casting Standard v1.1
 
 ## 1. Purpose
 
@@ -21,7 +21,7 @@ Not:
 
 **Oh, I recognize that celebrity.**
 
-## 3. What casting should solve
+## 3. What internal casting should solve
 
 Casting should answer questions such as:
 
@@ -32,7 +32,9 @@ Casting should answer questions such as:
 - Does the audience need to trust the actor immediately or doubt them?
 - Would a familiar screen persona help or hurt?
 
-Explain the fit through the fictional person.
+These are internal selection questions.
+
+They are not necessarily the language the public article should use.
 
 ## 4. Avoid generic actor praise
 
@@ -106,15 +108,45 @@ A series may need 4 to 8.
 
 Use fewer when the production is intimate.
 
-## 11. Public casting copy
+## 11. Public casting voice
 
-Published casting explanations should be concise, specific, and pleasurable.
+The published Cast section should sound as though Never Coming Soon has already watched the performance.
 
-They should make the reader picture the actor behaving as the character.
+Internal logic may say:
 
-Character description comes before actor selection in the edition.
+> Frank needs somebody who can balance charm and danger.
 
-## 12. Final test
+Published copy should say something closer to:
+
+> Walton Goggins is Frank Mercer, and about five minutes in the whole thing makes sense.
+
+Then describe what the imagined performance actually feels like on screen: a look, rhythm, pause, comic beat, physical habit, chemistry, stillness, volatility, warmth, or another specific behavior.
+
+Prefer declarative language such as:
+
+- X is Y
+- X plays Y with...
+- some of X's best moments are...
+- their scenes become funnier when...
+
+Avoid hypothetical public language such as:
+
+- would bring
+- could capture
+- needs someone who
+- would be perfect because
+
+Those phrases expose the development process rather than preserving the public conceit.
+
+## 12. Public casting length
+
+Casting explanations should be concise enough that the section remains pleasurable rather than analytical.
+
+The reader should immediately picture the actor behaving as the character.
+
+Do not repeat the full character portrait. Add the face and performance.
+
+## 13. Final test
 
 Before locking a preferred cast, ask:
 
@@ -124,3 +156,4 @@ Before locking a preferred cast, ask:
 - Does the ensemble make sense together?
 - Are we repeating a familiar NCS actor out of habit?
 - Would the reader immediately understand why this choice is fun?
+- Can the public explanation sound like observed performance rather than hypothetical casting analysis?
