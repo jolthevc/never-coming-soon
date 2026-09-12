@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Story Development Standard v1.0
+## Story Development Standard v1.1
 
 ## 1. Purpose
 
@@ -121,7 +121,7 @@ Escalation should deepen the experience, not merely increase volume.
 
 ## 9. Turns and reversals
 
-A strong turn changes the reader's or character's understanding of what comes next.
+A strong turn changes the audience's or character's understanding of what comes next.
 
 Good turns often emerge from prior character behavior rather than arbitrary surprise.
 
@@ -149,11 +149,29 @@ They may be:
 - awkward
 - strange in a way that belongs specifically to this production
 
-A good signature scene has enough situation, behavior, tension, and detail that someone can begin directing it in their head.
+A good signature scene has enough situation, behavior, pressure, and detail that someone can begin directing it in their head.
 
 Avoid generic scene labels such as "the big confrontation" or "the emotional speech."
 
-## 11. Genre delivery
+## 11. High-ceiling moments
+
+A very good production can be consistently well observed and still never produce the moment that makes somebody sit up.
+
+When the material naturally supports one, look for at least one image, set piece, reversal, formal idea, comic construction, reveal, or collision that makes the audience suddenly see the production differently.
+
+This is not a twist requirement.
+
+Do not bolt a surprise onto a movie that is stronger as accumulation, intimacy, dread, romance, or inevitability.
+
+The objective is not novelty for novelty's sake. The objective is a higher creative ceiling.
+
+Ask:
+
+**Is there anything in this production that a great trailer could show for three seconds and make somebody immediately need the rest?**
+
+If the answer is no, that may be fine. But Development should at least ask whether a stronger invention is available.
+
+## 12. Genre delivery
 
 A production should sincerely deliver the pleasure of its genre.
 
@@ -167,6 +185,10 @@ Thrillers need pressure and forward motion.
 
 Action needs set pieces and physical stakes that emerge from character and situation.
 
+Heists need mechanism, competence, misdirection, problem solving, and plans that create pleasure before they create resolution.
+
+Musicals need musical sequences worth experiencing, not merely a story in which characters happen to sing.
+
 Sports stories must care about the competition itself, not treat the sport as wallpaper.
 
 Mysteries need questions worth following and answers worth receiving.
@@ -177,7 +199,26 @@ Drama does not mean humorless suffering.
 
 Prestige is not a genre.
 
-## 12. Tone
+A genre label creates a promise. Development must create actual scenes that fulfill it.
+
+## 13. Public-demonstration awareness
+
+Development owns the whole production, not the public article, but it should create enough genre pleasure that downstream editorial work can demonstrate the product without spending the central payoff.
+
+A useful internal question is:
+
+**Can the public edition show one lower-stakes instance of what makes this genre fun while preserving the production's major unresolved value?**
+
+Examples:
+
+- one creature attack that is not the attack that decides the story
+- one heist mechanism working that is not the mechanism on which the final job depends
+- one musical number that proves the movie's scale or wit without resolving the central relationship
+- one romantic sequence that proves chemistry without spending the final choice
+
+If no such demonstration exists, the production may be withholding all its pleasure until the end.
+
+## 14. Tone
 
 Tone should emerge from the production rather than from a universal NCS template.
 
@@ -195,7 +236,7 @@ Do not add cynicism to prove sophistication.
 
 Do not add jokes to protect sincere moments.
 
-## 13. World
+## 15. World
 
 The world matters when it creates behavior, pressure, texture, or story.
 
@@ -205,17 +246,21 @@ Avoid decorative specificity.
 
 Research should produce usable dramatic detail rather than trivia.
 
-## 14. Simplicity and complexity
+The internal world should also contain ordinary texture that does not serve the central plot. This gives downstream writing raw material for proof of existence.
+
+Prefer routines, logistics, institutional habits, background observers, and mundane facts over a curated shelf of charming quirks.
+
+## 16. Simplicity and complexity
 
 Complexity must earn its place.
 
-Before adding another timeline, secret, villain, conspiracy, institution, mythology layer, murder, betrayal, or surprise reveal, ask whether the existing human engine has been fully exploited.
+Before adding another timeline, secret, villain, conspiracy, institution, mythology layer, murder, betrayal, or surprise reveal, ask whether the existing human or genre engine has been fully exploited.
 
-A cleaner story with richer people is often stronger than a complicated story with thin people.
+A cleaner story with richer people or richer mechanics is often stronger than a complicated story with thin people.
 
 Do not mistake confusion for sophistication.
 
-## 15. Film standard
+## 17. Film standard
 
 A film needs a complete dramatic experience.
 
@@ -230,6 +275,8 @@ Internally, Generation should know:
 - the climactic situation
 - the actual ending
 - the emotional resolution
+- what unresolved value the public edition should probably protect
+- which genre pleasures can be demonstrated publicly without spending that value
 
 This is not a demand for a rigid screenplay formula.
 
@@ -237,7 +284,7 @@ The production should nevertheless feel causal, shaped, and complete.
 
 The ending should not merely stop the plot. It should answer or transform something the movie made us care about.
 
-## 16. Series standard
+## 18. Series standard
 
 A series needs more than an excellent pilot premise.
 
@@ -270,7 +317,7 @@ Internally know:
 
 Do not stretch a film into eight episodes.
 
-## 17. Limited series standard
+## 19. Limited series standard
 
 A limited series should justify multiple chapters while moving toward a contained ending.
 
@@ -278,7 +325,7 @@ It needs both episodic progression and cumulative inevitability.
 
 If the material would clearly be stronger as a two-hour film, change the format.
 
-## 18. Ending standard
+## 20. Ending standard
 
 An ending should feel earned by the production that came before it.
 
@@ -294,7 +341,7 @@ Ask:
 
 Do not save a weak story with a clever final twist.
 
-## 19. Development rescue
+## 21. Development rescue
 
 Generation should rescue before rejecting.
 
@@ -310,7 +357,7 @@ If the packet contains one excellent relationship inside a mediocre premise, con
 
 Development effort should be spent making the production better, not defending previous decisions.
 
-## 20. Canon readiness test
+## 22. Canon readiness test
 
 Before internal canon is frozen, ask:
 
@@ -320,9 +367,11 @@ Before internal canon is frozen, ask:
 - Does the story generate specific scenes?
 - Does escalation come from the dramatic engine rather than arbitrary complication?
 - Does the genre sincerely deliver?
+- Is there enough genre pleasure to demonstrate the production without spending its final payoff?
 - Does the ending feel earned?
 - Does the production have its own identity?
-- Is the world doing useful work?
+- Is the world doing useful work and also producing ordinary texture?
+- Is there a higher-ceiling moment available without forcing one?
 - Can we imagine more than the logline?
 
-If the answer is no, keep developing.
+If the answer is no on a material dimension, keep developing.
