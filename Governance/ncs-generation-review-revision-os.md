@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Generation, Review and Revision Operating System v2.0
+## Generation, Review and Revision Operating System v2.1
 
 ## 1. Purpose
 
@@ -71,11 +71,12 @@ Generation should move through distinct stages:
 5. Canon Freeze
 6. Casting
 7. Edition Architecture
-8. Edition Drafting
-9. Forensic Editorial Review
-10. Targeted Revision or Controlled Rescue
-11. Deterministic QA
-12. Human Review
+8. Style Calibration Load
+9. Edition Drafting
+10. Forensic Editorial Review
+11. Targeted Revision or Controlled Rescue
+12. Deterministic QA
+13. Human Review
 
 Each stage has a different job.
 
@@ -88,6 +89,10 @@ The Production Developer creates the first serious version of the movie or show.
 It should establish enough internal story to expose whether the production actually works.
 
 Do not begin public prose while major creative decisions remain vague merely because the original packet was promising.
+
+Development should also ask whether the production has any higher-ceiling moment, image, set piece, reversal, or formal idea that could make a viewer suddenly need the rest.
+
+This is not a twist requirement. Do not manufacture surprise when accumulation is stronger.
 
 ## 7. Selective research
 
@@ -113,7 +118,8 @@ Its purpose is to identify:
 - unearned endings
 - wrong format
 - missed opportunities
-- genre failures
+- weak genre delivery
+- a production that is consistently competent but never produces a memorable or high-ceiling moment when the material could support one
 
 The Challenger diagnoses.
 
@@ -146,6 +152,9 @@ For film, canon should know:
 - signature scenes
 - tone
 - genre delivery
+- ordinary world texture
+- what unresolved value the public article should probably protect
+- what genre pleasures can be demonstrated without spending that value
 
 For series, canon should also know:
 
@@ -170,6 +179,8 @@ The Casting Director should evaluate fit, chemistry, screen energy, role age, en
 
 Casting should make the production more vivid, not retroactively define the character.
 
+Internal casting logic may reason in terms of what the role needs. Public copy later should sound as though the performance has already been watched.
+
 ## 12. Edition architecture before drafting
 
 Do not move directly from canon to prose.
@@ -179,18 +190,50 @@ The Edition Architect decides how the reader should discover the production.
 It chooses:
 
 - opening strategy
-- public section flow
-- what plot material to reveal
-- what payoff to protect
+- canonical section flow
+- what character information appears before casting
+- what story material gets compressed
 - where to slow down
-- what connective material to compress
-- which scenes deserve close treatment
+- which signature scenes deserve close treatment
+- what unresolved value remains protected
+- which genre pleasure can be demonstrated safely
+- where proof-of-existence details can make the world feel larger than the plot
+- where evidence of spectatorship can appear naturally
 - where casting belongs
-- the emotional rhythm of the edition
+- how the article should change rhythm
+- how the genre should influence presentation
+- what converges in THE FINISH
 
-The public article is a curated pitch, not a transcript of the canon bible.
+For film, use the canonical visible section sequence from `Governance/ncs-editorial-anatomy.md`:
 
-## 13. Clean writer context
+- THE PITCH
+- THE CHARACTERS
+- THE CAST
+- THE MOVIE
+- THE SCENES
+- THE FINISH
+
+The public article is a curated entertainment object, not a transcript of the canon bible.
+
+## 13. Public selection doctrine
+
+The public edition knows less than the internal canon on purpose.
+
+The governing spoiler rule is:
+
+**Protect whatever carries the production's major unresolved value. Give away enough genre pleasure to prove the production delivers.**
+
+When those overlap:
+
+**Demonstrate the pleasure once in a lower-stakes situation whose outcome does not determine the whole. The demonstration is free. The stake is not.**
+
+Do not protect the production so aggressively that the article becomes vague.
+
+Do not reveal a character's lesson, the meaning of an arc, or the decisive response merely because the literal ending remains hidden.
+
+Interpretive spoilers can be more damaging than event spoilers.
+
+## 14. Clean writer context
 
 The Edition Writer should receive the clean truth of the production, not developmental debris.
 
@@ -202,7 +245,7 @@ It should normally see:
 - Brand Constitution
 - Voice Constitution
 - Editorial Anatomy
-- approved gold-standard style examples when available
+- approved gold-standard style examples
 
 It should not receive:
 
@@ -215,7 +258,31 @@ It should not receive:
 
 The writer should know this production extremely well, not thirty other NCS pieces.
 
-## 14. House prose philosophy
+## 15. Gold-standard calibration
+
+Gold examples teach craft, not subject matter.
+
+Current approved film calibration:
+
+`Examples/Gold/film-01-the-tell.md`
+
+Use it to learn:
+
+- sentence and paragraph control
+- character-first presentation
+- observed-performance casting voice
+- ordinary proof-of-existence detail
+- evidence of spectatorship
+- pressure shown with response protected
+- distinct jobs for THE MOVIE, THE SCENES, and THE FINISH
+
+Do not imitate its sports setting, restrained emotional temperature, specific jokes, ending rhythm, or scene types by default.
+
+One example is not a universal genre template.
+
+Future gold examples should broaden the calibration set rather than create a monoculture.
+
+## 16. House prose philosophy
 
 The default prose mode is clean, propulsive storytelling.
 
@@ -225,17 +292,9 @@ The narrator should feel smart, funny, enthusiastic, and tasteful without becomi
 
 The production determines the remaining tonal variation.
 
-Comedy can loosen.
+Comedy can loosen. Horror can quiet down. Romance can linger. Action can accelerate. Drama can breathe. A heist may need more mechanism. A musical may need more spectacle on the page.
 
-Horror can quiet down.
-
-Romance can linger.
-
-Action can accelerate.
-
-Drama can breathe.
-
-## 15. Forensic editorial review
+## 17. Forensic editorial review
 
 The Forensic Editor reviews in this order:
 
@@ -246,11 +305,22 @@ The Forensic Editor reviews in this order:
 
 It should identify both weaknesses and strengths worth preserving.
 
+It should explicitly inspect:
+
+- unresolved-value protection
+- genre-pleasure proof
+- proof of existence
+- evidence of spectatorship
+- whether character copy describes people rather than screenplay function
+- whether casting copy sounds observed rather than hypothetical
+- whether THE MOVIE, THE SCENES, and THE FINISH have distinct jobs
+- whether prose explains meaning after already showing it
+
 The review is a diagnosis, not a rewrite.
 
 A second model family may be useful here for an independent cold read.
 
-## 16. Revision routes
+## 18. Revision routes
 
 The Forensic Editor chooses the deepest necessary route:
 
@@ -273,13 +343,15 @@ The production works, but public presentation is wrong. Rebuild the edition plan
 
 ### CANON
 
-The article exposed a foundational production problem. Reopen canon, solve the creative issue, then recast/replan/redraft/review as needed.
+The article exposed a foundational production problem. Reopen canon, solve the creative issue, then recast, replan, redraft, and review as needed.
 
 Limit automated rescue to one reentry cycle in v1.
 
 Do not create endless self-revision loops.
 
-## 17. Revision philosophy
+A missing twist or startling moment is not automatically a CANON problem. Route deeper only when the production itself is materially underpowered.
+
+## 19. Revision philosophy
 
 Revision should preserve what already works.
 
@@ -287,11 +359,11 @@ Do not reflexively rewrite every sentence.
 
 Do not flatten unusual rhythm into generic clarity.
 
-Do not remove jokes, specificity, character texture, or scene detail merely because a cleaner sentence is available.
+Do not remove jokes, specificity, character texture, proof-of-existence details, spectator reactions, or scene detail merely because a cleaner sentence is available.
 
 Fix the actual issue named by the review.
 
-## 18. Three quality layers
+## 20. Three quality layers
 
 Every finished edition must clear three tests.
 
@@ -309,20 +381,20 @@ Does this strengthen the NCS slate rather than repeat it mechanically?
 
 Catalog quality is a final awareness check, not permission to ruin a great individual production for artificial balance.
 
-## 19. Deterministic QA
+## 21. Deterministic QA
 
 After final automated revision, run noncreative checks such as:
 
 - draft exists
 - reasonable word count for format
 - no em dash character in published prose
-- no backstage process references such as prompts, model usage, AI assistance, generation systems, or production tooling
+- no backstage process references
 - title and major character names are internally consistent where deterministically checkable
 - series episode counts are not obviously inconsistent with the edition plan
 
 QA should create warnings, not secretly rewrite creative prose.
 
-## 20. Human review
+## 22. Human review
 
 Generation ends at:
 
