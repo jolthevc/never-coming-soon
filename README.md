@@ -45,8 +45,6 @@ Google Drive stores final human-readable draft artifacts.
 
 The system uses one canonical `Ideas` tab and one row per concept across the lifecycle.
 
-The row begins as Ideation memory and later becomes the durable final-delivery record.
-
 Canonical downstream lifecycle:
 
 `DEVELOPMENT_SELECT` -> `GENERATING` -> `DRAFTED` -> `PUBLISHED`
@@ -67,9 +65,38 @@ A successful Generation run updates the same Ideas row with:
 - `ig_packet_json`
 - `status = DRAFTED`
 
-`DRAFTED` means the final article has passed final QA, has a valid holistic score for the exact delivered draft, has been successfully written to Google Drive, and has a valid social asset handoff.
+Automatic `DRAFTED` delivery requires:
 
-A failed run must never mark a row `DRAFTED`.
+- a final Forensic Review of the exact delivered article
+- numeric `ncs_score >= 8.0`
+- final `revision_route = NONE`
+- deterministic article QA passed
+- exact-final social packet schema and copy QA passed
+- successful Google Drive persistence
+
+A failed or sub-floor run must never create a new false-success `DRAFTED` state.
+
+For failed force redevelopment, the previous successful DRAFTED artifact and final fields are preserved.
+
+## Relationship-driven productions
+
+Romance, romantic comedy, second-chance love, and other central two-person relationship stories use:
+
+- `Governance/ncs-relationship-story-standard.md`
+
+The standard requires actual chemistry in behavior, credible breakup logic for second-chance romance, bilateral life stakes, and dignified treatment of new partners.
+
+A premise mechanism may create proximity. It cannot substitute for the relationship itself.
+
+## Scene ownership
+
+Edition Architecture now assigns substantial public sequences one primary section through `scene_ownership_plan`.
+
+For film, THE MOVIE and THE SCENES should not fully stage the same event.
+
+For television, THE SEASON and THE EPISODES should not fully stage the same event.
+
+Deterministic diagnostics can flag likely overlap, while the Forensic Editor makes the editorial judgment.
 
 ## Social asset handoff
 
@@ -90,9 +117,11 @@ The locked three-slide spine is:
 2. Premise
 3. NCS Close
 
-The content slots stay consistent. The fictional production owns the art direction.
+The packet also contains one short social caption.
 
-The packet also contains one short, punchy social caption.
+The structured format field must use exactly `FILM`, `SERIES`, or `LIMITED_SERIES`.
+
+The exact final object written to Sheets must pass schema validation after all normalization or repair.
 
 ## Public integrity
 
@@ -106,7 +135,7 @@ Terms such as `Contained Proof`, `extractable play`, `unresolved value`, `proof 
 
 ## Television
 
-Television now has dedicated format governance:
+Television has dedicated format governance:
 
 - `Governance/ncs-television-editorial-standard.md`
 
