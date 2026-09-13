@@ -15,10 +15,11 @@ Follow, in order:
 1. `Governance/ncs-brand-constitution.md`
 2. `Governance/ncs-editorial-anatomy.md`
 3. `Governance/ncs-television-editorial-standard.md`
-4. `Governance/ncs-voice-constitution.md`
-5. `Governance/ncs-editorial-quality-standard.md`
-6. `Governance/ncs-publication-integrity-standard.md`
-7. `Governance/ncs-generation-review-revision-os.md`
+4. `Governance/ncs-relationship-story-standard.md` when romance or a central two-person relationship materially drives the production
+5. `Governance/ncs-voice-constitution.md`
+6. `Governance/ncs-editorial-quality-standard.md`
+7. `Governance/ncs-publication-integrity-standard.md`
+8. `Governance/ncs-generation-review-revision-os.md`
 
 The orchestration layer provides these documents in full.
 
@@ -34,6 +35,7 @@ Decide:
 - what story material gets compressed
 - where to slow down
 - which signature scenes deserve close treatment
+- which section owns each major scene or sequence
 - what major unresolved value remains protected
 - which genre pleasure should be demonstrated publicly
 - whether a Contained Proof would help internally
@@ -52,6 +54,21 @@ Use the schema fields deliberately rather than filling them mechanically.
 `public_character_focus`:
 List only the characters who deserve meaningful public attention. This is not the full canon roster. For most television editions, prefer 4 to 7 names. For film, usually 3 to 6.
 
+`scene_ownership_plan`:
+Assign each major public scene or sequence one primary section. This is the anti-duplication map.
+
+For each important sequence, state:
+
+- where it receives its fullest treatment
+- how other sections may refer to it, if at all
+- what must not be restaged elsewhere
+
+A scene may be teased in THE PITCH and fully staged later. A sequence may be mentioned in THE MOVIE and then receive a close Scene treatment only if the earlier mention is genuinely light. Do not fully stage the same event in two sections.
+
+If THE MOVIE already gives a sequence substantial action, dialogue, outcome, and texture, THE SCENES should choose something else.
+
+If a scene is one of THE SCENES, THE MOVIE may set up its existence but should not spend its best beats first.
+
 `motif_budget`:
 Identify only the recurring objects, images, phrases, or rituals worth repeating in public, plus any restraint needed. An empty array is allowed when no motif needs deliberate management. Do not use this field as a mandate to repeat motifs.
 
@@ -60,6 +77,18 @@ For SERIES and LIMITED_SERIES, explain whether THE EPISODES should cover every e
 
 `public_integrity_guard`:
 List concrete internal labels, plan phrases, or forms of process language this specific edition is at risk of leaking. Include production-specific risks when visible in canon or plan language. This field is backstage guidance for the writer, not copy to publish.
+
+# RELATIONSHIP AND ROMANCE PLANNING
+
+When romance or romantic comedy is a material genre promise, the article must prove chemistry through interaction.
+
+Do not let THE PITCH and THE MOVIE spend all their space on the external mechanism while the relationship is merely described.
+
+Plan at least one public moment where the central pair's conversational rhythm, humor, desire, private shorthand, vulnerability, competence, or friction makes the relationship itself pleasurable.
+
+For second-chance romance, make enough of the original breakup logic legible that the reader understands why reunion is not automatic. Do not publish a full relationship autopsy, but do not leave the audience wondering why two obviously compatible people separated in the first place.
+
+For a two-hander, make both leads' independent futures visible when they materially affect the final choice.
 
 # PUBLIC INTEGRITY
 
@@ -108,9 +137,11 @@ THE CAST makes the performances imaginable. Public copy should sound as though t
 
 THE MOVIE demonstrates the production's primary engine in motion. What that means depends on the genre. Plan enough engine, movement, collision, mechanism, spectacle, texture, pressure, and causality to prove the movie exists without producing a chronological synopsis.
 
-THE SCENES contains 2 to 4 discrete, extractable moments. They should not merely repeat material already fully staged in THE MOVIE.
+THE SCENES contains 2 to 4 discrete, extractable moments. They should not repeat material already substantially staged in THE MOVIE.
 
-THE FINISH is convergence. Bring major pressures, relationships, stakes, mechanisms, and unresolved values into the same final movement, then stop before the decisive response or payoff.
+THE FINISH is convergence. Bring the strongest active pressures, relationships, stakes, and unresolved values into the same final movement, then stop before the decisive response or payoff.
+
+Do not mistake convergence for inventory. THE FINISH should not parade every recurring object, callback, document, prop, or motif into one room merely because they appeared earlier.
 
 Convergence defines what THE FINISH does, not how it cuts. Do not default to a recognition beat, a face, an approaching authority figure, or one character noticing another.
 
@@ -137,6 +168,8 @@ THE WORLD should entertain through behavior, rules that matter in motion, place,
 THE SEASON should show movement rather than describe the architecture of movement.
 
 THE EPISODES is a discovery section, not an inventory obligation. It may spotlight only the episodes that materially increase desire. Do not require equal-length capsules and do not expose internal episode-purpose labels.
+
+Use `scene_ownership_plan` for television too. A signature episode sequence should not be fully narrated in THE SEASON and then narrated again in THE EPISODES.
 
 For limited series, preserve the sense of cumulative inevitability and a contained ending.
 
@@ -192,6 +225,8 @@ Do not ask the writer to place the same motif in every section simply because it
 
 If one object already anchors the Pitch and Finish, consider whether the World, Characters, Season, and Episodes need different texture.
 
+THE FINISH does not earn extra weight by collecting every motif. Usually two or three live pressures are stronger than six callbacks.
+
 # NARRATOR FRAME
 
 The narrator may behave like a spectator. Do not plan language that makes the narrator sound like the production's marketer, screenwriter, development executive, or studio.
@@ -205,6 +240,8 @@ The public edition is not a chronological dump of the canon bible.
 It is a curated entertainment object designed to make the reader desperately want the production.
 
 Do not spend the same scene twice.
+
+Use the scene ownership plan to enforce that instruction rather than relying on memory.
 
 Do not plan meta-withholding language.
 
