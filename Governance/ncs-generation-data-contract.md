@@ -1,185 +1,219 @@
 # Never Coming Soon
-## Generation Data Contract v1.0
+## Generation Data Contract v2.0
 
 ## 1. Purpose
 
-This document defines the persistent state for the Generation workflow.
+This document defines Generation state and persistence.
 
-The architecture should remain lean.
+The architecture is intentionally lean.
 
-One row equals one developed NCS production.
+There is no separate Productions state table in v2.
 
-## 2. Spreadsheet
+Generation uses:
 
-Use a separate native Google Spreadsheet named:
+- the `Ideas` row as durable lifecycle state
+- n8n execution memory as the temporary creative workspace
+- Google Drive as the finished-draft store
+- GitHub as the source of truth for governance, prompts, schemas, workflow specs, and approved calibration examples
 
-`Never Coming Soon - Productions`
+## 2. Durable identifier
 
-Use one working tab:
+Use `idea_id` as the only durable Generation identifier.
 
-`Productions`
+Do not create `production_id`.
 
-Do not add additional tabs in v1 unless implementation pain demonstrates a real need.
+Do not derive a second identity namespace from the idea.
 
-## 3. Canonical columns
+## 3. Source row
 
-Use these 15 columns in this order:
+Generation begins from exactly one Ideas row.
 
-1. `production_id`
-2. `idea_id`
-3. `created_at`
-4. `status`
-5. `development_packet_json`
-6. `development_blueprint_json`
-7. `research_packet_json`
-8. `story_challenge_json`
-9. `canon_bible_json`
-10. `casting_json`
-11. `edition_plan_json`
-12. `draft_v1_markdown`
-13. `editorial_review_json`
-14. `draft_final_markdown`
-15. `human_notes`
+Normal entry requirement:
 
-## 4. IDs
+- `status = DEVELOPMENT_SELECT`
+- nonblank `development_packet_json`
 
-Default production ID derives from the Ideation ID.
+An explicit force-redevelopment run may also begin from an eligible `DRAFTED` row.
 
-Example:
+## 4. Start lock
 
-`NCS-I-000185` -> `NCS-P-000185`
+Once the row is validated and the workflow is genuinely starting:
 
-One production per selected idea is the v1 default.
+`DEVELOPMENT_SELECT` -> `GENERATING`
 
-Future explicit redevelopment variants may add a version suffix, but v1 should not invent variant logic prematurely.
+The primary purpose of `GENERATING` is to prevent accidental duplicate work and make active state visible.
 
-## 5. Status values
+Do not set it during a dry structural test that never begins a real run unless the test also restores the row immediately.
 
-Allowed values:
+## 5. Execution-memory workspace
 
-- `DEVELOPING`
-- `RESEARCHING`
-- `CHALLENGING`
-- `CANON_READY`
-- `CAST_READY`
-- `EDITION_PLANNED`
-- `DRAFTED`
-- `REVIEWED`
-- `READY_FOR_HUMAN_REVIEW`
-- `HOLD`
-- `ABANDONED`
+The following artifacts normally remain in n8n execution memory only:
 
-Status changes must be explicit.
+- source Ideas row snapshot
+- parsed Development Packet
+- production development blueprint
+- research packet
+- story challenge
+- canon bible
+- casting plan
+- edition plan
+- draft versions
+- deterministic diagnostics
+- editorial reviews
+- revision outputs
+- final IG asset packet before persistence
 
-## 6. Field ownership
+Do not add Sheet columns for these internal stages.
 
-### Identity fields
+Do not recreate durable checkpoint/resume architecture unless repeated operational evidence later justifies it.
 
-`production_id`, `idea_id`, and `created_at` are immutable after creation.
+## 6. Canon authority
 
-### development_packet_json
+After the Canon Builder, the current canon bible is authoritative for the rest of that execution.
 
-A snapshot of the exact Development Packet used to begin Generation.
+Casting, edition architecture, writing, revision, and social packaging should represent that canon rather than casually reinvent it.
 
-Do not silently replace it if the Ideation row later changes.
+A controlled CANON rescue may reopen canon once when Forensic Review identifies a foundational production problem.
 
-### development_blueprint_json
+## 7. Revision routes
 
-Output of the Production Developer.
+The Forensic Editor may return:
 
-### research_packet_json
+- `NONE`
+- `PROSE`
+- `EDITION`
+- `CANON`
 
-Blank when no research was requested.
+Use the shallowest route that can solve the problem.
 
-Contains the structured grounding packet when research ran.
+Limit automated deep rescue to one reentry cycle.
 
-### story_challenge_json
+A later final review always scores the exact final draft that will be delivered.
 
-Independent critique of the development blueprint.
+## 8. Final scoring contract
 
-### canon_bible_json
+The final delivered draft must have a valid numeric holistic NCS score.
 
-The authoritative internal production after Canon Builder.
+The score must come from `editorial_review_json.overall_score` for the exact draft being delivered.
 
-Downstream agents should represent this canon rather than casually reinvent it.
+Rules:
 
-A controlled canon-reopen loop may replace this field if editorial review identifies a foundational production problem.
+- 1.0 to 10.0
+- preferably one decimal place
+- not a component-score average
+- not `N/A`
+- not copied from an earlier draft review after prose changed
 
-### casting_json
+If any revision changes article text after the latest review, run another Forensic Editor call before delivery.
 
-Dream casting plan created after canon exists.
+## 9. Final public-integrity contract
 
-### edition_plan_json
+Before delivery, deterministic QA must verify at minimum:
 
-Public storytelling architecture created after canon and casting.
+- final article is nonblank
+- final title is nonblank
+- no em dash character
+- no obvious backstage technology references
+- no hard internal editorial leakage from `Governance/ncs-publication-integrity-standard.md`
+- required visible section structure for the resolved format
+- reasonable word count
+- major-name consistency where practical
+- episode-count consistency where practical
 
-### draft_v1_markdown
+Internal-language leakage is not merely a cosmetic warning. Exact hard-leak terms should normally block delivery until revised.
 
-First complete public NCS edition.
+## 10. Social handoff contract
 
-### editorial_review_json
+A successful Generation run also produces `ig_packet_json` matching:
 
-Forensic editorial diagnosis of the first draft or latest full redraft.
+`Schemas/ig-asset-packet.schema.json`
 
-### draft_final_markdown
+and governed by:
 
-Final automated revision delivered to the human editor.
+`Governance/ncs-social-asset-standard.md`
 
-### human_notes
+The packet is built from final canon and the exact final article.
 
-Human-owned freeform notes.
+It contains:
 
-Automations may read them when relevant and must never overwrite them without explicit human instruction.
+- campaign brief
+- logo treatment
+- short social caption
+- locked Slide 1 cover/poster packet
+- locked Slide 2 premise packet
+- locked Slide 3 NCS close packet
 
-## 7. JSON storage
+Do not persist the packet if the run fails before successful delivery.
 
-Structured objects are stored as compact valid JSON strings.
+## 11. Google Drive delivery
 
-Use `null` for unknown scalar values.
+Only after the final article, final score, deterministic QA, and IG packet are valid should Generation write the final Google Doc.
 
-Use `[]` for empty arrays.
+Destination pattern:
 
-Do not store Markdown code fences around JSON.
+`Never Coming Soon / Drafts / [FINAL TITLE] / [FINAL TITLE]`
 
-Stringify exactly once before Sheet write and parse exactly once after read.
+Document content:
 
-## 8. Markdown storage
+`NCS SCORE: X.X / 10`
 
-Draft fields store plain Markdown text.
+blank line
 
-Do not wrap Markdown in JSON when writing to the draft columns.
+final article only
 
-## 9. Canon authority
+Do not include internal JSON, diagnostics, research, canon, review notes, or prompts in the document.
 
-After `canon_bible_json` is written, downstream agents should treat it as the current truth of the fictional production.
+## 12. Final Ideas update
 
-The Casting Director, Edition Architect, and Edition Writer may not casually change canon because a different choice occurs to them.
+Only after successful Drive persistence, update the same Ideas row:
 
-If a foundational issue is discovered, reopen canon explicitly.
+- `final_title`
+- `draft_url`
+- `ncs_score`
+- `ig_packet_json`
+- `status = DRAFTED`
 
-## 10. Revision routes
+`DRAFTED` must be the last success-state write.
 
-`editorial_review_json.revision_route` determines the next automated action:
+Generation must never populate `published_url` or set `PUBLISHED`.
 
-- `NONE` -> deterministic QA and human review
-- `PROSE` -> Revision Writer
-- `EDITION` -> Edition Architect, Edition Writer, then Forensic Editor again
-- `CANON` -> Canon Builder rescue, then recast/replan/redraft/review
+## 13. Failure handling
 
-Limit automated rescue to one reentry cycle in v1.
+If a run fails after setting `GENERATING` but before successful final delivery:
 
-After one rescue cycle, deliver the best available version to the human editor with unresolved issues clearly recorded.
+- do not set `DRAFTED`
+- do not write a fake or partial `draft_url`
+- do not write `N/A` into `ncs_score`
+- do not replace successful prior final fields during a failed force-redevelopment run
+- reset the exact failed row from `GENERATING` to `DEVELOPMENT_SELECT` when appropriate
 
-## 11. Overwrite rules
+A companion n8n Error Trigger workflow is the preferred cleanup mechanism.
 
-- preserve identity fields forever
-- preserve `human_notes`
-- never erase a nonblank field merely because a downstream stage is skipped
-- when a controlled rescue stage regenerates canon or downstream artifacts, overwrite only the fields that logically depend on the changed artifact
-- do not regenerate creative work merely because a Sheet write failed
+The error workflow must identify the exact failed `idea_id` and only reset the row when its current status is still `GENERATING`.
 
-## 12. Human authority
+Never reset an arbitrary row merely because it is GENERATING.
 
-The final automated status is `READY_FOR_HUMAN_REVIEW`, not `PUBLISHED`.
+## 14. Force redevelopment
 
-The human editor decides whether the edition publishes, receives another manual revision, returns to development, or is abandoned.
+`force_redevelopment=true` requires explicit `idea_id`.
+
+It may regenerate a `DRAFTED` production without deleting the successful existing artifact first.
+
+Preserve:
+
+- human notes
+- source Ideation fields
+- published URL
+- previous Drive artifact until replacement succeeds
+
+Only replace final title, draft URL, score, IG packet, and status after the new delivery passes every success gate.
+
+## 15. Human authority
+
+`DRAFTED` means the automated system has delivered a complete draft and asset handoff.
+
+It does not mean published.
+
+The human editor remains the final publication authority.
+
+`PUBLISHED` is set only by an explicit human or publishing workflow.
