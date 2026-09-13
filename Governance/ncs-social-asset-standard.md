@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Social Asset Standard v1.0
+## Social Asset Standard v1.1
 
 ## 1. Purpose
 
@@ -26,7 +26,22 @@ The packet is built from:
 
 Do not build it from the original Ideation premise when Generation materially changed the production.
 
-## 3. Locked carousel spine
+## 3. Canonical canvas
+
+The default Instagram carousel canvas is portrait 4:5.
+
+Delivery target:
+
+- 1080 x 1350 pixels per slide
+- all three slides use the same dimensions
+- keep critical copy, logo, title, rating, and billing elements comfortably inside the crop-safe area
+- leave approximately 7 percent of width and height as a default critical-content safety margin unless the composition clearly demands otherwise
+
+The image-generation stage may work at the closest supported generation size, but deterministic finishing should deliver the canonical 4:5 crop.
+
+Do not allow Slide 1 to use one aspect ratio and Slides 2 or 3 another merely because a generated background arrived differently.
+
+## 4. Locked carousel spine
 
 The canonical carousel always contains exactly three slides.
 
@@ -75,7 +90,7 @@ Its job is brand recognition and continuation.
 
 It should be the most minimal of the three slides.
 
-## 4. Slide 1 poster standard
+## 5. Slide 1 poster standard
 
 The cover needs a real campaign idea.
 
@@ -93,7 +108,11 @@ The rating should feel plausible for the final production.
 
 The billing block should look like poster furniture rather than a paragraph.
 
-## 5. Slide 1 visual hierarchy
+The poster title and tagline must remain readable at phone-feed scale.
+
+The rating and billing block may be smaller, but should remain visibly intentional rather than disappearing into decorative noise.
+
+## 6. Slide 1 visual hierarchy
 
 Default hierarchy:
 
@@ -111,7 +130,7 @@ Ask:
 
 **What is the one image from this campaign somebody might remember tomorrow?**
 
-## 6. Slide 2 premise standard
+## 7. Slide 2 premise standard
 
 Slide 2 is not a second poster.
 
@@ -134,6 +153,8 @@ It may be shorter when the premise is exceptionally clean.
 
 The copy should explain setup and engine before flavor details.
 
+The text should usually occupy one obvious reading path. Avoid scattering premise copy into multiple competing blocks merely to make the layout look designed.
+
 Do not turn Slide 2 into:
 
 - a synopsis
@@ -144,7 +165,7 @@ Do not turn Slide 2 into:
 - a list of slogans
 - a dense lore page
 
-## 7. Slide 2 copy discipline
+## 8. Slide 2 copy discipline
 
 The premise copy is exact public copy. The image workflow should place it verbatim rather than rewriting it.
 
@@ -157,7 +178,9 @@ It must:
 - avoid claims that real actors participated in the production
 - read naturally on its own
 
-## 8. Slide 3 close standard
+If the exact copy does not fit the canonical canvas cleanly at an accessible size, the problem should be fixed in the asset packet copy before layout rather than by shrinking text into illegibility.
+
+## 9. Slide 3 close standard
 
 Slide 3 is the production campaign signed by Never Coming Soon.
 
@@ -180,7 +203,9 @@ The fixed content slots are:
 
 Do not add a second poster, synopsis, slogan stack, or unrelated brand copy.
 
-## 9. Hollywood line
+`LINK IN BIO` should be the dominant action phrase on the slide without overwhelming the logo or Hollywood line.
+
+## 10. Hollywood line
 
 The Hollywood line is an NCS personality beat, not a second production tagline.
 
@@ -198,7 +223,7 @@ The exact line should fit the production and should not become hostile, bitter, 
 
 Do not substitute a thematic movie line such as `Sometimes the hardest call benches your own kid.` That belongs to poster copy, not the NCS close.
 
-## 10. Campaign coherence
+## 11. Campaign coherence
 
 All three slides should feel like one campaign.
 
@@ -216,7 +241,7 @@ Do not repeat every motif on every slide.
 
 The cover can be rich. The premise should breathe. The close should be elemental.
 
-## 11. Logo treatment
+## 12. Logo treatment
 
 The packet must contain a concise `logo_treatment` instruction.
 
@@ -226,7 +251,7 @@ The instruction governs color and presentation, not logo geometry.
 
 Never invent a new logo shape as part of production art direction.
 
-## 12. Caption
+## 13. Caption
 
 Every `ig_packet_json` must include one exact `caption` field.
 
@@ -256,17 +281,33 @@ No backstage technology language.
 
 No em dash character.
 
-## 13. Image prompt standard
+## 14. Image prompt standard
 
 Each slide has an execution-ready `image_prompt`.
 
-Prompts should specify the visual object, composition, mood, lighting, palette, negative space needs, and important story-world details.
+Prompts should specify the visual object, composition, mood, lighting, palette, negative-space needs, and important story-world details.
 
 They should not ask the image system to decide the premise, title, campaign concept, or copy hierarchy from scratch.
 
+Prompts should anticipate the 4:5 crop and reserve useful negative space for the required text where appropriate.
+
 When text fidelity matters, prefer generating the visual background and compositing exact typography and the approved logo deterministically afterward.
 
-## 14. Real actors and key art
+## 15. Deterministic finishing
+
+The final social asset should normally separate image creation from exact graphic assembly.
+
+Preferred order:
+
+1. generate or source the campaign background/key art
+2. crop and position to the canonical 4:5 canvas
+3. place exact title, tagline, premise copy, rating, billing block, Hollywood line, CTA, and approved NCS logo deterministically
+4. verify visual hierarchy and safe margins
+5. export all three slides at identical dimensions
+
+Do not ask an image model to recreate the master logo or long exact premise copy when a deterministic compositor can place them accurately.
+
+## 16. Real actors and key art
 
 Casting may use real performers in the editorial article.
 
@@ -276,21 +317,23 @@ Key art does not need recognizable actor likeness to succeed.
 
 Prefer concept-led campaign imagery when actor likeness would make the asset feel like a false real-world announcement or create unnecessary visual-fidelity problems.
 
-## 15. Packet quality test
+## 17. Packet quality test
 
 Before the packet is persisted, ask:
 
 - Does Slide 1 have one memorable campaign idea?
 - Is the poster still legible as a poster rather than a premise card?
+- Does Slide 1 work quickly at phone-feed scale?
 - Does Slide 2 explain the actual production quickly?
 - Is the Slide 2 header a hook rather than a label?
 - Is Slide 2 copy final and placement-ready?
+- Can Slide 2 fit legibly on a 4:5 canvas without shrinking into fine print?
 - Is Slide 3 unmistakably the NCS close?
 - Is the Hollywood line actually about the NCS/Hollywood conceit?
 - Is the approved logo geometry preserved?
 - Does logo color fit the production rather than defaulting to house colors?
 - Do all three slides feel like one campaign?
 - Is the caption short, specific, and non-redundant?
-- Is all copy free of em dashes and internal workflow language?
+- Is all public copy free of em dashes and internal workflow language?
 
 If not, the packet is not ready.
