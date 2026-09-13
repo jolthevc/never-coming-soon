@@ -1,5 +1,5 @@
 # Never Coming Soon
-## n8n Generation Workflow Specification v2.1
+## n8n Generation Workflow Specification v2.2
 
 > The filename is retained for compatibility with existing loaders. This document supersedes the old Productions-table architecture.
 
@@ -11,6 +11,10 @@ Build one clean n8n workflow that starts from one eligible row in the `Ideas` ta
 - a valid holistic NCS score for that exact final article
 - a validated `ig_packet_json` social handoff
 - the same Ideas row set to `DRAFTED`
+
+`DRAFTED` means the generated artifact exists and is ready for human review.
+
+It does not mean the article scored 8.0 or higher and does not mean it is automatically publication-ready.
 
 The workflow develops the imaginary production before it writes the public article.
 
@@ -157,11 +161,11 @@ Preserve `human_notes` and `published_url`.
 
 Keep the full source row snapshot in execution memory.
 
-If the run fails or fails final quality gates before successful delivery, restore the exact row to `pre_generation_status` only when its current status is still `GENERATING`.
+If the run fails before a complete artifact is delivered, restore the exact row to `pre_generation_status` only when its current status is still `GENERATING`.
 
 For a new run this restores DEVELOPMENT_SELECT.
 
-For a failed forced redevelopment of an existing successful draft this restores DRAFTED and preserves the prior final artifact fields.
+For a failed forced redevelopment this restores DRAFTED and preserves prior final artifact fields.
 
 Never reset an arbitrary GENERATING row.
 
@@ -195,13 +199,17 @@ Store `pre_generation_status`, then lock the exact row.
 
 Parse `development_packet_json` and assemble clean execution context.
 
+Also build a compact `casting_history_summary` for the Casting Director.
+
+At minimum this should include actors already used in the approved Gold examples. If recent DRAFTED cast history is already cheaply available, include a compact recent sample. Do not create a new durable casting table solely for this purpose.
+
 ### Node 8: Production Developer
 
 Inputs: Development Packet + human notes.
 
 Output: `production_development`.
 
-For romance, romantic comedy, second-chance love, or a central two-person relationship, the Relationship Story Standard is active.
+For romance, romantic comedy, second-chance love, or another central two-person relationship, the Relationship Story Standard is active.
 
 ### Node 9: Research Needed?
 
@@ -217,6 +225,8 @@ Use a fresh critic context.
 
 Stress-test production quality, genre delivery, relationship quality when relevant, over-designedness, and format.
 
+The Challenger should identify material problems, not manufacture work.
+
 ### Node 12: Canon Builder
 
 Build `canon_bible` from packet, development, research, challenge, and human notes.
@@ -225,7 +235,11 @@ After success, canon is frozen unless one controlled CANON rescue is later autho
 
 ### Node 13: Casting Director
 
-Build `casting_plan` from canon and compact actor-repeat memory when available.
+Build `casting_plan` from canon and `casting_history_summary`.
+
+The history is memory, not a prohibition list.
+
+Avoid immediate lead-actor repetition when an equally strong fresh choice exists.
 
 ### Node 14: Edition Architect
 
@@ -235,7 +249,13 @@ The plan must include `scene_ownership_plan` from the current schema.
 
 For film, allocate substantial sequences so THE MOVIE and THE SCENES do not fully stage the same event.
 
-For television, allocate substantial sequences so THE SEASON and THE EPISODES do not fully stage the same event.
+For television:
+
+- THE SEASON should describe macro movement, changing relationships, pressure, and shape
+- THE EPISODES should contain specific memorable stories
+- if every Season paragraph maps directly to an episode capsule in order, restructure the plan
+- for an 8 to 10 episode season, default to spotlighting roughly 4 to 6 episodes unless covering all episodes clearly increases desire
+- if THE FINISH will stage the finale pressure, keep the finale capsule brief, high-level, or omit it from THE EPISODES
 
 ### Node 15: Load Gold Calibration
 
@@ -276,19 +296,19 @@ Record at minimum:
 
 This is heuristic evidence, not an automatic rewrite.
 
-For FILM:
+For FILM, compare THE MOVIE and THE SCENES.
 
-- extract THE MOVIE and THE SCENES
-- compare normalized phrases, distinctive event language, repeated dialogue, and named sequence details
-- flag likely substantial overlap when the same event appears to receive close treatment in both
+For SERIES and LIMITED_SERIES, compare THE SEASON and THE EPISODES.
 
-For SERIES and LIMITED_SERIES:
+Compare normalized phrases, distinctive event language, repeated dialogue, named scene details, and repeated outcomes.
 
-- compare THE SEASON and THE EPISODES the same way
+Pass overlap findings to the Forensic Editor.
 
-Pass overlap findings to the Forensic Editor as diagnostics.
+### Cast completeness diagnostic
 
-Hard public-integrity leak matches are material problems.
+When practical, flag public THE CAST paragraphs that do not name both a selected actor and character.
+
+This is a presentation diagnostic, not a reason to cast more roles.
 
 ## 10. Review and revision
 
@@ -311,7 +331,9 @@ Required fields include:
 
 The score belongs only to the exact draft reviewed.
 
-A score below 8.0 may not use `revision_route = NONE`.
+There is no numeric threshold that forces revision.
+
+The Forensic Editor should choose `NONE` when the draft is coherent, enjoyable, complete, and another automated pass is unlikely to create material improvement, even when the honest score is below 8.0.
 
 ### Node 19: Route by revision_route
 
@@ -326,6 +348,8 @@ Track `rescue_cycle_count`.
 
 Maximum deep rescue cycles: 1.
 
+Do not create loops to chase score.
+
 ### PROSE
 
 Run Revision Writer once using latest canon, edition plan, current draft, review, and Gold examples.
@@ -339,11 +363,11 @@ If deep rescue remains available:
 3. rerun Edition Writer
 4. rerun diagnostics
 5. rerun Forensic Editor
-6. route once more
+6. continue to finalization
 
 ### CANON
 
-If deep rescue remains available:
+If deep rescue remains available and the defect is genuinely foundational:
 
 1. increment rescue count
 2. rerun Canon Builder with review context
@@ -352,9 +376,9 @@ If deep rescue remains available:
 5. rerun Edition Writer
 6. rerun diagnostics
 7. rerun Forensic Editor
-8. route once more
+8. continue to finalization
 
-Do not create endless loops.
+After the allowed revision path, do not open another automated loop merely because the final score remains in the 7s.
 
 ## 11. Final Forensic Review Gate
 
@@ -367,45 +391,45 @@ Otherwise run Forensic Editor again.
 Require:
 
 - numeric `overall_score`
-- `overall_score >= 8.0`
-- `revision_route = NONE`
+- 1.0 <= `overall_score` <= 10.0
 
 Never substitute `N/A`.
 
 Never attach an earlier score to revised text.
 
-If the final draft remains below 8.0 or still requests revision after the allowed automated path, stop before Drive delivery and restore `pre_generation_status`.
+Do not require `overall_score >= 8.0`.
 
-Surface the unresolved issues rather than pretending success.
+Do not require final `revision_route = NONE` after the allowed automated revision path has completed.
+
+Carry any remaining nonfatal review notes into the execution summary.
 
 ## 12. Deterministic Final Article QA
 
 ### Node 22: Final QA
 
-Hard-gate checks:
+Separate technical blockers from editorial warnings.
+
+Hard completion checks:
 
 - final article nonblank
 - final title nonblank
 - exact final review exists
-- numeric `overall_score >= 8.0`
-- final `revision_route = NONE`
-- no em dash character
-- no obvious backstage technology references
-- no hard internal editorial leakage
+- numeric `overall_score` from 1.0 to 10.0
+- no unrepaired hard backstage or internal-process corruption that makes the article unusable
 - required headings for resolved format
 - plausible word count
 - valid final JSON objects
 
-Additional diagnostics:
+Warnings that should not by themselves block DRAFTED:
 
-- major-name consistency when practical
-- episode-count consistency when practical
-- paragraph-rhythm metrics
-- section-overlap warning state
+- `overall_score < 8.0`
+- final `revision_route != NONE` after allowed automated work is exhausted
+- mild section-overlap heuristic
+- minor motif density
+- minor paragraph-rhythm concerns
+- small prose or casting taste notes
 
-A section-overlap warning is passed to review and summary. If the final Forensic Editor accepted the structure with `revision_route = NONE`, the heuristic alone does not hard fail delivery.
-
-If any hard gate fails, stop before Drive and restore `pre_generation_status`.
+Continue to delivery when the artifact is complete and human-reviewable.
 
 ## 13. IG Asset Packet Builder
 
@@ -433,6 +457,8 @@ The packet must contain:
 - locked Slide 1 packet
 - locked Slide 2 packet
 - locked Slide 3 packet
+
+Campaign coherence should not become motif repetition. One signature visual motif should normally appear explicitly on no more than two slides. Slide 3 may inherit only palette, type logic, or texture.
 
 ## 14. IG Packet Deterministic QA
 
@@ -462,26 +488,11 @@ Require:
 - no hard internal editorial terminology
 - billing block contains no fake production-process credit or unnecessary participation claim
 
-Billing block deny examples include:
-
-- Filmed in
-- Shot on location
-- Poster design by
-- Poster design and finishing by the NCS campaign team
-- Campaign by
-- Artwork by the NCS team
-- Generated by
-- Created with
-
-If packet QA fails, allow one packet-only repair.
-
-After repair, validate the exact repaired object again.
-
-Do not report QA success based on a pre-repair object.
+If packet QA fails, allow one packet-only repair and validate the repaired object again.
 
 Do not rewrite the article because the packet alone failed.
 
-If the final packet still fails, stop before Drive and do not set DRAFTED.
+If the final packet remains structurally invalid, stop before Drive because the output package is incomplete.
 
 ## 15. Google Drive delivery
 
@@ -538,7 +549,7 @@ Return:
 - IG packet QA result
 - Drive URL
 - final status
-- unresolved warnings, if any
+- unresolved editorial warnings, if any
 
 ## 18. Model roles
 
@@ -565,7 +576,7 @@ Story Challenger sees packet + development + research + compact repetition memor
 
 Canon Builder sees packet + development + research + challenge + human notes.
 
-Casting Director sees canon + casting-history summary.
+Casting Director sees canon + compact casting-history summary.
 
 Edition Architect sees canon + casting.
 
@@ -576,8 +587,6 @@ Forensic Editor sees canon + edition plan + exact draft + diagnostics.
 Revision Writer sees latest canon + latest edition plan + current draft + review + Gold examples.
 
 IG Asset Packet Builder sees final canon + final article + final score + resolved format + visual/social governance.
-
-This separation is mandatory.
 
 ## 20. Public-integrity hard-leak list
 
@@ -600,6 +609,7 @@ At minimum, scan public article and social copy case-insensitively for:
 - proof of existence
 - evidence of spectatorship
 - engine demonstration
+- spending the last turn
 
 Semantic leakage beyond this exact list remains the Forensic Editor's responsibility.
 
@@ -620,8 +630,6 @@ If prior status was DRAFTED, preserve all prior successful final fields.
 
 If exact `idea_id` or prior status cannot be recovered reliably, do not reset an arbitrary row.
 
-The recovery workflow must be idempotent.
-
 ## 22. Persistence safety
 
 - update Ideas rows by `idea_id`, not visible row number
@@ -630,8 +638,8 @@ The recovery workflow must be idempotent.
 - do not regenerate creative content merely because a Sheet or Drive write failed
 - retry transient writes with backoff
 - parse JSON once and stringify once
-- validate the exact final structured objects after all transformations
-- preserve prior successful final fields during a failed force-redevelopment attempt
+- validate exact final structured objects after all transformations
+- preserve prior successful final fields during failed force redevelopment
 
 ## 23. Non-goals
 
@@ -645,11 +653,14 @@ Do not add unless later requested:
 - multi-row character database
 - endless self-revision loops
 - extra social slides beyond the locked three-slide packet
+- a numerical quality gate for DRAFTED
 
 ## 24. Quality principle
 
-Creative sophistication belongs in the production-development and editorial system.
+Creative sophistication belongs in production development and editorial judgment.
 
 Operational state should remain boring.
 
-The workflow should be easy to understand, easy to debug, and difficult to leave in a false-success state.
+A good idea should survive the workflow with more life, not less.
+
+The system should make meaningful improvements, then get out of the way.
