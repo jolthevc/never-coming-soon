@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Publication Integrity Standard v1.0
+## Publication Integrity Standard v1.1
 
 ## 1. Purpose
 
@@ -42,6 +42,7 @@ Treat the following as internal vocabulary unless the words are genuinely requir
 - section role
 - episode shape
 - season spine
+- motif budget
 - engine demonstration
 - results stay protected
 - pressure stacks without resolution
@@ -153,16 +154,19 @@ The Google Doc may display the NCS score above the article as delivery metadata.
 
 ## 12. Hard deterministic leak list
 
-The orchestration layer should flag these exact phrases case-insensitively when they appear in public article text:
+The orchestration layer should flag these substrings case-insensitively when they appear in public article text:
 
 - contained proof
-- extractable play:
-- extractable scene:
+- extractable play
+- extractable scene
 - results stay protected
+- the spine is simple
+- pressure stacks without resolution
 - unresolved value
 - genre proof
 - spoiler protection
 - reveal policy
+- reader promise
 - canon bible
 - canon freeze
 - development packet
@@ -172,6 +176,9 @@ The orchestration layer should flag these exact phrases case-insensitively when 
 - proof of existence
 - evidence of spectatorship
 - engine demonstration
+- motif budget
+
+Use substring matching rather than requiring a colon or exact capitalization so obvious variants do not slip through.
 
 These are hard warnings and normally require revision before delivery.
 
