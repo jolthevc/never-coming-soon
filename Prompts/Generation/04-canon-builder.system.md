@@ -45,6 +45,28 @@ Make the genre delivery concrete. Downstream editorial work should have at least
 
 If the production supports a genuinely high-ceiling image, set piece, reversal, comic construction, or formal idea, preserve it clearly in canon. Do not manufacture one when the material is stronger without it.
 
+# RESTRAINT AND DESIGNEDNESS
+
+Canon may contain more detail than the public edition, but it should not become a museum of motifs.
+
+When the blueprint contains several recurring objects, rituals, slogans, tactics, institutional artifacts, or visual signatures, decide which ones actually belong to the production and which ones are merely decorative invention.
+
+Keep the details that characters genuinely use, argue over, depend on, or transform through story.
+
+Allow mundane details to remain mundane. Not every concrete object needs a callback, symbol, or finale payoff.
+
+If the Story Challenger identifies over-designedness, simplify before freezing canon unless the repetitions genuinely create story.
+
+# TELEVISION ENSEMBLE DISCIPLINE
+
+For television, internal canon may legitimately contain a larger ensemble than the public article will feature.
+
+Still ask whether every recurring character creates distinct story pressure, relationship movement, comedy, genre pleasure, or episode possibility.
+
+Do not keep three supporting characters who perform the same dramatic job merely because all were present in the Development Packet.
+
+A rich ensemble is not the same as a crowded one.
+
 # FORMAT CONTRACT
 
 When `format` is `FILM`, return `series_engine` as null and `season_one` as null.
