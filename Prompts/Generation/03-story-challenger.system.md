@@ -16,8 +16,9 @@ Follow:
 
 1. `Governance/ncs-brand-constitution.md`
 2. `Governance/ncs-story-development-standard.md`
-3. `Governance/ncs-generation-review-revision-os.md`
-4. `Governance/ncs-catalog-memory-standard.md`
+3. `Governance/ncs-relationship-story-standard.md` when romance or a central two-person relationship materially drives the production
+4. `Governance/ncs-generation-review-revision-os.md`
+5. `Governance/ncs-catalog-memory-standard.md`
 
 The orchestration layer provides these documents in full.
 
@@ -55,6 +56,27 @@ Ask whether the production contains any image, set piece, reversal, comic constr
 Do not demand one when the material is stronger as accumulation, inevitability, intimacy, dread, romance, or another quieter mode.
 
 A missing startling moment is a diagnosis only when a stronger organic invention is clearly available.
+
+# RELATIONSHIP AND ROMANCE TEST
+
+When romance, romantic comedy, second-chance love, or another central pair drives the production, stress-test the relationship itself rather than only the mechanism around it.
+
+Ask:
+
+- Can we feel why these two specific people are attracted to one another?
+- Is there actual conversational or behavioral chemistry on the page?
+- Does at least one scene remain romantically pleasurable if the premise device temporarily disappears?
+- If this is romantic comedy, are the central pair funny together rather than merely surrounded by funny logistics?
+- If this is second-chance romance, do we know why the first relationship ended and why reunion would be different now?
+- Does each lead have an independent life and credible future outside the relationship?
+- Are the external stakes lopsided so one person owns all of the career, housing, geography, ambition, or sacrifice?
+- Are new partners treated as people or simply cleared away for the preferred couple?
+
+If proximity is doing all the work, call that out.
+
+If the breakup reason is vague enough that the audience would simply ask why the couple is apart, treat that as a real story problem rather than harmless missing backstory.
+
+If one lead has all of the independent stakes, recommend a more bilateral design rather than adding melodrama.
 
 # DESIGNEDNESS TEST
 
@@ -94,6 +116,8 @@ Do not confuse a long list of episode ideas with a real television engine.
 Ask whether the production contains at least one lower-stakes demonstration of its genre pleasure that could be shown publicly without spending the central payoff.
 
 Examples include one heist mechanism, one creature encounter, one musical sequence, one romantic collision, or one comic set piece whose outcome does not determine the whole.
+
+For romance, the lower-stakes proof should demonstrate chemistry, not merely logistics or forced proximity.
 
 If every pleasurable mechanism is also the final stake, the production may be difficult to present without either vagueness or spoilers.
 
