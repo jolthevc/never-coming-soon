@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Editorial Quality Standard v1.2
+## Editorial Quality Standard v1.3
 
 ## 1. Purpose
 
@@ -12,11 +12,12 @@ The editor diagnoses. The editor does not rewrite merely to demonstrate activity
 Review in this order:
 
 1. production quality
-2. edition strategy
-3. prose quality
-4. surface correctness
+2. edition strategy and format execution
+3. public integrity
+4. prose quality
+5. surface correctness
 
-A sentence-level fix cannot rescue a mediocre imaginary movie. A structural rewrite is unnecessary when the draft already works and only needs local improvement.
+A sentence-level fix cannot rescue a mediocre imaginary movie or show. A structural rewrite is unnecessary when the edition already works and only needs local improvement.
 
 Fix causes before symptoms.
 
@@ -24,17 +25,17 @@ Fix causes before symptoms.
 
 Ask whether the imaginary production itself is good.
 
-Review want-to-watch factor, causality, character agency, central relationships, escalation, genre delivery, signature scenes, world, ending, distinctive identity, and whether the material naturally supports any higher-ceiling image, set piece, reversal, or formal idea.
+Review want-to-watch factor, causality, character agency, central relationships, escalation, genre delivery, signature scenes, world, ending, distinctive identity, and whether the material naturally supports any higher-ceiling image, set piece, reversal, formal idea, comic construction, or collision.
 
-Do not require a twist or startling beat merely to satisfy a checklist. Some excellent movies accumulate rather than detonate.
+Do not require a twist or startling beat merely to satisfy a checklist. Some excellent productions accumulate rather than detonate.
 
 ## 4. Edition quality
 
 Ask whether the public article presents the strongest version of the production.
 
-Review opening pull, clarity, pace, canonical section roles, character presentation, casting presentation, plot selectivity, signature-scene emphasis, spoiler calibration, proof of existence, evidence of spectatorship, ending appetite, and whether the genre pleasures promised by the label are actually demonstrated.
+Review opening pull, clarity, pace, section roles, public character focus, casting presentation, plot selectivity, signature-scene emphasis, spoiler calibration, ordinary world texture, evidence of spectatorship, ending appetite, and whether the genre pleasures promised by the label are actually demonstrated.
 
-The article should not read like a development memo, synopsis, database entry, Wikipedia page, or pitch deck.
+The article should not read like a development memo, synopsis, database entry, Wikipedia page, pitch deck, show bible, or editorial checklist.
 
 ## 5. Film section-role integrity
 
@@ -46,7 +47,7 @@ Should create desire for the object, not summarize the whole plot.
 
 Should make people exist through behavior, relationships, wants, habits, contradiction, and pressure.
 
-Flag screenplay-function language such as "this character exists to" or "what makes this character interesting is."
+Flag screenplay-function language such as `this character exists to` or `what makes this character interesting is`.
 
 ### THE CAST
 
@@ -56,7 +57,7 @@ Public copy should sound as though the performance was watched, not as though th
 
 ### THE MOVIE
 
-**Should demonstrate the production's primary engine in motion.**
+Should demonstrate the production's primary engine in motion.
 
 The engine will vary by genre. In character drama it may be relationships and pressure. In a heist it may be mechanism and timing. In horror it may be dread and survival. In action it may be physical problem solving and escalation. In a musical it may be music, staging, desire, and spectacle.
 
@@ -74,13 +75,59 @@ It may depend on everything before it and should bring major pressures, relation
 
 It should stop before the decisive response or payoff.
 
-**Convergence defines what the Finish does, not how it cuts.**
+Convergence defines what the Finish does, not how it cuts.
 
 Flag repeated house endings such as an approaching authority figure, a face, a recognition beat, or one character noticing another when that shape is not demanded by the production.
 
 Also flag a Finish that simply reuses THE MOVIE's main engine-demonstration sequence because it is the biggest set piece.
 
-## 6. Spoiler calibration
+## 6. Television format integrity
+
+For SERIES and LIMITED_SERIES, review against `Governance/ncs-television-editorial-standard.md`.
+
+A television edition should make returnability and season movement legible without sounding like a show bible.
+
+### THE PITCH
+
+Should make the series desirable as a recurring object, not explain the architecture.
+
+### THE WORLD
+
+Should make the arena, institution, community, family system, profession, competition, or recurring problem feel capable of generating stories.
+
+Flag a World section that becomes a rule manual, lore dump, or research memo.
+
+### THE CHARACTERS
+
+Internal canon may have a large ensemble. Public copy still needs focus.
+
+Flag an article that introduces every recurring role simply because canon contains them.
+
+### THE CAST
+
+Should focus on performances that materially increase desire rather than mirror the complete internal cast list.
+
+### THE SEASON
+
+Should show developments and changing pressures rather than explain the season's internal structural map.
+
+Flag phrases that narrate architecture rather than story, such as `the spine is simple`, `identity arrives in pieces`, or another writer's-room summary that could be replaced by actual developments.
+
+### THE EPISODES
+
+Should feel like discovery, not inventory.
+
+Episode capsules need concrete dramatic objects. They may vary in length. A longer season does not require a capsule for every episode.
+
+Flag internal labels, planning annotations, equal-weight recap rhythm, and vague capsules such as `pressure mounts` or `relationships are tested` without a specific episode situation.
+
+### THE FINISH
+
+Should converge season pressure while protecting the decisive finale response or resolution.
+
+The article should not announce that results or endings are being protected.
+
+## 7. Spoiler calibration
 
 Primary rule:
 
@@ -90,11 +137,11 @@ When unresolved value and genre pleasure overlap, use a lower-stakes demonstrati
 
 The article may reveal substantial events, conflict, pressure, mechanism, and late-story circumstances.
 
-It should be extremely reluctant to reveal the decisive response, final emotional choice, meaning of the protagonist's arc, answer to the core mystery, decisive mechanism of a heist or scheme, or ultimate relationship resolution.
+It should be extremely reluctant to reveal the decisive response, final emotional choice, meaning of the protagonist's arc, answer to the core mystery, decisive mechanism of a heist or scheme, ultimate relationship resolution, or actual finale resolution.
 
-## 7. The Contained Proof test
+## 8. The Contained Proof test
 
-A Contained Proof is a lower-stakes sequence that fully demonstrates the production's primary engine or genre pleasure without spending major unresolved value.
+A Contained Proof is an internal lower-stakes sequence that fully demonstrates the production's primary engine or genre pleasure without spending major unresolved value.
 
 It demonstrates capability, not stakes, and should usually end smaller than it began.
 
@@ -107,9 +154,11 @@ Ask:
 
 A bad Contained Proof feels like the whole movie in miniature and can reduce appetite.
 
-Contained Proofs are optional. Do not force one where the production does not need it.
+Contained Proofs are optional.
 
-## 8. Interpretation discipline
+The public article must never label a sequence `Contained Proof`.
+
+## 9. Interpretation discipline
 
 Core rule:
 
@@ -133,7 +182,7 @@ Mechanical leak:
 
 If the meaning, mechanism, or consequence is not legible enough, the better fix is usually to improve the material rather than append an explanatory sentence.
 
-## 9. Proof of existence
+## 10. Proof of existence
 
 Ask whether the production feels larger than the plot.
 
@@ -143,9 +192,15 @@ Ask:
 
 **Would this detail still exist if nobody were writing an article about it?**
 
-Do not confuse proof of existence with character detail. Flag whimsy inflation.
+Do not confuse proof of existence with character detail.
 
-## 10. Evidence of spectatorship
+Flag whimsy inflation.
+
+Also flag checklist visibility: a paragraph that exists mainly to collect many quirky objects, institutional details, or bits of residue can make the governance visible instead of making the world feel real.
+
+Prefer details distributed through action, setting, and ordinary behavior.
+
+## 11. Evidence of spectatorship
 
 A finished edition should contain evidence that somebody watched this imaginary production and formed opinions about it.
 
@@ -153,7 +208,33 @@ The reaction should not always appear in the same section or use the same senten
 
 A reaction may identify the pleasure. It should not explain the mechanism that produced the pleasure.
 
-## 11. Narrator-frame test
+## 12. Public integrity
+
+Review against `Governance/ncs-publication-integrity-standard.md`.
+
+The public article must not expose internal editorial or workflow terminology.
+
+Flag literal or semantic leakage such as:
+
+- `Contained Proof`
+- `Extractable play:`
+- `unresolved value`
+- `genre proof`
+- `spoiler protection`
+- `proof of existence`
+- `evidence of spectatorship`
+- `canon bible`
+- `development packet`
+- `edition plan`
+- `results stay protected`
+- `pressure stacks without resolution`
+- `the spine is simple`
+
+Also flag notes-to-self, schema labels, process commentary, placeholders, or language that sounds like a writer's room discussing the article rather than a spectator discussing the production.
+
+Visible internal terminology normally requires revision before delivery.
+
+## 13. Narrator-frame test
 
 The narrator may behave like a spectator.
 
@@ -163,13 +244,28 @@ Flag ordinary editorial prose that claims backstage knowledge about why somethin
 
 The final studio card is the deliberate exception because it sits outside the fiction.
 
-## 12. Prose quality
+## 14. Motif discipline
+
+Recurring objects, lines, rules, locations, songs, or visual motifs can make a production feel coherent.
+
+They become artificial when the article keeps pointing at them because governance has identified them as meaningful.
+
+Ask:
+
+- Does each recurrence change meaning, pressure, or behavior?
+- Is the return caused by the story rather than by a need to remind the reader?
+- Has the same motif been inserted into too many sections?
+- Would removing one recurrence make the remaining ones stronger?
+
+Flag motif over-signaling separately from ordinary repetition.
+
+## 15. Prose quality
 
 Review readability, rhythm, sentence control, paragraph movement, specificity, transitions, humor when appropriate, emotional sincerity, genre voice, and narrator presence.
 
 The default house mode is clean, propulsive storytelling with selective personality.
 
-## 13. Paragraph-rhythm enforcement
+## 16. Paragraph-rhythm enforcement
 
 Readability does not mean short sentences.
 
@@ -185,7 +281,7 @@ There is no fixed quota. Dialogue lines, deliberate camera-like sequences, comic
 
 The point of the check is to make a habitual rhythm visible before it becomes house style.
 
-## 14. Sentence control
+## 17. Sentence control
 
 Prefer varied sentence structure rather than length for its own sake.
 
@@ -193,7 +289,7 @@ A good NCS sentence often carries a small internal turn: setup into joke, observ
 
 Avoid choppy sequences of tiny declarative sentences and overloaded sentences that require rereading.
 
-## 15. Character test
+## 18. Character test
 
 Characters should feel like people rather than story functions.
 
@@ -201,7 +297,9 @@ Look for behavior, wants, contradictions, relationships, recognizable habits, ch
 
 Every major character should have some behavior of their own rather than being introduced entirely through what other people think or say about them.
 
-## 16. Scene test
+Do not confuse a complete internal arc with what needs to be stated publicly. Character introductions should not summarize the whole transformation.
+
+## 19. Scene test
 
 Signature scenes should be specific enough to picture.
 
@@ -209,39 +307,43 @@ Dialogue should sound spoken before it sounds quotable.
 
 Do not explain why a scene works after it has already worked.
 
-## 17. Casting test
+## 20. Casting test
 
 Casting should increase desire.
 
 Flag celebrity wallpaper, generic actor praise, actors chosen before characters are legible, chemistry problems, repetitive casting habits, and public copy written in hypothetical development language rather than observed-performance language.
 
-## 18. Genre delivery
+Do not require the public Cast section to include every internally cast role.
+
+## 21. Genre delivery
 
 The edition must demonstrate the pleasures implied by the production's genre label.
 
-A comedy should contain actual comic proof. A horror piece should create fear or dread. A heist should show mechanism or competence. An action film should show physical spectacle or problem solving. A musical should let musical spectacle exist on the page.
+A comedy should contain actual comic proof. A horror piece should create fear or dread. A heist should show mechanism or competence. An action film should show physical spectacle or problem solving. A musical should let musical spectacle exist on the page. A sports story should care about the competition itself.
 
 Do not apply one character-drama spoiler instinct to every genre.
 
-## 19. No defensive writing
+## 22. No defensive writing
 
-Flag sentences that defend the production against an imagined worse version, including phrases such as "the movie is smart enough not to," "thankfully, this never becomes," or "this does not turn into the obvious montage."
+Flag sentences that defend the production against an imagined worse version, including phrases such as `the movie is smart enough not to`, `thankfully, this never becomes`, or `this does not turn into the obvious montage`.
 
 Show the better version instead.
 
-## 20. Manufactured-writing tells
+## 23. Manufactured-writing tells
 
-Flag repeated one-sentence paragraphs, predictable chains of short declarative sentences, identical paragraph shapes, forced three-item lists, canned transitions, constant rhetorical questions, repeated binary constructions, generic concluding sentences, unnecessary semicolons, prose that explains meaning/mechanism/consequence after showing it, formulaic spectatorship lines, every paragraph ending with a punchline, and every section opening with a thesis statement.
+Flag repeated one-sentence paragraphs, predictable chains of short declarative sentences, identical paragraph shapes, forced three-item lists, canned transitions, constant rhetorical questions, repeated binary constructions, generic concluding sentences, unnecessary semicolons, prose that explains meaning, mechanism, or consequence after showing it, formulaic spectatorship lines, every paragraph ending with a punchline, and every section opening with a thesis statement.
 
 Do not use em dashes in published NCS prose.
 
-## 21. Strength preservation
+## 24. Strength preservation
 
 Every editorial review must identify what should NOT be damaged during revision.
 
 Revision is not automatically improvement.
 
-## 22. Revision routing
+Name the specific scenes, character beats, jokes, transitions, performance observations, structural choices, and ordinary details worth protecting.
+
+## 25. Revision routing
 
 Use the shallowest route that can actually solve the problem:
 
@@ -252,7 +354,21 @@ Use the shallowest route that can actually solve the problem:
 
 A missing startling moment is not automatically a CANON problem. Route deeper only when the production itself is materially underpowered.
 
-## 23. Final editorial test
+A television presentation problem should normally route to EDITION, not CANON, when the underlying show is strong.
+
+## 26. Score integrity
+
+The holistic NCS score belongs to the exact draft being reviewed.
+
+Do not average component scores mechanically.
+
+Do not preserve an earlier score after text changes.
+
+If revision changes the article, review the revised article again before persisting the final score.
+
+A missing numeric final score is a delivery blocker.
+
+## 27. Final editorial test
 
 Ask:
 
@@ -261,16 +377,18 @@ Ask:
 - Did I move through it easily?
 - Does the prose have personality without getting in the way?
 - Can I picture the people and scenes?
-- Does the world feel larger than the plot?
+- Does the world feel larger than the plot without visibly performing that requirement?
 - Is there evidence somebody watched this imaginary production?
 - Does the genre feel like itself?
-- Does THE MOVIE demonstrate the production's actual engine in motion?
-- Did any Contained Proof prove capability without becoming a miniature climax?
+- Is the format itself working?
+- For film, does THE MOVIE demonstrate the actual engine and remain distinct from THE SCENES and THE FINISH?
+- For television, do THE WORLD, THE SEASON, and THE EPISODES each do different useful jobs?
+- Did any lower-stakes demonstration prove capability without becoming a miniature climax?
 - Did the article demonstrate genre pleasure without spending the major unresolved value?
 - Did it avoid explaining meaning, mechanism, or consequence the material could carry itself?
 - Did the narrator stay on the audience side of the production?
-- Are THE MOVIE, THE SCENES, and THE FINISH doing distinct jobs?
-- Is THE FINISH convergent without repeating a house ending shape?
-- Does any section feel generic, defensive, or manufactured?
+- Did any internal editorial terminology leak into public copy?
+- Are recurring motifs earning their returns rather than being underlined?
+- Does any section feel generic, defensive, mechanical, or manufactured?
 - What should revision preserve?
 - What is the deepest actual problem, if any?
