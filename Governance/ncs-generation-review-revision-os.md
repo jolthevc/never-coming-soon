@@ -1,21 +1,22 @@
 # Never Coming Soon
-## Generation, Review and Revision Operating System v2.2
+## Generation, Review and Revision Operating System v2.3
 
 ## 1. Purpose
 
 Generation begins after an idea becomes `DEVELOPMENT_SELECT`.
 
-Its job is not to write an article immediately. Its job is to create the strongest possible imaginary movie or show, understand it more deeply than the reader ever will, and only then turn that production into a Never Coming Soon edition.
+Its job is not to write an article immediately. Its job is to create the strongest possible imaginary movie or show, understand it more deeply than the reader ever will, and only then turn that production into a Never Coming Soon edition and social handoff.
 
 **Generation is a production-development workflow that eventually writes an article.**
 
 ## 2. Input
 
-Required input:
+Required source:
 
+- one Ideas row
 - `development_packet_json`
 - source `idea_id`
-- nonblank human notes attached to that idea, if any
+- nonblank `human_notes`, if any
 
 The Development Packet is a creative brief, not a locked outline.
 
@@ -27,26 +28,45 @@ The governing obligation is:
 
 **Preserve or improve the creative kernel. Treat every other element as provisional.**
 
-## 4. Workflow stages
+## 4. Persistence architecture
 
-1. Production Development
-2. Optional Grounding Research
-3. Independent Story Challenge
-4. Canon Building
-5. Canon Freeze
-6. Casting
-7. Edition Architecture
-8. Style Calibration Load
-9. Edition Drafting
-10. Deterministic Pre-Review Diagnostics
-11. Forensic Editorial Review
-12. Targeted Revision or Controlled Rescue
-13. Deterministic Final QA
-14. Human Review
+Generation does not use a separate Productions table.
+
+Use:
+
+- Ideas row for durable lifecycle state
+- n8n execution memory for intermediate creative artifacts
+- Google Drive for final delivered article
+- GitHub for source-governed prompts, schemas, standards, and Gold examples
+
+Use `idea_id` as the only durable identifier.
+
+## 5. Workflow stages
+
+1. Source row selection and eligibility
+2. Set `GENERATING`
+3. Production Development
+4. Optional Grounding Research
+5. Independent Story Challenge
+6. Canon Building
+7. Canon Freeze
+8. Casting
+9. Edition Architecture
+10. Style Calibration Load
+11. Edition Drafting
+12. Deterministic Pre-Review Diagnostics
+13. Forensic Editorial Review
+14. Targeted Revision or Controlled Rescue
+15. Final Forensic Review of the exact final draft
+16. Deterministic Final QA
+17. Social Asset Packet Builder
+18. Social Packet QA
+19. Google Drive Delivery
+20. Final Ideas Row Update to `DRAFTED`
 
 Do not collapse these into one giant prompt.
 
-## 5. Production development before prose
+## 6. Production development before prose
 
 The Production Developer creates the first serious version of the movie or show.
 
@@ -56,31 +76,31 @@ Development should also ask whether the production naturally supports any higher
 
 This is not a twist requirement.
 
-## 6. Genre proof and Contained Proof candidates
+## 7. Genre proof and Contained Proof candidates
 
 Development should create enough actual genre pleasure that the public edition can prove the product without spending its decisive value.
 
-A useful instrument is the **Contained Proof**: a lower-stakes sequence that fully demonstrates the production's primary engine or genre pleasure without spending major unresolved value.
+A useful internal instrument is the **Contained Proof**: a lower-stakes sequence that fully demonstrates the production's primary engine or genre pleasure without spending major unresolved value.
 
 It demonstrates capability, not stakes, and should usually end smaller than it began.
 
-Do not design a miniature version of the whole movie. A Contained Proof with its own major escalation, climax, emotional closure, and satisfying payoff can reduce appetite for the larger object.
-
 Contained Proofs are optional.
 
-## 7. Selective research
+The phrase `Contained Proof` is internal terminology and must never appear as a public article label.
 
-Research is conditional. Use it when real-world accuracy materially improves the production. Research should reveal dramatic texture and constraints rather than accumulate trivia.
+## 8. Selective research
 
-## 8. Independent challenge
+Research is conditional. Use it when real-world accuracy materially improves the production.
+
+Research should reveal dramatic texture and constraints rather than accumulate trivia.
+
+## 9. Independent challenge
 
 The Story Challenger should identify dead story sections, generic character functions, weak causality, false complexity, derivative patterns, unearned endings, wrong format, missed opportunities, weak genre delivery, and obvious unused higher-ceiling invention.
 
-It should also ask whether the production contains a lower-stakes demonstration of its engine when the public article will need one.
-
 The Challenger diagnoses. It does not own the replacement story.
 
-## 9. Canon Builder and Canon Freeze
+## 10. Canon Builder and Canon Freeze
 
 After the Canon Builder, the production should meaningfully exist.
 
@@ -88,19 +108,21 @@ For film, canon should know the characters, relationships, world, complete story
 
 For series, canon should also know the recurring engine, Season One spine, major character movement, concrete episode purposes, actual Season One finale, and future engine when relevant.
 
+For limited series, canon should know the contained ending and chapter logic.
+
 Once frozen, downstream agents represent the production rather than casually reinventing it.
 
-## 10. Casting after canon
+## 11. Casting after canon
 
 Dream casting happens after characters exist.
 
 Internal casting logic may reason in terms of what the role needs. Public copy later should sound as though the performance has already been watched.
 
-## 11. Edition architecture before drafting
+## 12. Edition architecture before drafting
 
 The Edition Architect decides how the reader should discover the production.
 
-It chooses the opening strategy, canonical section flow, character information before casting, compression, slow-down points, signature scenes, unresolved value, genre demonstrations, possible Contained Proof, proof-of-existence details, spectatorship, genre-specific rhythm, and Finish convergence.
+It chooses the opening strategy, public character focus, canonical section flow, compression, slow-down points, signature scenes, unresolved value, genre demonstrations, ordinary world detail, spectatorship, genre-specific rhythm, recurring-motif budget, and Finish convergence.
 
 For film, use:
 
@@ -111,13 +133,11 @@ For film, use:
 - THE SCENES
 - THE FINISH
 
-**THE MOVIE demonstrates the production's primary engine in motion. What that means depends on the genre.**
+For television, follow `Governance/ncs-television-editorial-standard.md`.
 
-THE FINISH is convergence. Convergence defines function, not the final visual shape.
+Internal planning concepts must be translated into audience-side prose downstream. Do not plan public labels such as `Contained Proof`, `extractable play`, `results stay protected`, or `the spine is simple`.
 
-Do not automatically reuse THE MOVIE's main engine-demonstration sequence as THE FINISH.
-
-## 12. Public selection doctrine
+## 13. Public selection doctrine
 
 Protect whatever carries the production's major unresolved value. Give away enough genre pleasure to prove the production delivers.
 
@@ -125,7 +145,7 @@ When those overlap, a lower-stakes demonstration may prove capability without sp
 
 Do not protect the production so aggressively that the article becomes vague.
 
-## 13. Interpretation and narrator discipline
+## 14. Interpretation and narrator discipline
 
 **Do not state meaning, mechanism, or consequence that the material is capable of delivering on its own.**
 
@@ -133,29 +153,48 @@ This applies to theme and plot mechanics alike.
 
 The narrator may behave like a spectator. It should not behave like the production's marketer, screenwriter, development executive, or studio.
 
-Ordinary editorial prose should not claim backstage knowledge about trailer choices, marketing clips, budgets, studio intent, or filmmaker intent.
+## 15. Publication integrity
 
-## 14. Clean writer context
+The final public article must not expose internal NCS governance or workflow vocabulary.
 
-The Edition Writer should normally see canon bible, casting plan, edition plan, Brand Constitution, Voice Constitution, Editorial Anatomy, and approved gold-standard examples.
+Follow `Governance/ncs-publication-integrity-standard.md`.
+
+The exact hard-leak phrase list should be checked deterministically before review and again before delivery.
+
+Public prose should not visibly perform the checklist. Ordinary world detail should feel discovered rather than curated for compliance.
+
+Recurring motifs should not be underlined across every section merely because they are memorable.
+
+## 16. Clean writer context
+
+The Edition Writer should normally see:
+
+- canon bible
+- casting plan
+- edition plan
+- Brand Constitution
+- Voice Constitution
+- Editorial Anatomy
+- Television Editorial Standard when relevant
+- Publication Integrity Standard
+- approved Gold examples
 
 It should not receive Ideation scores, duplicate audits, discarded concepts, Challenger notes, old development alternatives, or broad catalog history.
 
-## 15. Gold-standard calibration
+## 17. Gold-standard calibration
 
 Current approved film calibration:
 
-`Examples/Gold/film-01-the-tell.md`
+- `Examples/Gold/film-01-the-tell.md`
+- `Examples/Gold/film-02-clearance.md`
 
-Use it to learn sentence and paragraph control, character-first presentation, observed-performance casting voice, ordinary proof-of-existence detail, evidence of spectatorship, pressure shown with response protected, and distinct jobs for THE MOVIE, THE SCENES, and THE FINISH.
+Gold examples teach craft and judgment. They are not story templates.
 
-Do not imitate its sports setting, restrained emotional temperature, specific jokes, ending rhythm, or scene types by default.
+Television has dedicated governance but still needs a formally locked television Gold example.
 
-One example is not a universal genre template.
+## 18. Deterministic Pre-Review Diagnostics
 
-## 16. Deterministic Pre-Review Diagnostics
-
-Before Forensic Review, run noncreative diagnostics that make likely prose regressions visible without rewriting the draft.
+Before Forensic Review, run noncreative diagnostics that make likely regressions visible without rewriting the draft.
 
 At minimum record:
 
@@ -166,28 +205,31 @@ At minimum record:
 - em dash presence
 - blank draft warning
 - approximate word count
-- obvious backstage-process language
+- obvious backstage technology language
+- hard internal editorial leak matches from Publication Integrity Standard
+- required-heading presence for the resolved format
 
-These are diagnostics, not automatic failures.
+Paragraph diagnostics are warnings, not automatic failures.
 
-Dialogue, deliberate camera-like sequences, comic isolation, suspense, and true hinges may legitimately create one-sentence paragraphs.
+Hard internal terminology and backstage technology leakage should normally require revision before delivery.
 
-Pass the diagnostics to the Forensic Editor so the review cannot ignore a recurring rhythm pattern.
-
-## 17. Forensic editorial review
+## 19. Forensic editorial review
 
 The Forensic Editor reviews in this order:
 
 1. production
-2. edition strategy
-3. prose
-4. surface issues
+2. edition strategy and format execution
+3. public integrity
+4. prose
+5. surface issues
 
-It should explicitly inspect unresolved-value protection, genre-pleasure proof, Contained Proof quality when present, proof of existence, evidence of spectatorship, character copy, casting voice, section-role integrity, narrator frame, explanation of meaning/mechanism/consequence, and paragraph-rhythm diagnostics.
+It should explicitly inspect unresolved-value protection, genre-pleasure proof, proof of existence, evidence of spectatorship, character copy, casting voice, section-role integrity, narrator frame, interpretation leakage, public internal-language leakage, motif overuse, and paragraph rhythm.
 
-The review is diagnosis, not rewrite.
+For television, it should also review THE WORLD, public ensemble focus, THE SEASON, episode-selection strategy, episode-capsule voice, and season Finish behavior.
 
-## 18. Revision routes
+The review returns one holistic `overall_score` from 1.0 to 10.0 for the exact draft in that call.
+
+## 20. Revision routes
 
 The Forensic Editor chooses the shallowest route that can solve the problem:
 
@@ -196,42 +238,135 @@ The Forensic Editor chooses the shallowest route that can solve the problem:
 - `EDITION`
 - `CANON`
 
-Limit automated deep rescue to one reentry cycle in v1.
+Limit automated deep rescue to one reentry cycle.
 
 A missing twist or startling moment is not automatically a CANON problem.
 
-## 19. Revision philosophy
+## 21. Revision philosophy
 
 Preserve what works. Do not reflexively rewrite every sentence.
 
 When review flags habitual one-line paragraph rhythm, actively recombine routine transitional paragraphs while preserving isolation that genuinely creates force, suspense, comedy, or camera-like emphasis.
 
-Do not remove specificity, humor, character texture, proof-of-existence details, spectator reactions, or scene detail merely because a cleaner sentence is available.
+When review flags internal terminology, rewrite the passage from the audience side rather than merely deleting the forbidden phrase.
 
-## 20. Three quality layers
+When review flags motif overuse, keep the strongest recurrences and remove redundant underlining.
 
-### Production quality
+## 22. Final Forensic Review is mandatory after text changes
 
-If the movie or show actually existed, would it be good?
+The NCS score delivered to the Sheet and Google Doc must belong to the exact article that is delivered.
 
-### Edition quality
+Therefore:
 
-Did Never Coming Soon make the reader desperately want to watch it?
+- if the first review returns `NONE` and no article text changes afterward, that review may serve as the final review
+- if any revision changes article text, run the Forensic Editor again on the revised draft
+- if an EDITION or CANON rescue causes a new draft, review the resulting exact final draft again
+- never carry forward a score from an earlier draft after text changed
 
-### Catalog quality
+A missing, nonnumeric, or stale `overall_score` blocks final delivery.
 
-Does this strengthen the NCS slate rather than repeat it mechanically?
+Do not write `N/A` as a substitute.
 
-## 21. Deterministic Final QA
+## 23. Deterministic Final QA
 
-After final automated revision, run noncreative checks for draft existence, reasonable word count, no em dash character, no obvious backstage-process references, major-name consistency where checkable, episode-count consistency, and the same paragraph-rhythm diagnostics used pre-review.
+After the exact final review, run final checks for:
 
-If the final revision materially worsens the one-sentence-paragraph pattern, surface a warning for human review. Do not secretly rewrite creative prose.
+- nonblank final article
+- nonblank final title
+- valid numeric `overall_score` from 1.0 to 10.0
+- no em dash character
+- no backstage technology references
+- no hard internal editorial leakage
+- correct required headings for resolved format
+- plausible word count
+- major-name consistency where checkable
+- episode-count consistency where checkable
+- paragraph-rhythm diagnostics
 
-## 22. Human review
+If a hard gate fails, do not deliver to Drive and do not set `DRAFTED`.
 
-Generation ends at:
+## 24. Social Asset Packet Builder
 
-`READY_FOR_HUMAN_REVIEW`
+Once final article text, canon, and score are stable, create `ig_packet_json` using:
 
-The human editor remains the final creative authority. The workflow does not automatically publish.
+- `Governance/ncs-visual-constitution.md`
+- `Governance/ncs-social-asset-standard.md`
+- `Prompts/Generation/10-ig-asset-packet-builder.system.md`
+- `Schemas/ig-asset-packet.schema.json`
+
+The packet always contains exactly three slide objects plus one short social `caption`.
+
+The asset packet must reflect final canon, not the source Ideation premise.
+
+Slide 2 copy must be exact placement-ready copy.
+
+Slide 3 Hollywood line must be an NCS/Hollywood personality beat, not a second thematic production tagline.
+
+## 25. Social Packet QA
+
+Before persistence, deterministically check:
+
+- valid schema
+- title matches final title
+- exactly three locked slide objects
+- `version = ncs_ig_v1`
+- Slide 1 contains required content slots
+- Slide 2 header is not a generic label such as `The Premise`
+- Slide 2 body is nonblank and free of em dashes
+- Slide 3 newsletter line is exactly `THE FULL STORY IN NEVER COMING SOON`
+- Slide 3 CTA is exactly `LINK IN BIO`
+- Hollywood line is nonblank
+- caption is nonblank
+- no em dash character anywhere in public packet copy
+- no hard internal terminology
+- no backstage technology language
+
+If social packet QA fails, repair the packet before final delivery.
+
+Do not mutate the article merely because the social packet failed.
+
+## 26. Drive delivery
+
+Only after final article QA, final score, and social packet QA pass should the workflow write the final Google Doc.
+
+The document begins:
+
+`NCS SCORE: X.X / 10`
+
+Then a blank line, then the final article only.
+
+## 27. Final Ideas state
+
+After successful Drive persistence, update the same Ideas row with:
+
+- `final_title`
+- `draft_url`
+- `ncs_score`
+- `ig_packet_json`
+- `status = DRAFTED`
+
+`DRAFTED` is the final success-state write.
+
+Generation never sets `PUBLISHED` and never populates `published_url`.
+
+## 28. Failure recovery
+
+If Generation fails after setting `GENERATING` but before final delivery:
+
+- never set `DRAFTED`
+- never write a placeholder score
+- reset the exact failed row to `DEVELOPMENT_SELECT` when appropriate
+- preserve human notes
+- preserve successful prior final artifacts during failed force redevelopment
+
+A small companion n8n Error Trigger workflow is the preferred cleanup mechanism.
+
+## 29. Human review and publication
+
+Generation ends at `DRAFTED`.
+
+The human editor remains the final publication authority.
+
+A later human or publishing workflow may move:
+
+`DRAFTED` -> `PUBLISHED`
