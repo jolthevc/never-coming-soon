@@ -2,15 +2,16 @@
 
 Never Coming Soon is an imaginary entertainment studio and media publication for the best movies and shows that do not exist.
 
-This repository contains the durable creative governance, prompt contracts, structured schemas, workflow specifications, and approved writing-calibration examples used by the Never Coming Soon system.
+This repository contains the durable creative governance, prompt contracts, structured schemas, workflow specifications, and approved calibration examples used by the Never Coming Soon system.
 
 ## System architecture
 
 Never Coming Soon uses distinct creative workflows.
 
-1. **Ideation** finds, remembers, compares, curates, lightly expands, and Development-Selects fertile creative concepts.
-2. **Generation** develops a selected concept into a real internal movie or show, optionally grounds it with research, challenges it, freezes canon, casts it, architects the public edition, drafts it, forensically reviews it, revises it, and delivers it for human review.
-3. **Visual production** will be designed separately after text canon and the final edition are stable.
+1. **Ideation** finds, remembers, compares, curates, lightly expands, and Development-Selects fertile concepts.
+2. **Generation** turns a selected concept into a real internal movie or show, optionally grounds it with research, challenges it, freezes canon, casts it, architects the public edition, drafts it, forensically reviews it, revises it, assigns a final holistic NCS score, creates the social asset handoff, and delivers the final article to Google Drive.
+3. **Visual production** executes the prepared social asset packet after text canon and the final edition are stable.
+4. **Publishing and growth** remain downstream human-controlled systems. Generation never auto-publishes.
 
 The workflows are intentionally separate.
 
@@ -24,55 +25,114 @@ The core Generation principle is:
 
 ## Source of truth
 
-- `Governance/` contains durable creative standards and data contracts.
-- `Prompts/Ideation/` contains the six Ideation agent prompt pairs.
-- `Prompts/Generation/` contains the Generation agent prompt pairs.
+- `Governance/` contains durable creative, editorial, visual, social, and data standards.
+- `Prompts/Ideation/` contains Ideation agent prompt pairs.
+- `Prompts/Generation/` contains Generation and social-handoff prompt pairs.
 - `Schemas/` contains machine-readable structured-output contracts.
 - `WorkflowSpecs/ideation-workflow-v1.md` contains the n8n Ideation specification.
-- `WorkflowSpecs/generation-workflow-v1.md` contains the n8n Generation specification.
+- `WorkflowSpecs/generation-workflow-v1.md` contains the current n8n Generation specification despite the legacy filename.
 - `Examples/Gold/` contains explicitly approved writing-calibration examples.
 
-Google Sheets is the persistent working memory and state layer.
+GitHub is the source of truth for durable system behavior.
 
-GitHub is the source of truth for governance, prompts, schemas, workflow specifications, and approved calibration examples.
+n8n orchestrates the workflows.
 
-n8n orchestrates the system.
+Google Sheets stores the catalog and lifecycle state.
 
-## Ideation state
+Google Drive stores final human-readable draft artifacts.
 
-The Ideation workflow uses one `Ideas` tab and one row per concept.
+## Ideas state
 
-Its terminal creative object is `development_packet_json`.
+The system uses one canonical `Ideas` tab and one row per concept across the lifecycle.
 
-## Generation state
+The row begins as Ideation memory and later becomes the durable final-delivery record.
 
-Generation uses a separate `Productions` workspace governed by `Governance/ncs-generation-data-contract.md`.
+Canonical downstream lifecycle:
 
-One row equals one developed production.
+`DEVELOPMENT_SELECT` -> `GENERATING` -> `DRAFTED` -> `PUBLISHED`
 
-Generation ends at `READY_FOR_HUMAN_REVIEW` rather than publishing automatically.
+`PUBLISHED` is human-controlled.
 
-The human editor remains the final creative authority.
+Generation uses `idea_id` as its sole durable identifier. There is no required `production_id` and no separate Productions state layer in the current architecture.
+
+Intermediate Generation artifacts remain in n8n execution memory.
+
+## Final Generation delivery
+
+A successful Generation run updates the same Ideas row with:
+
+- `final_title`
+- `draft_url`
+- `ncs_score`
+- `ig_packet_json`
+- `status = DRAFTED`
+
+`DRAFTED` means the final article has passed final QA, has a valid holistic score for the exact delivered draft, has been successfully written to Google Drive, and has a valid social asset handoff.
+
+A failed run must never mark a row `DRAFTED`.
+
+## Social asset handoff
+
+`ig_packet_json` is the canonical handoff to the image and social asset workflow.
+
+Its governance lives in:
+
+- `Governance/ncs-visual-constitution.md`
+- `Governance/ncs-social-asset-standard.md`
+
+Its schema lives in:
+
+- `Schemas/ig-asset-packet.schema.json`
+
+The locked three-slide spine is:
+
+1. Cover / Poster
+2. Premise
+3. NCS Close
+
+The content slots stay consistent. The fictional production owns the art direction.
+
+The packet also contains one short, punchy social caption.
+
+## Public integrity
+
+Published work must never expose internal NCS process language.
+
+Use:
+
+- `Governance/ncs-publication-integrity-standard.md`
+
+Terms such as `Contained Proof`, `extractable play`, `unresolved value`, `proof of existence`, and other internal editorial labels may guide the system backstage but must not appear as public annotations.
+
+## Television
+
+Television now has dedicated format governance:
+
+- `Governance/ncs-television-editorial-standard.md`
+
+It is designed to prevent a series article from reading like a show bible, rules document, or equal-weight episode inventory.
+
+Television still needs a formally locked Gold example before TV craft should be considered fully calibrated.
 
 ## Writing calibration
 
-The house voice is governed by `Governance/ncs-voice-constitution.md`.
+The house voice is governed by:
 
-The first approved gold-standard film example is:
+- `Governance/ncs-voice-constitution.md`
 
-`Examples/Gold/film-01-the-tell.md`
+Approved film Gold examples:
+
+- `Examples/Gold/film-01-the-tell.md`
+- `Examples/Gold/film-02-clearance.md`
 
 Gold examples teach voice, craft, section behavior, and editorial judgment. They are never story templates.
 
-The Tell primarily calibrates character-driven sports comedy-drama, character-first presentation, observed-performance casting voice, proof of existence, evidence of spectatorship, selective scene treatment, and protected response under pressure.
+## Core quality posture
 
-One example is not a universal genre template. Future gold examples should deliberately broaden the calibration set.
+Never Coming Soon is trying to create this reaction:
 
-## Current implementation status
+**Oh shit. I would actually watch this.**
 
-- Ideation package: specified and being implemented in n8n.
-- Generation package: governance, prompts, schemas, and workflow specification drafted for implementation.
-- Gold-standard reference film example 01: locked and added.
-- Film editorial doctrine: calibrated on The Tell; genre stress testing remains an active next step.
-- Television editorial architecture: provisional pending dedicated calibration.
-- Visual workflow: intentionally deferred.
+The standard is not maximum strangeness, maximum plot density, or maximum cleverness.
+
+The standard is desire, specificity, human pull, genuine genre pleasure, and the feeling that the production somehow already exists.
