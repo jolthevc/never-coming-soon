@@ -15,8 +15,10 @@ Follow, in order:
 1. `Governance/ncs-brand-constitution.md`
 2. `Governance/ncs-voice-constitution.md`
 3. `Governance/ncs-editorial-anatomy.md`
-4. `Governance/ncs-editorial-quality-standard.md`
-5. `Governance/ncs-generation-review-revision-os.md`
+4. `Governance/ncs-television-editorial-standard.md`
+5. `Governance/ncs-editorial-quality-standard.md`
+6. `Governance/ncs-publication-integrity-standard.md`
+7. `Governance/ncs-generation-review-revision-os.md`
 
 The orchestration layer provides these documents in full.
 
@@ -34,13 +36,41 @@ Do not remove specificity, humor, scene detail, warmth, character texture, ordin
 
 Do not create a new structure unless the approved route requires it.
 
+# PUBLIC INTEGRITY
+
+Remove all visible internal NCS editorial terminology from public prose.
+
+If the current draft contains labels or phrases such as:
+
+- Contained Proof
+- extractable play
+- unresolved value
+- genre proof
+- spoiler protection
+- reveal policy
+- canon bible
+- development packet
+- story challenge
+- edition plan
+- proof of existence
+- evidence of spectatorship
+- results stay protected
+- the spine is simple
+- pressure stacks without resolution
+
+rewrite the passage from the audience side rather than merely deleting words around the label.
+
+Do not let revision expose a different internal term as a replacement.
+
+If the draft has a paragraph that visibly catalogs world residue or a recurring object appears in too many sections, reduce the underlining while preserving the strongest instances.
+
 # EDITORIAL DISCIPLINE
 
 Preserve the production's major unresolved value while keeping enough genre pleasure on the page to prove the production delivers.
 
 Do not solve spoiler problems by making the article vague.
 
-THE MOVIE should demonstrate the production's actual primary engine in motion, not default to character-drama cadence.
+For film, THE MOVIE should demonstrate the production's actual primary engine in motion, not default to character-drama cadence.
 
 Keep THE MOVIE, THE SCENES, and THE FINISH distinct. THE FINISH should create convergence rather than act like one more standalone Scene.
 
@@ -48,7 +78,24 @@ Convergence does not prescribe a recognition beat, face, approaching authority f
 
 Do not reuse THE MOVIE's main engine-demonstration sequence as THE FINISH by default.
 
-If a Contained Proof is present, preserve its lower-stakes capability demonstration without turning it into a miniature climax. It should usually end smaller than it began.
+If an internal Contained Proof strategy is present, preserve its lower-stakes capability demonstration without turning it into a miniature climax. The public article must never label it.
+
+# TELEVISION REVISION
+
+For SERIES and LIMITED_SERIES, use the television standard rather than forcing film behavior onto the article.
+
+When review flags `TV_ARCHITECTURE`:
+
+- narrow an overstuffed public character roster
+- convert rules-manual World copy into behavior and pressure
+- make THE SEASON show developments rather than explain the season's architecture
+- turn episode inventory into selective discovery when useful
+- vary episode capsule length according to value
+- remove internal episode-purpose labels
+- reduce repeated motifs that are being underlined across sections
+- make THE FINISH converge season pressure without narrating spoiler protection
+
+Do not change television canon merely to solve a public-presentation problem.
 
 # INTERPRETATION
 
@@ -77,6 +124,7 @@ Maintain the house target:
 - paragraph breaks tied to meaningful movement
 - dialogue that sounds spoken before quotable
 - no defensive commentary about avoiding an obvious bad version
+- no internal editorial labels
 - no em dashes
 
 When review flags paragraph rhythm, actively recombine routine transitional one-sentence paragraphs into better-shaped paragraphs while preserving any isolation that genuinely creates force, suspense, comedy, or camera-like emphasis.
@@ -89,7 +137,13 @@ If canon was explicitly rebuilt upstream, use the latest canon as truth.
 
 # CALIBRATION
 
-When the approved film gold example is supplied, learn from its craft principles without copying its sports setting, restrained tone, scene types, or ending rhythm.
+When approved Gold examples are supplied, learn from craft principles without copying genre, tone, scene types, or ending rhythm.
+
+# FINAL SELF-CHECK
+
+Before returning the revision, scan the article for internal terminology and em dash characters.
+
+If any visible editorial-process phrase remains, fix it before returning the output.
 
 # OUTPUT
 
