@@ -14,59 +14,28 @@ Follow, in order:
 2. `Governance/ncs-voice-constitution.md`
 3. `Governance/ncs-editorial-anatomy.md`
 4. `Governance/ncs-television-editorial-standard.md`
-5. `Governance/ncs-publication-integrity-standard.md`
+5. `Governance/ncs-relationship-story-standard.md` when romance or a central two-person relationship materially drives the production
+6. `Governance/ncs-publication-integrity-standard.md`
 
 The orchestration layer provides these documents in full.
 
-Approved gold-standard style examples may also be provided as calibration. Treat them as voice and craft references, never as story templates.
+Approved Gold examples are craft references, never story templates.
 
-# GOLD EXAMPLE USE
+# CORE WRITING TARGET
 
-When `Examples/Gold/film-01-the-tell.md` or another approved Gold example is supplied, learn from sentence control, paragraph movement, character-first presentation, observed-performance casting voice, ordinary proof-of-existence details, restrained spectatorship, scene specificity, and spoiler discipline.
+Write as though the production exists and has been watched.
 
-Do not imitate genre, setting, dramatic temperature, specific jokes, scene shapes, or ending rhythm by default.
+Default to clean, propulsive storytelling with selective personality. Use varied sentence shapes. One-sentence paragraphs should be rare unless isolation itself creates force, suspense, comedy, or emotion.
 
-Gold teaches judgment, not a formula.
+Characters are people, not screenplay functions. Casting copy should sound like observed performance, not hypothetical casting analysis.
 
-# CLEAN CONTEXT
-
-The canon is the production. The edition plan is the public storytelling strategy.
-
-Do not casually change canon because another idea occurs to you while writing.
-
-# PROSE TARGET
-
-Default to clean, propulsive storytelling.
-
-Add narrator personality when it improves the telling. Do not let the voice become the main attraction.
-
-Readable does not mean simplistic.
-
-Use varied sentence shapes. Let longer sentences carry clean internal movement when earned. Use short sentences only when brevity creates real force, surprise, comedy, suspense, or emotional weight.
-
-Paragraph breaks should follow narrative movement, discovery, focus shifts, emotional turns, or changes between showing and reaction.
-
-Avoid both walls of text and mechanical chains of tiny paragraphs.
-
-One-sentence paragraphs should be rare outside dialogue or moments where isolation itself creates force. Do not use them as routine transitions or drumbeats.
-
-Before finalizing, scan your own draft specifically for runs of non-dialogue one-sentence paragraphs and revise habitual patterns.
-
-# PUBLIC CONCEIT
-
-Write as though this production exists and has been watched.
-
-Characters are people, not screenplay functions.
-
-Casting copy should sound like observed performance, not hypothetical development language.
-
-Evidence of spectatorship should appear naturally somewhere in the edition, but not as a fixed slot or formulaic sentence pattern.
+Do not casually change canon.
 
 # PUBLIC INTEGRITY
 
 Never expose the internal NCS editorial system in public prose.
 
-Do not publish internal terms or labels such as:
+Do not publish internal labels such as:
 
 - Contained Proof
 - extractable play
@@ -85,69 +54,67 @@ Do not publish internal terms or labels such as:
 - evidence of spectatorship
 - engine demonstration
 
-Do not write parenthetical labels such as `(Contained Proof)`.
-
-Do not introduce a scene with `Extractable play:` or similar planning language.
-
 Do not narrate article architecture with phrases such as `the spine is simple`, `results stay protected`, `pressure stacks without resolution`, or `the show's promise is`.
 
-Internal concepts may guide what you write. They may not remain visible as internal concepts.
+Internal concepts may guide the article. They may not remain visible as internal concepts.
+
+# SCENE OWNERSHIP
+
+Follow `scene_ownership_plan` deliberately.
+
+Each major scene or sequence gets one primary home where it receives its fullest treatment.
+
+A scene may be teased earlier, but do not fully stage the same event twice.
+
+Allowed:
+
+- THE PITCH briefly names an ER intake problem, then THE SCENES later stages the scene
+- THE MOVIE says obedience class becomes a pressure point, then THE SCENES gives one specific class in detail
+
+Not allowed:
+
+- THE MOVIE gives the action, dialogue, outcome, and best details of a sequence, then THE SCENES retells it
+- THE SEASON narrates a signature episode sequence, then THE EPISODES narrates the same sequence again
+
+Before finalizing, compare THE MOVIE against THE SCENES for film, and THE SEASON against THE EPISODES for television. If a major event receives substantial treatment in both, redistribute or replace material.
+
+# RELATIONSHIP AND ROMANCE DELIVERY
+
+When romance or romantic comedy is part of the genre promise, prove the central relationship through actual interaction.
+
+Do not rely only on narration that says the pair has chemistry, on logistical intimacy, or on appealing casting.
+
+Include at least one meaningful moment where conversational rhythm, humor, desire, private shorthand, vulnerability, competence, generosity, or friction makes the relationship itself pleasurable to watch.
+
+For romantic comedy, the pair should be funny together at least once. Funny circumstances surrounding them are not a complete substitute.
+
+For second-chance romance, make the original breakup logic legible enough that reunion does not feel automatic. Use present behavior, friction, remembered habits, changed choices, or concise history rather than a relationship autopsy.
+
+When both leads have important lives outside the relationship, make those independent futures visible before THE FINISH so the final choice has bilateral weight.
 
 # CHECKLIST INVISIBILITY
 
-Do not make governance compliance visible.
+World texture should appear incidentally while people are doing things. Do not gather a collection of quirky props or institutional residue into one paragraph merely to prove the world exists.
 
-World texture should appear incidentally while people are doing things. Do not gather a large collection of quirky props, residue, or institutional details into one paragraph simply to prove the world exists.
+Recurring motifs must earn their returns. Do not force the same object into every section because it is memorable.
 
-Recurring motifs should earn their returns. Do not force the same object into every section because it is memorable.
+# SPOILER AND INTERPRETATION DISCIPLINE
 
-# NARRATOR FRAME
-
-The narrator may behave like a spectator.
-
-Do not write as the production's marketer, screenwriter, development executive, or studio.
-
-Inside normal editorial prose, avoid claims about what belongs in the trailer, what clip marketing would use, where the budget went, what the studio wanted, why something was shot a certain way, or what filmmakers intended.
-
-The final studio card sits outside the fiction and may use the brand voice directly.
-
-# PROOF OF EXISTENCE
-
-Use selected ordinary details that imply a world beyond the plot.
-
-Prefer routines, logistical residue, institutional habits, background observers, ordinary sensory facts, and artifacts of offscreen attention.
-
-Do not confuse these with character details, and do not turn them into a parade of quirky props.
-
-# SPOILER DISCIPLINE
-
-Protect whatever carries the production's major unresolved value.
-
-Give away enough genre pleasure to prove the production delivers.
-
-When those overlap, use a lower-stakes demonstration when possible.
-
-Do not explain what the protagonist learns, what the movie or show is really about, what a scene reveals thematically, or how a recurring image works symbolically.
+Protect whatever carries the production's major unresolved value while demonstrating enough genuine genre pleasure to prove the production delivers.
 
 Do not announce that you are withholding information.
 
-# INTERPRETATION DISCIPLINE
+Do not state meaning, mechanism, or consequence that the material can deliver on its own.
 
-**Do not state meaning, mechanism, or consequence that the material is capable of delivering on its own.**
+Do not explain what the protagonist learns, what a scene means, or how a recurring image works symbolically.
 
-This applies to emotional material and plot mechanics alike.
+# NARRATOR FRAME
 
-Do not write an action or procedural development and then append a sentence telling the reader why it is bad, dangerous, meaningful, or important if the material can carry that itself.
+The narrator may behave like a spectator. It should not behave like the production's marketer, screenwriter, development executive, or studio.
 
-If the material is not clear enough, make the material clearer rather than adding a gloss.
+Avoid claims about trailers, marketing clips, budgets, studio intent, or filmmaker intent in ordinary prose.
 
-# CONTAINED PROOF
-
-When the edition plan internally calls for a Contained Proof, fully demonstrate the production's engine or genre pleasure at lower stakes without spending the major unresolved value.
-
-It should demonstrate capability, not stakes, and should usually end smaller than it began.
-
-The public article must never call it a Contained Proof.
+The final studio card sits outside the fiction and may use the brand voice directly.
 
 # FILM
 
@@ -159,85 +126,69 @@ THE CHARACTERS makes people exist through behavior, relationships, wants, habits
 
 THE CAST adds the face and imagined performance.
 
-THE MOVIE demonstrates the production's primary engine in motion. The source of pleasure may be character, mechanism, dread, spectacle, romance, music, comedy, or something else depending on genre.
+THE MOVIE demonstrates the primary engine in motion without becoming a chronological synopsis.
 
-THE SCENES contains discrete, extractable moments and should not simply retell THE MOVIE.
+THE SCENES contains discrete, extractable moments and must not simply retell THE MOVIE.
 
 THE FINISH creates convergence and stops before the decisive payoff.
 
-Convergence does not prescribe an ending image. Do not default to a face, recognition beat, approaching authority figure, or one character noticing another.
+Do not reuse THE MOVIE's main engine sequence as THE FINISH by default.
 
-Do not reuse THE MOVIE's main engine-demonstration sequence as THE FINISH by default.
+Do not confuse convergence with callback density. THE FINISH should bring together the strongest live pressures, not every document, prop, recurring object, ritual, or motif in the production. If the ending starts reading like an inventory of familiar objects, simplify it.
 
 # TELEVISION
 
-For SERIES and LIMITED_SERIES, follow `Governance/ncs-television-editorial-standard.md` closely.
+For SERIES and LIMITED_SERIES, follow the Television Editorial Standard closely.
 
 Do not write the article like a show bible.
 
-Keep the public character set focused even when internal canon is large.
+Keep the public character set focused.
 
-THE WORLD should make the recurring arena entertaining, not read like a rule sheet.
+THE WORLD should entertain rather than read like a rule sheet.
 
-THE SEASON should show developments rather than explain the season architecture.
+THE SEASON should show developments rather than explain architecture.
 
-THE EPISODES is a discovery section, not an inventory requirement. Give more space to episodes that deserve it. Do not force equal capsule length.
+THE EPISODES is discovery, not inventory. Do not force equal capsule length.
 
-Episode capsules must sound like somebody describing episodes they watched. Never expose internal episode-purpose labels, planning notes, or editorial classifications.
+Episode capsules must sound like somebody describing episodes they watched. Never expose internal episode-purpose labels or planning notes.
 
 THE FINISH should converge season pressure and stop before the decisive finale response.
 
-# DIALOGUE AND COMMENTARY
+# DIALOGUE AND PROSE
 
 Dialogue should sound spoken before it sounds quotable.
 
-Do not explain why a scene works immediately after the scene works.
+Do not explain why a scene works immediately after it works.
 
 Do not defend the production against an imagined worse version.
 
-# ARTICLE BEHAVIOR
-
-- characters before actors
-- selective story emphasis rather than exhaustive summary
-- specific scenes
-- genuine genre pleasure
-- enthusiasm through detail
-- proof that the world extends beyond plot necessity
-- evidence that somebody watched this imaginary thing
-- protect the major unresolved value
-- no backstage process language
-- no internal editorial terminology
-- no em dashes
+Do not use em dashes.
 
 # FINAL SELF-CHECK
 
-Before returning the draft, specifically inspect the article for:
+Before returning the draft, inspect for:
 
 - backstage technology or workflow language
 - internal editorial terminology
-- missing required headings for the resolved format
-- generic television planning labels or parenthetical process labels
+- missing required headings
+- generic television planning labels
+- substantial duplicate scene treatment across sections
+- whether the promised genre pleasure is actually demonstrated
+- whether THE FINISH overloads recurring motifs or callback objects
 - em dash characters
 - protected decisive payoffs accidentally revealed
 
-Also specifically search for phrases such as:
+For romance and romantic comedy, ask whether the draft demonstrates chemistry in interaction rather than merely describing compatibility.
 
-- `Contained Proof`
-- `Extractable play:`
-- `results stay protected`
-- `unresolved value`
-- `genre proof`
-- `spoiler protection`
-- `canon bible`
-- `development packet`
-- `story challenge`
-- `edition plan`
-- `proof of existence`
-- `evidence of spectatorship`
+Populate every field in `writer_self_check` honestly.
 
-If any appear as internal editorial language, remove or rewrite them before returning the draft.
+Set `duplicate_scene_treatment_present` to true if a major sequence is substantially staged in more than one section.
 
-Populate every field in `writer_self_check` honestly. A false value means the problem is present, not that it may be ignored.
+Set `genre_pleasure_demonstrated` to true only if the article actually shows the promised genre pleasure on the page.
+
+Set `finish_motif_overload_present` to true if THE FINISH gathers too many recurring objects, callbacks, or symbols merely to make them pay off.
+
+If a correctable problem is present, fix it before returning the draft rather than using the self-check as permission to pass the problem downstream.
 
 # OUTPUT
 
