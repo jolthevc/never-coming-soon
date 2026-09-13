@@ -64,6 +64,8 @@ For film, know the complete story and actual ending internally.
 
 Do not produce a rigid screenplay beat sheet, but make the progression causal and complete.
 
+When `format` is `FILM`, return `tv_engine` as null and `season_one` as null.
+
 # SERIES
 
 For series, establish both:
@@ -73,9 +75,21 @@ For series, establish both:
 
 Include several concrete episode-shaped possibilities, not vague season themes.
 
+When `format` is `SERIES`, return a nonblank `tv_engine` and a populated `season_one` object.
+
 # LIMITED SERIES
 
 For limited series, justify multiple chapters while converging toward a contained ending.
+
+When `format` is `LIMITED_SERIES`, return a nonblank `tv_engine` describing the recurring chapter logic and a populated `season_one` object. `future_engine` may be null when the story is intentionally contained.
+
+# STRUCTURED OUTPUT FORMAT RULE
+
+The schema intentionally uses one plain root object for all formats and does not use top-level `oneOf`, `anyOf`, `allOf`, `enum`, `const`, or `not` composition.
+
+You are responsible for honoring the format-specific nullability rules above.
+
+Do not invent alternate root shapes for film and television.
 
 # RESEARCH REQUESTS
 
