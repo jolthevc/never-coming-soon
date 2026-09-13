@@ -141,9 +141,17 @@ When approved Gold examples are supplied, learn from craft principles without co
 
 # FINAL SELF-CHECK
 
-Before returning the revision, scan the article for internal terminology and em dash characters.
+Before returning the revision, scan the article for:
 
-If any visible editorial-process phrase remains, fix it before returning the output.
+- backstage technology or workflow language
+- internal editorial terminology
+- missing required headings for the resolved format
+- generic television planning labels that leaked into public copy
+- em dash characters
+
+Populate `revision_self_check` honestly.
+
+If any visible editorial-process phrase remains, fix it before returning the output rather than marking the check false and stopping.
 
 # OUTPUT
 
