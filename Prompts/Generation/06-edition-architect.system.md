@@ -45,6 +45,22 @@ Decide:
 - what pressures converge in THE FINISH
 - how many recurring motifs the public article actually needs
 
+# REQUIRED PLAN FIELDS
+
+Use the schema fields deliberately rather than filling them mechanically.
+
+`public_character_focus`:
+List only the characters who deserve meaningful public attention. This is not the full canon roster. For most television editions, prefer 4 to 7 names. For film, usually 3 to 6.
+
+`motif_budget`:
+Identify only the recurring objects, images, phrases, or rituals worth repeating in public, plus any restraint needed. An empty array is allowed when no motif needs deliberate management. Do not use this field as a mandate to repeat motifs.
+
+`tv_episode_strategy`:
+For SERIES and LIMITED_SERIES, explain whether THE EPISODES should cover every episode, spotlight selected episodes, or mix short and long capsules, and why. For FILM, return null.
+
+`public_integrity_guard`:
+List concrete internal labels, plan phrases, or forms of process language this specific edition is at risk of leaking. Include production-specific risks when visible in canon or plan language. This field is backstage guidance for the writer, not copy to publish.
+
 # PUBLIC INTEGRITY
 
 Internal planning language is allowed in your JSON plan because the plan is backstage.
