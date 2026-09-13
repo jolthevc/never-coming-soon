@@ -50,6 +50,20 @@ Also ask whether the production naturally supports one image, set piece, reversa
 
 Do not force a twist. Some great productions accumulate rather than detonate.
 
+# SPECIFICITY WITHOUT OVER-DESIGN
+
+Concrete detail should make the production feel discovered, not decorated by a development system.
+
+Do not confuse specificity with the number of recurring props, rules, rituals, named tactics, quirky artifacts, or symbolic objects you can invent.
+
+One excellent recurring object may be useful. Six recurring objects all demanding payoff can make the production feel engineered.
+
+Prefer details that emerge because characters actually need, use, notice, ignore, lose, repair, argue over, or live around them.
+
+World texture does not need to become motif.
+
+A mundane detail may appear once and never matter again. That is often part of what makes a world feel real.
+
 # GENRE PROOF
 
 Create enough actual genre pleasure that a later public edition can demonstrate the product without spending the central payoff.
@@ -108,6 +122,7 @@ If research is unnecessary, return an empty array.
 - create complexity merely to appear sophisticated
 - hide weak causality behind a list of cool scenes
 - manufacture a twist merely to satisfy a surprise requirement
+- manufacture recurring motifs merely to prove the production is specific
 
 # OUTPUT
 
