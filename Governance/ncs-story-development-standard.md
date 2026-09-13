@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Story Development Standard v1.1
+## Story Development Standard v1.2
 
 ## 1. Purpose
 
@@ -151,7 +151,7 @@ They may be:
 
 A good signature scene has enough situation, behavior, pressure, and detail that someone can begin directing it in their head.
 
-Avoid generic scene labels such as "the big confrontation" or "the emotional speech."
+Avoid generic scene labels such as `the big confrontation` or `the emotional speech`.
 
 ## 11. High-ceiling moments
 
@@ -250,7 +250,48 @@ The internal world should also contain ordinary texture that does not serve the 
 
 Prefer routines, logistics, institutional habits, background observers, and mundane facts over a curated shelf of charming quirks.
 
-## 16. Simplicity and complexity
+## 16. Specificity versus over-design
+
+Specificity is one of NCS's greatest strengths and one of its easiest failure modes.
+
+A production can become less believable when every ordinary object has been turned into a motif, every ritual has a name, every logistical detail gets a callback, and every background fact looks hand-selected to prove how observed the world is.
+
+The world should contain both meaningful detail and disposable detail.
+
+Some objects matter because characters keep using them. Some details should simply be there once and never return.
+
+Ask:
+
+- Would this detail exist if nobody planned to pay it off?
+- Does this recurring object actually change story, behavior, or pressure when it returns?
+- Are several props or rituals performing the same job of making the production feel specific?
+- Has a mundane detail been promoted into a symbol because the development process noticed it was charming?
+- Would removing two motifs make the remaining one stronger?
+
+Avoid building a production around a curated inventory of coins, notebooks, clipboards, signs, catchphrases, lucky objects, named plays, recurring foods, or other artifacts unless each one earns dramatic life independently.
+
+A realistic world includes details that are not important.
+
+## 17. Ensemble discipline
+
+More named characters do not automatically create a richer production.
+
+Every recurring character should contribute something distinct: story pressure, relationship movement, comedy, genre pleasure, point of view, episode generation, or emotional consequence.
+
+Watch for supporting characters who differ cosmetically but perform the same dramatic job.
+
+For television, the internal ensemble can be larger than the public article's character section, but the show itself still needs a legible center of gravity.
+
+Ask:
+
+- Whose choices actually move the season?
+- Which relationships keep generating material?
+- Which supporting character creates a story another character cannot?
+- Who could disappear without changing any episode?
+
+Cut, combine, or demote characters when the ensemble becomes crowded rather than rich.
+
+## 18. Simplicity and complexity
 
 Complexity must earn its place.
 
@@ -260,7 +301,7 @@ A cleaner story with richer people or richer mechanics is often stronger than a 
 
 Do not mistake confusion for sophistication.
 
-## 17. Film standard
+## 19. Film standard
 
 A film needs a complete dramatic experience.
 
@@ -284,7 +325,7 @@ The production should nevertheless feel causal, shaped, and complete.
 
 The ending should not merely stop the plot. It should answer or transform something the movie made us care about.
 
-## 18. Series standard
+## 20. Series standard
 
 A series needs more than an excellent pilot premise.
 
@@ -317,7 +358,9 @@ Internally know:
 
 Do not stretch a film into eight episodes.
 
-## 19. Limited series standard
+Do not confuse a long list of plausible episodes with a renewable engine. The episodes should create different pressures while still feeling like the same show.
+
+## 21. Limited series standard
 
 A limited series should justify multiple chapters while moving toward a contained ending.
 
@@ -325,7 +368,7 @@ It needs both episodic progression and cumulative inevitability.
 
 If the material would clearly be stronger as a two-hour film, change the format.
 
-## 20. Ending standard
+## 22. Ending standard
 
 An ending should feel earned by the production that came before it.
 
@@ -341,7 +384,7 @@ Ask:
 
 Do not save a weak story with a clever final twist.
 
-## 21. Development rescue
+## 23. Development rescue
 
 Generation should rescue before rejecting.
 
@@ -355,9 +398,11 @@ If the ending is weak, rebuild the ending.
 
 If the packet contains one excellent relationship inside a mediocre premise, consider rebuilding around the relationship.
 
+If the production is over-designed, remove machinery rather than adding another device to explain it.
+
 Development effort should be spent making the production better, not defending previous decisions.
 
-## 22. Canon readiness test
+## 24. Canon readiness test
 
 Before internal canon is frozen, ask:
 
@@ -371,6 +416,8 @@ Before internal canon is frozen, ask:
 - Does the ending feel earned?
 - Does the production have its own identity?
 - Is the world doing useful work and also producing ordinary texture?
+- Is any specificity starting to feel curated or over-designed?
+- Is the ensemble rich rather than merely large?
 - Is there a higher-ceiling moment available without forcing one?
 - Can we imagine more than the logline?
 
