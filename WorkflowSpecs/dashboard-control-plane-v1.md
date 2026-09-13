@@ -1,11 +1,13 @@
 # Never Coming Soon
-## Internal Dashboard Control Plane v1.0
+## Internal Dashboard Control Plane v1.1
 
 ## Purpose
 
 Build a lightweight internal control surface for managing Never Coming Soon Ideation and Generation. This is not a public publishing product and should not duplicate creative logic already owned by n8n and GitHub.
 
-The dashboard is a thin client. n8n remains the orchestration layer. Google Sheets remains persistent workflow state. Google Drive remains the human-review draft archive. GitHub remains the source of truth for creative governance, prompts, schemas, and workflow specs.
+The dashboard is a thin client. n8n remains the orchestration layer. The Ideas Google Sheet remains persistent catalog and lifecycle state. Google Drive remains the final draft archive. GitHub remains the source of truth for creative governance, prompts, schemas, and workflow specs.
+
+There is no separate Productions state layer in the current architecture.
 
 ## Primary dashboard actions
 
@@ -48,17 +50,23 @@ Read the Ideas tab and display at minimum:
 
 - idea_id
 - working_title
+- final_title when available
 - format
 - genre
 - status
 - premise
 - human_notes
+- ncs_score when available
+- draft_url when available
+- published_url when available
 
 Useful actions:
 
 - edit human notes
 - Send to Generation for a specific eligible idea
 - human Development Select override when appropriate, visibly marked as a human action
+- Open Draft when `draft_url` exists
+- inspect or copy the social asset handoff when `ig_packet_json` exists
 
 ### Generation controls
 
@@ -66,22 +74,36 @@ Provide:
 
 - `Generate Next`, which invokes Generation with blank idea_id
 - `Generate This`, which invokes Generation with a selected idea_id
-- advanced `Redevelop`, which requires explicit confirmation and invokes force_redevelopment=true for a specific idea
+- advanced `Redevelop`, which requires explicit confirmation and invokes `force_redevelopment=true` for a specific idea
 
-### Productions
+Generation lifecycle shown in the same Ideas row:
 
-Read the Productions tab and display at minimum:
+`DEVELOPMENT_SELECT` -> `GENERATING` -> `DRAFTED`
 
-- production_id
+A later human or publishing workflow may set:
+
+`DRAFTED` -> `PUBLISHED`
+
+Do not create a dashboard-side status system.
+
+### Drafted productions view
+
+If a separate view is useful, derive it from Ideas rows where status is `DRAFTED` or `PUBLISHED`.
+
+Display at minimum:
+
 - idea_id
-- final/current title when available
+- final_title
+- format
+- genre
 - status
-- overall editorial score when available
-- latest premise or short description
-- human_notes
-- Open Draft when a Drive document exists
+- ncs_score
+- draft_url
+- published_url
 
-Show a compact in-progress status when Ideation or Generation is running.
+This is a filtered view of Ideas, not another data source.
+
+Show a compact in-progress state for rows currently marked `GENERATING`.
 
 ## Ideation entry contract
 
@@ -108,7 +130,7 @@ CONCEPT_INTAKE requires concept_text and creates one seed before joining the nor
 - idea_id: optional string
 - force_redevelopment: optional boolean, default false
 
-Blank idea_id means first eligible Development Select.
+Blank idea_id means the first eligible `DEVELOPMENT_SELECT` row with a nonblank Development Packet.
 
 ## Security and architecture
 
