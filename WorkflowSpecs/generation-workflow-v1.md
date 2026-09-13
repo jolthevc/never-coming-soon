@@ -1,33 +1,41 @@
 # Never Coming Soon
-## n8n Generation Workflow Specification v1.1
+## n8n Generation Workflow Specification v2.0
+
+> The filename is retained for compatibility with existing loaders. This document supersedes the old Productions-table v1 architecture.
 
 ## 1. Objective
 
-Build one n8n workflow that starts from a `DEVELOPMENT_SELECT` idea and ends with the strongest automated Never Coming Soon edition ready for human review.
+Build one clean n8n workflow that starts from one eligible row in the `Ideas` tab and ends with:
+
+- a final Never Coming Soon article in Google Drive
+- a valid holistic NCS score for that exact final article
+- a validated `ig_packet_json` social handoff
+- the same Ideas row set to `DRAFTED`
 
 The workflow develops the imaginary production before it writes the public article.
 
-Terminal state:
-
-`READY_FOR_HUMAN_REVIEW`
-
-The workflow does not publish automatically.
+It never publishes automatically.
 
 ## 2. Systems
 
-- GitHub: source of truth for governance, prompts, schemas, approved gold examples, and this specification
-- Ideation Google Sheet: source Development Packet and idea-level human notes
-- Productions Google Sheet: persistent Generation state
-- Primary LLM: strongest available OpenAI reasoning/creative model
-- Independent critic model: strongest available Anthropic model when configured; otherwise clean-context primary-model fallback
+- GitHub: source of truth for governance, prompts, schemas, Gold examples, and this specification
+- Google Sheet `Never Coming Soon — Ideas`: catalog and durable lifecycle state
+- Google Drive: finished human-readable draft store
+- n8n execution memory: temporary Generation workspace
+- Primary LLM: strongest practical OpenAI reasoning/creative model
+- Independent critic model: strongest available independent critic when configured, otherwise clean-context primary-model fallback
 - Web research: conditional and narrowly scoped
-- n8n Code nodes: deterministic IDs, routing, diagnostics, JSON handling, QA, and state updates
+- n8n Code nodes: deterministic routing, diagnostics, JSON handling, QA, and state updates
+
+There is no required Productions tab and no `production_id`.
 
 ## 3. Source snapshot
 
-At the beginning of each run, resolve the current commit SHA of GitHub `main` and store it as `source_commit_sha`.
+At the beginning of each live run, resolve the current commit SHA of GitHub `main` and store it as `source_commit_sha`.
 
-Fetch every required runtime file using that exact commit SHA. A single execution must never mix governance versions.
+Fetch every required runtime file using that exact commit SHA.
+
+A single execution must not mix governance versions.
 
 ## 4. Runtime files
 
@@ -41,14 +49,29 @@ Load:
 - `Governance/ncs-research-grounding-standard.md`
 - `Governance/ncs-casting-standard.md`
 - `Governance/ncs-editorial-anatomy.md`
+- `Governance/ncs-television-editorial-standard.md`
 - `Governance/ncs-voice-constitution.md`
 - `Governance/ncs-editorial-quality-standard.md`
+- `Governance/ncs-publication-integrity-standard.md`
+- `Governance/ncs-editorial-scoring-standard.md`
+- `Governance/ncs-visual-constitution.md`
+- `Governance/ncs-social-asset-standard.md`
 - `Governance/ncs-generation-data-contract.md`
-- `Governance/ncs-catalog-memory-standard.md`
 
 ### Prompts
 
-Load all files under `Prompts/Generation/`.
+Load all current files under `Prompts/Generation/`, including:
+
+- `01-production-developer.*`
+- `02-research-grounding.*`
+- `03-story-challenger.*`
+- `04-canon-builder.*`
+- `05-casting-director.*`
+- `06-edition-architect.*`
+- `07-edition-writer.*`
+- `08-forensic-editor.*`
+- `09-revision-writer.*`
+- `10-ig-asset-packet-builder.*`
 
 ### Schemas
 
@@ -63,53 +86,109 @@ Load:
 - `Schemas/edition-draft.schema.json`
 - `Schemas/editorial-review.schema.json`
 - `Schemas/revision-output.schema.json`
+- `Schemas/ig-asset-packet.schema.json`
 
 ### Approved writing calibration
 
 Load:
 
 - `Examples/Gold/film-01-the-tell.md`
+- `Examples/Gold/film-02-clearance.md`
 
-Do not automatically add every completed NCS edition to writing calibration.
+Do not automatically add completed NCS editions to Gold calibration.
 
-Fail the run if required source files cannot be loaded. Do not silently substitute stale hard-coded prompt text.
+Fail the run if required runtime files cannot be loaded.
 
-## 5. Prompt assembly
+Do not silently substitute stale hard-coded prompt text.
 
-For each model call:
+## 5. Structured-output safety
 
-1. use the full text of the agent's `.system.md`
-2. append the full text of only the governance documents listed under that prompt's `AUTHORITATIVE GOVERNANCE`
-3. clearly delimit each governance document
-4. render the matching `.user.md` with runtime data
-5. enforce the matching JSON Schema through structured output when supported
+Every OpenAI response schema must have a plain root object:
 
-Gold examples are loaded separately and supplied only to writing stages that explicitly use them.
+```json
+{
+  "type": "object",
+  "properties": {},
+  "required": [],
+  "additionalProperties": false
+}
+```
 
-## 6. Trigger
+At the root, do not use:
 
-Support a manual trigger with:
+- `oneOf`
+- `anyOf`
+- `allOf`
+- `enum`
+- `const`
+- `not`
 
-- `idea_id` required
-- `force_redevelopment` optional boolean, default false
+Nested property enums and nullable nested fields may be used when supported.
 
-Do not batch multiple full productions in one Generation execution in v1.
+Do not create separate root schemas for film, series, and limited series.
 
-## 7. Source and Production workspace
+Format-specific behavior belongs in prompts and ordinary fields.
 
-Read the Ideation row by `idea_id`.
+Validate all schemas against the actual provider API before the first paid live run after schema changes.
 
-Require status `DEVELOPMENT_SELECT` unless forced and require nonblank `development_packet_json`.
+## 6. Trigger contract
 
-Read human notes and basic traceability fields. Do not use Ideation scorecards or duplicate audits as downstream writer context.
+Support:
 
-Create or load one Production row according to `Governance/ncs-generation-data-contract.md`. Preserve immutable IDs, `created_at`, and human-owned notes.
+- `idea_id`: optional string
+- `force_redevelopment`: optional boolean, default false
 
-## 8. Node sequence
+If `idea_id` is supplied:
 
-### Node 1: Manual Trigger
+- find exactly that row
+- fail clearly if not found
 
-Receive `idea_id` and optional `force_redevelopment`.
+If `idea_id` is blank:
+
+- select the first row from top to bottom where `status = DEVELOPMENT_SELECT` and `development_packet_json` is nonblank
+
+Process exactly one idea per execution.
+
+## 7. Eligibility
+
+When `force_redevelopment = false`:
+
+- `DEVELOPMENT_SELECT`: eligible
+- `GENERATING`: stop to prevent duplicate work
+- `DRAFTED`: stop and require explicit force redevelopment
+- `PUBLISHED`: stop
+- all earlier Ideation statuses: not eligible
+
+When `force_redevelopment = true`:
+
+- explicit `idea_id` is required
+- allow eligible `DEVELOPMENT_SELECT` or `DRAFTED`
+- preserve previous successful final artifacts until replacement succeeds
+- do not auto-redevelop `PUBLISHED`
+
+Do not require the Ideation `format` cell to be populated. Generation may resolve format from the packet and its own development judgment.
+
+## 8. Start lock
+
+After selection and eligibility validation, set the exact Ideas row to:
+
+`GENERATING`
+
+Use `idea_id` to target the row.
+
+Do not modify `human_notes` or `published_url`.
+
+Keep a snapshot of the selected row in execution memory as `source_idea`.
+
+Safely parse `development_packet_json`.
+
+If parsing fails, stop and restore the row to `DEVELOPMENT_SELECT`.
+
+## 9. Main node sequence
+
+### Node 1: Trigger / Input Normalize
+
+Normalize `idea_id` and `force_redevelopment`.
 
 ### Node 2: Resolve GitHub Source Commit
 
@@ -117,103 +196,151 @@ Resolve `main` HEAD and store `source_commit_sha`.
 
 ### Node 3: Load Runtime Files
 
-Fetch governance, prompts, schemas, and approved calibration files at `source_commit_sha`.
+Fetch all required files at the pinned SHA.
 
-### Node 4: Read Ideation Source Row
+### Node 4: Select Ideas Row
 
-Fetch the selected idea and validate the Development Packet.
+Apply explicit or blank-ID selection rules.
 
-### Node 5: Create or Load Production Workspace
+### Node 5: Validate Eligibility
 
-Create the Production row or resume according to overwrite rules.
+Validate lifecycle, packet existence, and force-redevelopment rules.
 
-### Node 6: Production Developer
+### Node 6: Set GENERATING
 
-Inputs: Development Packet and idea-level human notes.
+Lock the exact row.
 
-Write `development_blueprint_json`. Do not send broad catalog history.
+### Node 7: Build Source Bundle
 
-### Node 7: Research Needed?
+Create the clean execution object containing:
 
-Read `development_blueprint_json.research_requests`.
+- source row
+- parsed Development Packet
+- human notes
+- pinned governance
+- prompts
+- schemas
+- Gold examples
 
-### Node 8: Research Grounder, conditional
+### Node 8: Production Developer
 
-Research exactly the requested questions with web access and write `research_packet_json`.
+Inputs:
 
-### Node 9: Build Story-Challenge Catalog Memory
+- Development Packet
+- human notes
 
-Build compact repetition memory only.
+Output:
 
-### Node 10: Story Challenger
+`production_development`
 
-Inputs: Development Packet, blueprint, research if any, compact catalog memory.
+Do not persist to Sheets.
 
-Preferred provider: strongest configured independent Anthropic model. Fallback: strongest primary OpenAI model in fresh context.
+### Node 9: Research Needed?
 
-Write `story_challenge_json`.
+Use nonempty `research_requests` as the decision signal.
 
-### Node 11: Canon Builder
+### Node 10: Research Grounder, conditional
 
-Inputs: Development Packet, blueprint, research if any, story challenge, human notes.
+Research only requested questions.
 
-Write `canon_bible_json` and set `CANON_READY`.
+Return compact factual grounding.
 
-### Node 12: Build Casting Memory
+Do not force research findings into the story.
 
-Create compact recent/frequent actor usage summary.
+### Node 11: Story Challenger
+
+Use a fresh critic context.
+
+Inputs:
+
+- Development Packet
+- production development
+- research if any
+- compact catalog repetition memory only when already cleanly available
+
+Output:
+
+`story_challenge`
+
+### Node 12: Canon Builder
+
+Inputs:
+
+- Development Packet
+- production development
+- research if any
+- story challenge
+- human notes
+
+Output:
+
+`canon_bible`
+
+After success, canon is frozen unless one controlled CANON rescue is later authorized.
 
 ### Node 13: Casting Director
 
-Inputs: canon bible and compact casting memory.
+Inputs:
 
-Write `casting_json` and set `CAST_READY`.
+- canon bible
+- compact actor-repeat memory when available
+
+Output:
+
+`casting_plan`
 
 ### Node 14: Edition Architect
 
-Inputs: canon bible and casting plan.
+Inputs:
 
-Write `edition_plan_json` and set `EDITION_PLANNED`.
+- canon bible
+- casting plan
 
-### Node 15: Load Gold-Standard Style Examples
+Output:
 
-Load explicitly approved calibration files from the runtime snapshot.
+`edition_plan`
 
-Current approved film example: `Examples/Gold/film-01-the-tell.md`.
+For television, load and apply the dedicated Television Editorial Standard.
 
-Gold examples teach craft and judgment. They are not story templates.
+### Node 15: Load Gold Calibration
+
+Provide both approved Gold film examples to writing/revision stages as craft calibration.
+
+Gold examples are not story templates.
 
 ### Node 16: Edition Writer
 
-Clean inputs only: canon bible, casting plan, edition plan, approved style examples.
+Clean inputs only:
 
-Write `draft_v1_markdown` and set `DRAFTED`.
+- canon bible
+- casting plan
+- edition plan
+- approved Gold examples
+
+Output:
+
+`draft_v1`
+
+Do not pass Challenger notes, discarded alternatives, Ideation scores, or catalog history.
 
 ### Node 17: Deterministic Pre-Review Diagnostics
-
-Run noncreative diagnostics and pass the results to the Forensic Editor.
 
 Record at minimum:
 
 - blank draft warning
 - approximate word count
 - em dash presence
-- obvious backstage-process phrase warnings
+- backstage technology phrase warnings
+- hard public-integrity leak matches
+- required-heading presence for resolved format
 - total paragraph count
-- count of non-dialogue one-sentence paragraphs
+- non-dialogue one-sentence paragraph count
 - longest consecutive run of non-dialogue one-sentence paragraphs
-- paragraph indices or locations for one-sentence runs when practical
+- locations of suspicious runs when practical
 
-Implementation note for paragraph analysis:
+Paragraph metrics are diagnostic.
 
-- split Markdown into logical paragraphs after normalizing blank lines
-- exclude headings, horizontal rules, list items, studio-card furniture, and isolated dialogue lines from the non-dialogue one-sentence metric when reliably identifiable
-- sentence counting may be heuristic and should never rewrite prose
-- diagnostics are warnings and context, not automatic failures
-
-The purpose is to make habitual drumbeat prose visible before review. Dialogue, suspense, comic isolation, and deliberate camera-like sequences may legitimately use isolated lines.
-
-Do not automatically rewrite.
+Hard public-integrity leak matches should be treated as material problems.
 
 ### Node 18: Forensic Editor
 
@@ -221,160 +348,358 @@ Inputs:
 
 - canon bible
 - edition plan
-- draft
-- deterministic pre-review diagnostics
+- current draft
+- deterministic diagnostics
 
-Use `Prompts/Generation/08-forensic-editor.system.md` and `Schemas/editorial-review.schema.json`.
+Output:
 
-Preferred provider: strongest configured independent Anthropic model. Fallback: strongest primary OpenAI model in fresh context.
+`editorial_review`
 
-Write `editorial_review_json` and set `REVIEWED`.
+Required field:
 
-### Node 19: Route by `revision_route`
+`overall_score`
+
+The score belongs only to the exact draft reviewed.
+
+### Node 19: Route by revision_route
 
 Allowed routes:
 
-- NONE
-- PROSE
-- EDITION
-- CANON
+- `NONE`
+- `PROSE`
+- `EDITION`
+- `CANON`
 
-Track `rescue_cycle_count`. Maximum automated deep rescue cycles in v1: 1.
+Track `rescue_cycle_count`.
+
+Maximum deep rescue cycles: 1.
 
 ### Node 20A: NONE
 
-Use current draft as final if final is blank.
+Use the current draft as final-text candidate.
 
 ### Node 20B: PROSE
 
-Run Revision Writer once with latest canon, latest edition plan, current draft, editorial review, and approved style examples.
+Run Revision Writer once using:
+
+- latest canon
+- latest edition plan
+- current draft
+- review
+- Gold examples
+
+Output becomes final-text candidate.
 
 ### Node 20C: EDITION
 
-If rescue cycle is unused:
+If deep rescue remains available:
 
-1. increment rescue cycle
+1. increment rescue count
 2. rerun Edition Architect with review context
 3. rerun Edition Writer
-4. rerun deterministic pre-review diagnostics
+4. rerun pre-review diagnostics
 5. rerun Forensic Editor
-6. route again
+6. route once more
 
-If another deep route is requested afterward, stop recursion and deliver the strongest current draft with unresolved warnings.
+Do not create endless loops.
 
 ### Node 20D: CANON
 
-If rescue cycle is unused:
+If deep rescue remains available:
 
-1. increment rescue cycle
+1. increment rescue count
 2. rerun Canon Builder with review context
 3. regenerate casting
 4. regenerate edition plan
 5. rerun Edition Writer
-6. rerun deterministic pre-review diagnostics
+6. rerun pre-review diagnostics
 7. rerun Forensic Editor
-8. route again
+8. route once more
 
-If another deep route is requested afterward, stop recursion and deliver the strongest current version with unresolved warnings.
+Do not create endless loops.
 
-### Node 21: Final Revision Writer when needed after rescue
+### Node 21: Final Forensic Review Gate
 
-If the post-rescue review returns `PROSE`, run Revision Writer once. If `NONE`, use the latest draft.
+This node is mandatory whenever article text changed after the most recent review.
+
+If the current final-text candidate is byte-for-byte the same article reviewed by Node 18 or a later review, reuse that review.
+
+Otherwise run Forensic Editor one final time on the exact final-text candidate.
+
+The review returned here is `final_editorial_review`.
+
+Require:
+
+- numeric `overall_score`
+- 1.0 <= score <= 10.0
+
+Never substitute `N/A`.
+
+Never attach an earlier-draft score to a revised article.
 
 ### Node 22: Deterministic Final QA
 
-Check and record:
+Hard-gate checks:
 
-- nonblank final Markdown
+- final article nonblank
+- final title nonblank
+- valid numeric final `overall_score`
 - no em dash character
-- no obvious backstage-process references
+- no obvious backstage technology references
+- no hard internal editorial leakage
+- required headings for resolved format
 - plausible word count
-- nonblank title
-- valid JSON state
-- total paragraph count
-- count of non-dialogue one-sentence paragraphs
-- longest consecutive run of non-dialogue one-sentence paragraphs
+- valid final JSON objects
 
-Compare paragraph-rhythm diagnostics to the pre-review version when available.
+Additional diagnostics:
 
-If revision materially worsened the one-sentence-paragraph pattern, surface a warning for human review.
+- major-name consistency when practical
+- episode-count consistency when practical
+- paragraph-rhythm metrics
 
-Do not mutate creative prose automatically.
+If a hard gate fails, stop before Drive and do not set `DRAFTED`.
 
-### Node 23: Ready for Human Review
+### Node 23: IG Asset Packet Builder
 
-Write `draft_final_markdown`, set `READY_FOR_HUMAN_REVIEW`, and return a concise execution summary.
+Inputs:
 
-## 9. Model roles
+- final canon
+- final title
+- exact final article
+- final overall score
 
-Use the highest-capability practical models, not cheaper models by default.
+Use:
+
+- `Prompts/Generation/10-ig-asset-packet-builder.system.md`
+- `Prompts/Generation/10-ig-asset-packet-builder.user.md`
+- `Schemas/ig-asset-packet.schema.json`
+
+Output:
+
+`ig_packet_json`
+
+The packet contains:
+
+- `version = ncs_ig_v1`
+- final title
+- final format
+- genre
+- campaign brief
+- logo treatment
+- exact short social caption
+- locked Slide 1 packet
+- locked Slide 2 packet
+- locked Slide 3 packet
+
+### Node 24: IG Packet Deterministic QA
+
+Require:
+
+- schema-valid packet
+- final title matches article title
+- exactly three slide objects
+- Slide 1 type `cover_poster`
+- Slide 2 type `premise`
+- Slide 3 type `ncs_close`
+- Slide 2 header is not a generic label such as `The Premise`, `About the Movie`, or `The Story`
+- Slide 2 body copy nonblank
+- Slide 3 newsletter line exactly `THE FULL STORY IN NEVER COMING SOON`
+- Slide 3 CTA exactly `LINK IN BIO`
+- Hollywood line nonblank and not identical to Slide 1 tagline
+- caption nonblank
+- no em dash character anywhere in public packet copy
+- no backstage technology language
+- no hard internal editorial terminology
+
+If packet QA fails, allow one structure/copy repair of the packet only.
+
+Do not rewrite the article merely because the asset packet failed.
+
+### Node 25: Google Drive Delivery
+
+Destination:
+
+`Never Coming Soon / Drafts / [FINAL TITLE] / [FINAL TITLE]`
+
+Google Doc contents:
+
+`NCS SCORE: X.X / 10`
+
+blank line
+
+final article only
+
+Do not include internal JSON, review notes, diagnostics, prompts, or canon.
+
+For force redevelopment, preserve the previous artifact until replacement succeeds.
+
+### Node 26: Final Ideas Row Update
+
+Only after successful Drive persistence, update the same row:
+
+- `final_title`
+- `draft_url`
+- `ncs_score`
+- `ig_packet_json`
+- `status = DRAFTED`
+
+`DRAFTED` must be the last success-state write.
+
+Never populate `published_url`.
+
+Never set `PUBLISHED`.
+
+### Node 27: Return Execution Summary
+
+Return a concise operator summary including:
+
+- source commit SHA
+- idea ID
+- resolved final title and format
+- models/providers used
+- whether research ran
+- rescue route if any
+- final review route
+- final holistic score
+- final QA result
+- IG packet QA result
+- Drive URL
+- final status
+- unresolved warnings, if any
+
+## 10. Model roles
+
+Use the highest-capability practical models, not cheaper models by default for core creative work.
 
 Recommended behavior:
 
-- Production Developer: strongest OpenAI model, high reasoning and creativity
+- Production Developer: strongest OpenAI reasoning/creative model
 - Research Grounder: strong model with web search and factual discipline
-- Story Challenger: strongest independent Anthropic model when configured, otherwise clean-context strongest OpenAI
-- Canon Builder: strongest OpenAI model, highest reasoning
-- Casting Director: strongest OpenAI model, moderate reasoning and creative range
-- Edition Architect: strongest OpenAI model, high reasoning
-- Edition Writer: strongest OpenAI model, high writing capability with controlled creative variance
-- Forensic Editor: strongest independent Anthropic model when configured, otherwise clean-context strongest OpenAI
-- Revision Writer: strongest OpenAI model, high writing capability and controlled creativity
+- Story Challenger: strongest configured independent critic, otherwise clean-context strongest OpenAI
+- Canon Builder: strongest OpenAI reasoning model
+- Casting Director: strongest OpenAI model with creative range
+- Edition Architect: strongest OpenAI reasoning model
+- Edition Writer: strongest OpenAI writing model
+- Forensic Editor: strongest independent critic when configured, otherwise clean-context strongest OpenAI
+- Revision Writer: strongest OpenAI writing model with controlled creativity
+- IG Asset Packet Builder: strong model with visual campaign judgment and disciplined structured output; it does not need to be the most expensive reasoning model if quality is validated
 
-## 10. Context hygiene
+## 11. Context hygiene
 
 Production Developer sees Development Packet + human notes.
 
-Research Grounder sees blueprint context + explicit research requests.
+Research Grounder sees production context + explicit research requests.
 
-Story Challenger sees Development Packet + blueprint + research + compact catalog memory.
+Story Challenger sees packet + development + research + compact repetition memory.
 
-Canon Builder sees Development Packet + blueprint + research + challenge + human notes.
+Canon Builder sees packet + development + research + challenge + human notes.
 
 Casting Director sees canon + casting-history summary.
 
 Edition Architect sees canon + casting.
 
-Edition Writer sees canon + casting + edition plan + approved gold examples.
+Edition Writer sees canon + casting + edition plan + Gold examples.
 
-Forensic Editor sees canon + edition plan + draft + deterministic diagnostics.
+Forensic Editor sees canon + edition plan + exact draft + deterministic diagnostics.
 
-Revision Writer sees latest canon + latest edition plan + current draft + review + approved gold examples.
+Revision Writer sees latest canon + latest edition plan + current draft + review + Gold examples.
+
+IG Asset Packet Builder sees final canon + final article + final score + visual/social governance.
 
 This separation is mandatory.
 
-## 11. Structured output repair
+## 12. Public-integrity hard-leak list
+
+At minimum, scan public article and public social copy case-insensitively for:
+
+- `contained proof`
+- `extractable play:`
+- `extractable scene:`
+- `results stay protected`
+- `unresolved value`
+- `genre proof`
+- `spoiler protection`
+- `reveal policy`
+- `canon bible`
+- `canon freeze`
+- `development packet`
+- `story challenge`
+- `edition plan`
+- `revision route`
+- `proof of existence`
+- `evidence of spectatorship`
+- `engine demonstration`
+
+Semantic leakage beyond this exact list remains the Forensic Editor's responsibility.
+
+## 13. Failure recovery workflow
+
+Use a small companion workflow named clearly, for example:
+
+`NCS - Generation Error Recovery v2.0`
+
+Assign it through n8n `settings.errorWorkflow`.
+
+The companion should:
+
+1. receive the failed execution context
+2. recover the exact failed `idea_id`
+3. find that exact Ideas row
+4. only act if the row is still `GENERATING`
+5. reset `GENERATING` -> `DEVELOPMENT_SELECT`
+6. modify no other fields
+
+If the exact `idea_id` cannot be recovered reliably, do not reset an arbitrary GENERATING row.
+
+The recovery workflow must be idempotent.
+
+If the row is already `DRAFTED`, `PUBLISHED`, or otherwise no longer `GENERATING`, do nothing.
+
+## 14. Structured-output repair
 
 If model output is invalid JSON or schema-invalid, retry once with the same model using the original response and exact validation error, instructing structure-only repair unless required data is genuinely missing.
 
 If repair fails, stop downstream stages that would corrupt state.
 
-## 12. Persistence safety
+Do not solve schema errors by adding alternate persistence paths.
 
-- update Production rows by `production_id`, not visible row number
-- preserve immutable IDs and `created_at`
-- never overwrite `human_notes`
-- do not regenerate creative content merely because a Sheet write failed
+## 15. Persistence safety
+
+- update Ideas rows by `idea_id`, not visible row number
+- preserve `idea_id`, `created_at`, `human_notes`, and `published_url`
+- do not persist intermediate creative stages to Sheets
+- do not regenerate creative content merely because a Sheet or Drive write failed
 - retry transient writes with backoff
 - parse JSON once and stringify once
-- store Markdown as Markdown
+- preserve prior successful final fields during a failed force-redevelopment attempt
 
-## 13. Overwrite dependencies during rescue
+## 16. No hidden publication decision
 
-When canon changes, regenerate casting, edition plan, draft, review, and final draft.
+Generation ends at `DRAFTED`.
 
-When edition architecture changes, preserve canon and casting but regenerate edition plan, draft, review, and final draft.
+A later human or explicit publishing workflow may set:
 
-When only prose changes, preserve all upstream creative state.
+`DRAFTED` -> `PUBLISHED`
 
-## 14. No hidden publication decision
+Generation never makes that decision.
 
-The automated system does not create a final `PUBLISH` status. Human review decides what happens next.
+## 17. Non-goals
 
-## 15. V1 non-goals
+Do not add unless later requested:
 
-Do not build unless later requested: visual generation, poster generation, social carousel generation, automated publication, automated newsletter sending, multi-row character database, multi-tab Production architecture, dedicated title/ending/scene agents, or endless self-revision loops.
+- a separate Productions state table
+- `production_id`
+- durable checkpoint/resume state for each creative stage
+- automatic publication
+- automated newsletter sending
+- multi-row character database
+- endless self-revision loops
+- extra social slides beyond the locked three-slide canonical packet
 
-## 16. End summary
+## 18. Quality principle
 
-Return source commit SHA, production ID, idea ID, models actually used, whether research ran, challenge verdict, rescue information, final editorial route, deterministic QA warnings, paragraph-rhythm diagnostics, final word count, final status, and unresolved issues if any.
+Creative sophistication belongs in the production-development and editorial system.
+
+Operational state should remain boring.
+
+The workflow should be easy to understand, easy to debug, and difficult to leave in a false-success state.
