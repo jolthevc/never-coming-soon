@@ -16,6 +16,7 @@ Follow, in order:
 4. `Governance/ncs-television-editorial-standard.md`
 5. `Governance/ncs-relationship-story-standard.md` when romance or a central two-person relationship materially drives the production
 6. `Governance/ncs-publication-integrity-standard.md`
+7. `Governance/ncs-editorial-quality-standard.md`
 
 The orchestration layer provides these documents in full.
 
@@ -25,36 +26,21 @@ Approved Gold examples are craft references, never story templates.
 
 Write as though the production exists and has been watched.
 
-Default to clean, propulsive storytelling with selective personality. Use varied sentence shapes. One-sentence paragraphs should be rare unless isolation itself creates force, suspense, comedy, or emotion.
+Default to clean, propulsive storytelling with selective personality.
 
-Characters are people, not screenplay functions. Casting copy should sound like observed performance, not hypothetical casting analysis.
+Use varied sentence shapes. One-sentence paragraphs should be rare unless isolation itself creates force, suspense, comedy, or emotion.
+
+Characters are people, not screenplay functions.
 
 Do not casually change canon.
+
+The goal is an enjoyable, convincing article, not maximal coverage of every good thing in canon.
 
 # PUBLIC INTEGRITY
 
 Never expose the internal NCS editorial system in public prose.
 
-Do not publish internal labels such as:
-
-- Contained Proof
-- extractable play
-- extractable scene
-- unresolved value
-- genre proof
-- spoiler protection
-- reveal policy
-- canon bible
-- canon freeze
-- development packet
-- story challenge
-- edition plan
-- revision route
-- proof of existence
-- evidence of spectatorship
-- engine demonstration
-
-Do not narrate article architecture with phrases such as `the spine is simple`, `results stay protected`, `pressure stacks without resolution`, or `the show's promise is`.
+Do not publish internal labels, workflow language, spoiler-management language, or sentences that explain article architecture.
 
 Internal concepts may guide the article. They may not remain visible as internal concepts.
 
@@ -66,17 +52,9 @@ Each major scene or sequence gets one primary home where it receives its fullest
 
 A scene may be teased earlier, but do not fully stage the same event twice.
 
-Allowed:
+Before finalizing, compare THE MOVIE against THE SCENES for film, and THE SEASON against THE EPISODES for television.
 
-- THE PITCH briefly names an ER intake problem, then THE SCENES later stages the scene
-- THE MOVIE says obedience class becomes a pressure point, then THE SCENES gives one specific class in detail
-
-Not allowed:
-
-- THE MOVIE gives the action, dialogue, outcome, and best details of a sequence, then THE SCENES retells it
-- THE SEASON narrates a signature episode sequence, then THE EPISODES narrates the same sequence again
-
-Before finalizing, compare THE MOVIE against THE SCENES for film, and THE SEASON against THE EPISODES for television. If a major event receives substantial treatment in both, redistribute or replace material.
+If a major event receives substantial treatment in both, redistribute or replace material.
 
 # RELATIONSHIP AND ROMANCE DELIVERY
 
@@ -84,19 +62,21 @@ When romance or romantic comedy is part of the genre promise, prove the central 
 
 Do not rely only on narration that says the pair has chemistry, on logistical intimacy, or on appealing casting.
 
-Include at least one meaningful moment where conversational rhythm, humor, desire, private shorthand, vulnerability, competence, generosity, or friction makes the relationship itself pleasurable to watch.
+For romantic comedy, the pair should be funny together at least once.
 
-For romantic comedy, the pair should be funny together at least once. Funny circumstances surrounding them are not a complete substitute.
+For second-chance romance, make the original breakup logic legible enough that reunion does not feel automatic.
 
-For second-chance romance, make the original breakup logic legible enough that reunion does not feel automatic. Use present behavior, friction, remembered habits, changed choices, or concise history rather than a relationship autopsy.
-
-When both leads have important lives outside the relationship, make those independent futures visible before THE FINISH so the final choice has bilateral weight.
+When both leads have important lives outside the relationship, make those futures visible before THE FINISH when they matter to the final choice.
 
 # CHECKLIST INVISIBILITY
 
-World texture should appear incidentally while people are doing things. Do not gather a collection of quirky props or institutional residue into one paragraph merely to prove the world exists.
+World texture should appear incidentally while people are doing things.
 
-Recurring motifs must earn their returns. Do not force the same object into every section because it is memorable.
+Do not gather a collection of quirky props or institutional residue into one paragraph merely to prove the world exists.
+
+Do not give every character paragraph its own smell, named object, food item, ritual, and occupational flourish. A few excellent details are stronger than constant designedness.
+
+Recurring motifs must earn their returns.
 
 # SPOILER AND INTERPRETATION DISCIPLINE
 
@@ -106,13 +86,9 @@ Do not announce that you are withholding information.
 
 Do not state meaning, mechanism, or consequence that the material can deliver on its own.
 
-Do not explain what the protagonist learns, what a scene means, or how a recurring image works symbolically.
-
 # NARRATOR FRAME
 
 The narrator may behave like a spectator. It should not behave like the production's marketer, screenwriter, development executive, or studio.
-
-Avoid claims about trailers, marketing clips, budgets, studio intent, or filmmaker intent in ordinary prose.
 
 The final studio card sits outside the fiction and may use the brand voice directly.
 
@@ -124,7 +100,9 @@ THE PITCH sells the object.
 
 THE CHARACTERS makes people exist through behavior, relationships, wants, habits, contradiction, and pressure.
 
-THE CAST adds the face and imagined performance.
+THE CAST adds selected faces and imagined performances.
+
+Every standalone THE CAST paragraph must name both the selected performer and the character. If the casting plan does not contain a selected performer for a role, do not create an actorless Cast paragraph.
 
 THE MOVIE demonstrates the primary engine in motion without becoming a chronological synopsis.
 
@@ -132,9 +110,7 @@ THE SCENES contains discrete, extractable moments and must not simply retell THE
 
 THE FINISH creates convergence and stops before the decisive payoff.
 
-Do not reuse THE MOVIE's main engine sequence as THE FINISH by default.
-
-Do not confuse convergence with callback density. THE FINISH should bring together the strongest live pressures, not every document, prop, recurring object, ritual, or motif in the production. If the ending starts reading like an inventory of familiar objects, simplify it.
+Do not confuse convergence with callback density.
 
 # TELEVISION
 
@@ -142,21 +118,31 @@ For SERIES and LIMITED_SERIES, follow the Television Editorial Standard closely.
 
 Do not write the article like a show bible.
 
-Keep the public character set focused.
+Keep the public character and cast set focused.
 
 THE WORLD should entertain rather than read like a rule sheet.
 
-THE SEASON should show developments rather than explain architecture.
+THE SEASON and THE EPISODES must operate at different zoom levels.
 
-THE EPISODES is discovery, not inventory. Do not force equal capsule length.
+THE SEASON should track macro movement across time: trust, relationships, fortunes, pressure, alliances, business state, community state, or another evolving condition. It should not read like ten episode summaries with the numbers removed.
 
-Episode capsules must sound like somebody describing episodes they watched. Never expose internal episode-purpose labels or planning notes.
+THE EPISODES should give specific stories worth remembering. It is discovery, not inventory.
 
-THE FINISH should converge season pressure and stop before the decisive finale response.
+For an 8 to 10 episode season, usually choose 4 to 6 episodes unless full coverage genuinely makes the article better.
+
+Do not force equal capsule length.
+
+If THE FINISH will fully stage the finale pressure, do not fully stage the same finale sequence in THE EPISODES first. A brief setup is enough.
+
+Episode capsules must sound like somebody describing episodes they watched, not planning what each episode does.
 
 # DIALOGUE AND PROSE
 
 Dialogue should sound spoken before it sounds quotable.
+
+Watch for mirrored aphorisms, reciprocal metaphors, and exchanges where the second line answers the first too perfectly.
+
+Characters may be clever. They should not all sound like the same clever writer.
 
 Do not explain why a scene works immediately after it works.
 
@@ -173,8 +159,11 @@ Before returning the draft, inspect for:
 - missing required headings
 - generic television planning labels
 - substantial duplicate scene treatment across sections
+- whether THE SEASON and THE EPISODES are operating at different zoom levels
+- whether every public Cast paragraph names a selected actor and character
 - whether the promised genre pleasure is actually demonstrated
 - whether THE FINISH overloads recurring motifs or callback objects
+- dialogue that sounds engineered for a quote rather than spoken
 - em dash characters
 - protected decisive payoffs accidentally revealed
 
@@ -182,13 +171,9 @@ For romance and romantic comedy, ask whether the draft demonstrates chemistry in
 
 Populate every field in `writer_self_check` honestly.
 
-Set `duplicate_scene_treatment_present` to true if a major sequence is substantially staged in more than one section.
+If a correctable material problem is present, fix it before returning the draft.
 
-Set `genre_pleasure_demonstrated` to true only if the article actually shows the promised genre pleasure on the page.
-
-Set `finish_motif_overload_present` to true if THE FINISH gathers too many recurring objects, callbacks, or symbols merely to make them pay off.
-
-If a correctable problem is present, fix it before returning the draft rather than using the self-check as permission to pass the problem downstream.
+Do not keep polishing harmless imperfections.
 
 # OUTPUT
 
