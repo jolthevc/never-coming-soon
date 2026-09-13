@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Television Editorial Standard v1.0
+## Television Editorial Standard v1.1
 
 ## 1. Purpose
 
@@ -46,12 +46,12 @@ Limited series use the same public architecture when useful, but the writing sho
 
 Typical center of gravity:
 
-- SERIES: 1,600 to 2,200 words
+- SERIES: 1,500 to 2,200 words
 - LIMITED_SERIES: 1,500 to 2,200 words
 
 These are not quotas.
 
-A tight eight-episode comedy may need less. A dense historical limited series may need more.
+A tight half-hour comedy may need less. A dense historical limited series may need more.
 
 Do not spend words merely because television has more internal canon.
 
@@ -59,12 +59,7 @@ Do not spend words merely because television has more internal canon.
 
 THE PITCH should create immediate desire for the show as an object.
 
-It should usually establish:
-
-- the central people or collision
-- the arena
-- the recurring source of story
-- the emotional or genre promise
+It should usually establish the central people or collision, the arena, the recurring source of story, and the emotional or genre promise.
 
 Do not explain the season architecture here.
 
@@ -80,15 +75,11 @@ Do not turn THE WORLD into a rules manual.
 
 A few precise rules can be excellent when they change behavior. A long inventory of procedural facts becomes reference material rather than entertainment.
 
-Prefer world details in motion:
-
-- the thing everyone does before opening
-- the rule that suddenly matters when somebody wants an exception
-- the hallway where two constituencies always collide
-- the schedule that creates impossible choices
-- the ritual that becomes different once we know the people
+Prefer world details in motion.
 
 Ordinary residue should be dispersed rather than gathered into a showcase paragraph.
+
+The article does not need a special smell, prop, food, tool, or ritual in every paragraph. A few excellent details will make the world feel more real than a constant stream of designed specificity.
 
 ## 7. THE CHARACTERS
 
@@ -108,11 +99,15 @@ Secondary characters can emerge later in THE SEASON or THE EPISODES when that pr
 
 ## 8. THE CAST
 
-The public cast section should make performances imaginable, not reproduce the internal casting plan.
+The public Cast section should make performances imaginable, not reproduce the internal casting plan.
 
 Default to the roles whose casting most increases desire.
 
 A series with ten important characters does not automatically need ten casting paragraphs.
+
+Every public Cast paragraph must name an actual selected performer and the character they play.
+
+If no performer has been selected for a character, omit that role from THE CAST rather than writing a performer-less paragraph about how the character should read.
 
 Observed-performance voice remains mandatory.
 
@@ -120,37 +115,34 @@ Observed-performance voice remains mandatory.
 
 THE SEASON should make the season feel shaped without exposing the internal blueprint.
 
-It is not the place to say:
+Its job is macro movement.
 
-- the spine is simple
-- the paired shock forces the show to grow up
-- identity arrives in pieces
-- community pressure becomes governance
-- the season escalates through three mechanisms
+Track things such as:
 
-Those may be useful internal observations. Public prose should instead show the developments, collisions, and changes that create that feeling.
+- what changes after the setup
+- how central relationships shift
+- what success complicates
+- how pressure changes the group's behavior
+- what the business, family, team, institution, or community becomes over time
+- what late-season circumstances force separate pressures together
 
-THE SEASON should be selective. Move quickly through connective tissue and slow down where the show becomes itself.
+THE SEASON is not a second episode guide.
 
-Good season writing often tracks:
+If each paragraph in THE SEASON maps cleanly to Episode 1, then Episode 2, then Episode 3, and so on, the section is probably recapping the season instead of shaping it.
 
-- what changes after the initial setup
-- what begins working and what that success complicates
-- how central relationships shift under repeated pressure
-- what the ensemble starts doing differently
-- what late-season circumstances bring separate tensions together
+Do not preview every signature set piece and then ask THE EPISODES to stage those same scenes again.
 
-Do not publish the complete causal map.
+Move quickly through connective tissue. Slow down only where the season changes shape.
 
 ## 10. THE EPISODES
 
 THE EPISODES is a discovery section, not an inventory requirement.
 
-The article may:
+Default behavior:
 
-- spotlight 4 to 6 episodes from a longer season
-- cover every episode when the season is short and each capsule materially increases desire
-- use short capsules for connective episodes and longer treatment for one or two standout episodes
+- for an 8 to 10 episode season, usually spotlight 4 to 6 episodes
+- cover every episode only when the season is short or every capsule clearly adds a different pleasure
+- use shorter capsules for connective episodes and longer treatment for one or two standouts when useful
 
 Do not force equal length.
 
@@ -172,17 +164,42 @@ Never publish internal labels such as:
 - bridge episode
 - finale function
 
-If an internally designated Contained Proof happens in Episode 6, the public article simply describes the episode.
+## 11. Season versus Episodes zoom rule
 
-## 11. Episode titles
+THE SEASON and THE EPISODES may refer to the same broad development at different zoom levels.
+
+They should not substantially stage the same scene twice.
+
+A useful distinction:
+
+- THE SEASON: `Luis starts splitting nights between the truck and a kitchen opportunity, and Mae stops treating his availability as a temporary inconvenience.`
+- THE EPISODES: the specific 4 a.m. cab argument where that conflict finally becomes speakable
+
+The first describes season movement. The second gives us the episode.
+
+Rewording the same action, dialogue, and outcome in both sections is not a change of zoom.
+
+## 12. Finale ownership
+
+When THE FINISH will stage the finale pressure, THE EPISODES should not spend the same finale first.
+
+Options include:
+
+- omit the finale capsule
+- give the finale a short high-level setup only
+- include a different finale pleasure while preserving the final converging sequence for THE FINISH
+
+THE FINISH should still feel like the first time the article fully enters the final pressure cooker.
+
+## 13. Episode titles
 
 Episode titles are optional but often valuable because they make the nonexistent season feel real.
 
-Use them when they sound like plausible episode titles and add texture.
+Use them when they sound plausible and add texture.
 
-Do not invent cute titles merely because every row in an episode list appears to need one.
+Do not invent cute titles merely because every row appears to need one.
 
-## 12. Recurring engine versus repetitive article
+## 14. Recurring engine versus repetitive article
 
 The show may repeat an activity every week. The article should not repeat the same explanation every week.
 
@@ -190,7 +207,7 @@ If the recurring engine is a case, game, dinner service, mission, shift, perform
 
 A series should feel renewable without feeling algorithmic.
 
-## 13. Motifs and recurring artifacts
+## 15. Motifs and recurring artifacts
 
 Television naturally accumulates recurring objects, jokes, places, rules, and rituals.
 
@@ -198,51 +215,41 @@ Do not make the article point at every recurrence.
 
 A motif should feel richer when it returns, not merely familiar.
 
-If the same object appears in THE PITCH, THE WORLD, THE SEASON, multiple episode capsules, and THE FINISH, ask whether the public edition has begun underlining it too aggressively.
+If the same object appears in THE PITCH, THE WORLD, THE SEASON, multiple episode capsules, and THE FINISH, the article is probably underlining it too aggressively.
 
-## 14. THE FINISH
+## 16. THE FINISH
 
 THE FINISH brings season pressures into convergence and stops before the decisive finale response or resolution.
 
 It should feel dependent on what came before, not like another standalone episode capsule.
 
+Do not make convergence equal callback inventory. A handful of live pressures is stronger than six familiar props returning at once.
+
 For ongoing series, protect the Season One decisive response without pretending the show has no future.
 
 For limited series, protect the contained resolution while making the final pressure legible.
 
-Do not write meta language such as `results stay protected` or `the ending remains unresolved`.
+Do not write meta language such as `results stay protected`, `without spending the last turn`, or `the ending remains unresolved`.
 
 Simply stop at the right dramatic threshold.
 
-## 15. Television spoiler discipline
+## 17. Television spoiler discipline
 
-The reader may know:
+The reader may know major midseason changes, important arrivals or departures, concrete episode premises, later-season circumstances, and substantial relationship pressure.
 
-- major midseason changes
-- important departures or arrivals when they create the season
-- concrete episode premises
-- later-season circumstances
-- substantial relationship pressure
-
-The article should usually protect:
-
-- the decisive finale response
-- the final answer to the season's core mystery
-- the ultimate relationship resolution
-- the actual meaning of a major character choice
-- the final consequence of the season's central mechanism
+The article should usually protect the decisive finale response, final answer to the season's core mystery, ultimate relationship resolution, and final consequence of the season's central mechanism.
 
 The goal is appetite, not secrecy.
 
-## 16. Series versus limited series
+## 18. Series versus limited series
 
 A SERIES needs evidence of returnability beyond Season One.
 
 The article does not need to pitch future seasons, but the world should feel capable of continuing.
 
-A LIMITED_SERIES should feel like multiple chapters are necessary to reach a contained ending. Do not advertise an engine that implies endless renewal if the production is designed to close.
+A LIMITED_SERIES should feel like multiple chapters are necessary to reach a contained ending.
 
-## 17. Comedy, drama, genre, and pace
+## 19. Comedy, drama, genre, and pace
 
 Television format does not create one house temperature.
 
@@ -258,20 +265,23 @@ A sports series must show actual sport rather than treating games as interchange
 
 The production determines the rhythm.
 
-## 18. Television evidence of spectatorship
+## 20. Dialogue
+
+Television needs repeatable people, not a collection of trailer-ready lines.
+
+Dialogue should sound like these specific characters speaking in the moment.
+
+Watch for mirrored constructions where one character offers a neat metaphor and the other returns an equally neat inversion. Those can feel written even when each line is individually clever.
+
+A good line may still be quotable. Quotability should be the byproduct, not the design brief.
+
+## 21. Television evidence of spectatorship
 
 Evidence of spectatorship can be especially useful in television because viewers form favorites, remember specific episodes, and notice recurring behavior.
 
-Examples of useful audience-side reactions include:
+Do not turn these reactions into fixed recurring formulas.
 
-- the episode where a side character suddenly becomes indispensable
-- the running joke that gets funnier because nobody comments on it
-- the performance beat that changes how a relationship reads
-- the episode you would immediately send to a friend
-
-Do not turn these into fixed recurring formulas.
-
-## 19. Television review questions
+## 22. Television review questions
 
 Before approval, ask:
 
@@ -280,15 +290,16 @@ Before approval, ask:
 - Does the season have movement?
 - Are the public characters focused enough to remember?
 - Does THE WORLD entertain rather than merely inform?
-- Does THE SEASON show movement rather than narrate architecture?
+- Does THE SEASON operate at a different zoom level from THE EPISODES?
 - Does THE EPISODES create discovery rather than inventory?
-- Are episode capsules concrete and viewer-facing?
 - Are standout episodes allowed to receive more space than connective episodes?
-- Does the finale pressure converge without revealing the decisive response?
+- Did THE EPISODES avoid fully staging the finale before THE FINISH?
+- Does every Cast paragraph actually name a performer?
+- Does the dialogue sound spoken rather than engineered for quotes?
 - Are recurring motifs being underlined too often?
 - Would I want to watch Episode 2 after finishing Episode 1?
 
-## 20. Calibration status
+## 23. Calibration status
 
 This standard is dedicated television governance, but television still needs a formally locked Gold example before the system should consider TV craft fully calibrated.
 
