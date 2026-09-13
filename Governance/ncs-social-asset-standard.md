@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Social Asset Standard v1.2
+## Social Asset Standard v1.3
 
 ## 1. Purpose
 
@@ -17,12 +17,7 @@ Core doctrine:
 
 Every successfully delivered production receives one `ig_packet_json` object.
 
-The packet is built from:
-
-- frozen final canon
-- final public article
-- final title, format, and genre
-- final editorial understanding of the production
+The packet is built from frozen final canon, final public article, final title, format, genre, and final editorial understanding of the production.
 
 Do not build it from the original Ideation premise when Generation materially changed the production.
 
@@ -40,8 +35,6 @@ Delivery target:
 - leave approximately 7 percent of width and height as a default critical-content safety margin unless the composition clearly demands otherwise
 
 The image-generation stage may work at the closest supported generation size, but deterministic finishing should deliver the canonical 4:5 crop.
-
-Do not allow Slide 1 to use one aspect ratio and Slides 2 or 3 another merely because a generated background arrived differently.
 
 ## 4. Locked carousel spine
 
@@ -82,7 +75,7 @@ Required content:
 
 Its job is brand recognition and continuation.
 
-Exactly three slides. Do not add or remove a slide without explicit future governance.
+Exactly three slides.
 
 ## 5. Slide 1 poster standard
 
@@ -104,7 +97,7 @@ The poster title and tagline must remain readable at phone-feed scale.
 
 The billing block is poster furniture, not a place to explain the campaign-production process.
 
-It may contain fictional-world or neutral promotional furniture appropriate to the production, but it must not make unnecessary false production claims or expose backstage NCS work.
+It may contain neutral promotional furniture appropriate to the production, but it must not make unnecessary false production claims or expose backstage NCS work.
 
 Do not write lines such as:
 
@@ -117,9 +110,7 @@ Do not write lines such as:
 - `Campaign by...`
 - `Artwork by the NCS team`
 
-unless a future human-approved campaign intentionally requires a real, verifiable production credit.
-
-Avoid inventing fake studios, distributors, festivals, production companies, or crew credits simply to make the billing block look authentic.
+Avoid inventing fake studios, distributors, festivals, production companies, or crew credits merely to make the billing block look authentic.
 
 Preferred billing furniture is concise and non-deceptive, such as production title, fictional format label, episode count when appropriate, or restrained NCS presentation language.
 
@@ -168,16 +159,9 @@ Do not turn Slide 2 into a synopsis, cast list, character dossier, quote card, i
 
 The premise copy is exact public copy. The image workflow should place it verbatim rather than rewriting it.
 
-It must:
+It must match final canon, use no em dash character, avoid internal editorial terminology, avoid false actor participation claims, and read naturally on its own.
 
-- match final canon
-- use no em dash character
-- avoid internal editorial terminology
-- avoid spoilers beyond the public article's approved reveal policy
-- avoid claims that real actors participated in the production
-- read naturally on its own
-
-If the exact copy does not fit the canonical canvas cleanly at an accessible size, fix the packet copy before layout rather than shrinking text into illegibility.
+If the exact copy does not fit cleanly at an accessible size, fix the packet copy before layout rather than shrinking text into illegibility.
 
 ## 10. Slide 3 close standard
 
@@ -198,8 +182,6 @@ The fixed content slots are:
 
 Do not add a second poster, synopsis, slogan stack, or unrelated brand copy.
 
-`LINK IN BIO` should be the dominant action phrase without overwhelming the logo or Hollywood line.
-
 ## 11. Hollywood line
 
 The Hollywood line is an NCS personality beat, not a second production tagline.
@@ -212,19 +194,27 @@ Good territory:
 - Apparently Hollywood forgot this one.
 - Your move, Hollywood.
 - Someone tell Hollywood.
-- Hollywood, feel free to steal this one.
 
 Do not make it hostile or bitter.
 
 Do not substitute a thematic movie line.
 
-## 12. Campaign coherence
+## 12. Campaign coherence without repetition
 
 All three slides should feel like one campaign.
 
-Shared elements may include palette, title typography family, one recurring motif, framing device, texture, lighting logic, or graphic language.
+Coherence can come from palette, typography family, texture, framing, lighting logic, spacing, graphic language, or one signature motif.
 
-Do not repeat every motif on every slide.
+Coherence does not require repeating the same object on all three slides.
+
+Default restraint:
+
+- one signature physical motif should normally appear explicitly on no more than two slides
+- Slide 1 may own the richest version of the motif
+- Slide 2 may echo it lightly when useful
+- Slide 3 can belong to the campaign through palette, typography, texture, or a very abstract echo rather than another literal object
+
+If the poster uses a hose shaped like a lock and Slide 2 already uses the hose again, Slide 3 probably does not need a third hose.
 
 The cover can be rich. The premise should breathe. The close should be elemental.
 
@@ -298,19 +288,13 @@ The packet format field must use the canonical uppercase enum exactly:
 - `SERIES`
 - `LIMITED_SERIES`
 
-Do not output `Film`, `Series`, `Limited Series`, or another display label in the structured field.
-
 The packet must match `Schemas/ig-asset-packet.schema.json` after every transformation.
 
 Validation must be performed on the exact final object that will be stringified into the Ideas cell.
 
-If orchestration normalizes, repairs, maps, or rewrites any packet field after model generation, the post-transformation object must be validated again before persistence.
-
-A packet is not valid merely because the raw model response passed an earlier check.
+If orchestration normalizes, repairs, maps, or rewrites any packet field after model generation, validate the post-transformation object again before persistence.
 
 Schema failure is a delivery blocker.
-
-Do not coerce a schema-invalid packet into persistence while still reporting QA success.
 
 ## 19. Packet quality test
 
@@ -325,10 +309,10 @@ Before persistence, ask:
 - Is Slide 3 unmistakably the NCS close?
 - Is the Hollywood line actually about the NCS/Hollywood conceit?
 - Is the approved logo geometry preserved?
-- Do all three slides feel like one campaign?
+- Do all three slides feel like one campaign without repeating the same literal motif three times?
 - Is the caption short, specific, and non-redundant?
 - Is `format` one of the exact canonical uppercase enum values?
 - Has the exact final persisted object passed the schema?
 - Is all public copy free of em dashes, workflow language, and false participation claims?
 
-If not, the packet is not ready.
+If not, repair the packet before persistence.
