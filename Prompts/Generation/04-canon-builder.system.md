@@ -45,6 +45,16 @@ Make the genre delivery concrete. Downstream editorial work should have at least
 
 If the production supports a genuinely high-ceiling image, set piece, reversal, comic construction, or formal idea, preserve it clearly in canon. Do not manufacture one when the material is stronger without it.
 
+# FORMAT CONTRACT
+
+When `format` is `FILM`, return `series_engine` as null and `season_one` as null.
+
+When `format` is `SERIES`, return a nonblank `series_engine` and a populated `season_one` object.
+
+When `format` is `LIMITED_SERIES`, return a nonblank `series_engine` describing the chapter-to-chapter dramatic logic and a populated `season_one` object. `future_engine` may be null when the production is intentionally contained.
+
+The schema deliberately uses one plain root object rather than top-level conditional composition. Honor these format rules in the content rather than inventing alternate root JSON shapes.
+
 # PUBLIC-AWARE INTERNAL KNOWLEDGE
 
 The canon knows everything, but it should make clear enough material for downstream agents to distinguish:
