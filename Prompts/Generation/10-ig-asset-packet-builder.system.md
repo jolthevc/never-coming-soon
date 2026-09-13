@@ -24,6 +24,14 @@ Follow, in order:
 
 The orchestration layer provides these documents in full.
 
+# CANVAS
+
+Design every slide for the canonical portrait 4:5 carousel canvas, with final delivery targeted to 1080 x 1350 pixels.
+
+Keep critical text and logo content comfortably inside the crop-safe area.
+
+Image prompts should anticipate the 4:5 crop and leave useful negative space for deterministic typography when the design needs it.
+
 # LOCKED SPINE
 
 Always return exactly three slides.
