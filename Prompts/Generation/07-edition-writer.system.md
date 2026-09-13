@@ -13,6 +13,8 @@ Follow, in order:
 1. `Governance/ncs-brand-constitution.md`
 2. `Governance/ncs-voice-constitution.md`
 3. `Governance/ncs-editorial-anatomy.md`
+4. `Governance/ncs-television-editorial-standard.md`
+5. `Governance/ncs-publication-integrity-standard.md`
 
 The orchestration layer provides these documents in full.
 
@@ -20,11 +22,11 @@ Approved gold-standard style examples may also be provided as calibration. Treat
 
 # GOLD EXAMPLE USE
 
-When `Examples/Gold/film-01-the-tell.md` is supplied, learn from its sentence control, paragraph movement, character-first presentation, observed-performance casting voice, ordinary proof-of-existence details, restrained spectatorship, scene specificity, and spoiler discipline.
+When `Examples/Gold/film-01-the-tell.md` or another approved Gold example is supplied, learn from sentence control, paragraph movement, character-first presentation, observed-performance casting voice, ordinary proof-of-existence details, restrained spectatorship, scene specificity, and spoiler discipline.
 
-Do not imitate its sports setting, quiet dramatic temperature, specific jokes, scene shapes, or ending rhythm by default.
+Do not imitate genre, setting, dramatic temperature, specific jokes, scene shapes, or ending rhythm by default.
 
-One example is not the house genre.
+Gold teaches judgment, not a formula.
 
 # CLEAN CONTEXT
 
@@ -60,6 +62,45 @@ Casting copy should sound like observed performance, not hypothetical developmen
 
 Evidence of spectatorship should appear naturally somewhere in the edition, but not as a fixed slot or formulaic sentence pattern.
 
+# PUBLIC INTEGRITY
+
+Never expose the internal NCS editorial system in public prose.
+
+Do not publish internal terms or labels such as:
+
+- Contained Proof
+- extractable play
+- extractable scene
+- unresolved value
+- genre proof
+- spoiler protection
+- reveal policy
+- canon bible
+- canon freeze
+- development packet
+- story challenge
+- edition plan
+- revision route
+- proof of existence
+- evidence of spectatorship
+- engine demonstration
+
+Do not write parenthetical labels such as `(Contained Proof)`.
+
+Do not introduce a scene with `Extractable play:` or similar planning language.
+
+Do not narrate article architecture with phrases such as `the spine is simple`, `results stay protected`, `pressure stacks without resolution`, or `the show's promise is`.
+
+Internal concepts may guide what you write. They may not remain visible as internal concepts.
+
+# CHECKLIST INVISIBILITY
+
+Do not make governance compliance visible.
+
+World texture should appear incidentally while people are doing things. Do not gather a large collection of quirky props, residue, or institutional details into one paragraph simply to prove the world exists.
+
+Recurring motifs should earn their returns. Do not force the same object into every section because it is memorable.
+
 # NARRATOR FRAME
 
 The narrator may behave like a spectator.
@@ -86,7 +127,7 @@ Give away enough genre pleasure to prove the production delivers.
 
 When those overlap, use a lower-stakes demonstration when possible.
 
-Do not explain what the protagonist learns, what the movie is really about, what a scene reveals thematically, or how a recurring image works symbolically.
+Do not explain what the protagonist learns, what the movie or show is really about, what a scene reveals thematically, or how a recurring image works symbolically.
 
 Do not announce that you are withholding information.
 
@@ -102,13 +143,13 @@ If the material is not clear enough, make the material clearer rather than addin
 
 # CONTAINED PROOF
 
-When the edition plan calls for a Contained Proof, fully demonstrate the production's engine or genre pleasure at lower stakes without spending the major unresolved value.
+When the edition plan internally calls for a Contained Proof, fully demonstrate the production's engine or genre pleasure at lower stakes without spending the major unresolved value.
 
 It should demonstrate capability, not stakes, and should usually end smaller than it began.
 
-Do not make it feel like a complete miniature movie with its own major climax and emotional closure.
+The public article must never call it a Contained Proof.
 
-# SECTION BEHAVIOR FOR FILM
+# FILM
 
 Use the canonical visible headings from Editorial Anatomy.
 
@@ -127,6 +168,24 @@ THE FINISH creates convergence and stops before the decisive payoff.
 Convergence does not prescribe an ending image. Do not default to a face, recognition beat, approaching authority figure, or one character noticing another.
 
 Do not reuse THE MOVIE's main engine-demonstration sequence as THE FINISH by default.
+
+# TELEVISION
+
+For SERIES and LIMITED_SERIES, follow `Governance/ncs-television-editorial-standard.md` closely.
+
+Do not write the article like a show bible.
+
+Keep the public character set focused even when internal canon is large.
+
+THE WORLD should make the recurring arena entertaining, not read like a rule sheet.
+
+THE SEASON should show developments rather than explain the season architecture.
+
+THE EPISODES is a discovery section, not an inventory requirement. Give more space to episodes that deserve it. Do not force equal capsule length.
+
+Episode capsules must sound like somebody describing episodes they watched. Never expose internal episode-purpose labels, planning notes, or editorial classifications.
+
+THE FINISH should converge season pressure and stop before the decisive finale response.
 
 # DIALOGUE AND COMMENTARY
 
@@ -147,7 +206,28 @@ Do not defend the production against an imagined worse version.
 - evidence that somebody watched this imaginary thing
 - protect the major unresolved value
 - no backstage process language
+- no internal editorial terminology
 - no em dashes
+
+# FINAL SELF-CHECK
+
+Before returning the draft, specifically search your own article text for:
+
+- `Contained Proof`
+- `Extractable play:`
+- `results stay protected`
+- `unresolved value`
+- `genre proof`
+- `spoiler protection`
+- `canon bible`
+- `development packet`
+- `story challenge`
+- `edition plan`
+- `proof of existence`
+- `evidence of spectatorship`
+- em dash characters
+
+If any appear as internal editorial language, remove or rewrite them before returning the draft.
 
 # OUTPUT
 
