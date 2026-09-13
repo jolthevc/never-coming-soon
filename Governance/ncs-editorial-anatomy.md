@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Editorial Anatomy v1.3
+## Editorial Anatomy v1.4
 
 ## 1. Governing philosophy
 
@@ -14,9 +14,11 @@ For film, the public edition follows a recognizable grammar:
 **The Scenes proves the movie contains moments worth remembering.**  
 **The Finish brings major pressures into convergence and gets out before the production spends its decisive payoff.**
 
+For television, the same principle applies but the article must also make returnability legible without becoming a show bible.
+
 The internal canon knows the whole production. The public edition is selective by design.
 
-## 2. Two cross-cutting obligations
+## 2. Cross-cutting obligations
 
 ### Proof of existence
 
@@ -33,6 +35,8 @@ Ask:
 Character detail and proof-of-existence detail are different tools. Character detail should reveal someone. Proof-of-existence detail should usually reveal nobody important. It exists because the world does.
 
 Avoid whimsy inflation. Do not turn every production into a shelf of quirky props, crooked signs, eccentric objects, or charming background business.
+
+Do not gather a large collection of residue into one paragraph merely to prove the world exists. Disperse ordinary texture where it naturally belongs.
 
 ### Evidence of spectatorship
 
@@ -54,6 +58,16 @@ Bad:
 
 The first sounds like somebody watched the movie. The second sounds like somebody attended the story meeting.
 
+### Publication integrity
+
+Internal governance may use analytical labels. Public prose may not expose them.
+
+Terms such as `Contained Proof`, `extractable play`, `unresolved value`, `proof of existence`, `evidence of spectatorship`, `edition plan`, and similar process language belong backstage.
+
+The audience should encounter the production, not the rubric.
+
+See `Governance/ncs-publication-integrity-standard.md` for the full standard.
+
 ## 3. Spoiler doctrine
 
 The objective is appetite.
@@ -72,7 +86,7 @@ Do not announce withholding. Show pressure, conflict, behavior, mechanism, and c
 
 ## 4. The Contained Proof
 
-A **Contained Proof** is a lower-stakes sequence that fully demonstrates the production's primary engine or genre pleasure without spending its major unresolved value.
+A **Contained Proof** is an internal editorial concept: a lower-stakes sequence that fully demonstrates the production's primary engine or genre pleasure without spending its major unresolved value.
 
 It demonstrates capability, not stakes.
 
@@ -90,7 +104,7 @@ A Contained Proof should usually end smaller than it began.
 
 Its failure mode is becoming the whole movie in miniature. If it supplies its own major escalation, climax, emotional closure, and satisfying payoff, it can reduce appetite for the larger production rather than increase it.
 
-The Contained Proof is an editorial instrument, not a mandatory slot. Use it when the genre's pleasures need proof and the central version of those pleasures must remain protected.
+The Contained Proof is an internal instrument, not a visible public label. Never publish `(Contained Proof)` or another annotation identifying the device.
 
 ## 5. Interpretation discipline
 
@@ -120,15 +134,15 @@ If the material can carry the meaning or consequence, improve the material rathe
 
 ### Canonical visible structure
 
-1. **Hero poster**
-2. **Studio card + logline**
+1. Hero poster
+2. Studio card + logline
 3. **THE PITCH**
 4. **THE CHARACTERS**
 5. **THE CAST**
 6. **THE MOVIE**
 7. **THE SCENES**
 8. **THE FINISH**
-9. **Final studio card**
+9. Final studio card
 
 The principal editorial sections above should use these visible headings. Personality belongs in the writing, not in cute section names.
 
@@ -191,7 +205,7 @@ It should not become a chronological synopsis or beat sheet.
 
 Give enough causal movement to prove a full movie exists. Do not explain the complete emotional or mechanical map.
 
-A Contained Proof may live here when useful, but the engine demonstration should not automatically be the same sequence that THE FINISH later uses for convergence.
+A lower-stakes engine demonstration may live here when useful, but the public prose never labels it with internal terminology.
 
 The Movie may contain scene fragments or dialogue, but it should not fully stage so many discrete scenes that THE SCENES has nothing different to do.
 
@@ -225,6 +239,8 @@ Do not default to a recognition beat, a face, an approaching authority figure, o
 
 Do not reuse THE MOVIE's principal engine-demonstration sequence as THE FINISH merely because it is the production's biggest set piece.
 
+Do not explain that the outcome is being protected. Simply stop at the right dramatic threshold.
+
 ### Final studio card
 
 The final studio card sits outside the fiction and may deliberately acknowledge the central joke of Never Coming Soon. It should do so confidently, not apologetically.
@@ -247,11 +263,13 @@ The final studio card is the deliberate exception because it sits outside the fi
 
 ## 8. Series
 
+Detailed format governance lives in `Governance/ncs-television-editorial-standard.md`.
+
 ### Typical length
 
-1,700 to 2,300 words.
+1,600 to 2,200 words.
 
-### Current default structure
+### Default structure
 
 1. Hero key art
 2. Studio card + logline
@@ -264,29 +282,55 @@ The final studio card is the deliberate exception because it sits outside the fi
 9. **THE FINISH**
 10. Final studio card
 
-This remains provisional pending dedicated television calibration.
+Television has dedicated governance but still needs a formally locked Gold example for full craft calibration.
 
 ### THE WORLD
 
 Establish why this needs television rather than two hours. Identify the institution, relationship network, profession, mystery, competition, family, place, system, or recurring problem that keeps generating episodes.
 
+Show rules when they change behavior. Do not turn the section into a manual.
+
+### THE CHARACTERS
+
+Internal television canon may contain a large ensemble. Public copy should usually focus on 4 to 7 characters unless a broader ensemble is genuinely the attraction.
+
+Do not inventory every recurring role merely because canon contains it.
+
+### THE CAST
+
+Public casting should focus on the performances that most increase desire. It need not mirror the full internal cast plan.
+
 ### THE SEASON
 
-Give the season shape without publishing its full causal map or finale meaning.
+Give the season shape without publishing its full causal map, finale meaning, or internal structural labels.
+
+Show movement rather than describing the architecture of movement.
 
 ### THE EPISODES
 
-Usually 8 to 10 episodes. Every episode needs a concrete dramatic object such as a problem, scheme, discovery, relationship collision, mystery, set piece, choice, consequence, or reversal.
+THE EPISODES is a discovery section, not an inventory requirement.
 
-Avoid vague descriptions such as "pressure mounts" or "relationships are tested" without a concrete episode premise.
+A longer season may spotlight only the episodes that materially increase desire. A short season may cover every episode when each capsule earns space.
+
+Every included episode needs a concrete dramatic object such as a problem, scheme, discovery, relationship collision, mystery, set piece, choice, consequence, or reversal.
+
+Avoid vague descriptions such as `pressure mounts` or `relationships are tested` without a concrete episode premise.
+
+Episode capsules should sound like somebody describing episodes they watched. Never expose internal labels such as `Contained Proof`, `episode purpose`, or `extractable play`.
 
 ### THE FINISH for television
 
 Bring the season's major pressures into convergence while protecting the decisive finale response or resolution.
 
+Do not narrate the fact that the result is being withheld.
+
 ## 9. Limited series
 
-Typical length is 1,600 to 2,300 words, usually 6 to 8 episodes. Use the current series architecture while preserving the contained ending.
+Typical length is 1,500 to 2,200 words, usually 4 to 8 episodes.
+
+Use the current series architecture when useful while preserving the contained ending and cumulative inevitability.
+
+A limited series should not advertise endless returnability if its power comes from closure.
 
 ## 10. Character and casting order
 
@@ -306,13 +350,13 @@ Default philosophy:
 
 Generation should develop more than it publishes.
 
-Minimum internal understanding should include the full premise, character relationships, complete story trajectory, actual ending, major scenes, tone, world logic when needed, major unresolved value worth protecting publicly, genre pleasures worth demonstrating publicly, and possible Contained Proof candidates.
+Minimum internal understanding should include the full premise, character relationships, complete story trajectory, actual ending, major scenes, tone, world logic when needed, major unresolved value worth protecting publicly, genre pleasures worth demonstrating publicly, and possible lower-stakes demonstration candidates.
 
-For television, include season trajectory, episode purposes, character arcs, actual finale resolution, and future direction when relevant.
+For television, include season trajectory, recurring engine, concrete episode purposes, character movement, actual finale resolution, and future direction when relevant.
 
 ## 13. Flexibility inside the structure
 
-The main Film headings are standardized. The storytelling inside them is not.
+The main headings are standardized. The storytelling inside them is not.
 
 Length, paragraph shape, rhythm, scene choice, amount of dialogue, narrator presence, spectacle, and emphasis should vary with the production.
 
