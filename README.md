@@ -9,19 +9,25 @@ This repository contains the durable creative governance, prompt contracts, stru
 Never Coming Soon uses distinct creative workflows.
 
 1. **Ideation** finds, remembers, compares, curates, lightly expands, and Development-Selects fertile concepts.
-2. **Generation** turns a selected concept into a real internal movie or show, optionally grounds it with research, challenges it, freezes canon, casts it, architects the public edition, drafts it, forensically reviews it, revises it, assigns a final holistic NCS score, creates the social asset handoff, and delivers the final article to Google Drive.
+2. **Generation** turns a selected concept into a real internal movie or show, optionally grounds it with research, challenges it, freezes canon, casts it, architects the public edition, drafts it, forensically reviews it, revises material problems when useful, assigns a final holistic NCS score, creates the social asset handoff, and delivers the final article to Google Drive.
 3. **Visual production** executes the prepared social asset packet after text canon and the final edition are stable.
 4. **Publishing and growth** remain downstream human-controlled systems. Generation never auto-publishes.
 
 The workflows are intentionally separate.
 
-Ideation explains why an idea deserves development. Generation owns the actual storytelling and may materially improve the title, format, characters, relationships, setting, plot, scenes, ending, casting, and other provisional choices.
+Ideation explains why an idea deserves development. Generation owns the actual storytelling and may materially improve title, format, characters, relationships, setting, plot, scenes, ending, casting, and other provisional choices.
 
 The handoff object from Ideation to Generation is the **Development Packet**.
 
 The core Generation principle is:
 
 **Develop the production before writing the article.**
+
+The core review principle is:
+
+**Fix material problems, then stop.**
+
+Generation is not designed to auto-revise every article into theoretical perfection.
 
 ## Source of truth
 
@@ -55,7 +61,7 @@ Generation uses `idea_id` as its sole durable identifier. There is no required `
 
 Intermediate Generation artifacts remain in n8n execution memory.
 
-## Final Generation delivery
+## Meaning of DRAFTED
 
 A successful Generation run updates the same Ideas row with:
 
@@ -65,18 +71,29 @@ A successful Generation run updates the same Ideas row with:
 - `ig_packet_json`
 - `status = DRAFTED`
 
-Automatic `DRAFTED` delivery requires:
+`DRAFTED` is an artifact-existence state.
 
-- a final Forensic Review of the exact delivered article
-- numeric `ncs_score >= 8.0`
-- final `revision_route = NONE`
-- deterministic article QA passed
-- exact-final social packet schema and copy QA passed
-- successful Google Drive persistence
+It means the generated package was completed and persisted successfully.
 
-A failed or sub-floor run must never create a new false-success `DRAFTED` state.
+It does not require `ncs_score >= 8.0`.
 
-For failed force redevelopment, the previous successful DRAFTED artifact and final fields are preserved.
+It does not mean every editorial note was resolved.
+
+It does not mean the article should automatically publish.
+
+The score records quality. The status records lifecycle.
+
+Keeping those jobs separate makes the dashboard easier to understand and lets the human editor compare strong, middling, and weak completed drafts without pretending failed state.
+
+## Editorial sufficiency
+
+The automated review system should improve material defects and preserve strong ideas.
+
+A 7.x draft can be a perfectly valid generated object when the concept is good, the article is coherent, and remaining weaknesses are matters of taste or polish.
+
+The workflow should not reopen canon or rewrite large portions of a good draft merely to push a score over an arbitrary threshold.
+
+Deep automated rescue remains intentionally limited.
 
 ## Relationship-driven productions
 
@@ -84,19 +101,31 @@ Romance, romantic comedy, second-chance love, and other central two-person relat
 
 - `Governance/ncs-relationship-story-standard.md`
 
-The standard requires actual chemistry in behavior, credible breakup logic for second-chance romance, bilateral life stakes, and dignified treatment of new partners.
+The standard requires actual chemistry in behavior, credible breakup logic for second-chance romance, bilateral life stakes when relevant, and dignified treatment of new partners.
 
 A premise mechanism may create proximity. It cannot substitute for the relationship itself.
 
 ## Scene ownership
 
-Edition Architecture now assigns substantial public sequences one primary section through `scene_ownership_plan`.
+Edition Architecture assigns substantial public sequences one primary section through `scene_ownership_plan`.
 
 For film, THE MOVIE and THE SCENES should not fully stage the same event.
 
-For television, THE SEASON and THE EPISODES should not fully stage the same event.
+For television, THE SEASON and THE EPISODES should operate at different zoom levels.
+
+THE SEASON tracks macro change. THE EPISODES gives specific memorable stories.
+
+A longer television season usually does not need every episode represented publicly.
 
 Deterministic diagnostics can flag likely overlap, while the Forensic Editor makes the editorial judgment.
+
+## Casting memory
+
+Casting history is awareness, not a blacklist.
+
+At minimum, approved Gold-example lead casts should be visible to the Casting Director so the system does not immediately reuse the same lead performer out of habit.
+
+Public THE CAST copy only includes roles with an actual selected performer.
 
 ## Social asset handoff
 
@@ -123,6 +152,8 @@ The structured format field must use exactly `FILM`, `SERIES`, or `LIMITED_SERIE
 
 The exact final object written to Sheets must pass schema validation after all normalization or repair.
 
+Campaign coherence should come from art direction, not from repeating the same literal hero object on all three slides.
+
 ## Public integrity
 
 Published work must never expose internal NCS process language.
@@ -131,7 +162,7 @@ Use:
 
 - `Governance/ncs-publication-integrity-standard.md`
 
-Terms such as `Contained Proof`, `extractable play`, `unresolved value`, `proof of existence`, and other internal editorial labels may guide the system backstage but must not appear as public annotations.
+Internal editorial concepts may guide the system backstage but must not appear as public annotations or spoiler-management commentary.
 
 ## Television
 
@@ -139,7 +170,7 @@ Television has dedicated format governance:
 
 - `Governance/ncs-television-editorial-standard.md`
 
-It is designed to prevent a series article from reading like a show bible, rules document, or equal-weight episode inventory.
+It is designed to prevent a series article from reading like a show bible, rules document, or duplicated season recap plus episode guide.
 
 Television still needs a formally locked Gold example before TV craft should be considered fully calibrated.
 
@@ -154,7 +185,7 @@ Approved film Gold examples:
 - `Examples/Gold/film-01-the-tell.md`
 - `Examples/Gold/film-02-clearance.md`
 
-Gold examples teach voice, craft, section behavior, and editorial judgment. They are never story templates.
+Gold examples teach voice, craft, section behavior, and editorial judgment. They are never story templates or minimum-score requirements.
 
 ## Core quality posture
 
@@ -162,6 +193,6 @@ Never Coming Soon is trying to create this reaction:
 
 **Oh shit. I would actually watch this.**
 
-The standard is not maximum strangeness, maximum plot density, or maximum cleverness.
+The standard is not maximum strangeness, maximum plot density, maximum cleverness, or maximum automated revision.
 
 The standard is desire, specificity, human pull, genuine genre pleasure, and the feeling that the production somehow already exists.
