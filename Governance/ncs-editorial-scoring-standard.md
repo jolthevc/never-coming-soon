@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Editorial Scoring Standard v1.1
+## Editorial Scoring Standard v1.2
 
 ## Purpose
 
@@ -59,12 +59,32 @@ Do not write `N/A`, `TBD`, or another placeholder into `ncs_score` or the Google
 
 A missing or invalid `overall_score` is a delivery blocker.
 
-## Relationship to revision route
+## Score and revision-route consistency
 
-`overall_score` and `revision_route` answer different questions.
+`overall_score` and `revision_route` answer different questions, but they must not contradict each other.
 
-A strong draft may still need a narrow PROSE fix.
+A score below 8.0 means the draft still has meaningful weaknesses under this calibration.
 
-A lower-scoring draft may sometimes be delivered after the maximum automated rescue cycle if the human editor needs to see the best available version, but the score should remain candid.
+Therefore:
 
-The workflow should never manipulate the score to justify a desired route.
+- `overall_score < 8.0` may not use `revision_route = NONE`
+- `overall_score >= 8.0` may still use PROSE, EDITION, or CANON when a material issue remains
+- a high score never excuses a hard public-integrity, schema, or delivery failure
+
+Do not manipulate the score to justify a desired route.
+
+## Automatic delivery floor
+
+The automated Generation workflow should not mark a new or replacement draft `DRAFTED` unless the exact final article receives:
+
+- a valid numeric `overall_score`
+- `overall_score >= 8.0`
+- `revision_route = NONE` on the final Forensic Review
+- all deterministic article QA gates passed
+- all social-packet QA gates passed
+
+This is an automated delivery floor, not a claim that every 8.0 draft should publish.
+
+Human editorial authority remains higher.
+
+If the workflow reaches its allowed automated revision limit and the exact final draft remains below 8.0 or still requires revision, stop without overwriting a previous successful draft. Surface the unresolved issues for the human editor or a later explicit redevelopment run.
