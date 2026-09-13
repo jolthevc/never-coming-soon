@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Casting Standard v1.1
+## Casting Standard v1.2
 
 ## 1. Purpose
 
@@ -33,8 +33,6 @@ Casting should answer questions such as:
 - Would a familiar screen persona help or hurt?
 
 These are internal selection questions.
-
-They are not necessarily the language the public article should use.
 
 ## 4. Avoid generic actor praise
 
@@ -88,13 +86,19 @@ Do not repeatedly use the same famous performers because they are easy to imagin
 
 Casting history is memory, not a prohibition list.
 
-The system should notice when the same actors recur frequently across NCS productions.
+The system should notice when the same actors recur across NCS productions.
 
-Repetition is acceptable when the fit is genuinely excellent.
+Lead repetition deserves the most scrutiny because a lead face strongly defines a production in the reader's imagination.
 
-The Casting Director should ask whether another performer could create an equally strong or more surprising fit before reusing a frequent choice.
+If an actor already leads an approved Gold example or another very recent NCS production, ask whether an equally strong fresh choice exists before reusing them as another lead.
+
+Supporting-role repetition is less consequential and may be perfectly fine.
+
+Repetition is acceptable when the fit is genuinely exceptional.
 
 Do not force novelty when the obvious actor is obviously right.
+
+The goal is to prevent unconscious habit, not create a ban list.
 
 ## 10. Role size
 
@@ -104,11 +108,24 @@ Do not cast every named person in the internal canon.
 
 A typical film may need 3 to 6 dream-cast roles.
 
-A series may need 4 to 8.
+A series may need 4 to 7.
 
 Use fewer when the production is intimate.
 
-## 11. Public casting voice
+## 11. Public Cast completeness
+
+Every paragraph inside the public THE CAST section must identify:
+
+- the selected performer
+- the character they play
+
+If no performer was selected for a role, do not include a standalone Cast paragraph for that character.
+
+A line such as `Denny reads exactly right because...` without naming who plays Denny is not a casting paragraph. Move the useful observation elsewhere or omit it.
+
+Do not fill the gap by inventing a last-minute actor after the casting plan is already final unless the workflow explicitly reopens casting.
+
+## 12. Public casting voice
 
 The published Cast section should sound as though Never Coming Soon has already watched the performance.
 
@@ -138,7 +155,7 @@ Avoid hypothetical public language such as:
 
 Those phrases expose the development process rather than preserving the public conceit.
 
-## 12. Public casting length
+## 13. Public casting length
 
 Casting explanations should be concise enough that the section remains pleasurable rather than analytical.
 
@@ -146,14 +163,15 @@ The reader should immediately picture the actor behaving as the character.
 
 Do not repeat the full character portrait. Add the face and performance.
 
-## 13. Final test
+## 14. Final test
 
 Before locking a preferred cast, ask:
 
 - Does this actor fit the actual person we developed?
-- Does the choice improve the movie or merely decorate it?
+- Does the choice improve the production or merely decorate it?
 - Can I picture a specific scene with them?
 - Does the ensemble make sense together?
-- Are we repeating a familiar NCS actor out of habit?
+- Are we repeating a recent NCS lead out of habit?
+- If we are repeating one, is the fit clearly worth it?
 - Would the reader immediately understand why this choice is fun?
-- Can the public explanation sound like observed performance rather than hypothetical casting analysis?
+- Can every public Cast paragraph name an actual selected performer?
