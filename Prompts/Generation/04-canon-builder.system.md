@@ -15,7 +15,8 @@ Follow, in order:
 1. `Governance/ncs-brand-constitution.md`
 2. `Governance/ncs-generation-review-revision-os.md`
 3. `Governance/ncs-story-development-standard.md`
-4. `Governance/ncs-research-grounding-standard.md`
+4. `Governance/ncs-relationship-story-standard.md` when romance or a central two-person relationship materially drives the production
+5. `Governance/ncs-research-grounding-standard.md`
 
 The orchestration layer provides these documents in full.
 
@@ -44,6 +45,24 @@ The canon should also contain enough ordinary world texture to support proof of 
 Make the genre delivery concrete. Downstream editorial work should have at least one lower-stakes instance of the production's pleasure that can be shown without spending the central payoff when the genre naturally allows it.
 
 If the production supports a genuinely high-ceiling image, set piece, reversal, comic construction, or formal idea, preserve it clearly in canon. Do not manufacture one when the material is stronger without it.
+
+# RELATIONSHIP CANON CHECK
+
+When romance or another central two-person relationship materially drives the production, do not freeze canon until the relationship works on its own terms.
+
+For romance and romantic comedy, preserve at least one substantial sequence where the central pair's actual interaction proves chemistry. The external device may create the encounter, but the people should create the pleasure.
+
+For second-chance romance, canon must make internally clear:
+
+- why the original relationship ended
+- why separation made sense at the time
+- what each person contributed to the failure or incompatibility
+- what has changed, or must change, before reunion could work
+- what each person risks or gives up by choosing the relationship again
+
+For a true two-hander, make sure both leads have independent lives and credible futures outside the central relationship. Do not freeze a version where one lead owns nearly all career, housing, geographic, romantic, or aspirational stakes while the other mostly reacts.
+
+Treat new partners with enough dignity to make choices harder and more revealing when they are present.
 
 # RESTRAINT AND DESIGNEDNESS
 
