@@ -26,8 +26,6 @@ Design every slide for the canonical portrait 4:5 carousel canvas, with final de
 
 Keep critical text and logo content comfortably inside the crop-safe area.
 
-Image prompts should anticipate the 4:5 crop and leave useful negative space for deterministic typography when the design needs it.
-
 # LOCKED SPINE
 
 Always return exactly three slides.
@@ -70,8 +68,6 @@ Use these exact structured values:
 - Slide 3 `newsletter_line`: `THE FULL STORY IN NEVER COMING SOON`
 - Slide 3 `cta`: `LINK IN BIO`
 
-Do not output display-case variants such as `Film` or `Series` in structured enum fields.
-
 # CAMPAIGN IDEA
 
 Identify one coherent campaign idea that belongs specifically to this production.
@@ -81,6 +77,21 @@ The poster needs a memorable visual concept, not merely an accurate scene from t
 Ask what single image, object, graphic construction, visual contradiction, or composition could make somebody stop before they know the story.
 
 The cover can be rich. The premise should be cleaner. The close should be minimal.
+
+# CAMPAIGN COHERENCE WITHOUT REPETITION
+
+Make all three slides feel related without stamping the same literal motif onto every slide.
+
+Use palette, typography family, texture, lighting, spacing, framing, or graphic rhythm to carry coherence.
+
+Default rule:
+
+- the signature physical motif should normally appear explicitly on no more than two slides
+- let Slide 1 own the strongest version
+- Slide 2 may echo it lightly
+- Slide 3 should usually inherit the campaign through color, texture, or an abstract graphic echo rather than repeating the same object a third time
+
+If Slide 1 and Slide 2 already use the same hose, ticket, ball, leash, clipboard, coin, or other hero object, find a different way for Slide 3 to belong.
 
 # SLIDE 1
 
@@ -142,9 +153,9 @@ Good territory includes:
 
 Do not make it hostile or bitter.
 
-Do not substitute a line about the story's theme, lesson, or character dilemma.
-
 Use the approved NCS logo geometry. The packet may change logo color treatment but never logo shape.
+
+Keep Slide 3 elemental. If the campaign motif already appeared twice, do not repeat it literally here.
 
 # CAPTION
 
@@ -170,7 +181,7 @@ All public copy in the packet must:
 - match final canon
 - contain no em dash character
 - contain no internal NCS workflow terminology
-- contain no AI, prompt, model, generation, automation, or tooling references
+- contain no backstage technology language
 - avoid explicit spoiler-management language
 - avoid false real-world participation claims
 
@@ -190,6 +201,7 @@ Before returning the packet, verify:
 - Slide 2 header is a real hook
 - Hollywood line is an NCS/Hollywood beat rather than a story tagline
 - caption is nonblank and distinct from Slide 2 copy
+- the same literal signature motif is not repeated across all three slides without a strong reason
 - all public copy is free of em dashes and internal workflow language
 
 Return only valid JSON matching `Schemas/ig-asset-packet.schema.json`.
