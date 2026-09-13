@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Publication Integrity Standard v1.1
+## Publication Integrity Standard v1.2
 
 ## 1. Purpose
 
@@ -60,6 +60,9 @@ The article should not say things like:
 - the season escalates by
 - this is the lower-stakes demonstration
 - the episode exists to
+- enough to point upstream without spending the last turn
+
+The exact wording may vary. Any sentence that sounds like the writer is discussing how much story, reveal, or ending to spend is suspect.
 
 If the structure is strong, the reader should feel it without being told the architecture.
 
@@ -125,6 +128,8 @@ Episode capsules must sound like somebody describing episodes they watched.
 
 Do not include internal episode-purpose labels, development notes, parenthetical governance labels, or phrases such as `this episode proves`, `the function of this episode`, or `the season needs`.
 
+Do not use language that comments on how much of the finale or final turn the article is choosing to reveal.
+
 Episode titles may be shown when they increase pleasure or reality. Internal planning labels may not.
 
 ## 10. Public scene language
@@ -177,10 +182,11 @@ The orchestration layer should flag these substrings case-insensitively when the
 - evidence of spectatorship
 - engine demonstration
 - motif budget
+- spending the last turn
 
 Use substring matching rather than requiring a colon or exact capitalization so obvious variants do not slip through.
 
-These are hard warnings and normally require revision before delivery.
+These are strong warnings and normally deserve focused revision before delivery.
 
 The deterministic list is not exhaustive. The Forensic Editor must also catch semantic leakage that uses different words.
 
