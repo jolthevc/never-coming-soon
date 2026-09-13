@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Ideas Data Contract v1.3
+## Ideas Data Contract v1.4
 
 ## 1. Purpose
 
@@ -107,18 +107,21 @@ This status does not mean a draft exists.
 
 ### DRAFTED
 
-A final draft has:
+A complete generated artifact exists and was successfully delivered.
 
-- received a final Forensic Review for the exact delivered article
-- received a valid numeric `ncs_score >= 8.0`
-- received `revision_route = NONE` on that final review
-- passed deterministic article QA
-- produced a schema-valid final `ig_packet_json`
-- passed social packet QA
-- been successfully persisted to Google Drive
-- produced a valid `draft_url`
+Normally this means:
 
-`DRAFTED` must never be used merely because a model produced article text in memory.
+- a final public article exists
+- a final Forensic Review scored the exact delivered article
+- `ncs_score` is a valid numeric 1.0 to 10.0 value
+- deterministic completion checks ran
+- a schema-valid final `ig_packet_json` exists
+- Google Drive persistence succeeded
+- `draft_url` is valid
+
+`DRAFTED` is an operational artifact state, not a quality award.
+
+It does not require a score of 8.0 or above and does not mean the article is automatically publication-ready.
 
 ### PUBLISHED
 
@@ -188,31 +191,6 @@ Hybrid or secondary genre information lives inside `creative_tags_json`.
 ### creative_tags_json
 
 Compact structured creative context and memory signature.
-
-Canonical shape after normalization:
-
-```json
-{
-  "secondary_genre": null,
-  "arena": null,
-  "tone": [],
-  "era": null,
-  "setting": null,
-  "scale": null,
-  "audience": null,
-  "narrative_engine": [],
-  "memory_signature": {
-    "format": null,
-    "genre": null,
-    "arena": null,
-    "protagonist_archetype": null,
-    "central_relationship": null,
-    "core_situation": null,
-    "story_engine": null,
-    "setting": null
-  }
-}
-```
 
 ### premise
 
@@ -288,8 +266,6 @@ Only populated for `DEVELOPMENT_SELECT` concepts.
 
 This is the creative brief handed to Generation.
 
-The packet must preserve optionality.
-
 **The Development Packet is a creative brief, not a locked outline.**
 
 Generation owns actual storytelling and may change title, format, characters, relationships, setting, plot, scenes, ending, casting, and other provisional choices while preserving or improving the creative kernel.
@@ -336,7 +312,8 @@ Rules:
 - sourced from the final Forensic Editor review of the exact draft delivered to Drive
 - never inferred from component-score averages
 - never populated with `N/A`, blank placeholder text, or an Ideation score
-- must be at least 8.0 for automatic `DRAFTED` delivery
+
+The score records editorial quality. It does not control whether the row may be `DRAFTED`.
 
 If the draft changes after the review that produced the score, the score is stale and another editorial-review call is required before delivery.
 
@@ -366,15 +343,11 @@ It must be built from final canon and the final public article, not the raw Idea
 
 The exact final object persisted to the cell must pass schema validation after any normalization, repair, mapping, or other transformation.
 
-Populate it only as part of successful final delivery.
-
 ## 9. Generation ownership model
 
 Generation reads the selected Ideas row and keeps all intermediate creative artifacts in execution memory.
 
-Intermediate objects may include development blueprint, research packet, story challenge, canon bible, casting plan, edition plan, draft versions, editorial reviews, and diagnostics.
-
-Do not persist these as new Sheet columns merely because they exist.
+Do not persist internal development, review, or revision objects as new Sheet columns merely because they exist.
 
 Durable final outputs are:
 
@@ -392,7 +365,7 @@ At actual Generation start:
 
 `DEVELOPMENT_SELECT` or eligible forced `DRAFTED` -> `GENERATING`
 
-If the run fails or fails final quality gates before successful delivery, restore the exact row to its `pre_generation_status` when the current status is still `GENERATING`.
+If the run fails before successful artifact delivery, restore the exact row to its `pre_generation_status` when the current status is still `GENERATING`.
 
 Normal new-run recovery:
 
@@ -404,21 +377,22 @@ Forced redevelopment recovery:
 
 A failed forced redevelopment must preserve the previous successful `final_title`, `draft_url`, `ncs_score`, `ig_packet_json`, `human_notes`, and `published_url`.
 
-The recovery workflow must target the exact failed `idea_id` and must never reset an arbitrary GENERATING row.
-
 ## 11. Successful delivery order
 
 The required success order is:
 
-1. strongest final article exists
+1. final article exists
 2. final Forensic Review exists for that exact article
-3. valid numeric `overall_score >= 8.0` exists
-4. final `revision_route = NONE`
-5. deterministic final article QA passes
-6. valid exact-final `ig_packet_json` exists and passes schema and copy checks
-7. Google Drive write succeeds
-8. final title, draft URL, NCS score, and IG packet are written to the same Ideas row
-9. status becomes `DRAFTED`
+3. valid numeric `overall_score` exists
+4. deterministic completion QA runs
+5. valid exact-final `ig_packet_json` exists and passes schema checks
+6. Google Drive write succeeds
+7. final title, draft URL, NCS score, and IG packet are written to the same Ideas row
+8. status becomes `DRAFTED`
+
+The score may be below 8.0.
+
+The final review may still contain nonfatal editorial notes.
 
 `DRAFTED` is the final write in the success sequence.
 
@@ -428,14 +402,7 @@ The required success order is:
 
 It may regenerate an eligible `DRAFTED` production.
 
-Rules:
-
-- preserve source Ideation fields
-- preserve `human_notes`
-- preserve `published_url`
-- preserve previous successful final fields until replacement succeeds
-- do not delete old Drive artifacts before replacement succeeds
-- do not replace `draft_url`, `final_title`, `ncs_score`, or `ig_packet_json` until the new final delivery is valid
+Preserve source Ideation fields, `human_notes`, `published_url`, and previous successful final fields until replacement succeeds.
 
 ## 13. JSON storage rules
 
@@ -461,7 +428,6 @@ Do not double-stringify.
 - do not overwrite source Ideation fields merely because Generation chose different final creative decisions
 - do not overwrite a nonblank `development_packet_json` without explicit re-development action
 - update rows by `idea_id`, not visible row number
-- do not set `DRAFTED` before all success gates pass
 - do not set `PUBLISHED` automatically
 
 ## 15. Minimalism rule
