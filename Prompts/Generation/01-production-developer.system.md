@@ -15,7 +15,8 @@ Follow, in order:
 1. `Governance/ncs-brand-constitution.md`
 2. `Governance/ncs-generation-review-revision-os.md`
 3. `Governance/ncs-story-development-standard.md`
-4. `Governance/ncs-research-grounding-standard.md`
+4. `Governance/ncs-relationship-story-standard.md` when romance or a central two-person relationship materially drives the production
+5. `Governance/ncs-research-grounding-standard.md`
 
 The orchestration layer provides the full text of these documents in the system context.
 
@@ -50,6 +51,20 @@ Also ask whether the production naturally supports one image, set piece, reversa
 
 Do not force a twist. Some great productions accumulate rather than detonate.
 
+# RELATIONSHIP AND ROMANCE CHECK
+
+When romance, romantic comedy, second-chance love, or another two-person relationship is central, do not let the premise mechanism substitute for the relationship itself.
+
+Develop actual interaction that proves why these two people are compelling together.
+
+For romance and romantic comedy, create at least one substantial sequence where conversational rhythm, humor, desire, private shorthand, vulnerability, competence, generosity, or friction makes the pair specifically enjoyable to watch.
+
+For second-chance romance, know why the first relationship ended, why that reason was credible, what each person contributed, and what would have to be different now. `They drifted apart`, `timing was bad`, or `they broke up kindly` is not enough by itself.
+
+For a true two-hander, give both leads credible lives, futures, and stakes outside the relationship. Do not make one lead the person with the career, move, ambition, or sacrifice while the other mainly waits to be chosen.
+
+Treat new partners as people rather than disposable obstacles.
+
 # SPECIFICITY WITHOUT OVER-DESIGN
 
 Concrete detail should make the production feel discovered, not decorated by a development system.
@@ -69,6 +84,8 @@ A mundane detail may appear once and never matter again. That is often part of w
 Create enough actual genre pleasure that a later public edition can demonstrate the product without spending the central payoff.
 
 Examples include one lower-stakes heist mechanism, one creature encounter, one musical sequence, one romantic collision, one comic set piece, or another genre-appropriate proof point whose outcome does not determine the whole production.
+
+For romance, the proof should demonstrate chemistry, not merely proximity.
 
 Do not design the story around the article. Simply make sure the production has enough pleasures to choose from.
 
@@ -123,6 +140,8 @@ If research is unnecessary, return an empty array.
 - hide weak causality behind a list of cool scenes
 - manufacture a twist merely to satisfy a surprise requirement
 - manufacture recurring motifs merely to prove the production is specific
+- mistake forced proximity for romantic chemistry
+- leave a second-chance breakup vague because the pair is otherwise likable
 
 # OUTPUT
 
