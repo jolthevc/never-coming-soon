@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Ideas Data Contract v1.2
+## Ideas Data Contract v1.3
 
 ## 1. Purpose
 
@@ -107,7 +107,16 @@ This status does not mean a draft exists.
 
 ### DRAFTED
 
-A final draft has passed final deterministic QA, has a valid holistic NCS score, has been successfully persisted to Google Drive, has a valid `draft_url`, and has a valid `ig_packet_json` social handoff.
+A final draft has:
+
+- received a final Forensic Review for the exact delivered article
+- received a valid numeric `ncs_score >= 8.0`
+- received `revision_route = NONE` on that final review
+- passed deterministic article QA
+- produced a schema-valid final `ig_packet_json`
+- passed social packet QA
+- been successfully persisted to Google Drive
+- produced a valid `draft_url`
 
 `DRAFTED` must never be used merely because a model produced article text in memory.
 
@@ -151,8 +160,6 @@ Canonical values:
 - `truth_first`
 - `discovery_first`
 - `title_first`
-
-Additional entry-mode metadata may be handled by orchestration without changing this field unless governance explicitly expands the enum.
 
 ### working_title
 
@@ -307,7 +314,7 @@ Final public title selected by Generation.
 
 Populate only after a successful final draft is ready for delivery.
 
-Do not overwrite `working_title`. Keeping both preserves creative provenance.
+Do not overwrite `working_title`.
 
 ### draft_url
 
@@ -329,6 +336,7 @@ Rules:
 - sourced from the final Forensic Editor review of the exact draft delivered to Drive
 - never inferred from component-score averages
 - never populated with `N/A`, blank placeholder text, or an Ideation score
+- must be at least 8.0 for automatic `DRAFTED` delivery
 
 If the draft changes after the review that produced the score, the score is stale and another editorial-review call is required before delivery.
 
@@ -356,23 +364,15 @@ This object contains the locked three-slide campaign spine plus the exact social
 
 It must be built from final canon and the final public article, not the raw Ideation premise.
 
+The exact final object persisted to the cell must pass schema validation after any normalization, repair, mapping, or other transformation.
+
 Populate it only as part of successful final delivery.
 
 ## 9. Generation ownership model
 
 Generation reads the selected Ideas row and keeps all intermediate creative artifacts in execution memory.
 
-Intermediate objects may include:
-
-- development blueprint
-- research packet
-- story challenge
-- canon bible
-- casting plan
-- edition plan
-- draft versions
-- editorial reviews
-- diagnostics
+Intermediate objects may include development blueprint, research packet, story challenge, canon bible, casting plan, edition plan, draft versions, editorial reviews, and diagnostics.
 
 Do not persist these as new Sheet columns merely because they exist.
 
@@ -386,30 +386,39 @@ Durable final outputs are:
 
 ## 10. Generation start and failure behavior
 
+Before changing status, store the row's current status as `pre_generation_status` in execution memory.
+
 At actual Generation start:
 
-`DEVELOPMENT_SELECT` -> `GENERATING`
+`DEVELOPMENT_SELECT` or eligible forced `DRAFTED` -> `GENERATING`
 
-If the run fails after the lock but before successful final delivery:
+If the run fails or fails final quality gates before successful delivery, restore the exact row to its `pre_generation_status` when the current status is still `GENERATING`.
+
+Normal new-run recovery:
 
 `GENERATING` -> `DEVELOPMENT_SELECT`
 
-The recovery workflow must target the exact failed `idea_id` and only reset a row whose current status is still `GENERATING`.
+Forced redevelopment recovery:
 
-It must never reset an arbitrary GENERATING row.
+`GENERATING` -> `DRAFTED`
+
+A failed forced redevelopment must preserve the previous successful `final_title`, `draft_url`, `ncs_score`, `ig_packet_json`, `human_notes`, and `published_url`.
+
+The recovery workflow must target the exact failed `idea_id` and must never reset an arbitrary GENERATING row.
 
 ## 11. Successful delivery order
 
 The required success order is:
 
 1. strongest final article exists
-2. final editorial review exists for that exact article
-3. valid numeric `overall_score` exists
-4. deterministic final QA passes
-5. valid `ig_packet_json` exists and passes schema/copy checks
-6. Google Drive write succeeds
-7. final title, draft URL, NCS score, and IG packet are written to the same Ideas row
-8. status becomes `DRAFTED`
+2. final Forensic Review exists for that exact article
+3. valid numeric `overall_score >= 8.0` exists
+4. final `revision_route = NONE`
+5. deterministic final article QA passes
+6. valid exact-final `ig_packet_json` exists and passes schema and copy checks
+7. Google Drive write succeeds
+8. final title, draft URL, NCS score, and IG packet are written to the same Ideas row
+9. status becomes `DRAFTED`
 
 `DRAFTED` is the final write in the success sequence.
 
@@ -424,6 +433,7 @@ Rules:
 - preserve source Ideation fields
 - preserve `human_notes`
 - preserve `published_url`
+- preserve previous successful final fields until replacement succeeds
 - do not delete old Drive artifacts before replacement succeeds
 - do not replace `draft_url`, `final_title`, `ncs_score`, or `ig_packet_json` until the new final delivery is valid
 
