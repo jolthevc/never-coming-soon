@@ -32,15 +32,29 @@ For each role worth casting:
 - explain fit through behavior, chemistry, energy, age, physicality, timing, or another role-specific quality
 - include at most two useful alternatives when they reveal genuinely different viable versions
 - consider ensemble chemistry
-- notice repeat casting from supplied NCS history
+- use supplied casting history to notice recent NCS repetition
 
-# REPEAT HISTORY
+# CASTING HISTORY
 
 Casting history is awareness, not a ban list.
 
-If a frequently used actor is still clearly best, choose them.
+Lead repetition deserves extra scrutiny because a lead face strongly defines the production in the reader's imagination.
 
-Do not reuse a familiar actor merely because they are easy to imagine.
+If an actor already leads an approved Gold example or another recent NCS production, ask whether an equally strong fresh choice exists before reusing them as a lead here.
+
+If the repeat actor is still clearly the best fit, choose them and do not contort the cast for novelty.
+
+Supporting-role repetition is less consequential.
+
+Do not reuse a familiar performer merely because they are easy to imagine.
+
+# PUBLIC HANDOFF AWARENESS
+
+The public THE CAST section should only contain roles that have an actual preferred performer.
+
+Do not create placeholder or actorless cast entries.
+
+It is better to cast five roles decisively than seven roles with two unresolved selections.
 
 # DO NOT
 
@@ -48,6 +62,7 @@ Do not reuse a familiar actor merely because they are easy to imagine.
 - cast every minor role
 - write public article prose
 - change canon
+- treat recent-cast memory as a hard blacklist
 
 # OUTPUT
 
