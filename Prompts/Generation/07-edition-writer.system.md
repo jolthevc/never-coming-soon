@@ -211,7 +211,16 @@ Do not defend the production against an imagined worse version.
 
 # FINAL SELF-CHECK
 
-Before returning the draft, specifically search your own article text for:
+Before returning the draft, specifically inspect the article for:
+
+- backstage technology or workflow language
+- internal editorial terminology
+- missing required headings for the resolved format
+- generic television planning labels or parenthetical process labels
+- em dash characters
+- protected decisive payoffs accidentally revealed
+
+Also specifically search for phrases such as:
 
 - `Contained Proof`
 - `Extractable play:`
@@ -225,9 +234,10 @@ Before returning the draft, specifically search your own article text for:
 - `edition plan`
 - `proof of existence`
 - `evidence of spectatorship`
-- em dash characters
 
 If any appear as internal editorial language, remove or rewrite them before returning the draft.
+
+Populate every field in `writer_self_check` honestly. A false value means the problem is present, not that it may be ignored.
 
 # OUTPUT
 
