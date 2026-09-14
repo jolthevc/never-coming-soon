@@ -27,92 +27,78 @@ The orchestration layer provides these documents in full.
 
 Turn internal canon into a public storytelling strategy.
 
-Decide:
+Decide the opening angle, section sequence, public character focus, compression, slow-down points, signature scenes, scene ownership, unresolved value, genre demonstrations, ordinary world detail, spectatorship, casting emphasis, rhythm, finish convergence, and motif restraint.
 
-- the opening angle
-- the canonical section sequence
-- which characters deserve public focus before casting
-- what story material gets compressed
-- where to slow down
-- which signature scenes deserve close treatment
-- which section owns each major scene or sequence
-- what major unresolved value remains protected
-- which genre pleasure should be demonstrated publicly
-- whether a Contained Proof would help internally
-- where ordinary proof-of-existence detail can make the production feel larger than the plot
-- where evidence of spectatorship can appear naturally
-- where casting belongs
-- how the article should change rhythm
-- how the genre should influence presentation
-- what pressures converge in THE FINISH
-- how many recurring motifs the public article actually needs
+Standardize navigation, not proportions.
+
+Do not assume every section, character, cast member, episode, or scene deserves equal space.
 
 # REQUIRED PLAN FIELDS
 
 Use the schema fields deliberately rather than filling them mechanically.
 
 `public_character_focus`:
-List only the characters who deserve meaningful public attention. This is not the full canon roster. For most television editions, prefer 4 to 7 names. For film, usually 3 to 6.
+List only the characters who deserve meaningful public attention. This is not the full canon roster. For most television editions, prefer 4 to 7 names. For film, usually 3 to 6. Use fewer when the production is tightly centered.
+
+Weight attention toward the people who make the premise desirable. A central pair may deserve much more space than supporting roles.
 
 `scene_ownership_plan`:
-Assign each major public scene or sequence one primary section. This is the anti-duplication map.
+Assign each major public scene or sequence one primary section.
 
-For each important sequence, state:
+State where it receives its fullest treatment, how other sections may refer to it, and what must not be restaged elsewhere.
 
-- where it receives its fullest treatment
-- how other sections may refer to it, if at all
-- what must not be restaged elsewhere
-
-A scene may be teased in THE PITCH and fully staged later. A sequence may be mentioned in THE MOVIE and then receive a close Scene treatment only if the earlier mention is genuinely light. Do not fully stage the same event in two sections.
-
-If THE MOVIE already gives a sequence substantial action, dialogue, outcome, and texture, THE SCENES should choose something else.
-
-If a scene is one of THE SCENES, THE MOVIE may set up its existence but should not spend its best beats first.
+A scene may be teased in THE PITCH and fully staged later. Do not give its action, dialogue, outcome, and best details twice.
 
 `motif_budget`:
-Identify only the recurring objects, images, phrases, or rituals worth repeating in public, plus any restraint needed. An empty array is allowed when no motif needs deliberate management. Do not use this field as a mandate to repeat motifs.
+Identify only the recurring objects, images, phrases, or rituals worth repeating in public, plus restraint needed. An empty array is allowed. Do not use this field as a mandate to repeat motifs.
 
 `tv_episode_strategy`:
 For SERIES and LIMITED_SERIES, explain whether THE EPISODES should cover every episode, spotlight selected episodes, or mix short and long capsules, and why. For FILM, return null.
 
 `public_integrity_guard`:
-List concrete internal labels, plan phrases, or forms of process language this specific edition is at risk of leaking. Include production-specific risks when visible in canon or plan language. This field is backstage guidance for the writer, not copy to publish.
+List concrete internal labels, plan phrases, or process language this edition risks leaking. This is backstage guidance, not public copy.
+
+# PUBLIC ASYMMETRY
+
+A polished article does not need visual or rhetorical symmetry.
+
+Plan different amounts of space for different material according to value.
+
+One character may need three paragraphs while another needs one sentence. One episode may deserve close treatment while another is omitted. One cast choice may need a full paragraph while another is obvious in a line.
+
+Do not create equal-weight blocks merely because the headings are standardized.
+
+# SECTION CONTINUITY
+
+Headings should help navigation without making each section feel like a new assignment.
+
+When possible, let the final idea of one section create appetite for the next.
+
+THE WORLD can naturally lead us toward the people who know how to survive it. THE CHARACTERS can make the cast feel inevitable. THE CAST can leave us wanting to see those performances in motion.
+
+Do not force transitions, but avoid designing sections as sealed containers.
 
 # RELATIONSHIP AND ROMANCE PLANNING
 
 When romance or romantic comedy is a material genre promise, the article must prove chemistry through interaction.
 
-Do not let THE PITCH and THE MOVIE spend all their space on the external mechanism while the relationship is merely described.
-
-Plan at least one public moment where the central pair's conversational rhythm, humor, desire, private shorthand, vulnerability, competence, or friction makes the relationship itself pleasurable.
-
-For second-chance romance, make enough of the original breakup logic legible that the reader understands why reunion is not automatic. Do not publish a full relationship autopsy, but do not leave the audience wondering why two obviously compatible people separated in the first place.
+For second-chance romance, make enough of the original breakup logic legible that reunion is not automatic.
 
 For a two-hander, make both leads' independent futures visible when they materially affect the final choice.
+
+More broadly, when any central relationship is prominently sold by the premise, plan at least one lived interaction that shows why these two specific people create more story together than either would alone.
+
+Do not manufacture extra relationship beats merely to satisfy this instruction.
 
 # PUBLIC INTEGRITY
 
 Internal planning language is allowed in your JSON plan because the plan is backstage.
 
-However, do not instruct the writer to publish internal labels or process vocabulary.
-
-Never plan public prose that literally says things like:
-
-- Contained Proof
-- extractable play
-- unresolved value
-- genre proof
-- results stay protected
-- proof of existence
-- evidence of spectatorship
-- the spine is simple
-- the show's promise is
+Do not instruct the writer to publish internal labels or process vocabulary.
 
 Translate internal reasoning into audience-side material.
 
-Do not build a paragraph whose visible purpose is to prove compliance with a world-texture checklist.
-
-Disperse incidental details where they naturally support scenes, people, and setting.
+Do not build paragraphs whose visible purpose is to prove compliance with a world-texture checklist.
 
 # FILM STRUCTURE
 
@@ -125,25 +111,19 @@ For FILM, use these visible top-level headings exactly:
 - THE SCENES
 - THE FINISH
 
-Standardize the reader's navigation, not the storytelling inside it.
+THE PITCH creates desire.
 
-# FILM SECTION JOBS
+THE CHARACTERS makes people exist.
 
-THE PITCH creates desire for the object.
+THE CAST makes selected performances imaginable.
 
-THE CHARACTERS makes the people exist through behavior, relationships, wants, habits, contradiction, and pressure. Do not plan screenplay-function explanations.
+THE MOVIE demonstrates the production's primary engine in motion without becoming a chronological synopsis.
 
-THE CAST makes the performances imaginable. Public copy should sound as though the performance was watched, not as though the role is still being cast.
+THE SCENES contains 2 to 4 discrete memorable moments and should not repeat material already substantially staged in THE MOVIE.
 
-THE MOVIE demonstrates the production's primary engine in motion. What that means depends on the genre. Plan enough engine, movement, collision, mechanism, spectacle, texture, pressure, and causality to prove the movie exists without producing a chronological synopsis.
+THE FINISH is convergence. Bring the strongest active pressures into the same final movement, then stop before the decisive response or payoff.
 
-THE SCENES contains 2 to 4 discrete, extractable moments. They should not repeat material already substantially staged in THE MOVIE.
-
-THE FINISH is convergence. Bring the strongest active pressures, relationships, stakes, and unresolved values into the same final movement, then stop before the decisive response or payoff.
-
-Do not mistake convergence for inventory. THE FINISH should not parade every recurring object, callback, document, prop, or motif into one room merely because they appeared earlier.
-
-Convergence defines what THE FINISH does, not how it cuts. Do not default to a recognition beat, a face, an approaching authority figure, or one character noticing another.
+Do not mistake convergence for callback inventory.
 
 # TELEVISION STRUCTURE
 
@@ -161,91 +141,73 @@ Default visible headings:
 
 Do not make the television article a show bible in public.
 
-Public character focus should normally be narrower than the internal ensemble. Usually choose 4 to 7 characters whose inclusion most increases desire or comprehension.
+Public character focus should normally be narrower than the internal ensemble.
 
-THE WORLD should entertain through behavior, rules that matter in motion, place, institution, ritual, pressure, and recurring collision. Do not plan a rules dump.
+THE WORLD should entertain through behavior, rules that matter in motion, place, institution, ritual, pressure, and recurring collision. Once the reader believes the world, stop proving it with more procedural furniture.
 
-THE SEASON should show movement rather than describe the architecture of movement.
+THE SEASON should operate above episode level while remaining concrete. Macro does not mean thematic abstraction.
 
-THE EPISODES is a discovery section, not an inventory obligation. It may spotlight only the episodes that materially increase desire. Do not require equal-length capsules and do not expose internal episode-purpose labels.
+Plan season movement through actual changes in people, relationships, circumstances, institutions, alliances, fortunes, routines, or recurring situations.
 
-Use `scene_ownership_plan` for television too. A signature episode sequence should not be fully narrated in THE SEASON and then narrated again in THE EPISODES.
+Avoid a string of polished thesis statements such as `Visibility becomes work` or `Authority and access pull on each other` when the same idea can be delivered through concrete movement.
 
-For limited series, preserve the sense of cumulative inevitability and a contained ending.
+THE EPISODES is discovery, not inventory. For an 8 to 10 episode season, usually spotlight roughly 4 to 6 unless every episode genuinely increases desire.
 
-# CONTAINED PROOF
+Use `scene_ownership_plan` so a signature sequence is not fully narrated in THE SEASON and then narrated again in THE EPISODES.
 
-A Contained Proof is an internal editorial instrument: a lower-stakes sequence that fully demonstrates the production's primary engine or genre pleasure without spending the major unresolved value.
+If THE FINISH will fully stage the finale pressure, keep the finale capsule brief, high-level, different in focus, or omit it.
 
-It demonstrates capability, not stakes, and should usually end smaller than it began.
-
-Use one only when useful.
-
-Never instruct the public writer to label a sequence `Contained Proof`.
-
-Do not automatically reuse the Contained Proof or main engine demonstration as THE FINISH.
-
-# SPOILER DOCTRINE
-
-Protect whatever carries the production's major unresolved value. Give away enough genre pleasure to prove the production delivers.
-
-When unresolved value and genre pleasure overlap, use a lower-stakes demonstration when possible.
-
-Do not protect so much that the article becomes vague.
-
-Do not expose the protagonist's lesson, the meaning of the arc, the decisive response, or the central answer merely because the literal ending remains hidden.
-
-# INTERPRETATION DISCIPLINE
-
-Do not plan prose that states meaning, mechanism, or consequence the material is capable of delivering on its own.
-
-If an important consequence would otherwise be unclear, plan stronger material rather than an explanatory sentence after the fact.
-
-# PROOF OF EXISTENCE
+# PROOF OF EXISTENCE AND SPECIFICITY
 
 Plan selected ordinary details that make the world feel larger than the plot.
 
-Prefer routines, institutional habits, logistical residue, background observers, ordinary sensory facts, and artifacts of offscreen attention.
+Do not maximize specificity in every paragraph.
 
-Character detail and proof-of-existence detail are different jobs.
+Vary density. One scene may deserve rich procedural or sensory texture. Another paragraph may simply move the reader to the next place.
 
-Do not over-collect residue. A few details placed where they naturally belong are stronger than a catalog paragraph of charming artifacts.
+Once the world feels real, stop proving the world.
 
 # EVIDENCE OF SPECTATORSHIP
 
 Plan some natural evidence that somebody watched this imaginary production and formed an opinion.
 
-Do not create a fixed spectatorship section or repeated line pattern.
+The narrator may have favorites, surprises, or moments they keep thinking about.
 
-# MOTIF BUDGET
+Do not turn these into repeated formulas or post-scene explanations.
 
-Recurring objects, lines, places, and rituals are useful only when their return changes meaning or pressure.
+# NARRATOR AND RHYTHM
 
-Do not ask the writer to place the same motif in every section simply because it is memorable.
+Plan room for selective personality, not constant performance.
 
-If one object already anchors the Pitch and Finish, consider whether the World, Characters, Season, and Episodes need different texture.
+Avoid designing every paragraph around a polished thesis, a binary construction, a punchline, or a memorable sentence.
 
-THE FINISH does not earn extra weight by collecting every motif. Usually two or three live pressures are stronger than six callbacks.
+Plain connective prose is useful when nothing more elaborate is needed.
 
-# NARRATOR FRAME
+# SPOILER DOCTRINE
 
-The narrator may behave like a spectator. Do not plan language that makes the narrator sound like the production's marketer, screenwriter, development executive, or studio.
+Protect whatever carries the production's major unresolved value. Give away enough genre pleasure to prove the production delivers.
 
-Avoid backstage claims about what belongs in the trailer, what the budget bought, what the studio wanted, or what filmmakers intended.
+Do not protect so much that the article becomes vague.
+
+# INTERPRETATION DISCIPLINE
+
+Do not plan prose that states meaning, mechanism, or consequence the material can deliver on its own.
+
+If an important consequence would otherwise be unclear, plan stronger material rather than an explanatory sentence after the fact.
 
 # IMPORTANT
 
 The public edition is not a chronological dump of the canon bible.
 
-It is a curated entertainment object designed to make the reader desperately want the production.
+It is a curated entertainment object designed to make the reader want the production.
 
 Do not spend the same scene twice.
-
-Use the scene ownership plan to enforce that instruction rather than relying on memory.
 
 Do not plan meta-withholding language.
 
 Do not let internal governance terminology become visible public copy.
+
+Do not confuse polish with symmetry.
 
 # OUTPUT
 
