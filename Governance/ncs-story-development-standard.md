@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Story Development Standard v1.2
+## Story Development Standard v1.3
 
 ## 1. Purpose
 
@@ -24,6 +24,10 @@ The default obligation is:
 **Preserve or improve the creative kernel. Treat every other element as provisional.**
 
 Do not protect weak choices out of loyalty to the first version.
+
+Before committing to the first plausible interpretation, briefly ask whether one materially different version of the production could be better. That alternative might involve a different protagonist, relationship, format, source of pressure, setting, structural device, or dramatic center.
+
+Do not generate options for the sake of generating options. The point is simply to avoid mistaking the first competent answer for the best answer.
 
 ## 3. The production must live beyond the logline
 
@@ -67,6 +71,12 @@ Ask:
 
 Coincidence may begin a story. It should not solve one.
 
+As the production advances, later pressure should increasingly exist because of choices the characters made earlier.
+
+External problems are useful. Character-caused consequences are usually more satisfying.
+
+A broken generator is circumstance. Choosing how to respond to it can create the story.
+
 ## 6. Characters act
 
 Characters should make decisions that shape the production.
@@ -89,6 +99,10 @@ Do not use trauma as the default source of depth.
 
 A character can be fascinating because of pride, generosity, pettiness, competence, jealousy, optimism, laziness, loyalty, appetite, fear, vanity, curiosity, humor, faith, stubbornness, or a hundred other human qualities.
 
+Do not optimize every character into a perfectly efficient story machine. People can be petty, distracted, embarrassed, avoidant, overconfident, mistaken, or interested in something that does not advance the plot.
+
+A small amount of inconvenient humanity can make a highly designed production feel alive.
+
 ## 7. Relationships create story
 
 The strongest productions often have a relationship at the center that keeps producing material.
@@ -101,7 +115,21 @@ Do not reduce relationships to labels such as mentor, rival, spouse, sibling, or
 
 Ask what these two specific people do to one another.
 
-## 8. Escalation
+If a relationship is one of the reasons the premise is interesting, it should have consequential agency in the story. Removing that relationship should materially weaken the production rather than merely changing the exposition channel.
+
+## 8. Dialogue and human interaction
+
+Dialogue should allow misalignment.
+
+Real people do not always answer the most important sentence directly. They joke, dodge, misunderstand, answer the easier question, change the subject, say less than they mean, or continue doing something while the emotional point sits between them.
+
+Do not build every exchange as a clean setup and perfect reversal.
+
+A witty line is welcome. A whole cast speaking in reciprocal aphorisms is not.
+
+Subtext, interruption, imperfect response, and silence can create more life than another polished line.
+
+## 9. Escalation
 
 Escalation is not simply bigger stakes.
 
@@ -119,7 +147,7 @@ A story can escalate because:
 
 Escalation should deepen the experience, not merely increase volume.
 
-## 9. Turns and reversals
+## 10. Turns and reversals
 
 A strong turn changes the audience's or character's understanding of what comes next.
 
@@ -131,7 +159,7 @@ Do not worship twists.
 
 Predictable but emotionally inevitable can be better than surprising but arbitrary.
 
-## 10. Signature scenes
+## 11. Signature scenes
 
 Every developed production should contain scenes that make us wish it existed.
 
@@ -153,7 +181,23 @@ A good signature scene has enough situation, behavior, pressure, and detail that
 
 Avoid generic scene labels such as `the big confrontation` or `the emotional speech`.
 
-## 11. High-ceiling moments
+## 12. Memorability without gimmicks
+
+A strong production should usually contain at least one thing worth remembering tomorrow.
+
+That may be an image, interaction, comic construction, formal device, set piece, emotional situation, performance beat, location, sound, or decision.
+
+Do not manufacture a gimmick merely to satisfy this requirement.
+
+Some productions are memorable because of accumulation, intimacy, dread, warmth, or inevitability rather than one giant moment.
+
+The useful question is:
+
+**What would someone mention first when telling a friend about this production the next day?**
+
+If there is no answer, look once for a stronger organic invention before freezing canon.
+
+## 13. High-ceiling moments
 
 A very good production can be consistently well observed and still never produce the moment that makes somebody sit up.
 
@@ -167,11 +211,11 @@ The objective is not novelty for novelty's sake. The objective is a higher creat
 
 Ask:
 
-**Is there anything in this production that a great trailer could show for three seconds and make somebody immediately need the rest?**
+**Is there anything in this production that could make somebody immediately need the rest?**
 
-If the answer is no, that may be fine. But Development should at least ask whether a stronger invention is available.
+If the answer is no, that may be fine. Development should still ask whether a stronger invention is available.
 
-## 12. Genre delivery
+## 14. Genre delivery
 
 A production should sincerely deliver the pleasure of its genre.
 
@@ -201,7 +245,29 @@ Prestige is not a genre.
 
 A genre label creates a promise. Development must create actual scenes that fulfill it.
 
-## 13. Public-demonstration awareness
+Genre should shape the production without sterilizing everything outside its primary adjective. A thriller may be funny for thirty seconds. A comedy can become genuinely sad. A romance can contain a moment of real dislike. Tonal contamination often makes a production feel more human.
+
+## 15. Process and procedural stories
+
+Competence is pleasurable. Procedure can be suspenseful. Neither is enough by itself for an entire production.
+
+When the arena is process-heavy, create some pressure that procedure alone cannot solve.
+
+The strongest dilemmas often put two legitimate obligations into conflict:
+
+- transparency versus confidentiality
+- speed versus accuracy
+- access versus safety
+- loyalty versus fairness
+- legal compliance versus practical harm
+- public clarity versus incomplete information
+- individual compassion versus institutional consistency
+
+Do not fabricate a corrupt villain simply to create stakes.
+
+At least some major choices should require judgment rather than merely discovering the correct rule.
+
+## 16. Public-demonstration awareness
 
 Development owns the whole production, not the public article, but it should create enough genre pleasure that downstream editorial work can demonstrate the product without spending the central payoff.
 
@@ -209,16 +275,9 @@ A useful internal question is:
 
 **Can the public edition show one lower-stakes instance of what makes this genre fun while preserving the production's major unresolved value?**
 
-Examples:
-
-- one creature attack that is not the attack that decides the story
-- one heist mechanism working that is not the mechanism on which the final job depends
-- one musical number that proves the movie's scale or wit without resolving the central relationship
-- one romantic sequence that proves chemistry without spending the final choice
-
 If no such demonstration exists, the production may be withholding all its pleasure until the end.
 
-## 14. Tone
+## 17. Tone
 
 Tone should emerge from the production rather than from a universal NCS template.
 
@@ -236,7 +295,7 @@ Do not add cynicism to prove sophistication.
 
 Do not add jokes to protect sincere moments.
 
-## 15. World
+## 18. World
 
 The world matters when it creates behavior, pressure, texture, or story.
 
@@ -250,7 +309,9 @@ The internal world should also contain ordinary texture that does not serve the 
 
 Prefer routines, logistics, institutional habits, background observers, and mundane facts over a curated shelf of charming quirks.
 
-## 16. Specificity versus over-design
+Once the world is believable, stop proving that it is believable.
+
+## 19. Specificity versus over-design
 
 Specificity is one of NCS's greatest strengths and one of its easiest failure modes.
 
@@ -268,11 +329,25 @@ Ask:
 - Has a mundane detail been promoted into a symbol because the development process noticed it was charming?
 - Would removing two motifs make the remaining one stronger?
 
-Avoid building a production around a curated inventory of coins, notebooks, clipboards, signs, catchphrases, lucky objects, named plays, recurring foods, or other artifacts unless each one earns dramatic life independently.
+Avoid building a production around a curated inventory of artifacts unless each one earns dramatic life independently.
 
 A realistic world includes details that are not important.
 
-## 17. Ensemble discipline
+## 20. Negative space
+
+Do not complete every pattern.
+
+A supporting character with a great introduction does not automatically need a resolved mini-arc.
+
+A recurring joke does not automatically need a third callback.
+
+An object that appears twice does not automatically need a finale payoff.
+
+An unanswered minor question can make the world feel larger than the story.
+
+Know the difference between an unresolved central obligation and healthy narrative negative space.
+
+## 21. Ensemble discipline
 
 More named characters do not automatically create a richer production.
 
@@ -282,16 +357,9 @@ Watch for supporting characters who differ cosmetically but perform the same dra
 
 For television, the internal ensemble can be larger than the public article's character section, but the show itself still needs a legible center of gravity.
 
-Ask:
-
-- Whose choices actually move the season?
-- Which relationships keep generating material?
-- Which supporting character creates a story another character cannot?
-- Who could disappear without changing any episode?
-
 Cut, combine, or demote characters when the ensemble becomes crowded rather than rich.
 
-## 18. Simplicity and complexity
+## 22. Simplicity and complexity
 
 Complexity must earn its place.
 
@@ -301,66 +369,43 @@ A cleaner story with richer people or richer mechanics is often stronger than a 
 
 Do not mistake confusion for sophistication.
 
-## 19. Film standard
+## 23. Scene entry and exit
+
+Do not over-explain every scene before it begins or after it ends.
+
+When useful, enter after the obvious setup and leave before the scene has explained its own consequence.
+
+A scene can begin with the argument already underway, the task already failing, or the joke already in motion.
+
+A scene can end on an action, look, interruption, mistake, or unfinished thought.
+
+Clarity still matters. The objective is not coyness. The objective is to let scenes feel lived rather than diagrammed.
+
+## 24. Film standard
 
 A film needs a complete dramatic experience.
 
-Internally, Generation should know:
-
-- the setup
-- what changes the situation
-- what the protagonist begins doing about it
-- how choices and consequences escalate
-- the major turn or reorientation
-- the late-story pressure
-- the climactic situation
-- the actual ending
-- the emotional resolution
-- what unresolved value the public edition should probably protect
-- which genre pleasures can be demonstrated publicly without spending that value
+Internally, Generation should know the setup, major turns, climactic situation, actual ending, emotional resolution, and what unresolved value the public edition should probably protect.
 
 This is not a demand for a rigid screenplay formula.
 
 The production should nevertheless feel causal, shaped, and complete.
 
-The ending should not merely stop the plot. It should answer or transform something the movie made us care about.
-
-## 20. Series standard
+## 25. Series standard
 
 A series needs more than an excellent pilot premise.
 
 Generation must identify a recurring engine that can keep creating episodes without repeating the same story.
 
-The engine may come from:
-
-- a workplace
-- a family system
-- a competition
-- a community
-- a mission structure
-- a relationship network
-- a profession
-- an institution
-- an investigation framework
-- an ongoing objective with changing obstacles
-
 Season One also needs shape.
 
-Internally know:
-
-- the season spine
-- what changes across the season
-- major character movement
-- several concrete episode stories
-- the finale situation
-- the actual Season One resolution
-- why another season could still exist, when relevant
+Internally know the season movement, major character changes, several concrete episode stories, actual finale, and future engine when relevant.
 
 Do not stretch a film into eight episodes.
 
-Do not confuse a long list of plausible episodes with a renewable engine. The episodes should create different pressures while still feeling like the same show.
+Do not confuse a long list of plausible episodes with a renewable engine.
 
-## 21. Limited series standard
+## 26. Limited series standard
 
 A limited series should justify multiple chapters while moving toward a contained ending.
 
@@ -368,7 +413,7 @@ It needs both episodic progression and cumulative inevitability.
 
 If the material would clearly be stronger as a two-hour film, change the format.
 
-## 22. Ending standard
+## 27. Ending standard
 
 An ending should feel earned by the production that came before it.
 
@@ -384,7 +429,7 @@ Ask:
 
 Do not save a weak story with a clever final twist.
 
-## 23. Development rescue
+## 28. Development rescue
 
 Generation should rescue before rejecting.
 
@@ -402,23 +447,33 @@ If the production is over-designed, remove machinery rather than adding another 
 
 Development effort should be spent making the production better, not defending previous decisions.
 
-## 24. Canon readiness test
+## 29. Canon readiness test
 
 Before internal canon is frozen, ask:
 
 - Would we genuinely watch this?
-- Do the characters make choices?
+- Do the characters make choices that increasingly cause later story?
 - Is there at least one relationship with real movement?
 - Does the story generate specific scenes?
 - Does escalation come from the dramatic engine rather than arbitrary complication?
 - Does the genre sincerely deliver?
-- Is there enough genre pleasure to demonstrate the production without spending its final payoff?
+- For process-heavy stories, are there judgment calls where legitimate obligations conflict?
 - Does the ending feel earned?
 - Does the production have its own identity?
-- Is the world doing useful work and also producing ordinary texture?
+- Is the world doing useful work without constantly proving its specificity?
 - Is any specificity starting to feel curated or over-designed?
 - Is the ensemble rich rather than merely large?
-- Is there a higher-ceiling moment available without forcing one?
+- Is there one thing someone might remember tomorrow?
+- Is a higher-ceiling version available without forcing one?
+- Have we left healthy negative space rather than completing every pattern?
 - Can we imagine more than the logline?
 
 If the answer is no on a material dimension, keep developing.
+
+## 30. Final posture
+
+The standard is not maximum polish, maximum cleverness, or maximum structural neatness.
+
+The standard is a production coherent enough to believe, specific enough to see, human enough to surprise us, and entertaining enough that the reader wishes it existed.
+
+Do not polish away the evidence that people live inside it.
