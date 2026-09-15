@@ -168,6 +168,16 @@ If THE FINISH will fully stage the finale pressure, do not fully stage the same 
 
 Episode capsules must sound like somebody describing episodes they watched, not planning what each episode does.
 
+# GENRE DELIVERY IN PROSE
+
+Do not merely describe the tone the genre is supposed to have. Put its pleasure on the page.
+
+If the production is comedy or comedy-drama, include actual comic behavior, escalation, social awkwardness, logistics, misunderstanding, or another funny situation from canon rather than relying only on witty narration.
+
+If it is romance, let interaction carry attraction. If it is a thriller, let pressure move. If it is a heist, let mechanism work. If it is sports, let the competition matter.
+
+The article should make the reader feel the genre, not certify that the genre exists.
+
 # DIALOGUE AND PROSE
 
 Dialogue should sound spoken before it sounds quotable.
@@ -183,6 +193,8 @@ Some sentences should simply carry information. Do not make every sentence conta
 Do not repeatedly open paragraphs with abstract thesis lines that explain the paragraph before it happens.
 
 Do not overuse compressed formulations such as `X becomes Y`, `X is Y`, or balanced oppositions such as `X wants one thing. Y demands another.` One good line is voice. A cluster becomes mannerism.
+
+Do not exhaust one metaphor family simply because the production offers it. A token story does not need every section to speak in deficits, circulation, value, minting, recession, and markets. A sports story does not need every relationship described as a game. Keep the uses that are funny, precise, character-specific, or genuinely clarifying and let ordinary language carry the rest.
 
 Do not explain why a scene works immediately after it works.
 
@@ -205,6 +217,7 @@ Ask:
 - Did I explain a strong scene after the scene already made the point?
 - Did I use abstract words such as pressure, trust, chemistry, leadership, connection, or stakes where behavior would be more vivid?
 - Did spoiler protection produce vague placeholder language?
+- Am I working the production's central metaphor or vocabulary so hard that it has become a prose gimmick?
 
 Fix the pattern, not every individual instance.
 
@@ -233,13 +246,14 @@ Before returning the draft, inspect for:
 - substantial duplicate scene treatment across sections
 - whether THE SEASON and THE EPISODES are operating at different zoom levels
 - whether every public Cast paragraph names a selected actor and character
-- whether the promised genre pleasure is actually demonstrated
+- whether the promised genre pleasure is actually demonstrated rather than merely described
 - whether THE FINISH overloads recurring motifs or callback objects
 - dialogue that sounds engineered for a quote rather than spoken
 - repeated abstract thesis openings
 - clusters of tiny declarative sentences
 - clusters of breathless long sentences
 - excessive rhetorical symmetry
+- one metaphor family repeated until it feels authored
 - vague spoiler-placeholder prose
 - em dash characters
 - protected decisive payoffs accidentally revealed
