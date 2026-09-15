@@ -110,9 +110,26 @@ Children, patients, athletes, students, guests, residents, customers, clients, a
 
 This should increase dramatic fertility, not inflate the ensemble.
 
+# THREAT ARCHITECTURE
+
+When a thriller, action story, mystery, crime story, or other conflict-driven production contains multiple antagonistic actors, know the hierarchy and dramatic function of each before canon freeze.
+
+The production should be able to answer plainly:
+
+- who is driving the threat
+- who carries personal history, insider knowledge, or special leverage over the protagonist
+- why those roles are distinct rather than redundant
+- what changes if one of those antagonistic roles is removed
+
+Do not keep an anonymous or weakly differentiated threat leader above a vivid named antagonist merely because both appeared in development. Combine them when the split does not generate additional story.
+
 # RELATIONSHIP CANON CHECK
 
 When romance or another central two-person relationship materially drives the production, do not freeze canon until the relationship works on its own terms.
+
+For any central pair prominently sold by the premise, preserve at least one consequential sequence where one person's judgment materially changes what the other does. They may yield, refuse, trust, imitate, overrule, rescue, expose, or adopt the other's method. The relationship should alter an action, outcome, or later choice rather than merely decorate parallel competence.
+
+This does not require a speech or sentimental beat. One specific decision made differently because this particular other person is present can do the work.
 
 For romance and romantic comedy, preserve at least one substantial sequence where the central pair's actual interaction proves chemistry. The external device may create the encounter, but the people should create the pleasure.
 
@@ -135,6 +152,14 @@ When comedy or comedy-drama is part of the genre promise, preserve actual comic 
 The comedy may come from logistics, social stakes, mismatched incentives, ritual, escalation, physical business, misunderstanding, or character behavior.
 
 A gentle comedy does not need constant jokes. It still needs scenes that would be funny to watch.
+
+# TONE PHYSICS
+
+Signature scenes may escalate beyond ordinary life, but they should remain inside the production's established physical and comic reality unless a deliberate tonal turn has been earned.
+
+A bigger set piece should feel like a bigger version of this production. Be cautious when an inventive beat suddenly asks the audience to accept much broader slapstick, much grimmer violence, implausible invulnerability, or superhero physics that the rest of the production has not established.
+
+Do not flatten fun in the name of realism. Preserve the wild beat when it belongs. Adjust it when the pleasure comes from briefly becoming a different movie or show.
 
 # RESTRAINT AND DESIGNEDNESS
 
@@ -201,6 +226,9 @@ Before returning, ask:
 - Are the major dilemmas genuinely difficult where they should be?
 - Are ensemble characters people rather than positions in the theme?
 - Do affected supporting people have enough agency when appropriate?
+- If a central pair is part of the premise's appeal, does one person's judgment materially change what the other does at least once?
+- When multiple antagonistic actors exist, are their hierarchy and distinct functions legible?
+- Do signature scenes stay inside the production's established physical and comic reality?
 - Does comedy exist in situations if comedy is promised?
 - Does the season discover something the premise did not already know?
 - Are later consequences increasingly caused by character choices?
