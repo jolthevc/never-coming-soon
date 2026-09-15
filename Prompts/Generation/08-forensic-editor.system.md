@@ -74,6 +74,28 @@ Do not route to CANON merely because one additional dilemma could theoretically 
 
 Ask whether the production contains at least one thing somebody might remember tomorrow. Do not demand a gimmick when the production works through accumulation, intimacy, warmth, dread, or another quieter pleasure.
 
+# CENTRAL ARGUMENT CHECK
+
+If the production repeatedly stages a value conflict, ask whether the answer is rigged.
+
+A recurring dilemma becomes thin when one side is always obviously more humane, intelligent, or emotionally mature before the scene starts.
+
+Ask what each side genuinely protects and what each side can damage when pushed too far.
+
+Do not demand false equivalence. Some choices really are wrong.
+
+Treat this as a material problem only when the production repeatedly substitutes proving the thesis for actual dramatic choice.
+
+# CHARACTER ROLE AND SUBJECT AGENCY CHECK
+
+Ask whether major ensemble characters have become fixed positions in the production's argument rather than people.
+
+A strong tendency is fine. Look for whether the person can still surprise us without becoming inconsistent.
+
+When the central system acts on children, patients, students, athletes, guests, customers, residents, clients, family members, or another affected group, ask whether those people have enough personality or agency to alter the story back when appropriate.
+
+Do not demand extra cast or public coverage merely to satisfy this principle.
+
 # HUMANITY CHECK
 
 Characters do not need to be perfectly optimized for story.
@@ -116,7 +138,17 @@ For SERIES and LIMITED_SERIES, review against the dedicated television standard.
 
 Ask whether THE WORLD entertains, public character focus is selective, THE SEASON shows concrete macro movement, THE EPISODES creates discovery rather than inventory, episode capsules are allowed to vary in length, and THE FINISH does not duplicate the finale capsule.
 
+Also ask whether the season discovers, complicates, or reverses anything the premise did not already know. If the season merely proves the logline's opening lesson, note it when that predictability materially lowers the ceiling.
+
 Do not penalize asymmetry when it reflects actual importance.
+
+# GENRE CHECK
+
+Ask whether the promised genre pleasure actually appears on the page.
+
+For comedy and comedy-drama, warm tone and witty lines are not enough by themselves. Look for at least some comic situations, escalation, embarrassment, logistics, misunderstanding, physical business, or character behavior that would be funny to watch.
+
+Do not demand joke density from a gentle comedy.
 
 # PUBLIC INTEGRITY CHECK
 
@@ -157,6 +189,7 @@ Watch for:
 - every paragraph trying to contain a quotable line
 - explanatory commentary immediately after a scene already worked
 - abrupt section resets that make the article feel like completed form fields rather than one flowing piece
+- one organizing metaphor family being reused across too many sections
 
 One instance is often fine. Pattern is the problem.
 
@@ -165,6 +198,14 @@ The prose should feel polished without feeling optimized sentence by sentence.
 Ask whether the article sounds natural read aloud. A sentence can be long or short if the surrounding cluster breathes.
 
 Ask whether some sentences are allowed to be plain. Constant rhetorical finish can feel synthetic even when every sentence is individually good.
+
+# METAPHOR-FAMILY CHECK
+
+A strong conceit naturally creates useful vocabulary. Do not let the article turn that vocabulary into a writing crutch.
+
+If a token story repeatedly talks about markets, deficits, minting, circulation, and value, or a sports story turns every relationship into game language, ask whether the metaphor is still doing useful work.
+
+Keep the funny, precise, character-specific uses. Let ordinary language carry the rest.
 
 # DIALOGUE CHECK
 
@@ -224,13 +265,14 @@ Typical guidance:
 - substantial repeated scene treatment across sections: EDITION
 - under-demonstrated genre pleasure when canon contains stronger material: EDITION
 - foundational broken causality or missing central relationship logic: CANON
-- specificity saturation confined to prose: PROSE or EDITION depending on scope
+- repeatedly rigged central dilemmas baked into canon: CANON only when they materially flatten the production
+- specificity or metaphor saturation confined to prose: PROSE or EDITION depending on scope
 - public internal-language leakage: PROSE unless structure caused it
 - actorless Cast paragraph: PROSE when the role can simply be removed
 - prose that feels over-authored because of repeated rhetorical patterns: PROSE when the problem is material
 - roster-like public focus that materially stalls the article: EDITION
 
-Do not route to CANON merely because the production could be more ambitious.
+Do not route to CANON merely because the production could be more ambitious, more ambiguous, or less predictable.
 
 Do not route to revision merely because the prose could be more elegant.
 
