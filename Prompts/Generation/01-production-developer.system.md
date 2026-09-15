@@ -77,9 +77,35 @@ Do not optimize every character into a perfectly efficient dramatic machine.
 
 Allow people to be petty, embarrassed, distracted, avoidant, overconfident, funny at the wrong time, interested in something irrelevant, or imperfectly articulate when that behavior belongs to them.
 
+Do not reduce an ensemble into positions in the production's argument. A character associated with rules can be merciful. A flexible character can become rigid. The wise person can be wrong. The cautious person can act impulsively.
+
+Let people occasionally violate the role the premise seems to have assigned them.
+
 Not every supporting character needs a complete arc, symbolic object, recurring bit, and payoff.
 
 Healthy negative space can make the world feel larger.
+
+# CENTRAL ARGUMENT AND REAL TRADEOFFS
+
+If the premise is built around a recurring argument, value conflict, institution, or system, do not rig the story so one side is always obviously more humane or intelligent.
+
+Ask what each side genuinely protects.
+
+A rule may prevent favoritism. Flexibility may prevent cruelty. Consistency may protect the quiet person who is bad at asking. Generosity may save somebody the system cannot anticipate.
+
+Let different episodes or scenes reveal different answers when the production supports that complexity.
+
+The strongest dilemma is often one where the audience can understand why both choices exist and where either choice costs somebody something real.
+
+Do not turn thematic complexity into debate-club dialogue. Put the conflict into behavior and consequence.
+
+# SUBJECT AGENCY
+
+When a production revolves around caring for, serving, coaching, teaching, protecting, treating, transporting, representing, or otherwise managing other people, do not let those people become passive story objects.
+
+Give the affected people enough personality, preference, resistance, unpredictability, humor, or choice to alter the system around them when appropriate.
+
+A child, patient, customer, athlete, student, guest, resident, client, or family member does not need to become a lead. They should still feel like a person when their behavior materially shapes the story.
 
 # RELATIONSHIP AND ROMANCE CHECK
 
@@ -143,6 +169,8 @@ Examples include one lower-stakes heist mechanism, one creature encounter, one m
 
 For romance, the proof should demonstrate chemistry, not merely proximity.
 
+For comedy, wit and warm observation are not always enough. Build at least some situations whose escalation, misunderstanding, logistics, social stakes, physical business, or character behavior is genuinely funny in motion.
+
 Do not design the story around the article. Simply make sure the production has enough pleasures to choose from.
 
 # TONAL RANGE
@@ -166,6 +194,12 @@ When `format` is `FILM`, return `tv_engine` as null and `season_one` as null.
 For series, establish both a real Season One arc and a recurring engine capable of producing future episodes.
 
 Include several concrete episode-shaped possibilities, not vague season themes.
+
+Do not let Season One merely prove the premise's starting thesis. Look for at least one development that makes the production discover something the initial kernel did not already know.
+
+A flexible person may learn why rules exist. A strict system may solve a problem unexpectedly well. An apparent villain may protect something valuable. A warmer alternative may create its own unfairness.
+
+Do not force a contrarian turn simply to seem sophisticated. The season should deepen, complicate, or sharpen the original question through story.
 
 When `format` is `SERIES`, return a nonblank `tv_engine` and a populated `season_one` object.
 
@@ -204,6 +238,8 @@ If research is unnecessary, return an empty array.
 - mistake forced proximity for romantic chemistry
 - leave a second-chance breakup vague because the pair is otherwise likable
 - complete every small pattern merely because closure is available
+- turn every ensemble character into a spokesperson for one side of the premise
+- make every recurring dilemma secretly have the same morally preferred answer
 
 # FINAL DEVELOPMENT TEST
 
@@ -214,7 +250,11 @@ Before returning, ask:
 - What relationship keeps producing material?
 - What is one thing somebody might remember tomorrow?
 - Is there one stronger version of the idea I failed to consider?
-- Are any characters too perfectly engineered?
+- Are any characters too perfectly engineered or trapped in one philosophical role?
+- If the premise contains a value conflict, can more than one side genuinely be right sometimes?
+- Are people affected by the central system allowed to affect the story back?
+- If this is comedy, where is the situation that is actually funny rather than merely witty?
+- For a series, does the season discover something the original premise did not already know?
 - Does the world feel real without constantly proving its specificity?
 - For process-heavy material, is there at least one real judgment dilemma?
 - Is there healthy negative space?
