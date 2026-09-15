@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Television Editorial Standard v1.2
+## Television Editorial Standard v1.3
 
 ## 1. Purpose
 
@@ -25,7 +25,7 @@ For SERIES and LIMITED_SERIES, default to:
 - THE PITCH
 - THE WORLD
 - THE CHARACTERS
-- THE CAST
+- THE DREAM CAST
 - THE SEASON
 - THE EPISODES
 - THE FINISH
@@ -88,17 +88,23 @@ A central pair may deserve several paragraphs while a useful supporting characte
 
 Secondary characters can emerge later in THE SEASON or THE EPISODES when that creates a better reading experience.
 
-## 8. THE CAST
+## 8. THE DREAM CAST
 
-The public Cast section should make performances imaginable, not reproduce the internal casting plan.
+The public Dream Cast section should make performances imaginable, not reproduce the internal casting plan.
+
+The heading is intentional public framing. It tells the reader these are imagined Never Coming Soon choices, not real casting announcements, without requiring a disclaimer paragraph.
 
 Default to the roles whose casting most increases desire.
 
 A series with ten important characters does not automatically need ten casting paragraphs.
 
-Every public Cast paragraph must name an actual selected performer and the character they play.
+Every public Dream Cast paragraph must name an actual selected performer and the character they play.
 
-Do not force every cast paragraph into the same length or syntax. Casting emphasis should be asymmetric when the production is asymmetric.
+Do not imply that a performer signed on, joined the production, endorsed it, or was actually cast. Avoid announcement language such as `has been cast`, `joins the cast`, `will star`, `is attached`, or `signed on`.
+
+Once the heading establishes the hypothetical frame, the prose may confidently imagine the performance.
+
+Do not force every Dream Cast paragraph into the same length or syntax. Casting emphasis should be asymmetric when the production is asymmetric.
 
 ## 9. THE SEASON
 
@@ -177,97 +183,3 @@ This does not require romance or extra exposition.
 One consequential interaction can be enough if it shows history, friction, shorthand, loyalty, rivalry, dependence, or a choice that would play differently between strangers.
 
 Do not manufacture relationship material merely to satisfy a quota.
-
-## 15. Motifs and recurring artifacts
-
-Television naturally accumulates recurring objects, jokes, places, rules, and rituals.
-
-Do not make the article point at every recurrence.
-
-A motif should feel richer when it returns, not merely familiar.
-
-## 16. THE FINISH
-
-THE FINISH brings season pressures into convergence and stops before the decisive finale response or resolution.
-
-It should feel dependent on what came before, not like another standalone episode capsule.
-
-Do not make convergence equal callback inventory.
-
-Simply stop at the right dramatic threshold.
-
-## 17. Television spoiler discipline
-
-The goal is appetite, not secrecy.
-
-The reader may know substantial midseason developments and concrete episode premises while the decisive final response remains protected.
-
-## 18. Series versus limited series
-
-A SERIES needs evidence of returnability beyond Season One.
-
-A LIMITED_SERIES should feel like multiple chapters are necessary to reach a contained ending.
-
-## 19. Comedy, drama, genre, and pace
-
-Television format does not create one house temperature.
-
-A half-hour comedy can move quickly and still have emotional continuity. A thriller may use shorter episode capsules. A romance may linger on chemistry. A procedural may need more mechanism.
-
-The production determines the rhythm.
-
-Allow tonal contrast. A tense procedural can be funny for a minute. A comedy can become sincerely sad. Genre should guide the experience without sterilizing human variation.
-
-## 20. Dialogue
-
-Television needs repeatable people, not a collection of trailer-ready lines.
-
-Dialogue should sound like these specific characters speaking in the moment.
-
-Watch for mirrored constructions where one character offers a neat metaphor and the other returns an equally neat inversion.
-
-Allow interruption, avoidance, misunderstanding, unfinished answers, and silence when they belong to the people.
-
-A good line may still be quotable. Quotability should be the byproduct, not the design brief.
-
-## 21. Prose rhythm
-
-Do not make every paragraph begin with a thesis sentence or end with a button.
-
-Vary density. A procedural sequence can be richly specific, followed by a plain sentence that moves the night forward.
-
-One short sentence can work. A chain of short declarations can feel generated. One long sentence can flow. Several breathless long sentences in a row can exhaust the reader.
-
-The prose should sound natural when read aloud.
-
-## 22. Television evidence of spectatorship
-
-Viewers form favorites, remember specific episodes, and notice recurring behavior.
-
-Selective narrator reactions can make the imaginary show feel watched.
-
-Do not turn these reactions into fixed formulas or post-scene explanations.
-
-## 23. Television review questions
-
-Before approval, ask:
-
-- Does this feel like television rather than a long film?
-- Is the recurring source of story visible without being explained like a pitch deck?
-- Does the season have concrete movement rather than thematic abstraction?
-- Are the public characters focused enough to remember?
-- Does THE WORLD entertain rather than merely inform?
-- Does THE SEASON operate at a different zoom level from THE EPISODES?
-- Does THE EPISODES create discovery rather than inventory?
-- Are standout episodes allowed to receive more space than connective episodes?
-- Did THE EPISODES avoid fully staging the finale before THE FINISH?
-- If the pitch sells a relationship, did the article show why it matters?
-- Does the dialogue sound spoken rather than engineered for quotes?
-- Is the prose polished without becoming rhythmically uniform?
-- Would I want to watch Episode 2 after finishing Episode 1?
-
-## 24. Calibration status
-
-This standard is dedicated television governance, but television still needs a formally locked Gold example before the system should consider TV craft fully calibrated.
-
-Until then, use this standard to prevent obvious film-to-TV transfer errors while preserving room for future calibration.
