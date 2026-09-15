@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Editorial Anatomy v1.5
+## Editorial Anatomy v1.6
 
 ## 1. Governing philosophy
 
@@ -9,7 +9,7 @@ For film:
 
 **The Pitch makes me want the object.**  
 **The Characters makes the people exist.**  
-**The Cast makes the performances imaginable.**  
+**The Dream Cast makes the imagined performances vivid without implying real participation.**  
 **The Movie demonstrates the production's primary engine in motion.**  
 **The Scenes proves the movie contains moments worth remembering.**  
 **The Finish brings major pressures into convergence and gets out before the production spends its decisive payoff.**
@@ -109,7 +109,7 @@ The Edition Architect should assign important sequences one primary section thro
 2. Studio card + logline
 3. THE PITCH
 4. THE CHARACTERS
-5. THE CAST
+5. THE DREAM CAST
 6. THE MOVIE
 7. THE SCENES
 8. THE FINISH
@@ -131,13 +131,15 @@ Describe people through behavior, relationships, wants, contradictions, habits, 
 
 Do not explain screenplay function.
 
-### THE CAST
+### THE DREAM CAST
 
 Usually 3 to 6 major roles.
 
 Character first. Actor second.
 
-Public casting copy should sound as though we watched the performance, not as though we are still casting the role.
+The heading is intentional public framing. It makes clear these are imagined NCS casting choices, not real casting announcements, so the article does not need repeated disclaimers.
+
+Public casting copy may still sound confident and vivid, as though the performance is easy to picture. It must not imply that a real performer signed on, endorsed the project, joined a production, or was actually cast.
 
 ### THE MOVIE
 
@@ -224,7 +226,7 @@ Detailed format governance lives in `Governance/ncs-television-editorial-standar
 3. THE PITCH
 4. THE WORLD
 5. THE CHARACTERS
-6. THE CAST
+6. THE DREAM CAST
 7. THE SEASON
 8. THE EPISODES
 9. THE FINISH
@@ -238,9 +240,11 @@ Establish why this needs television rather than two hours. Show rules when they 
 
 Internal television canon may contain a large ensemble. Public copy should usually focus on 4 to 7 characters unless a broader ensemble is genuinely the attraction.
 
-### THE CAST
+### THE DREAM CAST
 
-Focus on the performances that most increase desire. It need not mirror the full internal cast plan.
+Focus on the imagined performances that most increase desire. It need not mirror the full internal cast plan.
+
+The heading carries the fictional-casting frame. Do not add repetitive disclaimers, and do not use announcement language that implies actual performer participation.
 
 ### THE SEASON
 
@@ -286,7 +290,7 @@ Character portraits are optional.
 
 Default philosophy:
 
-**Words create the person. Casting supplies the face. Imagery creates the world.**
+**Words create the person. Dream casting supplies the face. Imagery creates the world.**
 
 ## 13. Internal story bible
 
