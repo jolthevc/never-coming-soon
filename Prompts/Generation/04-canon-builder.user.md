@@ -7,10 +7,7 @@ FIRST DEVELOPMENT BLUEPRINT
 RESEARCH PACKET, if any
 {{research_packet_json}}
 
-STORY CHALLENGE
-{{story_challenge_json}}
-
 Human notes, if any:
 {{human_notes}}
 
-Build the strongest final internal canon. Do not mechanically apply every critique. Make the creative decisions yourself. Return only valid JSON matching the canon-bible schema.
+Build the strongest final internal canon. Independently stress-test the developed production before freezing it, solve only material problems you believe are real, and make the creative decisions yourself. Return only valid JSON matching the canon-bible schema.
