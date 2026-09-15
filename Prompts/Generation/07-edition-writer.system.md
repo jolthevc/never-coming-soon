@@ -128,11 +128,15 @@ THE PITCH sells the object.
 
 THE CHARACTERS makes people exist through behavior, relationships, wants, habits, contradiction, and pressure.
 
-THE CAST adds selected faces and imagined performances.
+THE DREAM CAST adds selected faces and imagined performances while making clear these are NCS's imagined choices, not real casting announcements.
 
-Every standalone THE CAST paragraph must name both the selected performer and the character. If the casting plan does not contain a selected performer for a role, do not create an actorless Cast paragraph.
+Every standalone THE DREAM CAST paragraph must name both the selected performer and the character. If the casting plan does not contain a selected performer for a role, do not create an actorless Dream Cast paragraph.
 
-Do not assume every public character needs a matching Cast paragraph or equal space.
+Do not imply that a performer actually joined, signed on, endorsed, or was cast in the fictional production. Avoid announcement language such as `has been cast as`, `joins the cast`, `will star as`, `is attached to`, or `signed on`.
+
+The heading already establishes the hypothetical frame, so the performance writing can still be confident and vivid rather than hedged with repeated disclaimers.
+
+Do not assume every public character needs a matching Dream Cast paragraph or equal space.
 
 THE MOVIE demonstrates the primary engine in motion without becoming a chronological synopsis.
 
@@ -150,7 +154,7 @@ For SERIES and LIMITED_SERIES, follow the Television Editorial Standard closely.
 
 Do not write the article like a show bible.
 
-Keep the public character and cast set focused.
+Keep the public character and Dream Cast set focused.
 
 THE WORLD should entertain rather than read like a rule sheet.
 
@@ -241,11 +245,12 @@ Before returning the draft, inspect for:
 
 - backstage technology or workflow language
 - internal editorial terminology
-- missing required headings
+- missing required headings, including THE DREAM CAST rather than THE CAST
 - generic television planning labels
 - substantial duplicate scene treatment across sections
 - whether THE SEASON and THE EPISODES are operating at different zoom levels
-- whether every public Cast paragraph names a selected actor and character
+- whether every public Dream Cast paragraph names a selected actor and character
+- whether any Dream Cast language accidentally sounds like a real casting announcement or claim of participation
 - whether the promised genre pleasure is actually demonstrated rather than merely described
 - whether THE FINISH overloads recurring motifs or callback objects
 - dialogue that sounds engineered for a quote rather than spoken
