@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Story Development Standard v1.4
+## Story Development Standard v1.5
 
 ## 1. Purpose
 
@@ -122,6 +122,10 @@ Do not reduce relationships to labels such as mentor, rival, spouse, sibling, or
 Ask what these two specific people do to one another.
 
 If a relationship is one of the reasons the premise is interesting, it should have consequential agency in the story. Removing that relationship should materially weaken the production rather than merely changing the exposition channel.
+
+When the premise prominently sells a central pair, preserve at least one consequential sequence where one person's judgment materially changes what the other does. They may yield, refuse, trust, imitate, overrule, rescue, expose, or adopt the other's method. The relationship should alter an action, outcome, or later choice rather than merely decorate two people being competent beside each other.
+
+This is not a requirement for a confession, backstory scene, or tidy emotional beat. A single decision made differently because this specific other person is present can prove more than a page of relationship description.
 
 ## 8. Dialogue and human interaction
 
@@ -255,6 +259,8 @@ For comedy and comedy-drama, warmth, charm, witty observation, and funny dialogu
 
 Genre should shape the production without sterilizing everything outside its primary adjective. A thriller may be funny for thirty seconds. A comedy can become genuinely sad. A romance can contain a moment of real dislike. Tonal contamination often makes a production feel more human.
 
+Signature scenes may escalate beyond ordinary life, but they should remain inside the production's established physical and comic reality unless a deliberate tonal turn has been earned. A clever escalation should feel like a bigger version of this movie or show, not a brief visit from a broader, sillier, grimmer, or more superhuman production.
+
 ## 15. Process and procedural stories
 
 Competence is pleasurable. Procedure can be suspenseful. Neither is enough by itself for an entire production.
@@ -381,6 +387,8 @@ Complexity must earn its place.
 
 Before adding another timeline, secret, villain, conspiracy, institution, mythology layer, murder, betrayal, or surprise reveal, ask whether the existing human or genre engine has been fully exploited.
 
+When a thriller, action story, mystery, crime story, or other conflict-driven production contains multiple antagonistic actors, know their hierarchy and dramatic functions. The audience should be able to understand who is driving the threat, who carries personal history or special leverage, and why both are needed. Combine antagonistic roles when the distinction does not create additional story.
+
 A cleaner story with richer people or richer mechanics is often stronger than a complicated story with thin people.
 
 Do not mistake confusion for sophistication.
@@ -476,14 +484,17 @@ Before internal canon is frozen, ask:
 - Would we genuinely watch this?
 - Do the characters make choices that increasingly cause later story?
 - Is there at least one relationship with real movement?
+- If a central pair is part of the premise's appeal, does one person's judgment materially change what the other does at least once?
 - Does the story generate specific scenes?
 - Does escalation come from the dramatic engine rather than arbitrary complication?
 - Does the genre sincerely deliver?
+- Do signature scenes remain inside the production's established physical and comic reality?
 - If comedy is promised, are there situations that are actually funny rather than only witty?
 - For process-heavy stories, are there judgment calls where legitimate obligations conflict?
 - If the premise contains a recurring value conflict, can more than one side genuinely be right sometimes?
 - Are major ensemble characters more than permanent positions in that conflict?
 - Do people affected by the central system have enough agency to feel alive when relevant?
+- When multiple antagonistic actors exist, are their hierarchy and distinct functions legible?
 - For series, does the season discover something the premise did not already know?
 - Does the ending feel earned?
 - Does the production have its own identity?
