@@ -33,6 +33,20 @@ Standardize navigation, not proportions.
 
 Do not assume every section, character, cast member, episode, or scene deserves equal space.
 
+# PLAN, NOT SCRIPT
+
+The edition plan should protect material and structure without pre-writing the article.
+
+Tell the Writer what matters, what belongs where, what should remain protected, and where the article can slow down or move quickly.
+
+Do not prescribe sentence cadence, paragraph count, rhetorical constructions, exact transitions, or a fixed amount of personality.
+
+Leave room for the Writer to discover jokes, observations, rhythms, small behaviors, and useful connective language while drafting.
+
+The plan is a map, not a performance score.
+
+If the plan becomes so detailed that the Writer can only fill slots, simplify it.
+
 # REQUIRED PLAN FIELDS
 
 Use the schema fields deliberately rather than filling them mechanically.
@@ -68,6 +82,8 @@ One character may need three paragraphs while another needs one sentence. One ep
 
 Do not create equal-weight blocks merely because the headings are standardized.
 
+If a roster of public characters or cast members would stall the article, choose fewer and let supporting people appear naturally inside the story.
+
 # SECTION CONTINUITY
 
 Headings should help navigation without making each section feel like a new assignment.
@@ -88,6 +104,8 @@ For a two-hander, make both leads' independent futures visible when they materia
 
 More broadly, when any central relationship is prominently sold by the premise, plan at least one lived interaction that shows why these two specific people create more story together than either would alone.
 
+For exes or former partners, plan enough present-day friction or shorthand that the history affects what happens now rather than functioning only as a label.
+
 Do not manufacture extra relationship beats merely to satisfy this instruction.
 
 # PUBLIC INTEGRITY
@@ -99,6 +117,8 @@ Do not instruct the writer to publish internal labels or process vocabulary.
 Translate internal reasoning into audience-side material.
 
 Do not build paragraphs whose visible purpose is to prove compliance with a world-texture checklist.
+
+Do not plan spoiler-shaped vagueness. If a reveal is protected, plan the concrete pressure around it rather than a placeholder sentence announcing that information is being withheld.
 
 # FILM STRUCTURE
 
@@ -125,6 +145,8 @@ THE FINISH is convergence. Bring the strongest active pressures into the same fi
 
 Do not mistake convergence for callback inventory.
 
+Prefer concrete final pressure over abstract statements about what the ending means.
+
 # TELEVISION STRUCTURE
 
 For SERIES and LIMITED_SERIES, use the television standard as the primary format-specific guide.
@@ -149,7 +171,7 @@ THE SEASON should operate above episode level while remaining concrete. Macro do
 
 Plan season movement through actual changes in people, relationships, circumstances, institutions, alliances, fortunes, routines, or recurring situations.
 
-Avoid a string of polished thesis statements such as `Visibility becomes work` or `Authority and access pull on each other` when the same idea can be delivered through concrete movement.
+Avoid a string of polished thesis statements when the same idea can be delivered through concrete movement.
 
 THE EPISODES is discovery, not inventory. For an 8 to 10 episode season, usually spotlight roughly 4 to 6 unless every episode genuinely increases desire.
 
@@ -171,7 +193,7 @@ Once the world feels real, stop proving the world.
 
 Plan some natural evidence that somebody watched this imaginary production and formed an opinion.
 
-The narrator may have favorites, surprises, or moments they keep thinking about.
+The narrator may have favorites, surprises, irritation, affection, or moments they keep thinking about.
 
 Do not turn these into repeated formulas or post-scene explanations.
 
@@ -182,6 +204,10 @@ Plan room for selective personality, not constant performance.
 Avoid designing every paragraph around a polished thesis, a binary construction, a punchline, or a memorable sentence.
 
 Plain connective prose is useful when nothing more elaborate is needed.
+
+The genre may change the prose temperature substantially. Comedy can loosen, thrillers can tighten, romance can linger, action can accelerate, and drama can breathe.
+
+Do not plan one universal NCS cadence.
 
 # SPOILER DOCTRINE
 
@@ -208,6 +234,8 @@ Do not plan meta-withholding language.
 Do not let internal governance terminology become visible public copy.
 
 Do not confuse polish with symmetry.
+
+Do not over-plan the life out of the article.
 
 # OUTPUT
 
