@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Editorial Quality Standard v1.6
+## Editorial Quality Standard v1.7
 
 ## 1. Purpose
 
@@ -52,7 +52,41 @@ Ask whether later story increasingly exists because of character choices rather 
 
 For process-heavy stories, ask whether at least some major pressure requires judgment between legitimate obligations rather than simply discovering the correct procedure.
 
-## 5. Memorability
+## 5. Argument complexity
+
+When a production is built around a recurring value conflict, ask whether the story has rigged the answer.
+
+A recurring dilemma weakens when one side is always obviously more humane, intelligent, or emotionally mature before the scene begins.
+
+Ask what each side protects and what each side can damage when pushed too far.
+
+Rules may protect fairness. Flexibility may protect mercy. Generosity may become unsustainable. Consistency may become blind. Informality may reward the socially connected. Formal process may protect the person who is quiet, unpopular, or bad at asking.
+
+Do not demand false equivalence. Some choices really are wrong.
+
+Do not route a strong draft to CANON merely because another layer of ambiguity is imaginable. Treat this as material only when the production repeatedly reduces drama to proving its preferred thesis.
+
+## 6. Character-role complexity
+
+Characters should not become permanent spokespeople for the production's argument.
+
+A person may have a clear tendency without becoming `the rules person`, `the heart`, `the wise elder`, `the chaos agent`, or `the fairness voice` in every scene.
+
+Look for at least some behavior that makes the major people harder to reduce to their assigned role while remaining true to character.
+
+A fairness hawk can forgive. A flexible person can become rigid when responsibility lands on them. A cautious spouse can care too much about one dispute. A warm elder can misjudge someone.
+
+Do not demand random contradiction merely to prove complexity.
+
+## 7. Subject agency
+
+When the production revolves around caring for, serving, coaching, teaching, treating, protecting, transporting, representing, or otherwise managing other people, ask whether the affected people feel like people rather than units in the mechanism.
+
+Children, patients, athletes, students, guests, residents, customers, clients, and family members do not need equal focus. But when their preferences, resistance, humor, loyalties, habits, or choices could materially shape the story, total passivity can make the world feel designed from the protagonist outward.
+
+Do not inflate the public ensemble simply to satisfy this principle.
+
+## 8. Memorability
 
 A developed production should usually contain at least one thing worth remembering tomorrow.
 
@@ -62,7 +96,7 @@ Do not demand a gimmick. Some productions are memorable through accumulation, in
 
 The test is whether someone could tell a friend what stuck with them.
 
-## 6. Human irregularity
+## 9. Human irregularity
 
 Characters should not feel optimized into perfectly efficient dramatic machines.
 
@@ -72,7 +106,7 @@ Do not penalize a small unresolved side detail merely because it lacks payoff.
 
 Negative space can make the world feel larger.
 
-## 7. Edition quality
+## 10. Edition quality
 
 Ask whether the public article presents the strongest useful version of the production.
 
@@ -80,7 +114,7 @@ Review opening pull, clarity, pace, section roles, public character focus, casti
 
 The article should not read like a development memo, synopsis, database entry, Wikipedia page, pitch deck, show bible, or editorial checklist.
 
-## 8. Film section-role integrity
+## 11. Film section-role integrity
 
 THE PITCH should create desire for the object, not summarize the whole plot.
 
@@ -94,7 +128,7 @@ THE SCENES should contain discrete memorable moments, not repetitions of THE MOV
 
 THE FINISH should create convergence and stop before the decisive response or payoff.
 
-## 9. Scene ownership and section exclusivity
+## 12. Scene ownership and section exclusivity
 
 A major scene or sequence should have one primary public home.
 
@@ -108,7 +142,7 @@ Do not treat paraphrase as distinct material.
 
 Repeated scene treatment normally requires an EDITION fix when it materially drags the article. A light echo does not require surgery.
 
-## 10. Television format integrity
+## 13. Television format integrity
 
 For SERIES and LIMITED_SERIES, review against `Governance/ncs-television-editorial-standard.md`.
 
@@ -126,7 +160,11 @@ For an 8 to 10 episode season, a selective 4 to 6 episode showcase is often stro
 
 When THE FINISH owns the finale pressure, THE EPISODES should not fully stage that finale first.
 
-## 11. Public asymmetry
+Also ask whether Season One merely proves the premise's opening thesis. A strong season often discovers, complicates, or reverses something the logline did not already know.
+
+Do not demand a contrarian turn when the season is already rich and surprising in other ways.
+
+## 14. Public asymmetry
 
 Do not demand equal space for unequal material.
 
@@ -134,17 +172,19 @@ One character may deserve several times the space of another. One cast choice ma
 
 Uniform blocks can make an article feel templated even when each block is individually good.
 
-## 12. Genre delivery
+## 15. Genre delivery
 
 The edition must demonstrate the pleasures implied by the genre label.
 
 A comedy should contain actual comic proof. A horror piece should create fear or dread. A heist should show mechanism or competence. Action should show physical spectacle or problem solving. A musical should let musical spectacle exist on the page. A sports story should care about the competition itself.
 
+For comedy and comedy-drama, warm tone, charm, and witty narration are not enough by themselves. Look for actual comic situations, escalation, embarrassment, logistics, misunderstanding, physical business, or character behavior that would make the production funny to watch.
+
 Do not apply one character-drama cadence to every genre.
 
 Allow tonal contrast when it makes the people feel more human.
 
-## 13. Relationship-story test
+## 16. Relationship-story test
 
 When romance, romantic comedy, second-chance love, or another central two-person relationship materially drives the production, review against `Governance/ncs-relationship-story-standard.md`.
 
@@ -152,7 +192,7 @@ More broadly, when a relationship is prominently sold by the premise, ask whethe
 
 Do not demand more relationship material if one consequential interaction already proves the point.
 
-## 14. Spoiler calibration
+## 17. Spoiler calibration
 
 Core rule:
 
@@ -160,7 +200,7 @@ Core rule:
 
 Do not protect so much that the article becomes vague.
 
-## 15. Interpretation discipline
+## 18. Interpretation discipline
 
 **Do not state meaning, mechanism, or consequence that the material is capable of delivering on its own.**
 
@@ -168,7 +208,7 @@ Flag sentences that tell the reader what a character learns, what a scene means,
 
 Do not explain a strong scene immediately after it works.
 
-## 16. Ordinary world texture
+## 19. Ordinary world texture
 
 The production should feel larger than the plot.
 
@@ -180,7 +220,7 @@ Also watch for specificity saturation across an entire article. A few excellent 
 
 Once the world is believable, stop proving the world.
 
-## 17. Evidence of spectatorship
+## 20. Evidence of spectatorship
 
 A finished edition should contain natural evidence that somebody watched the imaginary production and formed opinions about it.
 
@@ -190,7 +230,7 @@ The narrator may have a favorite episode, unexpected laugh, or small performance
 
 The narrator should not explain the mechanism that produced the pleasure.
 
-## 18. Public integrity
+## 21. Public integrity
 
 Review against `Governance/ncs-publication-integrity-standard.md`.
 
@@ -200,7 +240,7 @@ Flag literal leaks and semantic leaks that sound like a writer describing spoile
 
 Visible process language normally deserves a focused PROSE fix.
 
-## 19. Narrator-frame test
+## 22. Narrator-frame test
 
 The narrator may behave like a spectator.
 
@@ -208,7 +248,7 @@ The narrator should not behave like the production's marketer, screenwriter, dev
 
 Flag ordinary prose that claims backstage knowledge about trailers, budgets, studio choices, marketing clips, or filmmaker intent.
 
-## 20. Motif discipline
+## 23. Motif discipline
 
 Recurring objects, lines, rules, locations, songs, or visual motifs can create coherence.
 
@@ -216,7 +256,7 @@ They become artificial when the article keeps pointing at them because governanc
 
 Do not demand motif pruning when repetition is natural and unobtrusive.
 
-## 21. Finish density
+## 24. Finish density
 
 THE FINISH should converge live pressures, not inventory callbacks.
 
@@ -224,7 +264,9 @@ A stronger Finish usually carries a few active pressures clearly.
 
 Also flag vague cliffhanger language that withholds without creating a specific dramatic threshold.
 
-## 22. Prose quality
+When the final dilemma is supposed to embody the production's central argument, make sure both claims are actually live. A finale is weaker when one option is obviously morally superior before the protagonist chooses.
+
+## 25. Prose quality
 
 Review readability, rhythm, sentence control, paragraph movement, specificity, transitions, humor when appropriate, emotional sincerity, genre voice, and narrator presence.
 
@@ -232,7 +274,7 @@ The default house mode is clean, propulsive storytelling with selective personal
 
 The prose should feel polished without feeling optimized sentence by sentence.
 
-## 23. Paragraph openings
+## 26. Paragraph openings
 
 Watch for repeated abstract thesis openings followed by evidence.
 
@@ -240,7 +282,7 @@ A line like `Visibility becomes work.` can be strong once. Several consecutive p
 
 Some paragraphs should begin inside behavior, dialogue, action, physical detail, or an ordinary fact and let the meaning emerge.
 
-## 24. Sentence rhythm
+## 27. Sentence rhythm
 
 One-sentence paragraphs are not forbidden. Repeated one-sentence paragraphs used as routine transitional drumbeats should be flagged.
 
@@ -250,7 +292,7 @@ Review rhythm at the paragraph level rather than applying fixed length rules.
 
 The prose should sound natural when read aloud.
 
-## 25. Rhetorical symmetry
+## 28. Rhetorical symmetry
 
 Flag repeated binary constructions, mirrored clauses, balanced oppositions, and forced three-part formulations when they become a visible house reflex.
 
@@ -258,7 +300,17 @@ One elegant contrast can be memorable. Constant symmetry can feel manufactured.
 
 Do not remove a strong line merely because it is balanced. Look for repeated pattern.
 
-## 26. Dialogue test
+## 29. Metaphor-family saturation
+
+When a production has a strong organizing conceit, public prose may naturally borrow its vocabulary.
+
+Watch for the article exhausting one metaphor family across too many sections: a token story that constantly speaks in markets, deficits, minting, circulation, value, and recession; a sports story that turns every relationship into a game metaphor; a courtroom story that describes every disagreement as a verdict.
+
+A few apt uses can create voice. Constant reuse makes the conceit feel written around rather than lived inside.
+
+Keep the metaphor when it is funny, precise, character-specific, or genuinely clarifying. Let ordinary language do the rest.
+
+## 30. Dialogue test
 
 Dialogue should sound spoken before it sounds quotable.
 
@@ -268,13 +320,13 @@ Allow misalignment, interruption, avoidance, misunderstanding, and incomplete an
 
 Do not sand specific, funny dialogue into bland realism.
 
-## 27. Emotional abstraction
+## 31. Emotional abstraction
 
 Watch for abstract words such as pressure, trust, chemistry, connection, stakes, vulnerability, leadership, identity, tension, and growth being used where behavior could carry the point more vividly.
 
 Do not ban these words. Flag them only when they are substituting for material.
 
-## 28. Character test
+## 32. Character test
 
 Characters should feel like people rather than story functions.
 
@@ -282,7 +334,7 @@ Look for behavior, wants, contradictions, relationships, recognizable habits, ch
 
 Do not summarize the whole arc in the character introduction.
 
-## 29. Scene test
+## 33. Scene test
 
 Signature scenes should be specific enough to picture.
 
@@ -290,7 +342,7 @@ Scenes do not need full setup and full explanation every time.
 
 Entering late or leaving early can create life when clarity is preserved.
 
-## 30. Casting test
+## 34. Casting test
 
 Casting should increase desire.
 
@@ -298,13 +350,13 @@ Flag celebrity wallpaper, generic actor praise, chemistry problems, repetitive l
 
 Do not require every internally cast role to appear publicly.
 
-## 31. Manufactured-writing tells
+## 35. Manufactured-writing tells
 
 Flag repeated one-sentence paragraphs, predictable chains of short declarative sentences, breathless long-sentence clusters, identical paragraph shapes, repeated thesis openings, forced three-item lists, canned transitions, repeated binary constructions, generic concluding sentences, unnecessary semicolons, explanatory gloss after showing, formulaic spectatorship lines, and dialogue engineered for quote cards.
 
 Do not use em dashes in published NCS prose.
 
-## 32. Strength preservation
+## 36. Strength preservation
 
 Every editorial review must identify what should NOT be damaged during revision.
 
@@ -312,7 +364,7 @@ Name the specific scenes, character beats, jokes, transitions, performance obser
 
 Weirdness that feels alive is not the same thing as excess.
 
-## 33. Revision routing
+## 37. Revision routing
 
 Use the shallowest route that can actually solve a material problem:
 
@@ -323,9 +375,9 @@ Use the shallowest route that can actually solve a material problem:
 
 Choose `NONE` when remaining notes are real but nonfatal and another automated pass is unlikely to improve the object materially.
 
-Do not route to CANON simply because the production could be more ambitious.
+Do not route to CANON simply because the production could be more ambitious, more ambiguous, or more complicated.
 
-## 34. Score integrity
+## 38. Score integrity
 
 The holistic NCS score belongs to the exact draft being reviewed.
 
@@ -335,7 +387,7 @@ A 7.x draft can be a valid completed artifact. An 8.x draft can still have a mat
 
 Do not revise to chase a numerical threshold.
 
-## 35. Final editorial test
+## 39. Final editorial test
 
 Ask:
 
@@ -345,13 +397,19 @@ Ask:
 - Are the central people specific enough to care about?
 - Do character choices create later story?
 - Is there at least one thing I would remember tomorrow?
+- If the premise contains a recurring value conflict, does the story ever complicate its preferred answer?
+- Are major characters more than positions in that argument?
+- Do people affected by the central system have enough agency to feel alive when relevant?
+- If comedy is promised, are there actually funny situations rather than only warm wit?
 - For process-heavy material, are there real judgment calls and not just correct procedures?
 - Are major scenes owned by one section rather than restaged?
 - For television, is THE SEASON concrete without becoming episode recap?
+- For television, does the season discover something the premise did not already know?
 - Does public emphasis reflect actual importance rather than equal formatting?
 - Does dialogue sound like people rather than a quote generator?
 - Does the world feel larger than the plot without visibly performing that requirement?
 - Is the prose polished without becoming rhythmically uniform?
+- Is one metaphor family being worked too hard?
 - Are there repeated abstract thesis openings or rhetorical symmetries revealing the writer's method?
 - Did internal terminology stay backstage?
 - Does THE FINISH converge pressure rather than collect callbacks?
