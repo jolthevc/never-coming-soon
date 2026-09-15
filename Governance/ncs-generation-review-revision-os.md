@@ -1,19 +1,13 @@
 # Never Coming Soon
-## Generation, Review and Revision Operating System v2.6
+## Generation, Review and Revision Operating System v2.7
 
 ## 1. Purpose
 
 Generation begins after an idea becomes `DEVELOPMENT_SELECT`.
 
-Its job is to create a strong imaginary movie or show and turn it into a human-reviewable Never Coming Soon article efficiently.
+Its job is to create a strong imaginary movie or show, turn it into a human-reviewable Never Coming Soon article efficiently, and produce the canonical IG/social handoff needed by downstream media asset generation.
 
-**Draft Generation is not Publish Prep.**
-
-The normal run should answer:
-
-**Did we make a movie or show, and an article about it, that a human editor wants to keep working on?**
-
-The workflow should preserve creative quality while avoiding paid model calls that do not materially improve the first draft.
+The workflow should preserve creative quality while avoiding paid model calls that do not materially improve the generated package.
 
 ## 2. Input
 
@@ -47,29 +41,32 @@ Use `idea_id` as the only durable identifier.
 
 Do not create a separate Productions state table.
 
-## 5. Draft Generation stages
+Generation does not use an intermediate `GENERATING` lifecycle state.
 
-The normal Draft Generation path is:
+## 5. Normal Generation stages
+
+The normal Generation path is:
 
 1. source selection and eligibility
-2. save `pre_generation_status` and set `GENERATING`
-3. Production Developer
-4. optional narrow research only when requested
-5. Canon Builder with internal independent challenge
-6. canon freeze
-7. Casting Director
-8. Edition Architect
-9. Gold/style calibration load for Writer only
-10. Edition Writer
-11. deterministic pre-review diagnostics
-12. Forensic Editor
-13. deterministic final article QA
-14. Google Drive delivery
-15. final Ideas row update to `DRAFTED`
+2. Production Developer
+3. optional narrow research only when requested
+4. Canon Builder with internal independent challenge
+5. canon freeze
+6. Casting Director
+7. Edition Architect
+8. Gold/style calibration load for Writer only
+9. Edition Writer
+10. deterministic pre-review diagnostics
+11. Forensic Editor
+12. deterministic final article QA
+13. IG Asset Packet Builder
+14. deterministic IG Packet QA, with at most one packet-only repair if needed
+15. Google Drive delivery
+16. final Ideas row update to `DRAFTED`
 
 Do not run a standalone Story Challenger in the normal path.
 
-Do not automatically run Revision Writer, EDITION rescue, CANON rescue, a duplicate final Forensic review, IG Asset Packet Builder, or IG Packet QA before the human sees the draft.
+Do not automatically run Revision Writer, EDITION rescue, CANON rescue, or a duplicate final Forensic review before the human sees the draft.
 
 ## 6. Why the Challenger is folded into Canon
 
@@ -117,7 +114,7 @@ For series, canon should also know the recurring engine, Season One movement, co
 
 For limited series, canon should know the contained ending and chapter logic.
 
-Automatic CANON rescue is not part of normal Draft Generation. Foundational redevelopment is an explicit later action.
+Automatic CANON rescue is not part of normal Generation. Foundational redevelopment is an explicit later action.
 
 ## 10. Casting
 
@@ -193,7 +190,7 @@ Return an honest holistic score for the exact draft plus material notes and a re
 - `EDITION`
 - `CANON`
 
-During Draft Generation, that route is **advisory**.
+During normal Generation, that route is advisory.
 
 Do not automatically execute it before human review.
 
@@ -201,7 +198,7 @@ The human editor may later choose whether the piece deserves no work, a light po
 
 ## 15. Draft scoring
 
-The single Forensic review normally scores the exact article delivered because normal Draft Generation does not revise prose after review.
+The single Forensic review normally scores the exact article delivered because normal Generation does not revise prose after review.
 
 Do not make a second Forensic call simply to certify the same text again.
 
@@ -238,46 +235,92 @@ Do not block merely for:
 - minor rhythm or prose concerns
 - small casting taste notes
 
-## 17. DRAFTED contract
+## 17. IG Asset Packet Builder
 
-When the article passes technical checks, write the Google Doc and then update the Ideas row with:
+Keep the IG Asset Packet Builder in normal Generation because `ig_packet_json` is the canonical handoff to the downstream media asset generator.
+
+Run it only after article text, canon, final title, resolved format, and Forensic score are stable.
+
+Inputs:
+
+- final canon
+- final title
+- exact final article
+- final holistic score
+- resolved canonical format
+- current visual/social governance
+
+The packet must match `Schemas/ig-asset-packet.schema.json` and current social governance.
+
+Campaign coherence should come from art direction, not literal repetition of one object on every slide.
+
+## 18. IG Packet QA
+
+Validate the exact final object that will be persisted after any normalization, repair, mapping, or transformation.
+
+Require the current schema contract, including:
+
+- `version = ncs_ig_v1`
+- exact canonical format enum
+- final title match
+- locked three-slide types
+- required NCS close copy
+- nonblank caption
+- non-generic Slide 2 header
+- nonblank Hollywood line distinct from the poster tagline
+- no em dash character in public packet copy
+- no hard backstage/internal terminology
+- no fake production-process credits or participation claims
+
+If packet QA fails, allow one packet-only repair and validate again.
+
+Do not reopen or rewrite the article because the social packet alone failed.
+
+A structurally invalid final IG packet blocks `DRAFTED` because the media-asset handoff would be incomplete.
+
+## 19. DRAFTED contract
+
+When article QA and IG Packet QA pass, write the Google Doc and then update the Ideas row with:
 
 - `final_title`
 - `draft_url`
 - `ncs_score`
+- `ig_packet_json`
 - `status = DRAFTED`
 
-`DRAFTED` means the article exists and is ready for human review.
-
-It does not require an IG packet.
+`DRAFTED` means the generated package exists and is ready for human review and downstream media asset generation.
 
 It does not mean publication-ready, score >= 8, Gold quality, or no remaining notes.
 
-## 18. Social assets are Publish Prep
+## 20. No intermediate lifecycle state
 
-Do not run IG Asset Packet Builder or IG Packet QA during normal Draft Generation.
+Do not write `GENERATING` at run start.
 
-Social asset preparation happens only after explicit human interest in publishing a production.
+For a new run, the row remains `DEVELOPMENT_SELECT` until successful completion.
 
-Existing `ig_packet_json` values on older `DRAFTED` rows remain valid historical outputs and should not be cleared by Draft Generation.
+For forced redevelopment, the row remains `DRAFTED` with prior successful final fields intact until the replacement package fully succeeds.
 
-## 19. Revision belongs after human selection
+If a run fails, no lifecycle recovery write is required because no intermediate lifecycle mutation occurred.
 
-Revision Writer remains available for later Publish Prep or explicit redevelopment.
+Do not write partial final fields during execution.
 
-Human-selected Publish Prep may run:
+If duplicate-run protection is needed, implement it at the orchestration/execution level rather than as another durable Sheet lifecycle state.
+
+## 21. Revision belongs after human selection
+
+Revision Writer remains available for later explicit revision or redevelopment.
+
+Human-selected follow-up may run:
 
 - targeted PROSE revision
 - optional final Forensic review when changed prose needs a fresh score
-- IG Asset Packet Builder
-- IG QA
-- future image/social handoff
+- explicit EDITION redevelopment
+- explicit CANON redevelopment
+- regeneration of `ig_packet_json` if title, article, canon, or campaign direction materially changes
 
-EDITION or CANON redevelopment should require explicit human action.
+Do not spend premium model calls polishing every generated idea before the human has decided it deserves more work.
 
-Do not spend premium model calls polishing every generated idea before the human has decided it deserves publication effort.
-
-## 20. Context-cost discipline
+## 22. Context-cost discipline
 
 Do not load one giant runtime bundle into every model call.
 
@@ -331,25 +374,19 @@ Recommended boundaries:
 - diagnostics
 - quality, scoring, and public-integrity standards
 
-Do not send social/visual governance to article-generation agents.
+**IG Asset Packet Builder**
+- final canon
+- final article
+- final title / score / format
+- visual constitution
+- social asset standard
+- IG prompt and schema
+
+Do not send visual/social governance to article-generation agents.
 
 Preserve stable prompt prefixes where practical so provider caching can work.
 
-## 21. Failure and force-redevelopment recovery
-
-Keep the `GENERATING` lock.
-
-Before setting it, store `pre_generation_status`.
-
-If a run fails before draft delivery, restore the exact row to `pre_generation_status` only when its current status is still `GENERATING`.
-
-For a normal new run, restore `DEVELOPMENT_SELECT`.
-
-For failed force redevelopment, restore `DRAFTED` and preserve the prior successful final fields and Drive artifact.
-
-The Error Recovery companion should recover the exact `idea_id`; do not reset arbitrary rows.
-
-## 22. Human review and publication
+## 23. Human review and publication
 
 Generation ends at `DRAFTED`.
 
@@ -359,4 +396,4 @@ A later publishing workflow may move:
 
 `DRAFTED` -> `PUBLISHED`
 
-The system should optimize for a strong first draft, not autonomous perfection.
+The system should optimize for a strong first generated package, not autonomous perfection.
