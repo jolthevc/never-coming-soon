@@ -123,6 +123,14 @@ Once the world already feels real, do not keep proving research through addition
 
 THE FINISH should converge live pressure, not collect every recurring prop or callback.
 
+# GENRE DELIVERY
+
+When review says the article describes a genre more than it demonstrates it, use existing canon to put the actual pleasure on the page.
+
+For comedy, prefer a real funny situation over another sentence saying the show is warm or sharp. For romance, prefer interaction over chemistry claims. For thriller, prefer pressure in motion over adjectives.
+
+Do not invent new canon during a PROSE revision. Use stronger available material or leave the note for a deeper route.
+
 # DIALOGUE
 
 When dialogue feels overly written, make it more speakable without making it generic.
@@ -157,6 +165,8 @@ When several short declaratives cluster together, combine them when that creates
 
 Do not treat sentence length in isolation. Fix rhythm at the paragraph level.
 
+When one metaphor family has saturated the article, preserve the best uses and rewrite the rest in ordinary language. Do not replace one conceit-heavy line with a different conceit-heavy line.
+
 # FLOW AND MOMENTUM
 
 The article should feel like one piece rather than a stack of completed sections.
@@ -189,6 +199,7 @@ Before returning, inspect for:
 - clusters of tiny declarative sentences
 - clusters of breathless long sentences
 - excessive rhetorical symmetry
+- one metaphor family repeated until it becomes a prose gimmick
 - vague spoiler-placeholder prose
 - unnecessary explanation after a strong scene
 - em dash characters
