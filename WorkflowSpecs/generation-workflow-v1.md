@@ -1,25 +1,24 @@
 # Never Coming Soon
-## n8n Generation Workflow Specification v2.3
+## n8n Generation Workflow Specification v2.4
 
 > Filename retained for loader compatibility.
 
 ## 1. Objective
 
-Build one clean Draft Generation workflow that starts from one eligible Ideas row and ends with:
+Build one lean Generation workflow that starts from one eligible Ideas row and ends with:
 
 - a complete Never Coming Soon article in Google Drive
 - a valid holistic NCS score for that exact delivered article
+- a schema-valid `ig_packet_json` for downstream media asset generation
 - the same Ideas row set to `DRAFTED`
 
-Draft Generation is intentionally narrower than Publish Prep.
+Generation develops the production, writes the article, cold-reviews it once, creates the media/social handoff, and delivers the complete package for human judgment.
 
-It develops the production, writes the article, cold-reviews it once, and delivers it for human judgment.
-
-It does **not** automatically revise, rescue, create social assets, or publish.
+It does **not** automatically execute editorial revision routes or deep rescue loops.
 
 ## 2. Core principle
 
-Spend premium model calls where they create creative quality.
+Spend premium model calls where they create creative quality or a required downstream artifact.
 
 Normal paid-model path:
 
@@ -30,8 +29,9 @@ Normal paid-model path:
 5. Edition Architect
 6. Edition Writer
 7. Forensic Editor
+8. IG Asset Packet Builder
 
-With no research, this is six creative/model calls.
+With no research, this is seven model calls.
 
 Do not add another prose/humanization node.
 
@@ -44,6 +44,8 @@ Do not add another prose/humanization node.
 - n8n Code nodes: deterministic routing, diagnostics, JSON handling, QA, and state updates
 
 There is no required Productions tab and no `production_id`.
+
+Generation does not write an intermediate `GENERATING` status.
 
 ## 4. Source snapshot
 
@@ -158,6 +160,20 @@ Use:
 - stage 08 prompt
 - editorial-review schema
 
+### IG Asset Packet Builder
+
+Use:
+
+- final canon
+- final title
+- exact final article
+- final holistic score
+- resolved canonical format
+- visual constitution
+- social asset standard
+- stage 10 prompt
+- IG asset packet schema
+
 Do not send visual or social-asset governance to article-generation stages.
 
 Keep stable prompt prefixes identical where practical so provider prompt caching can work.
@@ -181,6 +197,8 @@ If model output is invalid JSON or schema-invalid, allow one structure-only repa
 
 If repair fails, stop downstream stages.
 
+A shared schema-sanitization choke point in orchestration is acceptable so long as it preserves the intended required fields and nested validation semantics.
+
 ## 7. Trigger and eligibility
 
 Inputs:
@@ -200,7 +218,6 @@ Process exactly one idea per execution.
 Eligibility:
 
 - DEVELOPMENT_SELECT: eligible
-- GENERATING: stop
 - DRAFTED: require explicit force redevelopment
 - PUBLISHED: stop
 
@@ -208,33 +225,19 @@ Force redevelopment requires explicit `idea_id` and may run on DEVELOPMENT_SELEC
 
 Do not require the source `format` cell to be populated.
 
-## 8. Start lock and failure recovery
+## 8. No intermediate lifecycle lock
 
-Keep the intermediate `GENERATING` lock.
+Do not write `GENERATING` at run start.
 
-Before changing status:
+For a normal run, the selected row remains `DEVELOPMENT_SELECT` throughout execution.
 
-`pre_generation_status = current row status`
+For forced redevelopment, the selected row remains `DRAFTED` throughout execution and prior successful final fields remain untouched.
 
-Then update the exact selected row by `idea_id` to:
+Do not write partial final fields during the run.
 
-`GENERATING`
+If the run fails, no lifecycle recovery write is needed because no intermediate lifecycle mutation occurred.
 
-Preserve source row snapshot, `human_notes`, `published_url`, and prior successful final fields in execution memory.
-
-The Error Recovery companion must remain active.
-
-If the run fails before successful draft delivery:
-
-- recover the exact `idea_id`
-- only restore when current status is still `GENERATING`
-- restore to `pre_generation_status`
-
-Normal failure restores DEVELOPMENT_SELECT.
-
-Failed forced redevelopment restores DRAFTED and preserves the prior artifact and final fields.
-
-Never reset an arbitrary GENERATING row.
+If duplicate-run protection is needed, use n8n execution-level controls, explicit `idea_id` discipline, or other orchestration safeguards rather than another durable Sheet status.
 
 ## 9. Build source bundle
 
@@ -278,7 +281,7 @@ Do not run generic research merely because the setting is real.
 
 Remove or bypass the live paid Story Challenger node from the normal path.
 
-Do not call stage 03 or require `Schemas/story-challenge.schema.json` in normal Draft Generation.
+Do not call stage 03 or require `Schemas/story-challenge.schema.json` in normal Generation.
 
 The files may remain in GitHub for history/future experiments.
 
@@ -295,9 +298,9 @@ Build `canon_bible` from:
 
 The current Canon Builder prompt explicitly performs an independent internal stress-test before Canon Freeze.
 
-Do **not** inject a second ad hoc challenge block in n8n once the workflow is pinned to a GitHub commit containing that prompt. GitHub is the source of truth.
+Do **not** inject a second ad hoc challenge block in n8n once the workflow is pinned to a GitHub commit containing that prompt.
 
-After Canon Builder succeeds, canon is frozen for the normal Draft Generation run.
+After Canon Builder succeeds, canon is frozen for the normal Generation run.
 
 There is no automatic CANON rescue loop before human review.
 
@@ -310,7 +313,7 @@ Input:
 - canon
 - compact casting history
 
-Use a capable creative model. It may use a cheaper model/settings than the main Developer, Canon Builder, Writer, or Forensic Editor when practical.
+Use a capable creative model. It may use cheaper model/settings than the main Developer, Canon Builder, Writer, or Forensic Editor when practical.
 
 Avoid immediate lead repetition when an equally strong fresh choice exists.
 
@@ -407,7 +410,7 @@ The review may recommend:
 - EDITION
 - CANON
 
-During Draft Generation, `revision_route` is advisory metadata only.
+During normal Generation, `revision_route` is advisory metadata only.
 
 Do not automatically execute the route.
 
@@ -415,7 +418,7 @@ Do not chase an 8.0 threshold.
 
 ## 20. No automatic revision or rescue
 
-Remove/bypass from normal Draft Generation:
+Remove/bypass from normal Generation:
 
 - Revision Writer
 - EDITION rerun path
@@ -425,11 +428,11 @@ Remove/bypass from normal Draft Generation:
 
 The human should see the first complete draft and its review before premium revision spend occurs.
 
-Revision remains available later through explicit Publish Prep or force redevelopment.
+Revision remains available later through explicit human action.
 
 ## 21. No duplicate final Forensic call
 
-Because normal Draft Generation does not revise article prose after Forensic Review, that review already belongs to the exact delivered article.
+Because normal Generation does not revise article prose after Forensic Review, that review already belongs to the exact delivered article.
 
 Reuse it.
 
@@ -461,27 +464,74 @@ Warnings only:
 - minor rhythm/prose concerns
 - small casting taste notes
 
-A complete human-reviewable artifact should continue to delivery.
+A complete human-reviewable article should continue to IG packaging.
 
-## 23. Remove social packaging from Draft Generation
+## 23. IG Asset Packet Builder
 
-Do not run:
+Keep this stage in normal Generation.
 
-- IG Asset Packet Builder
-- IG Packet QA
-- packet-only repair
+Inputs:
 
-`ig_packet_json` is not required for `DRAFTED`.
+- final canon
+- final title
+- exact final article
+- final overall score
+- resolved canonical format
 
-For new rows, leave it blank.
+Output:
 
-For forced redevelopment of an existing draft, preserve any prior valid IG packet.
+`ig_packet_json`
 
-Social packaging belongs to later Publish Prep after human approval.
+Require:
 
-## 24. Google Drive delivery
+- `version = ncs_ig_v1`
+- final title
+- exact uppercase format enum
+- genre
+- campaign brief
+- logo treatment
+- short social caption
+- locked Slide 1 packet
+- locked Slide 2 packet
+- locked Slide 3 packet
 
-Destination:
+Campaign coherence should not become motif repetition. One signature visual motif should normally appear explicitly on no more than two slides. Slide 3 may inherit campaign identity through palette, typography, or texture alone.
+
+## 24. IG Packet QA
+
+Validate the exact final object that will be persisted after any repair, normalization, mapping, or transformation.
+
+Require:
+
+- schema-valid packet against current `Schemas/ig-asset-packet.schema.json`
+- `version = ncs_ig_v1`
+- `format` exactly equals resolved canon format and is one of FILM, SERIES, LIMITED_SERIES
+- final title matches article title
+- exactly three slide objects
+- Slide 1 type = cover_poster
+- Slide 1 `never_coming_soon_presents = Never Coming Soon presents`
+- Slide 2 type = premise
+- Slide 3 type = ncs_close
+- Slide 2 header is not a generic label such as The Premise, About the Movie, The Story, or Synopsis
+- Slide 2 body copy nonblank
+- Slide 3 newsletter line exactly = THE FULL STORY IN NEVER COMING SOON
+- Slide 3 CTA exactly = LINK IN BIO
+- Hollywood line nonblank and not identical to Slide 1 tagline
+- caption nonblank and not identical to Slide 2 body copy
+- no em dash character in public packet copy
+- no backstage technology language
+- no hard internal editorial terminology
+- billing block contains no fake production-process credit or unnecessary participation claim
+
+If packet QA fails, allow one packet-only repair and validate the repaired object again.
+
+Do not rewrite the article because the packet alone failed.
+
+If the final packet remains structurally invalid, stop before `DRAFTED` because the downstream media handoff is incomplete.
+
+## 25. Google Drive delivery
+
+After article QA and IG Packet QA succeed, write:
 
 `Never Coming Soon / Drafts / [FINAL TITLE] / [FINAL TITLE]`
 
@@ -495,44 +545,41 @@ final article only
 
 Do not include internal JSON, review notes, diagnostics, prompts, or canon.
 
-For force redevelopment, preserve the previous artifact until replacement succeeds.
+For force redevelopment, preserve the previous artifact until the replacement package succeeds.
 
-## 25. Final Ideas update
+## 26. Final Ideas update
 
-Only after successful Drive persistence, update the same row with:
+Only after successful IG validation and Drive persistence, update the same row with:
 
 - `final_title`
 - `draft_url`
 - `ncs_score`
+- `ig_packet_json`
 - `status = DRAFTED`
 
-Do not require or fabricate `ig_packet_json`.
-
-Preserve an existing IG packet during forced Draft Generation unless a later Publish Prep flow intentionally replaces it.
-
-`DRAFTED` is the last success-state write.
+`DRAFTED` is the only lifecycle status written by a successful Generation run.
 
 Never populate `published_url` or set `PUBLISHED`.
 
-## 26. DRAFTED meaning
+## 27. DRAFTED meaning
 
 `DRAFTED` means:
 
 - complete public article exists
 - exact delivered article has a numeric Forensic score
-- deterministic completion QA ran
+- deterministic article completion QA ran
+- schema-valid final IG packet exists
 - Drive persistence succeeded
-- final title / URL / score were written successfully
+- final title / URL / score / IG packet were written successfully
 
 It does not mean:
 
-- social assets exist
 - score >= 8.0
 - review route = NONE
 - no remaining notes
 - automatically publication-ready
 
-## 27. Execution summary
+## 28. Execution summary
 
 Return:
 
@@ -543,30 +590,28 @@ Return:
 - whether research ran
 - final review route
 - holistic score
-- final QA result
+- final article QA result
 - section-overlap result
+- IG packet QA result
 - Drive URL
 - final status
 - unresolved editorial warnings
 
-Do not report an IG QA result because Draft Generation no longer runs IG packaging.
+## 29. Later revision boundary
 
-## 28. Publish Prep boundary
+Later explicit human-selected work may run:
 
-Publish Prep is a separate future/parallel workflow triggered only by explicit human selection.
-
-Possible sequence:
-
-`Load Draft + Review → optional targeted Revision Writer → optional final Forensic review → IG Packet Builder → IG QA → future image/social handoff`
+`Load Draft + Review → optional targeted Revision Writer → optional final Forensic review → regenerate IG packet if article/title/canon materially changed → IG QA → downstream media/publishing handoff`
 
 Rules:
 
 - PROSE revision may be run narrowly
 - EDITION or CANON redevelopment requires explicit human action
-- if public prose changes and an exact current score is still required, run a new Forensic review after the change
+- if public prose changes and an exact current score is required, run a new Forensic review after the change
+- if public prose, title, canon, or campaign direction changes materially, regenerate `ig_packet_json`
 - do not automatically reopen development merely because the original score is in the 7s
 
-## 29. Phase 1 non-goals
+## 30. Phase 1 non-goals
 
 Do not:
 
@@ -582,14 +627,17 @@ Do not:
 
 Test several productions before making further compression changes.
 
-## 30. Migration note
+## 31. Migration note
 
-This v2.3 spec intentionally supersedes older behavior that required `ig_packet_json` before `DRAFTED` and older behavior that automatically executed editorial revision routes.
+This v2.4 spec supersedes both:
+
+- older behavior that used an intermediate `GENERATING` Sheet status
+- the brief draft-first experiment that deferred IG packaging until later
+
+The current architecture intentionally keeps IG packaging in normal Generation because downstream media asset generation depends on `ig_packet_json`.
 
 The canonical contracts are:
 
-- `Governance/ncs-generation-data-contract.md` v2.3+
-- `Governance/ncs-data-contract.md` v1.5+
-- `Governance/ncs-generation-review-revision-os.md` v2.6+
-
-Existing DRAFTED rows with IG packets remain valid.
+- `Governance/ncs-generation-data-contract.md` v2.4+
+- `Governance/ncs-data-contract.md` v1.6+
+- `Governance/ncs-generation-review-revision-os.md` v2.7+
