@@ -66,6 +66,8 @@ A scene may be teased in THE PITCH and fully staged later. Do not give its actio
 `motif_budget`:
 Identify only the recurring objects, images, phrases, or rituals worth repeating in public, plus restraint needed. An empty array is allowed. Do not use this field as a mandate to repeat motifs.
 
+If a phrase, metaphor, image, object, or formulation has an especially strong intended use in THE FINISH, treat that use as privileged. Earlier sections may seed the underlying material, but should not repeatedly state the same formulation and weaken the final landing.
+
 `tv_episode_strategy`:
 For SERIES and LIMITED_SERIES, explain whether THE EPISODES should cover every episode, spotlight selected episodes, or mix short and long capsules, and why. For FILM, return null.
 
@@ -78,11 +80,11 @@ A polished article does not need visual or rhetorical symmetry.
 
 Plan different amounts of space for different material according to value.
 
-One character may need three paragraphs while another needs one sentence. One episode may deserve close treatment while another is omitted. One cast choice may need a full paragraph while another is obvious in a line.
+One character may need three paragraphs while another needs one sentence. One episode may deserve close treatment while another is omitted. One Dream Cast choice may need a full paragraph while another is obvious in a line.
 
 Do not create equal-weight blocks merely because the headings are standardized.
 
-If a roster of public characters or cast members would stall the article, choose fewer and let supporting people appear naturally inside the story.
+If a roster of public characters or Dream Cast members would stall the article, choose fewer and let supporting people appear naturally inside the story.
 
 # SECTION CONTINUITY
 
@@ -90,7 +92,7 @@ Headings should help navigation without making each section feel like a new assi
 
 When possible, let the final idea of one section create appetite for the next.
 
-THE WORLD can naturally lead us toward the people who know how to survive it. THE CHARACTERS can make the cast feel inevitable. THE CAST can leave us wanting to see those performances in motion.
+THE WORLD can naturally lead us toward the people who know how to survive it. THE CHARACTERS can make the Dream Cast feel inevitable. THE DREAM CAST can leave us wanting to see those performances in motion.
 
 Do not force transitions, but avoid designing sections as sealed containers.
 
@@ -104,9 +106,19 @@ For a two-hander, make both leads' independent futures visible when they materia
 
 More broadly, when any central relationship is prominently sold by the premise, plan at least one lived interaction that shows why these two specific people create more story together than either would alone.
 
+That interaction should preferably alter an action, outcome, tactic, or later choice. Do not satisfy relationship coverage only with adjacent competence or character-description paragraphs. If one person's judgment never changes what the other does, look for a stronger public beat already present in canon.
+
 For exes or former partners, plan enough present-day friction or shorthand that the history affects what happens now rather than functioning only as a label.
 
 Do not manufacture extra relationship beats merely to satisfy this instruction.
+
+# THREAT CLARITY
+
+When a conflict-driven production contains multiple antagonistic actors, plan the public article so a first-time reader can understand who is driving the threat and who carries personal history, insider knowledge, or special leverage.
+
+Do not flatten distinct antagonists into one generic force, but do not introduce an unnamed `real leader`, `pro lead`, or similar shadow role beside a vivid named antagonist without making the hierarchy useful and legible.
+
+If canon contains redundant threat roles, do not solve canon here. Instead choose the clearest public emphasis and note the ambiguity in `public_integrity_guard` or another appropriate planning field for the Writer to handle carefully.
 
 # PUBLIC INTEGRITY
 
@@ -126,7 +138,7 @@ For FILM, use these visible top-level headings exactly:
 
 - THE PITCH
 - THE CHARACTERS
-- THE CAST
+- THE DREAM CAST
 - THE MOVIE
 - THE SCENES
 - THE FINISH
@@ -135,7 +147,7 @@ THE PITCH creates desire.
 
 THE CHARACTERS makes people exist.
 
-THE CAST makes selected performances imaginable.
+THE DREAM CAST makes selected imagined performances feel vivid while preserving the hypothetical frame.
 
 THE MOVIE demonstrates the production's primary engine in motion without becoming a chronological synopsis.
 
@@ -156,7 +168,7 @@ Default visible headings:
 - THE PITCH
 - THE WORLD
 - THE CHARACTERS
-- THE CAST
+- THE DREAM CAST
 - THE SEASON
 - THE EPISODES
 - THE FINISH
@@ -195,6 +207,8 @@ Plan some natural evidence that somebody watched this imaginary production and f
 
 The narrator may have favorites, surprises, irritation, affection, or moments they keep thinking about.
 
+Prefer narrator-owned reactions over invented theatrical consensus. `I kept thinking about this` or a specific favorite can create spectatorship. Claims that `the audience cheers`, `the theater erupts`, or `everyone gasps` generally invent a mass response the article does not need.
+
 Do not turn these into repeated formulas or post-scene explanations.
 
 # NARRATOR AND RHYTHM
@@ -218,6 +232,8 @@ Do not protect so much that the article becomes vague.
 # INTERPRETATION DISCIPLINE
 
 Do not plan prose that states meaning, mechanism, or consequence the material can deliver on its own.
+
+Do not plan public arc-summary sentences such as `tonight she learns`, `by the end he realizes`, or `his early mistake later becomes the answer` when the article can show the behavior and consequence instead.
 
 If an important consequence would otherwise be unclear, plan stronger material rather than an explanatory sentence after the fact.
 
