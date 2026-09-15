@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Editorial Quality Standard v1.7
+## Editorial Quality Standard v1.8
 
 ## 1. Purpose
 
@@ -51,6 +51,8 @@ Do not route to CANON because a strong idea could theoretically be even better.
 Ask whether later story increasingly exists because of character choices rather than because another obstacle arrived.
 
 For process-heavy stories, ask whether at least some major pressure requires judgment between legitimate obligations rather than simply discovering the correct procedure.
+
+When a conflict-driven production contains multiple antagonistic actors, ask whether their hierarchy and distinct dramatic functions are legible. A vivid named insider, rival, or personal antagonist should not compete confusingly with an unnamed `real leader` or generic threat unless the distinction generates useful story.
 
 ## 5. Argument complexity
 
@@ -120,7 +122,7 @@ THE PITCH should create desire for the object, not summarize the whole plot.
 
 THE CHARACTERS should make people exist through behavior, relationships, wants, habits, contradiction, and pressure.
 
-THE CAST should make selected performances imaginable. Every Cast paragraph must name the selected performer and character.
+THE DREAM CAST should make selected imagined performances vivid without implying real participation. Every Dream Cast paragraph must name the selected performer and character.
 
 THE MOVIE should demonstrate the primary engine in motion without becoming a chronological synopsis.
 
@@ -168,7 +170,7 @@ Do not demand a contrarian turn when the season is already rich and surprising i
 
 Do not demand equal space for unequal material.
 
-One character may deserve several times the space of another. One cast choice may need a full paragraph while another needs a sentence. One episode may deserve close treatment while another is omitted.
+One character may deserve several times the space of another. One Dream Cast choice may need a full paragraph while another needs a sentence. One episode may deserve close treatment while another is omitted.
 
 Uniform blocks can make an article feel templated even when each block is individually good.
 
@@ -184,11 +186,15 @@ Do not apply one character-drama cadence to every genre.
 
 Allow tonal contrast when it makes the people feel more human.
 
+Also ask whether signature set pieces remain inside the production's established physical and comic reality. A heightened beat can be excellent. Flag it only when the scene feels imported from a much broader, sillier, grimmer, or more superhuman production.
+
 ## 16. Relationship-story test
 
 When romance, romantic comedy, second-chance love, or another central two-person relationship materially drives the production, review against `Governance/ncs-relationship-story-standard.md`.
 
 More broadly, when a relationship is prominently sold by the premise, ask whether the article shows why these specific people create more story together than either would alone.
+
+When a central pair is part of the sale, look for at least one consequential interaction where one person's judgment, trust, refusal, method, or risk materially changes what the other does. Parallel competence alone can leave a relationship conceptually strong but dramatically static.
 
 Do not demand more relationship material if one consequential interaction already proves the point.
 
@@ -205,6 +211,8 @@ Do not protect so much that the article becomes vague.
 **Do not state meaning, mechanism, or consequence that the material is capable of delivering on its own.**
 
 Flag sentences that tell the reader what a character learns, what a scene means, why a mechanism matters, or why a development is dangerous when surrounding material can communicate it.
+
+Be alert to development-note arc summaries such as `tonight she learns`, `by the end he realizes`, `his early mistake later becomes the answer`, or `this forces her to understand`. These often expose the story plan instead of letting behavior carry the change.
 
 Do not explain a strong scene immediately after it works.
 
@@ -227,6 +235,8 @@ A finished edition should contain natural evidence that somebody watched the ima
 Selective taste is useful. Formulaic reaction is not.
 
 The narrator may have a favorite episode, unexpected laugh, or small performance moment they keep thinking about.
+
+Prefer narrator-owned reactions over invented collective consensus. Claims that `the audience cheers`, `the theater erupts`, or `everyone gasps` generally pretend to know a mass response that the article does not need.
 
 The narrator should not explain the mechanism that produced the pleasure.
 
@@ -256,6 +266,8 @@ They become artificial when the article keeps pointing at them because governanc
 
 Do not demand motif pruning when repetition is natural and unobtrusive.
 
+When a phrase, metaphor, image, or object has an especially strong use in THE FINISH, ask whether earlier repetitions have spent the line before its best landing. Preserve the strongest use rather than mechanically deleting every echo.
+
 ## 24. Finish density
 
 THE FINISH should converge live pressures, not inventory callbacks.
@@ -273,6 +285,8 @@ Review readability, rhythm, sentence control, paragraph movement, specificity, t
 The default house mode is clean, propulsive storytelling with selective personality.
 
 The prose should feel polished without feeling optimized sentence by sentence.
+
+A connective paragraph should change the reader's state of knowledge through time, place, tactic, relationship, constraint, or a specific observation. Flag zero-information trailer paragraphs that only announce escalation with phrases such as `pressure rises`, `things get worse`, `a bigger move is coming`, or `everything is about to change` without adding material.
 
 ## 26. Paragraph openings
 
@@ -342,17 +356,19 @@ Scenes do not need full setup and full explanation every time.
 
 Entering late or leaving early can create life when clarity is preserved.
 
-## 34. Casting test
+## 34. Dream Cast test
 
-Casting should increase desire.
+Dream Casting should increase desire while clearly remaining hypothetical.
 
-Flag celebrity wallpaper, generic actor praise, chemistry problems, repetitive lead casting habits, actorless Cast paragraphs, and public copy written in hypothetical development language.
+Flag celebrity wallpaper, generic actor praise, chemistry problems, repetitive lead casting habits, actorless Dream Cast paragraphs, public copy written like a real casting announcement, and language that implies a performer signed on, joined, endorsed, or was actually cast.
+
+Every standalone Dream Cast paragraph should name both the selected performer and character.
 
 Do not require every internally cast role to appear publicly.
 
 ## 35. Manufactured-writing tells
 
-Flag repeated one-sentence paragraphs, predictable chains of short declarative sentences, breathless long-sentence clusters, identical paragraph shapes, repeated thesis openings, forced three-item lists, canned transitions, repeated binary constructions, generic concluding sentences, unnecessary semicolons, explanatory gloss after showing, formulaic spectatorship lines, and dialogue engineered for quote cards.
+Flag repeated one-sentence paragraphs, predictable chains of short declarative sentences, breathless long-sentence clusters, identical paragraph shapes, repeated thesis openings, forced three-item lists, canned transitions, repeated binary constructions, generic concluding sentences, unnecessary semicolons, explanatory gloss after showing, development-note arc summaries, zero-information escalation paragraphs, formulaic spectatorship lines, invented collective audience reactions, and dialogue engineered for quote cards.
 
 Do not use em dashes in published NCS prose.
 
@@ -396,12 +412,15 @@ Ask:
 - Does the genre feel like itself?
 - Are the central people specific enough to care about?
 - Do character choices create later story?
+- If a central pair is part of the premise's appeal, does one person's judgment materially change what the other does?
 - Is there at least one thing I would remember tomorrow?
 - If the premise contains a recurring value conflict, does the story ever complicate its preferred answer?
 - Are major characters more than positions in that argument?
 - Do people affected by the central system have enough agency to feel alive when relevant?
 - If comedy is promised, are there actually funny situations rather than only warm wit?
 - For process-heavy material, are there real judgment calls and not just correct procedures?
+- When multiple antagonistic actors exist, can I tell who drives the threat and why each matters?
+- Do major set pieces remain inside the production's established physical and comic reality?
 - Are major scenes owned by one section rather than restaged?
 - For television, is THE SEASON concrete without becoming episode recap?
 - For television, does the season discover something the premise did not already know?
@@ -410,7 +429,11 @@ Ask:
 - Does the world feel larger than the plot without visibly performing that requirement?
 - Is the prose polished without becoming rhythmically uniform?
 - Is one metaphor family being worked too hard?
+- Was a strong Finish phrase or image weakened by premature repetition?
 - Are there repeated abstract thesis openings or rhetorical symmetries revealing the writer's method?
+- Did development-note arc summaries stay backstage?
+- Does each connective paragraph actually add information rather than merely announce escalation?
+- Does spectatorship sound like one person with taste rather than fabricated audience consensus?
 - Did internal terminology stay backstage?
 - Does THE FINISH converge pressure rather than collect callbacks?
 - Is there any problem serious enough that another automated pass is clearly worth the risk of changing what already works?
