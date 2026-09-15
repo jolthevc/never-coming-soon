@@ -1,9 +1,9 @@
 # Never Coming Soon
-## Ideas Data Contract v1.5
+## Ideas Data Contract v1.6
 
 ## 1. Purpose
 
-This document defines the single Google Sheets contract used from Ideation through delivered Generation and later publication preparation.
+This document defines the single Google Sheets contract used from Ideation through delivered Generation and eventual publication.
 
 The Sheet should remain lean.
 
@@ -20,7 +20,7 @@ If a field does not materially improve one of those, do not add it.
 
 **One row equals one Never Coming Soon concept across its lifecycle.**
 
-The same row persists from raw seed through Development Select, Generation, delivered draft, optional Publish Prep, and eventual human publication.
+The same row persists from raw seed through Development Select, Generation, delivered draft, media handoff, and eventual human publication.
 
 Use `idea_id` as the durable row key. Never rely on visible row number after filtering or sorting.
 
@@ -71,9 +71,10 @@ Allowed values:
 - `HOLD`
 - `DUPLICATE`
 - `DEVELOPMENT_SELECT`
-- `GENERATING`
 - `DRAFTED`
 - `PUBLISHED`
+
+There is no intermediate `GENERATING` status in the current architecture.
 
 ### RAW
 
@@ -99,29 +100,24 @@ Materially overlaps a surviving concept.
 
 Approved source concept for Generation. `development_packet_json` must be nonblank.
 
-### GENERATING
-
-Temporary execution lock while a Generation run is actively working on this row.
-
-This status does not mean a draft exists.
+A new Generation run leaves the row in `DEVELOPMENT_SELECT` until the complete generated package succeeds.
 
 ### DRAFTED
 
-A complete human-reviewable public article exists and was successfully delivered.
+A complete generated package exists and was successfully delivered.
 
 Required:
 
 - final public article exists
 - a Forensic Editor review scored the exact delivered article
 - `ncs_score` is a valid numeric 1.0 to 10.0 value
-- deterministic completion checks ran
+- deterministic article completion checks ran
+- a schema-valid final `ig_packet_json` exists
 - Google Drive persistence succeeded
 - `final_title` is populated
 - `draft_url` is valid
 
-A schema-valid `ig_packet_json` is **not required** for `DRAFTED`.
-
-`DRAFTED` is an operational artifact state, not a quality award or publication-readiness state.
+`DRAFTED` is an operational artifact state, not a quality award or automatic publication approval.
 
 It does not require a score of 8.0 or above and does not require the editor's recommended revision route to be `NONE`.
 
@@ -258,7 +254,7 @@ Automations must never clear, replace, or rewrite it without explicit human auth
 
 Final public title selected by Generation.
 
-Populate only after a successful draft is ready for delivery.
+Populate only after the complete generated package is ready for delivery.
 
 Do not overwrite `working_title`.
 
@@ -283,7 +279,7 @@ Rules:
 - never inferred from component-score averages
 - never populated with `N/A`, placeholder text, or an Ideation score
 
-The score records editorial quality. It does not gate `DRAFTED`.
+The score records editorial quality. It does not gate `DRAFTED` by threshold.
 
 ### published_url
 
@@ -295,7 +291,7 @@ Generation must never populate, clear, or overwrite this field automatically.
 
 ### ig_packet_json
 
-Optional social asset handoff for productions that have reached Publish Prep.
+Canonical social and media-asset handoff for the generated production.
 
 Schema:
 
@@ -305,83 +301,70 @@ Governance:
 
 `Governance/ncs-social-asset-standard.md`
 
-Initial Draft Generation should normally leave this cell blank for a new production.
+The packet must be built from final canon and the exact final public article, not the raw Ideation premise.
 
-A later explicit Publish Prep workflow may populate or replace it after human interest in publishing the production.
+The exact final object persisted to the cell must pass schema validation after any normalization, repair, mapping, or transformation.
 
-If an existing `DRAFTED` row already has a valid IG packet, force redevelopment must preserve it unless Publish Prep intentionally replaces it.
-
-Do not write `{}`, textual `null`, or a fake placeholder packet merely to satisfy lifecycle state.
+This field is required for `DRAFTED` because downstream media asset generation depends on it.
 
 ## 9. Generation ownership model
 
-Draft Generation reads the selected Ideas row and keeps all intermediate creative artifacts in execution memory.
+Generation reads the selected Ideas row and keeps intermediate creative artifacts in execution memory.
 
 Do not persist development, canon, review, or revision objects as new Sheet columns merely because they exist.
 
-Durable outputs of normal Draft Generation are:
+Durable outputs of successful Generation are:
 
 - `final_title`
 - `draft_url`
 - `ncs_score`
+- `ig_packet_json`
 - lifecycle `status`
-
-`ig_packet_json` is durable only when a later Publish Prep flow actually produces it.
 
 ## 10. Generation start and failure behavior
 
-Before changing status, store the row's current status as `pre_generation_status` in execution memory.
+Generation does not use an intermediate lifecycle write.
 
-At actual Generation start:
+For a normal run, the source row remains `DEVELOPMENT_SELECT` throughout execution.
 
-`DEVELOPMENT_SELECT` or eligible forced `DRAFTED` -> `GENERATING`
+For forced redevelopment, the source row remains `DRAFTED` throughout execution and prior successful final fields remain intact.
 
-If the run fails before successful artifact delivery, restore the exact row to `pre_generation_status` when its current status is still `GENERATING`.
+If a run fails, no lifecycle restoration is needed because no intermediate status was written.
 
-Normal recovery:
+Do not write partial final fields before the full package succeeds.
 
-`GENERATING` -> `DEVELOPMENT_SELECT`
+If duplicate-run protection is needed, solve it at the n8n execution/orchestration level rather than with another durable Sheet status.
 
-Forced redevelopment recovery:
-
-`GENERATING` -> `DRAFTED`
-
-A failed forced redevelopment must preserve previous successful `final_title`, `draft_url`, `ncs_score`, `ig_packet_json`, `human_notes`, `published_url`, and Drive artifact.
-
-## 11. Successful Draft Generation order
+## 11. Successful Generation order
 
 The required success order is:
 
 1. final article exists
 2. Forensic Editor review exists for that exact article
 3. valid numeric `overall_score` exists
-4. deterministic completion QA runs
-5. Google Drive write succeeds
-6. `final_title`, `draft_url`, and `ncs_score` are written to the same Ideas row
-7. status becomes `DRAFTED`
-
-For a new production, `ig_packet_json` may remain blank.
-
-For force redevelopment, preserve any existing successful IG packet.
+4. deterministic article completion QA runs
+5. final `ig_packet_json` exists and passes exact-object Social QA
+6. Google Drive write succeeds
+7. `final_title`, `draft_url`, `ncs_score`, and `ig_packet_json` are written to the same Ideas row
+8. status becomes `DRAFTED`
 
 The score may be below 8.0 and the review may recommend later revision.
 
-`DRAFTED` is the final success-state write.
+`DRAFTED` is the only lifecycle status written by a successful Generation run.
 
-## 12. Publish Prep boundary
+## 12. Revision boundary
 
-Publish Prep is separate from Draft Generation and should run only after explicit human approval or selection.
+Normal Generation does not automatically execute Forensic revision routes.
 
-Publish Prep may perform:
+After human review, a later explicit action may perform:
 
 - targeted prose revision
-- explicit EDITION or CANON redevelopment when requested
+- explicit EDITION redevelopment
+- explicit CANON redevelopment
 - optional new Forensic review when changed prose needs a new score
-- IG Asset Packet Builder
-- IG Packet QA
-- future image and publishing handoff
+- regeneration of `ig_packet_json` when title, public text, canon, or campaign direction materially changes
 
-Do not pay for these stages automatically on every generated idea.
+Do not pay for automatic revision loops on every generated idea.
 
 ## 13. Force redevelopment
 
@@ -389,9 +372,9 @@ Do not pay for these stages automatically on every generated idea.
 
 It may regenerate an eligible `DRAFTED` production.
 
-Preserve source Ideation fields, `human_notes`, `published_url`, and previous successful final fields until replacement succeeds.
+Preserve source Ideation fields, `human_notes`, `published_url`, previous successful final fields, and previous Drive artifact until the replacement package fully succeeds.
 
-Draft Generation does not clear an existing `ig_packet_json`.
+Only then replace `final_title`, `draft_url`, `ncs_score`, and `ig_packet_json`.
 
 ## 14. JSON storage rules
 
@@ -408,9 +391,9 @@ Do not store pseudo-JSON, Markdown fences, or double-stringified objects.
 - preserve `idea_id` and `created_at` forever
 - preserve `human_notes` unless a human explicitly changes it
 - preserve `published_url` unless a human or publishing workflow changes it
-- preserve an existing `ig_packet_json` during Draft Generation unless an explicit Publish Prep action replaces it
 - do not overwrite source Ideation fields merely because Generation made different final decisions
 - do not overwrite a nonblank `development_packet_json` without explicit re-development action
+- do not replace prior successful final fields until a forced-redevelopment replacement package fully succeeds
 - update rows by `idea_id`, not visible row number
 - do not set `PUBLISHED` automatically
 
