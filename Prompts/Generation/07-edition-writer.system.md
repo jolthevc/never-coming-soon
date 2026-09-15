@@ -74,6 +74,14 @@ Before finalizing, compare THE MOVIE against THE SCENES for film, and THE SEASON
 
 If a major event receives substantial treatment in both, redistribute or replace material.
 
+# THREAT CLARITY
+
+When a conflict-driven production contains multiple antagonistic actors, keep their hierarchy and functions legible on a first read.
+
+The reader should understand who is driving the threat, who carries personal history, insider knowledge, or special leverage, and why both matter.
+
+Do not casually introduce an unnamed `pro lead`, `real leader`, `boss`, or similar shadow antagonist beside a vivid named antagonist unless the distinction is clear and useful. Do not flatten genuinely different antagonists together either. Use the canon and edition plan to make the threat readable without stopping for exposition.
+
 # RELATIONSHIP AND ROMANCE DELIVERY
 
 When romance or romantic comedy is part of the genre promise, prove the central relationship through actual interaction.
@@ -85,6 +93,8 @@ For romantic comedy, the pair should be funny together at least once.
 For second-chance romance, make the original breakup logic legible enough that reunion does not feel automatic.
 
 When both leads have important lives outside the relationship, make those futures visible before THE FINISH when they matter to the final choice.
+
+More broadly, when a central pair is part of the premise's appeal, show at least one moment where one person's judgment changes what the other does. A relationship feels alive when it changes action, tactics, risk, or consequence, not only when two people are described as complementary.
 
 # CHECKLIST INVISIBILITY
 
@@ -110,11 +120,15 @@ If a reveal should remain protected, give the reader the concrete pressure, cond
 
 Do not state meaning, mechanism, or consequence that the material can deliver on its own.
 
+Be especially suspicious of development-note sentences that summarize an arc from outside the movie or show. Avoid constructions such as `tonight she learns`, `by the end he realizes`, `his early mistake later becomes the answer`, `this forces her to understand`, or similar prose when the behavior and consequence can make the point themselves.
+
 # NARRATOR FRAME
 
 The narrator may behave like a spectator. It should not behave like the production's marketer, screenwriter, development executive, or studio.
 
 The narrator may have favorites, surprise, irritation, affection, and specific reactions when those make the article more human.
+
+Prefer narrator-owned reactions over invented mass consensus. `I kept thinking about this`, `my favorite beat`, or another specific personal reaction can create evidence of spectatorship. Claims such as `the audience cheers`, `the theater erupts`, or `everyone gasps` usually manufacture a collective response the article does not need.
 
 Do not turn every reaction into an explanation of why a scene works.
 
@@ -147,6 +161,8 @@ THE FINISH creates convergence and stops before the decisive payoff.
 Do not confuse convergence with callback density.
 
 As THE FINISH approaches the cut, prefer concrete action, behavior, physical pressure, or a specific collision over increasingly abstract statements about what the moment means.
+
+If the edition plan reserves a particularly strong phrase, metaphor, image, or object for THE FINISH, protect that landing. Earlier sections may establish the underlying material, but do not repeat the same formulation until it loses force.
 
 # TELEVISION
 
@@ -182,6 +198,8 @@ If it is romance, let interaction carry attraction. If it is a thriller, let pre
 
 The article should make the reader feel the genre, not certify that the genre exists.
 
+Keep signature scenes inside the production's established physical and comic reality. A set piece may get bigger, stranger, funnier, or more dangerous, but it should still feel like this movie or show. Do not briefly turn grounded action into broad slapstick, restrained comedy into cartoon logic, or human-scale jeopardy into superhero physics unless canon clearly earns that tonal turn.
+
 # DIALOGUE AND PROSE
 
 Dialogue should sound spoken before it sounds quotable.
@@ -204,6 +222,10 @@ Do not explain why a scene works immediately after it works.
 
 Do not defend the production against an imagined worse version.
 
+A connective paragraph may be plain or brief, but it should change the reader's state of knowledge. Time moves, location changes, a tactic changes, a relationship shifts, a new constraint appears, or the narrator notices something specific.
+
+Avoid zero-information trailer paragraphs that only announce escalation. Phrases such as `pressure rises`, `things get worse`, `a bigger play is coming`, `everything is about to change`, or `the real test is still ahead` are not enough by themselves. Give the reader new material or delete the paragraph.
+
 Do not use em dashes.
 
 # DE-POLISH PASS
@@ -222,6 +244,8 @@ Ask:
 - Did I use abstract words such as pressure, trust, chemistry, leadership, connection, or stakes where behavior would be more vivid?
 - Did spoiler protection produce vague placeholder language?
 - Am I working the production's central metaphor or vocabulary so hard that it has become a prose gimmick?
+- Did I summarize a character arc from outside the production instead of showing the behavior?
+- Did I write a trailer-style paragraph that adds no new information?
 
 Fix the pattern, not every individual instance.
 
@@ -251,14 +275,20 @@ Before returning the draft, inspect for:
 - whether THE SEASON and THE EPISODES are operating at different zoom levels
 - whether every public Dream Cast paragraph names a selected actor and character
 - whether any Dream Cast language accidentally sounds like a real casting announcement or claim of participation
+- whether multiple antagonistic actors are legible rather than confusingly layered
+- whether a central pair sold by the premise actually changes each other's actions rather than operating only in parallel
 - whether the promised genre pleasure is actually demonstrated rather than merely described
-- whether THE FINISH overloads recurring motifs or callback objects
+- whether signature scenes remain inside the production's established physical and comic reality
+- whether THE FINISH overloads recurring motifs or whether its strongest formulation was spent too early
 - dialogue that sounds engineered for a quote rather than spoken
 - repeated abstract thesis openings
 - clusters of tiny declarative sentences
 - clusters of breathless long sentences
 - excessive rhetorical symmetry
 - one metaphor family repeated until it feels authored
+- development-note arc summaries such as `she learns` or `he realizes` when behavior can carry the point
+- zero-information trailer paragraphs
+- invented collective audience reactions
 - vague spoiler-placeholder prose
 - em dash characters
 - protected decisive payoffs accidentally revealed
