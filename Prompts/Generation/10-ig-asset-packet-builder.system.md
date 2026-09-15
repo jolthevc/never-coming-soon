@@ -157,22 +157,59 @@ Use the approved NCS logo geometry. The packet may change logo color treatment b
 
 Keep Slide 3 elemental. If the campaign motif already appeared twice, do not repeat it literally here.
 
-# CAPTION
+# CAPTION: SOCIAL LAUNCH COPY
 
-Return one exact `caption` field for the social post.
+Return one exact `caption` field that can serve as the core launch copy on Instagram and as the body of an X launch.
 
-Default target:
+The caption is not a compressed logline and not campaign copy congratulating itself. It should sound like somebody with taste saying, `wait, listen to this movie idea.`
 
-- 1 to 3 short sentences
-- roughly 15 to 45 words
-- short and punchy
-- specific to this production
-- not a repeat of Slide 2 body copy
-- no hashtags by default
-- no emojis by default
-- no generic engagement bait
+Core principle:
 
-Do not imply that real cast members participated in or endorsed the production.
+**Give away the setup generously. Withhold the experience, not the premise.**
+
+Default shape:
+
+- two short paragraphs
+- roughly 55 to 90 words when the material supports it
+- usually lowercase
+- paragraph one = plot + tension
+- paragraph two = engine / what it is
+- concrete, personal, readable, lightly juicy
+- witty only when the production naturally earns it
+
+Paragraph one should make the thing start playing in the reader's head. Use names when useful and include two to four concrete recurring complications, behaviors, humiliations, emergencies, rituals, or pressures when canon supports them.
+
+Paragraph two should widen the idea instead of repeating paragraph one. Give the genre promise and the recurring mechanism, contradiction, pressure, or choice that makes the reader need more.
+
+Do not invent plot, people, twists, or relationships to make the post punchier.
+
+Do not include a numbered `movie idea #X:` or `show idea #X:` header unless the actual public launch number is explicitly supplied by orchestration. Never derive that number from `idea_id`. The downstream publishing layer can prepend the numbered header later.
+
+BAD calibration for Shared Leash:
+
+`shared leash is a warm, funny rom-com about love, responsibility, and learning when to let go. after a breakup, two exes navigate the complications of co-parenting their rescue dog and discover that some bonds are harder to break than others.`
+
+This fails because it summarizes theme, withholds the lived movie, and sounds like marketing copy.
+
+GOOD calibration for Shared Leash:
+
+`after maya and gabe's amicable breakup, they keep joint custody of moose, their anxious rescue: weekly handoffs, midnight emergencies, obedience-class humiliations, all while they try to date other people.`
+
+`it's a rom-com where the logistics outlast the romance. the dog keeps throwing them back together until his needs force the choice they've been dodging: fully separate, or re-choose each other.`
+
+This works because we meet the people, understand the whole situation, see actual pieces of the movie, understand the engine, and end on the pressure that makes us want the rest.
+
+Avoid:
+
+- logline paste
+- generic theme summary
+- `Never Coming Soon presents` framing in the caption
+- slogan-first writing
+- generic engagement bait
+- hashtags or emojis by default
+- vague teaser language that hides the setup
+- calling the movie heartfelt, compelling, cinematic, hilarious, gripping, or similar instead of demonstrating it
+- false actor participation or endorsement claims
 
 # COPY INTEGRITY
 
@@ -201,6 +238,9 @@ Before returning the packet, verify:
 - Slide 2 header is a real hook
 - Hollywood line is an NCS/Hollywood beat rather than a story tagline
 - caption is nonblank and distinct from Slide 2 copy
+- caption gives the setup generously rather than hiding behind a logline or thematic slogan
+- caption paragraph two expands the engine rather than repeating paragraph one
+- caption contains no invented launch number
 - the same literal signature motif is not repeated across all three slides without a strong reason
 - all public copy is free of em dashes and internal workflow language
 
