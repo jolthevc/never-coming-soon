@@ -9,13 +9,14 @@ This repository contains the durable creative governance, prompt contracts, stru
 Never Coming Soon uses distinct creative workflows.
 
 1. **Ideation** finds, remembers, compares, curates, lightly expands, and Development-Selects fertile concepts.
-2. **Generation** turns a selected concept into a real internal movie or show, optionally grounds it with research, challenges it, freezes canon, casts it, architects the public edition, drafts it, forensically reviews it, revises material problems when useful, assigns a final holistic NCS score, creates the social asset handoff, and delivers the final article to Google Drive.
-3. **Visual production** executes the prepared social asset packet after text canon and the final edition are stable.
-4. **Publishing and growth** remain downstream human-controlled systems. Generation never auto-publishes.
+2. **Draft Generation** turns a selected concept into a real internal movie or show, optionally grounds it with research, internally challenges and freezes canon, casts it, architects the public edition, drafts it, runs deterministic diagnostics, cold-reviews it once, assigns a holistic NCS score, and delivers the article to Google Drive for human judgment.
+3. **Publish Prep** is a later explicit workflow for human-selected drafts. It may run targeted revision, optional final review, social asset packaging, and later image/publishing handoff.
+4. **Visual production** executes approved social asset packets after the text is selected for publishing work.
+5. **Publishing and growth** remain downstream human-controlled systems. Generation never auto-publishes.
 
 The workflows are intentionally separate.
 
-Ideation explains why an idea deserves development. Generation owns the actual storytelling and may materially improve title, format, characters, relationships, setting, plot, scenes, ending, casting, and other provisional choices.
+Ideation explains why an idea deserves development. Draft Generation owns the actual storytelling and may materially improve title, format, characters, relationships, setting, plot, scenes, ending, casting, and other provisional choices.
 
 The handoff object from Ideation to Generation is the **Development Packet**.
 
@@ -23,20 +24,36 @@ The core Generation principle is:
 
 **Develop the production before writing the article.**
 
-The core review principle is:
+The cost/quality principle is:
 
-**Fix material problems, then stop.**
+**Spend premium model calls where they create creative quality. Do not automatically polish every draft into publication readiness before a human has selected it.**
 
-Generation is not designed to auto-revise every article into theoretical perfection.
+## Current Draft Generation creative path
+
+Normal paid-model path:
+
+1. Production Developer
+2. Research Grounder only when genuinely needed
+3. Canon Builder with internal independent challenge
+4. Casting Director
+5. Edition Architect
+6. Edition Writer
+7. Forensic Editor
+
+The standalone Story Challenger is not part of the normal Draft Generation path. Its critical function is folded into Canon Builder before Canon Freeze.
+
+Automatic Revision Writer, EDITION/CANON rescue loops, duplicate final Forensic review, IG Asset Packet Builder, and IG Packet QA are also not part of normal Draft Generation.
+
+They remain available for later explicit Publish Prep or redevelopment.
 
 ## Source of truth
 
 - `Governance/` contains durable creative, editorial, visual, social, and data standards.
 - `Prompts/Ideation/` contains Ideation agent prompt pairs.
-- `Prompts/Generation/` contains Generation and social-handoff prompt pairs.
+- `Prompts/Generation/` contains generation-stage prompts plus retained prompts for later/optional stages.
 - `Schemas/` contains machine-readable structured-output contracts.
 - `WorkflowSpecs/ideation-workflow-v1.md` contains the n8n Ideation specification.
-- `WorkflowSpecs/generation-workflow-v1.md` contains the current n8n Generation specification despite the legacy filename.
+- `WorkflowSpecs/generation-workflow-v1.md` contains the current n8n Draft Generation specification despite the legacy filename.
 - `Examples/Gold/` contains explicitly approved writing-calibration examples.
 
 GitHub is the source of truth for durable system behavior.
@@ -45,7 +62,7 @@ n8n orchestrates the workflows.
 
 Google Sheets stores the catalog and lifecycle state.
 
-Google Drive stores final human-readable draft artifacts.
+Google Drive stores human-readable draft artifacts.
 
 ## Ideas state
 
@@ -57,43 +74,50 @@ Canonical downstream lifecycle:
 
 `PUBLISHED` is human-controlled.
 
-Generation uses `idea_id` as its sole durable identifier. There is no required `production_id` and no separate Productions state layer in the current architecture.
+Generation uses `idea_id` as its sole durable identifier. There is no required `production_id` and no separate Productions state layer.
 
 Intermediate Generation artifacts remain in n8n execution memory.
 
+The `GENERATING` status remains an active execution lock. The Error Recovery companion restores the exact row to its prior status if a run dies before successful delivery.
+
 ## Meaning of DRAFTED
 
-A successful Generation run updates the same Ideas row with:
+A successful Draft Generation run updates the same Ideas row with:
 
 - `final_title`
 - `draft_url`
 - `ncs_score`
-- `ig_packet_json`
 - `status = DRAFTED`
 
-`DRAFTED` is an artifact-existence state.
+`DRAFTED` means a complete scored article exists in Drive and is ready for human review.
 
-It means the generated package was completed and persisted successfully.
+It does **not** require:
 
-It does not require `ncs_score >= 8.0`.
+- `ig_packet_json`
+- `ncs_score >= 8.0`
+- a Forensic `revision_route` of `NONE`
+- every editorial note to be resolved
+- automatic publication approval
 
-It does not mean every editorial note was resolved.
+The score records quality. The status records artifact lifecycle.
 
-It does not mean the article should automatically publish.
+## Human review and editorial sufficiency
 
-The score records quality. The status records lifecycle.
+The automated Draft Generation system should create a strong first object, diagnose it honestly, and stop.
 
-Keeping those jobs separate makes the dashboard easier to understand and lets the human editor compare strong, middling, and weak completed drafts without pretending failed state.
+A 7.x draft can be a valid generated object when the concept is good, the article is coherent, and remaining weaknesses are matters for later human selection or polish.
 
-## Editorial sufficiency
+The Forensic Editor's route is advisory during Draft Generation.
 
-The automated review system should improve material defects and preserve strong ideas.
+A human may later choose:
 
-A 7.x draft can be a perfectly valid generated object when the concept is good, the article is coherent, and remaining weaknesses are matters of taste or polish.
+- publish-prep as-is
+- targeted prose revision
+- edition restructuring
+- canon redevelopment
+- no publication
 
-The workflow should not reopen canon or rewrite large portions of a good draft merely to push a score over an arbitrary threshold.
-
-Deep automated rescue remains intentionally limited.
+This is intentionally cheaper and less likely to polish personality out of good work than automatically revising every generated draft.
 
 ## Relationship-driven productions
 
@@ -113,9 +137,7 @@ For film, THE MOVIE and THE SCENES should not fully stage the same event.
 
 For television, THE SEASON and THE EPISODES should operate at different zoom levels.
 
-THE SEASON tracks macro change. THE EPISODES gives specific memorable stories.
-
-A longer television season usually does not need every episode represented publicly.
+THE SEASON tracks concrete macro change. THE EPISODES gives selected specific memorable stories.
 
 Deterministic diagnostics can flag likely overlap, while the Forensic Editor makes the editorial judgment.
 
@@ -125,11 +147,13 @@ Casting history is awareness, not a blacklist.
 
 At minimum, approved Gold-example lead casts should be visible to the Casting Director so the system does not immediately reuse the same lead performer out of habit.
 
+Casting may use a cheaper capable creative model than the major development/writing/review stages when practical.
+
 Public THE CAST copy only includes roles with an actual selected performer.
 
 ## Social asset handoff
 
-`ig_packet_json` is the canonical handoff to the image and social asset workflow.
+`ig_packet_json` remains the canonical handoff to future image and social asset workflows, but it is produced during **Publish Prep**, not required during initial Draft Generation.
 
 Its governance lives in:
 
@@ -140,19 +164,13 @@ Its schema lives in:
 
 - `Schemas/ig-asset-packet.schema.json`
 
-The locked three-slide spine is:
+The locked three-slide spine remains:
 
 1. Cover / Poster
 2. Premise
 3. NCS Close
 
-The packet also contains one short social caption.
-
-The structured format field must use exactly `FILM`, `SERIES`, or `LIMITED_SERIES`.
-
-The exact final object written to Sheets must pass schema validation after all normalization or repair.
-
-Campaign coherence should come from art direction, not from repeating the same literal hero object on all three slides.
+Existing DRAFTED rows that already contain IG packets remain valid. Draft Generation should preserve those packets during forced redevelopment unless a later Publish Prep workflow intentionally replaces them.
 
 ## Public integrity
 
