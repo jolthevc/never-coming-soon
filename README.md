@@ -9,14 +9,14 @@ This repository contains the durable creative governance, prompt contracts, stru
 Never Coming Soon uses distinct creative workflows.
 
 1. **Ideation** finds, remembers, compares, curates, lightly expands, and Development-Selects fertile concepts.
-2. **Draft Generation** turns a selected concept into a real internal movie or show, optionally grounds it with research, internally challenges and freezes canon, casts it, architects the public edition, drafts it, runs deterministic diagnostics, cold-reviews it once, assigns a holistic NCS score, and delivers the article to Google Drive for human judgment.
-3. **Publish Prep** is a later explicit workflow for human-selected drafts. It may run targeted revision, optional final review, social asset packaging, and later image/publishing handoff.
-4. **Visual production** executes approved social asset packets after the text is selected for publishing work.
+2. **Generation** turns a selected concept into a real internal movie or show, optionally grounds it with research, internally challenges and freezes canon, casts it, architects the public edition, drafts it, runs deterministic diagnostics, cold-reviews it once, assigns a holistic NCS score, builds the canonical IG/social handoff, and delivers the complete package for human judgment and downstream media asset generation.
+3. **Later revision / redevelopment** is explicit and human-selected. It may run targeted prose revision, edition restructuring, canon redevelopment, rescoring when needed, and IG packet regeneration when the final public object materially changes.
+4. **Visual production** executes the generated social asset packet.
 5. **Publishing and growth** remain downstream human-controlled systems. Generation never auto-publishes.
 
 The workflows are intentionally separate.
 
-Ideation explains why an idea deserves development. Draft Generation owns the actual storytelling and may materially improve title, format, characters, relationships, setting, plot, scenes, ending, casting, and other provisional choices.
+Ideation explains why an idea deserves development. Generation owns the actual storytelling and may materially improve title, format, characters, relationships, setting, plot, scenes, ending, casting, and other provisional choices.
 
 The handoff object from Ideation to Generation is the **Development Packet**.
 
@@ -26,9 +26,9 @@ The core Generation principle is:
 
 The cost/quality principle is:
 
-**Spend premium model calls where they create creative quality. Do not automatically polish every draft into publication readiness before a human has selected it.**
+**Spend premium model calls where they create creative quality or a required downstream artifact. Do not automatically revise every draft before a human has read it.**
 
-## Current Draft Generation creative path
+## Current Generation creative path
 
 Normal paid-model path:
 
@@ -39,12 +39,13 @@ Normal paid-model path:
 5. Edition Architect
 6. Edition Writer
 7. Forensic Editor
+8. IG Asset Packet Builder
 
-The standalone Story Challenger is not part of the normal Draft Generation path. Its critical function is folded into Canon Builder before Canon Freeze.
+The standalone Story Challenger is not part of the normal Generation path. Its critical function is folded into Canon Builder before Canon Freeze.
 
-Automatic Revision Writer, EDITION/CANON rescue loops, duplicate final Forensic review, IG Asset Packet Builder, and IG Packet QA are also not part of normal Draft Generation.
+Automatic Revision Writer, EDITION/CANON rescue loops, and duplicate final Forensic review are also not part of normal Generation.
 
-They remain available for later explicit Publish Prep or redevelopment.
+The IG Asset Packet Builder remains in normal Generation because `ig_packet_json` is required by downstream media asset generation.
 
 ## Source of truth
 
@@ -53,7 +54,7 @@ They remain available for later explicit Publish Prep or redevelopment.
 - `Prompts/Generation/` contains generation-stage prompts plus retained prompts for later/optional stages.
 - `Schemas/` contains machine-readable structured-output contracts.
 - `WorkflowSpecs/ideation-workflow-v1.md` contains the n8n Ideation specification.
-- `WorkflowSpecs/generation-workflow-v1.md` contains the current n8n Draft Generation specification despite the legacy filename.
+- `WorkflowSpecs/generation-workflow-v1.md` contains the current n8n Generation specification despite the legacy filename.
 - `Examples/Gold/` contains explicitly approved writing-calibration examples.
 
 GitHub is the source of truth for durable system behavior.
@@ -70,7 +71,11 @@ The system uses one canonical `Ideas` tab and one row per concept across the lif
 
 Canonical downstream lifecycle:
 
-`DEVELOPMENT_SELECT` -> `GENERATING` -> `DRAFTED` -> `PUBLISHED`
+`DEVELOPMENT_SELECT` -> `DRAFTED` -> `PUBLISHED`
+
+There is no intermediate `GENERATING` Sheet status in the current architecture.
+
+For a normal run, the row remains `DEVELOPMENT_SELECT` until the complete generated package succeeds. For forced redevelopment, a prior `DRAFTED` row remains `DRAFTED` with its successful final fields intact until the replacement package succeeds.
 
 `PUBLISHED` is human-controlled.
 
@@ -78,22 +83,22 @@ Generation uses `idea_id` as its sole durable identifier. There is no required `
 
 Intermediate Generation artifacts remain in n8n execution memory.
 
-The `GENERATING` status remains an active execution lock. The Error Recovery companion restores the exact row to its prior status if a run dies before successful delivery.
+If duplicate-run protection is needed, solve it at the n8n execution/orchestration level rather than with another durable lifecycle status.
 
 ## Meaning of DRAFTED
 
-A successful Draft Generation run updates the same Ideas row with:
+A successful Generation run updates the same Ideas row with:
 
 - `final_title`
 - `draft_url`
 - `ncs_score`
+- `ig_packet_json`
 - `status = DRAFTED`
 
-`DRAFTED` means a complete scored article exists in Drive and is ready for human review.
+`DRAFTED` means a complete scored article and schema-valid media/social handoff exist and were persisted successfully.
 
 It does **not** require:
 
-- `ig_packet_json`
 - `ncs_score >= 8.0`
 - a Forensic `revision_route` of `NONE`
 - every editorial note to be resolved
@@ -103,15 +108,15 @@ The score records quality. The status records artifact lifecycle.
 
 ## Human review and editorial sufficiency
 
-The automated Draft Generation system should create a strong first object, diagnose it honestly, and stop.
+The automated Generation system should create a strong first object, diagnose it honestly, create the required media handoff, and stop.
 
 A 7.x draft can be a valid generated object when the concept is good, the article is coherent, and remaining weaknesses are matters for later human selection or polish.
 
-The Forensic Editor's route is advisory during Draft Generation.
+The Forensic Editor's route is advisory during normal Generation.
 
 A human may later choose:
 
-- publish-prep as-is
+- use as-is
 - targeted prose revision
 - edition restructuring
 - canon redevelopment
@@ -153,7 +158,7 @@ Public THE CAST copy only includes roles with an actual selected performer.
 
 ## Social asset handoff
 
-`ig_packet_json` remains the canonical handoff to future image and social asset workflows, but it is produced during **Publish Prep**, not required during initial Draft Generation.
+`ig_packet_json` is the canonical handoff to the image and social asset workflow and remains part of successful Generation.
 
 Its governance lives in:
 
@@ -170,7 +175,9 @@ The locked three-slide spine remains:
 2. Premise
 3. NCS Close
 
-Existing DRAFTED rows that already contain IG packets remain valid. Draft Generation should preserve those packets during forced redevelopment unless a later Publish Prep workflow intentionally replaces them.
+The exact final packet written to Sheets must pass schema validation and Social QA after all normalization or repair.
+
+If later human-selected revision materially changes the final title, public article, canon, or campaign direction, regenerate the IG packet so downstream media assets stay synchronized with the actual production.
 
 ## Public integrity
 
