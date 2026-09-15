@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Story Development Standard v1.3
+## Story Development Standard v1.4
 
 ## 1. Purpose
 
@@ -102,6 +102,12 @@ A character can be fascinating because of pride, generosity, pettiness, competen
 Do not optimize every character into a perfectly efficient story machine. People can be petty, distracted, embarrassed, avoidant, overconfident, mistaken, or interested in something that does not advance the plot.
 
 A small amount of inconvenient humanity can make a highly designed production feel alive.
+
+Do not reduce an ensemble into permanent positions in the production's argument. A character associated with rules can be merciful. A flexible character can become rigid. A wise person can be wrong. A cautious person can act impulsively.
+
+Let people occasionally violate the role the premise seems to have assigned them when the behavior still belongs to that person.
+
+When the production centers on caring for, serving, coaching, teaching, treating, protecting, transporting, representing, or otherwise managing other people, do not let those people become passive story objects. Children, patients, athletes, students, guests, residents, customers, clients, and family members can remain supporting characters while still having preferences, resistance, humor, loyalty, or choices that alter the story.
 
 ## 7. Relationships create story
 
@@ -245,6 +251,8 @@ Prestige is not a genre.
 
 A genre label creates a promise. Development must create actual scenes that fulfill it.
 
+For comedy and comedy-drama, warmth, charm, witty observation, and funny dialogue are not always enough. Build at least some situations whose escalation, logistics, social stakes, physical business, misunderstanding, or character behavior would be genuinely funny to watch.
+
 Genre should shape the production without sterilizing everything outside its primary adjective. A thriller may be funny for thirty seconds. A comedy can become genuinely sad. A romance can contain a moment of real dislike. Tonal contamination often makes a production feel more human.
 
 ## 15. Process and procedural stories
@@ -266,6 +274,12 @@ The strongest dilemmas often put two legitimate obligations into conflict:
 Do not fabricate a corrupt villain simply to create stakes.
 
 At least some major choices should require judgment rather than merely discovering the correct rule.
+
+More broadly, when the premise is built around a recurring value conflict, do not rig the story so one side is always obviously more humane or intelligent. Ask what each side genuinely protects and what each side can damage when pushed too far.
+
+A rule may prevent favoritism. Flexibility may prevent cruelty. Consistency may protect the quiet person who is bad at asking. Generosity may save somebody the system cannot anticipate. Different scenes or episodes can produce different answers.
+
+Do not manufacture false equivalence. Some choices are simply wrong. The goal is to keep a thesis from replacing drama.
 
 ## 16. Public-demonstration awareness
 
@@ -357,6 +371,8 @@ Watch for supporting characters who differ cosmetically but perform the same dra
 
 For television, the internal ensemble can be larger than the public article's character section, but the show itself still needs a legible center of gravity.
 
+A rich ensemble should contain people rather than ideological chess pieces. If every supporting character reliably represents one position in the premise, look for whether one or two truthful violations of type would create more life.
+
 Cut, combine, or demote characters when the ensemble becomes crowded rather than rich.
 
 ## 22. Simplicity and complexity
@@ -404,6 +420,12 @@ Internally know the season movement, major character changes, several concrete e
 Do not stretch a film into eight episodes.
 
 Do not confuse a long list of plausible episodes with a renewable engine.
+
+Do not let Season One merely prove the premise's opening thesis. Look for at least one development that makes the production discover something the initial kernel did not already know.
+
+The flexible person may learn why rules exist. The strict system may solve a problem unexpectedly well. The warm alternative may create its own unfairness. The apparent rule-breaker may become stricter once responsibility lands on them.
+
+Do not force a contrarian turn simply to seem sophisticated. The season should deepen, complicate, or sharpen the original question through accumulated story.
 
 ## 26. Limited series standard
 
@@ -457,7 +479,12 @@ Before internal canon is frozen, ask:
 - Does the story generate specific scenes?
 - Does escalation come from the dramatic engine rather than arbitrary complication?
 - Does the genre sincerely deliver?
+- If comedy is promised, are there situations that are actually funny rather than only witty?
 - For process-heavy stories, are there judgment calls where legitimate obligations conflict?
+- If the premise contains a recurring value conflict, can more than one side genuinely be right sometimes?
+- Are major ensemble characters more than permanent positions in that conflict?
+- Do people affected by the central system have enough agency to feel alive when relevant?
+- For series, does the season discover something the premise did not already know?
 - Does the ending feel earned?
 - Does the production have its own identity?
 - Is the world doing useful work without constantly proving its specificity?
