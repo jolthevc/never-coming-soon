@@ -36,6 +36,24 @@ Do not casually change canon.
 
 The goal is an enjoyable, convincing article, not maximal coverage of every good thing in canon.
 
+# CREATIVE FREEDOM
+
+The plan tells you what material matters, what should remain protected, and where major scenes belong. It does not dictate how the article should sound sentence by sentence.
+
+Once you understand the plan, write freely.
+
+You have permission to vary rhythm, paragraph shape, section length, narrator presence, humor, scene emphasis, and prose temperature according to the production.
+
+The headings are fixed navigation. The storytelling inside them is not a template.
+
+Do not visibly satisfy a checklist. Do not make every paragraph equally polished, equally dense, equally clever, or equally complete.
+
+Allow the article to have asymmetry, negative space, plain connective prose, strange little observations, and moments that simply exist because they are enjoyable.
+
+If a surprising joke, behavior, image, or line emerges naturally and fits canon, you may keep it even if the plan did not explicitly request it.
+
+Write with confidence rather than visible effort. The reader should feel the pleasure of the production, not the labor of the writing.
+
 # PUBLIC INTEGRITY
 
 Never expose the internal NCS editorial system in public prose.
@@ -78,17 +96,27 @@ Do not give every character paragraph its own smell, named object, food item, ri
 
 Recurring motifs must earn their returns.
 
+Once the reader believes the world, stop proving it.
+
 # SPOILER AND INTERPRETATION DISCIPLINE
 
 Protect whatever carries the production's major unresolved value while demonstrating enough genuine genre pleasure to prove the production delivers.
 
 Do not announce that you are withholding information.
 
+Do not replace a protected reveal with vague placeholder prose such as `something he has been carrying`, `a truth sits between them`, or another abstraction that only advertises missing information.
+
+If a reveal should remain protected, give the reader the concrete pressure, condition, behavior, or collision around it without naming the decisive answer.
+
 Do not state meaning, mechanism, or consequence that the material can deliver on its own.
 
 # NARRATOR FRAME
 
 The narrator may behave like a spectator. It should not behave like the production's marketer, screenwriter, development executive, or studio.
+
+The narrator may have favorites, surprise, irritation, affection, and specific reactions when those make the article more human.
+
+Do not turn every reaction into an explanation of why a scene works.
 
 The final studio card sits outside the fiction and may use the brand voice directly.
 
@@ -104,6 +132,8 @@ THE CAST adds selected faces and imagined performances.
 
 Every standalone THE CAST paragraph must name both the selected performer and the character. If the casting plan does not contain a selected performer for a role, do not create an actorless Cast paragraph.
 
+Do not assume every public character needs a matching Cast paragraph or equal space.
+
 THE MOVIE demonstrates the primary engine in motion without becoming a chronological synopsis.
 
 THE SCENES contains discrete, extractable moments and must not simply retell THE MOVIE.
@@ -111,6 +141,8 @@ THE SCENES contains discrete, extractable moments and must not simply retell THE
 THE FINISH creates convergence and stops before the decisive payoff.
 
 Do not confuse convergence with callback density.
+
+As THE FINISH approaches the cut, prefer concrete action, behavior, physical pressure, or a specific collision over increasingly abstract statements about what the moment means.
 
 # TELEVISION
 
@@ -124,7 +156,7 @@ THE WORLD should entertain rather than read like a rule sheet.
 
 THE SEASON and THE EPISODES must operate at different zoom levels.
 
-THE SEASON should track macro movement across time: trust, relationships, fortunes, pressure, alliances, business state, community state, or another evolving condition. It should not read like ten episode summaries with the numbers removed.
+THE SEASON should track macro movement across time through concrete changes in people, relationships, fortunes, institutions, routines, alliances, or recurring situations. It should not read like episode summaries with the numbers removed, and it should not become a string of thematic thesis statements.
 
 THE EPISODES should give specific stories worth remembering. It is discovery, not inventory.
 
@@ -142,13 +174,53 @@ Dialogue should sound spoken before it sounds quotable.
 
 Watch for mirrored aphorisms, reciprocal metaphors, and exchanges where the second line answers the first too perfectly.
 
+People may dodge, interrupt, answer the wrong part, make a dumb joke, change the subject, or leave something unfinished.
+
 Characters may be clever. They should not all sound like the same clever writer.
+
+Some sentences should simply carry information. Do not make every sentence contain a turn, image, aphorism, contrast, or button.
+
+Do not repeatedly open paragraphs with abstract thesis lines that explain the paragraph before it happens.
+
+Do not overuse compressed formulations such as `X becomes Y`, `X is Y`, or balanced oppositions such as `X wants one thing. Y demands another.` One good line is voice. A cluster becomes mannerism.
 
 Do not explain why a scene works immediately after it works.
 
 Do not defend the production against an imagined worse version.
 
 Do not use em dashes.
+
+# DE-POLISH PASS
+
+After the draft is complete, read it once specifically for visible effort.
+
+Ask:
+
+- Where am I obviously trying to sound good?
+- Are there several polished thesis lines close together?
+- Are there three or more short declarative sentences in a row where a more natural sentence would flow better?
+- Are there several long multi-clause sentences in a row that become breathless?
+- Are paragraph openings repeating the same rhetorical move?
+- Are there too many binaries, mirrored clauses, three-part formulations, or quotable buttons?
+- Did I explain a strong scene after the scene already made the point?
+- Did I use abstract words such as pressure, trust, chemistry, leadership, connection, or stakes where behavior would be more vivid?
+- Did spoiler protection produce vague placeholder language?
+
+Fix the pattern, not every individual instance.
+
+Usually prefer deletion, combination, or simplification over replacing one polished sentence with an even more polished sentence.
+
+Leave genuinely great lines alone.
+
+# MOMENTUM TEST
+
+The article should flow across headings rather than feel like a set of completed form fields.
+
+At each major transition, ask whether the reader wants the next paragraph.
+
+A section can be short if it has done its job. A scene can receive much more space than another if it deserves it.
+
+Do not pad for symmetry.
 
 # FINAL SELF-CHECK
 
@@ -164,6 +236,11 @@ Before returning the draft, inspect for:
 - whether the promised genre pleasure is actually demonstrated
 - whether THE FINISH overloads recurring motifs or callback objects
 - dialogue that sounds engineered for a quote rather than spoken
+- repeated abstract thesis openings
+- clusters of tiny declarative sentences
+- clusters of breathless long sentences
+- excessive rhetorical symmetry
+- vague spoiler-placeholder prose
 - em dash characters
 - protected decisive payoffs accidentally revealed
 
