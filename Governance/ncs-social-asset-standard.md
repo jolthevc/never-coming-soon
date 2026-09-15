@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Social Asset Standard v1.3
+## Social Asset Standard v1.4
 
 ## 1. Purpose
 
@@ -226,27 +226,101 @@ It governs color and presentation, not logo geometry.
 
 Never invent a new logo shape as part of production art direction.
 
-## 14. Caption
+## 14. Social launch copy and caption
 
 Every `ig_packet_json` must include one exact `caption` field.
 
-Default target:
+The caption is not miniature ad copy and it is not a pasted logline. It should feel like a sharp entertainment person telling a friend the movie or show idea they cannot stop thinking about.
 
-- 1 to 3 short sentences
-- roughly 15 to 45 words
-- punchy enough to work without the article
-- specific to the production
-- different from Slide 2 body copy
+Core principle:
 
-Do not default to generic engagement bait such as `Would you watch this?` or `Thoughts?`.
+**Give away the setup generously. Withhold the experience, not the premise.**
 
-Do not include hashtags or emojis by default.
+A reader should understand the full situation, see a few flashes of the production, feel the central pressure, and want the link because they already like what they understand.
 
-Do not imply real cast members endorsed, joined, announced, or participated in the fictional production.
+Default shape:
 
-No backstage technology language.
+- two short paragraphs
+- roughly 55 to 90 words total when the material supports it
+- paragraph one: plot + tension
+- paragraph two: engine / what it is
+- soft internet-native voice, usually lowercase
+- personal, concrete, readable, and lightly juicy
+- dry or witty only when the material naturally supports it
 
-No em dash character.
+### Paragraph one: plot + tension
+
+Tell us what is happening and what is uncomfortable, funny, dangerous, romantic, or emotionally loaded about it.
+
+Use character names when they make the setup more intimate.
+
+Give two to four concrete glimpses when available: a ritual, recurring complication, humiliation, emergency, handoff, confrontation, or other thing we can begin watching in our heads.
+
+Build only from final canon and the finished article. Do not invent a new person, twist, relationship, scene, or fact to make the caption punchier.
+
+### Paragraph two: engine / what it is
+
+Open the idea up rather than repeating paragraph one.
+
+Name or imply the genre promise, then reveal the wider bite: the recurring mechanism, contradiction, choice, pressure, or question that keeps generating story.
+
+A strong final phrase often leaves us with the choice the characters cannot avoid, the pressure that has to break, or the reason the situation cannot continue forever.
+
+Do not summarize the theme for us.
+
+### Launch wrapper
+
+For an X launch, downstream publishing may prepend:
+
+`movie idea #X: title`
+
+or:
+
+`show idea #X: title`
+
+The number is the public launch count, never `idea_id`.
+
+Generation should not invent that number when it is not supplied. The `caption` field should remain useful as the launch body on X, Instagram, or other social surfaces without requiring the numbered wrapper.
+
+### Bad versus good calibration: Shared Leash
+
+**BAD**
+
+`shared leash is a warm, funny rom-com about love, responsibility, and learning when to let go. after a breakup, two exes navigate the complications of co-parenting their rescue dog and discover that some bonds are harder to break than others.`
+
+Why it fails: generic theme language, no lived movie, no memorable complications, and it sounds like marketing copy describing the concept from outside.
+
+**GOOD**
+
+`movie idea #12: shared leash`
+
+`after maya and gabe's amicable breakup, they keep joint custody of moose, their anxious rescue: weekly handoffs, midnight emergencies, obedience-class humiliations, all while they try to date other people.`
+
+`it's a rom-com where the logistics outlast the romance. the dog keeps throwing them back together until his needs force the choice they've been dodging: fully separate, or re-choose each other.`
+
+Why it works: we meet the people, get the full situation, see several pieces of the movie, understand the recurring engine, and end on the pressure that makes us want more.
+
+### Caption failure modes
+
+Avoid:
+
+- logline paste
+- generic thematic language such as `a story about love, loss, and learning to let go`
+- corporate framing such as `Never Coming Soon presents`
+- slogan-first copy
+- announcing that something is heartfelt, compelling, cinematic, hilarious, or gripping instead of demonstrating it
+- vague teaser language that hides the setup
+- generic engagement bait such as `Would you watch this?` or `Thoughts?`
+- hashtags or emojis by default
+- false claims that real cast members endorsed, joined, announced, or participated in the fictional production
+- backstage technology language
+- em dash characters
+
+The article voice says: **I somehow already watched this.**
+
+The social-launch voice says: **wait, listen to this movie idea.**
+
+They should feel related, not identical.
 
 ## 15. Image prompt standard
 
@@ -310,7 +384,9 @@ Before persistence, ask:
 - Is the Hollywood line actually about the NCS/Hollywood conceit?
 - Is the approved logo geometry preserved?
 - Do all three slides feel like one campaign without repeating the same literal motif three times?
-- Is the caption short, specific, and non-redundant?
+- Does the caption feel like somebody telling us an irresistible movie/show idea rather than advertising one?
+- Does the caption give enough concrete plot and recurring pressure to make the production play in the reader's head?
+- Does paragraph two expand the engine rather than repeat paragraph one?
 - Is `format` one of the exact canonical uppercase enum values?
 - Has the exact final persisted object passed the schema?
 - Is all public copy free of em dashes, workflow language, and false participation claims?
