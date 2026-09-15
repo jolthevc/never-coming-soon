@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Casting Standard v1.2
+## Casting Standard v1.3
 
 ## 1. Purpose
 
@@ -112,22 +112,48 @@ A series may need 4 to 7.
 
 Use fewer when the production is intimate.
 
-## 11. Public Cast completeness
+## 11. Public section framing
 
-Every paragraph inside the public THE CAST section must identify:
+The canonical public heading is:
+
+**THE DREAM CAST**
+
+Use this instead of `THE CAST`.
+
+The heading does the disclosure work once, cleanly. It tells the reader these are Never Coming Soon's imagined choices rather than real casting announcements, without breaking the article with repeated disclaimers.
+
+Do not add boilerplate such as `not actually cast`, `for entertainment purposes`, or other legalistic framing unless a separate product requirement demands it.
+
+NCS may confidently imagine the performance. It must not imply that a real performer agreed to participate, signed on, endorsed the project, or was actually cast.
+
+Avoid real-world announcement language such as:
+
+- has been cast as
+- joins the cast
+- will star as
+- is attached to
+- has signed on
+- reunites with
+- the production has cast
+
+The section header establishes the hypothetical frame. Inside the section, concise imaginative language such as `X as Y`, `X is Y`, or `we see X as Y` is acceptable when the surrounding copy clearly remains inside the NCS dream-cast conceit.
+
+## 12. Public Dream Cast completeness
+
+Every paragraph inside the public THE DREAM CAST section must identify:
 
 - the selected performer
 - the character they play
 
-If no performer was selected for a role, do not include a standalone Cast paragraph for that character.
+If no performer was selected for a role, do not include a standalone Dream Cast paragraph for that character.
 
 A line such as `Denny reads exactly right because...` without naming who plays Denny is not a casting paragraph. Move the useful observation elsewhere or omit it.
 
 Do not fill the gap by inventing a last-minute actor after the casting plan is already final unless the workflow explicitly reopens casting.
 
-## 12. Public casting voice
+## 13. Public casting voice
 
-The published Cast section should sound as though Never Coming Soon has already watched the performance.
+The published Dream Cast section should sound as though Never Coming Soon can already imagine the performance clearly.
 
 Internal logic may say:
 
@@ -135,27 +161,29 @@ Internal logic may say:
 
 Published copy should say something closer to:
 
-> Walton Goggins is Frank Mercer, and about five minutes in the whole thing makes sense.
+> Walton Goggins as Frank Mercer, and about five minutes in the whole thing makes sense.
 
-Then describe what the imagined performance actually feels like on screen: a look, rhythm, pause, comic beat, physical habit, chemistry, stillness, volatility, warmth, or another specific behavior.
+Then describe what the imagined performance feels like on screen: a look, rhythm, pause, comic beat, physical habit, chemistry, stillness, volatility, warmth, or another specific behavior.
 
-Prefer declarative language such as:
+The heading already tells the reader this is dream casting, so do not hedge every sentence with `would` or `could`.
 
+Prefer confident imaginative language such as:
+
+- X as Y
 - X is Y
-- X plays Y with...
-- some of X's best moments are...
-- their scenes become funnier when...
+- some of X's best imagined moments are...
+- their scenes get funnier when...
 
-Avoid hypothetical public language such as:
+Avoid development-copy language such as:
 
 - would bring
 - could capture
 - needs someone who
 - would be perfect because
 
-Those phrases expose the development process rather than preserving the public conceit.
+Those phrases expose the casting process rather than making the imagined performance vivid.
 
-## 13. Public casting length
+## 14. Public casting length
 
 Casting explanations should be concise enough that the section remains pleasurable rather than analytical.
 
@@ -163,7 +191,7 @@ The reader should immediately picture the actor behaving as the character.
 
 Do not repeat the full character portrait. Add the face and performance.
 
-## 14. Final test
+## 15. Final test
 
 Before locking a preferred cast, ask:
 
@@ -174,4 +202,5 @@ Before locking a preferred cast, ask:
 - Are we repeating a recent NCS lead out of habit?
 - If we are repeating one, is the fit clearly worth it?
 - Would the reader immediately understand why this choice is fun?
-- Can every public Cast paragraph name an actual selected performer?
+- Can every public Dream Cast paragraph name an actual selected performer and character?
+- Does any public line accidentally sound like a real casting announcement or claim of participation?
