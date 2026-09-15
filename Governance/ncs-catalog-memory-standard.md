@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Catalog Memory and Deduplication Standard v1.1
+## Catalog Memory and Deduplication Standard v1.2
 
 ## 1. Purpose
 
@@ -52,6 +52,8 @@ These are not duplicates by themselves:
 
 Genres, themes, arenas, settings, and archetypes are reusable materials.
 
+Shared structural devices are also reusable. Two productions may both be real-time pressure cookers, countdown stories, odd-couple pairings, second-chance romances, workplace ensembles, or stories under public scrutiny without being duplicates.
+
 ## 5. What may be meaningful overlap
 
 Overlap deserves attention when several structural elements recur together.
@@ -82,6 +84,8 @@ Watch for concepts where the following remain essentially the same while the pro
 
 A cosmetic reskin should not survive as a distinct concept merely because the setting is different.
 
+But a shared abstract template is not enough. If the new arena materially changes what people do, what choices hurt, what scenes occur, what relationship drives the story, or why the audience cares, the concept may be genuinely distinct.
+
 ## 7. Duplicate statuses
 
 Use three judgments:
@@ -100,6 +104,10 @@ Overlap never automatically rejects a concept.
 
 The concept materially recreates an existing Never Coming Soon idea or a stronger idea in the same run such that developing both would add little creative value.
 
+The `DUPLICATE` bar is intentionally high because it is a blocking status.
+
+When two concepts plausibly deserve to exist as separate movies or shows, use `OVERLAP` or `CLEAR` rather than blocking one merely because an abstract description makes them rhyme.
+
 ## 8. Same-run duplication
 
 Duplicate control must compare new concepts against one another, not only against historical rows.
@@ -114,6 +122,8 @@ When two new concepts are materially duplicates:
 - explain which idea is the canonical survivor
 
 This is one of the most important anti-convergence checks in the workflow.
+
+Same-run comparison is always between different `idea_id` values.
 
 ## 9. Structural memory signature
 
@@ -144,15 +154,19 @@ Do not use hash distance, prefix similarity, or other mathematical theater as a 
 
 Semantic duplicate judgment still requires comparison of the actual concept material.
 
+An exact fingerprint match only matters when it belongs to a different idea ID. A row matching its own fingerprint is not duplicate evidence.
+
 ## 11. Semantic duplicate judgment
 
 A semantic audit should compare the candidate against prior concepts and same-run neighbors and answer:
 
 - what is similar?
 - what is materially different?
-- is the similarity merely genre convention?
+- is the similarity merely genre convention or a reusable dramatic device?
 - does the candidate offer a different emotional engine?
 - does the setup generate meaningfully different scenes?
+- does the central relationship behave differently?
+- do the major choices and consequences differ?
 - would both productions plausibly deserve to exist in the same catalog?
 
 When the compressed historical memory fits comfortably inside the model context, prefer complete catalog coverage over brittle keyword-only retrieval. A semantic reskin can use different vocabulary and still be the same dramatic machine.
@@ -161,7 +175,35 @@ When the catalog becomes too large for complete comparison, use staged retrieval
 
 The answer should be editorial, not mathematical theater.
 
-## 12. Two-pass duplicate protection
+A useful blocking test is:
+
+**Could you preserve most major scenes, the central relationship, conflict progression, and emotional destination by swapping nouns and surface details?**
+
+If yes, `DUPLICATE` may be appropriate.
+
+If not, meaningful resemblance is usually `OVERLAP`, not duplication.
+
+## 12. Hard self-exclusion invariant
+
+A candidate can never be compared against itself as historical evidence.
+
+Before every duplicate audit, orchestration should exclude every current candidate `idea_id` from the historical-memory set used to judge that same candidate. The same exclusion applies to exact fingerprint collision lists.
+
+The current candidate batch is already supplied separately for same-run comparison. Historical memory should represent prior catalog ideas, not a second copy of the candidates being judged.
+
+Hard rules:
+
+- `duplicate_of` must never equal the candidate's own `idea_id`
+- `similar_ideas` must never include the candidate's own `idea_id`
+- an exact fingerprint collision with the same `idea_id` must be discarded
+- if a persisted current-run row appears in historical memory because the workflow wrote it before auditing, ignore it
+- current-run concepts may still be compared with one another, but only across different IDs
+
+A self-match is a workflow assembly defect, not a creative judgment.
+
+If a duplicate-audit result violates this invariant, treat the result as invalid and repair or rerun the audit before any `DUPLICATE` status is allowed to block downstream development.
+
+## 13. Two-pass duplicate protection
 
 A seed can change during light expansion.
 
@@ -173,7 +215,9 @@ Therefore:
 
 The second pass should catch concepts whose richer development reveals a collision that was not visible in the raw premise.
 
-## 13. Creative grooves
+Both passes must obey the self-exclusion invariant.
+
+## 14. Creative grooves
 
 Catalog memory should also notice repeated tendencies across recent ideas.
 
@@ -195,7 +239,7 @@ These observations inform ideation but do not impose bans.
 
 If the best next idea is another thriller, make another thriller.
 
-## 14. Historical status matters
+## 15. Historical status matters
 
 Not every historical row should exert the same blocking force.
 
@@ -208,7 +252,7 @@ Use status as context when judging a near-duplicate:
 
 Catalog memory exists to prevent accidental repetition, not to grant permanent ownership to a weak early draft.
 
-## 15. Slate awareness
+## 16. Slate awareness
 
 The Ideation Director should review recent `DEVELOP`, `DEVELOPMENT_SELECT`, and any published concepts available to the workflow and summarize creative drift.
 
@@ -228,7 +272,7 @@ Bad language:
 
 "Generate exactly three comedies and two family films because the slate needs balance."
 
-## 16. Historical inventory
+## 17. Historical inventory
 
 `PROMISING` and `HOLD` ideas remain useful creative inventory.
 
@@ -242,7 +286,7 @@ A future ideation run may revisit them when:
 - a current event or discovery unlocks the idea
 - Generation needs an alternative concept
 
-## 17. Human notes
+## 18. Human notes
 
 Human notes are high-authority memory.
 
@@ -250,7 +294,7 @@ If a human note explicitly says an idea should not be repeated, should be revisi
 
 Human notes should not be sprayed into every creative prompt. Retrieve them only when they materially affect the concept being compared or the run direction.
 
-## 18. Casting repetition
+## 19. Casting repetition
 
 Ideation does not need a casting registry.
 
@@ -258,13 +302,13 @@ If provisional casting ever appears in concept notes, actor repetition is not a 
 
 Repeated actor usage is a downstream quality issue.
 
-## 19. Title duplication
+## 20. Title duplication
 
 A repeated or highly similar title should be flagged, but title conflict does not mean concept duplication.
 
 Working titles are provisional.
 
-## 20. Human override
+## 21. Human override
 
 Human judgment can override duplicate status.
 
@@ -272,6 +316,6 @@ A concept marked `DUPLICATE` by the agent may be retained if the human editor be
 
 Likewise, a technically `CLEAR` concept may be held if it simply feels too familiar to recent work.
 
-## 21. Final memory test
+## 22. Final memory test
 
 The catalog memory system is working when it makes the next batch more imaginative without making the ideation engine timid.
