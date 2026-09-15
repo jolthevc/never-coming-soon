@@ -60,6 +60,8 @@ Protect the personality of a good draft.
 
 Do not confuse `I can imagine a better sentence` with `this sentence requires revision`.
 
+The governance is a set of guardrails, not a rubric the public prose must visibly satisfy. Do not punish healthy irregularity, asymmetry, plainness, humor, incompleteness, or a surprising stylistic choice merely because it is not the expected solution.
+
 # PRODUCTION CHECK
 
 Ask whether the production itself is enjoyable, developed, and specific enough to wish existed.
@@ -76,11 +78,13 @@ Ask whether the production contains at least one thing somebody might remember t
 
 Characters do not need to be perfectly optimized for story.
 
-Do not treat small irregularities, unresolved side details, awkward behavior, or asymmetry as defects merely because they lack payoff.
+Do not treat small irregularities, unresolved side details, awkward behavior, asymmetry, interruptions, miscommunication, or partial emotional articulation as defects merely because they lack payoff.
 
 Flag over-design when every person seems to have a signature prop, complete mini-arc, recurring bit, and neat resolution.
 
 Healthy negative space is allowed.
+
+Protect happy accidents that make the production feel alive.
 
 # SECTION OWNERSHIP AND OVERLAP
 
@@ -104,6 +108,8 @@ When any relationship is prominently sold by THE PITCH, ask whether the article 
 
 Do not demand extra relationship material when one consequential interaction already does the job.
 
+For exes or second-chance dynamics, ask whether the past creates an actual present obstacle rather than existing only as a label.
+
 # TELEVISION CHECK
 
 For SERIES and LIMITED_SERIES, review against the dedicated television standard.
@@ -122,6 +128,8 @@ Populate `internal_language_flags` with every specific instance you find.
 
 Visible process language normally deserves a focused PROSE fix.
 
+Also flag spoiler-shaped vagueness such as `something he has been carrying`, `a truth sits between them`, or similar placeholder language when the sentence exists mainly to advertise withheld information rather than create concrete pressure.
+
 # SPECIFICITY CHECK
 
 Ask whether the article visibly performs the governance checklist.
@@ -134,7 +142,7 @@ Once the reader believes the world, additional detail should earn its place thro
 
 # PROSE AND RHYTHM CHECK
 
-Review paragraph rhythm, sentence rhythm, and rhetorical variety rather than enforcing sentence-length quotas.
+Review paragraph rhythm, sentence rhythm, rhetorical variety, and flow rather than enforcing sentence-length quotas.
 
 Watch for:
 
@@ -142,15 +150,21 @@ Watch for:
 - several long, multi-turn sentences in a row
 - chains of tiny declarative sentences
 - repeated binary constructions
+- repeated `X becomes Y` or `X is Y` formulations
 - mirrored clauses
 - forced three-part formulations
 - every paragraph ending with a polished button
 - every paragraph trying to contain a quotable line
 - explanatory commentary immediately after a scene already worked
+- abrupt section resets that make the article feel like completed form fields rather than one flowing piece
 
 One instance is often fine. Pattern is the problem.
 
 The prose should feel polished without feeling optimized sentence by sentence.
+
+Ask whether the article sounds natural read aloud. A sentence can be long or short if the surrounding cluster breathes.
+
+Ask whether some sentences are allowed to be plain. Constant rhetorical finish can feel synthetic even when every sentence is individually good.
 
 # DIALOGUE CHECK
 
@@ -158,13 +172,13 @@ Dialogue should sound spoken before it sounds quotable.
 
 Pay attention to mirrored aphorisms, reciprocal metaphors, overly neat reversals, and exchanges where both speakers sound like the same clever writer.
 
-Allow misalignment, interruption, avoidance, misunderstanding, incomplete answers, and silence.
+Allow misalignment, interruption, avoidance, misunderstanding, incomplete answers, silence, weak jokes, and imperfect phrasing.
 
 Do not sand lively dialogue into bland realism merely because it is clever.
 
 # NARRATOR CHECK
 
-The narrator may have taste, favorites, surprises, and specific reactions.
+The narrator may have taste, favorites, surprises, irritation, affection, and specific reactions.
 
 That is useful evidence of spectatorship.
 
@@ -177,6 +191,16 @@ The narrator should sound like someone who watched the production, not someone g
 Watch for words such as pressure, trust, chemistry, connection, stakes, vulnerability, leadership, identity, tension, and growth doing work that behavior could do more vividly.
 
 Do not ban these words. Flag them only when they substitute for actual material.
+
+# MOMENTUM CHECK
+
+Ask a simple reader question: does the article keep making me want the next paragraph?
+
+A heading may reset navigation without resetting momentum.
+
+Flag stretches where roster-like character or casting blocks, procedural inventories, or evenly weighted sections stall the reading experience.
+
+Do not demand artificial transitions. Sometimes the best fix is simply fewer entries, less explanation, or a shorter section.
 
 # STRENGTH PRESERVATION
 
@@ -203,6 +227,8 @@ Typical guidance:
 - specificity saturation confined to prose: PROSE or EDITION depending on scope
 - public internal-language leakage: PROSE unless structure caused it
 - actorless Cast paragraph: PROSE when the role can simply be removed
+- prose that feels over-authored because of repeated rhetorical patterns: PROSE when the problem is material
+- roster-like public focus that materially stalls the article: EDITION
 
 Do not route to CANON merely because the production could be more ambitious.
 
