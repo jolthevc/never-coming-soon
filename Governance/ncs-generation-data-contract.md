@@ -1,11 +1,11 @@
 # Never Coming Soon
-## Generation Data Contract v2.3
+## Generation Data Contract v2.4
 
 ## 1. Purpose
 
-This document defines Generation state and persistence for the lean Draft Generation workflow.
+This document defines Generation state and persistence for the lean Generation workflow.
 
-Generation exists to produce a strong human-reviewable public article efficiently. Publishing polish and social packaging are separate later concerns.
+Generation exists to produce a strong human-reviewable public article efficiently while also producing the canonical social handoff required by downstream media asset generation.
 
 There is no separate Productions state table.
 
@@ -31,24 +31,19 @@ Normal entry requires:
 
 An explicit `force_redevelopment=true` run may begin from an eligible `DRAFTED` row and requires explicit `idea_id`.
 
-Before changing status, store `pre_generation_status` in execution memory.
+Generation does not use an intermediate Sheet status lock.
 
-## 4. Start lock
+For a normal run, the row remains `DEVELOPMENT_SELECT` until the complete generated package succeeds.
 
-Once the row is validated and the run is genuinely beginning, set the exact selected row to:
+For forced redevelopment, the row remains `DRAFTED` and the prior successful final fields remain untouched until the replacement package succeeds.
 
-`GENERATING`
+Do not write `GENERATING` during execution.
 
-Keep this lock. It prevents duplicate work and makes active state visible.
-
-The Error Recovery companion should restore the exact row when a run dies after the lock is written.
-
-## 5. Execution-memory workspace
+## 4. Execution-memory workspace
 
 The following normally remain temporary only:
 
 - source Ideas row snapshot
-- `pre_generation_status`
 - parsed Development Packet
 - production development blueprint
 - research packet when used
@@ -58,27 +53,28 @@ The following normally remain temporary only:
 - draft article
 - deterministic diagnostics
 - forensic editorial review
+- IG asset packet before persistence
 
-The normal Draft Generation path no longer requires:
+The normal Generation path no longer requires:
 
 - standalone Story Challenge output
 - automatic Revision Writer output
 - deep rescue-loop state
-- IG asset packet before `DRAFTED`
+- duplicate final Forensic review of unchanged prose
 
 Do not add Sheet columns for internal stages.
 
-## 6. Canon authority
+## 5. Canon authority
 
-After the Canon Builder, the canon bible is authoritative for that execution.
+After Canon Builder succeeds, the canon bible is authoritative for that execution.
 
-The normal Draft Generation path does not run a standalone Story Challenger. The Canon Builder performs an independent internal stress-test before freezing canon.
+The normal Generation path does not run a standalone Story Challenger. The Canon Builder performs an independent internal stress-test before freezing canon.
 
-Casting, edition architecture, and writing should represent frozen canon rather than casually reinvent it.
+Casting, edition architecture, writing, and social packaging should represent frozen canon rather than casually reinvent it.
 
-Foundational redevelopment after human review is a later explicit action, not an automatic Draft Generation rescue loop.
+Foundational redevelopment after human review is a later explicit action, not an automatic Generation rescue loop.
 
-## 7. Normal creative sequence
+## 6. Normal paid-model sequence
 
 The normal paid-model path is:
 
@@ -89,14 +85,17 @@ The normal paid-model path is:
 5. Edition Architect
 6. Edition Writer
 7. Forensic Editor
+8. IG Asset Packet Builder
+
+With no research, this is seven model calls.
 
 The Forensic Editor remains a fresh cold read.
 
-Its `revision_route` is advisory during Draft Generation. Do not automatically execute PROSE, EDITION, or CANON revision routes before human review.
+Its `revision_route` is advisory during normal Generation. Do not automatically execute PROSE, EDITION, or CANON revision routes before human review.
 
-## 8. Draft scoring contract
+## 7. Draft scoring contract
 
-The article delivered by Draft Generation must have a valid numeric holistic NCS score from the Forensic Editor review of that exact article.
+The article delivered by Generation must have a valid numeric holistic NCS score from the Forensic Editor review of that exact article.
 
 Rules:
 
@@ -106,7 +105,7 @@ Rules:
 - not `N/A`
 - not copied from an earlier article version
 
-Because normal Draft Generation does not automatically revise article prose after Forensic Review, the first Forensic score is normally the exact delivered-draft score.
+Because normal Generation does not automatically revise article prose after Forensic Review, the first Forensic score is normally the exact delivered-draft score.
 
 Do not run a duplicate final Forensic call when article text is unchanged.
 
@@ -118,9 +117,9 @@ Do not require `overall_score >= 8.0`.
 
 Do not require `revision_route = NONE`.
 
-## 9. Deterministic article QA
+## 8. Deterministic article QA
 
-Before delivery, deterministic QA should verify at minimum:
+Before social packaging and delivery, deterministic QA should verify at minimum:
 
 - article nonblank
 - final title nonblank
@@ -137,23 +136,50 @@ Diagnostics should also inspect section overlap, especially THE MOVIE versus THE
 
 These diagnostics are cheap signals, not creative rewrite rules.
 
-Minor overlap, rhythm, motif, casting, or prose warnings do not block `DRAFTED`.
+Minor overlap, rhythm, motif, casting, or prose warnings do not block completion.
 
-## 10. Social handoff is deferred
+## 9. Social handoff contract
 
-Initial Draft Generation does **not** require or generate `ig_packet_json`.
+A successful Generation run produces `ig_packet_json` matching:
 
-The IG Asset Packet Builder and IG Packet QA belong to a later Publish Prep workflow that runs only after explicit human interest in publishing the production.
+`Schemas/ig-asset-packet.schema.json`
 
-For a new Draft Generation row, `ig_packet_json` may remain blank.
+and governed by:
 
-For force redevelopment of an existing `DRAFTED` row, preserve any prior successful `ig_packet_json` unless and until a later Publish Prep workflow intentionally replaces it.
+`Governance/ncs-social-asset-standard.md`
 
-Do not fabricate placeholder social JSON.
+The packet is a required handoff to downstream media asset generation.
 
-## 11. Google Drive delivery
+It is built from:
 
-When the article passes technical completion checks, write the final Google Doc.
+- final canon
+- final title
+- exact delivered article
+- final holistic score
+- resolved canonical format
+
+The packet contains:
+
+- campaign brief
+- logo treatment
+- short social caption
+- locked Slide 1 cover/poster packet
+- locked Slide 2 premise packet
+- locked Slide 3 NCS close packet
+
+The packet `format` field must exactly match `FILM`, `SERIES`, or `LIMITED_SERIES`.
+
+Validate the exact final object that will be stringified into the Ideas cell after any repair, normalization, mapping, or transformation.
+
+If IG Packet QA fails, allow one packet-only repair and validate the repaired object again.
+
+Do not rewrite the article because the social packet alone failed.
+
+A structurally invalid final IG packet blocks `DRAFTED` because the downstream media handoff would be incomplete.
+
+## 10. Google Drive delivery
+
+After article QA and final IG packet validation succeed, write the final Google Doc.
 
 Destination pattern:
 
@@ -169,90 +195,84 @@ final article only
 
 Do not include internal JSON, diagnostics, research, canon, review notes, or prompts.
 
-## 12. Final Ideas update
+## 11. Final Ideas update
 
-Only after successful Drive persistence, update the same Ideas row with:
+Only after successful IG validation and Drive persistence, update the same Ideas row with:
 
 - `final_title`
 - `draft_url`
 - `ncs_score`
+- `ig_packet_json`
 - `status = DRAFTED`
 
-For a new draft, leave `ig_packet_json` blank.
-
-For force redevelopment, preserve an existing successful `ig_packet_json` unless a separate Publish Prep flow replaces it.
-
-`DRAFTED` must be the last success-state write.
+`DRAFTED` must be the final lifecycle write for a successful run.
 
 Generation must never populate `published_url` or set `PUBLISHED`.
 
-## 13. Meaning of DRAFTED
+## 12. Meaning of DRAFTED
 
 `DRAFTED` means:
 
 - a complete public article exists
 - the delivered article has an honest numeric NCS score
 - deterministic completion checks ran
+- a schema-valid final `ig_packet_json` exists
 - the article was successfully persisted to Google Drive
-- `final_title`, `draft_url`, and `ncs_score` were written successfully
+- `final_title`, `draft_url`, `ncs_score`, and `ig_packet_json` were written successfully
 
-`DRAFTED` does **not** require:
+`DRAFTED` does not require:
 
-- an IG packet
 - score of 8.0 or above
 - `revision_route = NONE`
 - no remaining editorial notes
 - automatic publication approval
 - Gold quality
 
-The lifecycle state records that the draft artifact exists. The score records editorial quality. Social readiness is a separate later concern.
+The lifecycle state records that the generated package exists. The score records editorial quality.
 
-## 14. Failure recovery
+## 13. Failure behavior without an intermediate status
 
-If a run fails after setting `GENERATING` but before successful draft delivery:
+Normal Generation does not mutate lifecycle state until successful completion.
 
-- do not write a fake or partial `draft_url`
-- do not write `N/A` into `ncs_score`
-- do not replace successful prior final fields
-- restore the exact row to `pre_generation_status` only when its current status is still `GENERATING`
+If a new run fails, the source row simply remains `DEVELOPMENT_SELECT`.
 
-For a normal new run:
+If forced redevelopment fails, the source row remains `DRAFTED` with the prior successful final fields and Drive artifact intact.
 
-`pre_generation_status = DEVELOPMENT_SELECT`
+Do not write partial final fields during the run.
 
-For force redevelopment:
+Do not write a fake or partial `draft_url`.
 
-`pre_generation_status = DRAFTED`
+Do not write `N/A` into `ncs_score`.
 
-Preserve prior successful `final_title`, `draft_url`, `ncs_score`, `ig_packet_json`, `human_notes`, `published_url`, and Drive artifact until replacement delivery succeeds.
+Do not clear or replace a prior successful `ig_packet_json` until the replacement package has fully succeeded.
 
-## 15. Force redevelopment
+If duplicate-run protection is needed, solve it at the orchestration/execution level rather than by adding another durable Sheet lifecycle state.
+
+## 14. Force redevelopment
 
 `force_redevelopment=true` requires explicit `idea_id`.
 
 It may regenerate an eligible `DRAFTED` production without deleting the successful existing artifact first.
 
-Only replace final title, draft URL, score, and status after the new draft is successfully persisted.
+Only replace final title, draft URL, score, IG packet, and status after the replacement package is successfully complete.
 
-Do not clear an existing IG packet as a side effect of Draft Generation.
+## 15. Later revision boundary
 
-## 16. Publish Prep boundary
+Human review may later trigger targeted revision or redevelopment.
 
-Publish Prep is a separate, explicit later workflow.
-
-It may load a `DRAFTED` article plus its Forensic review and then run, only when desired:
+Possible later actions include:
 
 - targeted Revision Writer
-- optional final Forensic review when revised prose needs a new score
-- IG Asset Packet Builder
-- IG Packet QA
-- future image/social handoff
+- optional new Forensic review when changed prose needs a new score
+- explicit EDITION redevelopment
+- explicit CANON redevelopment
+- regeneration of `ig_packet_json` when final public text, title, canon, or campaign direction materially changes
 
-CANON or EDITION redevelopment should require explicit human action rather than automatic Draft Generation looping.
+Do not automatically spend those premium calls on every initial generation.
 
-## 17. Human authority
+## 16. Human authority
 
-`DRAFTED` means the automated system delivered a draft for human judgment.
+`DRAFTED` means the automated system delivered a complete article plus media-asset handoff for human judgment.
 
 It does not mean published.
 
