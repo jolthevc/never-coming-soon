@@ -74,6 +74,14 @@ Do not route to CANON merely because one additional dilemma could theoretically 
 
 Ask whether the production contains at least one thing somebody might remember tomorrow. Do not demand a gimmick when the production works through accumulation, intimacy, warmth, dread, or another quieter pleasure.
 
+# THREAT ARCHITECTURE CHECK
+
+When a thriller, action story, mystery, crime story, or other conflict-driven production contains multiple antagonistic actors, ask whether their hierarchy and functions are legible to a first-time reader.
+
+The article should make clear enough who is driving the threat, who carries personal history or insider leverage, and why both are needed. A vivid named antagonist beside an unnamed `pro lead`, `real leader`, `boss`, or equivalent can create avoidable confusion when the distinction is not doing story work.
+
+Do not demand consolidation merely because several antagonists exist. Flag it only when the public article makes their roles confusing, redundant, or dramatically muddy.
+
 # CENTRAL ARGUMENT CHECK
 
 If the production repeatedly stages a value conflict, ask whether the answer is rigged.
@@ -128,6 +136,8 @@ When romance or another central relationship materially drives the production, r
 
 When any relationship is prominently sold by THE PITCH, ask whether the article contains enough lived interaction to show why these specific people create more story together than either would alone.
 
+Also ask whether one person's judgment, trust, refusal, method, or risk materially changes what the other does at least once. Parallel competence can be pleasurable, but a central pair feels more alive when the relationship changes action or consequence.
+
 Do not demand extra relationship material when one consequential interaction already does the job.
 
 For exes or second-chance dynamics, ask whether the past creates an actual present obstacle rather than existing only as a label.
@@ -150,6 +160,8 @@ For comedy and comedy-drama, warm tone and witty lines are not enough by themsel
 
 Do not demand joke density from a gentle comedy.
 
+Also ask whether a signature set piece remains inside the production's established physical and comic reality. A scene may be heightened, funny, or spectacular without becoming broad slapstick, implausibly superhuman, or much grimmer than the rest of the production. Flag tonal physics only when the beat feels imported from a different movie or show.
+
 # PUBLIC INTEGRITY CHECK
 
 Actively inspect for internal NCS language in public prose.
@@ -162,6 +174,8 @@ Visible process language normally deserves a focused PROSE fix.
 
 Also flag spoiler-shaped vagueness such as `something he has been carrying`, `a truth sits between them`, or similar placeholder language when the sentence exists mainly to advertise withheld information rather than create concrete pressure.
 
+Treat development-note arc summaries as a related public-integrity failure when they expose backstage story design rather than lived experience. Sentences shaped like `tonight she learns`, `by the end he realizes`, `his early mistake later becomes the answer`, or `this forces her to understand` often belong in development notes, not public prose, when the surrounding material can show the change itself.
+
 # SPECIFICITY CHECK
 
 Ask whether the article visibly performs the governance checklist.
@@ -171,6 +185,8 @@ Flag curated inventories of world texture and recurring props, documents, rules,
 Do not overreact to good specificity.
 
 Once the reader believes the world, additional detail should earn its place through story, pleasure, or character rather than further proof of research.
+
+If a particularly strong phrase, metaphor, image, or object lands in THE FINISH, ask whether earlier sections have already repeated the same formulation enough to weaken it. Preserve the strongest landing rather than demanding motif removal everywhere.
 
 # PROSE AND RHYTHM CHECK
 
@@ -188,10 +204,14 @@ Watch for:
 - every paragraph ending with a polished button
 - every paragraph trying to contain a quotable line
 - explanatory commentary immediately after a scene already worked
+- development-note arc summaries instead of behavior
+- zero-information trailer paragraphs that only announce escalation
 - abrupt section resets that make the article feel like completed form fields rather than one flowing piece
 - one organizing metaphor family being reused across too many sections
 
 One instance is often fine. Pattern is the problem.
+
+A paragraph such as `Pressure rises. A bigger move is coming.` may sound cinematic while adding nothing. A connective paragraph should change the reader's state of knowledge through time, location, tactic, relationship, constraint, or a specific observation.
 
 The prose should feel polished without feeling optimized sentence by sentence.
 
@@ -223,6 +243,8 @@ The narrator may have taste, favorites, surprises, irritation, affection, and sp
 
 That is useful evidence of spectatorship.
 
+Prefer narrator-owned reaction to invented collective consensus. Claims such as `the audience cheers`, `the theater erupts`, or `everyone gasps` usually manufacture a response to an imaginary production. Flag them when a specific narrator reaction or no reaction at all would be cleaner.
+
 Flag reactions that become explanations of why the writing, structure, or scene works.
 
 The narrator should sound like someone who watched the production, not someone grading it.
@@ -239,9 +261,19 @@ Ask a simple reader question: does the article keep making me want the next para
 
 A heading may reset navigation without resetting momentum.
 
-Flag stretches where roster-like character or casting blocks, procedural inventories, or evenly weighted sections stall the reading experience.
+Flag stretches where roster-like character or Dream Cast blocks, procedural inventories, or evenly weighted sections stall the reading experience.
 
 Do not demand artificial transitions. Sometimes the best fix is simply fewer entries, less explanation, or a shorter section.
+
+# DREAM CAST CHECK
+
+Dream Casting should increase desire while clearly remaining hypothetical.
+
+Flag celebrity wallpaper, generic actor praise, chemistry problems, repetitive lead casting habits, actorless Dream Cast paragraphs, and public copy that sounds like a real-world casting announcement.
+
+Every standalone Dream Cast paragraph must name both the selected performer and the character.
+
+Do not require every internally cast role to appear publicly.
 
 # STRENGTH PRESERVATION
 
@@ -266,10 +298,12 @@ Typical guidance:
 - under-demonstrated genre pleasure when canon contains stronger material: EDITION
 - foundational broken causality or missing central relationship logic: CANON
 - repeatedly rigged central dilemmas baked into canon: CANON only when they materially flatten the production
+- confusing antagonist hierarchy that is baked into canon: CANON; public emphasis confusion only: EDITION or PROSE depending on scope
 - specificity or metaphor saturation confined to prose: PROSE or EDITION depending on scope
 - public internal-language leakage: PROSE unless structure caused it
-- actorless Cast paragraph: PROSE when the role can simply be removed
+- actorless Dream Cast paragraph: PROSE when the role can simply be removed
 - prose that feels over-authored because of repeated rhetorical patterns: PROSE when the problem is material
+- zero-information trailer paragraphs or development-note arc summaries: PROSE when material
 - roster-like public focus that materially stalls the article: EDITION
 
 Do not route to CANON merely because the production could be more ambitious, more ambiguous, or less predictable.
