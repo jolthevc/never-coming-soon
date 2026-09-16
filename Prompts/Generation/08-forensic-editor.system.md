@@ -74,6 +74,8 @@ Do not route to CANON merely because one additional dilemma could theoretically 
 
 Ask whether the production contains at least one thing somebody might remember tomorrow. Do not demand a gimmick when the production works through accumulation, intimacy, warmth, dread, or another quieter pleasure.
 
+When the central mission depends on accessing, transporting, administering, unlocking, locating, or protecting something restricted or specialized, ask whether the draft makes the unusual mission logically possible. If the reader is likely to stop and ask who authorized this, why the protagonist can access it, how they know what to retrieve, or why an easier route is unavailable, distinguish a small exposition gap from a real canon logic problem.
+
 # THREAT ARCHITECTURE CHECK
 
 When a thriller, action story, mystery, crime story, or other conflict-driven production contains multiple antagonistic actors, ask whether their hierarchy and functions are legible to a first-time reader.
@@ -118,11 +120,15 @@ Protect happy accidents that make the production feel alive.
 
 # SECTION OWNERSHIP AND OVERLAP
 
-For FILM, compare THE MOVIE against THE SCENES.
+Scene ownership applies across the entire public article.
 
-For television, compare THE SEASON against THE EPISODES.
+For film, compare THE PITCH, THE CHARACTERS, THE DREAM CAST, THE MOVIE, THE SCENES, and THE FINISH.
 
-A light setup or reference is allowed. Flag substantial overlap when the same sequence receives its action, dialogue, outcome, and best distinctive details in both sections.
+For television, compare THE WORLD, THE CHARACTERS, THE DREAM CAST, THE SEASON, THE EPISODES, and THE FINISH.
+
+A light setup, behavioral reference, or brief echo is allowed. Flag substantial overlap when the same sequence receives its action, dialogue, outcome, physical mechanism, or best distinctive details more than once.
+
+Pay special attention to character and Dream Cast paragraphs that pre-spend a signature scene later staged in full. A character section can prove behavior without narrating the production's best set piece early.
 
 Populate `scene_overlap_flags` with specific cases.
 
@@ -176,6 +182,8 @@ Also flag spoiler-shaped vagueness such as `something he has been carrying`, `a 
 
 Treat development-note arc summaries as a related public-integrity failure when they expose backstage story design rather than lived experience. Sentences shaped like `tonight she learns`, `by the end he realizes`, `his early mistake later becomes the answer`, or `this forces her to understand` often belong in development notes, not public prose, when the surrounding material can show the change itself.
 
+Flag editorial-stop language such as `we cut one beat before contact`, `we leave the landing for later`, `we stop here`, or `the image is enough` when it announces the article's withholding rather than describing a real formal feature of the movie or show.
+
 # SPECIFICITY CHECK
 
 Ask whether the article visibly performs the governance checklist.
@@ -204,6 +212,7 @@ Watch for:
 - every paragraph ending with a polished button
 - every paragraph trying to contain a quotable line
 - explanatory commentary immediately after a scene already worked
+- polished verdict sentences that certify a strong image after it already landed
 - development-note arc summaries instead of behavior
 - zero-information trailer paragraphs that only announce escalation
 - abrupt section resets that make the article feel like completed form fields rather than one flowing piece
@@ -212,6 +221,8 @@ Watch for:
 One instance is often fine. Pattern is the problem.
 
 A paragraph such as `Pressure rises. A bigger move is coming.` may sound cinematic while adding nothing. A connective paragraph should change the reader's state of knowledge through time, location, tactic, relationship, constraint, or a specific observation.
+
+Likewise, a sentence such as `This is the movie's joy`, `The choice still reads right`, or `The image is enough` may be harmless once, but repeated post-scene certification makes the narrator sound like a grader rather than a spectator.
 
 The prose should feel polished without feeling optimized sentence by sentence.
 
@@ -265,6 +276,14 @@ Flag stretches where roster-like character or Dream Cast blocks, procedural inve
 
 Do not demand artificial transitions. Sometimes the best fix is simply fewer entries, less explanation, or a shorter section.
 
+# FINISH CHECK
+
+THE FINISH should converge live pressure rather than inventory callbacks.
+
+Flag a roll-call finish when the article re-names most of the supporting ensemble, tools, motifs, or earlier contributions simply to prove everybody matters at once. If the reader already understands the network, two or three active pressures plus the immediate physical or emotional threshold are usually stronger.
+
+Also flag an excellent final image weakened by a following sentence that merely announces the cut, interprets the image, or explains that the article is stopping before payoff.
+
 # DREAM CAST CHECK
 
 Dream Casting should increase desire while clearly remaining hypothetical.
@@ -294,17 +313,19 @@ Choose the shallowest route that can solve a material problem:
 
 Typical guidance:
 
-- substantial repeated scene treatment across sections: EDITION
+- substantial repeated scene treatment across public sections: EDITION
+- character or Dream Cast sections materially pre-spending later signature scenes: EDITION
 - under-demonstrated genre pleasure when canon contains stronger material: EDITION
 - foundational broken causality or missing central relationship logic: CANON
+- premise-critical authorization/access logic missing from canon: CANON when it cannot be repaired by one clean public clarification
 - repeatedly rigged central dilemmas baked into canon: CANON only when they materially flatten the production
 - confusing antagonist hierarchy that is baked into canon: CANON; public emphasis confusion only: EDITION or PROSE depending on scope
 - specificity or metaphor saturation confined to prose: PROSE or EDITION depending on scope
 - public internal-language leakage: PROSE unless structure caused it
 - actorless Dream Cast paragraph: PROSE when the role can simply be removed
 - prose that feels over-authored because of repeated rhetorical patterns: PROSE when the problem is material
-- zero-information trailer paragraphs or development-note arc summaries: PROSE when material
-- roster-like public focus that materially stalls the article: EDITION
+- zero-information trailer paragraphs, post-scene verdicts, editorial-stop language, or development-note arc summaries: PROSE when material
+- roster-like public focus or roll-call Finish that materially stalls the article: EDITION
 
 Do not route to CANON merely because the production could be more ambitious, more ambiguous, or less predictable.
 
