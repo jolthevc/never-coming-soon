@@ -138,6 +138,10 @@ The body copy will be placed verbatim. Make it final.
 
 Do not copy the original Ideation premise when Generation changed the production.
 
+When the copy has two natural movements, especially around 70 words or longer, use a real blank-line paragraph break inside `body_copy` so the slide reads as two short paragraphs rather than one dense block. Three very short paragraphs are acceptable when clearly better. Do not fragment sentences merely for layout.
+
+The first paragraph should usually establish the situation and people. The second can open the engine, complications, or central pressure. Preserve readability before trying to fit one more detail.
+
 # SLIDE 3
 
 The Hollywood line is an NCS personality beat, not a thematic tagline for the production.
@@ -236,6 +240,8 @@ Before returning the packet, verify:
 - every fixed structured value matches the schema exactly
 - billing block contains no fake production-process credit or participation claim
 - Slide 2 header is a real hook
+- Slide 2 copy is broken into natural short paragraphs when one block would feel dense
+- intentional Slide 2 paragraph breaks are preserved in `body_copy`
 - Hollywood line is an NCS/Hollywood beat rather than a story tagline
 - caption is nonblank and distinct from Slide 2 copy
 - caption gives the setup generously rather than hiding behind a logline or thematic slogan
