@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Television Editorial Standard v1.3
+## Television Editorial Standard v1.4
 
 ## 1. Purpose
 
@@ -16,6 +16,10 @@ A strong television edition should make the reader feel why they want to spend t
 The reader should sense both repetition and change.
 
 The recurring engine creates returnability. The season arc creates momentum.
+
+The recurring engine is not the protagonist. Callers, cases, games, shifts, clients, missions, patients, guests, customers, or another weekly input may generate raw story, but the central people should increasingly determine what that machine becomes.
+
+The strongest television makes the reader feel both directions of influence: the world keeps acting on the characters, and the characters keep changing the world they have to return to.
 
 ## 3. Default visible structure
 
@@ -116,6 +120,8 @@ Macro does not mean abstract.
 
 Track concrete changes in people, relationships, circumstances, institutions, routines, fortunes, alliances, access, authority, or recurring situations.
 
+Especially in engine-driven television, show how the protagonists' choices change the recurring system over time. A call-in show may develop new rules because of what the hosts did. A team may change how it plays because of an earlier argument. A business may begin depending on the tactic one character introduced. The season should not read as though the central machine simply sends a new problem every week while the leads remain excellent operators inside it.
+
 Strong season writing may show that a nightly briefing becomes a ritual, two rivals begin co-signing each other's calls, a business starts depending on the very tactic it once resisted, or a family reorganizes around a new obligation.
 
 Avoid replacing episode recap with a sequence of polished thematic declarations.
@@ -144,6 +150,12 @@ Do not write every capsule in the same shape.
 
 Each included episode should have a concrete dramatic object: a problem, choice, scheme, discovery, competition, event, relationship collision, set piece, or consequence.
 
+Select for **dramatic-function range**, not only different subjects. If several capsules all become `new problem -> humane response -> lesson`, or `new case -> competent solution -> improved rule`, the season may feel morally or procedurally repetitive even when the nouns change.
+
+A strong selected set may include different pleasures such as social comedy, rivalry, romance, embarrassment, logistical chaos, fear, intimacy, competition, an irresistible bad idea, or a quiet episode whose value is simply spending time with the people.
+
+Not every episode needs to advance the show's central argument. Television earns emotional power partly through nights that are funny, petty, strange, warm, or gloriously unserious.
+
 Most importantly, episode capsules must sound viewer-facing.
 
 ## 11. Season versus Episodes zoom rule
@@ -170,7 +182,7 @@ THE FINISH should still feel like the first time the article fully enters the fi
 
 The show may repeat an activity every week. The article should not repeat the same explanation every week.
 
-Demonstrate the engine's range by choosing episodes where it creates different kinds of pressure.
+Demonstrate the engine's range by choosing episodes where it creates different kinds of pressure and pleasure.
 
 A series should feel renewable without feeling algorithmic.
 
@@ -183,3 +195,21 @@ This does not require romance or extra exposition.
 One consequential interaction can be enough if it shows history, friction, shorthand, loyalty, rivalry, dependence, or a choice that would play differently between strangers.
 
 Do not manufacture relationship material merely to satisfy a quota.
+
+## 15. Setup is not spoiler
+
+Do not hide premise-critical backstory merely because it is dramatic.
+
+If the audience of the actual show would understand a past event, relationship rupture, scandal, debt, loss, rule, or obligation early enough to make the present story legible, the public article should usually give enough of it to establish the stakes.
+
+Protect the unresolved answer, not the information required to understand why the current season matters.
+
+Artificial mystery can make a series feel thinner than it is.
+
+## 16. Television voice range
+
+Do not make every episode sound like a case study in what the show learns.
+
+A series can contain a meaningful episode, then a stupidly funny one, then a romantic one, then a logistical mess, then something unexpectedly quiet. The public article should preserve that range rather than translating every installment into a thematic lesson.
+
+When a scene is entertaining because it is ridiculous, awkward, petty, or fun, allow that pleasure to remain sufficient.
