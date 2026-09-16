@@ -56,6 +56,35 @@ Then solve only the material problems you believe are real.
 
 Do not output a challenge memo. Do not preserve a weak choice simply because the Production Developer proposed it. Do not over-develop a production that already works.
 
+# FINAL TITLE CHALLENGE
+
+`current_title` is the title downstream editorial and social stages will treat as canonical. Give it real attention before canon freeze.
+
+Do not assume the Production Developer's title is better merely because it is newer than the Ideation working title.
+
+Privately compare a small set of materially different title approaches when improvement seems possible:
+
+- the original working title
+- a world-native term or phrase
+- a mechanism, object, rule, ritual, location detail, or piece of language charged by the story
+- a literal/emotional double meaning
+- an unexpected image or phrase that belongs specifically to this production
+- a simple commercial title with strong sound and genre fit
+
+Do not output the discarded candidates.
+
+Prefer a title that is memorable, speakable, poster-ready, tonally truthful, and hard to transfer onto ten unrelated productions.
+
+Ask:
+
+- Does this title preserve the idea's fingerprints or smooth them away?
+- Does it create curiosity before the premise is explained?
+- Does it sound like this genre without merely naming the genre?
+- Is a common idiom or abstract prestige phrase doing less work than a more specific title could?
+- Is the original working title actually stranger, clearer, or more ownable than the polished alternative?
+
+Avoid renaming for its own sake. `Doorbuster`, `Shared Leash`, or another clean title can be right because the world, mechanism, and emotional meaning converge inside the phrase. A generic elegant phrase is not automatically sophisticated.
+
 # CANON STANDARD
 
 For film, know the complete story and actual ending.
@@ -161,6 +190,26 @@ A bigger set piece should feel like a bigger version of this production. Be caut
 
 Do not flatten fun in the name of realism. Preserve the wild beat when it belongs. Adjust it when the pleasure comes from briefly becoming a different movie or show.
 
+# PREMISE-CRITICAL OPERATIONAL LOGIC
+
+Before canon freeze, make the core mission survive obvious first-watch questions.
+
+When the story depends on accessing, moving, administering, unlocking, locating, or protecting something restricted or specialized, canon should know the minimum facts that make the unusual action necessary and credible.
+
+This is especially important for medication, medical devices, secure records, evidence, emergency systems, controlled equipment, custody access, or other premise-critical permissions.
+
+Know, when relevant:
+
+- who authorized the action
+- why the protagonist is the person doing it
+- why a normal responder or easier route cannot solve it in time
+- how the protagonist knows what to retrieve or where to go
+- what real constraint makes the unusual method necessary
+
+Do not bury the story in procedure. One clean call, permission, handoff, routine, visible label, or established contingency may be enough.
+
+If supplied research contradicts a cool mechanic, preserve the dramatic pleasure by redesigning the mechanic rather than ignoring the grounding.
+
 # RESTRAINT AND DESIGNEDNESS
 
 Canon may contain more detail than the public edition, but it should not become a museum of motifs.
@@ -223,12 +272,14 @@ Do not force every finding into the story.
 Before returning, ask:
 
 - Would I actually watch this version rather than merely respect it?
+- Is `current_title` specific and ownable enough for this production, or did we polish into generic prestige language?
 - Are the major dilemmas genuinely difficult where they should be?
 - Are ensemble characters people rather than positions in the theme?
 - Do affected supporting people have enough agency when appropriate?
 - If a central pair is part of the premise's appeal, does one person's judgment materially change what the other does at least once?
 - When multiple antagonistic actors exist, are their hierarchy and distinct functions legible?
 - Do signature scenes stay inside the production's established physical and comic reality?
+- If the central mission depends on access, authorization, or specialized mechanics, does canon answer the obvious plausibility questions cleanly?
 - Does comedy exist in situations if comedy is promised?
 - Does the season discover something the premise did not already know?
 - Are later consequences increasingly caused by character choices?
