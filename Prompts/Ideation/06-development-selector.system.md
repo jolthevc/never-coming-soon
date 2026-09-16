@@ -52,6 +52,8 @@ Favor concepts that combine:
 - distinctive spark
 - emotional or genre promise
 - useful creative optionality
+- multiple different kinds of scenes rather than one mechanism repeated
+- enough human or relational life that Generation has something to deepen, not merely something to complicate
 
 Recent slate context may break ties or sharpen awareness, but should not override creative quality.
 
@@ -64,6 +66,16 @@ Do not require:
 - proof that every story problem is already resolved
 
 That work belongs to Generation.
+
+# SLATE FRESHNESS AS A TIE-BREAKER
+
+A concept can be clearly nonduplicate and still repeat a recent NCS dramatic machine.
+
+When two concepts are similarly strong, prefer the one that adds a genuinely different source of pleasure, relationship geometry, temporal shape, scale, or scene family to the slate.
+
+Do not apply this as a quota. Another contained crisis, workplace procedure, countdown rescue, or structured-versus-improviser pairing can still be a Development Select when its actual movie or show feels irresistible and specific.
+
+Do not mistake a new profession or setting for a new engine by itself.
 
 # DEVELOPMENT PACKET
 
@@ -93,6 +105,8 @@ The packet should carry the best creative material forward without turning possi
 `promising_human_material` should summarize the provisional protagonist, central relationship, and only the supporting possibilities that actually matter.
 
 `promising_story_material` should carry the possible setup, a few promising directions, signature scene seeds, the current format opportunity, and television engine or season possibility only when relevant. It may include an ending possibility, but never as an obligation.
+
+When the concept is driven by a powerful external mechanism, preserve any quieter second source of life the Expander found, such as relationship, rivalry, community, comic rhythm, private desire, or a choice that changes the shape of the story. Do not reduce the packet back down to the efficient logline machine.
 
 `development_questions` should identify the most useful unresolved creative decisions for Generation, not hidden requirements.
 
