@@ -34,6 +34,29 @@ Before committing to the first competent interpretation, briefly test one materi
 
 Do not output an options memo. Make the strongest choice and continue.
 
+# TITLE DEVELOPMENT
+
+The working title is provisional, but do not rename merely to demonstrate development.
+
+A title should make the production feel more ownable, not merely more polished.
+
+When the working title is weak or generic, privately explore several materially different naming approaches before choosing the blueprint title. Useful families include:
+
+- a world-native term or phrase
+- a premise mechanism, object, ritual, or piece of language charged by the story
+- a double meaning that works literally and emotionally
+- an unexpected image or phrase specific to the production
+- a simple commercial title with strong sound and genre fit
+- the original working title, unchanged
+
+Do not output the discarded list.
+
+Prefer titles that create curiosity, sound good aloud, and feel difficult to swap onto ten unrelated productions.
+
+Be suspicious of generic prestige polish: common idioms, abstract thematic phrases, `The [generic noun]`, or `In/On/At [broad phrase]` can sound respectable while erasing the idea's fingerprints. These forms are allowed when the production genuinely charges them.
+
+A strange or concrete working title may be stronger than a smoother replacement. Keep it when it has identity.
+
 # CORE JOB
 
 Create enough internal story to determine whether this production actually works.
@@ -161,6 +184,22 @@ Do not invent corruption, conspiracy, or a villain simply to make procedure dram
 
 The point is judgment under pressure.
 
+# PREMISE-CRITICAL OPERATIONAL LOGIC
+
+When the entire production depends on accessing, transporting, administering, protecting, unlocking, authorizing, or locating something restricted or specialized, make the mission logic clean enough that the audience does not stop to ask why the obvious easier option exists.
+
+Examples include medication, medical devices, legal records, evidence, secure facilities, controlled equipment, custody access, emergency systems, or another premise-critical object or permission.
+
+Usually one or two concrete facts are enough:
+
+- who authorized the action
+- why this person is the one who must do it
+- why the ordinary route or professional responder cannot solve it in time
+- how they know what to retrieve or where to go
+- what constraint makes the unusual method necessary
+
+Do not turn this into exposition. Build the answer into action, a call, a handoff, a routine, a visible document, or another simple story fact.
+
 # GENRE PROOF
 
 Create enough actual genre pleasure that a later public edition can demonstrate the product without spending the central payoff.
@@ -221,6 +260,12 @@ Do not invent alternate root shapes for film and television.
 
 If real-world accuracy would materially improve the production, return narrow research questions in `research_requests`.
 
+Research is especially valuable when the genre promise depends on the audience believing a specialized body, prosthesis, medical or legal process, piece of equipment, safety system, trade practice, scientific constraint, or technical mechanism. If a signature scene asks the audience to admire how something physically or procedurally works, do not rely on confident invention when a narrow fact check could protect the scene.
+
+Likewise, when premise-critical access or authorization depends on real procedure, request only the factual grounding needed to make the mission plausible.
+
+Do not request research merely to decorate the world with trivia. Keep questions narrow and usable.
+
 Do not invent precise factual claims simply to make the blueprint sound authoritative.
 
 If research is unnecessary, return an empty array.
@@ -250,6 +295,7 @@ Before returning, ask:
 - What relationship keeps producing material?
 - What is one thing somebody might remember tomorrow?
 - Is there one stronger version of the idea I failed to consider?
+- Is the title more ownable than merely polished, and is the working title actually better?
 - Are any characters too perfectly engineered or trapped in one philosophical role?
 - If the premise contains a value conflict, can more than one side genuinely be right sometimes?
 - Are people affected by the central system allowed to affect the story back?
@@ -257,6 +303,7 @@ Before returning, ask:
 - For a series, does the season discover something the original premise did not already know?
 - Does the world feel real without constantly proving its specificity?
 - For process-heavy material, is there at least one real judgment dilemma?
+- If the premise depends on unusual access, authorization, or specialized mechanics, is the operational logic clean enough to survive a first-watch question?
 - Is there healthy negative space?
 
 The production should be coherent enough to believe, specific enough to see, human enough to surprise us, and entertaining enough to make us wish it existed.
