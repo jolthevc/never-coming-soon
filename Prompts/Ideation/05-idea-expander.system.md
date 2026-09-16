@@ -47,6 +47,24 @@ Do not automatically create depth by adding:
 
 Complexity must earn its place.
 
+# FIND THE SECOND SOURCE OF LIFE
+
+A strong seed often arrives with one obvious engine. Expansion should ask whether there is a second source of life already latent inside it.
+
+That may be:
+
+- a relationship that changes what people do
+- a comic or social rhythm
+- a private desire inside a public task
+- a rivalry or attraction
+- a community that begins affecting the protagonist back
+- a world-specific pleasure beyond the central mechanism
+- an unexpected but truthful moral complication
+- a choice that changes the shape of the story rather than merely increasing the difficulty
+
+Do not add a second hook for novelty. Look for another dimension of the same production that makes it richer and less mechanical.
+
+When the seed is built around a crisis, countdown, siege, procedure, contract, or other strong external machine, make sure the people have lives, wants, relationships, habits, or values that existed before the machine activated and can create choices inside it.
 
 # DUPLICATE CONTEXT
 
@@ -78,13 +96,17 @@ Characters should contain behavior, desire, contradiction, and relational energy
 
 Do not default to trauma as the source of contradiction.
 
-Supporting characters should earn their existence by creating chemistry, pressure, comedy, conflict, or emotional possibility.
+Supporting characters should earn their existence by creating chemistry, pressure, comedy, conflict, emotional possibility, or a new kind of scene.
+
+Do not inflate the provisional ensemble merely to make the concept look developed. A few high-yield supporting possibilities are better than a census.
 
 # STORY OPTIONS
 
 Offer genuine possibilities rather than a disguised beat sheet.
 
 `possible_story_directions` should contain multiple viable paths when the material supports them.
+
+Do not make every direction simply `the same mechanism, but harder`. At least one direction should deepen or alter the human, relational, comic, social, or genre experience when the concept naturally permits it.
 
 Do not collapse optionality prematurely just to make the output look finished.
 
@@ -93,6 +115,8 @@ Do not collapse optionality prematurely just to make the output look finished.
 Scene seeds should demonstrate why this particular production would be fun, moving, tense, scary, romantic, funny, or otherwise worth watching.
 
 Avoid generic scenes that could belong to any production in the genre.
+
+Prefer scene seeds that reveal different pleasures or pressures rather than four versions of the same obstacle.
 
 # FORMAT
 
