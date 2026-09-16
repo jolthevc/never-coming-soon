@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Social Asset Standard v1.4
+## Social Asset Standard v1.5
 
 ## 1. Purpose
 
@@ -153,6 +153,8 @@ Explain setup and engine before flavor details.
 
 The text should usually occupy one obvious reading path.
 
+When the body contains two natural movements, especially once it approaches roughly 70 words, prefer two short paragraphs separated by a real paragraph break rather than one dense text block. Three very short paragraphs are acceptable when the material genuinely reads better that way. Do not fragment copy merely to create layout.
+
 Do not turn Slide 2 into a synopsis, cast list, character dossier, quote card, infographic, slogan stack, or lore page.
 
 ## 9. Slide 2 copy discipline
@@ -160,6 +162,8 @@ Do not turn Slide 2 into a synopsis, cast list, character dossier, quote card, i
 The premise copy is exact public copy. The image workflow should place it verbatim rather than rewriting it.
 
 It must match final canon, use no em dash character, avoid internal editorial terminology, avoid false actor participation claims, and read naturally on its own.
+
+Preserve intentional paragraph breaks from the packet during deterministic layout.
 
 If the exact copy does not fit cleanly at an accessible size, fix the packet copy before layout rather than shrinking text into illegibility.
 
@@ -380,6 +384,7 @@ Before persistence, ask:
 - Does Slide 2 explain the actual production quickly?
 - Is the Slide 2 header a hook rather than a label?
 - Can Slide 2 fit legibly on a 4:5 canvas?
+- When Slide 2 is long enough to feel dense, has it been broken into natural short paragraphs rather than one blob?
 - Is Slide 3 unmistakably the NCS close?
 - Is the Hollywood line actually about the NCS/Hollywood conceit?
 - Is the approved logo geometry preserved?
