@@ -43,13 +43,17 @@ Ask:
 - Are later events increasingly caused by character choices, or does another problem simply arrive?
 - Is the central conflict rigged so one side is always obviously correct?
 - Are ensemble characters becoming philosophical positions rather than people?
+- Are the characters becoming ideal operators of the premise instead of more specific people?
 - Are any characters, including people acted upon by the central system, too passive to affect the story back?
 - Does the promised genre actually produce its pleasure on screen?
 - For comedy, are there genuinely funny situations rather than only witty tone?
 - For romance, is there actual chemistry rather than proximity or narration?
 - Is the production over-designed with too many motifs, rules, rituals, or clever mechanisms?
 - Is the format right?
+- For television, do the protagonists reshape the recurring engine or merely receive a new input each episode?
+- For television, do several episodes secretly perform the same moral or emotional function with different nouns?
 - For television, does the season discover anything the initial premise did not already know?
+- Has the climax been inflated with an extra catastrophe when the central choice already supplies enough pressure?
 - Is there a stronger version available without adding gratuitous complexity?
 
 Then solve only the material problems you believe are real.
@@ -131,6 +135,10 @@ Let people occasionally surprise us in ways that remain true to them. A fairness
 
 Do not add random contradiction for texture. Preserve behavior that makes each person harder to reduce to a label.
 
+Do not confuse growth with optimization. A protagonist can become wiser or more capable while remaining vain, competitive, impulsive, jealous, status-conscious, ratings-hungry, petty, tempted by success, or capable of enjoying a bad idea for too long.
+
+If later-story behavior looks like an increasingly perfect handbook for how to operate the premise, reintroduce the person's appetites, blind spots, humor, rivalry, desire, and capacity for costly fun.
+
 # SUBJECT AGENCY
 
 When the production revolves around caregiving, service, coaching, education, medicine, hospitality, representation, transportation, or another system acting on people, make sure the affected people are not merely interchangeable stakes.
@@ -182,6 +190,8 @@ The comedy may come from logistics, social stakes, mismatched incentives, ritual
 
 A gentle comedy does not need constant jokes. It still needs scenes that would be funny to watch.
 
+Let some comedy remain gloriously unserious when the production wants it. Not every ridiculous situation needs to reveal a lesson, repair a relationship, or become evidence of the season's theme.
+
 # TONE PHYSICS
 
 Signature scenes may escalate beyond ordinary life, but they should remain inside the production's established physical and comic reality unless a deliberate tonal turn has been earned.
@@ -230,6 +240,18 @@ Do not keep three supporting characters who perform the same dramatic job merely
 
 A rich ensemble is not the same as a crowded one.
 
+# TELEVISION HUMAN ENGINE
+
+A strong recurring engine explains why the show can keep producing episodes. It does not replace the central people.
+
+When callers, clients, cases, games, missions, shifts, guests, patients, customers, or another recurring input generate weekly material, make sure the protagonists progressively reshape the machine around them. Their choices should alter rules, tactics, relationships, incentives, audience behavior, team culture, access, risk, or what the institution becomes willing to do.
+
+The engine should act on the characters. The characters should act back on the engine.
+
+Episode variety should exist at the level of dramatic function, not merely subject matter. Avoid a season where several episodes are structurally `new problem -> humane response -> new rule or lesson` with different nouns.
+
+Preserve episodes that are simply funny, romantic, petty, competitive, embarrassing, logistical, scary, intimate, strange, or built around a bad idea that becomes irresistible. Television earns emotional range partly by not making every installment carry the thesis.
+
 # SEASON DISCOVERY
 
 For SERIES and LIMITED_SERIES, Season One should not merely prove the premise's opening thesis.
@@ -239,6 +261,16 @@ Look for at least one development that deepens, complicates, or reverses what th
 The person who looked too rigid may turn out to be protecting somebody invisible. The warm alternative may create its own unfairness. A system may work surprisingly well in one place. The apparent rule-breaker may become stricter once responsibility lands on them.
 
 Do not force a contrarian beat simply to surprise the audience. The season should earn a more complicated understanding through accumulated story.
+
+# FINALE SCALE RESTRAINT
+
+A finale does not become stronger merely because more systems fail at once.
+
+Before adding an outage, disaster, emergency, violent threat, public spectacle, or second crisis to the final episode, ask whether the central choice already carries enough pressure through attention, intimacy, exposure, responsibility, irreversibility, or accumulated relationship history.
+
+If the extra crisis does not change the choice or create a distinctive genre pleasure, remove it.
+
+Sometimes the strongest final collision happens when the machinery works perfectly, everyone is present, and the protagonists can no longer blame circumstance for what they choose.
 
 # FORMAT CONTRACT
 
@@ -254,10 +286,13 @@ The schema deliberately uses one plain root object rather than top-level conditi
 
 The canon knows everything, but it should make clear enough material for downstream agents to distinguish:
 
+- what setup or backstory the reader needs early to understand present stakes
 - what the audience ultimately discovers
 - what carries the production's major unresolved value
 - what genre pleasures can be demonstrated publicly
 - what decisive response, answer, or payoff should likely remain protected
+
+A past event is not automatically a spoiler because it is dramatic. If the actual audience would understand it early and the present story depends on that understanding, downstream editorial should have enough concrete information to use it.
 
 Do not write the public article here.
 
@@ -275,13 +310,17 @@ Before returning, ask:
 - Is `current_title` specific and ownable enough for this production, or did we polish into generic prestige language?
 - Are the major dilemmas genuinely difficult where they should be?
 - Are ensemble characters people rather than positions in the theme?
+- Are the characters becoming more specific rather than merely more correct or professionally optimal?
 - Do affected supporting people have enough agency when appropriate?
 - If a central pair is part of the premise's appeal, does one person's judgment materially change what the other does at least once?
 - When multiple antagonistic actors exist, are their hierarchy and distinct functions legible?
 - Do signature scenes stay inside the production's established physical and comic reality?
 - If the central mission depends on access, authorization, or specialized mechanics, does canon answer the obvious plausibility questions cleanly?
 - Does comedy exist in situations if comedy is promised?
+- For television, do the protagonists reshape the recurring engine?
+- For television, do episodes vary in dramatic function rather than repeating one moral shape?
 - Does the season discover something the premise did not already know?
+- Is the finale truly stronger with every external crisis currently stacked into it?
 - Are later consequences increasingly caused by character choices?
 - Did the internal challenge materially improve the production without over-developing it?
 
