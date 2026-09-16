@@ -70,9 +70,15 @@ Each major scene or sequence gets one primary home where it receives its fullest
 
 A scene may be teased earlier, but do not fully stage the same event twice.
 
-Before finalizing, compare THE MOVIE against THE SCENES for film, and THE SEASON against THE EPISODES for television.
+Scene ownership applies across the whole article. Before using a signature scene in THE CHARACTERS or THE DREAM CAST, ask whether those details belong more powerfully in THE MOVIE, THE SCENES, THE SEASON, THE EPISODES, or THE FINISH.
 
-If a major event receives substantial treatment in both, redistribute or replace material.
+Character and Dream Cast sections may use behavior as evidence, but do not spend the later section's best action, dialogue, outcome, physical mechanism, or memorable prop merely because it conveniently proves the character or performance.
+
+When a supporting character will be more enjoyable discovered in motion, let that person first arrive inside the story instead of formally introducing everyone in advance.
+
+Before finalizing, compare all public sections for scene duplication. For film, pay special attention to THE PITCH, THE CHARACTERS, THE DREAM CAST, THE MOVIE, and THE SCENES. For television, pay special attention to THE WORLD, THE CHARACTERS, THE DREAM CAST, THE SEASON, and THE EPISODES.
+
+If a major event receives substantial treatment twice, redistribute or replace material.
 
 # THREAT CLARITY
 
@@ -122,6 +128,24 @@ Do not state meaning, mechanism, or consequence that the material can deliver on
 
 Be especially suspicious of development-note sentences that summarize an arc from outside the movie or show. Avoid constructions such as `tonight she learns`, `by the end he realizes`, `his early mistake later becomes the answer`, `this forces her to understand`, or similar prose when the behavior and consequence can make the point themselves.
 
+# STRONG IMAGE, THEN STOP
+
+When a paragraph or scene lands on a concrete image, behavior, line, physical consequence, or emotional beat that already carries the point, consider ending there.
+
+Do not automatically add a concluding verdict that tells the reader what the material just proved.
+
+Be suspicious of after-the-fact certifications such as:
+
+- `It is movement, humor, and competence in one breath.`
+- `That tiny choice sticks with you.`
+- `This is the movie's joy.`
+- `The choice still reads right.`
+- `The image is enough.`
+
+A narrator reaction can be excellent when it adds taste or surprise. The problem is the reflex to grade or interpret every successful beat after it already worked.
+
+Likewise, do not automatically finish each descriptive paragraph with a compressed button. Sometimes the image itself is the ending.
+
 # NARRATOR FRAME
 
 The narrator may behave like a spectator. It should not behave like the production's marketer, screenwriter, development executive, or studio.
@@ -131,6 +155,10 @@ The narrator may have favorites, surprise, irritation, affection, and specific r
 Prefer narrator-owned reactions over invented mass consensus. `I kept thinking about this`, `my favorite beat`, or another specific personal reaction can create evidence of spectatorship. Claims such as `the audience cheers`, `the theater erupts`, or `everyone gasps` usually manufacture a collective response the article does not need.
 
 Do not turn every reaction into an explanation of why a scene works.
+
+Do not announce the article's own edit or spoiler-management move. Avoid lines such as `we cut one beat before contact`, `we leave the landing for later`, `we stop here`, or `the image is enough` when they describe editorial withholding rather than a genuine formal feature of the production.
+
+If the movie itself has a meaningful cut, ellipsis, or formal transition established by canon, it may be described as something the viewer experiences. Do not invent a cut merely to explain where the article stops.
 
 The final studio card sits outside the fiction and may use the brand voice directly.
 
@@ -161,6 +189,8 @@ THE FINISH creates convergence and stops before the decisive payoff.
 Do not confuse convergence with callback density.
 
 As THE FINISH approaches the cut, prefer concrete action, behavior, physical pressure, or a specific collision over increasingly abstract statements about what the moment means.
+
+Do not turn THE FINISH into a roll call of every supporting character, tool, motif, prop, or prior contribution. If the reader already knows the ensemble, two or three active pressures plus the immediate threshold are often stronger than naming everybody again.
 
 If the edition plan reserves a particularly strong phrase, metaphor, image, or object for THE FINISH, protect that landing. Earlier sections may establish the underlying material, but do not repeat the same formulation until it loses force.
 
@@ -241,11 +271,13 @@ Ask:
 - Are paragraph openings repeating the same rhetorical move?
 - Are there too many binaries, mirrored clauses, three-part formulations, or quotable buttons?
 - Did I explain a strong scene after the scene already made the point?
+- Did I append a polished verdict merely because a paragraph felt unfinished after a strong image?
 - Did I use abstract words such as pressure, trust, chemistry, leadership, connection, or stakes where behavior would be more vivid?
 - Did spoiler protection produce vague placeholder language?
 - Am I working the production's central metaphor or vocabulary so hard that it has become a prose gimmick?
 - Did I summarize a character arc from outside the production instead of showing the behavior?
 - Did I write a trailer-style paragraph that adds no new information?
+- Did I announce where the article cuts, stops, or withholds rather than simply stopping?
 
 Fix the pattern, not every individual instance.
 
@@ -271,7 +303,8 @@ Before returning the draft, inspect for:
 - internal editorial terminology
 - missing required headings, including THE DREAM CAST rather than THE CAST
 - generic television planning labels
-- substantial duplicate scene treatment across sections
+- substantial duplicate scene treatment across any public sections, not only MOVIE/SCENES or SEASON/EPISODES
+- whether THE CHARACTERS or THE DREAM CAST pre-spent a signature scene's best details
 - whether THE SEASON and THE EPISODES are operating at different zoom levels
 - whether every public Dream Cast paragraph names a selected actor and character
 - whether any Dream Cast language accidentally sounds like a real casting announcement or claim of participation
@@ -279,7 +312,9 @@ Before returning the draft, inspect for:
 - whether a central pair sold by the premise actually changes each other's actions rather than operating only in parallel
 - whether the promised genre pleasure is actually demonstrated rather than merely described
 - whether signature scenes remain inside the production's established physical and comic reality
-- whether THE FINISH overloads recurring motifs or whether its strongest formulation was spent too early
+- whether THE FINISH overloads recurring motifs, supporting-character roll call, or whether its strongest formulation was spent too early
+- post-scene verdict sentences that explain or certify what a strong image already delivered
+- meta lines that announce the article's cut, stop, or withholding
 - dialogue that sounds engineered for a quote rather than spoken
 - repeated abstract thesis openings
 - clusters of tiny declarative sentences
