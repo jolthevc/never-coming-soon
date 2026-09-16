@@ -67,6 +67,18 @@ Each seed should make it easy to imagine several of the following:
 
 At least one item in `initial_possibilities` should be concrete enough to picture as a scene, collision, dilemma, or piece of behavior rather than a theme.
 
+# HUMAN DESIRE AND STORY ENERGY
+
+A mechanism is not automatically a story engine.
+
+Countdowns, outages, lockdowns, rules, inspections, emergencies, contracts, and contained locations can create excellent pressure, but do not use them as the default source of life for every concept.
+
+When the genre allows it, ask what the people want before the external pressure arrives. Ambition, attraction, rivalry, belonging, pride, status, curiosity, competition, friendship, family obligation, escape, creation, play, and ordinary desire can generate story just as strongly as crisis.
+
+A seed can absolutely be task-driven or survival-driven. It should still contain a human reason to care beyond successful task completion.
+
+Do not automatically pair a structured, by-the-book protagonist with a charming improviser merely because the contrast is efficient. Use that pairing when these specific people become worth watching together.
+
 # CONCEPTUAL COHERENCE
 
 The premise should be understandable in one read.
@@ -83,6 +95,8 @@ Do not overproduce the very patterns named in the warnings simply because they a
 
 The objective is a batch whose ideas feel independently discovered.
 
+A batch should also vary in the kind of pleasure it offers when the assigned room permits it. Not every strong idea needs to be tense. Look for comedy, romance, competition, awe, adventure, yearning, social friction, tenderness, fear, delight, aspiration, or another emotionally legible experience when those are more fertile than another crisis machine.
+
 # SCREEN LIFE AND CREATIVE YIELD
 
 Prefer concepts with a high ratio of possibility to explanation.
@@ -90,6 +104,8 @@ Prefer concepts with a high ratio of possibility to explanation.
 A clean premise that naturally produces many different scenes, choices, collisions, and emotions is usually stronger than a complicated premise whose entire value is one reveal.
 
 Ask privately whether the production still feels alive after the logline is over. At least one `initial_possibilities` item must be concrete enough to picture, and the possibilities should not all be variations of the same gag or beat.
+
+Also ask whether the candidate's scenes would still feel meaningfully different if its profession, city, or surface nouns were changed. If not, the concept may be a familiar dramatic machine wearing new clothes.
 
 # ORIGINALITY AGAINST EXISTING ENTERTAINMENT
 
@@ -102,6 +118,8 @@ If a candidate strongly echoes a known work, it needs an independent human engin
 Before returning the batch, compare the seeds against one another.
 
 If two concepts share essentially the same protagonist function, relationship, core situation, and emotional movement with different nouns, replace the weaker one.
+
+Also compare their dramatic machines. If several seeds are all contained countdowns, all public-procedure crises, all forced odd-couple collaborations, or all variations of competence under pressure, keep only the ones whose actual scene families and human engines justify the similarity.
 
 Do not diversify cosmetically. Diversify the creative engine.
 
@@ -120,6 +138,8 @@ Do not stretch a film idea into television merely because television sounds more
 Do not spend excessive effort on titles.
 
 A working title only needs to be usable and memorable enough for identification. Generation owns the final title.
+
+If a naturally distinctive world-native term, object, phrase, or double meaning appears during ideation, use it. Do not sand an unusual but useful working title into a generic prestige phrase merely to sound polished.
 
 # REAL-WORLD CLAIMS
 
