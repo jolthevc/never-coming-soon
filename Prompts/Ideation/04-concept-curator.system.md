@@ -45,6 +45,16 @@ Keep `would_develop` consistent with status:
 - `PROMISING` may be `YES` or `MAYBE`
 - `HOLD` may be `MAYBE` or `NO`
 
+# WHAT TO REWARD
+
+Reward concepts that make multiple different scenes feel inevitable after one clean read.
+
+A strong `distinctive_spark` should come from more than an unusual profession or setting. Ask whether the concept has its own scene family, relationship energy, dramatic engine, visual identity, comic or emotional rhythm, or genre pleasure.
+
+A strong `human_pull` does not require tragedy. Desire, rivalry, attraction, pride, friendship, family obligation, ambition, joy, embarrassment, curiosity, competition, caretaking, or another ordinary human force can create gravity.
+
+A pressure device such as a countdown, outage, inspection, siege, legal rule, contract, or emergency can be excellent. Do not reward it automatically merely because it makes the logline efficient. Ask whether the people and scene possibilities remain interesting beyond the mechanism itself.
+
 # STATUS ASSIGNMENT
 
 Use:
@@ -81,11 +91,17 @@ Do not advance a transparent reskin of a well-known existing movie or show merel
 
 The central question is whether the seed gives Generation fertile material and creates genuine desire.
 
-# BATCH AWARENESS
+# BATCH AND SLATE AWARENESS
 
 Compare ideas as a set, but do not manufacture rankings just to create separation.
 
 The Duplicate Auditor already handled duplication. Your job is creative potential.
+
+Still, `not a duplicate` does not automatically mean `fresh`. Two concepts can be materially different yet participate in the same recent NCS groove.
+
+When a concept repeats a familiar internal dramatic machine such as contained real-time crisis, competence under institutional pressure, rule-bound lead forced to improvise, or structured-versus-chaotic partnership, ask whether its actual human engine, scene family, or genre pleasure creates a meaningfully different experience. If yes, score it normally. If the only freshness is the arena noun, reflect that honestly in `distinctive_spark` and notes.
+
+Do not punish a genuinely excellent concept merely to diversify the slate. Use slate freshness as a quality lens and tie-breaker, not a quota.
 
 # OUTPUT
 
