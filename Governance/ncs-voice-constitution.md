@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Voice Constitution v1.5
+## Voice Constitution v1.6
 
 ## 1. Voice in one sentence
 
@@ -141,7 +141,19 @@ Do not state what the production is really about, what lesson the protagonist le
 
 If the material is not carrying the meaning, mechanism, or consequence clearly enough, improve the material rather than justifying an explanatory gloss.
 
-## 13. Prefer behavior over emotional abstraction
+## 13. Pleasure does not need a lesson
+
+Not every entertaining scene has to cash out as meaning.
+
+A ridiculous caller, petty argument, physical gag, awkward meal, dumb competition, strange ritual, romantic near-miss, or piece of workplace nonsense may be valuable because it is funny, embarrassing, tense, charming, or specific.
+
+Do not automatically translate behavior into a moral distinction, lesson, or sentence explaining what the production learned.
+
+Be especially wary of tidy endings such as `It is helpful, not polite. There is a difference.` when the action already made the distinction visible.
+
+The narrator may have an opinion. The prose should not turn every scene into a case study.
+
+## 14. Prefer behavior over emotional abstraction
 
 Words such as pressure, trust, connection, stakes, chemistry, vulnerability, leadership, identity, tension, and growth are useful internally but can become shortcuts in public prose.
 
@@ -157,7 +169,7 @@ Prefer material such as:
 
 Do not ban abstract words. Use them when they are the clearest sentence. Just do not let them substitute for actual material.
 
-## 14. Proof of existence
+## 15. Proof of existence
 
 The imaginary production should leave ordinary residue on the page.
 
@@ -173,7 +185,7 @@ Once the reader believes the world, stop proving the world.
 
 Specificity should vary in density. One paragraph can be richly tactile while the next simply gets us across town.
 
-## 15. Sensory world, not film-school posture
+## 16. Sensory world, not film-school posture
 
 Help the reader picture and hear the production when it matters.
 
@@ -181,7 +193,7 @@ Weather, noise, clothing, rooms, crowd behavior, vehicles, hallways, food, archi
 
 Do not default to lens talk, palettes, aspect ratios, camera movement, or technical filmmaking vocabulary merely to sound cinematic.
 
-## 16. Narrator position
+## 17. Narrator position
 
 The narrator may behave like a spectator.
 
@@ -193,7 +205,7 @@ The narrator encounters the finished imaginary object from the audience side.
 
 The final studio card is the deliberate exception because it sits outside the fiction.
 
-## 17. Transitions
+## 18. Transitions
 
 Transitions are propulsion.
 
@@ -205,7 +217,7 @@ Also avoid making sections feel like isolated assignments. A heading can reset n
 
 When possible, let the final idea of one section naturally create appetite for the next.
 
-## 18. Characters
+## 19. Characters
 
 Introduce characters through behavior, desire, relationships, contradictions, habits, and pressure.
 
@@ -217,7 +229,7 @@ One central character may deserve twice the space of a supporting one. A minor c
 
 Public asymmetry is healthy when it reflects the production's actual center of gravity.
 
-## 19. Casting voice
+## 20. Casting voice
 
 Character comes before actor.
 
@@ -227,7 +239,7 @@ Describe what the actor seems to do in this imaginary performance: a look, rhyth
 
 Do not make every casting paragraph the same length or use the same syntax.
 
-## 20. Public story movement
+## 21. Public story movement
 
 Never Coming Soon is not Wikipedia.
 
@@ -237,7 +249,7 @@ Move quickly through connective tissue. Slow down where the production becomes d
 
 The public edition may show substantial pressure and escalation. It should not publish the complete causal, emotional, or mechanical map.
 
-## 21. Scenes
+## 22. Scenes
 
 Signature scenes should contain enough specificity that the reader begins directing them mentally.
 
@@ -251,7 +263,7 @@ When useful, enter a scene after the obvious setup and leave before the scene ha
 
 Clarity matters more than clever withholding. The goal is lived momentum, not coyness.
 
-## 22. Dialogue
+## 23. Dialogue
 
 Good dialogue does not always align perfectly.
 
@@ -263,11 +275,15 @@ Watch for mirrored aphorisms, reciprocal metaphors, and exchanges where the seco
 
 A character may be polished. The entire cast should not sound like one polished writer.
 
-## 23. Spoilers and unresolved value
+## 24. Spoilers and unresolved value
 
 The objective is appetite, not spoiler purity.
 
 **Protect whatever carries the production's major unresolved value. Give away enough genre pleasure to prove the production delivers.**
+
+Setup is not automatically spoiler. If the actual audience would know a past scandal, breakup, debt, failure, injury, promise, rule, or other premise-critical fact early enough to understand the current story, give the reader enough of it to make the pressure legible.
+
+Protect the decisive answer, response, revelation, or payoff. Do not create artificial mystery around information required to care.
 
 Do not become so spoiler-averse that the writing becomes vague or coy.
 
@@ -275,7 +291,7 @@ Do not announce that information is being withheld.
 
 The article should stop inside the pressure, not step outside the fiction to explain that it stopped.
 
-## 24. No defensive writing
+## 25. No defensive writing
 
 Do not defend the production against an imagined bad version.
 
@@ -283,7 +299,7 @@ Show the better version instead.
 
 The public article should not sound like a filmmaker answering development notes.
 
-## 25. Genre voice
+## 26. Genre voice
 
 The house voice bends to the production.
 
@@ -293,7 +309,7 @@ The recognizable house qualities are clarity, taste, enthusiasm, specificity, rh
 
 The source of pleasure is allowed to change completely from production to production.
 
-## 26. Sincerity
+## 27. Sincerity
 
 We are allowed to mean it.
 
@@ -301,7 +317,7 @@ A great romance should make us want the couple together. A tragedy should hurt. 
 
 We do not protect ourselves with irony.
 
-## 27. Humor
+## 28. Humor
 
 Humor should emerge from character, situation, juxtaposition, voice, or the absurdity of the brand itself.
 
@@ -309,13 +325,15 @@ Do not append punchlines to every paragraph. Do not undercut sincere moments mer
 
 If the genre label promises comedy, the edition should contain enough actual comic proof to justify the promise.
 
-## 28. Cultural references
+Some comedy is valuable precisely because it does not advance the thesis. Let a stupidly funny thing remain a stupidly funny thing when that is the pleasure.
+
+## 29. Cultural references
 
 References can orient the reader but should not replace description.
 
 Avoid pitches that are mostly `X meets Y meets Z.`
 
-## 29. Television
+## 30. Television
 
 A series must have a recurring engine.
 
@@ -325,9 +343,13 @@ THE SEASON should remain concrete even when operating above episode level. Macro
 
 Describe change through people, behavior, circumstances, institutions, relationships, or recurring situations rather than a string of thematic thesis sentences.
 
+When the show has a strong recurring external engine, the central people should increasingly reshape it. The public article should make visible how choices change rules, habits, relationships, audience behavior, team culture, incentives, or the institution itself rather than presenting the leads as excellent processors of weekly inputs.
+
+Selected episodes should reveal different pleasures and dramatic functions when the season supports them. Do not turn every episode into the same ethical or emotional lesson with different nouns.
+
 Television requires separate calibration beyond the film gold standard.
 
-## 30. Language
+## 31. Language
 
 Prefer familiar words used precisely.
 
@@ -335,7 +357,7 @@ Avoid corporate language, unnecessary screenwriting jargon, fake profundity, and
 
 Be suspicious of words such as iconic, unforgettable, electric, cinematic, visceral, gripping, powerful, compelling, and breathtaking when they substitute for actual description.
 
-## 31. Mechanical writing tells
+## 32. Mechanical writing tells
 
 Avoid:
 
@@ -354,19 +376,20 @@ Avoid:
 - summary sentences that restate the prior paragraph
 - unnecessary semicolons
 - prose that explains meaning, mechanism, or consequence after showing it
+- moral-summary sentences that turn a scene into a lesson after the behavior already carried the point
 - formulaic spectator reactions
 - every paragraph ending with a punchline
 - every paragraph trying to contain one memorable line
 
 Do not use em dashes in published Never Coming Soon prose.
 
-## 32. No backstage voice
+## 33. No backstage voice
 
 Published prose never talks about the backstage mechanics used to create the work.
 
 The reader receives a production, not a process demonstration.
 
-## 33. Friend test
+## 34. Friend test
 
 After drafting, ask:
 
@@ -383,6 +406,8 @@ After drafting, ask:
 - Are paragraph openings varied enough that the writer's method stays invisible?
 - Does the world feel larger than the plot?
 - Have we reacted to the production without explaining its meaning?
+- Did we allow entertaining material to remain entertaining without forcing a lesson onto it?
+- Did we give away the setup the reader needs while protecting the actual unresolved value?
 - Did we protect the production's major unresolved value?
 - Does the writer sound like they genuinely wish this thing existed?
 
