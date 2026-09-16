@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Editorial Quality Standard v1.8
+## Editorial Quality Standard v1.9
 
 ## 1. Purpose
 
@@ -80,6 +80,8 @@ A fairness hawk can forgive. A flexible person can become rigid when responsibil
 
 Do not demand random contradiction merely to prove complexity.
 
+Also ask whether growth has become optimization. A protagonist can mature while remaining vain, competitive, jealous, impulsive, status-conscious, ratings-hungry, petty, or seduced by success. Later-story competence should not turn people into ideal operators of the premise.
+
 ## 7. Subject agency
 
 When the production revolves around caring for, serving, coaching, teaching, treating, protecting, transporting, representing, or otherwise managing other people, ask whether the affected people feel like people rather than units in the mechanism.
@@ -140,6 +142,8 @@ For film, compare THE MOVIE against THE SCENES.
 
 For television, compare THE SEASON against THE EPISODES.
 
+Also compare earlier public sections. THE CHARACTERS and THE DREAM CAST should not spend the best action, dialogue, outcome, or physical mechanism of a signature scene that belongs more powerfully later.
+
 Do not treat paraphrase as distinct material.
 
 Repeated scene treatment normally requires an EDITION fix when it materially drags the article. A light echo does not require surgery.
@@ -156,9 +160,13 @@ THE SEASON should operate at macro scale while remaining concrete.
 
 Macro does not mean abstract. A string of polished thematic declarations is not a substitute for season movement.
 
+When the show has a strong recurring external engine, ask whether the public edition makes visible how the central people reshape it over time. Callers, cases, games, shifts, clients, missions, guests, patients, or other weekly inputs may generate raw story, but the protagonists should not look like passive processors of an excellent machine.
+
 THE EPISODES should operate at specific scale and feel like discovery rather than inventory.
 
 For an 8 to 10 episode season, a selective 4 to 6 episode showcase is often stronger than equal-weight coverage of all installments.
+
+Ask whether the selected episodes vary in dramatic function as well as subject. A season can feel repetitive when five different premises all resolve as `problem -> humane answer -> lesson` or `case -> competent fix -> better rule`.
 
 When THE FINISH owns the finale pressure, THE EPISODES should not fully stage that finale first.
 
@@ -188,6 +196,8 @@ Allow tonal contrast when it makes the people feel more human.
 
 Also ask whether signature set pieces remain inside the production's established physical and comic reality. A heightened beat can be excellent. Flag it only when the scene feels imported from a much broader, sillier, grimmer, or more superhuman production.
 
+Allow entertaining material to remain entertaining. A ridiculous scene does not need to become a lesson merely because the production also has emotional ambition.
+
 ## 16. Relationship-story test
 
 When romance, romantic comedy, second-chance love, or another central two-person relationship materially drives the production, review against `Governance/ncs-relationship-story-standard.md`.
@@ -206,6 +216,10 @@ Core rule:
 
 Do not protect so much that the article becomes vague.
 
+Setup is not automatically spoiler. If the actual audience would understand a past scandal, breakup, debt, failure, injury, promise, rule, or other premise-critical fact early enough to understand the present story, the public article should usually provide enough of it to make the current stakes legible.
+
+Protect the decisive answer, response, revelation, or payoff rather than hiding information required to care.
+
 ## 18. Interpretation discipline
 
 **Do not state meaning, mechanism, or consequence that the material is capable of delivering on its own.**
@@ -213,6 +227,8 @@ Do not protect so much that the article becomes vague.
 Flag sentences that tell the reader what a character learns, what a scene means, why a mechanism matters, or why a development is dangerous when surrounding material can communicate it.
 
 Be alert to development-note arc summaries such as `tonight she learns`, `by the end he realizes`, `his early mistake later becomes the answer`, or `this forces her to understand`. These often expose the story plan instead of letting behavior carry the change.
+
+Also flag moral-summary sentences that turn behavior into a neat lesson after the scene has already shown the distinction. A line that tells us which choice was kind, correct, responsible, mature, or meaningful may be redundant even when its judgment is reasonable.
 
 Do not explain a strong scene immediately after it works.
 
@@ -278,6 +294,8 @@ Also flag vague cliffhanger language that withholds without creating a specific 
 
 When the final dilemma is supposed to embody the production's central argument, make sure both claims are actually live. A finale is weaker when one option is obviously morally superior before the protagonist chooses.
 
+Do not assume a finale needs an outage, disaster, emergency, violent threat, or second crisis on top of a strong central choice. If the extra catastrophe does not change the decision or create distinct genre pleasure, it may be inflation rather than escalation.
+
 ## 25. Prose quality
 
 Review readability, rhythm, sentence control, paragraph movement, specificity, transitions, humor when appropriate, emotional sincerity, genre voice, and narrator presence.
@@ -287,6 +305,8 @@ The default house mode is clean, propulsive storytelling with selective personal
 The prose should feel polished without feeling optimized sentence by sentence.
 
 A connective paragraph should change the reader's state of knowledge through time, place, tactic, relationship, constraint, or a specific observation. Flag zero-information trailer paragraphs that only announce escalation with phrases such as `pressure rises`, `things get worse`, `a bigger move is coming`, or `everything is about to change` without adding material.
+
+Let some paragraphs end on the image, action, joke, or behavior itself. A polished verdict after a strong beat can make the narrator sound like a grader.
 
 ## 26. Paragraph openings
 
@@ -368,7 +388,7 @@ Do not require every internally cast role to appear publicly.
 
 ## 35. Manufactured-writing tells
 
-Flag repeated one-sentence paragraphs, predictable chains of short declarative sentences, breathless long-sentence clusters, identical paragraph shapes, repeated thesis openings, forced three-item lists, canned transitions, repeated binary constructions, generic concluding sentences, unnecessary semicolons, explanatory gloss after showing, development-note arc summaries, zero-information escalation paragraphs, formulaic spectatorship lines, invented collective audience reactions, and dialogue engineered for quote cards.
+Flag repeated one-sentence paragraphs, predictable chains of short declarative sentences, breathless long-sentence clusters, identical paragraph shapes, repeated thesis openings, forced three-item lists, canned transitions, repeated binary constructions, generic concluding sentences, unnecessary semicolons, explanatory gloss after showing, moral-summary sentences after ethical choices, development-note arc summaries, zero-information escalation paragraphs, formulaic spectatorship lines, invented collective audience reactions, and dialogue engineered for quote cards.
 
 Do not use em dashes in published NCS prose.
 
@@ -412,6 +432,7 @@ Ask:
 - Does the genre feel like itself?
 - Are the central people specific enough to care about?
 - Do character choices create later story?
+- Are characters becoming more specific rather than merely more correct or professionally optimal?
 - If a central pair is part of the premise's appeal, does one person's judgment materially change what the other does?
 - Is there at least one thing I would remember tomorrow?
 - If the premise contains a recurring value conflict, does the story ever complicate its preferred answer?
@@ -423,6 +444,8 @@ Ask:
 - Do major set pieces remain inside the production's established physical and comic reality?
 - Are major scenes owned by one section rather than restaged?
 - For television, is THE SEASON concrete without becoming episode recap?
+- For television, do the protagonists reshape the recurring engine?
+- For television, do selected episodes vary in dramatic function rather than repeating one moral shape?
 - For television, does the season discover something the premise did not already know?
 - Does public emphasis reflect actual importance rather than equal formatting?
 - Does dialogue sound like people rather than a quote generator?
@@ -432,9 +455,12 @@ Ask:
 - Was a strong Finish phrase or image weakened by premature repetition?
 - Are there repeated abstract thesis openings or rhetorical symmetries revealing the writer's method?
 - Did development-note arc summaries stay backstage?
+- Did ethical scenes avoid unnecessary moral-summary sentences?
+- Did the article give away the setup required to understand present stakes while protecting the actual unresolved value?
 - Does each connective paragraph actually add information rather than merely announce escalation?
 - Does spectatorship sound like one person with taste rather than fabricated audience consensus?
 - Did internal terminology stay backstage?
 - Does THE FINISH converge pressure rather than collect callbacks?
+- Is every external crisis in the finale actually earning its place?
 - Is there any problem serious enough that another automated pass is clearly worth the risk of changing what already works?
 - What should revision preserve?
