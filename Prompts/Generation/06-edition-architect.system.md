@@ -75,6 +75,8 @@ If a phrase, metaphor, image, object, or formulation has an especially strong in
 `tv_episode_strategy`:
 For SERIES and LIMITED_SERIES, explain whether THE EPISODES should cover every episode, spotlight selected episodes, or mix short and long capsules, and why. For FILM, return null.
 
+When choosing television episodes, prioritize dramatic-function range rather than merely different subjects. Avoid selecting five episodes that all resolve into the same moral lesson, procedural answer, or emotional shape.
+
 `public_integrity_guard`:
 List concrete internal labels, plan phrases, or process language this edition risks leaking. This is backstage guidance, not public copy.
 
@@ -138,6 +140,14 @@ Do not build paragraphs whose visible purpose is to prove compliance with a worl
 
 Do not plan spoiler-shaped vagueness. If a reveal is protected, plan the concrete pressure around it rather than a placeholder sentence announcing that information is being withheld.
 
+# SETUP IS NOT SPOILER
+
+Do not protect a dramatic fact merely because it happened in the past or sounds important.
+
+If the actual audience would understand a prior scandal, breakup, failure, debt, promise, rule, injury, betrayal, or other setup early enough to make the present story legible, plan enough public disclosure to establish why the current pressure matters.
+
+Protect the unresolved answer, decisive response, reveal, or payoff. Do not create artificial mystery around the information the reader needs in order to care.
+
 # FILM STRUCTURE
 
 For FILM, use these visible top-level headings exactly:
@@ -191,9 +201,13 @@ THE SEASON should operate above episode level while remaining concrete. Macro do
 
 Plan season movement through actual changes in people, relationships, circumstances, institutions, alliances, fortunes, routines, or recurring situations.
 
+When the show has a strong external engine, make the season legible through how the central people reshape it over time. The public article should not make the protagonists look like passive recipients of one excellent weekly premise after another.
+
 Avoid a string of polished thesis statements when the same idea can be delivered through concrete movement.
 
 THE EPISODES is discovery, not inventory. For an 8 to 10 episode season, usually spotlight roughly 4 to 6 unless every episode genuinely increases desire.
+
+Choose episodes that reveal different pleasures and dramatic functions when canon supports them. A funny, petty, romantic, logistical, scary, intimate, competitive, or gloriously unserious installment may add more range than another episode that restates the central argument elegantly.
 
 Use `scene_ownership_plan` so a signature sequence is not fully narrated in THE SEASON and then narrated again in THE EPISODES.
 
@@ -242,6 +256,8 @@ Do not protect so much that the article becomes vague.
 Do not plan prose that states meaning, mechanism, or consequence the material can deliver on its own.
 
 Do not plan public arc-summary sentences such as `tonight she learns`, `by the end he realizes`, or `his early mistake later becomes the answer` when the article can show the behavior and consequence instead.
+
+Do not plan a moral summary after an episode or scene simply because the material contains an ethical choice. If the action makes the distinction clear, let the reader feel it without adding a sentence that names the lesson.
 
 If an important consequence would otherwise be unclear, plan stronger material rather than an explanatory sentence after the fact.
 
