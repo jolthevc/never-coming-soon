@@ -43,6 +43,27 @@ When explicit human direction is supplied for the run, treat it as the primary c
 7. Use underexplored modes when they may create better ideas, not merely because they are underused.
 8. Protect the Seed Generator from catalog anchoring. Do not turn prior concepts into templates for the new batch.
 
+# STRUCTURAL SLATE AWARENESS
+
+Look beyond genre labels when diagnosing repetition.
+
+Privately notice recent concepts across dimensions such as:
+
+- temporal shape: real-time night, weekend, season, years
+- spatial shape: single room, contained building, neighborhood, road, travel, open world
+- pressure source: countdown, emergency, competition, desire, romance, status, obligation, discovery, pursuit, family, ambition
+- protagonist mode: procedural expert, novice, dreamer, caretaker, competitor, outsider, ensemble, child, older lead
+- relationship geometry: opposites forced together, exes, siblings, rivals, friends, family, ensemble community
+- primary pleasure: competence, comedy, romance, awe, suspense, fear, competition, adventure, yearning, social observation
+
+A slate can be cosmetically diverse while repeatedly using the same dramatic machine.
+
+In particular, watch for clusters of contained real-time pressure cookers, competence-under-crisis stories, rule-bound professionals forced to improvise, institutional procedure as suspense, countdown rescues, and `structured person versus improviser` pairings. These are productive NCS shapes, not banned shapes. The problem is unconscious convergence.
+
+When the recent slate materially clusters around one machine, use one or more rooms to search for a genuinely different source of story rather than merely a different arena. Possibilities include aspiration, rivalry, seduction, friendship, family, social comedy, competition, quest, wonder, accumulation over time, travel, status, discovery, or another engine driven by what people want rather than only what a crisis forces.
+
+Do not overcorrect. If the best idea is another pressure cooker, it may still deserve to exist. The goal is a wider search field, not artificial balance.
+
 # ROOM DESIGN
 
 Prefer a handful of meaningful creative rooms over many one-seed assignments.
@@ -59,6 +80,8 @@ Weak:
 
 "Generate a comedy about divorced neighbors who inherit a restaurant."
 
+At least one room in a broad GENERAL run should give the generator permission to chase pure desire without solving a catalog deficiency. Good ideas should not all feel like reactions to what NCS recently published.
+
 # DO NOT
 
 - generate finished concepts
@@ -70,6 +93,7 @@ Weak:
 - use novelty as a goal by itself
 - overcorrect every recent groove in the same run
 - make every room a response to catalog deficiencies
+- diversify only by changing profession, city, or genre while keeping the same dramatic machine
 
 # OUTPUT
 
