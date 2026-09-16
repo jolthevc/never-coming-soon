@@ -118,6 +118,10 @@ Once the reader believes the world, stop proving it.
 
 Protect whatever carries the production's major unresolved value while demonstrating enough genuine genre pleasure to prove the production delivers.
 
+Setup is not automatically spoiler. If the actual audience would know a past scandal, breakup, failure, debt, promise, rule, injury, betrayal, or other premise-critical fact early enough to understand the present story, give the reader enough of it to make the current stakes legible.
+
+Do not hide necessary setup merely because it sounds dramatic. Protect the unresolved answer, decisive response, reveal, or payoff.
+
 Do not announce that you are withholding information.
 
 Do not replace a protected reveal with vague placeholder prose such as `something he has been carrying`, `a truth sits between them`, or another abstraction that only advertises missing information.
@@ -127,6 +131,8 @@ If a reveal should remain protected, give the reader the concrete pressure, cond
 Do not state meaning, mechanism, or consequence that the material can deliver on its own.
 
 Be especially suspicious of development-note sentences that summarize an arc from outside the movie or show. Avoid constructions such as `tonight she learns`, `by the end he realizes`, `his early mistake later becomes the answer`, `this forces her to understand`, or similar prose when the behavior and consequence can make the point themselves.
+
+Do not turn an ethical or emotional choice into a neat lesson sentence after the scene. If the behavior already shows what was kind, selfish, risky, funny, cruel, generous, or complicated, let the reader register it without adding a moral caption.
 
 # STRONG IMAGE, THEN STOP
 
@@ -208,11 +214,15 @@ THE SEASON and THE EPISODES must operate at different zoom levels.
 
 THE SEASON should track macro movement across time through concrete changes in people, relationships, fortunes, institutions, routines, alliances, or recurring situations. It should not read like episode summaries with the numbers removed, and it should not become a string of thematic thesis statements.
 
+When the show has a strong recurring external engine, make visible how the protagonists reshape it over time. The callers, cases, games, clients, shifts, or missions can generate raw story, but the central people should increasingly change the rules, habits, incentives, relationships, audience behavior, team culture, or institution they return to.
+
 THE EPISODES should give specific stories worth remembering. It is discovery, not inventory.
 
 For an 8 to 10 episode season, usually choose 4 to 6 episodes unless full coverage genuinely makes the article better.
 
 Do not force equal capsule length.
+
+Let the selected episodes reveal range. Do not turn every capsule into a moral case study or a story about the protagonists finding the humane answer. Preserve installments that are funny, petty, romantic, competitive, embarrassing, logistical, scary, intimate, strange, or simply built around a bad idea that becomes irresistible when canon supports them.
 
 If THE FINISH will fully stage the finale pressure, do not fully stage the same finale sequence in THE EPISODES first. A brief setup is enough.
 
@@ -250,6 +260,8 @@ Do not exhaust one metaphor family simply because the production offers it. A to
 
 Do not explain why a scene works immediately after it works.
 
+Do not convert entertaining behavior into a thesis merely because the paragraph feels like it should mean something. A ridiculous call, petty argument, physical gag, awkward dinner, or strange little ritual is allowed to be memorable without becoming evidence for a larger lesson.
+
 Do not defend the production against an imagined worse version.
 
 A connective paragraph may be plain or brief, but it should change the reader's state of knowledge. Time moves, location changes, a tactic changes, a relationship shifts, a new constraint appears, or the narrator notices something specific.
@@ -272,12 +284,15 @@ Ask:
 - Are there too many binaries, mirrored clauses, three-part formulations, or quotable buttons?
 - Did I explain a strong scene after the scene already made the point?
 - Did I append a polished verdict merely because a paragraph felt unfinished after a strong image?
+- Did I turn an ethical choice into a lesson sentence that the scene did not need?
 - Did I use abstract words such as pressure, trust, chemistry, leadership, connection, or stakes where behavior would be more vivid?
+- Did spoiler protection hide setup the reader needs in order to understand the current stakes?
 - Did spoiler protection produce vague placeholder language?
 - Am I working the production's central metaphor or vocabulary so hard that it has become a prose gimmick?
 - Did I summarize a character arc from outside the production instead of showing the behavior?
 - Did I write a trailer-style paragraph that adds no new information?
 - Did I announce where the article cuts, stops, or withholds rather than simply stopping?
+- For television, did several episode capsules turn into the same moral story with different nouns?
 
 Fix the pattern, not every individual instance.
 
@@ -306,14 +321,18 @@ Before returning the draft, inspect for:
 - substantial duplicate scene treatment across any public sections, not only MOVIE/SCENES or SEASON/EPISODES
 - whether THE CHARACTERS or THE DREAM CAST pre-spent a signature scene's best details
 - whether THE SEASON and THE EPISODES are operating at different zoom levels
+- whether television protagonists visibly reshape the recurring engine rather than merely process it
+- whether selected television episodes vary in dramatic function rather than repeating one moral shape
 - whether every public Dream Cast paragraph names a selected actor and character
 - whether any Dream Cast language accidentally sounds like a real casting announcement or claim of participation
 - whether multiple antagonistic actors are legible rather than confusingly layered
 - whether a central pair sold by the premise actually changes each other's actions rather than operating only in parallel
+- whether premise-critical setup has been hidden under spoiler-shaped vagueness
 - whether the promised genre pleasure is actually demonstrated rather than merely described
 - whether signature scenes remain inside the production's established physical and comic reality
 - whether THE FINISH overloads recurring motifs, supporting-character roll call, or whether its strongest formulation was spent too early
 - post-scene verdict sentences that explain or certify what a strong image already delivered
+- moral-summary sentences that tell the reader what a scene's ethical distinction means after the behavior already showed it
 - meta lines that announce the article's cut, stop, or withholding
 - dialogue that sounds engineered for a quote rather than spoken
 - repeated abstract thesis openings
