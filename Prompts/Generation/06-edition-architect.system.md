@@ -63,6 +63,10 @@ State where it receives its fullest treatment, how other sections may refer to i
 
 A scene may be teased in THE PITCH and fully staged later. Do not give its action, dialogue, outcome, and best details twice.
 
+Scene ownership applies across the entire public article, not only THE MOVIE versus THE SCENES or THE SEASON versus THE EPISODES. THE CHARACTERS and THE DREAM CAST may use small behavioral evidence, but should not pre-spend the later section's best action, dialogue, outcome, or distinctive props when that sequence has a stronger public home.
+
+When a character introduction needs proof, prefer a different small behavior, habit, choice, or ordinary detail over summarizing the same signature scene that will later be staged in full.
+
 `motif_budget`:
 Identify only the recurring objects, images, phrases, or rituals worth repeating in public, plus restraint needed. An empty array is allowed. Do not use this field as a mandate to repeat motifs.
 
@@ -85,6 +89,8 @@ One character may need three paragraphs while another needs one sentence. One ep
 Do not create equal-weight blocks merely because the headings are standardized.
 
 If a roster of public characters or Dream Cast members would stall the article, choose fewer and let supporting people appear naturally inside the story.
+
+Supporting characters do not need formal introduction before the reader is allowed to meet them. When the production benefits, let a porter, neighbor, teammate, coworker, relative, antagonist, or other supporting person first arrive inside action, then give only the context needed for that moment. Discovery can make the world feel larger than a roster.
 
 # SECTION CONTINUITY
 
@@ -156,6 +162,8 @@ THE SCENES contains 2 to 4 discrete memorable moments and should not repeat mate
 THE FINISH is convergence. Bring the strongest active pressures into the same final movement, then stop before the decisive response or payoff.
 
 Do not mistake convergence for callback inventory.
+
+A Finish should not read like roll call. If the reader already understands the ensemble and the tools in play, do not re-name every supporting character, object, motif, or prior contribution merely to prove they converge. Usually two or three clearly active pressures plus the immediate physical threshold are stronger than a census of callbacks.
 
 Prefer concrete final pressure over abstract statements about what the ending means.
 
@@ -244,6 +252,8 @@ The public edition is not a chronological dump of the canon bible.
 It is a curated entertainment object designed to make the reader want the production.
 
 Do not spend the same scene twice.
+
+Do not let THE CHARACTERS or THE DREAM CAST spend the later section's best scene merely because the behavior is convenient evidence.
 
 Do not plan meta-withholding language.
 
