@@ -108,6 +108,16 @@ Not every supporting character needs a complete arc, symbolic object, recurring 
 
 Healthy negative space can make the world feel larger.
 
+# GROWTH WITHOUT OPTIMIZATION
+
+Character growth should make people more specific, not simply more correct.
+
+Do not let development convert protagonists into ideal stewards of the premise. A person can become wiser or more capable while remaining vain, competitive, ratings-hungry, jealous, impulsive, status-conscious, amused by the wrong thing, tempted by success, or occasionally bad at the job in a revealing way.
+
+When a workplace, institution, team, family system, or community becomes healthier over time, preserve appetite and friction. Better judgment should not erase humor, rivalry, ego, desire, resentment, or the capacity to make a choice that is fun before it becomes costly.
+
+If every later decision looks like best practice, the story may have replaced character with optimization.
+
 # CENTRAL ARGUMENT AND REAL TRADEOFFS
 
 If the premise is built around a recurring argument, value conflict, institution, or system, do not rig the story so one side is always obviously more humane or intelligent.
@@ -220,6 +230,16 @@ A thriller may have a funny thirty seconds. A comedy may become genuinely sad. A
 
 Tonal contrast can make the production feel more human when it grows naturally from character and circumstance.
 
+# CLIMAX SCALE
+
+Do not automatically make the climax feel larger by adding a catastrophe, outage, public emergency, physical threat, or second crisis on top of an already strong central collision.
+
+Escalation can come from attention, exposure, intimacy, irreversibility, responsibility, or the cost of choosing in front of the people who matter.
+
+If the central emotional, moral, romantic, competitive, or professional choice already creates maximum pressure, let that choice carry the scene. Add external crisis only when it changes the choice or produces a pleasure the production genuinely needs.
+
+Sometimes the strongest finale happens precisely because everything else is working and the characters can no longer blame the machinery.
+
 # FILM
 
 For film, know the complete story and actual ending internally.
@@ -233,6 +253,14 @@ When `format` is `FILM`, return `tv_engine` as null and `season_one` as null.
 For series, establish both a real Season One arc and a recurring engine capable of producing future episodes.
 
 Include several concrete episode-shaped possibilities, not vague season themes.
+
+A renewable external engine is raw material, not the whole show. If callers, cases, games, clients, shifts, missions, guests, or another recurring input generate weekly stories, the protagonists' choices should progressively reshape how that engine works. They may change rules, alliances, habits, incentives, audience behavior, team culture, access, risk, or what the institution becomes willing to do.
+
+The recurring machine should act on the characters, and the characters should act back on the machine.
+
+Check episode variety by dramatic function, not only subject matter. Several episodes can involve the same arena while delivering different pleasures: ridiculous social comedy, competition, romance, embarrassment, logistics, fear, intimacy, rivalry, a bad idea that works, a good idea that backfires, or a quiet night that reveals character.
+
+Do not let every episode secretly become `problem arrives -> protagonists find the humane answer -> new lesson or rule`. Moral seriousness is welcome when the material earns it. It should not become the only episode shape.
 
 Do not let Season One merely prove the premise's starting thesis. Look for at least one development that makes the production discover something the initial kernel did not already know.
 
@@ -285,6 +313,8 @@ If research is unnecessary, return an empty array.
 - complete every small pattern merely because closure is available
 - turn every ensemble character into a spokesperson for one side of the premise
 - make every recurring dilemma secretly have the same morally preferred answer
+- turn character growth into flawless best-practice behavior
+- add external catastrophe to a climax that is already carrying enough pressure without it
 
 # FINAL DEVELOPMENT TEST
 
@@ -297,13 +327,17 @@ Before returning, ask:
 - Is there one stronger version of the idea I failed to consider?
 - Is the title more ownable than merely polished, and is the working title actually better?
 - Are any characters too perfectly engineered or trapped in one philosophical role?
+- Are the characters becoming more specific, or merely more correct and professionally optimal?
 - If the premise contains a value conflict, can more than one side genuinely be right sometimes?
 - Are people affected by the central system allowed to affect the story back?
 - If this is comedy, where is the situation that is actually funny rather than merely witty?
+- For a series, do the protagonists reshape the recurring engine rather than only process what it sends them?
+- For a series, do the episode ideas vary in dramatic function rather than repeating one moral shape?
 - For a series, does the season discover something the original premise did not already know?
 - Does the world feel real without constantly proving its specificity?
 - For process-heavy material, is there at least one real judgment dilemma?
 - If the premise depends on unusual access, authorization, or specialized mechanics, is the operational logic clean enough to survive a first-watch question?
+- Is the climax carrying pressure because of the central choice, or because extra crisis was stacked on top by reflex?
 - Is there healthy negative space?
 
 The production should be coherent enough to believe, specific enough to see, human enough to surprise us, and entertaining enough to make us wish it existed.
