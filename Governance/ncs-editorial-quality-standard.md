@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Editorial Quality Standard v1.9
+## Editorial Quality Standard v1.10
 
 ## 1. Purpose
 
@@ -50,9 +50,17 @@ Do not route to CANON because a strong idea could theoretically be even better.
 
 Ask whether later story increasingly exists because of character choices rather than because another obstacle arrived.
 
+When capable opposition exists, ask whether it adapts to what the protagonist does. A threat, rival, institution, audience, family system, or social pressure that repeatedly resets can make a story feel like a queue of tests instead of a causal progression.
+
 For process-heavy stories, ask whether at least some major pressure requires judgment between legitimate obligations rather than simply discovering the correct procedure.
 
+A highly competent protagonist should not need to become incompetent for drama. But ask whether expertise has any meaningful boundary. Skill can solve mechanics without supplying the moral, relational, or strategic answer to every consequential choice.
+
+When a premise explicitly sells a rule, system, technology, ritual, relationship, policy, or professional method as both protection and constraint, ask whether the story actually dramatizes both sides. Do not let a `shield and cage` claim live only in the pitch while the mechanism remains correct in every meaningful scene.
+
 When a conflict-driven production contains multiple antagonistic actors, ask whether their hierarchy and distinct dramatic functions are legible. A vivid named insider, rival, or personal antagonist should not compete confusingly with an unnamed `real leader` or generic threat unless the distinction generates useful story.
+
+Also ask whether antagonistic pressure feels causally coherent. The audience may not know the motive yet, but recurring tactics should feel like they belong to an objective rather than a sequence of arbitrary creepy tests.
 
 ## 5. Argument complexity
 
@@ -87,6 +95,8 @@ Also ask whether growth has become optimization. A protagonist can mature while 
 When the production revolves around caring for, serving, coaching, teaching, treating, protecting, transporting, representing, or otherwise managing other people, ask whether the affected people feel like people rather than units in the mechanism.
 
 Children, patients, athletes, students, guests, residents, customers, clients, and family members do not need equal focus. But when their preferences, resistance, humor, loyalties, habits, or choices could materially shape the story, total passivity can make the world feel designed from the protagonist outward.
+
+One refusal, misunderstanding, recognition, preference, mistake, memory, joke, or unexpectedly useful action can be enough to turn a stake into a person.
 
 Do not inflate the public ensemble simply to satisfy this principle.
 
@@ -143,6 +153,8 @@ For film, compare THE MOVIE against THE SCENES.
 For television, compare THE SEASON against THE EPISODES.
 
 Also compare earlier public sections. THE CHARACTERS and THE DREAM CAST should not spend the best action, dialogue, outcome, or physical mechanism of a signature scene that belongs more powerfully later.
+
+Watch signature-tactic saturation as well as literal scene duplication. One memorable badge tap, phrase, ritual, prank, threat maneuver, prop, or relationship beat should not become the primary evidence in four different sections merely because each mention uses different wording.
 
 Do not treat paraphrase as distinct material.
 
@@ -220,13 +232,15 @@ Setup is not automatically spoiler. If the actual audience would understand a pa
 
 Protect the decisive answer, response, revelation, or payoff rather than hiding information required to care.
 
+Prefer the concrete noun when a fact is already known and not meaningfully protected. `The inhaler`, `the custody form`, `the badge number`, or `the breaker switch` is usually stronger than `what she needs`, `the document`, or `the thing in the office` when coyness is not doing story work.
+
 ## 18. Interpretation discipline
 
 **Do not state meaning, mechanism, or consequence that the material is capable of delivering on its own.**
 
 Flag sentences that tell the reader what a character learns, what a scene means, why a mechanism matters, or why a development is dangerous when surrounding material can communicate it.
 
-Be alert to development-note arc summaries such as `tonight she learns`, `by the end he realizes`, `his early mistake later becomes the answer`, or `this forces her to understand`. These often expose the story plan instead of letting behavior carry the change.
+Be alert to development-note arc summaries such as `tonight she learns`, `by the end he realizes`, `his early mistake later becomes the answer`, `early on she reaches for a shortcut; later...`, or `this forces her to understand`. These often expose the story plan instead of letting behavior carry the change.
 
 Also flag moral-summary sentences that turn behavior into a neat lesson after the scene has already shown the distinction. A line that tells us which choice was kind, correct, responsible, mature, or meaningful may be redundant even when its judgment is reasonable.
 
@@ -274,6 +288,8 @@ The narrator should not behave like the production's marketer, screenwriter, dev
 
 Flag ordinary prose that claims backstage knowledge about trailers, budgets, studio choices, marketing clips, or filmmaker intent.
 
+Also flag generic review scaffolding such as `The pleasure of the movie is...`, `What makes this work is...`, `The movie promises...`, or `This is where the film becomes...` when the surrounding material can simply demonstrate the pleasure instead.
+
 ## 23. Motif discipline
 
 Recurring objects, lines, rules, locations, songs, or visual motifs can create coherence.
@@ -296,6 +312,8 @@ When the final dilemma is supposed to embody the production's central argument, 
 
 Do not assume a finale needs an outage, disaster, emergency, violent threat, or second crisis on top of a strong central choice. If the extra catastrophe does not change the decision or create distinct genre pleasure, it may be inflation rather than escalation.
 
+The final public sentence should belong to the production rather than the article-making process. `Cut on...`, `We cut...`, `We stop...`, or a similar editorial instruction normally weakens a good threshold. If the production itself has a meaningful formal cut established by canon, describe the viewer's experience rather than the writer's decision to stop.
+
 ## 25. Prose quality
 
 Review readability, rhythm, sentence control, paragraph movement, specificity, transitions, humor when appropriate, emotional sincerity, genre voice, and narrator presence.
@@ -307,6 +325,8 @@ The prose should feel polished without feeling optimized sentence by sentence.
 A connective paragraph should change the reader's state of knowledge through time, place, tactic, relationship, constraint, or a specific observation. Flag zero-information trailer paragraphs that only announce escalation with phrases such as `pressure rises`, `things get worse`, `a bigger move is coming`, or `everything is about to change` without adding material.
 
 Let some paragraphs end on the image, action, joke, or behavior itself. A polished verdict after a strong beat can make the narrator sound like a grader.
+
+Prefer concrete nouns over suspense-shaped abstractions when the concrete fact is already public-safe.
 
 ## 26. Paragraph openings
 
@@ -368,6 +388,8 @@ Look for behavior, wants, contradictions, relationships, recognizable habits, ch
 
 Do not summarize the whole arc in the character introduction.
 
+Also watch for character-card prose. One compressed label can be vivid, but a section where everyone is introduced as `the scalpel`, `clipboard pragmatist`, `built for storms`, `the empathic clown`, or another polished function starts to read like a pitch deck.
+
 ## 33. Scene test
 
 Signature scenes should be specific enough to picture.
@@ -388,9 +410,9 @@ Do not require every internally cast role to appear publicly.
 
 ## 35. Manufactured-writing tells
 
-Flag repeated one-sentence paragraphs, predictable chains of short declarative sentences, breathless long-sentence clusters, identical paragraph shapes, repeated thesis openings, forced three-item lists, canned transitions, repeated binary constructions, generic concluding sentences, unnecessary semicolons, explanatory gloss after showing, moral-summary sentences after ethical choices, development-note arc summaries, zero-information escalation paragraphs, formulaic spectatorship lines, invented collective audience reactions, and dialogue engineered for quote cards.
+Flag repeated one-sentence paragraphs, predictable chains of short declarative sentences, breathless long-sentence clusters, identical paragraph shapes, repeated thesis openings, repeated character-card archetype labels, forced three-item lists, canned transitions, repeated binary constructions, generic concluding sentences, unnecessary semicolons, explanatory gloss after showing, moral-summary sentences after ethical choices, development-note arc summaries, zero-information escalation paragraphs, generic review scaffolding, coy non-spoiler abstractions, formulaic spectatorship lines, invented collective audience reactions, editorial-stop language, and dialogue engineered for quote cards.
 
-Do not use em dashes in published NCS prose.
+Do not use em dashes in published NCS prose, including as mechanical separators after names, episode labels, cast entries, or scene titles.
 
 ## 36. Strength preservation
 
@@ -432,23 +454,29 @@ Ask:
 - Does the genre feel like itself?
 - Are the central people specific enough to care about?
 - Do character choices create later story?
+- When capable opposition exists, does it adapt rather than reset?
 - Are characters becoming more specific rather than merely more correct or professionally optimal?
+- Does a highly competent protagonist face at least one consequential problem their expertise cannot answer alone?
 - If a central pair is part of the premise's appeal, does one person's judgment materially change what the other does?
 - Is there at least one thing I would remember tomorrow?
 - If the premise contains a recurring value conflict, does the story ever complicate its preferred answer?
+- If the premise sells a rule, system, or method as both protection and constraint, did the story actually dramatize both?
 - Are major characters more than positions in that argument?
 - Do people affected by the central system have enough agency to feel alive when relevant?
 - If comedy is promised, are there actually funny situations rather than only warm wit?
 - For process-heavy material, are there real judgment calls and not just correct procedures?
+- When antagonistic pressure exists, does it feel coherent enough to belong to an objective even if the motive remains mysterious?
 - When multiple antagonistic actors exist, can I tell who drives the threat and why each matters?
 - Do major set pieces remain inside the production's established physical and comic reality?
 - Are major scenes owned by one section rather than restaged?
+- Is one signature tactic or antagonist beat being overused across sections?
 - For television, is THE SEASON concrete without becoming episode recap?
 - For television, do the protagonists reshape the recurring engine?
 - For television, do selected episodes vary in dramatic function rather than repeating one moral shape?
 - For television, does the season discover something the premise did not already know?
 - Does public emphasis reflect actual importance rather than equal formatting?
 - Does dialogue sound like people rather than a quote generator?
+- Do character introductions sound like people rather than a row of polished archetype labels?
 - Does the world feel larger than the plot without visibly performing that requirement?
 - Is the prose polished without becoming rhythmically uniform?
 - Is one metaphor family being worked too hard?
@@ -457,10 +485,13 @@ Ask:
 - Did development-note arc summaries stay backstage?
 - Did ethical scenes avoid unnecessary moral-summary sentences?
 - Did the article give away the setup required to understand present stakes while protecting the actual unresolved value?
+- Did it use concrete nouns when the concrete fact was known and safe to name?
 - Does each connective paragraph actually add information rather than merely announce escalation?
 - Does spectatorship sound like one person with taste rather than fabricated audience consensus?
+- Did the narrator avoid generic review scaffolding that explains the production's pleasure instead of showing it?
 - Did internal terminology stay backstage?
 - Does THE FINISH converge pressure rather than collect callbacks?
+- Does THE FINISH end inside the production rather than with `Cut on...` or another editorial instruction?
 - Is every external crisis in the finale actually earning its place?
 - Is there any problem serious enough that another automated pass is clearly worth the risk of changing what already works?
 - What should revision preserve?
