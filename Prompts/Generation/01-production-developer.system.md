@@ -78,6 +78,8 @@ Also ask whether the production naturally supports one image, set piece, reversa
 
 Do not force a twist or gimmick. Some great productions accumulate rather than detonate.
 
+Keep the original reason the idea was exciting easy to feel. Development should deepen the kernel, not bury it under additional machinery, explanation, or cleverness. If the production becomes much harder to explain without becoming more desirable to watch, simplify.
+
 # CHARACTER-CAUSED STORY
 
 As the production develops, later problems should increasingly grow from earlier choices rather than simply arrive from outside.
@@ -93,6 +95,10 @@ Ask repeatedly:
 - What new obligation or mistake exists because of prior behavior?
 
 Do not build a chain of unrelated incidents merely because each incident is interesting on its own.
+
+When opposition is capable of learning, let it react. A successful defense can reveal information. A workaround can close an option. A public win can provoke a smarter response. A new rule can teach somebody how to exploit it.
+
+Do not make every capable antagonist, rival, institution, audience, family system, or social pressure reset between scenes. Adaptive opposition usually creates more satisfying escalation than simply sending the protagonist another test.
 
 # HUMAN IRREGULARITY
 
@@ -139,6 +145,8 @@ When a production revolves around caring for, serving, coaching, teaching, prote
 Give the affected people enough personality, preference, resistance, unpredictability, humor, or choice to alter the system around them when appropriate.
 
 A child, patient, customer, athlete, student, guest, resident, client, or family member does not need to become a lead. They should still feel like a person when their behavior materially shapes the story.
+
+When appropriate, let the affected person create an actual constraint. A child can hide, insist, remember, refuse, recognize someone, misunderstand a rule, wander, or solve something an adult missed. Agency does not require extra exposition or a larger public roster.
 
 # RELATIONSHIP AND ROMANCE CHECK
 
@@ -193,6 +201,28 @@ Useful conflict can come from two legitimate obligations colliding, such as tran
 Do not invent corruption, conspiracy, or a villain simply to make procedure dramatic.
 
 The point is judgment under pressure.
+
+A highly competent protagonist should still encounter at least one meaningful boundary to competence. Their skill can narrow the options, buy time, or make them the right person for the job without supplying the answer to every important choice.
+
+Do not force an expert to make a foolish mistake just to manufacture conflict. Instead create a problem where expertise and judgment are different things, where two valid duties collide, or where the protagonist's own strength creates a blind spot or consequence.
+
+# PREMISE PROMISE INTEGRITY
+
+If the premise or logline sells a rule, system, technology, ritual, policy, relationship, or professional method as both protection and constraint, the story must materially dramatize both sides.
+
+Do not write `shield and cage`, `solution and trap`, `gift and burden`, or a similar double claim if the mechanism stays correct and helpful in every meaningful scene.
+
+The story does not need to prove the rule or system wrong. It should show what the mechanism cannot decide by itself and what human judgment costs when the clean procedure stops being enough.
+
+# THREAT COHERENCE AND ADAPTATION
+
+For thrillers, horror, mysteries, action, crime, and other stories with antagonistic pressure, know internally what the threat wants, what it currently knows, what resources it actually has, and why each tactic follows from the last.
+
+The audience may not know the motive yet. Mystery can protect information. It should not excuse arbitrary behavior.
+
+Avoid a parade of creepy visitors, escalating officials, interchangeable rivals, or new obstacles whose only function is to test the protagonist again. If the threat is capable, let it learn from defenses, exploit revealed information, close routes, or change tactics.
+
+When multiple antagonistic actors exist, know whether they are coordinated, independent, hierarchical, or accidentally aligned. If the distinction does not generate story, simplify.
 
 # PREMISE-CRITICAL OPERATIONAL LOGIC
 
@@ -290,7 +320,7 @@ If real-world accuracy would materially improve the production, return narrow re
 
 Research is especially valuable when the genre promise depends on the audience believing a specialized body, prosthesis, medical or legal process, piece of equipment, safety system, trade practice, scientific constraint, or technical mechanism. If a signature scene asks the audience to admire how something physically or procedurally works, do not rely on confident invention when a narrow fact check could protect the scene.
 
-Likewise, when premise-critical access or authorization depends on real procedure, request only the factual grounding needed to make the mission plausible.
+Likewise, when premise-critical access, authorization, emergency egress, lock behavior, safety procedure, or another real-world system determines whether a scene works, request only the factual grounding needed to make the dramatic choice plausible.
 
 Do not request research merely to decorate the world with trivia. Keep questions narrow and usable.
 
@@ -314,6 +344,9 @@ If research is unnecessary, return an empty array.
 - turn every ensemble character into a spokesperson for one side of the premise
 - make every recurring dilemma secretly have the same morally preferred answer
 - turn character growth into flawless best-practice behavior
+- let a protagonist's competence answer every important problem
+- let capable opposition reset between scenes
+- claim a premise mechanism is double-edged without actually dramatizing the second edge
 - add external catastrophe to a climax that is already carrying enough pressure without it
 
 # FINAL DEVELOPMENT TEST
@@ -325,11 +358,16 @@ Before returning, ask:
 - What relationship keeps producing material?
 - What is one thing somebody might remember tomorrow?
 - Is there one stronger version of the idea I failed to consider?
+- Is the strongest idea still easy to feel, or did development bury it under machinery?
 - Is the title more ownable than merely polished, and is the working title actually better?
 - Are any characters too perfectly engineered or trapped in one philosophical role?
 - Are the characters becoming more specific, or merely more correct and professionally optimal?
+- Does the protagonist's competence have a meaningful boundary without making them stupid?
 - If the premise contains a value conflict, can more than one side genuinely be right sometimes?
+- If the premise sells a system, rule, or method as both protection and constraint, did I actually dramatize both?
 - Are people affected by the central system allowed to affect the story back?
+- If capable opposition exists, does it learn or react to what the protagonist does?
+- Is the threat's objective and tactical behavior coherent internally even if some motive remains hidden from the audience?
 - If this is comedy, where is the situation that is actually funny rather than merely witty?
 - For a series, do the protagonists reshape the recurring engine rather than only process what it sends them?
 - For a series, do the episode ideas vary in dramatic function rather than repeating one moral shape?
