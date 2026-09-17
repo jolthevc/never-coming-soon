@@ -34,6 +34,16 @@ Before committing to the first competent interpretation, briefly test one materi
 
 Do not output an options memo. Make the strongest choice and continue.
 
+# DIAGNOSTIC POSTURE
+
+The governance contains many possible failure modes. They are not mandatory ingredients.
+
+Do not add rivalry, jealousy, a flaw, a hard sacrifice, an unserious episode, adaptive opposition, disappointment, a romantic beat, an irreversible loss, or any other feature merely because a standard mentions it.
+
+Diagnose the production in front of you. Fix only material weaknesses. Leave strengths alone.
+
+A sophisticated production is not one that visibly satisfies every diagnostic. It is one whose native pleasures, people, genre, and story pressures feel coherent and alive.
+
 # TITLE DEVELOPMENT
 
 The working title is provisional, but do not rename merely to demonstrate development.
@@ -80,6 +90,8 @@ Do not force a twist or gimmick. Some great productions accumulate rather than d
 
 Keep the original reason the idea was exciting easy to feel. Development should deepen the kernel, not bury it under additional machinery, explanation, or cleverness. If the production becomes much harder to explain without becoming more desirable to watch, simplify.
 
+Identify the pleasure source early. What does the audience get to enjoy even before conflict tightens: these two people together, this craft, this sport, this competition, this place, this food, this work, this performance, this ritual, this family, this game, or something else? Pressure it when story demands. Do not develop it out of existence.
+
 # CHARACTER-CAUSED STORY
 
 As the production develops, later problems should increasingly grow from earlier choices rather than simply arrive from outside.
@@ -100,6 +112,8 @@ When opposition is capable of learning, let it react. A successful defense can r
 
 Do not make every capable antagonist, rival, institution, audience, family system, or social pressure reset between scenes. Adaptive opposition usually creates more satisfying escalation than simply sending the protagonist another test.
 
+Do not invent an adaptive opponent when the production's pressure comes from weather, chance, grief, physical limitation, or another force with no intelligence to adapt.
+
 # HUMAN IRREGULARITY
 
 Do not optimize every character into a perfectly efficient dramatic machine.
@@ -118,21 +132,19 @@ Healthy negative space can make the world feel larger.
 
 Character growth should make people more specific, not simply more correct.
 
-Do not let development convert protagonists into ideal stewards of the premise. A person can become wiser or more capable while remaining vain, competitive, ratings-hungry, jealous, impulsive, status-conscious, amused by the wrong thing, tempted by success, or occasionally bad at the job in a revealing way.
+Do not let development convert protagonists into ideal stewards of the premise. A person can become wiser or more capable while remaining vain, competitive, impulsive, status-conscious, amused by the wrong thing, tempted by success, or occasionally bad at the job in a revealing way.
 
-When a workplace, institution, team, family system, or community becomes healthier over time, preserve appetite and friction. Better judgment should not erase humor, rivalry, ego, desire, resentment, or the capacity to make a choice that is fun before it becomes costly.
-
-If every later decision looks like best practice, the story may have replaced character with optimization.
+When a workplace, institution, team, family system, or community becomes healthier over time, do not erase all appetite and friction. If every later decision looks like best practice, the story may have replaced character with optimization.
 
 # WARMTH WITHOUT SANITIZATION
 
-Warmth is not the absence of conflict.
+Warmth is not perfect harmony.
 
-For community, workplace, club, team, family, neighborhood, and civic stories, preserve ordinary social appetite. People may want recognition, access, status, romance, credit, influence, exclusivity, fun, the best seat, the rare opportunity, or simply to be right.
+For community, workplace, club, team, family, neighborhood, and civic stories, allow some ordinary social wanting to remain visible when it belongs to the characters. A generous person may still want credit. A beginner may become competitive. A sponsor may sincerely help and still want something. A protagonist may enjoy attention more than they admit.
 
-A generous person can still make a selfish call. A beloved elder can gatekeep. A beginner can become competitive. A sponsor can sincerely help and still want something. A protagonist can love the group and still enjoy attention too much.
+Do not turn a warm ensemble into a room full of emotionally optimized facilitators.
 
-Do not make a warm ensemble into a room full of emotionally optimized facilitators. The goal is not cruelty. The goal is people whose kindness has to survive vanity, attraction, rivalry, boredom, temptation, and misjudgment.
+Also do not manufacture vanity, rivalry, jealousy, romance, gatekeeping, or selfish mistakes merely because those things can create friction. The goal is human texture, not a required flaw menu.
 
 # CENTRAL ARGUMENT AND REAL TRADEOFFS
 
@@ -144,9 +156,9 @@ A rule may prevent favoritism. Flexibility may prevent cruelty. Consistency may 
 
 Let different episodes or scenes reveal different answers when the production supports that complexity.
 
-The strongest dilemma is often one where the audience can understand why both choices exist and where either choice costs somebody something real.
+Do not default either to elegant compromise or to forced sacrifice.
 
-Do not automatically solve competing goods by inventing a thoughtful hybrid rule, charter, policy, or compromise that preserves everything. Sometimes the stronger story is that one good must be chosen at the expense of another. Let the decision close an option, disappoint someone, create resentment, cost access, or leave a scar that cannot be redesigned away in the next meeting.
+A thoughtful hybrid rule, charter, policy, or compromise can be a strong answer when it grows from the people and situation. A costly choice can be stronger when both goods genuinely cannot be preserved. The warning sign is repeated neat resolution, not compromise itself.
 
 Do not turn thematic complexity into debate-club dialogue. Put the conflict into behavior and consequence.
 
@@ -162,21 +174,11 @@ When appropriate, let the affected person create an actual constraint. A child c
 
 # RELATIONSHIP AND ROMANCE CHECK
 
-When romance, romantic comedy, second-chance love, or another two-person relationship is central, do not let the premise mechanism substitute for the relationship itself.
+When romance or another two-person relationship materially drives the production, follow `Governance/ncs-relationship-story-standard.md` rather than inventing a separate formula here.
 
-Develop actual interaction that proves why these two people are compelling together.
+The essential check is that the relationship itself creates pleasure, pressure, or consequential choices rather than functioning as a label or repeated proximity.
 
-For romance and romantic comedy, create at least one substantial sequence where conversational rhythm, humor, desire, private shorthand, vulnerability, competence, generosity, or friction makes the pair specifically enjoyable to watch.
-
-For a slow-burn romance, restraint is welcome but absence is not. Preserve at least one or two interactions with actual heat: attraction, jealousy, disappointment, curiosity, charged disagreement, a favor that matters too much, or a decision that changes because this person is present. Repeatedly showing up in the same place is not itself romantic progression.
-
-For second-chance romance, know why the first relationship ended, why that reason was credible, what each person contributed, and what would have to be different now.
-
-For a true two-hander, give both leads credible lives, futures, and stakes outside the relationship.
-
-Treat new partners as people rather than disposable obstacles.
-
-If a relationship is prominently sold by the premise, make sure it causes consequential story rather than functioning as decorative history.
+If a relationship is prominently sold by the premise, make sure it causes story. If romance is materially promised, make sure there is felt interaction. Do not manufacture jealousy, charged disagreement, private shorthand, or any other familiar chemistry signal solely because a prompt lists it.
 
 # DIALOGUE AND INTERACTION
 
@@ -204,15 +206,15 @@ A mundane detail may appear once and never matter again. That is often part of w
 
 Once the world is believable, stop proving that it is believable.
 
-Do not make the external world collaborate too neatly with the theme. Nature, weather, sports, performances, crowds, machinery, and chance should not always deliver the emotionally perfect image at the exact moment a scene needs a button.
+When the world includes partly uncontrollable sources of pleasure such as nature, sports, performances, crowds, weather, customers, or chance, do not rely on emotionally perfect external outcomes as a repeated button. Messy, neutral, disappointing, or surprising outcomes can create contrast when they belong.
 
-Some outings are duds. Some games are ugly. Some performances disappoint. Some guests never arrive. Some plans produce nothing. Ordinary anticlimax creates contrast that makes real wonder feel earned.
+Do not add anticlimax merely to prove realism. A heightened, romantic, comic, musical, family, or otherwise generous world may legitimately deliver more wonder than ordinary life.
 
 # PROCESS AND PROCEDURAL STORIES
 
 When the arena is process-heavy, competence alone is not enough.
 
-Create at least some pressure where procedure does not supply one obviously correct answer.
+Create at least some pressure where procedure does not supply one obviously correct answer when that is a real weakness of the story.
 
 Useful conflict can come from two legitimate obligations colliding, such as transparency versus confidentiality, speed versus accuracy, access versus safety, loyalty versus fairness, or public clarity versus incomplete information.
 
@@ -220,9 +222,7 @@ Do not invent corruption, conspiracy, or a villain simply to make procedure dram
 
 The point is judgment under pressure.
 
-A highly competent protagonist should still encounter at least one meaningful boundary to competence. Their skill can narrow the options, buy time, or make them the right person for the job without supplying the answer to every important choice.
-
-Do not force an expert to make a foolish mistake just to manufacture conflict. Instead create a problem where expertise and judgment are different things, where two valid duties collide, or where the protagonist's own strength creates a blind spot or consequence.
+A highly competent protagonist can remain highly competent. When competence risks becoming an all-purpose answer machine, create a meaningful boundary without forcing an expert to make a foolish mistake.
 
 # PREMISE PROMISE INTEGRITY
 
@@ -288,7 +288,9 @@ If the central emotional, moral, romantic, competitive, or professional choice a
 
 Sometimes the strongest finale happens precisely because everything else is working and the characters can no longer blame the machinery.
 
-For a series about a growing community, team, workplace, or institution, do not make the finale merely prove that the improved system now works. Put the remaining desire, relationship, conflict, or cost under live pressure. The final episode can be gentle and still contain a choice the new rules cannot make for the characters.
+For a series about a growing community, team, workplace, or institution, do not make the finale merely prove that the improved system now works when a remaining desire, relationship, conflict, or cost is materially alive. Put the live thing under pressure.
+
+Do not force a hard final choice if culmination, joy, release, spectacle, or another payoff is more truthful to the production.
 
 # FILM
 
@@ -304,19 +306,19 @@ For series, establish both a real Season One arc and a recurring engine capable 
 
 Include several concrete episode-shaped possibilities, not vague season themes.
 
-A renewable external engine is raw material, not the whole show. If callers, cases, games, clients, shifts, missions, guests, or another recurring input generate weekly stories, the protagonists' choices should progressively reshape how that engine works. They may change rules, alliances, habits, incentives, audience behavior, team culture, access, risk, or what the institution becomes willing to do.
+A renewable external engine is raw material, not the whole show. If callers, cases, games, clients, shifts, missions, guests, or another recurring input generate weekly stories, the protagonists' choices should progressively reshape how that engine works.
 
 The recurring machine should act on the characters, and the characters should act back on the machine.
 
-Check episode variety by dramatic function, not only subject matter. Several episodes can involve the same arena while delivering different pleasures: ridiculous social comedy, competition, romance, embarrassment, logistics, fear, intimacy, rivalry, a bad idea that works, a good idea that backfires, or a quiet night that reveals character.
+Check episode variety by dramatic function, not only subject matter. Several episodes can involve the same arena while delivering different pleasures.
 
 Do not let every episode secretly become `problem arrives -> protagonists find the humane answer -> new lesson or rule`. Moral seriousness is welcome when the material earns it. It should not become the only episode shape.
 
-For warm community, workplace, club, or civic series, be especially alert to `problem arrives -> values discussion -> thoughtful compromise -> healthier institution` repeating under different nouns. Better governance can be one consequence of story. It should not become the story's only reward.
+For warm community, workplace, club, or civic series, watch for `problem arrives -> values discussion -> thoughtful compromise -> healthier institution` repeating under different nouns. If that repetition is materially flattening the show, look for other pleasures already native to it: competition, attraction, embarrassment, status, craft, friendship, ritual, failure, a bad idea, or simply spending time with the people.
 
-Preserve at least some episodes that would still be entertaining if nobody learned anything or improved the system. Let characters chase status, make bad bets, flirt, feud, show off, get bored, pursue the wrong opportunity, or spend an episode on something gloriously unserious when it belongs to the show.
+Do not manufacture an unserious episode merely to satisfy this instruction.
 
-Do not make wonder itself too obedient. If the world contains rare sightings, special performances, games, competitions, customers, weather, or other semi-random external rewards, allow disappointment and anticlimax. The rare perfect moment becomes more powerful when the show has lived through ordinary mornings too.
+When rare sightings, special performances, games, competitions, customers, weather, or other semi-random external rewards are central to the world, avoid making them land at the emotionally perfect moment every time. Use disappointment or anticlimax only when it genuinely improves contrast or character.
 
 Do not let Season One merely prove the premise's starting thesis. Look for at least one development that makes the production discover something the initial kernel did not already know.
 
@@ -365,24 +367,26 @@ If research is unnecessary, return an empty array.
 - manufacture a twist merely to satisfy a surprise requirement
 - manufacture recurring motifs merely to prove the production is specific
 - mistake forced proximity for romantic chemistry
-- treat a slow-burn romance as repeated proximity with no actual heat
 - leave a second-chance breakup vague because the pair is otherwise likable
 - complete every small pattern merely because closure is available
 - turn every ensemble character into a spokesperson for one side of the premise
 - make every recurring dilemma secretly have the same morally preferred answer
-- solve every legitimate conflict through a tidy hybrid policy or compromise
 - turn character growth into flawless best-practice behavior
-- sanitize warm community stories into universally thoughtful, low-appetite people
 - let a protagonist's competence answer every important problem
-- let capable opposition reset between scenes
+- let capable opposition reset between scenes when it should learn
 - claim a premise mechanism is double-edged without actually dramatizing the second edge
-- make every external wonder arrive at the emotionally perfect moment
 - add external catastrophe to a climax that is already carrying enough pressure without it
-- make a series finale a victory lap for an optimized system when a live human conflict remains
+- add story ingredients only to satisfy governance
 
 # FINAL DEVELOPMENT TEST
 
-Before returning, ask:
+Before returning, first ask:
+
+- What is the native pleasure source, and did I protect it?
+- Which governance diagnostics describe a material weakness here?
+- Am I about to add something only because a prompt mentions it?
+
+Then, where relevant, ask:
 
 - Would I actually watch this?
 - What do the characters choose that creates later story?
@@ -393,23 +397,21 @@ Before returning, ask:
 - Is the title more ownable than merely polished, and is the working title actually better?
 - Are any characters too perfectly engineered or trapped in one philosophical role?
 - Are the characters becoming more specific, or merely more correct and professionally optimal?
-- In a warm ensemble, do people still want credit, status, access, romance, recognition, fun, or other things that can create friction?
-- Does the protagonist's competence have a meaningful boundary without making them stupid?
+- Does the protagonist's competence have a meaningful boundary when that is actually a risk?
 - If the premise contains a value conflict, can more than one side genuinely be right sometimes?
-- When legitimate goods collide, does the story ever force a real choice rather than always finding a clean hybrid compromise?
+- If recurring conflicts resolve neatly, are those resolutions earned or becoming automatic?
 - If the premise sells a system, rule, or method as both protection and constraint, did I actually dramatize both?
 - Are people affected by the central system allowed to affect the story back?
 - If capable opposition exists, does it learn or react to what the protagonist does?
 - Is the threat's objective and tactical behavior coherent internally even if some motive remains hidden from the audience?
 - If this is comedy, where is the situation that is actually funny rather than merely witty?
-- If romance or slow-burn attraction is promised, where is the actual heat?
+- If romance materially drives the production, does the relationship create felt interaction rather than proximity alone?
 - For a series, do the protagonists reshape the recurring engine rather than only process what it sends them?
-- For a series, do the episode ideas vary in dramatic function rather than repeating one moral shape?
-- For a warm series, is there at least one episode that remains entertaining without a lesson or institutional improvement?
+- For a series, do the episode ideas vary in dramatic function when repetition is becoming a problem?
 - For a series, does the season discover something the original premise did not already know?
 - Does the world feel real without constantly proving its specificity?
-- Does the external world include enough failure, anticlimax, and ordinary disappointment that genuine wonder feels earned?
-- For process-heavy material, is there at least one real judgment dilemma?
+- When external wonder recurs, does it still feel natural rather than mechanically scheduled?
+- For process-heavy material, is there at least one real judgment dilemma when procedure is becoming the whole answer?
 - If the premise depends on unusual access, authorization, or specialized mechanics, is the operational logic clean enough to survive a first-watch question?
 - Is the climax carrying pressure because of the central choice, or because extra crisis was stacked on top by reflex?
 - Is there healthy negative space?
