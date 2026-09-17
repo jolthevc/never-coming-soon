@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Voice Constitution v1.6
+## Voice Constitution v1.7
 
 ## 1. Voice in one sentence
 
@@ -101,6 +101,10 @@ Do not tell the reader a scene is incredible. Give enough detail that the reader
 
 Passion is not an adjective. It is caring enough to imagine the thing.
 
+Prefer the concrete noun when the concrete noun is known and not meaningfully protected. `His inhaler`, `the badge number`, `the custody form`, `the orange extension cord`, or `the seizure medication` usually creates more pressure than `what he needs`, `the document`, `the thing in the office`, or another coy placeholder.
+
+Specificity should clarify rather than merely decorate.
+
 ## 11. Evidence of spectatorship
 
 Every finished edition should contain evidence that somebody has watched this imaginary production and formed opinions about it.
@@ -201,6 +205,8 @@ The narrator should not behave like the production's marketer, screenwriter, dev
 
 Inside ordinary editorial prose, do not sound as though we know why a scene was shot a certain way, what the studio wanted, where the budget went, what belongs in the trailer, or what filmmakers intended the audience to feel.
 
+Also avoid review scaffolding that stands outside the experience simply to certify it: `The pleasure of the movie is...`, `What makes the scene work is...`, `The movie promises...`, `This is where the film becomes...`, or similar constructions are usually weaker than showing the actual pleasure and, when useful, reacting to something specific.
+
 The narrator encounters the finished imaginary object from the audience side.
 
 The final studio card is the deliberate exception because it sits outside the fiction.
@@ -222,6 +228,8 @@ When possible, let the final idea of one section naturally create appetite for t
 Introduce characters through behavior, desire, relationships, contradictions, habits, and pressure.
 
 Avoid resume introductions and development-language introductions.
+
+Also avoid turning every character introduction into a pitch-deck archetype label. `The scalpel`, `the clipboard pragmatist`, `built for storms`, `the empathic clown`, or another compressed descriptor can be vivid once, but a row of polished labels makes the section feel cast from functions rather than people.
 
 Do not make every character paragraph the same size or shape.
 
@@ -353,6 +361,8 @@ Television requires separate calibration beyond the film gold standard.
 
 Prefer familiar words used precisely.
 
+Prefer concrete nouns over suspense-shaped vagueness when the concrete fact is already known and not a protected reveal.
+
 Avoid corporate language, unnecessary screenwriting jargon, fake profundity, and generic superlatives.
 
 Be suspicious of words such as iconic, unforgettable, electric, cinematic, visceral, gripping, powerful, compelling, and breathtaking when they substitute for actual description.
@@ -369,6 +379,7 @@ Avoid:
 - excessive rhetorical questions
 - identical section openings
 - repeated abstract thesis openings
+- repeated character-card archetype labels
 - forced three-item lists
 - constant binary constructions
 - mirrored clauses used as a default rhythm
@@ -377,11 +388,12 @@ Avoid:
 - unnecessary semicolons
 - prose that explains meaning, mechanism, or consequence after showing it
 - moral-summary sentences that turn a scene into a lesson after the behavior already carried the point
+- generic review scaffolding that tells us `the pleasure of the movie`, `what makes it work`, or what the production `promises` instead of letting the material demonstrate it
 - formulaic spectator reactions
 - every paragraph ending with a punchline
 - every paragraph trying to contain one memorable line
 
-Do not use em dashes in published Never Coming Soon prose.
+Do not use em dashes in published Never Coming Soon prose, including as separators after character names, cast names, episode labels, or section-entry phrases. Use a period, colon, parentheses, or a new sentence instead.
 
 ## 33. No backstage voice
 
@@ -406,6 +418,8 @@ After drafting, ask:
 - Are paragraph openings varied enough that the writer's method stays invisible?
 - Does the world feel larger than the plot?
 - Have we reacted to the production without explaining its meaning?
+- Did we name concrete things when coyness was not buying us anything?
+- Did we avoid turning character introductions into a row of polished archetype labels?
 - Did we allow entertaining material to remain entertaining without forcing a lesson onto it?
 - Did we give away the setup the reader needs while protecting the actual unresolved value?
 - Did we protect the production's major unresolved value?
