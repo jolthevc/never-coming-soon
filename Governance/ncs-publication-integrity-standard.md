@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Publication Integrity Standard v1.2
+## Publication Integrity Standard v1.3
 
 ## 1. Purpose
 
@@ -66,7 +66,21 @@ The exact wording may vary. Any sentence that sounds like the writer is discussi
 
 If the structure is strong, the reader should feel it without being told the architecture.
 
-## 5. Checklist visibility is a failure mode
+## 5. Do not narrate the article's own stop
+
+The public edition should end inside the imaginary production, not with an instruction about how the article is withholding the rest.
+
+Avoid meta endings such as:
+
+- `We cut here.`
+- `Cut on the hand.`
+- `We stop one beat before contact.`
+- `We leave her there.`
+- `The image is enough.`
+
+If the production itself contains a meaningful formal cut established by canon, the article may describe what the viewer experiences. Otherwise, simply end on the strongest image, action, sound, line, physical state, or emotional threshold.
+
+## 6. Checklist visibility is a failure mode
 
 A detail can be individually good and still become artificial when the article visibly collects it to satisfy a rubric.
 
@@ -76,7 +90,7 @@ Disperse texture where it naturally belongs.
 
 The strongest proof of existence usually appears incidentally while something else is happening.
 
-## 6. Motif budget
+## 7. Motif budget
 
 Recurring objects and images are useful. Over-signaling them makes the production feel designed from the outside.
 
@@ -88,13 +102,13 @@ Ask:
 - Is this return caused by story or behavior rather than by a desire to remind the reader of a motif?
 - Would the article be stronger if one recurrence disappeared?
 
-Avoid making every section touch the same coin, clipboard, photograph, song, rule, prop, or phrase simply because it became the production's signature.
+Avoid making every section touch the same coin, clipboard, photograph, song, rule, prop, phrase, badge tap, threat maneuver, or other signature tactic simply because it became the production's identity.
 
-## 7. Spectator, not annotator
+## 8. Spectator, not annotator
 
 The narrator may react to what happened on screen.
 
-The narrator should not annotate dramatic construction.
+The narrator should not annotate dramatic construction or certify the production's appeal from outside the experience.
 
 Good:
 
@@ -112,7 +126,9 @@ Bad:
 
 > This sequence functions as the show's lower-stakes proof of its comic engine.
 
-## 8. Public character language
+Also be suspicious of generic review scaffolding such as `The pleasure of the movie is...`, `What makes this work is...`, `The movie promises...`, or `This is where the film becomes...` when the material itself can demonstrate the point.
+
+## 9. Public character language
 
 Public character copy describes people as they exist in the production.
 
@@ -122,7 +138,9 @@ Do not tell the reader that someone is a foil, translator, audience surrogate, e
 
 Do not summarize the whole arc in the character introduction.
 
-## 9. Public television language
+Do not make every character entry a polished archetype card. One compressed descriptor can be vivid, but a row of labels such as `the scalpel`, `built for storms`, `clipboard pragmatist`, or `the empathic clown` reveals the writer's design more than the person.
+
+## 10. Public television language
 
 Episode capsules must sound like somebody describing episodes they watched.
 
@@ -132,7 +150,7 @@ Do not use language that comments on how much of the finale or final turn the ar
 
 Episode titles may be shown when they increase pleasure or reality. Internal planning labels may not.
 
-## 10. Public scene language
+## 11. Public scene language
 
 A scene should arrive as a scene.
 
@@ -140,7 +158,9 @@ Do not precede it with an internal category name. Do not explain afterward which
 
 If a scene is a Contained Proof internally, the public reader should never know that term.
 
-## 11. Surface integrity
+Do not replace a known, non-spoilery concrete fact with vague language merely to make a scene sound mysterious. If the object is an inhaler, badge number, custody form, breaker switch, insulin pen, or evidence bag, naming it can increase rather than reduce suspense.
+
+## 12. Surface integrity
 
 Before delivery, check for:
 
@@ -152,12 +172,13 @@ Before delivery, check for:
 - parenthetical editorial classifications
 - raw field names
 - explicit spoiler-management language
+- meta-cut or editorial-stop language
 - references to prompts, models, generation, automation, workflow, or tooling
-- em dash characters
+- em dash characters anywhere in public prose
 
 The Google Doc may display the NCS score above the article as delivery metadata. The article itself should not discuss its score.
 
-## 12. Hard deterministic leak list
+## 13. Hard deterministic leak list
 
 The orchestration layer should flag these substrings case-insensitively when they appear in public article text:
 
@@ -190,7 +211,7 @@ These are strong warnings and normally deserve focused revision before delivery.
 
 The deterministic list is not exhaustive. The Forensic Editor must also catch semantic leakage that uses different words.
 
-## 13. Final test
+## 14. Final test
 
 Ask:
 
