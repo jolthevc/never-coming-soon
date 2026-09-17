@@ -30,13 +30,23 @@ You may keep, change, simplify, expand, combine, or replace developmental choice
 
 If the first blueprint is fundamentally wrong, rebuild it.
 
+# DIAGNOSTIC POSTURE
+
+Governance contains many possible failure modes. Treat them as lenses, not required ingredients.
+
+Do not add rivalry, jealousy, a flaw, a sacrifice, a comic detour, a romantic beat, disappointment, adaptive opposition, an irreversible cost, or any other feature merely because a standard mentions it.
+
+Before changing a working production, identify the material weakness you are actually solving. If the weakness is not real, leave the production alone.
+
+Preserve the native pleasure source. Canon should still make it easy to feel why this idea was exciting before development began.
+
 # INTERNAL CHALLENGE BEFORE CANON FREEZE
 
 There is no separate Story Challenger in the normal Draft Generation path.
 
 Before freezing canon, independently stress-test the developed production in your own reasoning. Do this seriously, but do not manufacture criticism merely because you were asked to challenge the work.
 
-Ask:
+Ask selectively:
 
 - Is the first interpretation too obvious or merely competent?
 - Is the premise more interesting than the scenes it produces?
@@ -47,22 +57,17 @@ Ask:
 - If the premise claims a rule, system, or method is both protection and constraint, does the story actually dramatize both?
 - Are ensemble characters becoming philosophical positions rather than people?
 - Are the characters becoming ideal operators of the premise instead of more specific people?
-- In a warm ensemble, are people still allowed to want credit, status, access, romance, recognition, influence, fun, or the rare opportunity?
-- Does a highly competent protagonist still encounter problems their skill cannot answer by itself?
+- Does a highly competent protagonist still encounter problems their skill cannot answer by itself when that is a material risk?
 - Are any characters, including people acted upon by the central system, too passive to affect the story back?
 - Does the promised genre actually produce its pleasure on screen?
 - For comedy, are there genuinely funny situations rather than only witty tone?
-- For romance, is there actual chemistry rather than proximity or narration?
-- If slow-burn attraction is promised, is there actual heat somewhere in the season?
+- For romance, is there felt chemistry rather than proximity or narration?
 - Is the production over-designed with too many motifs, rules, rituals, or clever mechanisms?
 - Is the format right?
 - For television, do the protagonists reshape the recurring engine or merely receive a new input each episode?
 - For television, do several episodes secretly perform the same moral or emotional function with different nouns?
-- For television, is a growing community becoming a sequence of governance problems solved by ever-better policy?
 - For television, does the season discover anything the initial premise did not already know?
-- Does the external world include disappointment and anticlimax, or does it deliver emotionally perfect wonder on cue every time?
 - Has the climax been inflated with an extra catastrophe when the central choice already supplies enough pressure?
-- Has the finale become a victory lap for an improved system rather than a live human choice?
 - Is there a stronger version available without adding gratuitous complexity?
 
 Then solve only the material problems you believe are real.
@@ -114,6 +119,8 @@ Make genre delivery concrete. Downstream editorial work should have at least one
 
 If the production supports a genuinely high-ceiling image, set piece, reversal, comic construction, or formal idea, preserve it clearly in canon. Do not manufacture one when the material is stronger without it.
 
+Keep the native pleasure source visible. A production about birding, basketball, cooking, flirting, music, travel, family, a workplace, or another inherently enjoyable arena should still let the audience enjoy that arena rather than converting every pleasure into pressure or theme.
+
 # CAUSALITY AND CONSEQUENCE
 
 Before freezing canon, make sure later story increasingly grows from earlier character choices rather than from a queue of unrelated external incidents.
@@ -126,6 +133,8 @@ When an antagonist, rival, institution, audience, family system, or other opposi
 
 Capable opposition should not reset to zero between scenes.
 
+Do not invent an intelligent opposing force when the production's pressure comes from chance, weather, grief, physical limitation, or another non-adaptive source.
+
 # CENTRAL ARGUMENT AND DILEMMA CHECK
 
 When the premise is built around a recurring value conflict, do not freeze a version where one side is always obviously correct.
@@ -136,7 +145,7 @@ Rules can prevent favoritism. Flexibility can prevent cruelty. Generosity can be
 
 Different scenes or episodes may legitimately produce different answers.
 
-Do not routinely resolve two legitimate goods by inventing a perfect hybrid rule, charter, policy, or compromise that preserves both. Sometimes the dramatic value comes from having to choose, losing something real, and living with the person who disagrees.
+Do not default either to perfect compromise or to dramatic sacrifice. A hybrid rule, charter, policy, or compromise can be the right answer when it is earned. A costly choice can be stronger when the goods genuinely cannot both be preserved. The warning sign is repeated neat resolution, not compromise itself.
 
 Do not manufacture false equivalence. The goal is drama in which choices can contain competing goods and real costs.
 
@@ -158,21 +167,19 @@ Let people occasionally surprise us in ways that remain true to them. A fairness
 
 Do not add random contradiction for texture. Preserve behavior that makes each person harder to reduce to a label.
 
-Do not confuse growth with optimization. A protagonist can become wiser or more capable while remaining vain, competitive, impulsive, jealous, status-conscious, ratings-hungry, petty, tempted by success, or capable of enjoying a bad idea for too long.
+Do not confuse growth with optimization. A protagonist can become wiser or more capable while retaining the human qualities that make them specific.
 
-If later-story behavior looks like an increasingly perfect handbook for how to operate the premise, reintroduce the person's appetites, blind spots, humor, rivalry, desire, and capacity for costly fun.
-
-For warm community, workplace, club, team, family, neighborhood, or civic stories, explicitly check whether everybody has become unusually reasonable. Preserve ordinary social wanting. Someone can crave credit, access, status, romance, attention, influence, exclusivity, or the rare thing itself while still being a good person worth spending time with.
+For warm community, workplace, club, team, family, neighborhood, or civic stories, check whether everybody has become unusually reasonable only when that problem is actually present. Allow some ordinary social wanting to remain visible. Do not assign each character vanity, rivalry, attraction, jealousy, or another appetite simply to prove complexity.
 
 # COMPETENCE BOUNDARY
 
 A highly competent protagonist can remain highly competent. Do not create stupidity just to force drama.
 
-But competence should not function as an all-purpose answer machine. Preserve at least one consequential pressure where expertise buys time or narrows the options without deciding what the person should do.
+When competence risks functioning as an all-purpose answer machine, preserve at least one consequential pressure where expertise buys time or narrows the options without deciding what the person should do.
 
 A strength may create a blind spot. Another person may see something the protagonist does not. Two valid duties may collide. The protagonist may make a defensible choice that creates a real cost.
 
-The story becomes more human when being excellent at the job does not make the moral, relational, or strategic answer obvious.
+Do not add a blind spot or dilemma merely because this section exists. Use it when competence is materially flattening the story.
 
 # SUBJECT AGENCY
 
@@ -180,7 +187,7 @@ When the production revolves around caregiving, service, coaching, education, me
 
 Children, patients, athletes, students, guests, residents, customers, clients, and family members can have preferences, habits, resistance, humor, loyalty, and choices that alter the story even when they remain supporting characters.
 
-When appropriate, let them create constraints rather than only receive protection or service. A child can hide, insist, recognize someone, refuse, remember, misunderstand a rule, wander, or solve something an adult missed.
+When appropriate, let them create constraints rather than only receive protection or service.
 
 This should increase dramatic fertility, not inflate the ensemble.
 
@@ -204,27 +211,11 @@ Avoid a parade of creepy visitors, escalating officials, interchangeable rivals,
 
 # RELATIONSHIP CANON CHECK
 
-When romance or another central two-person relationship materially drives the production, do not freeze canon until the relationship works on its own terms.
+When romance or another central two-person relationship materially drives the production, use `Governance/ncs-relationship-story-standard.md` as the primary relationship test.
 
-For any central pair prominently sold by the premise, preserve at least one consequential sequence where one person's judgment materially changes what the other does. They may yield, refuse, trust, imitate, overrule, rescue, expose, or adopt the other's method. The relationship should alter an action, outcome, or later choice rather than merely decorate parallel competence.
+For any central pair prominently sold by the premise, preserve enough interaction that the relationship changes story rather than decorating parallel competence.
 
-This does not require a speech or sentimental beat. One specific decision made differently because this particular other person is present can do the work.
-
-For romance and romantic comedy, preserve at least one substantial sequence where the central pair's actual interaction proves chemistry. The external device may create the encounter, but the people should create the pleasure.
-
-For a slow-burn romance, restraint is allowed but absence is not. Canon should contain recurring interaction with some real charge: attraction, jealousy, curiosity, disappointment, private shorthand, a charged disagreement, a favor that matters too much, or a decision altered by the other person's presence. Repeated proximity is not a season arc.
-
-For second-chance romance, canon must make internally clear:
-
-- why the original relationship ended
-- why separation made sense at the time
-- what each person contributed to the failure or incompatibility
-- what has changed, or must change, before reunion could work
-- what each person risks or gives up by choosing the relationship again
-
-For a true two-hander, make sure both leads have independent lives and credible futures outside the central relationship.
-
-Treat new partners with enough dignity to make choices harder and more revealing when they are present.
+If romance is materially promised, canon should contain felt interaction and chemistry, not repeated proximity alone. Do not manufacture jealousy, charged disagreements, private shorthand, or other stock signals merely because they are common examples.
 
 # COMEDY CANON CHECK
 
@@ -236,7 +227,7 @@ A gentle comedy does not need constant jokes. It still needs scenes that would b
 
 Let some comedy remain gloriously unserious when the production wants it. Not every ridiculous situation needs to reveal a lesson, repair a relationship, or become evidence of the season's theme.
 
-For a warm community comedy, preserve at least one episode-shaped idea that would still work if nobody learned anything or improved a rule by the end.
+For a warm community comedy, if every episode requires a lesson or institutional improvement to justify itself, look for another native pleasure already present in the show. Do not invent a frivolous episode just to check a box.
 
 # TONE PHYSICS
 
@@ -276,7 +267,9 @@ Keep details that characters genuinely use, argue over, depend on, or transform 
 
 Allow mundane details to remain mundane. Not every object needs a callback, symbol, or finale payoff.
 
-Do not make the external world perform thematic choreography on command. Nature, games, performances, customers, weather, crowds, and other partly uncontrollable sources of pleasure should sometimes disappoint, arrive late, fail to materialize, or mean nothing at all. Contrast protects wonder from feeling authored.
+When the world contains partly uncontrollable sources of pleasure such as nature, games, performances, customers, weather, crowds, or chance, avoid using perfectly timed external wonder as a repeated emotional button. Messy, neutral, disappointing, or surprising outcomes can create useful contrast when they belong.
+
+Do not manufacture anticlimax merely to prove realism.
 
 # TELEVISION ENSEMBLE DISCIPLINE
 
@@ -292,7 +285,7 @@ A rich ensemble is not the same as a crowded one.
 
 A strong recurring engine explains why the show can keep producing episodes. It does not replace the central people.
 
-When callers, clients, cases, games, missions, shifts, guests, patients, customers, or another recurring input generate weekly material, make sure the protagonists progressively reshape the machine around them. Their choices should alter rules, tactics, relationships, incentives, audience behavior, team culture, access, risk, or what the institution becomes willing to do.
+When callers, clients, cases, games, missions, shifts, guests, patients, customers, or another recurring input generate weekly material, make sure the protagonists progressively reshape the machine around them.
 
 The engine should act on the characters. The characters should act back on the engine.
 
@@ -300,7 +293,7 @@ Episode variety should exist at the level of dramatic function, not merely subje
 
 For warm community, workplace, club, team, or civic series, also watch for `pressure -> values discussion -> thoughtful compromise -> healthier system` repeating as the hidden engine. Governance can be story. It should not become the only form of story.
 
-Preserve episodes that are simply funny, romantic, petty, competitive, embarrassing, logistical, scary, intimate, strange, disappointing, or built around a bad idea that becomes irresistible. Television earns emotional range partly by not making every installment carry the thesis.
+If repetition is materially flattening the season, preserve other pleasures already native to the production: funny, romantic, petty, competitive, embarrassing, logistical, scary, intimate, strange, disappointing, or irresistible bad-idea stories. Do not add one of each.
 
 # SEASON DISCOVERY
 
@@ -312,7 +305,7 @@ The person who looked too rigid may turn out to be protecting somebody invisible
 
 Do not force a contrarian beat simply to surprise the audience. The season should earn a more complicated understanding through accumulated story.
 
-If the season repeatedly finds elegant compromise between competing goods, ask whether one important choice should instead force an irreversible loss, exclusion, disappointment, or relationship cost. A season can become dramatically richer when the group cannot preserve everything it values.
+If the season repeatedly finds elegant compromise between competing goods and that repetition is flattening drama, ask whether one conflict should resolve differently. That might mean a cost, a disagreement, a loss, or simply an unresolved tension. Do not force irreversible sacrifice merely to prove seriousness.
 
 # FINALE SCALE RESTRAINT
 
@@ -324,7 +317,9 @@ If the extra crisis does not change the choice or create a distinctive genre ple
 
 Sometimes the strongest final collision happens when the machinery works perfectly, everyone is present, and the protagonists can no longer blame circumstance for what they choose.
 
-For a series about a growing community, workplace, team, or institution, do not make the finale merely prove that the improved system now functions beautifully. Put the central desire, relationship, or unresolved value under pressure in a situation the new rules cannot solve automatically.
+For a series about a growing community, workplace, team, or institution, do not make the finale merely prove that the improved system now functions beautifully when a central desire, relationship, or unresolved value remains materially alive. Put that live thing under pressure.
+
+Do not force a difficult final choice when culmination, joy, relief, spectacle, or another payoff is the truer ending.
 
 # FORMAT CONTRACT
 
@@ -358,36 +353,41 @@ Do not force every finding into the story.
 
 # FINAL CANON CHECK
 
-Before returning, ask:
+Before returning, first ask:
+
+- What is the native pleasure source, and did canon protect it?
+- Which governance diagnostics describe a material weakness in this version?
+- Am I about to change something only because a prompt mentions it?
+
+Then, where relevant, ask:
 
 - Would I actually watch this version rather than merely respect it?
 - Is the strongest idea still easy to feel, or did development bury it under machinery?
 - Is `current_title` specific and ownable enough for this production, or did we polish into generic prestige language?
 - Are the major dilemmas genuinely difficult where they should be?
 - If the premise claims a rule, system, or method is both protection and constraint, did canon actually dramatize both?
-- When competing goods collide, does the story ever force a real choice rather than always designing a clean compromise?
+- If recurring conflicts resolve neatly, are those resolutions earned or becoming automatic?
 - Are ensemble characters people rather than positions in the theme?
-- In a warm ensemble, do people still carry appetite, status, attraction, vanity, rivalry, and room to make costly mistakes?
 - Are the characters becoming more specific rather than merely more correct or professionally optimal?
-- Does the protagonist's competence have a meaningful boundary without making them stupid?
+- Does the protagonist's competence have a meaningful boundary when that is materially necessary?
 - Do affected supporting people have enough agency when appropriate?
-- If a central pair is part of the premise's appeal, does one person's judgment materially change what the other does at least once?
-- If romance or slow-burn attraction is promised, is there actual heat rather than proximity alone?
+- If a central pair is part of the premise's appeal, does the relationship materially affect action or consequence?
+- If romance materially drives the production, is there felt chemistry rather than proximity alone?
 - When antagonistic pressure exists, is its objective and tactical behavior coherent internally even when some motive remains mysterious publicly?
-- Does capable opposition adapt to what the protagonists do?
+- Does capable opposition adapt to what the protagonists do when it is capable of adaptation?
 - When multiple antagonistic actors exist, are their hierarchy and distinct functions legible?
 - Do signature scenes stay inside the production's established physical and comic reality?
 - If the central mission depends on access, authorization, or specialized mechanics, does canon answer the obvious plausibility questions cleanly?
 - Does comedy exist in situations if comedy is promised?
 - For television, do the protagonists reshape the recurring engine?
-- For television, do episodes vary in dramatic function rather than repeating one moral shape?
-- For a warm series, is there at least one episode that works without a lesson or institutional improvement?
+- For television, do episodes vary in dramatic function when repetition is becoming a problem?
 - Does the season discover something the premise did not already know?
-- Does the world contain enough ordinary disappointment that its true wonder does not feel perfectly scheduled?
+- When external wonder recurs, does it still feel natural rather than mechanically scheduled?
 - Is the finale truly stronger with every external crisis currently stacked into it?
-- Is the finale more than a demonstration that the healthier system now works?
 - Are later consequences increasingly caused by character choices?
 - Did the internal challenge materially improve the production without over-developing it?
+
+If a diagnostic is not materially relevant, do not solve it.
 
 # OUTPUT
 
