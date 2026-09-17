@@ -40,10 +40,14 @@ Ask:
 
 - Is the first interpretation too obvious or merely competent?
 - Is the premise more interesting than the scenes it produces?
+- Is the strong idea still easy to feel, or has development buried it under machinery?
 - Are later events increasingly caused by character choices, or does another problem simply arrive?
+- When capable opposition exists, does it learn from what the protagonist does?
 - Is the central conflict rigged so one side is always obviously correct?
+- If the premise claims a rule, system, or method is both protection and constraint, does the story actually dramatize both?
 - Are ensemble characters becoming philosophical positions rather than people?
 - Are the characters becoming ideal operators of the premise instead of more specific people?
+- Does a highly competent protagonist still encounter problems their skill cannot answer by itself?
 - Are any characters, including people acted upon by the central system, too passive to affect the story back?
 - Does the promised genre actually produce its pleasure on screen?
 - For comedy, are there genuinely funny situations rather than only witty tone?
@@ -113,6 +117,10 @@ External problems are allowed and often useful. The important question is what t
 
 Do not preserve a sequence merely because each incident is individually entertaining if the whole production feels like `and then another problem happens`.
 
+When an antagonist, rival, institution, audience, family system, or other opposing force is capable of learning, let it react to the protagonist's choices. Successful defenses can reveal information. Workarounds can close routes. A new rule can teach somebody how to exploit it. A public victory can trigger a more intelligent response.
+
+Capable opposition should not reset to zero between scenes.
+
 # CENTRAL ARGUMENT AND DILEMMA CHECK
 
 When the premise is built around a recurring value conflict, do not freeze a version where one side is always obviously correct.
@@ -124,6 +132,14 @@ Rules can prevent favoritism. Flexibility can prevent cruelty. Generosity can be
 Different scenes or episodes may legitimately produce different answers.
 
 Do not manufacture false equivalence. The goal is drama in which choices can contain competing goods and real costs.
+
+# PREMISE PROMISE CHECK
+
+If the premise or logline sells a rule, system, technology, ritual, relationship, policy, or professional method as both protection and constraint, canon must actually dramatize both sides.
+
+Do not preserve a `shield and cage`, `solution and trap`, `gift and burden`, or similar double claim when the mechanism remains correct and helpful in every meaningful scene.
+
+The second edge does not need to prove the system wrong. It should create a real situation the mechanism cannot decide by itself and force human judgment with a cost.
 
 # HUMANITY AND ROLE COMPLEXITY
 
@@ -139,26 +155,43 @@ Do not confuse growth with optimization. A protagonist can become wiser or more 
 
 If later-story behavior looks like an increasingly perfect handbook for how to operate the premise, reintroduce the person's appetites, blind spots, humor, rivalry, desire, and capacity for costly fun.
 
+# COMPETENCE BOUNDARY
+
+A highly competent protagonist can remain highly competent. Do not create stupidity just to force drama.
+
+But competence should not function as an all-purpose answer machine. Preserve at least one consequential pressure where expertise buys time or narrows the options without deciding what the person should do.
+
+A strength may create a blind spot. Another person may see something the protagonist does not. Two valid duties may collide. The protagonist may make a defensible choice that creates a real cost.
+
+The story becomes more human when being excellent at the job does not make the moral, relational, or strategic answer obvious.
+
 # SUBJECT AGENCY
 
 When the production revolves around caregiving, service, coaching, education, medicine, hospitality, representation, transportation, or another system acting on people, make sure the affected people are not merely interchangeable stakes.
 
 Children, patients, athletes, students, guests, residents, customers, clients, and family members can have preferences, habits, resistance, humor, loyalty, and choices that alter the story even when they remain supporting characters.
 
+When appropriate, let them create constraints rather than only receive protection or service. A child can hide, insist, recognize someone, refuse, remember, misunderstand a rule, wander, or solve something an adult missed.
+
 This should increase dramatic fertility, not inflate the ensemble.
 
-# THREAT ARCHITECTURE
+# THREAT ARCHITECTURE AND COHERENCE
 
-When a thriller, action story, mystery, crime story, or other conflict-driven production contains multiple antagonistic actors, know the hierarchy and dramatic function of each before canon freeze.
+When a thriller, horror story, action story, mystery, crime story, or other conflict-driven production contains antagonistic pressure, know what the threat wants, what it currently knows, what resources it actually has, and why its tactics change before canon freeze.
 
-The production should be able to answer plainly:
+The audience does not always need to know the motive yet. Mystery can protect information. It should not excuse incoherence.
+
+When multiple antagonistic actors exist, know the hierarchy and dramatic function of each. The production should be able to answer plainly:
 
 - who is driving the threat
 - who carries personal history, insider knowledge, or special leverage over the protagonist
+- whether the actors are coordinated, independent, hierarchical, or accidentally aligned
 - why those roles are distinct rather than redundant
 - what changes if one of those antagonistic roles is removed
 
 Do not keep an anonymous or weakly differentiated threat leader above a vivid named antagonist merely because both appeared in development. Combine them when the split does not generate additional story.
+
+Avoid a parade of creepy visitors, escalating officials, interchangeable rivals, or new obstacles whose only function is to test the protagonist again. When the threat is capable, let the next move follow from the last move.
 
 # RELATIONSHIP CANON CHECK
 
@@ -307,12 +340,17 @@ Do not force every finding into the story.
 Before returning, ask:
 
 - Would I actually watch this version rather than merely respect it?
+- Is the strongest idea still easy to feel, or did development bury it under machinery?
 - Is `current_title` specific and ownable enough for this production, or did we polish into generic prestige language?
 - Are the major dilemmas genuinely difficult where they should be?
+- If the premise claims a rule, system, or method is both protection and constraint, did canon actually dramatize both?
 - Are ensemble characters people rather than positions in the theme?
 - Are the characters becoming more specific rather than merely more correct or professionally optimal?
+- Does the protagonist's competence have a meaningful boundary without making them stupid?
 - Do affected supporting people have enough agency when appropriate?
 - If a central pair is part of the premise's appeal, does one person's judgment materially change what the other does at least once?
+- When antagonistic pressure exists, is its objective and tactical behavior coherent internally even when some motive remains mysterious publicly?
+- Does capable opposition adapt to what the protagonists do?
 - When multiple antagonistic actors exist, are their hierarchy and distinct functions legible?
 - Do signature scenes stay inside the production's established physical and comic reality?
 - If the central mission depends on access, authorization, or specialized mechanics, does canon answer the obvious plausibility questions cleanly?
