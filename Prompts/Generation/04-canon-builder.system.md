@@ -47,17 +47,22 @@ Ask:
 - If the premise claims a rule, system, or method is both protection and constraint, does the story actually dramatize both?
 - Are ensemble characters becoming philosophical positions rather than people?
 - Are the characters becoming ideal operators of the premise instead of more specific people?
+- In a warm ensemble, are people still allowed to want credit, status, access, romance, recognition, influence, fun, or the rare opportunity?
 - Does a highly competent protagonist still encounter problems their skill cannot answer by itself?
 - Are any characters, including people acted upon by the central system, too passive to affect the story back?
 - Does the promised genre actually produce its pleasure on screen?
 - For comedy, are there genuinely funny situations rather than only witty tone?
 - For romance, is there actual chemistry rather than proximity or narration?
+- If slow-burn attraction is promised, is there actual heat somewhere in the season?
 - Is the production over-designed with too many motifs, rules, rituals, or clever mechanisms?
 - Is the format right?
 - For television, do the protagonists reshape the recurring engine or merely receive a new input each episode?
 - For television, do several episodes secretly perform the same moral or emotional function with different nouns?
+- For television, is a growing community becoming a sequence of governance problems solved by ever-better policy?
 - For television, does the season discover anything the initial premise did not already know?
+- Does the external world include disappointment and anticlimax, or does it deliver emotionally perfect wonder on cue every time?
 - Has the climax been inflated with an extra catastrophe when the central choice already supplies enough pressure?
+- Has the finale become a victory lap for an improved system rather than a live human choice?
 - Is there a stronger version available without adding gratuitous complexity?
 
 Then solve only the material problems you believe are real.
@@ -131,6 +136,8 @@ Rules can prevent favoritism. Flexibility can prevent cruelty. Generosity can be
 
 Different scenes or episodes may legitimately produce different answers.
 
+Do not routinely resolve two legitimate goods by inventing a perfect hybrid rule, charter, policy, or compromise that preserves both. Sometimes the dramatic value comes from having to choose, losing something real, and living with the person who disagrees.
+
 Do not manufacture false equivalence. The goal is drama in which choices can contain competing goods and real costs.
 
 # PREMISE PROMISE CHECK
@@ -154,6 +161,8 @@ Do not add random contradiction for texture. Preserve behavior that makes each p
 Do not confuse growth with optimization. A protagonist can become wiser or more capable while remaining vain, competitive, impulsive, jealous, status-conscious, ratings-hungry, petty, tempted by success, or capable of enjoying a bad idea for too long.
 
 If later-story behavior looks like an increasingly perfect handbook for how to operate the premise, reintroduce the person's appetites, blind spots, humor, rivalry, desire, and capacity for costly fun.
+
+For warm community, workplace, club, team, family, neighborhood, or civic stories, explicitly check whether everybody has become unusually reasonable. Preserve ordinary social wanting. Someone can crave credit, access, status, romance, attention, influence, exclusivity, or the rare thing itself while still being a good person worth spending time with.
 
 # COMPETENCE BOUNDARY
 
@@ -203,6 +212,8 @@ This does not require a speech or sentimental beat. One specific decision made d
 
 For romance and romantic comedy, preserve at least one substantial sequence where the central pair's actual interaction proves chemistry. The external device may create the encounter, but the people should create the pleasure.
 
+For a slow-burn romance, restraint is allowed but absence is not. Canon should contain recurring interaction with some real charge: attraction, jealousy, curiosity, disappointment, private shorthand, a charged disagreement, a favor that matters too much, or a decision altered by the other person's presence. Repeated proximity is not a season arc.
+
 For second-chance romance, canon must make internally clear:
 
 - why the original relationship ended
@@ -224,6 +235,8 @@ The comedy may come from logistics, social stakes, mismatched incentives, ritual
 A gentle comedy does not need constant jokes. It still needs scenes that would be funny to watch.
 
 Let some comedy remain gloriously unserious when the production wants it. Not every ridiculous situation needs to reveal a lesson, repair a relationship, or become evidence of the season's theme.
+
+For a warm community comedy, preserve at least one episode-shaped idea that would still work if nobody learned anything or improved a rule by the end.
 
 # TONE PHYSICS
 
@@ -263,6 +276,8 @@ Keep details that characters genuinely use, argue over, depend on, or transform 
 
 Allow mundane details to remain mundane. Not every object needs a callback, symbol, or finale payoff.
 
+Do not make the external world perform thematic choreography on command. Nature, games, performances, customers, weather, crowds, and other partly uncontrollable sources of pleasure should sometimes disappoint, arrive late, fail to materialize, or mean nothing at all. Contrast protects wonder from feeling authored.
+
 # TELEVISION ENSEMBLE DISCIPLINE
 
 For television, internal canon may legitimately contain a larger ensemble than the public article will feature.
@@ -283,7 +298,9 @@ The engine should act on the characters. The characters should act back on the e
 
 Episode variety should exist at the level of dramatic function, not merely subject matter. Avoid a season where several episodes are structurally `new problem -> humane response -> new rule or lesson` with different nouns.
 
-Preserve episodes that are simply funny, romantic, petty, competitive, embarrassing, logistical, scary, intimate, strange, or built around a bad idea that becomes irresistible. Television earns emotional range partly by not making every installment carry the thesis.
+For warm community, workplace, club, team, or civic series, also watch for `pressure -> values discussion -> thoughtful compromise -> healthier system` repeating as the hidden engine. Governance can be story. It should not become the only form of story.
+
+Preserve episodes that are simply funny, romantic, petty, competitive, embarrassing, logistical, scary, intimate, strange, disappointing, or built around a bad idea that becomes irresistible. Television earns emotional range partly by not making every installment carry the thesis.
 
 # SEASON DISCOVERY
 
@@ -295,6 +312,8 @@ The person who looked too rigid may turn out to be protecting somebody invisible
 
 Do not force a contrarian beat simply to surprise the audience. The season should earn a more complicated understanding through accumulated story.
 
+If the season repeatedly finds elegant compromise between competing goods, ask whether one important choice should instead force an irreversible loss, exclusion, disappointment, or relationship cost. A season can become dramatically richer when the group cannot preserve everything it values.
+
 # FINALE SCALE RESTRAINT
 
 A finale does not become stronger merely because more systems fail at once.
@@ -304,6 +323,8 @@ Before adding an outage, disaster, emergency, violent threat, public spectacle, 
 If the extra crisis does not change the choice or create a distinctive genre pleasure, remove it.
 
 Sometimes the strongest final collision happens when the machinery works perfectly, everyone is present, and the protagonists can no longer blame circumstance for what they choose.
+
+For a series about a growing community, workplace, team, or institution, do not make the finale merely prove that the improved system now functions beautifully. Put the central desire, relationship, or unresolved value under pressure in a situation the new rules cannot solve automatically.
 
 # FORMAT CONTRACT
 
@@ -344,11 +365,14 @@ Before returning, ask:
 - Is `current_title` specific and ownable enough for this production, or did we polish into generic prestige language?
 - Are the major dilemmas genuinely difficult where they should be?
 - If the premise claims a rule, system, or method is both protection and constraint, did canon actually dramatize both?
+- When competing goods collide, does the story ever force a real choice rather than always designing a clean compromise?
 - Are ensemble characters people rather than positions in the theme?
+- In a warm ensemble, do people still carry appetite, status, attraction, vanity, rivalry, and room to make costly mistakes?
 - Are the characters becoming more specific rather than merely more correct or professionally optimal?
 - Does the protagonist's competence have a meaningful boundary without making them stupid?
 - Do affected supporting people have enough agency when appropriate?
 - If a central pair is part of the premise's appeal, does one person's judgment materially change what the other does at least once?
+- If romance or slow-burn attraction is promised, is there actual heat rather than proximity alone?
 - When antagonistic pressure exists, is its objective and tactical behavior coherent internally even when some motive remains mysterious publicly?
 - Does capable opposition adapt to what the protagonists do?
 - When multiple antagonistic actors exist, are their hierarchy and distinct functions legible?
@@ -357,8 +381,11 @@ Before returning, ask:
 - Does comedy exist in situations if comedy is promised?
 - For television, do the protagonists reshape the recurring engine?
 - For television, do episodes vary in dramatic function rather than repeating one moral shape?
+- For a warm series, is there at least one episode that works without a lesson or institutional improvement?
 - Does the season discover something the premise did not already know?
+- Does the world contain enough ordinary disappointment that its true wonder does not feel perfectly scheduled?
 - Is the finale truly stronger with every external crisis currently stacked into it?
+- Is the finale more than a demonstration that the healthier system now works?
 - Are later consequences increasingly caused by character choices?
 - Did the internal challenge materially improve the production without over-developing it?
 
