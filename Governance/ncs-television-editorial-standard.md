@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Television Editorial Standard v1.4
+## Television Editorial Standard v1.5
 
 ## 1. Purpose
 
@@ -20,6 +20,8 @@ The recurring engine creates returnability. The season arc creates momentum.
 The recurring engine is not the protagonist. Callers, cases, games, shifts, clients, missions, patients, guests, customers, or another weekly input may generate raw story, but the central people should increasingly determine what that machine becomes.
 
 The strongest television makes the reader feel both directions of influence: the world keeps acting on the characters, and the characters keep changing the world they have to return to.
+
+Warmth does not require harmony. A community, workplace, team, family, club, or civic ensemble should still contain appetite, status, attraction, rivalry, vanity, boredom, jealousy, bad judgment, private ambition, and people who simply want different things. Do not translate a warm show into a room full of thoughtful facilitators.
 
 ## 3. Default visible structure
 
@@ -72,6 +74,8 @@ Ordinary residue should be dispersed rather than gathered into a showcase paragr
 
 The article does not need a special smell, prop, food, tool, or ritual in every paragraph. A few excellent details will make the world feel more real than constant designed specificity.
 
+When the world contains a growing club, community, workplace system, or civic project, do not mistake increasingly thoughtful governance for the entertainment itself. Rules and rituals matter when they create behavior, conflict, comedy, access, exclusion, or consequence. Otherwise let the people and the activity stay in front.
+
 Once the reader believes the world, stop proving it.
 
 ## 7. THE CHARACTERS
@@ -91,6 +95,8 @@ Do not give every public character equal space. The people who make the premise 
 A central pair may deserve several paragraphs while a useful supporting character may need one sentence.
 
 Secondary characters can emerge later in THE SEASON or THE EPISODES when that creates a better reading experience.
+
+In warm ensemble shows, keep social edges visible. Someone can be generous and still want credit. Someone can love the community and still chase status, access, romance, influence, recognition, or the rare thing everyone else wants. Character warmth becomes more convincing when it survives friction rather than replacing it.
 
 ## 8. THE DREAM CAST
 
@@ -124,6 +130,10 @@ Especially in engine-driven television, show how the protagonists' choices chang
 
 Strong season writing may show that a nightly briefing becomes a ritual, two rivals begin co-signing each other's calls, a business starts depending on the very tactic it once resisted, or a family reorganizes around a new obligation.
 
+But institutional improvement is not automatically season movement. A sequence of better rules, safer procedures, wiser compromises, cleaner charters, and healthier norms can still feel dramatically static if the people are not risking status, intimacy, belonging, desire, pride, money, access, or something else they personally care about.
+
+Do not let every recurring conflict resolve into a thoughtful hybrid policy. Sometimes two legitimate goods cannot both be preserved. A season gains shape when a choice creates a real loser, closes an option, leaves resentment, or costs the characters something they cannot immediately redesign away.
+
 Avoid replacing episode recap with a sequence of polished thematic declarations.
 
 Several paragraphs beginning with lines like `Visibility becomes work`, `Authority and access pull on each other`, or `The room learns to trust itself` can make the section sound interpretive rather than lived.
@@ -156,6 +166,10 @@ A strong selected set may include different pleasures such as social comedy, riv
 
 Not every episode needs to advance the show's central argument. Television earns emotional power partly through nights that are funny, petty, strange, warm, or gloriously unserious.
 
+As a useful test for a warm comedy or community show, ask whether at least one selected episode would still be entertaining if nobody learned anything, improved a system, or articulated a value by the end.
+
+Do not make the external world deliver perfectly timed emotional punctuation every week. A birding trip can see nothing special. A game can be ugly. A performance can disappoint. A guest can fail to arrive. Ordinary failure, false alarms, and anticlimax create contrast that makes genuine wonder feel less written.
+
 Most importantly, episode capsules must sound viewer-facing.
 
 ## 11. Season versus Episodes zoom rule
@@ -178,6 +192,8 @@ Options include omitting the finale capsule, giving it a high-level setup only, 
 
 THE FINISH should still feel like the first time the article fully enters the final pressure cooker.
 
+A season finale should not become a victory lap merely because the characters have built a healthier system. If the season still contains a central unresolved value, relationship, desire, or cost, bring that under live pressure. A gentle show does not need catastrophe. It does need a final situation in which what the characters built or learned is not automatically enough.
+
 ## 13. Recurring engine versus repetitive article
 
 The show may repeat an activity every week. The article should not repeat the same explanation every week.
@@ -193,6 +209,8 @@ If a relationship is prominently sold by THE PITCH, the article should demonstra
 This does not require romance or extra exposition.
 
 One consequential interaction can be enough if it shows history, friction, shorthand, loyalty, rivalry, dependence, or a choice that would play differently between strangers.
+
+When the pitch promises romance or a slow-burn attraction, repeated proximity is not enough. Give the reader behavior that contains attraction, curiosity, jealousy, disappointment, private shorthand, risk, or a changed decision. A slow burn can remain subtle, but it still needs heat.
 
 Do not manufacture relationship material merely to satisfy a quota.
 
