@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Editorial Scoring Standard v1.3
+## Editorial Scoring Standard v1.4
 
 ## Purpose
 
@@ -67,9 +67,9 @@ A missing or invalid numeric `overall_score` means the scoring step failed and s
 
 They are related, but there is no numeric cutoff that forces revision.
 
-A 7.4 draft may correctly use `revision_route = NONE` when it is coherent, enjoyable, complete, and the remaining weaknesses are better left to human taste rather than another automated pass.
+A draft in the mid-7s may correctly use `revision_route = NONE` when it is coherent, enjoyable, complete, and the remaining weaknesses are better left to human taste rather than another automated pass.
 
-An 8.6 draft may still require PROSE or EDITION when it contains one material fix such as a public-integrity leak, repeated scene treatment, or a broken section.
+A high-scoring draft may still require PROSE or EDITION when it contains one material fix such as a public-integrity leak, repeated scene treatment, or a broken section.
 
 Do not manipulate the score to justify a desired route.
 
@@ -107,7 +107,7 @@ The editor should prefer preserving a good object over polishing it until its pe
 
 `DRAFTED` is an operational lifecycle state, not an editorial award.
 
-A production may be `DRAFTED` at 7.2, 7.6, 8.4, or another honest score if the complete generated package was successfully delivered.
+A production may be `DRAFTED` at any honest score if the complete generated package was successfully delivered.
 
 The score remains useful because it tells the human editor how strong that draft is.
 
