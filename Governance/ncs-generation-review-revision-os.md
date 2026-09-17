@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Generation, Review and Revision Operating System v2.7
+## Generation, Review and Revision Operating System v2.8
 
 ## 1. Purpose
 
@@ -27,6 +27,8 @@ Generation may change title, format, genre emphasis, protagonist, supporting cha
 The governing obligation is:
 
 **Preserve or improve the creative kernel. Treat every other element as provisional.**
+
+A strong idea should remain easy to feel after development. Do not bury the kernel under machinery merely because Generation can invent more.
 
 ## 4. Persistence architecture
 
@@ -76,10 +78,15 @@ Before freezing canon it must independently stress-test the Production Developer
 
 - obvious first interpretation
 - weak causality
+- capable opposition that resets rather than adapts
 - rigged moral conflict
+- a premise that promises a double-edged mechanism but only dramatizes one edge
 - generic or functional characters
+- highly competent protagonists whose expertise answers every important problem
+- weak subject agency when people are being protected, served, treated, coached, represented, or managed
 - weak genre delivery
 - over-designedness
+- incoherent threat behavior or redundant antagonistic roles
 - format mismatch
 - season predictability
 - missed stronger versions
@@ -94,6 +101,8 @@ Production Developer remains a premium creative call.
 
 Development should establish character agency, relationships, causality, pressure, genre delivery, earned ending, ordinary world texture, and enough scene fertility to prove the production works.
 
+For mechanism-heavy or procedural stories, development should make sure competence is not the whole dramatic answer, the premise's claimed tradeoff is actually dramatized, and capable opposition changes in response to what protagonists do when appropriate.
+
 Do not cut this stage merely to save tokens.
 
 ## 8. Selective research
@@ -102,6 +111,8 @@ Research is conditional.
 
 Run it only when Production Developer returns genuinely nonempty `research_requests` and real-world grounding would materially improve the production.
 
+Research is especially useful when a signature scene depends on specialized physical mechanics, safety systems, emergency egress, lock behavior, medicine, law, equipment, or another factual system whose failure would undermine the genre promise.
+
 Do not research a setting merely because research is possible.
 
 ## 9. Canon Freeze
@@ -109,6 +120,8 @@ Do not research a setting merely because research is possible.
 After Canon Builder succeeds, downstream agents should represent the frozen production rather than casually reinvent it.
 
 For film, canon should know the complete story and ending, central relationships, major scenes, genre delivery, world texture, and protected public value.
+
+For conflict-driven material, canon should also know enough internal threat logic to understand what antagonistic pressure wants, knows, can do, and why tactics change, even when public motive remains protected.
 
 For series, canon should also know the recurring engine, Season One movement, concrete episode possibilities, actual finale, and future engine when relevant.
 
@@ -131,6 +144,8 @@ Casting may use a capable cheaper creative model than the major development, wri
 Keep Edition Architect.
 
 It decides opening strategy, public character focus, section flow, compression, signature scenes, scene ownership, spoiler strategy, genre demonstration, ordinary world detail, spectatorship, motif restraint, and Finish convergence.
+
+Scene ownership applies across all public sections. THE CHARACTERS and THE DREAM CAST should not pre-spend a signature scene that belongs later, and one memorable tactic or antagonist beat should not become the primary evidence in several sections.
 
 For film, THE MOVIE and THE SCENES should not fully stage the same event.
 
@@ -170,6 +185,8 @@ Inspect at minimum:
 
 These are evidence for the editor, not automatic creative rewrite rules.
 
+Semantic issues such as coy non-spoiler abstraction, signature-tactic saturation, archetype-card character prose, generic review scaffolding, incoherent threat behavior, or meta-cut language remain primarily Forensic Editor responsibilities unless a cheap deterministic check is reliable.
+
 ## 14. Forensic Editor
 
 Keep one fresh cold-read Forensic Editor call.
@@ -182,6 +199,8 @@ Review:
 4. public integrity
 5. prose
 6. surface issues
+
+The editor should distinguish a prose symptom from a canon problem. Repeated procedural tests, non-adaptive opposition, a protagonist whose competence answers everything, or a premise whose advertised contradiction is never dramatized may be production issues even when the article itself is well written.
 
 Return an honest holistic score for the exact draft plus material notes and a recommended route:
 
