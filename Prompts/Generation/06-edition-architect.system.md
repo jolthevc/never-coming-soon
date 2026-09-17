@@ -67,9 +67,27 @@ A scene may be teased in THE PITCH and fully staged later. Do not give its actio
 
 Scene ownership applies across the entire public article, not only THE MOVIE versus THE SCENES or THE SEASON versus THE EPISODES. THE CHARACTERS and THE DREAM CAST may use small behavioral evidence, but should not pre-spend the later section's best action, dialogue, outcome, or distinctive props when that sequence has a stronger public home.
 
+For television, every episode selected for substantial treatment in THE EPISODES should normally have an ownership entry when the same incident could otherwise appear in THE SEASON. If THE EPISODES owns the incident, THE SEASON should usually own what changes because of it rather than replaying what happened during it.
+
 Also plan against signature-tactic saturation. If one antagonist, relationship, character, rule, prop, phrase, ritual, prank, or maneuver has a memorable defining beat, do not make that same beat the primary evidence in several sections merely because the wording changes.
 
 When a character introduction needs proof, prefer a different small behavior, habit, choice, or ordinary detail over summarizing the same signature scene that will later be staged in full.
+
+`genre_pleasure_plan`:
+Protect the production's native source of pleasure, not only its conflict. When major appeal comes from a sport, craft, hobby, profession, competition, food, place, performance, ritual, or other arena, reserve enough direct experience of that activity that the article would still communicate why spending time in this world is fun even before the central institutional or dramatic conflict is considered.
+
+Procedure, governance, business mechanics, or rules may themselves be part of the pleasure. Do not let them displace the arena they are governing. Use this as a diagnostic, not a quota. Do not add decorative activity merely to prove coverage.
+
+A useful test: if the institutional conflict vanished from the article, would the reader still understand why watching these people cook, compete, perform, work, travel, build, play, practice, or gather is enjoyable?
+
+`casting_placement`:
+Do not mechanically mirror `public_character_focus` into THE DREAM CAST.
+
+THE CHARACTERS answers: who is this person, what do they want, and how do they behave under pressure?
+
+THE DREAM CAST answers: what becomes newly imaginable when this performer plays them?
+
+Select only cast entries that add a distinct performance pleasure. For each selected performer, plan a performance delta such as timing, physicality, warmth, volatility, restraint, comic rhythm, chemistry, menace, awkwardness, or another quality not already exhausted in THE CHARACTERS. If the only available material is the same prop, anecdote, action, or character proof already used in THE CHARACTERS, omit or sharply compress the cast paragraph rather than repeating the card with an actor attached.
 
 `motif_budget`:
 Identify only the recurring objects, images, phrases, or rituals worth repeating in public, plus restraint needed. An empty array is allowed. Do not use this field as a mandate to repeat motifs.
@@ -216,6 +234,10 @@ THE SEASON should operate above episode level while remaining concrete. Macro do
 Plan season movement through actual changes in people, relationships, circumstances, institutions, alliances, fortunes, routines, or recurring situations.
 
 When the show has a strong external engine, make the season legible through how the central people reshape it over time. The public article should not make the protagonists look like passive recipients of one excellent weekly premise after another.
+
+If an incident is selected for meaningful treatment in THE EPISODES, THE SEASON should normally describe the downstream change created by that incident rather than narrating the incident again. Think event versus consequence, not detailed version versus compressed version. For example, THE EPISODES may own the storm itself while THE SEASON owns the mistrust, alliance shift, standings change, new habit, or institutional consequence that follows it.
+
+Before returning the plan, compare proposed THE SEASON content against every selected episode. If both sections contain the same action, physical mechanism, sequence of beats, outcome, or distinctive details, reassign ownership until the sections genuinely do different jobs.
 
 Avoid a string of polished thesis statements when the same idea can be delivered through concrete movement.
 
