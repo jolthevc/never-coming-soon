@@ -74,6 +74,8 @@ Scene ownership applies across the whole article. Before using a signature scene
 
 Character and Dream Cast sections may use behavior as evidence, but do not spend the later section's best action, dialogue, outcome, physical mechanism, or memorable prop merely because it conveniently proves the character or performance.
 
+Also watch for signature-tactic repetition. If one antagonist, character, relationship, or mechanism has a memorable defining beat, do not use the same badge tap, phrase, prank, ritual, mistake, tool, or maneuver as the primary evidence in CHARACTERS, DREAM CAST, MOVIE, SCENES, and FINISH. A recurring behavior can recur, but one distinctive scene should not be re-performed five times under different headings.
+
 When a supporting character will be more enjoyable discovered in motion, let that person first arrive inside the story instead of formally introducing everyone in advance.
 
 Before finalizing, compare all public sections for scene duplication. For film, pay special attention to THE PITCH, THE CHARACTERS, THE DREAM CAST, THE MOVIE, and THE SCENES. For television, pay special attention to THE WORLD, THE CHARACTERS, THE DREAM CAST, THE SEASON, and THE EPISODES.
@@ -84,9 +86,11 @@ If a major event receives substantial treatment twice, redistribute or replace m
 
 When a conflict-driven production contains multiple antagonistic actors, keep their hierarchy and functions legible on a first read.
 
-The reader should understand who is driving the threat, who carries personal history, insider knowledge, or special leverage, and why both matter.
+The reader should understand enough of the threat to feel cause and effect: who appears to be driving pressure, whether recurring antagonists seem coordinated or distinct, and why a tactic changes when that matters to the experience.
 
 Do not casually introduce an unnamed `pro lead`, `real leader`, `boss`, or similar shadow antagonist beside a vivid named antagonist unless the distinction is clear and useful. Do not flatten genuinely different antagonists together either. Use the canon and edition plan to make the threat readable without stopping for exposition.
+
+Mystery can protect motive. It should not make antagonistic behavior feel random.
 
 # RELATIONSHIP AND ROMANCE DELIVERY
 
@@ -114,6 +118,18 @@ Recurring motifs must earn their returns.
 
 Once the reader believes the world, stop proving it.
 
+# CHARACTERS ARE NOT CARDS
+
+Do not turn THE CHARACTERS into a row of polished archetype subtitles.
+
+A compressed phrase such as `the scalpel`, `built for storms`, `clipboard pragmatist`, or `empathic clown` may occasionally be vivid. Repeating that move for every person makes the section sound like a pitch deck.
+
+Prefer behavior, desire, contradiction, relationship, or an ordinary fact that lets the reader meet the person rather than receive the person's function.
+
+Do not use an em dash as the standard separator after character names or cast names. Use a period, colon, parentheses, or begin the description as a normal sentence.
+
+Avoid `Early on... Later...` arc summaries inside character introductions. THE CHARACTERS should make the person exist now, not reveal the development plan.
+
 # SPOILER AND INTERPRETATION DISCIPLINE
 
 Protect whatever carries the production's major unresolved value while demonstrating enough genuine genre pleasure to prove the production delivers.
@@ -121,6 +137,8 @@ Protect whatever carries the production's major unresolved value while demonstra
 Setup is not automatically spoiler. If the actual audience would know a past scandal, breakup, failure, debt, promise, rule, injury, betrayal, or other premise-critical fact early enough to understand the present story, give the reader enough of it to make the current stakes legible.
 
 Do not hide necessary setup merely because it sounds dramatic. Protect the unresolved answer, decisive response, reveal, or payoff.
+
+Prefer a concrete noun when the fact is already known and not meaningfully protected. If canon knows it is an inhaler, custody form, insulin pen, breaker switch, subpoena, evidence bag, or badge number, do not replace it with `what a small body needs`, `the thing in the office`, `the document`, or another coy abstraction merely to sound suspenseful.
 
 Do not announce that you are withholding information.
 
@@ -162,7 +180,9 @@ Prefer narrator-owned reactions over invented mass consensus. `I kept thinking a
 
 Do not turn every reaction into an explanation of why a scene works.
 
-Do not announce the article's own edit or spoiler-management move. Avoid lines such as `we cut one beat before contact`, `we leave the landing for later`, `we stop here`, or `the image is enough` when they describe editorial withholding rather than a genuine formal feature of the production.
+Avoid generic review scaffolding that certifies the production from outside the experience. Phrases such as `The pleasure of the movie is...`, `What makes this work is...`, `The movie promises...`, or `This is where the film becomes...` usually signal that the prose is explaining its own appeal. Show the pleasure, then react specifically if a reaction adds something.
+
+Do not announce the article's own edit or spoiler-management move. Avoid lines such as `we cut one beat before contact`, `we leave the landing for later`, `we stop here`, `the image is enough`, `cut on the hand`, `cut to black`, or `we leave her there` when they describe editorial withholding rather than a genuine formal feature of the production.
 
 If the movie itself has a meaningful cut, ellipsis, or formal transition established by canon, it may be described as something the viewer experiences. Do not invent a cut merely to explain where the article stops.
 
@@ -199,6 +219,8 @@ As THE FINISH approaches the cut, prefer concrete action, behavior, physical pre
 Do not turn THE FINISH into a roll call of every supporting character, tool, motif, prop, or prior contribution. If the reader already knows the ensemble, two or three active pressures plus the immediate threshold are often stronger than naming everybody again.
 
 If the edition plan reserves a particularly strong phrase, metaphor, image, or object for THE FINISH, protect that landing. Earlier sections may establish the underlying material, but do not repeat the same formulation until it loses force.
+
+The final public sentence should belong to the production, not to the article-making process. Do not write `Cut on...`, `We cut...`, `We stop...`, or another instruction describing where editorial chose to leave.
 
 # TELEVISION
 
@@ -268,7 +290,7 @@ A connective paragraph may be plain or brief, but it should change the reader's 
 
 Avoid zero-information trailer paragraphs that only announce escalation. Phrases such as `pressure rises`, `things get worse`, `a bigger play is coming`, `everything is about to change`, or `the real test is still ahead` are not enough by themselves. Give the reader new material or delete the paragraph.
 
-Do not use em dashes.
+Do not use em dashes anywhere in published prose, including character entries, Dream Cast entries, episode labels, loglines, scene titles, or final cards.
 
 # DE-POLISH PASS
 
@@ -281,10 +303,13 @@ Ask:
 - Are there three or more short declarative sentences in a row where a more natural sentence would flow better?
 - Are there several long multi-clause sentences in a row that become breathless?
 - Are paragraph openings repeating the same rhetorical move?
+- Did I turn several character introductions into polished archetype labels?
 - Are there too many binaries, mirrored clauses, three-part formulations, or quotable buttons?
 - Did I explain a strong scene after the scene already made the point?
 - Did I append a polished verdict merely because a paragraph felt unfinished after a strong image?
 - Did I turn an ethical choice into a lesson sentence that the scene did not need?
+- Did I use generic review scaffolding to explain `the pleasure`, `what works`, or what the movie `promises` instead of simply showing it?
+- Did I use an abstract placeholder where a concrete known noun would create more clarity and pressure?
 - Did I use abstract words such as pressure, trust, chemistry, leadership, connection, or stakes where behavior would be more vivid?
 - Did spoiler protection hide setup the reader needs in order to understand the current stakes?
 - Did spoiler protection produce vague placeholder language?
@@ -292,6 +317,7 @@ Ask:
 - Did I summarize a character arc from outside the production instead of showing the behavior?
 - Did I write a trailer-style paragraph that adds no new information?
 - Did I announce where the article cuts, stops, or withholds rather than simply stopping?
+- Did one signature tactic or scene get reused as evidence in several sections?
 - For television, did several episode capsules turn into the same moral story with different nouns?
 
 Fix the pattern, not every individual instance.
@@ -319,21 +345,26 @@ Before returning the draft, inspect for:
 - missing required headings, including THE DREAM CAST rather than THE CAST
 - generic television planning labels
 - substantial duplicate scene treatment across any public sections, not only MOVIE/SCENES or SEASON/EPISODES
+- whether one signature tactic, prop, phrase, or antagonist beat is being re-performed across several sections
 - whether THE CHARACTERS or THE DREAM CAST pre-spent a signature scene's best details
+- whether character introductions became a row of polished archetype labels
 - whether THE SEASON and THE EPISODES are operating at different zoom levels
 - whether television protagonists visibly reshape the recurring engine rather than merely process it
 - whether selected television episodes vary in dramatic function rather than repeating one moral shape
 - whether every public Dream Cast paragraph names a selected actor and character
 - whether any Dream Cast language accidentally sounds like a real casting announcement or claim of participation
 - whether multiple antagonistic actors are legible rather than confusingly layered
+- whether antagonistic behavior feels causally coherent rather than like unrelated tests
 - whether a central pair sold by the premise actually changes each other's actions rather than operating only in parallel
 - whether premise-critical setup has been hidden under spoiler-shaped vagueness
+- whether known concrete objects or facts were replaced by coy abstractions for no useful reason
 - whether the promised genre pleasure is actually demonstrated rather than merely described
 - whether signature scenes remain inside the production's established physical and comic reality
 - whether THE FINISH overloads recurring motifs, supporting-character roll call, or whether its strongest formulation was spent too early
 - post-scene verdict sentences that explain or certify what a strong image already delivered
 - moral-summary sentences that tell the reader what a scene's ethical distinction means after the behavior already showed it
-- meta lines that announce the article's cut, stop, or withholding
+- generic review scaffolding such as `The pleasure of the movie is...` when the material can simply demonstrate the pleasure
+- meta lines that announce the article's cut, stop, or withholding, including `Cut on...`
 - dialogue that sounds engineered for a quote rather than spoken
 - repeated abstract thesis openings
 - clusters of tiny declarative sentences
@@ -344,7 +375,7 @@ Before returning the draft, inspect for:
 - zero-information trailer paragraphs
 - invented collective audience reactions
 - vague spoiler-placeholder prose
-- em dash characters
+- em dash characters anywhere in public copy
 - protected decisive payoffs accidentally revealed
 
 For romance and romantic comedy, ask whether the draft demonstrates chemistry in interaction rather than merely describing compatibility.
