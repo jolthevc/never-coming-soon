@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Story Development Standard v1.5
+## Story Development Standard v1.6
 
 ## 1. Purpose
 
@@ -45,6 +45,10 @@ Warning signs:
 
 Prefer concepts with high creative yield from a clean dramatic engine.
 
+Development should deepen the strong idea rather than bury it. If the production becomes much harder to explain without becoming more desirable to watch, ask whether added machinery is disguising rather than increasing depth.
+
+A simple premise can support a rich production. Do not confuse additional explanation with additional story.
+
 ## 4. Story pressure
 
 A story needs pressure that forces people to choose, reveal themselves, change tactics, collide, or pay a price.
@@ -77,6 +81,10 @@ External problems are useful. Character-caused consequences are usually more sat
 
 A broken generator is circumstance. Choosing how to respond to it can create the story.
 
+When an opposing person, team, institution, threat, or social system is capable of learning, let it react to what the protagonist does. A successful defense can reveal information. A workaround can close an option. A public win can provoke a smarter response. A new rule can teach people how to exploit it.
+
+Do not reset capable opposition to zero after every scene. Adaptive pressure often creates stronger causality than a queue of unrelated tests.
+
 ## 6. Characters act
 
 Characters should make decisions that shape the production.
@@ -107,7 +115,13 @@ Do not reduce an ensemble into permanent positions in the production's argument.
 
 Let people occasionally violate the role the premise seems to have assigned them when the behavior still belongs to that person.
 
+Competence should have a boundary. A highly skilled protagonist may know more than everyone else in the room without having the correct answer to every important choice. Their strength can create a blind spot, close off an option, make another person defer too much, or become less useful when two legitimate obligations collide.
+
+Do not make competent people stupid merely to generate plot. Make the problem larger than one skill set.
+
 When the production centers on caring for, serving, coaching, teaching, treating, protecting, transporting, representing, or otherwise managing other people, do not let those people become passive story objects. Children, patients, athletes, students, guests, residents, customers, clients, and family members can remain supporting characters while still having preferences, resistance, humor, loyalty, or choices that alter the story.
+
+When appropriate, let affected people create constraints rather than merely receive protection or service. A child can hide, insist, remember, refuse, wander, recognize someone, misunderstand a rule, or solve something the adult missed. Agency does not require more screen time.
 
 ## 7. Relationships create story
 
@@ -156,6 +170,8 @@ A story can escalate because:
 - two previously separate pressures collide
 
 Escalation should deepen the experience, not merely increase volume.
+
+When the story contains capable opposition, escalation can also come from adaptation. The antagonist, rival, bureaucracy, audience, family, or system should sometimes change tactics because of what just happened rather than simply sending a larger version of the same problem.
 
 ## 10. Turns and reversals
 
@@ -281,6 +297,10 @@ Do not fabricate a corrupt villain simply to create stakes.
 
 At least some major choices should require judgment rather than merely discovering the correct rule.
 
+If the premise explicitly sells a rule, system, ritual, technology, policy, or professional method as both protection and constraint, the story should materially dramatize both sides. Do not let `shield and cage`, `solution and trap`, or a similar contradiction exist only in the logline while the mechanism remains correct in every scene.
+
+The complication does not need to prove the rule wrong. It should force the protagonist to confront what the rule cannot decide by itself.
+
 More broadly, when the premise is built around a recurring value conflict, do not rig the story so one side is always obviously more humane or intelligent. Ask what each side genuinely protects and what each side can damage when pushed too far.
 
 A rule may prevent favoritism. Flexibility may prevent cruelty. Consistency may protect the quiet person who is bad at asking. Generosity may save somebody the system cannot anticipate. Different scenes or episodes can produce different answers.
@@ -387,7 +407,13 @@ Complexity must earn its place.
 
 Before adding another timeline, secret, villain, conspiracy, institution, mythology layer, murder, betrayal, or surprise reveal, ask whether the existing human or genre engine has been fully exploited.
 
-When a thriller, action story, mystery, crime story, or other conflict-driven production contains multiple antagonistic actors, know their hierarchy and dramatic functions. The audience should be able to understand who is driving the threat, who carries personal history or special leverage, and why both are needed. Combine antagonistic roles when the distinction does not create additional story.
+When a thriller, action story, mystery, crime story, horror story, or other conflict-driven production contains antagonistic pressure, know internally what the threat wants, what it currently knows, what resources it actually has, and why its tactics change.
+
+The audience does not always need this information. Mystery can protect motive. It should not excuse incoherence.
+
+When there are multiple antagonistic actors, know their hierarchy and dramatic functions. The audience should be able to understand who is driving the threat, who carries personal history or special leverage, and why both are needed. Combine antagonistic roles when the distinction does not create additional story.
+
+Avoid a parade of creepy visitors, escalating officials, interchangeable rivals, or new obstacles whose only function is to test the protagonist again. When the threat is capable, let its next move follow from the last move.
 
 A cleaner story with richer people or richer mechanics is often stronger than a complicated story with thin people.
 
@@ -482,7 +508,9 @@ Development effort should be spent making the production better, not defending p
 Before internal canon is frozen, ask:
 
 - Would we genuinely watch this?
+- Does the strongest idea remain easy to feel after development, or has it been buried under machinery?
 - Do the characters make choices that increasingly cause later story?
+- When capable opposition exists, does it adapt to what the protagonists do rather than reset between scenes?
 - Is there at least one relationship with real movement?
 - If a central pair is part of the premise's appeal, does one person's judgment materially change what the other does at least once?
 - Does the story generate specific scenes?
@@ -491,9 +519,12 @@ Before internal canon is frozen, ask:
 - Do signature scenes remain inside the production's established physical and comic reality?
 - If comedy is promised, are there situations that are actually funny rather than only witty?
 - For process-heavy stories, are there judgment calls where legitimate obligations conflict?
+- If the premise claims a rule, system, or method is both protection and constraint, does the story actually dramatize both?
+- Is the protagonist's competence useful without becoming an all-purpose answer machine?
 - If the premise contains a recurring value conflict, can more than one side genuinely be right sometimes?
 - Are major ensemble characters more than permanent positions in that conflict?
 - Do people affected by the central system have enough agency to feel alive when relevant?
+- When antagonistic pressure exists, is its objective and tactical behavior coherent internally even when some motive remains mysterious publicly?
 - When multiple antagonistic actors exist, are their hierarchy and distinct functions legible?
 - For series, does the season discover something the premise did not already know?
 - Does the ending feel earned?
