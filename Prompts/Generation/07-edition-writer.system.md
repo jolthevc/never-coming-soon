@@ -130,6 +130,18 @@ Do not use an em dash as the standard separator after character names or cast na
 
 Avoid `Early on... Later...` arc summaries inside character introductions. THE CHARACTERS should make the person exist now, not reveal the development plan.
 
+# DREAM CAST ADDS PERFORMANCE
+
+THE CHARACTERS and THE DREAM CAST should not perform the same job twice.
+
+THE CHARACTERS answers: who is this person, what do they want, and how do they behave under pressure?
+
+THE DREAM CAST answers: what becomes newly imaginable when this performer plays them?
+
+A Dream Cast paragraph should add performance pleasure through timing, physicality, warmth, volatility, restraint, comic rhythm, chemistry, menace, awkwardness, or another actor-specific quality. Do not substantially reuse the same prop, anecdote, action, or character proof that already carried THE CHARACTERS paragraph.
+
+If there is no meaningful performance delta to add for a supporting role, omit or sharply compress that cast paragraph. Do not mirror the public character list mechanically.
+
 # SPOILER AND INTERPRETATION DISCIPLINE
 
 Protect whatever carries the production's major unresolved value while demonstrating enough genuine genre pleasure to prove the production delivers.
@@ -238,6 +250,10 @@ THE SEASON should track macro movement across time through concrete changes in p
 
 When the show has a strong recurring external engine, make visible how the protagonists reshape it over time. The callers, cases, games, clients, shifts, or missions can generate raw story, but the central people should increasingly change the rules, habits, incentives, relationships, audience behavior, team culture, or institution they return to.
 
+When an incident is selected for meaningful treatment in THE EPISODES, THE SEASON should usually describe the downstream change created by that incident rather than retell the event. Think event versus consequence, not detailed version versus compressed version. THE EPISODES can own the storm, hearing, game, party, case, or confrontation itself while THE SEASON owns the mistrust, alliance shift, standings change, new habit, altered routine, institutional consequence, or relationship movement that follows.
+
+Before finalizing a television draft, compare THE SEASON against every selected episode. If both sections substantially contain the same action, sequence of beats, physical mechanism, outcome, or distinctive details, keep the incident in THE EPISODES and rewrite THE SEASON around what changes because of it, unless the plan explicitly assigns ownership differently for a strong reason.
+
 THE EPISODES should give specific stories worth remembering. It is discovery, not inventory.
 
 For an 8 to 10 episode season, usually choose 4 to 6 episodes unless full coverage genuinely makes the article better.
@@ -257,6 +273,12 @@ Do not merely describe the tone the genre is supposed to have. Put its pleasure 
 If the production is comedy or comedy-drama, include actual comic behavior, escalation, social awkwardness, logistics, misunderstanding, or another funny situation from canon rather than relying only on witty narration.
 
 If it is romance, let interaction carry attraction. If it is a thriller, let pressure move. If it is a heist, let mechanism work. If it is sports, let the competition matter.
+
+When a premise derives major appeal from a sport, craft, hobby, profession, competition, food, place, performance, ritual, or other arena, give the reader direct experience of that activity, not only the rules, governance, business mechanics, or conflicts surrounding it. The reader should understand why simply spending time in this world is pleasurable.
+
+Procedure can be part of the pleasure. Do not let procedure replace the field of play. A sports show still needs competition. A food show still needs food. A music show still needs music. A workplace show still needs the work. A travel show still needs the place.
+
+Use this as a diagnostic rather than a quota. Do not add decorative activity that does not belong in canon.
 
 The article should make the reader feel the genre, not certify that the genre exists.
 
@@ -318,7 +340,10 @@ Ask:
 - Did I write a trailer-style paragraph that adds no new information?
 - Did I announce where the article cuts, stops, or withholds rather than simply stopping?
 - Did one signature tactic or scene get reused as evidence in several sections?
+- Did THE DREAM CAST repeat the same props, anecdotes, or character proofs already used in THE CHARACTERS instead of adding performance pleasure?
+- For television, did THE SEASON retell incidents that THE EPISODES already owns instead of describing what changed because of them?
 - For television, did several episode capsules turn into the same moral story with different nouns?
+- Did the article spend more time on the rules around an arena than on the sport, craft, food, music, work, place, competition, or ritual that makes the arena desirable?
 
 Fix the pattern, not every individual instance.
 
@@ -347,8 +372,9 @@ Before returning the draft, inspect for:
 - substantial duplicate scene treatment across any public sections, not only MOVIE/SCENES or SEASON/EPISODES
 - whether one signature tactic, prop, phrase, or antagonist beat is being re-performed across several sections
 - whether THE CHARACTERS or THE DREAM CAST pre-spent a signature scene's best details
+- whether THE DREAM CAST substantially repeats THE CHARACTERS instead of adding a distinct performance delta
 - whether character introductions became a row of polished archetype labels
-- whether THE SEASON and THE EPISODES are operating at different zoom levels
+- whether THE SEASON and THE EPISODES are operating at different zoom levels and, when they share subject matter, whether THE SEASON owns consequence rather than replaying the event
 - whether television protagonists visibly reshape the recurring engine rather than merely process it
 - whether selected television episodes vary in dramatic function rather than repeating one moral shape
 - whether every public Dream Cast paragraph names a selected actor and character
@@ -359,6 +385,7 @@ Before returning the draft, inspect for:
 - whether premise-critical setup has been hidden under spoiler-shaped vagueness
 - whether known concrete objects or facts were replaced by coy abstractions for no useful reason
 - whether the promised genre pleasure is actually demonstrated rather than merely described
+- whether the production's native arena pleasure remains visible rather than being crowded out by the rules or institutions around it
 - whether signature scenes remain inside the production's established physical and comic reality
 - whether THE FINISH overloads recurring motifs, supporting-character roll call, or whether its strongest formulation was spent too early
 - post-scene verdict sentences that explain or certify what a strong image already delivered
