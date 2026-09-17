@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Television Editorial Standard v1.5
+## Television Editorial Standard v1.6
 
 ## 1. Purpose
 
@@ -8,6 +8,8 @@ Television is not a film article stretched across episode summaries.
 A Never Coming Soon series or limited series should make the reader feel the pleasure of returning to a world, a group of people, and a recurring dramatic engine over time.
 
 The public edition should create appetite for the season without reading like a show bible, pitch deck, streaming synopsis page, chronological recap, or thematic essay.
+
+The guidance in this standard is diagnostic, not a quota system. Do not add rivalry, romance, anticlimax, a lesson-free episode, a hard sacrifice, or any other ingredient merely because it appears below. Use the checks that describe the production in front of you and leave the rest alone.
 
 ## 2. Core television promise
 
@@ -21,7 +23,9 @@ The recurring engine is not the protagonist. Callers, cases, games, shifts, clie
 
 The strongest television makes the reader feel both directions of influence: the world keeps acting on the characters, and the characters keep changing the world they have to return to.
 
-Warmth does not require harmony. A community, workplace, team, family, club, or civic ensemble should still contain appetite, status, attraction, rivalry, vanity, boredom, jealousy, bad judgment, private ambition, and people who simply want different things. Do not translate a warm show into a room full of thoughtful facilitators.
+Warmth does not require perfect harmony. When it belongs to the show, let some ordinary wanting or social friction remain visible. That may be status, attraction, rivalry, vanity, boredom, jealousy, bad judgment, private ambition, or simply people wanting different things. Not every warm ensemble needs every form of friction, and do not manufacture conflict merely to prove that the people are human.
+
+Protect the show's native pleasure source. If part of the reason to return is simply watching these people cook, compete, flirt, work, travel, perform, observe, build, play, or spend time together, development and editorial pressure should not bury that pleasure beneath machinery designed to make the series look more sophisticated.
 
 ## 3. Default visible structure
 
@@ -96,7 +100,7 @@ A central pair may deserve several paragraphs while a useful supporting characte
 
 Secondary characters can emerge later in THE SEASON or THE EPISODES when that creates a better reading experience.
 
-In warm ensemble shows, keep social edges visible. Someone can be generous and still want credit. Someone can love the community and still chase status, access, romance, influence, recognition, or the rare thing everyone else wants. Character warmth becomes more convincing when it survives friction rather than replacing it.
+In warm ensemble shows, keep social edges visible when they naturally exist. Someone can be generous and still want credit, access, attention, or something another person wants too. Character warmth becomes more convincing when it survives real friction, but do not assign each character a flaw or appetite just to satisfy this principle.
 
 ## 8. THE DREAM CAST
 
@@ -130,9 +134,9 @@ Especially in engine-driven television, show how the protagonists' choices chang
 
 Strong season writing may show that a nightly briefing becomes a ritual, two rivals begin co-signing each other's calls, a business starts depending on the very tactic it once resisted, or a family reorganizes around a new obligation.
 
-But institutional improvement is not automatically season movement. A sequence of better rules, safer procedures, wiser compromises, cleaner charters, and healthier norms can still feel dramatically static if the people are not risking status, intimacy, belonging, desire, pride, money, access, or something else they personally care about.
+But institutional improvement is not automatically season movement. A sequence of better rules, safer procedures, wiser compromises, cleaner charters, and healthier norms can still feel dramatically static if the people are not risking something they personally care about.
 
-Do not let every recurring conflict resolve into a thoughtful hybrid policy. Sometimes two legitimate goods cannot both be preserved. A season gains shape when a choice creates a real loser, closes an option, leaves resentment, or costs the characters something they cannot immediately redesign away.
+Do not default either to elegant compromise or to forced sacrifice. A thoughtful hybrid solution can be dramatically satisfying when it grows from the people and situation. The warning sign is repeated neat resolution, where every legitimate conflict is converted into a better policy and no meaningful tension survives the meeting.
 
 Avoid replacing episode recap with a sequence of polished thematic declarations.
 
@@ -166,9 +170,9 @@ A strong selected set may include different pleasures such as social comedy, riv
 
 Not every episode needs to advance the show's central argument. Television earns emotional power partly through nights that are funny, petty, strange, warm, or gloriously unserious.
 
-As a useful test for a warm comedy or community show, ask whether at least one selected episode would still be entertaining if nobody learned anything, improved a system, or articulated a value by the end.
+For a warm comedy or community show, one useful diagnostic is whether the selected episodes all require a lesson, institutional improvement, or value statement to justify themselves. If so, look for another native pleasure already present in canon. Do not manufacture a frivolous episode merely to check this box.
 
-Do not make the external world deliver perfectly timed emotional punctuation every week. A birding trip can see nothing special. A game can be ugly. A performance can disappoint. A guest can fail to arrive. Ordinary failure, false alarms, and anticlimax create contrast that makes genuine wonder feel less written.
+When the world contains partly uncontrollable sources of pleasure such as nature, games, performances, customers, weather, or chance, avoid using perfectly timed external wonder as a repeated emotional button. Neutral, messy, disappointing, or surprising outcomes can create useful contrast when they belong. Do not insert anticlimax merely to prove realism.
 
 Most importantly, episode capsules must sound viewer-facing.
 
@@ -192,7 +196,7 @@ Options include omitting the finale capsule, giving it a high-level setup only, 
 
 THE FINISH should still feel like the first time the article fully enters the final pressure cooker.
 
-A season finale should not become a victory lap merely because the characters have built a healthier system. If the season still contains a central unresolved value, relationship, desire, or cost, bring that under live pressure. A gentle show does not need catastrophe. It does need a final situation in which what the characters built or learned is not automatically enough.
+Do not make a season finale a victory lap merely because the characters have built a healthier system when a central unresolved value, relationship, desire, or cost remains alive. In that case, bring the live thing under pressure. A gentle show does not need catastrophe or an artificially difficult final choice. A finale may also earn culmination, joy, or release when that is the production's native payoff.
 
 ## 13. Recurring engine versus repetitive article
 
@@ -210,7 +214,7 @@ This does not require romance or extra exposition.
 
 One consequential interaction can be enough if it shows history, friction, shorthand, loyalty, rivalry, dependence, or a choice that would play differently between strangers.
 
-When the pitch promises romance or a slow-burn attraction, repeated proximity is not enough. Give the reader behavior that contains attraction, curiosity, jealousy, disappointment, private shorthand, risk, or a changed decision. A slow burn can remain subtle, but it still needs heat.
+When romance or slow-burn attraction is materially part of the promise, verify that the relationship produces felt interaction rather than repeated proximity. Use `Governance/ncs-relationship-story-standard.md` for the fuller test. Do not manufacture jealousy, arguments, or romantic business merely because those are common signals of chemistry.
 
 Do not manufacture relationship material merely to satisfy a quota.
 
