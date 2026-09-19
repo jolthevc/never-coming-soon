@@ -1,183 +1,192 @@
 # Never Coming Soon
 
-Never Coming Soon is an imaginary entertainment studio and media publication for the best movies and shows that do not exist.
+Never Coming Soon is an entertainment and media brand for the best movies and tv shows that do not exist.
 
-This repository contains the durable creative governance, prompt contracts, structured schemas, workflow specifications, and approved calibration examples used by the Never Coming Soon system.
+This repository contains the durable creative governance, prompt contracts, structured schemas, workflow specifications, and approved calibration material used by the Never Coming Soon system.
+
+## Core product
+
+The production is the product.
+
+A carousel, poster, short video, long-form article, website feature, or email can all be different ways of experiencing the same fictional movie or show.
+
+The current consumer-facing priority is social-first packaging.
+
+The target reaction is:
+
+**Oh shit. I would actually watch this.**
 
 ## System architecture
 
 Never Coming Soon uses distinct creative workflows.
 
-1. **Ideation** finds, remembers, compares, curates, lightly expands, and Development-Selects fertile concepts.
-2. **Generation** turns a selected concept into a real internal movie or show, optionally grounds it with research, internally challenges and freezes canon, casts it, architects the public edition, drafts it, runs deterministic diagnostics, cold-reviews it once, assigns a holistic NCS score, builds the canonical IG/social handoff, and delivers the complete package for human judgment and downstream media asset generation.
-3. **Later revision / redevelopment** is explicit and human-selected. It may run targeted prose revision, edition restructuring, canon redevelopment, rescoring when needed, and IG packet regeneration when the final public object materially changes.
-4. **Visual production** executes the generated social asset packet.
-5. **Publishing and growth** remain downstream human-controlled systems. Generation never auto-publishes.
+1. **Ideation** finds, remembers, compares, curates, expands, and Development-Selects fertile concepts.
+2. **Generation** turns one selected concept into a complete internal production canon, persists a readable production treatment, creates the canonical six-slide social release packet, and delivers the package for asset generation and human judgment.
+3. **Optional research** is run only when explicitly requested or materially required.
+4. **Optional long-form editorial** is created later only when a human actually wants an article, website feature, or email edition.
+5. **Visual production** executes the generated social asset packet.
+6. **Publishing and growth** remain downstream human-controlled systems.
 
-The workflows are intentionally separate.
+The normal Generation path is intentionally lean.
 
-Ideation explains why an idea deserves development. Generation owns the actual storytelling and may materially improve title, format, characters, relationships, setting, plot, scenes, ending, casting, and other provisional choices.
-
-The handoff object from Ideation to Generation is the **Development Packet**.
-
-The core Generation principle is:
-
-**Develop the production before writing the article.**
-
-The cost/quality principle is:
-
-**Spend premium model calls where they create creative quality or a required downstream artifact. Do not automatically revise every draft before a human has read it.**
-
-## Current Generation creative path
+## Current Generation path
 
 Normal paid-model path:
 
-1. Production Developer
-2. Research Grounder only when genuinely needed
-3. Canon Builder with internal independent challenge
-4. Casting Director
-5. Edition Architect
-6. Edition Writer
-7. Forensic Editor
-8. IG Asset Packet Builder
+1. Production Builder
+2. Social Release Builder
 
-The standalone Story Challenger is not part of the normal Generation path. Its critical function is folded into Canon Builder before Canon Freeze.
+Optional:
+- Research Grounder
+- one Production Builder rerun after material research
+- later long-form writer
+- later review or revision only when justified
 
-Automatic Revision Writer, EDITION/CANON rescue loops, and duplicate final Forensic review are also not part of normal Generation.
-
-The IG Asset Packet Builder remains in normal Generation because `ig_packet_json` is required by downstream media asset generation.
+The former Production Developer, Story Challenger, Canon Builder, Casting Director, Edition Architect, Edition Writer, Forensic Editor, and Revision Writer files may remain in the repository for legacy or explicit later workflows, but they are not part of the normal v3 path.
 
 ## Source of truth
 
-- `Governance/` contains durable creative, editorial, visual, social, and data standards.
-- `Prompts/Ideation/` contains Ideation agent prompt pairs.
-- `Prompts/Generation/` contains generation-stage prompts plus retained prompts for later/optional stages.
-- `Schemas/` contains machine-readable structured-output contracts.
-- `WorkflowSpecs/ideation-workflow-v1.md` contains the n8n Ideation specification.
-- `WorkflowSpecs/generation-workflow-v1.md` contains the current n8n Generation specification despite the legacy filename.
-- `Examples/Gold/` contains explicitly approved writing-calibration examples.
+- `Governance/` contains durable creative, visual, social, editorial, and data standards.
+- `Prompts/Ideation/` contains Ideation prompts.
+- `Prompts/Generation/01-production-builder.*` contains the streamlined Production Builder.
+- `Prompts/Generation/10-ig-asset-packet-builder.*` contains the Social Release Builder.
+- `Schemas/` contains machine-readable contracts.
+- `WorkflowSpecs/ideation-workflow-v1.md` contains the Ideation specification.
+- `WorkflowSpecs/generation-workflow-v1.md` contains the current Generation specification despite the legacy filename.
+- `Examples/Gold/` contains approved long-form writing calibration for optional editorial work.
 
-GitHub is the source of truth for durable system behavior.
+GitHub is the durable source of truth.
 
 n8n orchestrates the workflows.
 
-Google Sheets stores the catalog and lifecycle state.
+Google Sheets stores catalog and lifecycle state.
 
-Google Drive stores human-readable draft artifacts.
+Google Drive stores the durable production treatment and optional later editorial artifacts.
 
 ## Ideas state
 
-The system uses one canonical `Ideas` tab and one row per concept across the lifecycle.
+The system uses one canonical `Ideas` tab and one row per concept.
 
 Canonical downstream lifecycle:
 
-`DEVELOPMENT_SELECT` -> `DRAFTED` -> `PUBLISHED`
+`DEVELOPMENT_SELECT -> DRAFTED -> PUBLISHED`
 
-There is no intermediate `GENERATING` Sheet status in the current architecture.
+There is no intermediate `GENERATING` Sheet status.
 
-For a normal run, the row remains `DEVELOPMENT_SELECT` until the complete generated package succeeds. For forced redevelopment, a prior `DRAFTED` row remains `DRAFTED` with its successful final fields intact until the replacement package succeeds.
-
-`PUBLISHED` is human-controlled.
-
-Generation uses `idea_id` as its sole durable identifier. There is no required `production_id` and no separate Productions state layer.
-
-Intermediate Generation artifacts remain in n8n execution memory.
-
-If duplicate-run protection is needed, solve it at the n8n execution/orchestration level rather than with another durable lifecycle status.
+Generation uses `idea_id` as its durable identifier.
 
 ## Meaning of DRAFTED
 
-A successful Generation run updates the same Ideas row with:
+A successful v3 Generation run updates the same Ideas row with:
 
 - `final_title`
 - `draft_url`
-- `ncs_score`
 - `ig_packet_json`
 - `status = DRAFTED`
 
-`DRAFTED` means a complete scored article and schema-valid media/social handoff exist and were persisted successfully.
+`draft_url` is a legacy field name retained for compatibility and points to the current production treatment.
 
-It does **not** require:
+`ncs_score` is not required by the normal social-first path. Existing historical scores should not be erased.
 
-- `ncs_score >= 8.0`
-- a Forensic `revision_route` of `NONE`
-- every editorial note to be resolved
-- automatic publication approval
+`DRAFTED` means:
+- complete internal canon was created
+- a durable production treatment exists
+- a schema-valid social release packet exists
+- the production is ready for asset generation and human review
 
-The score records quality. The status records artifact lifecycle.
+It does not mean published.
 
-## Human review and editorial sufficiency
+## Social release packet
 
-The automated Generation system should create a strong first object, diagnose it honestly, create the required media handoff, and stop.
+`ig_packet_json` remains the canonical downstream media handoff.
 
-A 7.x draft can be a valid generated object when the concept is good, the article is coherent, and remaining weaknesses are matters for later human selection or polish.
+Version:
 
-The Forensic Editor's route is advisory during normal Generation.
+`ncs_ig_v2`
 
-A human may later choose:
+Its locked six-slide spine is:
 
-- use as-is
-- targeted prose revision
-- edition restructuring
-- canon redevelopment
-- no publication
-
-This is intentionally cheaper and less likely to polish personality out of good work than automatically revising every generated draft.
-
-## Relationship-driven productions
-
-Romance, romantic comedy, second-chance love, and other central two-person relationship stories use:
-
-- `Governance/ncs-relationship-story-standard.md`
-
-The standard requires actual chemistry in behavior, credible breakup logic for second-chance romance, bilateral life stakes when relevant, and dignified treatment of new partners.
-
-A premise mechanism may create proximity. It cannot substitute for the relationship itself.
-
-## Scene ownership
-
-Edition Architecture assigns substantial public sequences one primary section through `scene_ownership_plan`.
-
-For film, THE MOVIE and THE SCENES should not fully stage the same event.
-
-For television, THE SEASON and THE EPISODES should operate at different zoom levels.
-
-THE SEASON tracks concrete macro change. THE EPISODES gives selected specific memorable stories.
-
-Deterministic diagnostics can flag likely overlap, while the Forensic Editor makes the editorial judgment.
-
-## Casting memory
-
-Casting history is awareness, not a blacklist.
-
-At minimum, approved Gold-example lead casts should be visible to the Casting Director so the system does not immediately reuse the same lead performer out of habit.
-
-Casting may use a cheaper capable creative model than the major development/writing/review stages when practical.
-
-Public THE CAST copy only includes roles with an actual selected performer.
-
-## Social asset handoff
-
-`ig_packet_json` is the canonical handoff to the image and social asset workflow and remains part of successful Generation.
-
-Its governance lives in:
-
-- `Governance/ncs-visual-constitution.md`
-- `Governance/ncs-social-asset-standard.md`
-
-Its schema lives in:
-
-- `Schemas/ig-asset-packet.schema.json`
-
-The locked three-slide spine remains:
-
-1. Cover / Poster
+1. Hook
 2. Premise
-3. NCS Close
+3. Characters
+4. The Movie
+5. Poster
+6. NCS Close
 
-The exact final packet written to Sheets must pass schema validation and Social QA after all normalization or repair.
+### Slide 1
 
-If later human-selected revision materially changes the final title, public article, canon, or campaign direction, regenerate the IG packet so downstream media assets stay synchronized with the actual production.
+Slide 1 is intentionally simple and text-first.
+
+It clearly says:
+- MOVIE IDEA or SHOW IDEA
+- final title
+- one-sentence hook
+- small Never Coming Soon signature
+
+It is not a poster.
+
+### Slide 2
+
+Premise.
+
+A cinematic glimpse plus clear social copy that gives the setup generously.
+
+### Slide 3
+
+Featured Characters.
+
+Two characters by default, three for genuinely ensemble-driven concepts, four only when necessary.
+
+The default visual treatment is an NCS editorial character study or casting-room sketch, not photoreal fake actors.
+
+### Slide 4
+
+The Movie.
+
+An immersive, image-dominant slide that sells what watching the production feels like without summarizing the plot.
+
+### Slide 5
+
+Poster payoff.
+
+This is where full campaign-style key art belongs.
+
+### Slide 6
+
+NCS close.
+
+Participation question first, then brand identity and the locked slogan:
+
+**the best movies and tv shows that don't exist.**
+
+A link or long-form action is secondary and only appears when a real destination exists.
+
+## Image-model boundary
+
+The image model is an executor, not an editor.
+
+The packet decides:
+- exact copy
+- slide order
+- character selection
+- character count
+- story emphasis
+- reveal boundaries
+- poster tagline
+- CTA
+- visual continuity
+
+The image model receives execution-ready visual prompts and exercises creativity inside those constraints.
+
+Exact text and the approved logo should be composited deterministically whenever practical.
+
+## Long-form editorial
+
+Long-form writing remains available because some productions may benefit from a deeper website or email experience.
+
+It is no longer required merely to produce the social packet.
+
+If a human wants a full article later, use the frozen canon or production treatment as source and pay for only the writing and review steps that are actually valuable.
 
 ## Public integrity
 
@@ -187,37 +196,12 @@ Use:
 
 - `Governance/ncs-publication-integrity-standard.md`
 
-Internal editorial concepts may guide the system backstage but must not appear as public annotations or spoiler-management commentary.
-
-## Television
-
-Television has dedicated format governance:
-
-- `Governance/ncs-television-editorial-standard.md`
-
-It is designed to prevent a series article from reading like a show bible, rules document, or duplicated season recap plus episode guide.
-
-Television still needs a formally locked Gold example before TV craft should be considered fully calibrated.
-
-## Writing calibration
-
-The house voice is governed by:
-
-- `Governance/ncs-voice-constitution.md`
-
-Approved film Gold examples:
-
-- `Examples/Gold/film-01-the-tell.md`
-- `Examples/Gold/film-02-clearance.md`
-
-Gold examples teach voice, craft, section behavior, and editorial judgment. They are never story templates or minimum-score requirements.
+Backstage tooling is not the product.
 
 ## Core quality posture
 
 Never Coming Soon is trying to create this reaction:
 
 **Oh shit. I would actually watch this.**
-
-The standard is not maximum strangeness, maximum plot density, maximum cleverness, or maximum automated revision.
 
 The standard is desire, specificity, human pull, genuine genre pleasure, and the feeling that the production somehow already exists.
