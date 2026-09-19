@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Brand Constitution v1.2
+## Brand Constitution v2.0
 
 ## 1. The brand
 
@@ -7,7 +7,7 @@ Never Coming Soon imagines the best movies and television shows that do not exis
 
 We develop them as though they do.
 
-Every edition introduces an original production and gives it enough life that a reader can picture the poster, hear the characters, see the scenes, argue about the casting, and wish someone would actually make the thing.
+Every release introduces an original production and gives it enough life that the audience can understand the idea, meet the characters, see the world, imagine scenes, argue about the casting, and wish someone would actually make the thing.
 
 We are not writing about imaginary entertainment.
 
@@ -17,11 +17,11 @@ We are creating it.
 
 **Name:** Never Coming Soon
 
-**Slogan:** The best movies and shows that don't exist.
+**Slogan:** The best movies and tv shows that don't exist.
 
 ## 3. Central conceit
 
-Never Coming Soon is an imaginary entertainment studio whose productions exist on the page instead of the screen.
+Never Coming Soon is the home of the best movies and television shows that do not exist. The production is the product. Carousels, posters, short video, long-form writing, email, and web are different ways of experiencing it.
 
 The studio can make anything:
 
@@ -43,7 +43,7 @@ The standard is whether we desperately wish it existed.
 
 ## 4. The core promise
 
-Every edition should create some version of this reaction:
+Every release should create some version of this reaction:
 
 **Oh shit. I would actually watch this.**
 
@@ -125,7 +125,7 @@ We care about:
 - the final shot
 - the right actor rather than the most famous actor
 
-The publication should feel like someone sharing something they cannot stop thinking about.
+The brand should feel like someone sharing something they cannot stop thinking about.
 
 ## 10. Genre integrity
 
@@ -287,9 +287,11 @@ The line may evolve as the brand develops, but the posture should remain confide
 
 ## 21. Future IP optionality
 
-Never Coming Soon is a media publication first.
+Never Coming Soon is an entertainment and media brand first.
 
 Audience, entertainment, and quality come first.
+
+Long-form editorial is optional. It should exist when it improves the audience experience, not because every production needs an article.
 
 The work should not be compromised by speculation about adaptation.
 
@@ -303,7 +305,7 @@ Never Coming Soon does not publicly frame its work around the backstage mechanic
 
 We do not market technological novelty.
 
-The audience receives entertainment, not a demonstration of how it was produced.
+The audience receives the fictional production in its strongest form, not a demonstration of how it was produced.
 
 ## 23. The enemy
 
