@@ -1,144 +1,90 @@
 # Never Coming Soon
-## Generation Data Contract v2.4
+## Generation Data Contract v3.0
 
 ## 1. Purpose
 
-This document defines Generation state and persistence for the lean Generation workflow.
+This document defines the durable data contract for the streamlined social-first Generation workflow.
 
-Generation exists to produce a strong human-reviewable public article efficiently while also producing the canonical social handoff required by downstream media asset generation.
+The normal workflow develops one complete internal production, persists a readable treatment, creates the canonical social release packet, and stops.
 
-There is no separate Productions state table.
+A long-form article and editorial score are optional later artifacts, not required Generation outputs.
 
-Generation uses:
+## 2. Required source
 
-- the `Ideas` row as durable lifecycle state
-- n8n execution memory as the temporary creative workspace
-- Google Drive as the finished-draft store
-- GitHub as the source of truth for governance, prompts, schemas, workflow specs, and approved calibration examples
+Generation begins from one Ideas row with:
 
-## 2. Durable identifier
-
-Use `idea_id` as the only durable Generation identifier.
-
-Do not create `production_id`.
-
-## 3. Source row and eligibility
-
-Normal entry requires:
-
+- `idea_id`
 - `status = DEVELOPMENT_SELECT`
 - nonblank `development_packet_json`
 
-An explicit `force_redevelopment=true` run may begin from an eligible `DRAFTED` row and requires explicit `idea_id`.
+Optional:
+- `human_notes`
+- explicit research questions
+- explicit human campaign notes
 
-Generation does not use an intermediate Sheet status lock.
+## 3. Required generated objects
 
-For a normal run, the row remains `DEVELOPMENT_SELECT` until the complete generated package succeeds.
+Normal Generation produces:
 
-For forced redevelopment, the row remains `DRAFTED` and the prior successful final fields remain untouched until the replacement package succeeds.
+1. `canon_bible`
+2. deterministic production treatment in Google Drive
+3. `ig_packet_json`
 
-Do not write `GENERATING` during execution.
+Only `ig_packet_json` is persisted directly in the Sheet as structured JSON.
 
-## 4. Execution-memory workspace
+The Canon Bible may remain in execution memory because the durable treatment preserves its content for human use. If orchestration later adds a canonical production-store layer, the canon may also be persisted there without changing the Ideas row.
 
-The following normally remain temporary only:
+## 4. Canon contract
 
-- source Ideas row snapshot
-- parsed Development Packet
-- production development blueprint
-- research packet when used
-- canon bible
-- casting plan
-- edition plan
-- draft article
-- deterministic diagnostics
-- forensic editorial review
-- IG asset packet before persistence
+The Production Builder returns:
 
-The normal Generation path no longer requires:
+`Schemas/canon-bible.schema.json`
 
-- standalone Story Challenge output
-- automatic Revision Writer output
-- deep rescue-loop state
-- duplicate final Forensic review of unchanged prose
+The canon owns:
+- final title
+- final format
+- genre
+- logline
+- core promise
+- creative kernel
+- world
+- characters
+- relationships
+- complete story
+- actual ending
+- signature scenes
+- genre delivery
+- public unresolved value
+- public genre demonstrations
+- series engine
+- season-one material
+- continuity facts
 
-Do not add Sheet columns for internal stages.
+The canon is internal and complete.
 
-## 5. Canon authority
+The social release packet is selective and public-facing.
 
-After Canon Builder succeeds, the canon bible is authoritative for that execution.
+## 5. Research
 
-The normal Generation path does not run a standalone Story Challenger. The Canon Builder performs an independent internal stress-test before freezing canon.
+Research is optional.
 
-Casting, edition architecture, writing, and social packaging should represent frozen canon rather than casually reinvent it.
+If explicit research is run, its output must be factual support rather than prose.
 
-Foundational redevelopment after human review is a later explicit action, not an automatic Generation rescue loop.
+If research materially changes canon, rerun Production Builder once with the research packet.
 
-## 6. Normal paid-model sequence
+Do not create recursive research loops.
 
-The normal paid-model path is:
+## 6. Production treatment
 
-1. Production Developer
-2. Research Grounder only when genuinely requested
-3. Canon Builder with internal challenge
-4. Casting Director
-5. Edition Architect
-6. Edition Writer
-7. Forensic Editor
-8. IG Asset Packet Builder
+The production treatment is rendered deterministically from the final Canon Bible.
 
-With no research, this is seven model calls.
+It is not a generated article and should not require a model call.
 
-The Forensic Editor remains a fresh cold read.
+The legacy Sheet column `draft_url` remains in use for compatibility and points to this treatment.
 
-Its `revision_route` is advisory during normal Generation. Do not automatically execute PROSE, EDITION, or CANON revision routes before human review.
+The treatment should be readable enough for human review and future optional long-form writing.
 
-## 7. Draft scoring contract
-
-The article delivered by Generation must have a valid numeric holistic NCS score from the Forensic Editor review of that exact article.
-
-Rules:
-
-- 1.0 to 10.0
-- preferably one decimal place
-- not a component-score average
-- not `N/A`
-- not copied from an earlier article version
-
-Because normal Generation does not automatically revise article prose after Forensic Review, the first Forensic score is normally the exact delivered-draft score.
-
-Do not run a duplicate final Forensic call when article text is unchanged.
-
-If an exceptional repair changes substantive public prose after the review, the score is stale and the repaired text must be reviewed before delivery.
-
-The score is diagnostic, not a lifecycle threshold.
-
-Do not require `overall_score >= 8.0`.
-
-Do not require `revision_route = NONE`.
-
-## 8. Deterministic article QA
-
-Before social packaging and delivery, deterministic QA should verify at minimum:
-
-- article nonblank
-- final title nonblank
-- required visible section structure for resolved format
-- reasonable word count
-- no em dash character
-- no obvious backstage technology references
-- no hard internal editorial leakage
-- valid required structured objects
-- major-name consistency where practical
-- episode-count consistency where practical
-
-Diagnostics should also inspect section overlap, especially THE MOVIE versus THE SCENES for film and THE SEASON versus THE EPISODES for television.
-
-These diagnostics are cheap signals, not creative rewrite rules.
-
-Minor overlap, rhythm, motif, casting, or prose warnings do not block completion.
-
-## 9. Social handoff contract
+## 7. Social handoff contract
 
 A successful Generation run produces `ig_packet_json` matching:
 
@@ -146,134 +92,117 @@ A successful Generation run produces `ig_packet_json` matching:
 
 and governed by:
 
-`Governance/ncs-social-asset-standard.md`
+- `Governance/ncs-visual-constitution.md`
+- `Governance/ncs-social-asset-standard.md`
 
-The packet is a required handoff to downstream media asset generation.
+The packet is required for downstream asset generation.
 
-It is built from:
+Version:
 
-- final canon
-- final title
-- exact delivered article
-- final holistic score
-- resolved canonical format
+`ncs_ig_v2`
 
-The packet contains:
+Required architecture:
 
+1. Hook
+2. Premise
+3. Characters
+4. The Movie
+5. Poster
+6. NCS Close
+
+The packet also contains:
 - campaign brief
-- logo treatment
-- short social caption
-- locked Slide 1 cover/poster packet
-- locked Slide 2 premise packet
-- locked Slide 3 NCS close packet
+- visual continuity
+- exact launch caption
+- exact public copy
+- exact featured-character selection
+- execution-ready visual prompts
 
-The packet `format` field must exactly match `FILM`, `SERIES`, or `LIMITED_SERIES`.
+The image workflow must treat this packet as the editorial source of truth.
 
-Validate the exact final object that will be stringified into the Ideas cell after any repair, normalization, mapping, or transformation.
+## 8. Packet validation
 
-If IG Packet QA fails, allow one packet-only repair and validate the repaired object again.
+Validate the exact final object that will be stringified into the Ideas cell.
 
-Do not rewrite the article because the social packet alone failed.
+Hard requirements include:
+- valid schema
+- exact v2 version
+- final title and format match canon
+- six slides exactly
+- correct slide types
+- correct MOVIE IDEA / SHOW IDEA mapping
+- 2 to 4 featured characters
+- nonblank visual continuity
+- nonblank required image prompts
+- nonblank caption
+- no em dash character in public copy
+- no backstage technology language
+- no false participation claims
 
-A structurally invalid final IG packet blocks `DRAFTED` because the downstream media handoff would be incomplete.
+Allow one packet-only repair.
 
-## 10. Google Drive delivery
+If the final packet remains invalid, do not set `DRAFTED`.
 
-After article QA and final IG packet validation succeed, write the final Google Doc.
+## 9. Final Ideas update
 
-Destination pattern:
-
-`Never Coming Soon / Drafts / [FINAL TITLE] / [FINAL TITLE]`
-
-Document content:
-
-`NCS SCORE: X.X / 10`
-
-blank line
-
-final article only
-
-Do not include internal JSON, diagnostics, research, canon, review notes, or prompts.
-
-## 11. Final Ideas update
-
-Only after successful IG validation and Drive persistence, update the same Ideas row with:
+After successful treatment persistence and packet validation, update:
 
 - `final_title`
 - `draft_url`
-- `ncs_score`
 - `ig_packet_json`
 - `status = DRAFTED`
 
-`DRAFTED` must be the final lifecycle write for a successful run.
+`ncs_score` is not required by the v3 normal path.
 
-Generation must never populate `published_url` or set `PUBLISHED`.
+Do not overwrite a historical score with a blank or synthetic value.
 
-## 12. Meaning of DRAFTED
+Generation does not write `published_url`.
+
+Generation does not set `PUBLISHED`.
+
+## 10. DRAFTED meaning
 
 `DRAFTED` means:
 
-- a complete public article exists
-- the delivered article has an honest numeric NCS score
-- deterministic completion checks ran
-- a schema-valid final `ig_packet_json` exists
-- the article was successfully persisted to Google Drive
-- `final_title`, `draft_url`, `ncs_score`, and `ig_packet_json` were written successfully
+- complete internal production canon was successfully created
+- a durable human-readable treatment exists
+- a schema-valid social release packet exists
+- the package is ready for asset generation and human judgment
 
-`DRAFTED` does not require:
+It does not require:
+- a public article
+- a holistic editorial score
+- real actor casting
+- automated review
+- publication approval
 
-- score of 8.0 or above
-- `revision_route = NONE`
-- no remaining editorial notes
-- automatic publication approval
-- Gold quality
+## 11. Optional later article
 
-The lifecycle state records that the generated package exists. The score records editorial quality.
+A long-form article, website feature, or email edition is generated only through explicit later human action.
 
-## 13. Failure behavior without an intermediate status
+That optional path may use the frozen production treatment or Canon Bible as source.
 
-Normal Generation does not mutate lifecycle state until successful completion.
+Do not require the old Architect -> Writer -> Forensic chain merely to create a social release.
 
-If a new run fails, the source row simply remains `DEVELOPMENT_SELECT`.
+## 12. Force redevelopment
 
-If forced redevelopment fails, the source row remains `DRAFTED` with the prior successful final fields and Drive artifact intact.
+For `force_redevelopment = true`:
 
-Do not write partial final fields during the run.
+- keep the prior successful final fields intact during the run
+- create replacement canon, treatment, and packet
+- replace final fields only after the entire replacement package succeeds
 
-Do not write a fake or partial `draft_url`.
+Do not destroy the last good package before the new one is valid.
 
-Do not write `N/A` into `ncs_score`.
+## 13. Human authority
 
-Do not clear or replace a prior successful `ig_packet_json` until the replacement package has fully succeeded.
+The automated system develops and packages the fictional production.
 
-If duplicate-run protection is needed, solve it at the orchestration/execution level rather than by adding another durable Sheet lifecycle state.
+Humans still decide:
+- whether to release it
+- whether to create long-form editorial
+- whether to revise canon
+- whether to regenerate social assets
+- whether to publish
 
-## 14. Force redevelopment
-
-`force_redevelopment=true` requires explicit `idea_id`.
-
-It may regenerate an eligible `DRAFTED` production without deleting the successful existing artifact first.
-
-Only replace final title, draft URL, score, IG packet, and status after the replacement package is successfully complete.
-
-## 15. Later revision boundary
-
-Human review may later trigger targeted revision or redevelopment.
-
-Possible later actions include:
-
-- targeted Revision Writer
-- optional new Forensic review when changed prose needs a new score
-- explicit EDITION redevelopment
-- explicit CANON redevelopment
-- regeneration of `ig_packet_json` when final public text, title, canon, or campaign direction materially changes
-
-Do not automatically spend those premium calls on every initial generation.
-
-## 16. Human authority
-
-`DRAFTED` means the automated system delivered a complete article plus media-asset handoff for human judgment.
-
-It does not mean published.
-
-`PUBLISHED` is set only by an explicit human or publishing workflow.
+The normal path should be lean enough that strong ideas can be developed and packaged repeatedly without paying for unused editorial layers.
