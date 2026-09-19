@@ -1,399 +1,360 @@
 # Never Coming Soon
-## Social Asset Standard v1.5
+## Social Asset Standard v2.0
 
 ## 1. Purpose
 
-This standard governs the canonical social handoff produced after a Never Coming Soon article is final.
+This standard governs the canonical social package for a Never Coming Soon production.
 
-The asset system should not reinterpret the production from scratch.
+Never Coming Soon is social-first.
 
-Generation develops the production and prepares the campaign handoff. The image workflow executes that handoff.
+The social package is not an advertisement for a long-form article. It is a primary way the audience experiences the fictional movie or show.
 
 Core doctrine:
 
-**NCS owns the architecture. The production owns the art direction.**
+**Make the audience understand the idea, meet the people, feel the movie, then reward them with the poster.**
 
-## 2. Canonical handoff
+The intended reaction is:
 
-Every successfully delivered production receives one `ig_packet_json` object.
+**I would watch this. Why does this not exist?**
 
-The packet is built from frozen final canon, final public article, final title, format, genre, and final editorial understanding of the production.
+## 2. Source of truth
 
-Do not build it from the original Ideation premise when Generation materially changed the production.
+Every completed production receives one schema-valid `ig_packet_json`.
 
-The packet is a public-facing artifact contract. Internal campaign-process language must not appear inside public copy fields.
+The packet is built from frozen final canon and any explicit human campaign direction.
 
-## 3. Canonical canvas
+A long-form article is not required input.
 
-The default Instagram carousel canvas is portrait 4:5.
+The packet is exact execution guidance for downstream asset generation. Public copy in the packet must be placed verbatim unless a field explicitly permits downstream judgment.
 
-Delivery target:
+## 3. Canvas
 
-- 1080 x 1350 pixels per slide
-- all three slides use the same dimensions
-- keep critical copy, logo, title, rating, and billing elements comfortably inside the crop-safe area
-- leave approximately 7 percent of width and height as a default critical-content safety margin unless the composition clearly demands otherwise
+Default carousel canvas:
 
-The image-generation stage may work at the closest supported generation size, but deterministic finishing should deliver the canonical 4:5 crop.
+- 1080 x 1440 pixels
+- 3:4 portrait
+- identical dimensions for all six slides
+- generous safe margins for typography and logos
 
-## 4. Locked carousel spine
+Image generation creates visual material. Exact text, logos, lines, and layout should be composited deterministically whenever practical.
 
-The canonical carousel always contains exactly three slides.
+## 4. Locked six-slide spine
 
-### Slide 1: Cover / Poster
+Every canonical carousel contains exactly six slides:
 
-Required content:
+1. Hook
+2. Premise
+3. Characters
+4. The Movie
+5. Poster
+6. NCS Close
 
-- `Never Coming Soon presents`
+The architecture is fixed. The movie-specific art direction is not.
+
+## 5. Slide 1: Hook
+
+Slide 1 is brutally clear.
+
+Its job is to stop the scroll and make the viewer understand what the post is before they need to interpret artwork.
+
+Required:
+- `MOVIE IDEA` for FILM
+- `SHOW IDEA` for SERIES or LIMITED_SERIES
 - final title
-- hero key art
-- tagline
-- rating
-- billing block
+- one-sentence hook
+- small `Never Coming Soon` signature
 
-Its job is to stop the scroll and create anticipation.
+Default treatment:
+- text-first
+- warm cream or similarly quiet editorial surface
+- deep navy typography
+- one restrained accent color
+- no poster treatment
+- no billing block
+- no rating
+- no cinematic key art requirement
+- no visual puzzle
 
-### Slide 2: Premise
+Slide 1 should feel closer to an exceptionally well-designed social text card than a movie poster.
 
-Required content:
+The hook must explain the central situation quickly. It should not tease through vagueness.
 
-- final title
-- premise header
-- premise body copy
-- one restrained visual motif
+## 6. Slide 2: Premise
 
-Its job is clarity.
+Slide 2 establishes the world and setup.
 
-### Slide 3: NCS Close
+Default treatment:
+- cinematic image plus editorial text
+- two short paragraphs when the copy has two natural movements
+- NCS typography, spacing, and editorial framing around movie-specific imagery
+- optional small section label when it helps navigation
 
-Required content:
+The image should feel like a frame from the movie or show, not promotional key art.
 
-- approved NCS logo asset
-- short Hollywood-flavored personality line
-- `THE FULL STORY IN NEVER COMING SOON`
-- `LINK IN BIO`
+The copy should explain the situation, central conflict, and engine clearly enough that the audience fully understands the concept.
 
-Its job is brand recognition and continuation.
-
-Exactly three slides.
-
-## 5. Slide 1 poster standard
-
-The cover needs a real campaign idea.
-
-Avoid a generic literal scene when a more singular image, object, composition, graphic idea, or visual tension could carry the poster.
-
-The poster should communicate genre and desire before the reader studies details.
-
-Do not add format, genre, runtime, synopsis copy, CTA language, social labels, or NCS logo to Slide 1.
-
-`Never Coming Soon presents` appears as simple text, not as the master NCS logo.
-
-The rating should feel plausible.
-
-The poster title and tagline must remain readable at phone-feed scale.
-
-## 6. Billing block integrity
-
-The billing block is poster furniture, not a place to explain the campaign-production process.
-
-It may contain neutral promotional furniture appropriate to the production, but it must not make unnecessary false production claims or expose backstage NCS work.
-
-Do not write lines such as:
-
-- `Filmed in Austin, Texas`
-- `Shot on location in...`
-- `Poster design by...`
-- `Poster design and finishing by the NCS campaign team`
-- `Generated by...`
-- `Created with...`
-- `Campaign by...`
-- `Artwork by the NCS team`
-
-Avoid inventing fake studios, distributors, festivals, production companies, or crew credits merely to make the billing block look authentic.
-
-Preferred billing furniture is concise and non-deceptive, such as production title, fictional format label, episode count when appropriate, or restrained NCS presentation language.
-
-The billing block should never imply that a real actor, filmmaker, studio, location authority, or crew participated in the fictional production.
-
-## 7. Slide 1 visual hierarchy
-
-Default hierarchy:
-
-1. hero idea / key art
-2. title
-3. tagline
-4. `Never Coming Soon presents`
-5. rating and billing block
-
-The hero image should remain intelligible when viewed quickly on a phone.
-
-Ask:
-
-**What is the one image from this campaign somebody might remember tomorrow?**
-
-## 8. Slide 2 premise standard
-
-Slide 2 is not a second poster.
-
-It should normally be cleaner, quieter, and more legible than Slide 1.
-
-The premise header should be an actual hook or opening line, not a generic label such as:
-
-- The Premise
-- About the Movie
-- The Story
-- What's It About?
-
-The body copy should be written specifically for social.
-
-Typical body target: roughly 65 to 110 words.
-
-Explain setup and engine before flavor details.
-
-The text should usually occupy one obvious reading path.
-
-When the body contains two natural movements, especially once it approaches roughly 70 words, prefer two short paragraphs separated by a real paragraph break rather than one dense text block. Three very short paragraphs are acceptable when the material genuinely reads better that way. Do not fragment copy merely to create layout.
-
-Do not turn Slide 2 into a synopsis, cast list, character dossier, quote card, infographic, slogan stack, or lore page.
-
-## 9. Slide 2 copy discipline
-
-The premise copy is exact public copy. The image workflow should place it verbatim rather than rewriting it.
-
-It must match final canon, use no em dash character, avoid internal editorial terminology, avoid false actor participation claims, and read naturally on its own.
-
-Preserve intentional paragraph breaks from the packet during deterministic layout.
-
-If the exact copy does not fit cleanly at an accessible size, fix the packet copy before layout rather than shrinking text into illegibility.
-
-## 10. Slide 3 close standard
-
-Slide 3 is the production campaign signed by Never Coming Soon.
-
-Use the exact approved NCS logo geometry or approved exported asset.
-
-Do not regenerate or approximate the logo when deterministic compositing is available.
-
-Logo color may adapt to the production campaign.
-
-The fixed content slots are:
-
-- approved NCS logo
-- one Hollywood/personality line
-- `THE FULL STORY IN NEVER COMING SOON`
-- `LINK IN BIO`
-
-Do not add a second poster, synopsis, slogan stack, or unrelated brand copy.
-
-## 11. Hollywood line
-
-The Hollywood line is an NCS personality beat, not a second production tagline.
-
-It should lightly acknowledge the central joke that this desirable thing does not exist.
-
-Good territory:
-
-- Hollywood missed this one.
-- Apparently Hollywood forgot this one.
-- Your move, Hollywood.
-- Someone tell Hollywood.
-
-Do not make it hostile or bitter.
-
-Do not substitute a thematic movie line.
-
-## 12. Campaign coherence without repetition
-
-All three slides should feel like one campaign.
-
-Coherence can come from palette, typography family, texture, framing, lighting logic, spacing, graphic language, or one signature motif.
-
-Coherence does not require repeating the same object on all three slides.
-
-Default restraint:
-
-- one signature physical motif should normally appear explicitly on no more than two slides
-- Slide 1 may own the richest version of the motif
-- Slide 2 may echo it lightly when useful
-- Slide 3 can belong to the campaign through palette, typography, texture, or a very abstract echo rather than another literal object
-
-If the poster uses a hose shaped like a lock and Slide 2 already uses the hose again, Slide 3 probably does not need a third hose.
-
-The cover can be rich. The premise should breathe. The close should be elemental.
-
-## 13. Logo treatment
-
-The packet must contain a concise `logo_treatment` instruction.
-
-It governs color and presentation, not logo geometry.
-
-Never invent a new logo shape as part of production art direction.
-
-## 14. Social launch copy and caption
-
-Every `ig_packet_json` must include one exact `caption` field.
-
-The caption is not miniature ad copy and it is not a pasted logline. It should feel like a sharp entertainment person telling a friend the movie or show idea they cannot stop thinking about.
-
-Core principle:
+Preserve the existing NCS premise-copy discipline:
 
 **Give away the setup generously. Withhold the experience, not the premise.**
 
-A reader should understand the full situation, see a few flashes of the production, feel the central pressure, and want the link because they already like what they understand.
-
-Default shape:
-
-- two short paragraphs
-- roughly 55 to 90 words total when the material supports it
-- paragraph one: plot + tension
-- paragraph two: engine / what it is
-- soft internet-native voice, usually lowercase
-- personal, concrete, readable, and lightly juicy
-- dry or witty only when the material naturally supports it
-
-### Paragraph one: plot + tension
-
-Tell us what is happening and what is uncomfortable, funny, dangerous, romantic, or emotionally loaded about it.
-
-Use character names when they make the setup more intimate.
-
-Give two to four concrete glimpses when available: a ritual, recurring complication, humiliation, emergency, handoff, confrontation, or other thing we can begin watching in our heads.
-
-Build only from final canon and the finished article. Do not invent a new person, twist, relationship, scene, or fact to make the caption punchier.
-
-### Paragraph two: engine / what it is
-
-Open the idea up rather than repeating paragraph one.
-
-Name or imply the genre promise, then reveal the wider bite: the recurring mechanism, contradiction, choice, pressure, or question that keeps generating story.
-
-A strong final phrase often leaves us with the choice the characters cannot avoid, the pressure that has to break, or the reason the situation cannot continue forever.
-
-Do not summarize the theme for us.
-
-### Launch wrapper
-
-For an X launch, downstream publishing may prepend:
-
-`movie idea #X: title`
-
-or:
-
-`show idea #X: title`
-
-The number is the public launch count, never `idea_id`.
-
-Generation should not invent that number when it is not supplied. The `caption` field should remain useful as the launch body on X, Instagram, or other social surfaces without requiring the numbered wrapper.
-
-### Bad versus good calibration: Shared Leash
-
-**BAD**
-
-`shared leash is a warm, funny rom-com about love, responsibility, and learning when to let go. after a breakup, two exes navigate the complications of co-parenting their rescue dog and discover that some bonds are harder to break than others.`
-
-Why it fails: generic theme language, no lived movie, no memorable complications, and it sounds like marketing copy describing the concept from outside.
-
-**GOOD**
-
-`movie idea #12: shared leash`
-
-`after maya and gabe's amicable breakup, they keep joint custody of moose, their anxious rescue: weekly handoffs, midnight emergencies, obedience-class humiliations, all while they try to date other people.`
-
-`it's a rom-com where the logistics outlast the romance. the dog keeps throwing them back together until his needs force the choice they've been dodging: fully separate, or re-choose each other.`
-
-Why it works: we meet the people, get the full situation, see several pieces of the movie, understand the recurring engine, and end on the pressure that makes us want more.
-
-### Caption failure modes
-
 Avoid:
+- vague teaser language
+- theme summary
+- plot synopsis
+- one dense block of text
+- generic claims that the movie is heartfelt, cinematic, funny, gripping, or compelling
 
-- logline paste
-- generic thematic language such as `a story about love, loss, and learning to let go`
-- corporate framing such as `Never Coming Soon presents`
-- slogan-first copy
-- announcing that something is heartfelt, compelling, cinematic, hilarious, or gripping instead of demonstrating it
-- vague teaser language that hides the setup
-- generic engagement bait such as `Would you watch this?` or `Thoughts?`
-- hashtags or emojis by default
-- false claims that real cast members endorsed, joined, announced, or participated in the fictional production
-- backstage technology language
-- em dash characters
+## 7. Slide 3: Featured Characters
 
-The article voice says: **I somehow already watched this.**
+Slide 3 creates human attachment.
 
-The social-launch voice says: **wait, listen to this movie idea.**
+Featured-character rule:
+- two characters by default
+- three for genuinely ensemble-driven concepts
+- four only when necessary
+- never inventory the full cast
 
-They should feel related, not identical.
+Choose the people whose presence most increases desire for the production.
 
-## 15. Image prompt standard
+Copy for each featured character:
+- name
+- one concise description
+- behavior, contrast, desire, contradiction, or chemistry
+- no résumé-style dossier
+- no full arc summary
 
-Each slide has an execution-ready `image_prompt`.
+### Character visual treatment
 
-Prompts should specify the visual object, composition, mood, lighting, palette, negative-space needs, and important story-world details.
+The default NCS character treatment is an **editorial character study** or **NCS casting-room sketch**.
 
-They should anticipate the 4:5 crop and reserve useful negative space for required text where appropriate.
+Use:
+- expressive graphite or ink linework
+- selective flat color or loose watercolor wash
+- visible paper texture
+- specific wardrobe, posture, props, and expressions
+- slightly imperfect authored marks
+- two or three colors drawn from the production's visual world
+- one relational composition rather than isolated portrait boxes whenever possible
 
-When text fidelity matters, prefer generating the visual background and compositing exact typography and the approved logo deterministically afterward.
+Do not use:
+- real actor likenesses
+- faux-photoreal celebrity casting
+- glossy skin
+- police-composite or mugshot language
+- generic floating headshots
 
-## 16. Deterministic finishing
+The characters should be recognizable enough for continuity but open enough that the audience can still imagine casting.
 
-Preferred order:
+## 8. Slide 4: The Movie
 
-1. generate or source the campaign background/key art
-2. crop and position to the canonical 4:5 canvas
-3. place exact title, tagline, premise copy, rating, billing block, Hollywood line, CTA, and approved NCS logo deterministically
-4. verify visual hierarchy and safe margins
-5. export all three slides at identical dimensions
+Slide 4 sells the experience of watching the production.
 
-Do not ask an image model to recreate the master logo or long exact premise copy when a deterministic compositor can place them accurately.
+It should be the most immersive slide.
 
-## 17. Real actors and key art
+Default treatment:
+- image-dominant
+- roughly 70 to 80 percent visual when composition supports it
+- one compact paragraph or a few tightly connected details
+- restrained NCS editorial framing
 
-Casting may use real performers in the editorial article.
+The material may draw from:
+- recurring situations
+- world texture
+- memorable locations
+- social dynamics
+- genre pleasure
+- comedy, tension, romance, fear, or spectacle
+- signature scenes
+- emotional current
+- proof-of-existence details
 
-The social campaign must never imply that those performers actually signed onto, endorsed, announced, or participated in the fictional production.
+This is not a plot summary.
 
-Key art does not need recognizable actor likeness to succeed.
+The test is:
 
-Prefer concept-led campaign imagery when actor likeness would create unnecessary false-announcement energy or fidelity problems.
+**Can I already see scenes from this?**
 
-## 18. Format and schema integrity
+Texture must still increase desire. Do not include atmosphere merely because it sounds evocative.
 
-The packet format field must use the canonical uppercase enum exactly:
+## 9. Slide 5: Poster
 
-- `FILM`
-- `SERIES`
-- `LIMITED_SERIES`
+Slide 5 is the payoff.
 
-The packet must match `Schemas/ig-asset-packet.schema.json` after every transformation.
+It should feel like the poster for the movie or show the audience now understands and wants.
 
-Validation must be performed on the exact final object that will be stringified into the Ideas cell.
+The poster belongs primarily to the fictional production.
 
-If orchestration normalizes, repairs, maps, or rewrites any packet field after model generation, validate the post-transformation object again before persistence.
+Required packet fields include:
+- title
+- tagline
+- plausible rating
+- concise format descriptor
+- restrained footer copy
+- art direction
+- image prompt
 
-Schema failure is a delivery blocker.
+The central visual, title treatment, palette, and poster concept may vary completely by production.
 
-## 19. Packet quality test
+Do not imply that real actors, filmmakers, studios, crews, festivals, or location authorities participated.
 
-Before persistence, ask:
+Do not use real actor likenesses by default.
 
-- Does Slide 1 have one memorable campaign idea?
-- Does Slide 1 work quickly at phone-feed scale?
-- Is the billing block restrained and free of fake production-process claims?
-- Does Slide 2 explain the actual production quickly?
-- Is the Slide 2 header a hook rather than a label?
-- Can Slide 2 fit legibly on a 4:5 canvas?
-- When Slide 2 is long enough to feel dense, has it been broken into natural short paragraphs rather than one blob?
-- Is Slide 3 unmistakably the NCS close?
-- Is the Hollywood line actually about the NCS/Hollywood conceit?
-- Is the approved logo geometry preserved?
-- Do all three slides feel like one campaign without repeating the same literal motif three times?
-- Does the caption feel like somebody telling us an irresistible movie/show idea rather than advertising one?
-- Does the caption give enough concrete plot and recurring pressure to make the production play in the reader's head?
-- Does paragraph two expand the engine rather than repeat paragraph one?
-- Is `format` one of the exact canonical uppercase enum values?
-- Has the exact final persisted object passed the schema?
-- Is all public copy free of em dashes, workflow language, and false participation claims?
+The poster should feel like a reward for swiping, not another explanation slide.
+
+## 10. Slide 6: NCS Close
+
+Slide 6 returns to Never Coming Soon.
+
+Priority order:
+1. participation question
+2. NCS identity
+3. locked slogan
+4. optional secondary action
+
+Locked slogan:
+
+`the best movies and tv shows that don't exist.`
+
+The participation question should be native to the production.
+
+Good examples:
+- Who are you casting?
+- Would you watch it?
+- Movie or series?
+- Who plays June?
+- Which poster would you pick?
+
+Avoid generic engagement bait when a more specific question exists.
+
+A link or long-form action may appear as a secondary action when one genuinely exists. It is not the primary purpose of the close.
+
+The visual should conclude the production's world with a simplified motif, silhouette, environment, or object rather than becoming a generic corporate card.
+
+## 11. Visual rhythm
+
+The intended progression is:
+
+**explain it -> establish it -> humanize it -> immerse me -> make it real -> invite me in**
+
+A useful density rhythm is:
+
+1. typography
+2. image plus substantial copy
+3. illustration plus compact character copy
+4. large image plus minimal copy
+5. full poster
+6. graphic brand close
+
+## 12. What NCS owns
+
+Across releases, NCS should consistently own:
+- Slide 1 architecture
+- core editorial typography
+- generous margin discipline
+- warm cream and deep navy as default editorial surfaces
+- small uppercase navigation labels when used
+- body-copy treatment
+- Slide 3 illustrated character-study language
+- Slide 6 brand structure
+- exact-copy discipline
+
+## 13. What the production owns
+
+Each fictional production may own:
+- cinematic imagery
+- accent color
+- title typeface
+- image grading
+- wardrobe and production design
+- recurring motifs
+- poster concept
+- closing-card imagery
+- participation question
+
+The goal is one recognizable publication releasing radically different movies, not one rigid template wearing different costumes.
+
+## 14. Visual continuity
+
+Slides 2, 4, and 5 must feel like they belong to the same production.
+
+The packet must provide:
+- world style
+- palette
+- cinematography
+- character visual descriptions
+- wardrobe language
+- posture and energy
+- identifying details
+
+When the same character appears across generated assets, preserve identity and wardrobe logic unless the packet explicitly calls for a change.
+
+Slide 3 is intentionally illustrated rather than cinematic, but the character details and production palette should still match the same fictional people and world.
+
+## 15. Image-model boundary
+
+The image model is an executor, not an editor.
+
+It should not decide:
+- what the slide is about
+- which characters matter
+- what copy to write
+- what order the carousel uses
+- what the poster tagline is
+- what the CTA is
+- how many characters appear
+- what story information to reveal
+
+Those decisions belong in `ig_packet_json`.
+
+The image model may exercise visual creativity inside the supplied composition, style, lighting, wardrobe, environment, and mood direction.
+
+All exact text should be composited outside the image model whenever practical.
+
+## 16. Caption
+
+The packet includes one exact launch caption.
+
+Keep the existing voice principle:
+
+**Give away the setup generously. Withhold the experience, not the premise.**
+
+Default:
+- two short paragraphs
+- concrete and conversational
+- plot and tension first
+- engine or recurring pressure second
+- no hashtags by default
+- no generic praise
+- no fake participation claims
+- no backstage process language
+
+The caption may be used for Instagram or adapted downstream for X.
+
+## 17. Integrity
+
+All public copy must:
+- match final canon
+- contain no em dash character
+- contain no internal workflow terminology
+- contain no backstage technology language
+- avoid false real-world participation claims
+- avoid explicit spoiler-management language
+
+## 18. Packet quality test
+
+Before persistence, verify:
+- Slide 1 is understandable in under a second
+- Slide 1 clearly says MOVIE IDEA or SHOW IDEA
+- Slide 2 gives the setup generously
+- Slide 2 uses readable paragraphing
+- Slide 3 features two characters by default and never more than four
+- Slide 3 copy creates attachment rather than inventory
+- Slide 3 uses the editorial character-study visual language
+- Slide 4 makes the viewing experience vivid without summarizing the plot
+- Slide 5 works as a real poster payoff
+- Slide 6 prioritizes participation and brand memory
+- Slides 2, 4, and 5 share a coherent fictional world
+- all exact public copy is final and execution-ready
+- the final object matches `Schemas/ig-asset-packet.schema.json`
 
 If not, repair the packet before persistence.
