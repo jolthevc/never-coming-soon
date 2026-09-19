@@ -85,6 +85,7 @@ Slide 2 establishes the world and setup.
 
 Default treatment:
 - cinematic image plus editorial text
+- normally about 65 to 110 words total when the material supports it
 - two short paragraphs when the copy has two natural movements
 - NCS typography, spacing, and editorial framing around movie-specific imagery
 - optional small section label when it helps navigation
@@ -320,6 +321,7 @@ Keep the existing voice principle:
 
 Default:
 - two short paragraphs
+- roughly 55 to 90 words total when the material supports it
 - concrete and conversational
 - plot and tension first
 - engine or recurring pressure second
