@@ -1,13 +1,13 @@
 FINAL CANON BIBLE
 {{canon_bible_json}}
 
-FINAL ARTICLE TITLE
-{{final_title}}
+OPTIONAL HUMAN CAMPAIGN NOTES
+{{human_campaign_notes}}
 
-FINAL ARTICLE
-{{final_article_markdown}}
+Build the exact six-slide social release packet for this production.
 
-FINAL NCS SCORE
-{{overall_score}}
+The packet will be consumed verbatim by the downstream asset generator. Make every copy field final and every image prompt execution-ready.
 
-Build the exact social asset handoff for this finished production. Preserve the locked three-slide content spine. Create the campaign concept, exact Slide 2 copy, NCS close line, execution prompts, and a social-launch caption that gives the setup generously, uses concrete lived details, and opens into the production's recurring engine or central pressure rather than pasting the logline or summarizing theme. Return only valid JSON matching the IG asset packet schema.
+Do not rely on the downstream image model to make editorial decisions.
+
+Return only valid JSON matching the IG Asset Packet schema.
