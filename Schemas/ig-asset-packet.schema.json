@@ -1,1 +1,378 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"NCS IG Asset Packet","type":"object","additionalProperties":false,"required":["version","title","format","genre","campaign_brief","logo_treatment","caption","slide_1","slide_2","slide_3"],"properties":{"version":{"type":"string","enum":["ncs_ig_v1"]},"title":{"type":"string","minLength":1},"format":{"type":"string","enum":["FILM","SERIES","LIMITED_SERIES"]},"genre":{"type":"string","minLength":1},"campaign_brief":{"type":"string","minLength":1},"logo_treatment":{"type":"string","minLength":1},"caption":{"type":"string","minLength":1,"maxLength":500},"slide_1":{"type":"object","additionalProperties":false,"required":["type","never_coming_soon_presents","title","tagline","rating","billing_block","art_direction","image_prompt"],"properties":{"type":{"type":"string","enum":["cover_poster"]},"never_coming_soon_presents":{"type":"string","enum":["Never Coming Soon presents"]},"title":{"type":"string","minLength":1},"tagline":{"type":"string","minLength":1},"rating":{"type":"string","minLength":1},"billing_block":{"type":"string","minLength":1},"art_direction":{"type":"string","minLength":1},"image_prompt":{"type":"string","minLength":1}}},"slide_2":{"type":"object","additionalProperties":false,"required":["type","title","header","body_copy","design_direction","image_prompt"],"properties":{"type":{"type":"string","enum":["premise"]},"title":{"type":"string","minLength":1},"header":{"type":"string","minLength":1},"body_copy":{"type":"string","minLength":1},"design_direction":{"type":"string","minLength":1},"image_prompt":{"type":"string","minLength":1}}},"slide_3":{"type":"object","additionalProperties":false,"required":["type","logo_treatment","hollywood_line","newsletter_line","cta","design_direction","image_prompt"],"properties":{"type":{"type":"string","enum":["ncs_close"]},"logo_treatment":{"type":"string","minLength":1},"hollywood_line":{"type":"string","minLength":1},"newsletter_line":{"type":"string","enum":["THE FULL STORY IN NEVER COMING SOON"]},"cta":{"type":"string","enum":["LINK IN BIO"]},"design_direction":{"type":"string","minLength":1},"image_prompt":{"type":"string","minLength":1}}}}}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NCS IG Asset Packet v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "title",
+    "format",
+    "idea_label",
+    "genre",
+    "campaign_brief",
+    "visual_continuity",
+    "caption",
+    "slide_1",
+    "slide_2",
+    "slide_3",
+    "slide_4",
+    "slide_5",
+    "slide_6"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": ["ncs_ig_v2"]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "format": {
+      "type": "string",
+      "enum": ["FILM", "SERIES", "LIMITED_SERIES"]
+    },
+    "idea_label": {
+      "type": "string",
+      "enum": ["MOVIE IDEA", "SHOW IDEA"]
+    },
+    "genre": {
+      "type": "string",
+      "minLength": 1
+    },
+    "campaign_brief": {
+      "type": "string",
+      "minLength": 1
+    },
+    "visual_continuity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "world_style",
+        "palette",
+        "cinematography",
+        "character_style",
+        "character_continuity"
+      ],
+      "properties": {
+        "world_style": {
+          "type": "string",
+          "minLength": 1
+        },
+        "palette": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 6,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "cinematography": {
+          "type": "string",
+          "minLength": 1
+        },
+        "character_style": {
+          "type": "string",
+          "minLength": 1
+        },
+        "character_continuity": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "visual_description",
+              "wardrobe",
+              "posture_energy",
+              "identifying_details"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "visual_description": {
+                "type": "string",
+                "minLength": 1
+              },
+              "wardrobe": {
+                "type": "string",
+                "minLength": 1
+              },
+              "posture_energy": {
+                "type": "string",
+                "minLength": 1
+              },
+              "identifying_details": {
+                "type": "array",
+                "maxItems": 4,
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "caption": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 700
+    },
+    "slide_1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "label",
+        "title",
+        "hook_copy",
+        "signature",
+        "layout_direction"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["hook"]
+        },
+        "label": {
+          "type": "string",
+          "enum": ["MOVIE IDEA", "SHOW IDEA"]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hook_copy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "signature": {
+          "type": "string",
+          "enum": ["Never Coming Soon"]
+        },
+        "layout_direction": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "slide_2": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "section_label",
+        "body_copy",
+        "layout_direction",
+        "image_prompt"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["premise"]
+        },
+        "section_label": {
+          "type": ["string", "null"]
+        },
+        "body_copy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "layout_direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image_prompt": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "slide_3": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "section_label",
+        "featured_characters",
+        "layout_direction",
+        "illustration_direction",
+        "image_prompt"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["characters"]
+        },
+        "section_label": {
+          "type": ["string", "null"]
+        },
+        "featured_characters": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 4,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "copy"],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "copy": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 280
+              }
+            }
+          }
+        },
+        "layout_direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "illustration_direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image_prompt": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "slide_4": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "section_label",
+        "body_copy",
+        "layout_direction",
+        "image_prompt"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["movie_texture"]
+        },
+        "section_label": {
+          "type": ["string", "null"]
+        },
+        "body_copy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 700
+        },
+        "layout_direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image_prompt": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "slide_5": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "title",
+        "tagline",
+        "rating",
+        "format_descriptor",
+        "footer_copy",
+        "art_direction",
+        "image_prompt"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["poster"]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tagline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rating": {
+          "type": "string",
+          "minLength": 1
+        },
+        "format_descriptor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "footer_copy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "art_direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image_prompt": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "slide_6": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "participation_question",
+        "logo_treatment",
+        "slogan",
+        "secondary_action",
+        "design_direction",
+        "image_prompt"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["ncs_close"]
+        },
+        "participation_question": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "logo_treatment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "slogan": {
+          "type": "string",
+          "enum": ["the best movies and tv shows that don't exist."]
+        },
+        "secondary_action": {
+          "type": ["string", "null"]
+        },
+        "design_direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image_prompt": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
