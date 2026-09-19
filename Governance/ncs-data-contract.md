@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Ideas Data Contract v1.6
+## Ideas Data Contract v2.0
 
 ## 1. Purpose
 
@@ -26,7 +26,7 @@ Use `idea_id` as the durable row key. Never rely on visible row number after fil
 
 There is no separate Productions state table.
 
-Intermediate Generation artifacts live in n8n execution memory. Google Drive stores the finished human-readable draft.
+Intermediate Generation artifacts live in n8n execution memory. Google Drive stores the finished human-readable production treatment and any optional later public editorial artifacts.
 
 ## 3. Canonical columns
 
@@ -104,22 +104,19 @@ A new Generation run leaves the row in `DEVELOPMENT_SELECT` until the complete g
 
 ### DRAFTED
 
-A complete generated package exists and was successfully delivered.
+A complete developed-and-packaged production exists and was successfully delivered.
 
 Required:
 
-- final public article exists
-- a Forensic Editor review scored the exact delivered article
-- `ncs_score` is a valid numeric 1.0 to 10.0 value
-- deterministic article completion checks ran
+- final internal production canon was created successfully
+- a human-readable production treatment was persisted to Google Drive
 - a schema-valid final `ig_packet_json` exists
-- Google Drive persistence succeeded
 - `final_title` is populated
-- `draft_url` is valid
+- `draft_url` points to the current successful production treatment
 
 `DRAFTED` is an operational artifact state, not a quality award or automatic publication approval.
 
-It does not require a score of 8.0 or above and does not require the editor's recommended revision route to be `NONE`.
+A long-form article, Forensic review, and `ncs_score` are not required by the social-first v3 Generation path.
 
 ### PUBLISHED
 
@@ -260,7 +257,11 @@ Do not overwrite `working_title`.
 
 ### draft_url
 
-Google Docs URL for the current successfully delivered draft.
+Legacy column name retained for compatibility.
+
+In the social-first v3 Generation path, this is the Google Docs URL for the current successfully delivered production treatment.
+
+If a later workflow creates a long-form article, that artifact may be stored separately rather than changing the meaning of this field.
 
 Only update after Drive persistence succeeds.
 
@@ -268,18 +269,15 @@ During force redevelopment, preserve the previous URL until replacement succeeds
 
 ### ncs_score
 
-Holistic editorial score for the exact delivered draft.
+Legacy optional editorial score.
 
-Rules:
+The social-first v3 Generation path does not require or populate a new score.
 
-- numeric only
-- 1.0 to 10.0
-- normally one decimal place
-- sourced from the Forensic Editor review of the exact draft delivered to Drive
-- never inferred from component-score averages
-- never populated with `N/A`, placeholder text, or an Ideation score
+If a later long-form editorial workflow produces a reviewed article, it may populate a numeric 1.0 to 10.0 holistic score for that exact article.
 
-The score records editorial quality. It does not gate `DRAFTED` by threshold.
+Never populate this field with `N/A`, placeholder text, an Ideation score, or a synthetic social score.
+
+Do not erase an existing historical score merely because the current Generation path does not use scoring.
 
 ### published_url
 
@@ -301,7 +299,7 @@ Governance:
 
 `Governance/ncs-social-asset-standard.md`
 
-The packet must be built from final canon and the exact final public article, not the raw Ideation premise.
+The packet must be built from final canon and explicit human campaign direction when supplied. A public article is not required input.
 
 The exact final object persisted to the cell must pass schema validation after any normalization, repair, mapping, or transformation.
 
@@ -317,9 +315,10 @@ Durable outputs of successful Generation are:
 
 - `final_title`
 - `draft_url`
-- `ncs_score`
 - `ig_packet_json`
 - lifecycle `status`
+
+`ncs_score` remains available for optional later editorial workflows but is not a required v3 output.
 
 ## 10. Generation start and failure behavior
 
@@ -339,16 +338,14 @@ If duplicate-run protection is needed, solve it at the n8n execution/orchestrati
 
 The required success order is:
 
-1. final article exists
-2. Forensic Editor review exists for that exact article
-3. valid numeric `overall_score` exists
-4. deterministic article completion QA runs
-5. final `ig_packet_json` exists and passes exact-object Social QA
-6. Google Drive write succeeds
-7. `final_title`, `draft_url`, `ncs_score`, and `ig_packet_json` are written to the same Ideas row
-8. status becomes `DRAFTED`
+1. final Canon Bible validates
+2. deterministic production treatment is rendered
+3. final `ig_packet_json` exists and passes exact-object Social QA
+4. Google Drive treatment write succeeds
+5. `final_title`, `draft_url`, and `ig_packet_json` are written to the same Ideas row
+6. status becomes `DRAFTED`
 
-The score may be below 8.0 and the review may recommend later revision.
+Do not require a long-form article or editorial score.
 
 `DRAFTED` is the only lifecycle status written by a successful Generation run.
 
@@ -358,13 +355,13 @@ Normal Generation does not automatically execute Forensic revision routes.
 
 After human review, a later explicit action may perform:
 
-- targeted prose revision
-- explicit EDITION redevelopment
 - explicit CANON redevelopment
-- optional new Forensic review when changed prose needs a new score
-- regeneration of `ig_packet_json` when title, public text, canon, or campaign direction materially changes
+- packet-only campaign revision
+- optional long-form article generation
+- optional prose review or revision only when a long-form artifact is actually wanted
+- regeneration of `ig_packet_json` when title, canon, or campaign direction materially changes
 
-Do not pay for automatic revision loops on every generated idea.
+Do not pay for unused editorial layers on every generated idea.
 
 ## 13. Force redevelopment
 
@@ -374,7 +371,7 @@ It may regenerate an eligible `DRAFTED` production.
 
 Preserve source Ideation fields, `human_notes`, `published_url`, previous successful final fields, and previous Drive artifact until the replacement package fully succeeds.
 
-Only then replace `final_title`, `draft_url`, `ncs_score`, and `ig_packet_json`.
+Only then replace `final_title`, `draft_url`, and `ig_packet_json`. Preserve any historical `ncs_score` unless a later editorial workflow explicitly updates it.
 
 ## 14. JSON storage rules
 
@@ -405,4 +402,4 @@ Ideas is the catalog and lifecycle table.
 
 n8n execution memory is the temporary production workspace.
 
-Google Drive is the final human-readable content store.
+Google Drive is the durable human-readable production-treatment store and may also hold optional later editorial artifacts.
