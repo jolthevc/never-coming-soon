@@ -1,13 +1,15 @@
 # Never Coming Soon
-## Visual Constitution v1.2
+## Visual Constitution v2.0
 
 ## 1. Visual north star
 
-Never Coming Soon should evoke **anticipation**.
+Never Coming Soon should create anticipation and instant comprehension.
 
-The feeling of seeing a poster for something you have never heard of and immediately wondering when it comes out.
+The audience should quickly understand:
 
-Then you realize it never will.
+**This is a movie or show idea I might want to watch.**
+
+Then the carousel should progressively make that fictional production feel real.
 
 The brand should feel cinematic, cool, accessible, premium, fun, confident, and human.
 
@@ -15,249 +17,275 @@ It should not feel film-snobby, tech-forward, meme-like, artificially nostalgic,
 
 ## 2. Governing visual idea
 
-**NCS owns the architecture. The production owns the art direction.**
+**NCS owns the editorial frame. The production owns the cinematic world.**
 
-Every movie or show can have its own visual universe.
+Never Coming Soon provides:
+- recurring carousel architecture
+- house editorial surfaces
+- typography discipline
+- spacing and hierarchy
+- character-study language
+- logo geometry
+- final brand sign-off
 
-Never Coming Soon provides the recognizable structure around it.
-
-The production owns palette, title treatment, image language, mood, texture, and campaign concept.
-
-NCS owns the recurring content spine, logo geometry, hierarchy discipline, and final sign-off.
+Each production provides:
+- cinematic imagery
+- title treatment
+- accent color
+- wardrobe and production design
+- image grading
+- motifs
+- poster concept
+- closing-card flavor
 
 ## 3. Core brand palette
 
 ### Midnight Navy
-
 `#08192F`
 
-Primary dark brand surface.
-
 ### Warm Ivory
-
 `#F5EEDF`
 
-Primary light surface.
-
 ### Reel Orange
-
 `#F24B2C`
 
-Primary signal color.
-
-Use as punctuation, not saturation.
-
 ### Electric Cobalt
-
 `#315CFF`
 
-Secondary accent used sparingly.
-
 ### Slate
-
 `#202632`
 
-Secondary dark neutral.
+Warm Ivory and Midnight Navy are the default editorial surfaces.
 
-## 4. Palette hierarchy
+Reel Orange is punctuation, not saturation.
 
-Directional usage across house-branded surfaces:
+A production-specific accent may replace Reel Orange when that produces a stronger campaign.
 
-- Midnight Navy: roughly 50 percent
-- Warm Ivory: roughly 35 percent
-- Reel Orange: roughly 10 percent
-- Electric Cobalt: roughly 5 percent
+## 4. Typography
 
-These percentages are directional, not layout rules.
+The approved logo retains its fixed geometry.
 
-The fictional productions themselves may use any colors appropriate to their campaigns.
+The broader editorial type system should be consistent enough that Slide 1 is recognizable across releases.
 
-Never force the house palette onto a production-specific carousel when it weakens the work.
+Production title typography may vary on Slide 5 posters and other production-owned surfaces.
 
-## 5. Typography status
+Do not let one movie's display typeface become the house font by accident.
 
-Do not treat a standard font family as locked brand governance yet.
+## 5. Logo
 
-The approved logo establishes an elegant, high-contrast serif personality for the master studio identity, but the broader house typography system remains open until it is intentionally finalized.
+Use the approved NCS logo asset.
 
-Until then, typography should follow these behaviors:
+Do not recreate the logo with an image model.
 
-- strong editorial hierarchy
-- high legibility
-- premium but accessible character
-- clean functional sans-serif treatment for metadata when useful
-- expressive serif treatment for editorial prose when useful
-- production-specific title typography whenever the fictional production benefits from it
+Logo geometry is fixed.
 
-Do not let temporary implementation fonts become permanent brand law by accident.
+Logo color may adapt to the production when used on Slide 6 or another explicitly branded surface.
 
-## 6. Logo
+## 6. Canonical carousel rhythm
 
-The approved master direction is the custom Never Coming Soon lockup with elegant serif lettering, line-frame geometry, star, reel detail, and slogan treatment.
+The canonical six-slide rhythm is:
 
-The logo artwork is a fixed brand asset. Do not attempt to recreate it from a standard typeface or approximate it with image generation when the approved asset can be composited directly.
+1. Hook
+2. Premise
+3. Characters
+4. The Movie
+5. Poster
+6. NCS Close
 
-Current priority lockups are:
+The visual progression should feel like:
 
-- horizontal master logo
-- square / stacked master logo
+**NCS tells me the idea -> NCS opens the world -> I meet the people -> I enter the movie -> I see the artifact -> NCS signs it**
 
-Useful approved variants may include:
+## 7. Slide 1 visual rule
 
-- tagline-free horizontal
-- tagline-free square
-- dark-background treatment
-- transparent treatment
-- one-color treatment
-- a compact mark if and when one is explicitly approved
+Slide 1 is the most standardized slide.
 
-Only approved exported assets should be treated as canonical.
+It should be:
+- text-first
+- brutally clear
+- minimally branded
+- easy to understand while scrolling
+- closer to a clean social text card than a movie poster
 
-Logo geometry remains fixed. Logo color may adapt to the fictional production when used on production-specific campaign surfaces.
+Default:
+- Warm Ivory background
+- Midnight Navy typography
+- one restrained accent
+- large MOVIE IDEA or SHOW IDEA label
+- final title
+- one-sentence hook
+- small Never Coming Soon signature
 
-## 7. Production title treatment
+No cinematic image is required.
 
-The production's title is allowed to have its own typography and visual identity.
+No poster furniture.
 
-Never Coming Soon should not force house typography onto every fictional production.
+No visual mystery.
 
-The production owns its title treatment. NCS signs the work.
+## 8. Slides 2 to 4
 
-## 8. Image philosophy
+Slides 2 to 4 retain the NCS editorial frame while progressively giving more space to the fictional production.
 
-The standard is:
+A useful default progression is:
 
-**Real advertising art for an unreal production.**
+- Slide 2: approximately 60 percent NCS editorial language, 40 percent production world
+- Slide 3: approximately 40 percent NCS editorial language, 60 percent production world
+- Slide 4: approximately 20 percent NCS editorial language, 80 percent production world
 
-Not generic concept art.
+These percentages are conceptual, not layout math.
 
-Not an accurate but forgettable literal scene when a stronger campaign idea is available.
+Do not force identical panel heights or image ratios across every production.
 
-Not imagery whose primary novelty is how it was made.
+## 9. Slide 2 imagery
 
-The medium can be photographic, typographic, illustrated, painted, graphic, minimal, collage, surreal, documentary-style, or animated.
+Slide 2 should usually contain the first cinematic glimpse of the production.
+
+Use an establishing or relational moment that helps explain the setup.
+
+It should look like a frame from the movie or show rather than promotional key art.
+
+The NCS text panel may use Warm Ivory, Midnight Navy, and a restrained accent derived from the production.
+
+## 10. Slide 3 character imagery
+
+The default character visual language is the NCS editorial character study.
+
+Preferred language:
+- graphite
+- ink
+- loose watercolor
+- selective flat color
+- visible paper texture
+- authored imperfections
+- specific wardrobe
+- posture
+- props
+- relational composition
+
+Avoid:
+- police-composite aesthetics
+- mugshot framing
+- glossy faux-realism
+- real actor likenesses
+- generic headshot grids
+
+Words define the person.
+
+The illustration lets the audience meet them.
+
+The audience should still have room to imagine casting.
+
+## 11. Slide 4 imagery
+
+Slide 4 should usually be the most immersive cinematic frame.
+
+It may use the fullest production-specific palette, lighting, camera language, environment, and staging.
+
+The image should make the audience feel as though they have already seen a scene from the production.
+
+## 12. Slide 5 poster
+
+Slide 5 belongs almost entirely to the fictional production.
+
+The poster should feel like real advertising art for an unreal production.
+
+A memorable poster may be:
+- photographic
+- graphic
+- illustrated
+- painted
+- typographic
+- minimal
+- surreal
+- object-led
+- character-led
 
 The production chooses.
 
-A strong poster has one image, object, composition, or graphic construction that remains memorable after the premise is forgotten.
+The poster does not need to resemble Slides 1 to 4 structurally.
 
-## 9. Canonical social carousel
+It should still feel compatible with the same movie.
 
-The default NCS social carousel contains exactly three slides:
+## 13. Slide 6 close
 
-1. Cover / Poster
-2. Premise
-3. NCS Close
+Slide 6 returns to NCS.
 
-The content architecture is fixed. The aesthetics are not.
+It should combine:
+- one production-specific visual echo
+- a strong participation question
+- the approved NCS identity
+- the locked slogan
+- optional secondary action
 
-Detailed requirements live in `Governance/ncs-social-asset-standard.md`.
+The slide should feel like the production's campaign being signed by NCS, not a generic corporate outro.
 
-### Slide 1: Cover / Poster
+## 14. Image philosophy
 
-Required content:
+For Slides 2 and 4:
 
-- `Never Coming Soon presents`
-- final title
-- hero key art
-- tagline
-- rating
-- billing block
+**Create believable cinematic frames from the fictional production.**
 
-This is the loudest and most campaign-like slide.
+For Slide 3:
 
-### Slide 2: Premise
+**Create authored editorial character studies.**
 
-Required content:
+For Slide 5:
 
-- final title
-- premise header
-- premise body copy
-- one restrained visual motif
+**Create a genuine poster artifact.**
 
-This is the clarity slide and should usually be cleaner than the cover.
+Do not make every slide look like key art.
 
-### Slide 3: NCS Close
+Do not make every slide use the same visual motif.
 
-Required content:
+Do not use imagery whose primary novelty is how it was generated.
 
-- approved NCS logo asset
-- one Hollywood/personality line
-- `THE FULL STORY IN NEVER COMING SOON`
-- `LINK IN BIO`
+## 15. Character continuity
 
-This is the most minimal slide.
+When the same character appears across assets, preserve:
+- face identity
+- apparent age
+- hair
+- wardrobe logic
+- posture and physical energy
+- recurring props or identifying details
 
-## 10. Visual rhythm
+The packet must provide enough visual continuity information for the image workflow to execute this reliably.
 
-Do not make every slide equally loud.
+The image model should not invent a new character design on each slide.
 
-The intended rhythm is:
+## 16. NCS character-count rule
 
-**stop me -> explain it -> sign it**
+Slide 3 features:
+- two characters by default
+- three for a genuinely ensemble-driven concept
+- four only when necessary
 
-The cover creates anticipation.
+This is a curation rule, not a census of the cast.
 
-The premise creates understanding.
+## 17. Deterministic finishing
 
-The close creates brand memory and continuation.
+Exact copy belongs outside the image model whenever practical.
 
-The three slides should feel like one campaign without repeating the same object, color block, or composition three times.
+Preferred order:
+1. generate cinematic or illustrated visual material
+2. crop and position on the canonical canvas
+3. place exact copy deterministically
+4. place approved logo deterministically
+5. verify hierarchy and safe margins
+6. export
 
-## 11. Character imagery
+The image model should not be trusted to render long copy, exact logos, or structured poster furniture when deterministic compositing is available.
 
-Default rule:
-
-**Words create the person. Casting supplies the face. Imagery creates the world.**
-
-Do not create mandatory character portraits.
-
-Use explicit character imagery only when costume, creature design, transformation, animation, chemistry, or another visual fact materially benefits from it.
-
-The poster does not need recognizable real-actor likeness to communicate the casting or the production.
-
-## 12. Campaign-specific NCS close
-
-The closing slide should feel like the fictional production's campaign, signed by Never Coming Soon.
-
-It should not feel like a generic corporate card inserted after the campaign.
-
-Use the approved logo shape and adapt its color to the production when useful.
-
-Do not default to orange merely because orange exists in the house palette.
-
-The Hollywood/personality line should express the NCS conceit rather than act as a second movie tagline.
-
-## 13. Avoid cinema cliches
-
-Do not rely on constant film reels, sprocket holes, clapperboards, projector icons, popcorn, red curtains, gold-award aesthetics, scratches, fake vintage film textures, or generic grain.
-
-The fact that the brand is about movies should come from the movies.
-
-The approved reel detail inside the logo is an intentional brand asset, not permission to repeat reel imagery everywhere else.
-
-A production-specific artifact is welcome when it belongs to that production.
-
-## 14. Deterministic finishing
-
-When exact typography, logo fidelity, rating marks, billing blocks, or premise copy matter, prefer deterministic layout and compositing after image generation.
-
-Image generation should create campaign imagery and visual atmosphere, not be trusted to recreate the master logo or long exact text reliably.
-
-## 15. Final visual test
+## 18. Final visual test
 
 Ask:
-
-- Does this create anticipation?
-- Does Slide 1 contain a real campaign idea?
-- Does this feel like real promotional art rather than generic concept art?
-- Does the production still have its own personality?
-- Is NCS recognizable without dominating?
-- Is Slide 2 fast and easy to understand?
-- Is Slide 3 minimal and unmistakably NCS?
-- Is the approved logo geometry preserved?
-- Do the three slides feel like one campaign?
-- Is there enough breathing room?
-- Does this make the imaginary production feel more real?
+- Does Slide 1 explain the format immediately?
+- Do Slides 2 to 4 feel like one fictional production?
+- Do the featured characters feel specific without looking cast?
+- Does Slide 4 make me feel like I have seen part of the movie?
+- Does Slide 5 feel like a satisfying poster reveal?
+- Does Slide 6 feel story-aware and unmistakably NCS?
+- Is the system recognizable without overpowering the production?
+- Does the image workflow have enough continuity direction to execute without editorial judgment?
 
 If not, simplify or rethink the visual choice.
