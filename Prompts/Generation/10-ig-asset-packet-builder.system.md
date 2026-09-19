@@ -90,7 +90,7 @@ Core principle:
 
 **Give away the setup generously. Withhold the experience, not the premise.**
 
-Write clear social copy, normally in two short paragraphs.
+Write clear social copy, normally about 65 to 110 words total and in two short paragraphs when the material supports it.
 
 The first movement should establish the people and situation.
 
@@ -245,6 +245,7 @@ Return one exact caption usable for the launch.
 
 Keep the established NCS caption calibration:
 - normally two short paragraphs
+- roughly 55 to 90 words total when the material supports it
 - concrete and conversational
 - setup and tension first
 - engine or recurring pressure second
