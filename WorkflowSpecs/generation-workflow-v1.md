@@ -41,7 +41,7 @@ The unified n8n workflow ends after:
 
 - final Canon Bible validation
 - deterministic Production Treatment persistence
-- schema-valid `ncs_ig_v2` persistence
+- schema-valid `ncs_ig_v3` persistence
 - Ideas row update to `DRAFTED`
 
 Visual asset generation is manual and intentionally outside n8n.
