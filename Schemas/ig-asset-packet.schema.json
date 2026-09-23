@@ -10,7 +10,7 @@
     "idea_label",
     "genre",
     "campaign_brief",
-    "visual_continuity",
+    "visual_direction",
     "caption",
     "slide_1",
     "slide_2",
@@ -44,16 +44,10 @@
       "type": "string",
       "minLength": 1
     },
-    "visual_continuity": {
+    "visual_direction": {
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "world_style",
-        "palette",
-        "cinematography",
-        "character_style",
-        "character_continuity"
-      ],
+      "required": ["world_style", "palette", "cinematography", "continuity_note"],
       "properties": {
         "world_style": {
           "type": "string",
@@ -72,50 +66,8 @@
           "type": "string",
           "minLength": 1
         },
-        "character_style": {
-          "type": "string",
-          "minLength": 1
-        },
-        "character_continuity": {
-          "type": "array",
-          "minItems": 2,
-          "maxItems": 4,
-          "items": {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "name",
-              "visual_description",
-              "wardrobe",
-              "posture_energy",
-              "identifying_details"
-            ],
-            "properties": {
-              "name": {
-                "type": "string",
-                "minLength": 1
-              },
-              "visual_description": {
-                "type": "string",
-                "minLength": 1
-              },
-              "wardrobe": {
-                "type": "string",
-                "minLength": 1
-              },
-              "posture_energy": {
-                "type": "string",
-                "minLength": 1
-              },
-              "identifying_details": {
-                "type": "array",
-                "maxItems": 4,
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
+        "continuity_note": {
+          "type": ["string", "null"]
         }
       }
     },
@@ -132,8 +84,9 @@
         "label",
         "title",
         "hook_copy",
-        "signature",
-        "layout_direction"
+        "layout_direction",
+        "footer_brand",
+        "page_number"
       ],
       "properties": {
         "type": {
@@ -153,13 +106,17 @@
           "minLength": 1,
           "maxLength": 240
         },
-        "signature": {
-          "type": "string",
-          "enum": ["Never Coming Soon"]
-        },
         "layout_direction": {
           "type": "string",
           "minLength": 1
+        },
+        "footer_brand": {
+          "type": "string",
+          "enum": ["Never Coming Soon"]
+        },
+        "page_number": {
+          "type": "string",
+          "enum": ["01 / 06"]
         }
       }
     },
@@ -171,7 +128,9 @@
         "section_label",
         "body_copy",
         "layout_direction",
-        "image_prompt"
+        "image_prompt",
+        "footer_brand",
+        "page_number"
       ],
       "properties": {
         "type": {
@@ -179,7 +138,8 @@
           "enum": ["premise"]
         },
         "section_label": {
-          "type": ["string", "null"]
+          "type": "string",
+          "minLength": 1
         },
         "body_copy": {
           "type": "string",
@@ -193,6 +153,14 @@
         "image_prompt": {
           "type": "string",
           "minLength": 1
+        },
+        "footer_brand": {
+          "type": "string",
+          "enum": ["Never Coming Soon"]
+        },
+        "page_number": {
+          "type": "string",
+          "enum": ["02 / 06"]
         }
       }
     },
@@ -205,7 +173,8 @@
         "featured_characters",
         "layout_direction",
         "illustration_direction",
-        "image_prompt"
+        "footer_brand",
+        "page_number"
       ],
       "properties": {
         "type": {
@@ -213,7 +182,8 @@
           "enum": ["characters"]
         },
         "section_label": {
-          "type": ["string", "null"]
+          "type": "string",
+          "minLength": 1
         },
         "featured_characters": {
           "type": "array",
@@ -222,7 +192,7 @@
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["name", "copy"],
+            "required": ["name", "copy", "portrait_prompt"],
             "properties": {
               "name": {
                 "type": "string",
@@ -231,7 +201,11 @@
               "copy": {
                 "type": "string",
                 "minLength": 1,
-                "maxLength": 280
+                "maxLength": 420
+              },
+              "portrait_prompt": {
+                "type": "string",
+                "minLength": 1
               }
             }
           }
@@ -244,9 +218,13 @@
           "type": "string",
           "minLength": 1
         },
-        "image_prompt": {
+        "footer_brand": {
           "type": "string",
-          "minLength": 1
+          "enum": ["Never Coming Soon"]
+        },
+        "page_number": {
+          "type": "string",
+          "enum": ["03 / 06"]
         }
       }
     },
@@ -258,7 +236,9 @@
         "section_label",
         "body_copy",
         "layout_direction",
-        "image_prompt"
+        "image_prompt",
+        "footer_brand",
+        "page_number"
       ],
       "properties": {
         "type": {
@@ -266,7 +246,8 @@
           "enum": ["movie_texture"]
         },
         "section_label": {
-          "type": ["string", "null"]
+          "type": "string",
+          "minLength": 1
         },
         "body_copy": {
           "type": "string",
@@ -280,6 +261,14 @@
         "image_prompt": {
           "type": "string",
           "minLength": 1
+        },
+        "footer_brand": {
+          "type": "string",
+          "enum": ["Never Coming Soon"]
+        },
+        "page_number": {
+          "type": "string",
+          "enum": ["04 / 06"]
         }
       }
     },
@@ -294,7 +283,9 @@
         "format_descriptor",
         "footer_copy",
         "art_direction",
-        "image_prompt"
+        "image_prompt",
+        "footer_brand",
+        "page_number"
       ],
       "properties": {
         "type": {
@@ -328,6 +319,14 @@
         "image_prompt": {
           "type": "string",
           "minLength": 1
+        },
+        "footer_brand": {
+          "type": "string",
+          "enum": ["Never Coming Soon"]
+        },
+        "page_number": {
+          "type": "string",
+          "enum": ["05 / 06"]
         }
       }
     },
@@ -341,7 +340,9 @@
         "slogan",
         "secondary_action",
         "design_direction",
-        "image_prompt"
+        "image_prompt",
+        "footer_brand",
+        "page_number"
       ],
       "properties": {
         "type": {
@@ -371,6 +372,14 @@
         "image_prompt": {
           "type": "string",
           "minLength": 1
+        },
+        "footer_brand": {
+          "type": "string",
+          "enum": ["Never Coming Soon"]
+        },
+        "page_number": {
+          "type": "string",
+          "enum": ["06 / 06"]
         }
       }
     }
