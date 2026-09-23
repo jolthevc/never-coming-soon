@@ -15,7 +15,7 @@ The production-packaging phase:
 
 1. builds complete internal canon
 2. renders a readable Production Treatment
-3. creates the canonical six-slide social release packet
+3. creates the canonical three-slide social release packet
 4. advances the same Ideas row to `DRAFTED`
 
 A long-form article and editorial score are optional later artifacts.
@@ -159,28 +159,23 @@ Output:
 
 Version:
 
-`ncs_ig_v2`
+`ncs_ig_v3`
 
 ## 8. Social packet contract
 
-Required six-slide architecture:
+Required three-slide architecture:
 
 1. Hook
-2. Premise
-3. Characters
-4. The Movie
-5. Poster
-6. NCS Close
+2. Plot
+3. Poster
 
 The packet contains:
 
-- campaign brief
-- compact visual direction
 - exact launch caption
-- exact public copy
-- exact featured-character selection
-- one portrait prompt per featured character
-- execution-ready image prompts where imagery is required
+- exact Slide 1 hook copy
+- exact Slide 2 plot copy with paragraph-ready spacing
+- exact Slide 3 poster copy
+- execution-ready poster art direction and image prompt
 - fixed `Never Coming Soon` footer on every slide
 - exact page number on every slide
 
@@ -195,22 +190,21 @@ Validate the exact final object that will be stringified into the Ideas cell.
 Hard requirements include:
 
 - valid schema
-- `version = ncs_ig_v2`
+- `version = ncs_ig_v3`
 - final title and format match Canon Bible
-- six slides exactly
-- correct slide types
+- three slides exactly
+- Slide 1 type = `hook`
+- Slide 2 type = `plot`
+- Slide 3 type = `poster`
 - FILM -> MOVIE IDEA
 - SERIES / LIMITED_SERIES -> SHOW IDEA
 - every slide footer = `Never Coming Soon`
-- page numbers exactly `01 / 06` through `06 / 06`
-- Slide 2 body copy nonblank
-- Slide 3 has 2 to 4 featured characters
-- every featured character has nonblank copy and `portrait_prompt`
-- Slide 4 body copy nonblank
-- Slide 5 poster fields and image prompt nonblank
-- Slide 6 slogan matches schema
+- page numbers exactly `01 / 03`, `02 / 03`, and `03 / 03`
+- Slide 1 hook copy nonblank
+- Slide 2 label = `THE PLOT`
+- Slide 2 body copy nonblank and paragraph-ready
+- Slide 3 poster fields and image prompt nonblank
 - nonblank caption
-- nonblank visual direction
 - no em dash character in public copy
 - no backstage technology language
 - no false participation claims
