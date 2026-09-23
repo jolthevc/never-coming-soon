@@ -6,8 +6,8 @@ OPTIONAL HUMAN CAMPAIGN NOTES
 
 Build the exact six-slide social release packet for this production.
 
-The packet will be consumed verbatim by the downstream asset generator. Make every copy field final and every image prompt execution-ready.
+The packet will be used verbatim in a separate manual asset-generation chat. Make every public-copy field final, every page number exact, every featured-character selection intentional, and every visual prompt execution-ready.
 
-Do not rely on the downstream image model to make editorial decisions.
+Do not rely on the later image model to make editorial decisions.
 
 Return only valid JSON matching the IG Asset Packet schema.
