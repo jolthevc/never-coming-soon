@@ -19,7 +19,7 @@ The workflow ends with selected productions in `DRAFTED` state, each with:
 
 - a complete internal Canon Bible
 - a durable human-readable production treatment in Google Drive
-- a schema-valid `ncs_ig_v2` packet in `ig_packet_json`
+- a schema-valid `ncs_ig_v3` packet in `ig_packet_json`
 
 There is no separate required Generation workflow.
 
@@ -581,23 +581,22 @@ Validate the exact object that will be persisted.
 
 Require:
 
-- `version = ncs_ig_v2`
+- `version = ncs_ig_v3`
 - final title matches Canon Bible
 - format matches Canon Bible
 - FILM -> MOVIE IDEA
 - SERIES / LIMITED_SERIES -> SHOW IDEA
-- exactly six slides
-- correct slide types
+- exactly three slides
+- Slide 1 type = `hook`
+- Slide 2 type = `plot`
+- Slide 3 type = `poster`
 - every slide has `footer_brand = Never Coming Soon`
-- page numbers exactly `01 / 06` through `06 / 06`
-- Slide 2 body copy nonblank
-- Slide 3 has 2 to 4 featured characters
-- each Slide 3 character has nonblank final copy and `portrait_prompt`
-- Slide 4 body copy nonblank
-- poster fields and image prompt nonblank
-- Slide 6 slogan matches schema
+- page numbers exactly `01 / 03`, `02 / 03`, and `03 / 03`
+- Slide 1 hook copy nonblank
+- Slide 2 section label = `THE PLOT`
+- Slide 2 body copy nonblank and paragraph-ready
+- Slide 3 poster fields and image prompt nonblank
 - caption nonblank
-- visual direction nonblank
 - no em dash character in public copy
 - no backstage technology language
 - no false real-world participation claims
@@ -644,7 +643,7 @@ Do not overwrite source Ideation fields with final-production choices.
 - the concept survived Ideation and Development Selection
 - complete internal production canon was built successfully
 - a durable human-readable production treatment exists
-- a schema-valid six-slide social release packet exists
+- a schema-valid three-slide social release packet exists
 - the production is ready for manual asset generation and human judgment
 
 It does not mean:
