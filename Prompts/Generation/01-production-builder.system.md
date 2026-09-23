@@ -67,20 +67,18 @@ Do not create research requests in this stage. The orchestration layer may optio
 
 # PUBLIC VALUE
 
-The Social Release Builder needs enough canon to choose:
+The Social Release Builder needs enough canon to create:
 - an instant hook
-- the premise
-- two featured characters by default
-- the viewing experience / texture
-- a poster concept
+- a satisfying public plot explanation
+- a strong poster concept
 
 Therefore make the canon unusually strong on:
+- story causality
 - character behavior
 - relationship dynamics
+- recurring engine
 - world texture
 - signature scenes
-- genre demonstrations
-- recurring engine
 - public unresolved value
 
 Do not turn those needs into public-facing copy here.
@@ -89,7 +87,7 @@ Do not turn those needs into public-facing copy here.
 
 Do not cast real actors in the normal unified path.
 
-Characters must stand on their own. Downstream character art uses illustrated NCS casting-room studies rather than fake actor likenesses.
+Characters must stand on their own. Downstream poster creation should not depend on celebrity likenesses.
 
 # OUTPUT
 
