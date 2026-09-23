@@ -1,46 +1,61 @@
 # Never Coming Soon
-## Generation Data Contract v3.0
+## Production Packaging Data Contract v4.0
+
+> Filename retained for loader compatibility.
 
 ## 1. Purpose
 
-This document defines the durable data contract for the streamlined social-first Generation workflow.
+This document defines the production-development and social-packaging contract used inside the single unified Never Coming Soon n8n workflow.
 
-The normal workflow develops one complete internal production, persists a readable treatment, creates the canonical social release packet, and stops.
+There is no separate required Generation workflow.
 
-A long-form article and editorial score are optional later artifacts, not required Generation outputs.
+The unified workflow reaches this contract after a concept becomes `DEVELOPMENT_SELECT`.
+
+The production-packaging phase:
+
+1. builds complete internal canon
+2. renders a readable Production Treatment
+3. creates the canonical six-slide social release packet
+4. advances the same Ideas row to `DRAFTED`
+
+A long-form article and editorial score are optional later artifacts.
 
 ## 2. Required source
 
-Generation begins from one Ideas row with:
+The production-packaging phase begins with one selected Ideas row containing:
 
 - `idea_id`
 - `status = DEVELOPMENT_SELECT`
 - nonblank `development_packet_json`
 
 Optional:
+
 - `human_notes`
 - explicit research questions
-- explicit human campaign notes
+- `human_campaign_notes`
 
 ## 3. Required generated objects
 
-Normal Generation produces:
+The normal phase produces:
 
-1. `canon_bible`
-2. deterministic production treatment in Google Drive
+1. `canon_bible_json`
+2. deterministic Production Treatment
 3. `ig_packet_json`
 
-Only `ig_packet_json` is persisted directly in the Sheet as structured JSON.
+Only `ig_packet_json` is persisted directly to the Sheet as structured JSON.
 
-The Canon Bible may remain in execution memory because the durable treatment preserves its content for human use. If orchestration later adds a canonical production-store layer, the canon may also be persisted there without changing the Ideas row.
+The Canon Bible remains in execution memory for the successful pass. Its substantive content is preserved in the durable Production Treatment.
 
-## 4. Canon contract
+## 4. Production Builder contract
 
-The Production Builder returns:
+Use:
 
-`Schemas/canon-bible.schema.json`
+- `Prompts/Generation/01-production-builder.system.md`
+- `Prompts/Generation/01-production-builder.user.md`
+- `Schemas/canon-bible.schema.json`
 
-The canon owns:
+The Canon Bible owns:
+
 - final title
 - final format
 - genre
@@ -56,8 +71,7 @@ The canon owns:
 - genre delivery
 - public unresolved value
 - public genre demonstrations
-- series engine
-- season-one material
+- series engine and season material when relevant
 - continuity facts
 
 The canon is internal and complete.
@@ -68,40 +82,88 @@ The social release packet is selective and public-facing.
 
 Research is optional.
 
-If explicit research is run, its output must be factual support rather than prose.
+Run it only when:
 
-If research materially changes canon, rerun Production Builder once with the research packet.
+- explicitly requested, or
+- a configured high-confidence rule identifies factual uncertainty that materially affects canon
+
+If research materially changes the production:
+
+1. produce the research packet
+2. rerun Production Builder once with that packet
+3. freeze the second canon
 
 Do not create recursive research loops.
 
-## 6. Production treatment
+## 6. Production Treatment
 
-The production treatment is rendered deterministically from the final Canon Bible.
+Render the Production Treatment deterministically from final Canon Bible.
 
-It is not a generated article and should not require a model call.
+Do not spend another creative model call.
 
-The legacy Sheet column `draft_url` remains in use for compatibility and points to this treatment.
+The treatment should include:
 
-The treatment should be readable enough for human review and future optional long-form writing.
+- final title
+- format and genre
+- logline
+- core promise
+- creative kernel
+- world
+- characters
+- central relationships
+- complete internal story
+- signature scenes
+- genre delivery
+- series engine / season material when relevant
+- continuity facts
 
-## 7. Social handoff contract
+Keep the rendered treatment in execution memory until `ig_packet_json` also validates.
 
-A successful Generation run produces `ig_packet_json` matching:
+Then persist to:
 
-`Schemas/ig-asset-packet.schema.json`
+`Never Coming Soon / Drafts / [FINAL TITLE] / [FINAL TITLE] - Production Treatment`
 
-and governed by:
+The legacy Sheet field `draft_url` points to this document.
 
+## 7. Social Release Builder contract
+
+Use:
+
+- `Prompts/Generation/10-ig-asset-packet-builder.system.md`
+- `Prompts/Generation/10-ig-asset-packet-builder.user.md`
+- `Schemas/ig-asset-packet.schema.json`
+
+Governance:
+
+- `Governance/ncs-brand-constitution.md`
 - `Governance/ncs-visual-constitution.md`
 - `Governance/ncs-social-asset-standard.md`
+- `Governance/ncs-publication-integrity-standard.md`
+- `Governance/ncs-voice-constitution.md`
 
-The packet is required for downstream asset generation.
+Input:
+
+- final Canon Bible
+- optional human campaign notes
+
+Do not require:
+
+- article prose
+- casting plan
+- editorial review
+- `ncs_score`
+
+Output:
+
+`ig_packet_json`
 
 Version:
 
 `ncs_ig_v2`
 
-Required architecture:
+## 8. Social packet contract
+
+Required six-slide architecture:
 
 1. Hook
 2. Premise
@@ -110,31 +172,45 @@ Required architecture:
 5. Poster
 6. NCS Close
 
-The packet also contains:
+The packet contains:
+
 - campaign brief
-- visual continuity
+- compact visual direction
 - exact launch caption
 - exact public copy
 - exact featured-character selection
-- execution-ready visual prompts
+- one portrait prompt per featured character
+- execution-ready image prompts where imagery is required
+- fixed `Never Coming Soon` footer on every slide
+- exact page number on every slide
 
-The image workflow must treat this packet as the editorial source of truth.
+The packet is intended to be copied verbatim into a separate manual asset-generation chat.
 
-## 8. Packet validation
+There is no n8n image-generation stage.
+
+## 9. Packet validation
 
 Validate the exact final object that will be stringified into the Ideas cell.
 
 Hard requirements include:
+
 - valid schema
-- exact v2 version
-- final title and format match canon
+- `version = ncs_ig_v2`
+- final title and format match Canon Bible
 - six slides exactly
 - correct slide types
-- correct MOVIE IDEA / SHOW IDEA mapping
-- 2 to 4 featured characters
-- nonblank visual continuity
-- nonblank required image prompts
+- FILM -> MOVIE IDEA
+- SERIES / LIMITED_SERIES -> SHOW IDEA
+- every slide footer = `Never Coming Soon`
+- page numbers exactly `01 / 06` through `06 / 06`
+- Slide 2 body copy nonblank
+- Slide 3 has 2 to 4 featured characters
+- every featured character has nonblank copy and `portrait_prompt`
+- Slide 4 body copy nonblank
+- Slide 5 poster fields and image prompt nonblank
+- Slide 6 slogan matches schema
 - nonblank caption
+- nonblank visual direction
 - no em dash character in public copy
 - no backstage technology language
 - no false participation claims
@@ -143,66 +219,87 @@ Allow one packet-only repair.
 
 If the final packet remains invalid, do not set `DRAFTED`.
 
-## 9. Final Ideas update
+Do not rerun Production Builder merely because packet formatting failed.
 
-After successful treatment persistence and packet validation, update:
+## 10. Final Ideas update
+
+After:
+
+- Canon Bible validates
+- IG Packet validates
+- Production Treatment persists successfully
+
+update:
 
 - `final_title`
 - `draft_url`
 - `ig_packet_json`
 - `status = DRAFTED`
 
-`ncs_score` is not required by the v3 normal path.
+`ncs_score` is not required.
 
-Do not overwrite a historical score with a blank or synthetic value.
+Do not overwrite a historical score with blank or synthetic data.
 
-Generation does not write `published_url`.
+Do not write `published_url`.
 
-Generation does not set `PUBLISHED`.
+Do not set `PUBLISHED`.
 
-## 10. DRAFTED meaning
+## 11. DRAFTED meaning
 
 `DRAFTED` means:
 
-- complete internal production canon was successfully created
-- a durable human-readable treatment exists
-- a schema-valid social release packet exists
-- the package is ready for asset generation and human judgment
+- complete internal production canon was built
+- durable Production Treatment exists
+- schema-valid social release packet exists
+- package is ready for manual asset generation and human judgment
 
 It does not require:
-- a public article
-- a holistic editorial score
+
+- public article
+- editorial score
 - real actor casting
 - automated review
+- rendered carousel assets
 - publication approval
 
-## 11. Optional later article
+## 12. Failure behavior
 
-A long-form article, website feature, or email edition is generated only through explicit later human action.
+If any hard production-package stage fails:
 
-That optional path may use the frozen production treatment or Canon Bible as source.
+- keep the row in `DEVELOPMENT_SELECT`
+- preserve `development_packet_json`
+- do not write partial final fields
+- allow sibling selected concepts in the same unified workflow execution to continue when safe
 
-Do not require the old Architect -> Writer -> Forensic chain merely to create a social release.
+## 13. Optional redevelopment
 
-## 12. Force redevelopment
+For explicit redevelopment of a DRAFTED concept:
 
-For `force_redevelopment = true`:
-
-- keep the prior successful final fields intact during the run
+- preserve the prior successful final fields and Drive artifact during the run
 - create replacement canon, treatment, and packet
-- replace final fields only after the entire replacement package succeeds
+- replace final fields only after the replacement package fully succeeds
 
-Do not destroy the last good package before the new one is valid.
+Do not destroy the last good package first.
 
-## 13. Human authority
+## 14. Optional later long-form editorial
 
-The automated system develops and packages the fictional production.
+A long-form article, website feature, or email edition is created only through explicit later human action.
+
+That later work may use the Production Treatment or frozen Canon Bible as source.
+
+Do not require the former Architect -> Writer -> Forensic chain merely to produce the social release.
+
+## 15. Human authority
+
+The automated unified workflow develops and packages the fictional production.
 
 Humans still decide:
+
 - whether to release it
-- whether to create long-form editorial
+- how to execute the assets manually
 - whether to revise canon
-- whether to regenerate social assets
+- whether to revise the packet
+- whether to create long-form editorial
 - whether to publish
 
-The normal path should be lean enough that strong ideas can be developed and packaged repeatedly without paying for unused editorial layers.
+The production-packaging phase should remain lean enough to run routinely without paying for unused editorial layers.
