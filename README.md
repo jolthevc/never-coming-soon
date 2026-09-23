@@ -109,27 +109,24 @@ The legacy `draft_url` Sheet column points to this treatment.
 
 Version:
 
-`ncs_ig_v2`
+`ncs_ig_v3`
 
-Its locked six-slide spine is:
+Its locked three-slide spine is:
 
 1. Hook
-2. Premise
-3. Characters
-4. The Movie
-5. Poster
-6. NCS Close
+2. Plot
+3. Poster
 
 Every slide contains:
 
 - `Never Coming Soon` footer
-- exact page number in `0X / 06` format
+- exact page number in `0X / 03` format
 
 ### Slide 1: Hook
 
 Brutally simple and text-first.
 
-It clearly communicates:
+It communicates:
 
 - MOVIE IDEA or SHOW IDEA
 - final title
@@ -137,50 +134,30 @@ It clearly communicates:
 
 It is not a poster.
 
-### Slide 2: Premise
+### Slide 2: Plot
 
-A cinematic glimpse plus exact social copy that gives the setup generously.
+The main reading experience.
 
-The established premise-copy calibration remains roughly 65 to 110 words with natural paragraphing.
+It is primarily text-led, with exact plot copy supplied in the packet and spaced into 2 to 3 readable paragraphs.
 
-### Slide 3: Characters
+Default visual treatment is deliberately simple:
 
-Two characters by default, three for genuinely ensemble-driven concepts, four only when necessary.
+- Warm Ivory editorial background
+- small production-title kicker
+- THE PLOT heading
+- comfortable body size
+- generous leading and margins
+- no large bespoke image by default
 
-Default visual system:
+The plot is the hero.
 
-- one separate illustrated editorial portrait per featured character
-- graphite / ink / loose watercolor language
-- no real actor likenesses
-- no rounded cards or boxes
-- open editorial layout
-- alternating portrait/copy placement
-- no decorative object in the middle
-- `THE STARS` as the preferred default section title
+### Slide 3: Poster
 
-Each character receives its own exact `portrait_prompt`.
+The payoff.
 
-### Slide 4: The Movie
+This is the main movie-specific visual-generation asset.
 
-The most immersive slide.
-
-It sells what watching the production feels like without becoming a plot summary.
-
-### Slide 5: Poster
-
-The poster payoff.
-
-The fictional production owns the central poster visual and title treatment.
-
-### Slide 6: NCS Close
-
-Participation-first brand close.
-
-Locked slogan:
-
-**the best movies and tv shows that don't exist.**
-
-A link or long-form action is secondary and only appears when a real destination exists.
+The poster should feel like a satisfying artifact for the production the reader has just imagined.
 
 ## Manual asset generation
 
@@ -193,17 +170,14 @@ The packet is designed to be pasted there verbatim.
 The asset-generation model should execute the packet rather than decide:
 
 - slide order
-- copy
-- featured characters
-- character count
+- hook copy
+- plot copy
 - story emphasis
 - reveal strategy
 - poster tagline
-- CTA
+- poster metadata
 
-Character continuity is only a safeguard when the same person genuinely appears in more than one asset.
-
-Do not repeat faces merely for consistency.
+Slides 1 and 2 are NCS editorial surfaces. Slide 3 is the fictional production's poster.
 
 ## Ideas lifecycle
 
