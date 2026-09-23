@@ -1,6 +1,8 @@
 # Never Coming Soon
 ## Social Asset Standard v1.5
 
+> **Legacy packet-production standard.** This document describes the older 1080 × 1350 poster/premise/NCS-close packet and has not yet been migrated with the Generation schema and prompt. For current **manual asset generation**, use [`AssetGeneration/README.md`](../AssetGeneration/README.md): 1080 × 1440 Hook / The Plot / Poster. Do not reinterpret a legacy packet as if it already contained the new exact editorial fields.
+
 ## 1. Purpose
 
 This standard governs the canonical social handoff produced after a Never Coming Soon article is final.

@@ -1,4 +1,6 @@
 # Never Coming Soon
+
+> **Carousel migration note (September 2026):** This document's three-slide poster/premise/brand-close instructions are historical. The current manual visual-production process is [`AssetGeneration/README.md`](../AssetGeneration/README.md), with Hook / The Plot / Poster at 1080 × 1440. Broader visual principles here remain useful where they do not conflict. The Generation schema and prompt still describe the older packet format.
 ## Visual Constitution v1.2
 
 ## 1. Visual north star

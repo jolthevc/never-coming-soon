@@ -50,6 +50,7 @@ The IG Asset Packet Builder remains in normal Generation because `ig_packet_json
 ## Source of truth
 
 - `Governance/` contains durable creative, editorial, visual, social, and data standards.
+- `AssetGeneration/` contains the current manual three-slide Instagram asset workflow, poster craft rules, and approved visual calibration images. Start at [`AssetGeneration/README.md`](AssetGeneration/README.md) for new asset-production chats.
 - `Prompts/Ideation/` contains Ideation agent prompt pairs.
 - `Prompts/Generation/` contains generation-stage prompts plus retained prompts for later/optional stages.
 - `Schemas/` contains machine-readable structured-output contracts.
@@ -160,7 +161,17 @@ Public THE CAST copy only includes roles with an actual selected performer.
 
 `ig_packet_json` is the canonical handoff to the image and social asset workflow and remains part of successful Generation.
 
-Its governance lives in:
+**Current manual asset-production format (September 2026):**
+
+1. Text-first Hook (`MOVIE IDEA` or `SHOW IDEA`, title, exact hook)
+2. Readable editorial `THE PLOT` (exact packet paragraphs)
+3. Film-specific poster payoff
+
+Deliver three separate 1080 × 1440 PNGs. The caption handles engagement; there is no default NCS close or link-in-bio slide. The full workflow and examples live in [`AssetGeneration/`](AssetGeneration/README.md).
+
+**Migration boundary:** the Generation packet builder, `Schemas/ig-asset-packet.schema.json`, and the older governance files below still encode the former poster/premise/NCS-close format and 1080 × 1350 canvas. They have **not** been migrated in this documentation change. Do not assume that an old `ig_packet_json` contains verbatim hook/plot/poster fields needed by the new format. Resolve missing current-format editorial text before creating publishable assets.
+
+Legacy packet governance lives in:
 
 - `Governance/ncs-visual-constitution.md`
 - `Governance/ncs-social-asset-standard.md`
@@ -168,12 +179,6 @@ Its governance lives in:
 Its schema lives in:
 
 - `Schemas/ig-asset-packet.schema.json`
-
-The locked three-slide spine remains:
-
-1. Cover / Poster
-2. Premise
-3. NCS Close
 
 The exact final packet written to Sheets must pass schema validation and Social QA after all normalization or repair.
 
