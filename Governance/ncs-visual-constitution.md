@@ -1,5 +1,5 @@
 # Never Coming Soon
-## Visual Constitution v2.0
+## Visual Constitution v2.1
 
 ## 1. Visual north star
 
@@ -20,15 +20,18 @@ It should not feel film-snobby, tech-forward, meme-like, artificially nostalgic,
 **NCS owns the editorial frame. The production owns the cinematic world.**
 
 Never Coming Soon provides:
+
 - recurring carousel architecture
 - house editorial surfaces
 - typography discipline
 - spacing and hierarchy
 - character-study language
+- footer and pagination
 - logo geometry
 - final brand sign-off
 
 Each production provides:
+
 - cinematic imagery
 - title treatment
 - accent color
@@ -71,15 +74,24 @@ Production title typography may vary on Slide 5 posters and other production-own
 
 Do not let one movie's display typeface become the house font by accident.
 
-## 5. Logo
+## 5. Logo and footer
 
-Use the approved NCS logo asset.
+Use the approved NCS logo asset when the full logo is called for.
 
 Do not recreate the logo with an image model.
 
 Logo geometry is fixed.
 
-Logo color may adapt to the production when used on Slide 6 or another explicitly branded surface.
+Every carousel slide also carries a quiet text footer:
+
+- bottom-left: `Never Coming Soon`
+- bottom-right: `0X / 06`
+
+The footer is a house navigation device, not a hero brand treatment.
+
+Keep it small and consistent.
+
+On Slide 5, make it especially restrained so the fictional poster remains convincing.
 
 ## 6. Canonical carousel rhythm
 
@@ -101,6 +113,7 @@ The visual progression should feel like:
 Slide 1 is the most standardized slide.
 
 It should be:
+
 - text-first
 - brutally clear
 - minimally branded
@@ -108,13 +121,13 @@ It should be:
 - closer to a clean social text card than a movie poster
 
 Default:
+
 - Warm Ivory background
 - Midnight Navy typography
 - one restrained accent
 - large MOVIE IDEA or SHOW IDEA label
 - final title
 - one-sentence hook
-- small Never Coming Soon signature
 
 No cinematic image is required.
 
@@ -126,15 +139,15 @@ No visual mystery.
 
 Slides 2 to 4 retain the NCS editorial frame while progressively giving more space to the fictional production.
 
-A useful default progression is:
+A useful conceptual progression is:
 
-- Slide 2: approximately 60 percent NCS editorial language, 40 percent production world
-- Slide 3: approximately 40 percent NCS editorial language, 60 percent production world
-- Slide 4: approximately 20 percent NCS editorial language, 80 percent production world
-
-These percentages are conceptual, not layout math.
+- Slide 2: NCS editorial framing introduces the production world
+- Slide 3: NCS editorial character studies introduce the people
+- Slide 4: the production becomes most immersive
 
 Do not force identical panel heights or image ratios across every production.
+
+The slides should share typography, spacing, footer logic, and editorial discipline without becoming rigid templates.
 
 ## 9. Slide 2 imagery
 
@@ -144,13 +157,14 @@ Use an establishing or relational moment that helps explain the setup.
 
 It should look like a frame from the movie or show rather than promotional key art.
 
-The NCS text panel may use Warm Ivory, Midnight Navy, and a restrained accent derived from the production.
+The NCS text treatment may use Warm Ivory, Midnight Navy, and a restrained accent derived from the production.
 
 ## 10. Slide 3 character imagery
 
 The default character visual language is the NCS editorial character study.
 
-Preferred language:
+Preferred visual language:
+
 - graphite
 - ink
 - loose watercolor
@@ -160,14 +174,31 @@ Preferred language:
 - specific wardrobe
 - posture
 - props
-- relational composition
+- expressive but not exhaustively rendered faces
 
 Avoid:
+
 - police-composite aesthetics
 - mugshot framing
 - glossy faux-realism
 - real actor likenesses
-- generic headshot grids
+- fake celebrity casting
+- card-grid UI
+- decorative middle objects added merely to connect the profiles
+
+### Default layout
+
+For two featured characters:
+
+- use one separate portrait study per character
+- first portrait left, first copy right
+- second copy left, second portrait right
+- leave generous open space between the two profiles
+- do not place either profile inside a rounded card or box
+- do not place a dog, prop, line, or connector in the center merely because the story has one
+- use a small editorial section title near the top, with `THE STARS` as the current preferred default
+
+The portraits should feel related by illustration language and production palette, not by forcing them into one combined scene.
 
 Words define the person.
 
@@ -190,6 +221,7 @@ Slide 5 belongs almost entirely to the fictional production.
 The poster should feel like real advertising art for an unreal production.
 
 A memorable poster may be:
+
 - photographic
 - graphic
 - illustrated
@@ -211,6 +243,7 @@ It should still feel compatible with the same movie.
 Slide 6 returns to NCS.
 
 It should combine:
+
 - one production-specific visual echo
 - a strong participation question
 - the approved NCS identity
@@ -241,51 +274,45 @@ Do not use imagery whose primary novelty is how it was generated.
 
 ## 15. Character continuity
 
-When the same character appears across assets, preserve:
-- face identity
-- apparent age
-- hair
-- wardrobe logic
-- posture and physical energy
-- recurring props or identifying details
+Do not force the same character to appear in multiple assets for continuity's sake.
 
-The packet must provide enough visual continuity information for the image workflow to execute this reliably.
+Prefer variety across the carousel.
 
-The image model should not invent a new character design on each slide.
+When the same character genuinely appears in more than one visual, preserve identity, hair, wardrobe logic, and physical energy.
+
+Continuity is a safeguard, not a requirement to reuse a face.
 
 ## 16. NCS character-count rule
 
 Slide 3 features:
+
 - two characters by default
 - three for a genuinely ensemble-driven concept
 - four only when necessary
 
 This is a curation rule, not a census of the cast.
 
-## 17. Deterministic finishing
+## 17. Manual finishing
 
-Exact copy belongs outside the image model whenever practical.
+Asset generation is performed manually outside n8n.
 
-Preferred order:
-1. generate cinematic or illustrated visual material
-2. crop and position on the canonical canvas
-3. place exact copy deterministically
-4. place approved logo deterministically
-5. verify hierarchy and safe margins
-6. export
+The packet should contain exact public copy and enough visual direction that a separate asset-generation chat can execute without making editorial decisions.
 
-The image model should not be trusted to render long copy, exact logos, or structured poster furniture when deterministic compositing is available.
+When exact typography or logo fidelity matters, place it deliberately after visual generation rather than relying on image generation to reproduce long text perfectly.
 
 ## 18. Final visual test
 
 Ask:
+
 - Does Slide 1 explain the format immediately?
+- Is the NCS footer and page number present but quiet on every slide?
 - Do Slides 2 to 4 feel like one fictional production?
-- Do the featured characters feel specific without looking cast?
+- Does Slide 3 feel like an editorial character page rather than a UI layout?
+- Are the portraits separate, open, and specific?
 - Does Slide 4 make me feel like I have seen part of the movie?
 - Does Slide 5 feel like a satisfying poster reveal?
 - Does Slide 6 feel story-aware and unmistakably NCS?
 - Is the system recognizable without overpowering the production?
-- Does the image workflow have enough continuity direction to execute without editorial judgment?
+- Could an asset-generation chat execute directly from the packet without deciding story content?
 
 If not, simplify or rethink the visual choice.
