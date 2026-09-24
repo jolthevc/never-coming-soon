@@ -1,9 +1,9 @@
 # Never Coming Soon
-## Ideas Data Contract v1.6
+## Ideas Data Contract v2.1
 
 ## 1. Purpose
 
-This document defines the single Google Sheets contract used from Ideation through delivered Generation and eventual publication.
+This document defines the single Google Sheets contract used by the unified Never Coming Soon creative workflow from Ideation through developed social packaging and eventual publication.
 
 The Sheet should remain lean.
 
@@ -11,7 +11,7 @@ Every field must improve one of four things:
 
 1. creative memory
 2. concept quality or curation
-3. Generation handoff quality
+3. production-package quality
 4. final-deliverable traceability
 
 If a field does not materially improve one of those, do not add it.
@@ -20,13 +20,17 @@ If a field does not materially improve one of those, do not add it.
 
 **One row equals one Never Coming Soon concept across its lifecycle.**
 
-The same row persists from raw seed through Development Select, Generation, delivered draft, media handoff, and eventual human publication.
+The same row persists from raw seed through Development Select, production development, social packaging, and eventual human publication.
 
-Use `idea_id` as the durable row key. Never rely on visible row number after filtering or sorting.
+Use `idea_id` as the durable row key.
+
+Never rely on visible row number after filtering or sorting.
 
 There is no separate Productions state table.
 
-Intermediate Generation artifacts live in n8n execution memory. Google Drive stores the finished human-readable draft.
+Intermediate canon and package-building objects live in n8n execution memory.
+
+Google Drive stores the durable human-readable Production Treatment and any optional later editorial artifacts.
 
 ## 3. Canonical columns
 
@@ -59,7 +63,7 @@ Use these columns in this exact order:
 25. `published_url`
 26. `ig_packet_json`
 
-Do not add a new Sheet column merely to expose another internal agent output.
+Do not add another Sheet column merely to expose an internal model output.
 
 ## 4. Lifecycle status
 
@@ -74,19 +78,19 @@ Allowed values:
 - `DRAFTED`
 - `PUBLISHED`
 
-There is no intermediate `GENERATING` status in the current architecture.
+There is no durable `GENERATING` status.
 
 ### RAW
 
-Fresh concept awaiting curation.
+Fresh concept awaiting duplicate audit and curation.
 
 ### DEVELOP
 
-Strong concept worth deeper Ideation expansion.
+Strong concept selected for deeper Ideation expansion during the current workflow.
 
 ### PROMISING
 
-Interesting concept worth retaining but not currently selected for development.
+Interesting concept worth retaining but not currently advancing.
 
 ### HOLD
 
@@ -98,34 +102,35 @@ Materially overlaps a surviving concept.
 
 ### DEVELOPMENT_SELECT
 
-Approved source concept for Generation. `development_packet_json` must be nonblank.
-
-A new Generation run leaves the row in `DEVELOPMENT_SELECT` until the complete generated package succeeds.
-
-### DRAFTED
-
-A complete generated package exists and was successfully delivered.
+Approved source concept for production development.
 
 Required:
 
-- final public article exists
-- a Forensic Editor review scored the exact delivered article
-- `ncs_score` is a valid numeric 1.0 to 10.0 value
-- deterministic article completion checks ran
-- a schema-valid final `ig_packet_json` exists
-- Google Drive persistence succeeded
-- `final_title` is populated
-- `draft_url` is valid
+- nonblank `development_packet_json`
 
-`DRAFTED` is an operational artifact state, not a quality award or automatic publication approval.
+In the normal unified workflow, a newly selected concept proceeds directly into Production Builder and Social Release Builder during the same execution.
 
-It does not require a score of 8.0 or above and does not require the editor's recommended revision route to be `NONE`.
+The row remains `DEVELOPMENT_SELECT` until the complete package succeeds.
+
+### DRAFTED
+
+A complete developed-and-packaged production exists.
+
+Required:
+
+- final Canon Bible was created successfully in the current successful production pass
+- human-readable Production Treatment persisted to Google Drive
+- schema-valid final `ig_packet_json` exists
+- `final_title` populated
+- `draft_url` points to the current successful Production Treatment
+
+A long-form article, actor-casting pass, Forensic review, and `ncs_score` are not required.
 
 ### PUBLISHED
 
 Human-controlled publication state.
 
-Generation must never set `PUBLISHED` automatically.
+The unified creative workflow must never set `PUBLISHED` automatically.
 
 ## 5. Identity fields
 
@@ -143,7 +148,7 @@ Never reuse an ID.
 
 ISO 8601 timestamp.
 
-Use one consistent timezone, preferably UTC, at the orchestration layer.
+Use one consistent timezone at orchestration level.
 
 ## 6. Ideation fields
 
@@ -164,7 +169,9 @@ Canonical values:
 
 ### working_title
 
-Provisional title only. Generation may change it.
+Provisional title.
+
+Production Builder may change it.
 
 ### format
 
@@ -174,15 +181,11 @@ Allowed provisional values:
 - `SERIES`
 - `LIMITED_SERIES`
 
-Generation may change format when a better production requires it.
-
-A blank or stale Ideation format must not override the final format resolved during Generation.
+Production Builder may change format when a stronger production requires it.
 
 ### genre
 
 Primary provisional genre string.
-
-Hybrid or secondary genre information lives inside `creative_tags_json`.
 
 ### creative_tags_json
 
@@ -190,7 +193,9 @@ Compact structured creative context and memory signature.
 
 ### premise
 
-Current concept-level premise. This is Ideation memory, not final public copy.
+Concept-level premise.
+
+It is Ideation memory, not final public copy.
 
 ### creative_kernel
 
@@ -198,15 +203,17 @@ The core creative reason the concept is worth preserving.
 
 ### why_exciting
 
-Short statement explaining the actual source of entertainment, emotion, chemistry, tension, comedy, spectacle, or creative opportunity.
+Short statement explaining the source of entertainment, emotion, chemistry, tension, comedy, spectacle, or creative opportunity.
 
 ### short_pitch
 
-Usually 75 to 200 words. Enough to understand the expanded concept without pretending the story is locked.
+Usually 75 to 200 words.
+
+Enough to understand the expanded concept without pretending the full production is locked.
 
 ### characters_json
 
-Provisional character possibilities. Names, jobs, relationships, and roles may change during Generation.
+Provisional character possibilities.
 
 ### story_core_json
 
@@ -214,19 +221,27 @@ Provisional setup, dramatic question, escalations, ending direction, and televis
 
 ### signature_scenes_json
 
-Scene seeds that indicate creative fertility. They are not contractual scenes.
+Scene seeds indicating creative fertility.
 
 ### fingerprint
 
-Deterministic concept-memory hash generated from the canonical memory signature.
+Deterministic concept-memory hash generated from the normalized memory signature.
 
 ### duplicate_check_json
 
-Latest duplicate-audit result. Allowed status values are `CLEAR`, `OVERLAP`, and `DUPLICATE`.
+Latest duplicate-audit result.
+
+Allowed status values:
+
+- `CLEAR`
+- `OVERLAP`
+- `DUPLICATE`
 
 ### concept_score_json
 
-Ideation scorecard used for curation. It must never populate `ncs_score`.
+Ideation scorecard used for curation.
+
+It must never populate `ncs_score`.
 
 ### interrogation_json
 
@@ -236,7 +251,9 @@ Light creative expansion used before Development Select.
 
 Only populated for selected concepts.
 
-The Development Packet is a creative brief, not a locked outline. Generation owns the storytelling while preserving or improving the creative kernel.
+The Development Packet is a creative brief, not a locked outline.
+
+Production Builder owns final storytelling while preserving or improving the creative kernel.
 
 ## 7. Human-owned field
 
@@ -244,7 +261,7 @@ The Development Packet is a creative brief, not a locked outline. Generation own
 
 Freeform human editorial direction.
 
-Agents may read this field when relevant.
+Models may read this field when relevant.
 
 Automations must never clear, replace, or rewrite it without explicit human authorization.
 
@@ -252,46 +269,48 @@ Automations must never clear, replace, or rewrite it without explicit human auth
 
 ### final_title
 
-Final public title selected by Generation.
+Final public title resolved by Production Builder.
 
-Populate only after the complete generated package is ready for delivery.
+Populate only after the complete production package is ready to commit.
 
 Do not overwrite `working_title`.
 
 ### draft_url
 
-Google Docs URL for the current successfully delivered draft.
+Legacy column name retained for compatibility.
 
-Only update after Drive persistence succeeds.
+It points to the current successful Google Drive Production Treatment.
 
-During force redevelopment, preserve the previous URL until replacement succeeds.
+If a later workflow creates a long-form article, store that separately rather than silently changing this field's meaning.
+
+During redevelopment, preserve the previous successful URL until the replacement package fully succeeds.
 
 ### ncs_score
 
-Holistic editorial score for the exact delivered draft.
+Legacy optional editorial score.
 
-Rules:
+The unified social-first workflow does not require or populate a new score.
 
-- numeric only
-- 1.0 to 10.0
-- normally one decimal place
-- sourced from the Forensic Editor review of the exact draft delivered to Drive
-- never inferred from component-score averages
-- never populated with `N/A`, placeholder text, or an Ideation score
+If a later long-form editorial workflow produces a reviewed article, it may populate a numeric holistic score for that exact article.
 
-The score records editorial quality. It does not gate `DRAFTED` by threshold.
+Never write:
+
+- `N/A`
+- placeholder text
+- an Ideation score
+- a synthetic social score
+
+Do not erase a historical score merely because the current workflow does not use it.
 
 ### published_url
 
-Public publication URL.
+Human/publishing-workflow owned.
 
-Human/publishing workflow owned.
-
-Generation must never populate, clear, or overwrite this field automatically.
+The unified creative workflow must never populate, clear, or overwrite it automatically.
 
 ### ig_packet_json
 
-Canonical social and media-asset handoff for the generated production.
+Canonical social release handoff.
 
 Schema:
 
@@ -301,86 +320,96 @@ Governance:
 
 `Governance/ncs-social-asset-standard.md`
 
-The packet must be built from final canon and the exact final public article, not the raw Ideation premise.
+The packet is built from final Canon Bible plus explicit human campaign direction when supplied.
 
-The exact final object persisted to the cell must pass schema validation after any normalization, repair, mapping, or transformation.
+A public article is not required.
 
-This field is required for `DRAFTED` because downstream media asset generation depends on it.
+The exact object persisted in the cell must pass schema validation after every normalization or repair.
 
-## 9. Generation ownership model
+The packet is intended to be copied verbatim into a separate manual asset-generation chat.
 
-Generation reads the selected Ideas row and keeps intermediate creative artifacts in execution memory.
+## 9. Unified workflow ownership
 
-Do not persist development, canon, review, or revision objects as new Sheet columns merely because they exist.
+The same n8n workflow owns:
 
-Durable outputs of successful Generation are:
+- Ideation
+- duplicate control
+- curation
+- expansion
+- Development Select
+- Production Builder
+- Production Treatment rendering
+- Social Release Builder
+- final lifecycle write
+
+Do not create a second normal Generation workflow.
+
+Intermediate canon and package objects should not become new Sheet columns.
+
+Durable successful outputs are:
 
 - `final_title`
 - `draft_url`
-- `ncs_score`
 - `ig_packet_json`
-- lifecycle `status`
+- `status`
 
-## 10. Generation start and failure behavior
+## 10. Production-package success order
 
-Generation does not use an intermediate lifecycle write.
+For every selected concept:
 
-For a normal run, the source row remains `DEVELOPMENT_SELECT` throughout execution.
+1. final Canon Bible validates
+2. deterministic Production Treatment is rendered in execution memory
+3. final `ig_packet_json` validates
+4. Production Treatment is persisted to Google Drive
+5. `final_title`, `draft_url`, and `ig_packet_json` are written
+6. status becomes `DRAFTED`
 
-For forced redevelopment, the source row remains `DRAFTED` throughout execution and prior successful final fields remain intact.
+Do not require a long-form article or editorial score.
 
-If a run fails, no lifecycle restoration is needed because no intermediate status was written.
+Do not persist partial final fields before the complete package succeeds.
 
-Do not write partial final fields before the full package succeeds.
+## 11. Failure behavior
 
-If duplicate-run protection is needed, solve it at the n8n execution/orchestration level rather than with another durable Sheet status.
+If Production Builder, packet validation, or Drive persistence fails:
 
-## 11. Successful Generation order
+- keep the row at `DEVELOPMENT_SELECT`
+- preserve its Development Packet
+- do not write partial final fields
+- record the execution error in the run summary
 
-The required success order is:
+One selected concept's failure should not corrupt successful sibling concepts in the same workflow execution.
 
-1. final article exists
-2. Forensic Editor review exists for that exact article
-3. valid numeric `overall_score` exists
-4. deterministic article completion QA runs
-5. final `ig_packet_json` exists and passes exact-object Social QA
-6. Google Drive write succeeds
-7. `final_title`, `draft_url`, `ncs_score`, and `ig_packet_json` are written to the same Ideas row
-8. status becomes `DRAFTED`
+## 12. Optional redevelopment
 
-The score may be below 8.0 and the review may recommend later revision.
+A future explicit `force_redevelopment = true` route may target a specific idea.
 
-`DRAFTED` is the only lifecycle status written by a successful Generation run.
+For an already DRAFTED concept:
 
-## 12. Revision boundary
+- preserve source Ideation fields
+- preserve human notes
+- preserve published URL
+- preserve prior successful final fields and Drive artifact during the replacement run
+- replace final fields only after the new package fully succeeds
 
-Normal Generation does not automatically execute Forensic revision routes.
+Preserve any historical `ncs_score` unless a later editorial workflow explicitly updates it.
 
-After human review, a later explicit action may perform:
+## 13. Optional later editorial
 
-- targeted prose revision
-- explicit EDITION redevelopment
-- explicit CANON redevelopment
-- optional new Forensic review when changed prose needs a new score
-- regeneration of `ig_packet_json` when title, public text, canon, or campaign direction materially changes
+After human review, later explicit work may perform:
 
-Do not pay for automatic revision loops on every generated idea.
+- canon redevelopment
+- packet-only campaign revision
+- long-form article generation
+- optional prose review or revision
+- social-packet regeneration when canon, title, or campaign direction materially changes
 
-## 13. Force redevelopment
-
-`force_redevelopment=true` requires explicit `idea_id`.
-
-It may regenerate an eligible `DRAFTED` production.
-
-Preserve source Ideation fields, `human_notes`, `published_url`, previous successful final fields, and previous Drive artifact until the replacement package fully succeeds.
-
-Only then replace `final_title`, `draft_url`, `ncs_score`, and `ig_packet_json`.
+Do not pay for unused editorial layers on every idea.
 
 ## 14. JSON storage rules
 
 Store structured objects as valid compact JSON strings.
 
-Use `null` for unknown scalar values inside a populated object and `[]` for known-empty arrays.
+Use `null` for unknown scalar values inside populated objects and `[]` for known-empty arrays.
 
 If a structured field has not yet been produced, leave the cell blank rather than writing `{}` or textual `null`.
 
@@ -389,20 +418,22 @@ Do not store pseudo-JSON, Markdown fences, or double-stringified objects.
 ## 15. Overwrite rules
 
 - preserve `idea_id` and `created_at` forever
-- preserve `human_notes` unless a human explicitly changes it
+- preserve `human_notes` unless a human explicitly changes them
 - preserve `published_url` unless a human or publishing workflow changes it
-- do not overwrite source Ideation fields merely because Generation made different final decisions
-- do not overwrite a nonblank `development_packet_json` without explicit re-development action
-- do not replace prior successful final fields until a forced-redevelopment replacement package fully succeeds
+- do not overwrite source Ideation fields merely because final production choices differ
+- do not overwrite a nonblank Development Packet without explicit redevelopment action
+- do not replace prior successful final fields until a replacement package fully succeeds
 - update rows by `idea_id`, not visible row number
 - do not set `PUBLISHED` automatically
 
 ## 16. Minimalism rule
 
-Do not add durable state simply because an agent can produce it.
+Do not add durable state merely because a model can produce it.
 
 Ideas is the catalog and lifecycle table.
 
-n8n execution memory is the temporary production workspace.
+n8n execution memory is the temporary creative workspace.
 
-Google Drive is the final human-readable content store.
+Google Drive is the durable human-readable Production Treatment store.
+
+Manual asset generation is intentionally outside n8n.

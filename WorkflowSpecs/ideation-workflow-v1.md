@@ -1,164 +1,237 @@
 # Never Coming Soon
-## n8n Ideation Workflow Specification v1.1
+## Unified n8n Creative Workflow Specification v2.0
+
+> Filename retained for loader compatibility.
 
 ## 1. Objective
 
-Build one n8n workflow that turns a request for a new ideation run into a persistent field of Never Coming Soon concepts and one or more concepts worth handing to Generation.
+Build one n8n workflow that takes Never Coming Soon from idea creation through a fully developed and socially packaged fictional production.
 
-The workflow does not draft full editions.
+The workflow owns five phases:
 
-Its terminal creative output is `development_packet_json` written back to selected rows in the same Google Sheet.
+1. Ideation
+2. Duplicate control and curation
+3. Development Select
+4. Production development
+5. Social release packaging
 
-Development Select is not an artificial scarcity gate. Select every concept that genuinely deserves a Generation attempt.
+The workflow ends with selected productions in `DRAFTED` state, each with:
 
-## 2. External systems
+- a complete internal Canon Bible
+- a durable human-readable production treatment in Google Drive
+- a schema-valid `ncs_ig_v3` packet in `ig_packet_json`
 
-- GitHub: source of truth for governance, prompts, schemas, and this workflow specification
-- Google Sheets: persistent creative memory and state
+There is no separate required Generation workflow.
+
+Asset creation is manual and happens outside n8n.
+
+Long-form article writing is optional later work and is not part of the normal path.
+
+## 2. Core cost principle
+
+Use model calls where they create material creative value.
+
+Normal path for a concept that survives all Ideation gates:
+
+- Ideation Director
+- Seed Generator
+- Duplicate Auditor
+- Concept Curator
+- Idea Expander
+- second Duplicate Auditor
+- Development Selector
+- Production Builder
+- Social Release Builder
+
+Once a concept reaches Development Select, there are only two additional creative calls:
+
+1. Production Builder
+2. Social Release Builder
+
+Do not run Casting Director, Edition Architect, Edition Writer, Forensic Editor, Revision Writer, scoring loops, or article polish merely to create the social product.
+
+## 3. External systems
+
+- GitHub: source of truth for governance, prompts, schemas, and workflow specifications
+- Google Sheets: persistent catalog and lifecycle state
+- Google Drive: durable production-treatment store
 - LLM provider: creative and editorial judgment
-- n8n Code nodes: deterministic IDs, hashing, normalization, compact retrieval, JSON handling, and routing
+- n8n Code nodes: deterministic IDs, hashing, normalization, validation, rendering, routing, and summaries
 
-## 3. Google Sheet contract
+## 4. Google Sheet contract
 
 Use one native Google Sheet tab named `Ideas`.
 
-The live Sheet must contain exactly the canonical 21 columns defined in `Governance/ncs-data-contract.md`.
+The Sheet contract is defined by:
 
-Do not create additional tabs or columns in v1.1.
+`Governance/ncs-data-contract.md`
 
-The workflow must address rows by `idea_id`, never by visible row number after sorting or filtering.
+Use the canonical 26 columns in that document.
+
+Address rows by `idea_id`, never by visible row number after sorting or filtering.
 
 Structured JSON cells are stored as compact JSON text and parsed exactly once when read.
 
-## 4. Workflow inputs
+Do not add durable columns for intermediate agent outputs.
 
-Support at minimum a manual trigger.
+## 5. Workflow inputs
 
-Input parameters:
+Support the entry modes defined in:
 
-- `target_seed_count`, default `30`
-- `human_direction`, optional free text
+`WorkflowSpecs/ideation-entry-modes-v1.md`
 
-Optional later triggers may schedule runs, but scheduling is not required for v1.1.
+At minimum the workflow must support:
 
-Run Ideation executions serially in v1.1, or use an equivalent lock around ID reservation. Two simultaneous runs must never reserve the same `idea_id` block.
+- GENERAL
+- DIRECTED
+- CONCEPT_INTAKE
 
-Do not introduce a default Development Select quota.
-
-## 5. Model behavior
-
-Use the strongest available model class for all creative and editorial nodes.
-
-Do not save cost by routing the Seed Generator, Idea Expander, or Development Selector to a materially weaker model.
-
-Behavior should differ by node:
-
-- Ideation Director: strong reasoning, moderate creative variance
-- Seed Generator: highest creative variance of the workflow while preserving coherence
-- Duplicate Auditor: low variance, high consistency
-- Concept Curator: low-to-moderate variance, strong editorial judgment
-- Idea Expander: high creative capability with controlled optionality
-- Development Selector: low-to-moderate variance, strong editorial judgment
-
-Provider-specific temperature or reasoning settings may be chosen by the builder. The goal is stable judgment for evaluators and broader exploration for creators.
-
-## 6. Prompt assembly contract
-
-This is mandatory.
-
-A prompt file that names a governance path does not have access to that file merely because the path appears in text.
-
-For every LLM node, construct the system message from:
-
-1. the full text of the node's `.system.md` prompt
-2. the full current text of every governance document listed under that prompt's `AUTHORITATIVE GOVERNANCE`
-
-Use clear delimiters around each injected governance document.
-
-Example shape:
-
-```text
-[AGENT SYSTEM PROMPT]
-...full system prompt...
-
-[GOVERNANCE: ncs-brand-constitution.md]
-...full document...
-
-[GOVERNANCE: ncs-ideation-constitution.md]
-...full document...
-```
-
-Then render the matching `.user.md` file with runtime variables as the user message.
-
-Pass the matching JSON Schema to the provider's structured-output mechanism when supported.
-
-Do not rely on file paths alone.
-
-Load governance and prompt files once per run when practical and reuse the contents downstream.
-
-## 7. Context hygiene
-
-More context is not automatically better.
-
-The Director may see broad catalog summaries and a compact memory digest because it needs to detect drift and design the creative session.
-
-The Seed Generator should not receive individual historical NCS concepts by default. Give it only:
-
-- the assigned ideation mode
-- the Director's open-ended provocation
-- the Director's creative permission
-- human direction
-
-This is intentional. Showing a creator the concepts it is supposed not to copy can anchor generation around those same concepts. Duplicate control belongs downstream.
-
-The Duplicate Auditor should receive the broadest historical memory that safely fits the context budget because comparison is its job.
-
-The Concept Curator should judge the nonduplicate seeds on creative potential, not on slate balancing.
-
-The Idea Expander should receive the concept being expanded, its score, its own duplicate note, and any human notes attached to that exact row. It should not receive unrelated catalog concepts.
-
-The Development Selector may receive compact slate context because it decides what deserves Generation attention now, but slate context may not override strong creative quality.
-
-This separation protects originality and reduces accidental imitation of prior NCS work.
-
-## 8. Node sequence
-
-### Node 1: Trigger
-
-Receive:
+Common inputs may include:
 
 - `target_seed_count`
 - `human_direction`
+- `human_notes`
+- `human_campaign_notes`
+- optional explicit research questions
 
-Validate `target_seed_count >= 1`.
+Run ID reservation safely so concurrent runs cannot claim the same `idea_id`.
+
+Do not impose a default Development Select quota.
+
+## 6. Source snapshot
+
+At the beginning of every execution:
+
+1. resolve current GitHub `main` commit SHA
+2. store it as `source_commit_sha`
+3. load every required prompt, governance document, schema, and workflow contract from that same snapshot
+
+Do not mix source versions inside one execution.
+
+Do not silently fall back to stale hard-coded prompt text when GitHub loading fails.
+
+## 7. Prompt assembly contract
+
+A prompt file that references a governance filename does not automatically have access to that governance.
+
+For each model call:
+
+1. load the full system prompt
+2. load every governance file required by that stage
+3. concatenate them with clear document delimiters
+4. render the matching user prompt with runtime variables
+5. supply the matching JSON Schema through structured output when supported
+
+Load stable source files once per execution and reuse them where practical.
+
+## 8. Context hygiene
+
+More context is not automatically better.
+
+### Ideation Director
+
+May receive:
+
+- target seed count
+- compact catalog context
+- catalog memory digest
+- human direction
+
+### Seed Generator
+
+Should not receive individual historical ideas by default.
+
+Give it only:
+
+- assigned ideation mode
+- Director provocation
+- creative permission
+- human direction
+
+Duplicate control belongs downstream.
+
+### Duplicate Auditor
+
+Receives the broadest historical memory safely available because comparison is its job.
+
+### Concept Curator
+
+Judges surviving seeds on creative potential.
+
+### Idea Expander
+
+Receives only the concept being expanded, its score, its own duplicate note, and relevant human notes.
+
+### Development Selector
+
+May receive compact slate context, but slate balance must not override strong creative quality.
+
+### Production Builder
+
+Receives only:
+
+- the selected Development Packet
+- relevant human notes
+- optional research packet when one exists
+
+Do not pass old article drafts, old scores, broad catalog history, unrelated concepts, or social copy.
+
+### Social Release Builder
+
+Receives only:
+
+- final Canon Bible
+- optional human campaign notes
+- current visual/social/brand governance
+
+Do not require an article or editorial score.
+
+## 9. Phase A: Ideation
+
+### Node 1: Trigger / entry router
+
+Resolve run type and inputs.
+
+For GENERAL and DIRECTED batch runs, validate `target_seed_count >= 1`.
+
+For CONCEPT_INTAKE, require `concept_text`.
 
 ### Node 2: Load GitHub source of truth
 
-Fetch current contents of:
+Load all source files required by the active route.
 
-#### Governance used by Ideation
+At minimum, normal full-path executions need:
+
+#### Governance
 
 - `Governance/ncs-brand-constitution.md`
 - `Governance/ncs-ideation-constitution.md`
 - `Governance/ncs-catalog-memory-standard.md`
 - `Governance/ncs-data-contract.md`
+- `Governance/ncs-story-development-standard.md`
+- `Governance/ncs-publication-integrity-standard.md`
+- `Governance/ncs-visual-constitution.md`
+- `Governance/ncs-social-asset-standard.md`
+- relationship / television / research governance when relevant
 
 #### Ideation prompts
 
-- all files under `Prompts/Ideation/`
+- active files under `Prompts/Ideation/`
+
+#### Production/package prompts
+
+- `Prompts/Generation/01-production-builder.system.md`
+- `Prompts/Generation/01-production-builder.user.md`
+- `Prompts/Generation/10-ig-asset-packet-builder.system.md`
+- `Prompts/Generation/10-ig-asset-packet-builder.user.md`
 
 #### Schemas
 
-- `Schemas/ideation-director.schema.json`
-- `Schemas/seed-batch.schema.json`
-- `Schemas/duplicate-audit.schema.json`
-- `Schemas/concept-curation.schema.json`
-- `Schemas/expanded-concept.schema.json`
-- `Schemas/development-select.schema.json`
+- active Ideation schemas
+- `Schemas/canon-bible.schema.json`
+- `Schemas/ig-asset-packet.schema.json`
 
-Fail the run if required source-of-truth files cannot be loaded.
-
-Do not silently substitute hard-coded stale prompt text.
+Fail when required source files cannot be loaded.
 
 ### Node 3: Read Ideas sheet
 
@@ -166,64 +239,42 @@ Read existing rows from `Ideas`.
 
 At minimum ingest:
 
-- `idea_id`
-- `created_at`
-- `status`
-- `ideation_mode`
-- `working_title`
-- `format`
-- `genre`
-- `creative_tags_json`
-- `premise`
-- `creative_kernel`
-- `fingerprint`
-- `duplicate_check_json`
-- `concept_score_json`
-- `human_notes`
+- idea identity and status
+- working concept fields
+- creative memory fields
+- duplicate and score fields
+- Development Packet
+- human notes
+- successful final fields when present
 
 Parse structured cells only when nonblank.
 
 ### Node 4: Build catalog context
 
-Use deterministic Code logic to calculate obvious counts and compact summaries, including:
+Use deterministic logic to calculate compact slate context such as:
 
 - recent format mix
 - recent primary genre mix
-- recent ideation mode usage
-- common arenas, settings, tones, or story engines when parseable
-- counts by ideation status
+- ideation-mode usage
+- common arenas, settings, tones, or engines when parseable
+- counts by lifecycle status
 
-Weight `DEVELOPMENT_SELECT` and `DEVELOP` more heavily when describing creative drift.
-
-`PROMISING` may inform context.
-
-`HOLD` should have less influence on slate drift.
-
-Do not attempt to infer subtle creative meaning with spreadsheet arithmetic.
+Weight active and recently successful concepts more heavily for drift awareness.
 
 ### Node 5: Build catalog memory digest
 
-Create a compact historical memory object for the Ideation Director and duplicate-audit stages.
+Create compact historical memory for the Ideation Director and duplicate auditing.
 
-For each prior nonduplicate row, the compact representation should normally include only:
+For each prior nonduplicate concept, prefer:
 
 - `idea_id`
-- `status`
-- `premise`
-- `creative_kernel`
-- `creative_tags_json.memory_signature` when present
-- a short human-note signal only when the note materially affects repetition or reuse
+- status
+- premise
+- creative kernel
+- normalized memory signature
+- only the human-note signal that materially affects repetition or reuse
 
-Do not pass long historical pitches.
-
-When this compressed catalog fits comfortably inside the model context budget, preserve complete catalog coverage for duplicate auditing.
-
-When it no longer fits comfortably, maintain two views:
-
-1. a compact Director digest emphasizing recent and creatively important rows for drift awareness
-2. a duplicate-audit memory assembled through staged retrieval or chunking so semantically similar concepts are not missed merely because they use different vocabulary
-
-The Seed Generator does not receive this digest by default.
+Do not pass full historical pitches unless genuinely necessary.
 
 ### Node 6: Ideation Director
 
@@ -233,38 +284,23 @@ Use:
 - `Prompts/Ideation/01-ideation-director.user.md`
 - `Schemas/ideation-director.schema.json`
 
-Inputs:
+Validate schema and count allocations.
 
-- target seed count
-- compact catalog context
-- catalog memory digest
-- human direction
-
-Validate:
-
-- output matches schema
-- `target_seed_count` echoes the requested value
-- mode-plan counts sum exactly to target seed count
-
-If validation fails, run one structure-only repair attempt using the validation error.
+Allow one structure-only repair.
 
 ### Node 7: Split mode plan
 
-Create one n8n item per Director room.
+Create one item per Director room with:
 
-Each item contains:
-
-- `ideation_mode`
-- `count`
-- `provocation`
-- `creative_permission`
+- ideation mode
+- requested count
+- provocation
+- creative permission
 - human direction
 
-Do not attach individual historical concepts or the catalog memory digest to Seed Generator items.
+### Node 8: Seed Generator
 
-### Node 8: Seed Generator, parallel and independent
-
-Run one Seed Generator call per room.
+Run independent room calls.
 
 Use:
 
@@ -272,112 +308,49 @@ Use:
 - `Prompts/Ideation/02-seed-generator.user.md`
 - `Schemas/seed-batch.schema.json`
 
-The parallel rooms must not see one another's outputs before generation. Independence is intentional and increases exploration.
+Rooms must not see one another's outputs before generation.
 
-Validate that each room returns exactly its requested seed count.
+Validate exact requested counts.
 
-If a room returns the wrong count or schema-invalid output, retry once with a repair instruction that preserves creative content where possible.
+Allow one structure-only repair.
 
-### Node 9: Merge seed batches
+### Node 9: Merge seeds
 
-Flatten all returned seeds into individual candidate items.
+Flatten all rooms into candidate items.
 
-Preserve:
+Preserve originating ideation mode and generation order.
 
-- originating `ideation_mode`
-- stable generation order within the run
-- seed-level `initial_possibilities` in n8n execution data for Curator and Expander use
+### Node 10: Reserve IDs and timestamps
 
-Validate total candidate count equals `target_seed_count` before continuing.
-
-### Node 10: Reserve idea IDs and timestamps
-
-Read all existing `idea_id` values.
-
-Parse the maximum numeric suffix from IDs matching `NCS-I-######`.
-
-Reserve the next contiguous block for the entire candidate batch before parallel downstream work.
-
-Example:
-
-Existing max: `NCS-I-000184`
-
-30 new candidates receive `NCS-I-000185` through `NCS-I-000214`.
-
-Assign one `created_at` ISO 8601 timestamp per candidate.
-
-Initial status is `RAW`.
+Reserve one contiguous `NCS-I-######` ID block for the full candidate batch.
 
 Do not use Sheet row count as the ID source.
 
-### Node 11: Canonicalize memory signatures and generate fingerprints
+### Node 11: Canonicalize memory signatures and hash
 
-For each candidate:
+Normalize the seed memory signature deterministically and generate SHA-256 in Code.
 
-1. take `normalized_signature`
-2. normalize strings to lowercase
-3. trim whitespace
-4. collapse repeated internal whitespace
-5. normalize empty values to null
-6. serialize using stable key ordering
-7. generate SHA-256 in a Code node
+The LLM never creates the fingerprint hash.
 
-The LLM must never generate the hash.
+### Node 12: Persist RAW candidates
 
-Merge the canonical normalized signature into `creative_tags_json` under `memory_signature`.
+Write every generated seed to the Sheet before later evaluation.
 
-Write the hash to `fingerprint`.
+Populate source fields only.
 
-### Node 12: Persist every raw candidate
+Keep `initial_possibilities` in execution memory rather than adding a new column.
 
-Write every generated seed to the `Ideas` Sheet before semantic auditing or curation.
+## 10. Phase B: Duplicate control and curation
 
-Populate:
+### Node 13: Seed-stage historical memory
 
-- `idea_id`
-- `created_at`
-- `status = RAW`
-- `ideation_mode`
-- `working_title`
-- `format`
-- `genre`
-- `creative_tags_json`
-- `premise`
-- `creative_kernel`
-- `why_exciting`
-- `fingerprint`
+Assemble the broadest compact comparison set that safely fits context.
 
-Leave later-stage fields blank.
+When needed, use staged retrieval or chunking.
 
-`initial_possibilities` remains in n8n execution data rather than adding another Sheet column.
+Do not use hash distance or vocabulary overlap as the sole similarity method.
 
-Persisting here ensures a later workflow failure does not erase the generated creative inventory.
-
-### Node 13: Assemble historical memory for seed-stage duplicate audit
-
-Build the broadest compact historical comparison set that safely fits the model context budget.
-
-If the compressed prior catalog fits comfortably, pass the complete nonduplicate catalog memory rather than relying on narrow keyword retrieval.
-
-If the catalog is too large, use staged retrieval or chunking. Retrieval signals may include:
-
-- exact fingerprint match
-- same or related genre
-- same arena
-- fields inside `memory_signature`
-- premise and creative-kernel language
-- status and recency
-- explicit human notes about resemblance
-
-Do not use SHA hash distance as similarity.
-
-Do not rely on token overlap alone. Two concepts can be dramatic reskins while using different nouns.
-
-Always include exact fingerprint collisions and strong canonical memory such as relevant `DEVELOPMENT_SELECT` rows.
-
-The exact retrieval or chunking implementation can evolve without changing the Sheet contract.
-
-### Node 14: Seed-stage Duplicate Auditor, batch
+### Node 14: Seed-stage Duplicate Auditor
 
 Use:
 
@@ -385,34 +358,17 @@ Use:
 - `Prompts/Ideation/03-duplicate-auditor.user.md`
 - `Schemas/duplicate-audit.schema.json`
 
-Inputs:
+Compare candidates against historical memory and one another.
 
-- entire current candidate batch
-- historical memory for comparison, complete or staged/chunked depending on catalog size
-- exact fingerprint collisions
+### Node 15: Write duplicate results
 
-The auditor compares:
+Persist the audit.
 
-- each candidate to the supplied historical memory
-- current candidates to one another
+Set true duplicates to `DUPLICATE`.
 
-Validate exactly one audit result per candidate `idea_id`.
-
-### Node 15: Write seed-stage duplicate results
-
-For every candidate:
-
-- write compact audit JSON to `duplicate_check_json`
-- if audit status is `DUPLICATE`, set Sheet status to `DUPLICATE`
-- if audit status is `CLEAR` or `OVERLAP`, keep status `RAW`
-
-Duplicates remain persisted but do not enter curation.
-
-If every current candidate is `DUPLICATE`, skip curation and downstream creative nodes and finish with the operational summary.
+Keep CLEAR and OVERLAP candidates eligible for curation.
 
 ### Node 16: Concept Curator
-
-Batch all nonduplicate candidates.
 
 Use:
 
@@ -420,41 +376,23 @@ Use:
 - `Prompts/Ideation/04-concept-curator.user.md`
 - `Schemas/concept-curation.schema.json`
 
-Inputs:
-
-- nonduplicate candidate batch, including seed-level `initial_possibilities`
-- human direction
-
-Validate exactly one result per input `idea_id`.
-
-Also validate scorecard/status consistency:
-
-- `DEVELOP` pairs with `would_develop = YES`
-- `PROMISING` pairs with `YES` or `MAYBE`
-- `HOLD` pairs with `MAYBE` or `NO`
-
-Repair structure or enum inconsistency once if needed. Do not rerun creative judgment merely to change a score.
+Judge creative potential without imposing a slate quota.
 
 ### Node 17: Write curation state
 
-For every curated candidate:
+Persist `concept_score_json`.
 
-- write `concept_score_json` from the Curator's `scorecard`
-- set `status` to `DEVELOP`, `PROMISING`, or `HOLD`
+Set status to:
 
-Do not impose a fixed number of `DEVELOP` concepts.
+- `DEVELOP`
+- `PROMISING`
+- `HOLD`
 
 ### Node 18: Filter DEVELOP
 
-Only rows marked `DEVELOP` enter Idea Expansion during the current run.
+Only `DEVELOP` candidates continue during the current execution.
 
-`PROMISING` and `HOLD` remain persisted for future use.
-
-If no concepts are marked `DEVELOP`, skip expansion, the second duplicate audit, and Development Selection. Finish with the operational summary.
-
-### Node 19: Idea Expander, parallel
-
-Run one call per `DEVELOP` concept.
+### Node 19: Idea Expander
 
 Use:
 
@@ -462,80 +400,33 @@ Use:
 - `Prompts/Ideation/05-idea-expander.user.md`
 - `Schemas/expanded-concept.schema.json`
 
-Inputs:
+Run one call per DEVELOP concept.
 
-- full seed object, including `initial_possibilities`
-- concept score
-- seed-stage duplicate context
-- any `human_notes` on that exact row
+### Node 20: Write expanded concept and refresh fingerprint
 
-Do not expose unrelated human notes from other rows.
+Persist expanded concept fields.
 
-### Node 20: Write expanded fields and refresh memory signature
+Rebuild normalized memory signature and deterministic fingerprint because expansion may materially change the concept.
 
-For each expanded concept, write back:
+### Node 21: Expanded-stage historical memory
 
-- `working_title`
-- `format`
-- `genre`
-- `premise`
-- `creative_kernel`
-- `why_exciting`
-- `short_pitch`
-- `characters_json`
-- `story_core_json`
-- `signature_scenes_json`
-- `interrogation_json`
+Build the richer comparison set using expanded concepts.
 
-Then:
+Include other current-run expanded concepts for same-run comparison.
 
-1. canonicalize the Expander's new `normalized_signature` using the same rules as Node 11
-2. merge it into `creative_tags_json.memory_signature`
-3. preserve the Expander's other `creative_tags` values
-4. regenerate SHA-256
-5. overwrite `fingerprint`
+### Node 22: Expanded-stage Duplicate Auditor
 
-Do not overwrite `human_notes`.
+Reuse Duplicate Auditor prompt and schema on expanded concepts.
 
-This refresh is mandatory because expansion may materially change the idea.
+### Node 23: Write expanded duplicate result
 
-### Node 21: Assemble expanded-stage historical memory
+Set true duplicates to `DUPLICATE`.
 
-Repeat the same quality-first memory strategy used at Node 13, now using the richer expanded concept and refreshed signature.
+Keep CLEAR and OVERLAP concepts at `DEVELOP` for Development Selection.
 
-When complete compressed catalog coverage fits, use it. Otherwise use staged retrieval or chunking without relying on vocabulary alone.
-
-Also include the other expanded concepts from the current run for same-run comparison.
-
-### Node 22: Expanded-stage Duplicate Auditor, batch
-
-Reuse:
-
-- `Prompts/Ideation/03-duplicate-auditor.system.md`
-- `Prompts/Ideation/03-duplicate-auditor.user.md`
-- `Schemas/duplicate-audit.schema.json`
-
-Inputs:
-
-- expanded current-run candidate batch
-- expanded-stage historical memory
-- refreshed exact fingerprint collisions
-
-Validate exactly one result per expanded `idea_id`.
-
-### Node 23: Write expanded-stage duplicate results
-
-For every expanded concept:
-
-- overwrite `duplicate_check_json` with the latest audit
-- if status is `DUPLICATE`, set Sheet status to `DUPLICATE`
-- if status is `CLEAR` or `OVERLAP`, keep status `DEVELOP` for Development Selection
-
-If every expanded concept is now `DUPLICATE`, skip Development Selection and finish with the operational summary.
+## 11. Phase C: Development Select
 
 ### Node 24: Development Selector
-
-Batch every expanded nonduplicate concept.
 
 Use:
 
@@ -545,101 +436,326 @@ Use:
 
 Inputs:
 
-- expanded concepts
+- expanded surviving concepts
 - latest duplicate audits
-- compact catalog context
-- a map of nonblank `human_notes` for only these candidate IDs
+- compact slate context
+- relevant human notes
 - human direction
 
-There is no default count target.
+There is no default selection count.
 
-The Selector may return any number of `DEVELOPMENT_SELECT` decisions supported by the quality of the batch.
+### Node 25: Write Development Select
 
-### Node 25: Write final ideation state
-
-For each Development Selector decision:
+For each decision:
 
 - set status to `DEVELOPMENT_SELECT`, `PROMISING`, or `HOLD`
-- if `DEVELOPMENT_SELECT`, write `development_packet_json`
-- if not selected, leave `development_packet_json` blank
+- write `development_packet_json` only for selected concepts
 
-Never overwrite a pre-existing nonblank Development Packet without an explicit re-development action.
+Never overwrite a pre-existing nonblank Development Packet without explicit re-development action.
 
-### Node 26: End summary
+Development Select is no longer the terminal point of the normal workflow.
 
-Return a concise execution summary containing:
+Every newly selected concept should proceed directly into Phase D during the same execution unless an explicit debug / stop-after-selection control is active.
 
-- total seeds generated
-- seed-stage duplicate count
-- curator DEVELOP count
-- curator PROMISING count
-- curator HOLD count
-- expanded-stage duplicate count
-- final DEVELOPMENT_SELECT count
-- final PROMISING count among expanded concepts
-- final HOLD count among expanded concepts
-- selected idea IDs and working titles
-- any schema repair attempts
-- any item-level errors
+## 12. Phase D: Production development
 
-The summary is operational. It is not another creative review stage.
+Process each newly selected concept independently.
 
-## 9. Structured-output repair
+A failure on one selected concept should not corrupt or roll back successfully packaged siblings.
 
-For any LLM node returning invalid JSON or schema-invalid output:
+### Node 26: Production Builder
 
-1. retry once using the original response plus the exact validation error
+Use:
+
+- `Prompts/Generation/01-production-builder.system.md`
+- `Prompts/Generation/01-production-builder.user.md`
+- `Schemas/canon-bible.schema.json`
+
+Inputs:
+
+- `development_packet_json`
+- relevant `human_notes`
+- optional research packet
+
+Output:
+
+`canon_bible_json`
+
+The Production Builder owns:
+
+- final title
+- final format
+- genre
+- logline
+- core promise
+- creative kernel
+- world
+- characters
+- central relationships
+- complete story
+- actual ending
+- signature scenes
+- genre delivery
+- public unresolved value
+- public genre demonstrations
+- series engine and season material when relevant
+- continuity facts
+
+No article is written.
+
+No actor-casting call is required.
+
+No score is created.
+
+Validate against `Schemas/canon-bible.schema.json`.
+
+Allow one structure-only repair when appropriate.
+
+### Optional research branch
+
+Research is not a default step.
+
+Only run Research Grounder when:
+
+- explicit research questions were supplied, or
+- a configured high-confidence routing rule identifies factual uncertainty that materially affects canon
+
+If research is run:
+
+1. generate factual research packet
+2. rerun Production Builder once with that packet
+3. freeze the second canon
+
+Do not create recursive research loops.
+
+### Node 27: Render Production Treatment
+
+Create a clean human-readable treatment deterministically from final Canon Bible.
+
+Do not spend another model call.
+
+Include:
+
+- final title
+- format and genre
+- logline
+- core promise
+- creative kernel
+- world
+- characters
+- central relationships
+- complete internal story
+- signature scenes
+- genre delivery
+- series engine / season material when relevant
+- continuity facts
+
+Keep the rendered treatment in execution memory until the social packet also validates.
+
+## 13. Phase E: Social release packaging
+
+### Node 28: Social Release Builder
+
+Use:
+
+- final Canon Bible
+- optional `human_campaign_notes`
+- current brand / visual / social / integrity governance
+- `Prompts/Generation/10-ig-asset-packet-builder.system.md`
+- `Prompts/Generation/10-ig-asset-packet-builder.user.md`
+- `Schemas/ig-asset-packet.schema.json`
+
+Output:
+
+`ig_packet_json`
+
+Do not pass an article.
+
+Do not pass `ncs_score`.
+
+The packet must be ready to paste verbatim into a separate manual asset-generation chat.
+
+### Node 29: IG Packet QA
+
+Validate the exact object that will be persisted.
+
+Require:
+
+- `version = ncs_ig_v3`
+- final title matches Canon Bible
+- format matches Canon Bible
+- FILM -> MOVIE IDEA
+- SERIES / LIMITED_SERIES -> SHOW IDEA
+- exactly three slides
+- Slide 1 type = `hook`
+- Slide 2 type = `plot`
+- Slide 3 type = `poster`
+- every slide has `footer_brand = Never Coming Soon`
+- page numbers exactly `01 / 03`, `02 / 03`, and `03 / 03`
+- Slide 1 hook copy nonblank
+- Slide 2 section label = `THE PLOT`
+- Slide 2 body copy nonblank and paragraph-ready
+- Slide 3 poster fields and image prompt nonblank
+- caption nonblank
+- no em dash character in public copy
+- no backstage technology language
+- no false real-world participation claims
+
+Allow one packet-only structure/integrity repair.
+
+Do not rerun Production Builder merely because packet formatting failed.
+
+If packet validation remains invalid, leave the row in `DEVELOPMENT_SELECT`.
+
+## 14. Phase F: Durable delivery
+
+### Node 30: Persist Production Treatment
+
+Only after Canon Bible and IG Packet both validate, write:
+
+`Never Coming Soon / Drafts / [FINAL TITLE] / [FINAL TITLE] - Production Treatment`
+
+The legacy Sheet field `draft_url` points to this treatment.
+
+Avoid creating orphan treatment documents for failed packet runs when practical.
+
+### Node 31: Final Ideas update
+
+After Drive persistence succeeds, update the same Ideas row with:
+
+- `final_title`
+- `draft_url`
+- `ig_packet_json`
+- `status = DRAFTED`
+
+Do not require or generate `ncs_score`.
+
+If a historical score already exists, leave it untouched.
+
+Never populate `published_url`.
+
+Do not overwrite source Ideation fields with final-production choices.
+
+## 15. Meaning of DRAFTED
+
+`DRAFTED` means:
+
+- the concept survived Ideation and Development Selection
+- complete internal production canon was built successfully
+- a durable human-readable production treatment exists
+- a schema-valid three-slide social release packet exists
+- the production is ready for manual asset generation and human judgment
+
+It does not mean:
+
+- a long-form article exists
+- an editorial score exists
+- actors have been cast
+- social assets have been rendered
+- the production is approved for publication
+
+## 16. Manual asset-generation boundary
+
+n8n stops at `ig_packet_json`.
+
+Do not build image generation, image editing, slide composition, or carousel export nodes into this workflow.
+
+Asset generation is intentionally manual because it is high-value creative work.
+
+The packet must therefore contain enough exact copy and visual direction that the manual asset-generation chat does not need to make editorial decisions.
+
+## 17. Optional later long-form path
+
+Long-form editorial is outside the normal unified workflow.
+
+If a human later wants an article, website feature, or email edition:
+
+1. load the frozen Production Treatment / Canon Bible
+2. run one purpose-built long-form writer
+3. optionally review or revise when the artifact warrants the cost
+4. persist separately
+
+Do not make long-form writing a prerequisite for social packaging.
+
+## 18. Structured-output repair
+
+For schema-invalid model output:
+
+1. retry once using the original response plus exact validation error
 2. instruct the same model to repair structure only
-3. do not invite substantive creative rewriting unless a required field is genuinely missing
+3. preserve creative content where possible
 
-If the repair fails:
+If repair fails:
 
 - record the item-level error
-- continue the run when downstream logic can safely proceed
-- fail the run only when the missing output blocks the entire batch or would corrupt state
+- continue siblings when safe
+- never write malformed JSON to durable fields
 
-## 10. Google Sheets write rules
+## 19. Google Sheets write rules
 
-- use `idea_id` as the update key
+- use `idea_id` as update key
 - preserve `created_at`
 - never erase `human_notes`
 - stringify JSON exactly once
 - leave not-yet-produced structured cells blank
-- use retry with exponential backoff for transient write failures
 - do not regenerate creative content merely because persistence failed
+- do not write partial final fields before the full selected-production package succeeds
 
-## 11. Human authority
+## 20. Failure behavior
 
-`human_notes` is human-owned.
+Every generated seed should remain persisted with an explicit lifecycle state whenever technically possible.
 
-Human direction supplied at trigger time has high authority for that run.
+For a selected concept:
 
-Human notes can override later duplicate or selection judgments through an explicit future re-development action.
+- if Production Builder fails, leave it `DEVELOPMENT_SELECT`
+- if IG Packet fails validation, leave it `DEVELOPMENT_SELECT`
+- if Drive persistence fails, leave it `DEVELOPMENT_SELECT`
+- only write final fields and `DRAFTED` after the complete package succeeds
 
-The workflow should assist judgment, not create irreversible editorial law.
+One selected concept's failure should not erase successfully completed siblings.
 
-## 12. No hidden killing
+## 21. Execution summary
 
-Do not silently drop concepts.
+Return one operational summary containing:
 
-Every generated seed should end the run persisted with an explicit status whenever technically possible.
+### Ideation
 
-Development Select is not proof that the final production will publish.
+- total seeds generated
+- seed-stage duplicate count
+- curator DEVELOP / PROMISING / HOLD counts
+- expanded-stage duplicate count
+- final Development Select count
 
-Generation may discover a better version or fail to make the concept work. The human editor ultimately decides whether a fully developed production is good enough.
+### Production packaging
 
-## 13. V1.1 non-goals
+- selected idea IDs attempted
+- Production Builder successes / failures
+- research branches used
+- IG Packet validation successes / failures
+- treatment URLs
+- rows advanced to DRAFTED
 
-Do not build these unless later requested:
+### Diagnostics
 
+- schema repair attempts
+- item-level errors
+- unresolved hard blockers
+
+Do not run another creative review merely to generate the summary.
+
+## 22. Non-goals
+
+Do not build by default:
+
+- separate Generation n8n workflow
+- automatic asset generation
+- article drafting
+- actor-casting agent
+- Forensic scoring
+- automatic revision loops
 - vector database
-- multi-tab Sheet architecture
-- dedicated actor registry
-- dedicated character registry
-- autonomous research on every seed
-- separate title agent
-- separate casting agent
-- automatic Generation workflow trigger
-- automatic scheduled resurrection of HOLD ideas
+- separate Productions Sheet
+- durable internal-agent-output columns
+- automatic publication
 
-V1.1 should remain legible, debuggable, and creatively focused.
+The unified workflow should remain legible, debuggable, and cost-conscious.

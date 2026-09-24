@@ -1,1 +1,190 @@
-{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"NCS IG Asset Packet","type":"object","additionalProperties":false,"required":["version","title","format","genre","campaign_brief","logo_treatment","caption","slide_1","slide_2","slide_3"],"properties":{"version":{"type":"string","enum":["ncs_ig_v1"]},"title":{"type":"string","minLength":1},"format":{"type":"string","enum":["FILM","SERIES","LIMITED_SERIES"]},"genre":{"type":"string","minLength":1},"campaign_brief":{"type":"string","minLength":1},"logo_treatment":{"type":"string","minLength":1},"caption":{"type":"string","minLength":1,"maxLength":500},"slide_1":{"type":"object","additionalProperties":false,"required":["type","never_coming_soon_presents","title","tagline","rating","billing_block","art_direction","image_prompt"],"properties":{"type":{"type":"string","enum":["cover_poster"]},"never_coming_soon_presents":{"type":"string","enum":["Never Coming Soon presents"]},"title":{"type":"string","minLength":1},"tagline":{"type":"string","minLength":1},"rating":{"type":"string","minLength":1},"billing_block":{"type":"string","minLength":1},"art_direction":{"type":"string","minLength":1},"image_prompt":{"type":"string","minLength":1}}},"slide_2":{"type":"object","additionalProperties":false,"required":["type","title","header","body_copy","design_direction","image_prompt"],"properties":{"type":{"type":"string","enum":["premise"]},"title":{"type":"string","minLength":1},"header":{"type":"string","minLength":1},"body_copy":{"type":"string","minLength":1},"design_direction":{"type":"string","minLength":1},"image_prompt":{"type":"string","minLength":1}}},"slide_3":{"type":"object","additionalProperties":false,"required":["type","logo_treatment","hollywood_line","newsletter_line","cta","design_direction","image_prompt"],"properties":{"type":{"type":"string","enum":["ncs_close"]},"logo_treatment":{"type":"string","minLength":1},"hollywood_line":{"type":"string","minLength":1},"newsletter_line":{"type":"string","enum":["THE FULL STORY IN NEVER COMING SOON"]},"cta":{"type":"string","enum":["LINK IN BIO"]},"design_direction":{"type":"string","minLength":1},"image_prompt":{"type":"string","minLength":1}}}}}
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NCS IG Asset Packet v3",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "title",
+    "format",
+    "idea_label",
+    "genre",
+    "caption",
+    "slide_1",
+    "slide_2",
+    "slide_3"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": ["ncs_ig_v3"]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "format": {
+      "type": "string",
+      "enum": ["FILM", "SERIES", "LIMITED_SERIES"]
+    },
+    "idea_label": {
+      "type": "string",
+      "enum": ["MOVIE IDEA", "SHOW IDEA"]
+    },
+    "genre": {
+      "type": "string",
+      "minLength": 1
+    },
+    "caption": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 700
+    },
+    "slide_1": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "label",
+        "title",
+        "hook_copy",
+        "layout_direction",
+        "footer_brand",
+        "page_number"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["hook"]
+        },
+        "label": {
+          "type": "string",
+          "enum": ["MOVIE IDEA", "SHOW IDEA"]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hook_copy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "layout_direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "footer_brand": {
+          "type": "string",
+          "enum": ["Never Coming Soon"]
+        },
+        "page_number": {
+          "type": "string",
+          "enum": ["01 / 03"]
+        }
+      }
+    },
+    "slide_2": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "section_label",
+        "title_kicker",
+        "body_copy",
+        "layout_direction",
+        "footer_brand",
+        "page_number"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["plot"]
+        },
+        "section_label": {
+          "type": "string",
+          "enum": ["THE PLOT"]
+        },
+        "title_kicker": {
+          "type": "string",
+          "minLength": 1
+        },
+        "body_copy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1500
+        },
+        "layout_direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "footer_brand": {
+          "type": "string",
+          "enum": ["Never Coming Soon"]
+        },
+        "page_number": {
+          "type": "string",
+          "enum": ["02 / 03"]
+        }
+      }
+    },
+    "slide_3": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "title",
+        "tagline",
+        "rating",
+        "format_descriptor",
+        "footer_copy",
+        "art_direction",
+        "image_prompt",
+        "footer_brand",
+        "page_number"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["poster"]
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "tagline": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rating": {
+          "type": "string",
+          "minLength": 1
+        },
+        "format_descriptor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "footer_copy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "art_direction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "image_prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "footer_brand": {
+          "type": "string",
+          "enum": ["Never Coming Soon"]
+        },
+        "page_number": {
+          "type": "string",
+          "enum": ["03 / 03"]
+        }
+      }
+    }
+  }
+}

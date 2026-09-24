@@ -21,7 +21,8 @@ Avoid the common failure modes: generic AI key art; every character arranged in 
 - Make the rating clear, plausible, and consistent in treatment. Use a small standardized rating/format area near the bottom if the packet specifies both. Keep it legible without making it a second headline.
 - A restrained production-style footer or billing line can help sell the artifact. Use one consistent typographic treatment and baseline across a campaign, adapted for contrast. Remove verbose bottom-border prose and unnecessary descriptors. Never claim a real studio, distributor, filmmaker, shoot location, or release that the packet has not authorized.
 - Film-specific typography is welcome. A recurring NCS presentation cue can quietly sign the poster but should never overpower its own fictional movie.
-- “NOW PLAYING NOWHERE” or similar winks are optional production-specific decisions only when authorized by packet or user. “LINK IN BIO,” comment prompts, and pagination do not belong on the poster by default.
+- The v3 carousel requires a tiny **Never Coming Soon** footer and **03 / 03** page marker on the poster. Keep them extremely restrained and separate from the fictional poster furniture so the artifact still feels convincing.
+- “NOW PLAYING NOWHERE” or similar winks are optional production-specific decisions only when authorized by packet or user. “LINK IN BIO” and comment prompts do not belong on the poster.
 
 ## Final poster test
 
