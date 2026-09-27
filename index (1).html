@@ -1,0 +1,1328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Never Coming Soon Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>
+/* ==================================================================
+   Never Coming Soon internal console.
+   One file. Open it, set your endpoints, use it.
+
+   Flow: prompt -> sparks -> you pick one -> development.
+   Nothing expensive runs until you click Develop this.
+   ================================================================== */
+
+:root{
+  --navy:#08192F;
+  --raised:#0C2038;
+  --panel:#0E2440;
+  --slate:#202632;
+  --ivory:#F5EEDF;
+  --reel:#F24B2C;
+  --cobalt:#315CFF;
+
+  --dim:rgba(245,238,223,.62);
+  --faint:rgba(245,238,223,.42);
+  --line:rgba(245,238,223,.12);
+
+  --sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Libre Baskerville",Georgia,serif;
+  --t:160ms cubic-bezier(.2,0,.2,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{color-scheme:dark;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--navy);color:var(--ivory);
+  font:15px/1.5 var(--sans);-webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{margin:0;font-weight:400}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+button:disabled{cursor:not-allowed;opacity:.4}
+input,textarea,select{font:inherit;color:var(--ivory)}
+input::placeholder,textarea::placeholder{color:var(--faint)}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}
+::selection{background:rgba(49,92,255,.45)}
+.hide{display:none !important}
+.dim{color:var(--dim)}
+.faint{color:var(--faint)}
+
+/* Side padding only. A padding shorthand here would cancel the top padding
+   that spaces the sections apart, since .wrap sits on the same elements. */
+.wrap{max-width:1140px;margin:0 auto;padding-left:24px;padding-right:24px}
+@media(min-width:900px){.wrap{padding-left:40px;padding-right:40px}}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  height:34px;padding:0 13px;font-size:13.5px;white-space:nowrap;
+  border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--ivory);
+  transition:background-color var(--t),border-color var(--t),color var(--t);
+}
+.btn:hover:not(:disabled){background:rgba(255,255,255,.06)}
+.btn.primary{background:var(--reel);border-color:transparent;color:var(--navy);font-weight:600}
+.btn.primary:hover:not(:disabled){background:#ff5b3c}
+.btn.ghost{border-color:transparent;color:var(--dim)}
+.btn.ghost:hover:not(:disabled){color:var(--ivory);background:rgba(255,255,255,.05)}
+.btn.danger{border-color:rgba(242,75,44,.45);color:var(--reel)}
+.btn.danger:hover:not(:disabled){background:rgba(242,75,44,.12)}
+.btn.lg{height:46px;padding:0 24px;font-size:15px}
+.btn.sm{height:28px;padding:0 9px;font-size:12.5px}
+
+/* ---------- header ---------- */
+header{border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px}
+.mark{font-family:var(--serif);font-size:15px;line-height:1.12;letter-spacing:.02em;user-select:none}
+.mark .s{color:var(--reel)}
+.lock{display:flex;gap:18px;align-items:flex-start}
+.tag{font-size:13px;color:var(--dim);max-width:32ch;padding-top:2px}
+@media(max-width:700px){.tag{display:none}}
+.tools{display:flex;align-items:center;gap:10px}
+.live{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#9db1ff}
+@media(max-width:620px){.live{display:none}}
+.dot{width:7px;height:7px;border-radius:99px;background:var(--cobalt);display:inline-block;flex:none;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.notice{border-top:1px solid var(--line);background:rgba(49,92,255,.08)}
+.notice .wrap{padding-top:9px;padding-bottom:9px;font-size:12.5px;color:rgba(245,238,223,.8);display:flex;flex-wrap:wrap;gap:8px}
+.notice button{background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:2px;color:inherit}
+
+/* ---------- sections ---------- */
+section{padding-top:56px}
+@media(min-width:900px){section{padding-top:72px}}
+section:first-of-type{padding-top:44px}
+main{padding-bottom:90px}
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:16px}
+.head h2{font-family:var(--serif);font-size:22px;line-height:1.25}
+.head p{font-size:13.5px;color:var(--dim);margin-top:5px;max-width:62ch}
+
+/* ---------- create ---------- */
+.big{font-family:var(--serif);font-size:30px;line-height:1.15;letter-spacing:-.01em}
+@media(min-width:900px){.big{font-size:37px}}
+.sub{font-size:14px;color:var(--dim);margin-top:11px;max-width:60ch}
+.card{border:1px solid var(--line);border-radius:8px;background:var(--raised)}
+.box{margin-top:24px;padding:20px}
+@media(min-width:900px){.box{padding:24px}}
+.row1{display:flex;flex-direction:column;gap:14px}
+@media(min-width:1000px){.row1{flex-direction:row;align-items:flex-end}}
+#direction{
+  flex:1;resize:none;min-height:50px;max-height:300px;padding:13px 15px;
+  font-size:16px;line-height:1.55;background:rgba(32,38,50,.4);
+  border:1px solid var(--line);border-radius:6px;transition:border-color var(--t);
+}
+#direction:focus{border-color:rgba(49,92,255,.5)}
+.lab{display:block;font-size:12.5px;color:var(--dim);margin-bottom:7px}
+.fields{display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px 30px;margin-top:22px}
+.seg{display:inline-flex;padding:3px;gap:2px;background:rgba(32,38,50,.4);border:1px solid var(--line);border-radius:6px}
+.seg button{height:30px;padding:0 12px;font-size:13px;border:0;border-radius:4px;background:transparent;color:var(--dim);transition:background-color var(--t),color var(--t)}
+.seg button:hover{color:var(--ivory)}
+.seg button[aria-checked="true"]{background:var(--ivory);color:var(--navy);font-weight:500}
+.inp{
+  width:100%;height:38px;padding:0 12px;font-size:14px;background:rgba(32,38,50,.4);
+  border:1px solid var(--line);border-radius:6px;transition:border-color var(--t);
+}
+.inp:focus{border-color:rgba(49,92,255,.5)}
+select.inp{padding-right:26px}
+.disc{display:inline-flex;align-items:center;gap:6px;margin-top:22px;padding:0;border:0;background:none;font-size:13px;color:var(--dim)}
+.disc:hover{color:var(--ivory)}
+.caret{font-size:10px;transition:transform var(--t);display:inline-block}
+.disc[aria-expanded="true"] .caret{transform:rotate(90deg)}
+#advanced{display:grid;gap:22px;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+@media(min-width:900px){#advanced{grid-template-columns:minmax(0,250px) minmax(0,1fr)}}
+.help{font-size:12px;color:var(--faint);margin-top:7px;line-height:1.6;max-width:46ch}
+.after{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:18px}
+.after span{font-size:13px;color:var(--dim)}
+
+/* ---------- chips ---------- */
+.chip{display:inline-flex;align-items:center;padding:3px 8px;font-size:11.5px;line-height:1;border:1px solid transparent;border-radius:4px;background:rgba(32,38,50,.75);color:rgba(245,238,223,.8)}
+.chip.blue{background:rgba(49,92,255,.14);border-color:rgba(49,92,255,.32);color:#9db1ff}
+.chip.orange{background:rgba(242,75,44,.1);border-color:rgba(242,75,44,.4);color:#ff8f78}
+.chip.quiet{background:transparent;border-color:rgba(245,238,223,.1);color:var(--faint)}
+.chip.strike{text-decoration:line-through}
+.chip.sample{background:rgba(242,75,44,.12);border-color:rgba(242,75,44,.4);color:#ff8f78;letter-spacing:.05em;font-weight:500}
+
+/* ---------- filter toolbar ---------- */
+.tool{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px;align-items:flex-end}
+.tool .f{min-width:130px}
+.tool .f.grow{flex:1;min-width:200px}
+.tool .f label{display:block;font-size:11.5px;color:var(--faint);margin-bottom:5px}
+.tool .inp{height:34px;font-size:13.5px}
+
+/* ---------- sparks ---------- */
+.sparks{display:grid;gap:11px;grid-template-columns:1fr}
+@media(min-width:640px){.sparks{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1140px){.sparks{grid-template-columns:repeat(5,minmax(0,1fr))}}
+.spark{display:flex;flex-direction:column;padding:15px;border:1px solid var(--line);border-radius:8px;background:var(--raised);transition:border-color var(--t)}
+.spark:hover{border-color:rgba(245,238,223,.22)}
+.spark .wt{font-family:var(--serif);font-size:14.5px;line-height:1.3;margin-bottom:7px}
+.spark .c{flex:1;font-size:14px;line-height:1.5}
+.spark .why{font-size:12.5px;line-height:1.5;color:var(--dim);margin-top:9px}
+.spark .m{display:flex;flex-wrap:wrap;gap:5px;margin-top:13px}
+/* Five columns inside 1140px leaves a card too narrow for two buttons side by
+   side, so they stack deliberately rather than wrapping by accident. */
+.spark .a{display:grid;gap:6px;margin-top:12px}
+.spark .a .btn{height:30px;padding:0 9px;font-size:12.5px;width:100%}
+.blank{padding:26px 0;font-size:13.5px;color:var(--dim)}
+
+/* ---------- rows ---------- */
+.rows{overflow:hidden}
+.row{border-bottom:1px solid var(--line);transition:background-color var(--t)}
+.row:last-child{border-bottom:0}
+.row:hover{background:rgba(255,255,255,.015)}
+.row.open{background:rgba(255,255,255,.022)}
+.rmain{display:grid;gap:14px;padding:14px 18px}
+@media(min-width:1000px){.rmain{grid-template-columns:minmax(0,1fr) auto;align-items:start}}
+.row h3{font-family:var(--serif);font-size:17px;line-height:1.35}
+.tbtn{display:block;padding:0;border:0;background:none;text-align:left}
+.tbtn:hover h3{color:#fff}
+/* A long premise is clamped so one row never becomes a wall of text. */
+.prem{
+  font-size:13.5px;line-height:1.55;color:var(--dim);margin-top:5px;max-width:76ch;
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+.meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:10px;font-size:11.5px;color:var(--faint)}
+.acts{display:flex;flex-wrap:wrap;align-items:center;gap:7px}
+@media(min-width:1000px){.acts{justify-content:flex-end}}
+.note{font-size:12px;margin-top:8px;line-height:1.6;max-width:70ch}
+.note.bad{color:#ff8f78}
+.note.mute{color:var(--faint)}
+.detail{padding:0 18px 18px;display:grid;gap:14px;max-width:80ch}
+.dlab{font-size:11.5px;color:var(--faint);margin-bottom:3px}
+.dval{font-size:13.5px;line-height:1.6;color:rgba(245,238,223,.82)}
+.dval.blue{color:#9db1ff}
+.empty{padding:26px 18px;font-size:13.5px;color:var(--dim)}
+
+/* ---------- pager ---------- */
+.pager{display:flex;align-items:center;gap:12px;margin-top:12px;font-size:12.5px;color:var(--dim)}
+.pager button{width:32px;height:30px;border:1px solid var(--line);border-radius:6px;background:transparent;color:var(--ivory);transition:background-color var(--t)}
+.pager button:hover:not(:disabled){background:rgba(255,255,255,.06)}
+
+/* ---------- overlays ---------- */
+.scrim{position:fixed;inset:0;z-index:50;display:flex}
+.scrim .back{position:absolute;inset:0;border:0;padding:0;background:rgba(8,25,47,.8);backdrop-filter:blur(2px)}
+.modal{position:relative;margin:auto;width:100%;max-width:450px;padding:22px;border:1px solid var(--line);border-radius:8px;background:var(--panel);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.modal h3{font-family:var(--serif);font-size:19px;line-height:1.35}
+.modal p{font-size:13.5px;line-height:1.6;color:var(--dim);margin-top:11px}
+.modal .a{display:flex;justify-content:flex-end;gap:8px;margin-top:22px}
+.drawer{position:relative;margin-left:auto;height:100%;width:100%;max-width:520px;padding:24px;overflow-y:auto;border-left:1px solid var(--line);background:var(--panel)}
+.drawer h2{font-family:var(--serif);font-size:21px;line-height:1.35;margin-top:4px}
+textarea.big-note{width:100%;min-height:200px;resize:vertical;padding:12px 14px;font-size:14px;line-height:1.6;background:rgba(32,38,50,.4);border:1px solid var(--line);border-radius:6px}
+textarea.big-note:focus{border-color:rgba(49,92,255,.5)}
+.slide{border:1px solid var(--line);border-radius:6px;padding:14px;display:grid;gap:11px}
+.slide .sh{display:flex;align-items:baseline;justify-content:space-between}
+.slide .sh h3{font-family:var(--serif);font-size:15px}
+.fval{white-space:pre-line;line-height:1.6;font-size:13.5px;color:rgba(245,238,223,.85)}
+.fval.mute{color:rgba(245,238,223,.55)}
+.warn{border:1px solid rgba(242,75,44,.32);background:rgba(242,75,44,.07);border-radius:6px;padding:14px}
+pre.raw{max-height:300px;overflow:auto;border:1px solid var(--line);background:rgba(8,25,47,.6);border-radius:6px;padding:12px;font-size:11.5px;line-height:1.6;color:rgba(245,238,223,.72)}
+
+/* ---------- toast ---------- */
+#toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:60;max-width:min(600px,calc(100vw - 32px))}
+#toast .in{padding:12px 16px;font-size:13.5px;line-height:1.6;border:1px solid rgba(49,92,255,.35);border-radius:6px;background:var(--panel);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+#toast.bad .in{border-color:rgba(242,75,44,.45);color:#ffb3a1}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:1ms !important;animation:none !important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <div class="lock">
+      <div class="mark"><div>Never</div><div>Coming</div><div class="s">Soon</div></div>
+      <p class="tag">The best movies and shows that don&rsquo;t exist.</p>
+    </div>
+    <div class="tools">
+      <div class="live hide" id="live"><span class="dot"></span><span id="liveText"></span></div>
+      <button class="btn" id="btnEndpoints">Endpoints</button>
+      <button class="btn" id="btnRefresh">Refresh</button>
+    </div>
+  </div>
+  <div class="notice hide" id="notice">
+    <div class="wrap"><span id="noticeText"></span><button id="noticeLink">Set endpoints</button></div>
+  </div>
+</header>
+
+<main>
+  <!-- 1. CREATE -->
+  <section class="wrap" aria-labelledby="h-create">
+    <h1 class="big" id="h-create">Explore an idea</h1>
+    <p class="sub">A word, a mood, a whole brief. You get five concepts back. Nothing is written anywhere until you develop one.</p>
+
+    <div class="card box">
+      <div class="row1">
+        <textarea id="direction" rows="1" aria-label="Creative direction" placeholder="a romantic comedy set around season-ticket holders"></textarea>
+        <button class="btn primary lg" id="btnExplore" disabled style="min-width:186px">Generate 5 concepts</button>
+      </div>
+
+      <div class="fields">
+        <div>
+          <span class="lab">Format</span>
+          <div class="seg" role="radiogroup" aria-label="Format" id="segFormat"></div>
+        </div>
+        <div style="min-width:200px">
+          <label class="lab" for="genre">Genre</label>
+          <input class="inp" id="genre" list="genres" placeholder="Any" autocomplete="off" />
+          <datalist id="genres"></datalist>
+        </div>
+      </div>
+
+      <button class="disc" id="btnAdvanced" aria-expanded="false" aria-controls="advanced"><span class="caret">&#9656;</span>Advanced</button>
+      <div id="advanced" class="hide">
+        <div>
+          <label class="lab" for="mode">Ideation mode</label>
+          <select class="inp" id="mode"></select>
+          <p class="help">Auto lets the generator spread the five across several modes.</p>
+        </div>
+        <div>
+          <span class="lab">Anchor strength</span>
+          <div class="seg" role="radiogroup" aria-label="Anchor strength" id="segAnchor"></div>
+          <p class="help" id="anchorHelp"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="after">
+      <button class="btn" id="btnFresh">5 fresh ideas</button>
+      <span>No direction. Just show me something.</span>
+    </div>
+  </section>
+
+  <!-- Concepts -->
+  <section class="wrap" aria-labelledby="h-sparks">
+    <div class="head">
+      <div><h2 id="h-sparks">Concepts</h2><p>Disposable until you pick one. Develop this is what starts real work.</p></div>
+    </div>
+    <div class="sparks" id="sparks"></div>
+    <p class="blank hide" id="sparksBlank">Generate five concepts to start.</p>
+  </section>
+
+  <!-- 2. IDEAS -->
+  <section class="wrap" aria-labelledby="h-ideas">
+    <div class="head"><div><h2 id="h-ideas">Ideas</h2><p id="ideasSub"></p></div></div>
+    <div class="tool" id="ideasTool"></div>
+    <div class="card rows" id="ideas"></div>
+    <div class="pager" id="ideasPager"></div>
+  </section>
+
+  <!-- 3. READY -->
+  <section class="wrap" aria-labelledby="h-ready">
+    <div class="head"><div><h2 id="h-ready">Ready</h2><p id="readySub"></p></div></div>
+    <div class="tool" id="readyTool"></div>
+    <div class="card rows" id="ready"></div>
+    <div class="pager" id="readyPager"></div>
+  </section>
+</main>
+
+<div id="overlay"></div>
+<div id="toast" class="hide" role="status"><div class="in"></div></div>
+
+<script>
+"use strict";
+
+/* ==================================================================
+   1. CONFIG
+   Endpoints live in localStorage. A browser calling n8n directly needs
+   n8n to allow this origin and answer the OPTIONS preflight.
+   ================================================================== */
+
+const KEY = "ncs.console";
+const FIELDS = [
+  ["workflow", "Unified workflow", "POST. CONCEPT_INTAKE and EXISTING_IDEA. Started only by Develop this, Build package, Retry or Redevelop."],
+  ["state",    "State",            "GET with ?resource=ideas and ?resource=activity."],
+  ["sparks",   "Quick Sparks",     "POST. Returns five concepts. Writes nothing."],
+  ["notes",    "Human notes",      "POST. Writes human_notes, and marks published or unpublished."]
+];
+
+const DEFAULTS = {
+  workflow: "https://jolthevc.app.n8n.cloud/webhook/ncs-unified",
+  state:    "https://jolthevc.app.n8n.cloud/webhook/ncs-state",
+  sparks:   "https://jolthevc.app.n8n.cloud/webhook/ncs-quick-sparks",
+  notes:    "https://jolthevc.app.n8n.cloud/webhook/ncs-notes",
+  headerName: "x-ncs-dashboard-secret",
+  headerValue: "james"
+};
+
+function seedDefaults(){
+  try { if(localStorage.getItem(KEY) === null) localStorage.setItem(KEY, JSON.stringify(DEFAULTS)); }
+  catch(e){ /* private window; the drawer still works for this tab */ }
+}
+seedDefaults();
+
+function loadCfg(){ try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e){ return {}; } }
+function saveCfg(c){ try { localStorage.setItem(KEY, JSON.stringify(c)); } catch(e){} }
+function url(k){ const v = loadCfg()[k]; return v && v.trim() ? v.trim() : null; }
+function unset(){ return FIELDS.filter(f => !url(f[0])).map(f => f[1]); }
+
+/** Null when the endpoint is set. Otherwise the reason an action is off. */
+function needs(key){
+  if(url(key)) return null;
+  const f = FIELDS.filter(x => x[0] === key)[0];
+  return "Needs the " + (f ? f[1].toLowerCase() : key) + " endpoint.";
+}
+
+/* ==================================================================
+   2. CONTRACTS
+   Names match the Ideas Sheet.
+   ================================================================== */
+
+const STATUSES = ["DEVELOPMENT_SELECT","DEVELOP","PROMISING","RAW","HOLD","DUPLICATE","DRAFTED","PUBLISHED"];
+const STATUS_LABEL = {
+  RAW:"Raw", DEVELOP:"Develop", PROMISING:"Promising", HOLD:"Hold",
+  DUPLICATE:"Duplicate", DEVELOPMENT_SELECT:"Development select",
+  DRAFTED:"Drafted", PUBLISHED:"Published"
+};
+const STATUS_CHIP = {
+  DEVELOPMENT_SELECT:"blue", DEVELOP:"blue", PROMISING:"", RAW:"quiet",
+  HOLD:"quiet", DUPLICATE:"quiet strike", DRAFTED:"orange", PUBLISHED:"quiet"
+};
+const RANK = { DEVELOPMENT_SELECT:0, DRAFTED:1, DEVELOP:2, PROMISING:3, RAW:4, HOLD:5, PUBLISHED:6, DUPLICATE:7 };
+const READY = ["DRAFTED","PUBLISHED"];
+const PAGE = 5;
+
+const FORMAT_LABEL = { FILM:"Film", SERIES:"Series", LIMITED_SERIES:"Limited series" };
+const FORMATS = [["ANY","Any"],["FILM","Film"],["SERIES","Series"],["LIMITED_SERIES","Limited"]];
+const MODES = [
+  ["AUTO","Auto"],["character_first","Character first"],["relationship_first","Relationship first"],
+  ["world_first","World first"],["situation_first","Situation first"],["genre_first","Genre first"],
+  ["scene_first","Scene first"],["ending_first","Ending first"],["truth_first","Truth first"],
+  ["discovery_first","Discovery first"],["title_first","Title first"]
+];
+const ANCHORS = [
+  ["LOOSE","Loose","Use my direction as inspiration."],
+  ["CENTERED","Centered","Keep my direction materially central."],
+  ["STRICT","Strict","Every result must fundamentally depend on it."]
+];
+const GENRES = ["Comedy","Drama","Romance","Romantic Comedy","Thriller","Horror","Action","Adventure",
+  "Science Fiction","Fantasy","Mystery","Crime","Sports","Family","Musical","Animation"];
+
+/* ==================================================================
+   3. SAMPLE ROWS
+   Only so the page is not blank before endpoints exist.
+   ================================================================== */
+
+const ago = m => new Date(Date.now() - m*60000).toISOString();
+
+const SAMPLE_PACKET = {
+  version:"ncs_ig_v3", title:"The Tell", format:"FILM", idea_label:"MOVIE IDEA", genre:"Sports",
+  caption:"A man who reads faces for a living ends up on a folding chair in a high school gym.",
+  slide_1:{type:"hook",label:"MOVIE IDEA",title:"The Tell",hook_copy:"He read faces for a living until every room in the state banned him.",layout_direction:"Dim gymnasium at dusk.",footer_brand:"Never Coming Soon",page_number:"01 / 03"},
+  slide_2:{type:"plot",section_label:"THE PLOT",title_kicker:"The Tell",body_copy:"Marcus Vane spent eleven years making a living off the half second before somebody lies.\n\nThen a room in Reno decided he was doing it too well.",layout_direction:"Warm ivory field.",footer_brand:"Never Coming Soon",page_number:"02 / 03"},
+  slide_3:{type:"poster",title:"The Tell",tagline:"Everybody shows you something.",rating:"PG-13",format_descriptor:"Feature film",footer_copy:"In theatres never.",art_direction:"Low angle from the gym floor.",image_prompt:"Photographic poster, nine pairs of sneakers around a folding chair, no text",footer_brand:"Never Coming Soon",page_number:"03 / 03"}
+};
+
+const SAMPLE_IDEAS = [
+  { idea_id:"NCS-I-000214", created_at:ago(1800), status:"DEVELOPMENT_SELECT", ideation_mode:"relationship_first",
+    working_title:"The Row", final_title:null, format:"FILM", genre:"Romance",
+    premise:"Two strangers with season tickets in the same row spend an entire baseball season side by side, learning everything about each other except how to say it out loud.",
+    creative_kernel:"A romance that can only happen in eighty-one installments.",
+    why_exciting:"The seat assignment does the work a meet-cute usually has to fake.",
+    short_pitch:null, human_notes:"Keep the team bad.",
+    draft_url:null, published_url:null, ncs_score:null, development_packet_json:{ok:true}, ig_packet_json:null },
+  { idea_id:"NCS-I-000229", created_at:ago(1140), status:"DEVELOP", ideation_mode:"character_first",
+    working_title:"Hardware", final_title:null, format:"FILM", genre:"Comedy",
+    premise:"The last independent hardware store in a gentrifying town becomes the unofficial courthouse for every neighborhood dispute.",
+    creative_kernel:"A comedy about the person a community appoints without asking.",
+    why_exciting:"Every customer arrives with a plot.", short_pitch:null,
+    human_notes:null, draft_url:null, published_url:null, ncs_score:null,
+    development_packet_json:null, ig_packet_json:null },
+  { idea_id:"NCS-I-000198", created_at:ago(4400), status:"DRAFTED", ideation_mode:"character_first",
+    working_title:"The Tell", final_title:"The Tell", format:"FILM", genre:"Sports",
+    premise:"A poker player banned from every room in the state takes a job coaching a girls high school basketball team and teaches them to read people instead of plays.",
+    creative_kernel:"One transferable skill moved into a place that does not expect it.",
+    why_exciting:"The reading scenes are watchable.", short_pitch:null,
+    human_notes:"Second half of the February beat gives away one thing too many.",
+    draft_url:"https://docs.google.com/document/d/sample-the-tell/edit", published_url:null, ncs_score:8.6,
+    development_packet_json:{ok:true}, ig_packet_json:SAMPLE_PACKET },
+  { idea_id:"NCS-I-000186", created_at:ago(5900), status:"PUBLISHED", ideation_mode:"world_first",
+    working_title:"Clearance", final_title:"Clearance", format:"FILM", genre:"Drama",
+    premise:"A department store closing after ninety-one years gives its staff one final week, and the employees start quietly settling scores with the building.",
+    creative_kernel:"A week where consequences stop applying.",
+    why_exciting:"The countdown does the structural work.", short_pitch:null, human_notes:null,
+    draft_url:"https://docs.google.com/document/d/sample-clearance/edit",
+    published_url:"https://instagram.com/p/sample-clearance", ncs_score:8.1,
+    development_packet_json:{ok:true}, ig_packet_json:null }
+];
+
+const SAMPLE_SPARKS = [
+  { concept:"A wedding photographer who has shot four hundred weddings agrees to shoot the one couple she is certain will not last.", format:"FILM", genre:"Drama" },
+  { concept:"Two rival ice cream trucks work the same coastal town all summer, and their drivers are conducting the slowest courtship in the county.", format:"FILM", genre:"Romantic Comedy" },
+  { concept:"A retired air traffic controller is asked to talk one last plane down, from his kitchen, with a phone on speaker.", format:"FILM", genre:"Thriller" },
+  { concept:"A family reunion is interrupted by a man with photographs proving he grew up there, in the same years, with the same parents.", format:"LIMITED_SERIES", genre:"Mystery" },
+  { concept:"The night shift at a bowling alley becomes the unofficial group therapy of a small city, run by a manager who never gives advice.", format:"SERIES", genre:"Comedy" }
+];
+
+/* ==================================================================
+   4. STATE
+   ================================================================== */
+
+const blankFilter = () => ({ q:"", status:"ALL", format:"ALL", genre:"ALL", page:1 });
+
+const app = {
+  // Samples exist only while the state endpoint is unset.
+  ideas: url("state") ? [] : SAMPLE_IDEAS.slice(),
+  activity: [],
+  sample: !url("state"),
+  loadError: null,
+  // No sparks until you ask for them. Opening the page calls nothing.
+  sparks: [],
+  sparkSample: false,
+  dismissed: [],
+  ideaF: blankFilter(),
+  readyF: blankFilter(),
+  open: null,
+  busy: null,
+  explore: { format:"ANY", mode:"AUTO", anchor:"CENTERED" },
+  toastTimer: null,
+  tick: null,
+  poll: null
+};
+
+/* ==================================================================
+   5. HELPERS
+   ================================================================== */
+
+const $ = id => document.getElementById(id);
+const esc = v => String(v == null ? "" : v)
+  .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+  .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+
+function since(iso){
+  if(!iso) return "";
+  const m = Math.round((Date.now() - Date.parse(iso)) / 60000);
+  if(isNaN(m)) return "";
+  if(m < 1) return "just now";
+  if(m < 60) return m + "m ago";
+  const h = Math.round(m/60);
+  if(h < 24) return h + "h ago";
+  const d = Math.round(h/24);
+  return d === 1 ? "yesterday" : d + "d ago";
+}
+function elapsed(from){
+  const a = Date.parse(from); if(isNaN(a)) return "";
+  const s = Math.max(0, Math.round((Date.now() - a)/1000));
+  if(s < 60) return s + "s";
+  const m = Math.floor(s/60);
+  if(m < 60) return m + "m " + String(s%60).padStart(2,"0") + "s";
+  return Math.floor(m/60) + "h " + String(m%60).padStart(2,"0") + "m";
+}
+function titleOf(i){ return (i.final_title && i.final_title.trim()) || i.working_title; }
+
+/** Sheet columns arrive as JSON strings. Parse them, keep the raw string if it
+    will not parse, so presence checks still work. */
+function parseMaybe(v){
+  if(v == null) return null;
+  if(typeof v !== "string") return v;
+  const t = v.trim();
+  if(!t) return null;
+  try { return JSON.parse(t); } catch(e){ return t; }
+}
+function normalizeIdea(i){
+  i.ig_packet_json = parseMaybe(i.ig_packet_json);
+  i.development_packet_json = parseMaybe(i.development_packet_json);
+  return i;
+}
+
+function toast(text, bad){
+  const t = $("toast");
+  t.querySelector(".in").textContent = text;
+  t.classList.toggle("bad", !!bad);
+  t.classList.remove("hide");
+  clearTimeout(app.toastTimer);
+  app.toastTimer = setTimeout(() => t.classList.add("hide"), 7000);
+}
+
+/* ==================================================================
+   6. HTTP
+   ================================================================== */
+
+async function callEndpoint(key, opts){
+  const base = url(key);
+  if(!base) throw new Error("The " + key + " endpoint is not configured.");
+
+  let u;
+  try { u = new URL(base); } catch(e){ throw new Error("The " + key + " endpoint is not a valid URL."); }
+  if(opts.query) for(const k in opts.query) u.searchParams.set(k, opts.query[k]);
+
+  const cfg = loadCfg();
+  const headers = { accept:"application/json" };
+  if(cfg.headerName && cfg.headerValue) headers[cfg.headerName.trim()] = cfg.headerValue.trim();
+  if(opts.body !== undefined) headers["content-type"] = "application/json";
+
+  let res;
+  try {
+    res = await fetch(u, {
+      method: opts.method,
+      headers,
+      body: opts.body === undefined ? undefined : JSON.stringify(opts.body),
+      cache: "no-store"
+    });
+  } catch(e){
+    throw new Error("Could not reach the " + key + " endpoint. n8n needs to allow this origin and answer the OPTIONS preflight.");
+  }
+  if(!res.ok){
+    const text = await res.text().catch(() => "");
+    throw new Error("The " + key + " endpoint responded " + res.status + ". " + text.slice(0,140));
+  }
+  return res.json();
+}
+
+/** The unified workflow request. Only Develop this and the package actions use it. */
+function runBody(o){
+  return {
+    run_type: o.run_type,
+    target_seed_count: o.target_seed_count || 30,
+    human_direction: o.human_direction || null,
+    concept_text: o.concept_text || null,
+    target_format: o.target_format || "ANY",
+    target_genre: o.target_genre || null,
+    preferred_ideation_mode: o.preferred_ideation_mode || "AUTO",
+    anchor_strength: o.anchor_strength || "CENTERED",
+    human_notes: o.human_notes || null,
+    human_campaign_notes: o.human_campaign_notes || null,
+    idea_id: o.idea_id || null,
+    force_redevelopment: !!o.force_redevelopment,
+    human_override: !!o.human_override
+  };
+}
+
+async function postRun(o){
+  const result = await callEndpoint("workflow", { method:"POST", body: runBody(o) });
+  toast(result.message || "Run started.", result.status === "FAILED");
+  await refresh();
+  return result;
+}
+
+/* ==================================================================
+   7. CONCEPT GENERATION
+   The sparks endpoint is cheap and writes nothing. Both Create buttons
+   use it. The unified workflow is never called from this section.
+   ================================================================== */
+
+async function generate(directed, btn, label){
+  if(!url("sparks")) return;
+  const dir = $("direction").value.trim();
+  const g = $("genre").value.trim();
+
+  btn.disabled = true; btn.textContent = "Thinking";
+  try {
+    const data = await callEndpoint("sparks", { method:"POST", body:{
+      human_direction: directed ? (dir || null) : null,
+      target_format: directed ? app.explore.format : "ANY",
+      target_genre: directed ? (g && g.toLowerCase() !== "any" ? g : null) : null,
+      preferred_ideation_mode: directed ? app.explore.mode : "AUTO",
+      anchor_strength: directed ? app.explore.anchor : "CENTERED",
+      recent_sparks: app.sparks.map(s => s.concept)
+    }});
+    app.sparks = (data.sparks || []).map((s, i) => Object.assign({ spark_id: s.spark_id || i + 1 }, s));
+    app.dismissed = [];
+    app.sparkSample = false;
+    renderSparks();
+    if(!app.sparks.length) toast("The sparks endpoint returned nothing.", true);
+  } catch(e){
+    toast(e.message, true);
+  }
+  btn.disabled = false; btn.textContent = label;
+  renderControls();
+}
+
+/* ==================================================================
+   8. PACKET CHECK
+   ncs_ig_v3 only. Reports problems, never repairs.
+   ================================================================== */
+
+function checkPacket(p, idea){
+  if(!p) return { present:false, ok:false, issues:[] };
+  if(typeof p !== "object") return { present:true, ok:false, issues:["packet could not be parsed as JSON."] };
+  const bad = [];
+  const add = (f,m) => bad.push(f + " " + m);
+
+  if(p.version !== "ncs_ig_v3") add("version", "should be ncs_ig_v3.");
+  const wantLabel = p.format === "FILM" ? "MOVIE IDEA" : "SHOW IDEA";
+  if(p.idea_label !== wantLabel) add("idea_label", "should be " + wantLabel + ".");
+  if(!p.caption) add("caption", "is empty.");
+
+  const slides = [p.slide_1, p.slide_2, p.slide_3];
+  const pages = ["01 / 03","02 / 03","03 / 03"];
+  const types = ["hook","plot","poster"];
+  slides.forEach((s, i) => {
+    if(!s){ add("slide_" + (i+1), "is missing."); return; }
+    if(s.type !== types[i]) add("slide_" + (i+1), "should be type " + types[i] + ".");
+    if(s.footer_brand !== "Never Coming Soon") add("slide_" + (i+1) + " footer", "should read Never Coming Soon.");
+    if(s.page_number !== pages[i]) add("slide_" + (i+1) + " page", "should read " + pages[i] + ".");
+  });
+  if(p.slide_2 && p.slide_2.section_label !== "THE PLOT") add("slide_2 label", "should read THE PLOT.");
+  if(idea && idea.final_title && p.title !== idea.final_title) add("title", "does not match the final title.");
+
+  const publicCopy = [
+    ["caption", p.caption],
+    ["slide 1 hook", p.slide_1 && p.slide_1.hook_copy],
+    ["slide 2 body", p.slide_2 && p.slide_2.body_copy],
+    ["slide 3 tagline", p.slide_3 && p.slide_3.tagline]
+  ];
+  publicCopy.forEach(([f, v]) => { if(v && v.indexOf("—") !== -1) add(f, "contains an em dash."); });
+
+  return { present:true, ok:bad.length === 0, issues:bad };
+}
+
+/* ==================================================================
+   9. WHAT EACH ROW CAN DO
+   The Sheet has no GENERATING status and a failed package leaves the row
+   untouched, so the run list is what tells these apart.
+   ================================================================== */
+
+function lastRun(id){
+  let found = null;
+  app.activity.forEach(r => {
+    if(r.target_idea_id !== id) return;
+    if(!found || Date.parse(r.started_at) > Date.parse(found.started_at)) found = r;
+  });
+  return found;
+}
+
+function actionFor(idea){
+  const run = lastRun(idea.idea_id);
+  const done = READY.indexOf(idea.status) !== -1;
+  let a;
+
+  if(run && run.status === "RUNNING")     a = { label:"Packaging…", on:false, note:null };
+  else if(done)                            a = { label:"Redevelop", on:true, danger:true, redevelop:true, note:null };
+  else if(!idea.development_packet_json)   a = { label:"Build package", on:false, note:"No development packet yet." };
+  else if(run && run.status === "FAILED")  a = { label:"Retry package", on:true, note:run.error_summary };
+  else                                     a = { label:"Build package", on:true, note:null };
+
+  const gate = needs("workflow");
+  if(gate && a.on){ a.on = false; a.note = gate; }
+  return a;
+}
+
+/* ==================================================================
+   10. FILTERING AND PAGING
+   search -> status -> format -> genre -> sort -> paginate. All client side.
+   ================================================================== */
+
+function genresIn(list){
+  const set = {};
+  list.forEach(i => { if(i.genre && i.genre.trim()) set[i.genre.trim()] = true; });
+  return Object.keys(set).sort();
+}
+
+function filterRows(list, f){
+  let out = list;
+  const q = f.q.trim().toLowerCase();
+  if(q) out = out.filter(i =>
+    (i.working_title || "").toLowerCase().indexOf(q) !== -1 ||
+    (i.final_title || "").toLowerCase().indexOf(q) !== -1 ||
+    (i.premise || "").toLowerCase().indexOf(q) !== -1 ||
+    (i.genre || "").toLowerCase().indexOf(q) !== -1);
+  if(f.status !== "ALL") out = out.filter(i => i.status === f.status);
+  if(f.format !== "ALL") out = out.filter(i => i.format === f.format);
+  if(f.genre !== "ALL") out = out.filter(i => (i.genre || "") === f.genre);
+  return out.slice().sort((a,b) =>
+    (RANK[a.status] - RANK[b.status]) || String(b.created_at).localeCompare(String(a.created_at)));
+}
+
+/** Clamps the page so a refresh can never leave you on a page that is gone. */
+function paginate(rows, f){
+  const pages = Math.max(1, Math.ceil(rows.length / PAGE));
+  if(f.page > pages) f.page = pages;
+  if(f.page < 1) f.page = 1;
+  const start = (f.page - 1) * PAGE;
+  return { slice: rows.slice(start, start + PAGE), pages, total: rows.length };
+}
+
+function toolbar(el, f, statuses, source, onChange, noun){
+  // Genres come from the rows this section actually shows, so no option is a dead end.
+  const gs = genresIn(source);
+  el.innerHTML =
+    '<div class="f grow"><label>Search</label><input class="inp" type="search" placeholder="Search ' + (noun || "ideas") + '…" value="' + esc(f.q) + '" data-k="q" /></div>' +
+    '<div class="f"><label>Status</label><select class="inp" data-k="status">' +
+      '<option value="ALL">All</option>' +
+      statuses.map(s => '<option value="' + s + '"' + (f.status === s ? " selected" : "") + ">" + esc(STATUS_LABEL[s]) + "</option>").join("") +
+    "</select></div>" +
+    '<div class="f"><label>Format</label><select class="inp" data-k="format">' +
+      '<option value="ALL">All</option>' +
+      ["FILM","SERIES","LIMITED_SERIES"].map(x => '<option value="' + x + '"' + (f.format === x ? " selected" : "") + ">" + FORMAT_LABEL[x] + "</option>").join("") +
+    "</select></div>" +
+    '<div class="f"><label>Genre</label><select class="inp" data-k="genre">' +
+      '<option value="ALL">All</option>' +
+      gs.map(g => '<option value="' + esc(g) + '"' + (f.genre === g ? " selected" : "") + ">" + esc(g) + "</option>").join("") +
+    "</select></div>";
+
+  el.oninput = e => {
+    const k = e.target.getAttribute("data-k");
+    if(!k) return;
+    f[k] = e.target.value;
+    f.page = 1;           // any filter change starts over at page one
+    onChange();
+  };
+}
+
+function pager(el, f, info, onChange){
+  if(info.total <= PAGE){ el.innerHTML = ""; return; }
+  el.innerHTML =
+    '<button data-p="-1"' + (f.page <= 1 ? " disabled" : "") + ' aria-label="Previous page">&#8592;</button>' +
+    "<span>Page " + f.page + " of " + info.pages + "</span>" +
+    '<button data-p="1"' + (f.page >= info.pages ? " disabled" : "") + ' aria-label="Next page">&#8594;</button>' +
+    '<span class="faint">' + info.total + " total</span>";
+  el.onclick = e => {
+    const b = e.target.closest("[data-p]");
+    if(!b) return;
+    f.page += Number(b.getAttribute("data-p"));
+    onChange();
+  };
+}
+
+/* ==================================================================
+   11. RENDER
+   ================================================================== */
+
+function renderHeader(){
+  const live = app.activity.filter(r => r.status === "RUNNING")[0];
+  $("live").classList.toggle("hide", !live);
+  if(live) $("liveText").textContent =
+    (live.run_type === "EXISTING_IDEA" ? "Packaging" : "Developing") + "… " + elapsed(live.started_at);
+
+  const missing = unset();
+  $("notice").classList.toggle("hide", missing.length === 0);
+  $("noticeText").textContent = missing.length === FIELDS.length
+    ? "No endpoints configured. Showing sample rows so you can see the layout."
+    : "Not configured: " + missing.join(", ") + ".";
+
+  clearInterval(app.tick);
+  if(live) app.tick = setInterval(() => {
+    const r = app.activity.filter(x => x.status === "RUNNING")[0];
+    if(r) $("liveText").textContent =
+      (r.run_type === "EXISTING_IDEA" ? "Packaging" : "Developing") + "… " + elapsed(r.started_at);
+  }, 1000);
+}
+
+function renderSparks(){
+  const list = app.sparks.filter(s => app.dismissed.indexOf(s.spark_id) === -1);
+  $("sparksBlank").classList.toggle("hide", list.length > 0);
+  if(!list.length){
+    $("sparks").innerHTML = "";
+    $("sparksBlank").textContent = app.sparks.length
+      ? "All dismissed. Generate five more."
+      : "Generate five concepts to start.";
+    return;
+  }
+
+  // A sample concept must never be sent to a real workflow.
+  const gate = needs("workflow") ||
+    (app.sparkSample ? "Sample concept. Generate real ones first." : null);
+
+  $("sparks").innerHTML = list.map(s =>
+    '<article class="spark">' +
+      (s.working_title ? '<h3 class="wt">' + esc(s.working_title) + "</h3>" : "") +
+      '<p class="c">' + esc(s.concept) + "</p>" +
+      (s.why_it_works ? '<p class="why">' + esc(s.why_it_works) + "</p>" : "") +
+      '<div class="m">' + (app.sparkSample ? '<span class="chip sample">SAMPLE</span>' : "") +
+        (s.format ? '<span class="chip">' + esc(FORMAT_LABEL[s.format] || s.format) + "</span>" : "") +
+        (s.genre ? '<span class="chip">' + esc(s.genre) + "</span>" : "") +
+      "</div>" +
+      '<div class="a">' +
+        '<button class="btn primary" data-dev="' + s.spark_id + '"' +
+          (gate ? ' disabled title="' + esc(gate) + '"' : "") + ">Develop this</button>" +
+        '<button class="btn ghost" data-dis="' + s.spark_id + '">Dismiss</button>' +
+      "</div>" +
+    "</article>"
+  ).join("");
+}
+
+function rowMeta(i){
+  return '<div class="meta">' +
+    (app.sample ? '<span class="chip sample">SAMPLE</span>' : "") +
+    '<span class="chip ' + (STATUS_CHIP[i.status] || "") + '">' + esc(STATUS_LABEL[i.status] || i.status) + "</span>" +
+    '<span class="chip">' + esc(FORMAT_LABEL[i.format] || i.format) + "</span>" +
+    (i.genre ? '<span class="chip">' + esc(i.genre) + "</span>" : "") +
+    "<span>" + esc(i.idea_id) + "</span>" +
+    (i.created_at ? "<span>" + esc(since(i.created_at)) + "</span>" : "") +
+    (i.human_notes ? '<span style="color:#9db1ff">Noted</span>' : "") +
+  "</div>";
+}
+
+function renderIdeas(){
+  toolbar($("ideasTool"), app.ideaF, STATUSES, app.ideas, renderIdeas);
+  const rows = filterRows(app.ideas, app.ideaF);
+  const info = paginate(rows, app.ideaF);
+
+  $("ideasSub").textContent = app.sample
+    ? "Sample rows, shown only until the state endpoint is set. Nothing here is real."
+    : "The durable catalog. Everything that survived ideation.";
+
+  if(!info.slice.length){
+    $("ideas").innerHTML = '<p class="empty">' + (
+      app.loadError ? "Could not load your catalog. " + esc(app.loadError)
+                    : app.ideas.length ? "Nothing matches these filters." : "No ideas yet."
+    ) + "</p>";
+    $("ideasPager").innerHTML = "";
+    return;
+  }
+
+  $("ideas").innerHTML = info.slice.map(i => {
+    const a = actionFor(i);
+    const open = app.open === i.idea_id;
+    const busy = app.busy === i.idea_id;
+
+    let html = '<article class="row' + (open ? " open" : "") + '">' +
+      '<div class="rmain"><div>' +
+        '<button class="tbtn" data-open="' + esc(i.idea_id) + '"><h3>' + esc(titleOf(i)) + "</h3></button>" +
+        '<p class="prem">' + esc(i.premise) + "</p>" +
+        rowMeta(i) +
+        (a.note ? '<p class="note ' + (a.on ? "bad" : "mute") + '">' + esc(a.note) + "</p>" : "") +
+      "</div>" +
+      '<div class="acts">' +
+        '<button class="btn ghost sm" data-open="' + esc(i.idea_id) + '">' + (open ? "Less" : "Details") + "</button>" +
+        '<button class="btn sm" data-notes="' + esc(i.idea_id) + '">Notes</button>' +
+        '<button class="btn sm ' + (!a.on ? "" : a.danger ? "danger" : "primary") + '" data-act="' + esc(i.idea_id) + '"' +
+          (a.on && !busy ? "" : " disabled") + (a.note ? ' title="' + esc(a.note) + '"' : "") + ">" +
+          (busy ? "Sending" : esc(a.label)) + "</button>" +
+      "</div></div>";
+
+    if(open){
+      const bit = (l,v,cls) => v ? '<div><p class="dlab">' + l + '</p><p class="dval ' + (cls||"") + '">' + esc(v) + "</p></div>" : "";
+      html += '<div class="detail">' +
+        '<div><p class="dlab">Premise</p><p class="dval">' + esc(i.premise) + "</p></div>" +
+        bit("Creative kernel", i.creative_kernel) +
+        bit("Why it is exciting", i.why_exciting) +
+        bit("Short pitch", i.short_pitch) +
+        bit("Your notes", i.human_notes, "blue") +
+      "</div>";
+    }
+    return html + "</article>";
+  }).join("");
+
+  pager($("ideasPager"), app.ideaF, info, renderIdeas);
+}
+
+function renderReady(){
+  const all = app.ideas.filter(i => READY.indexOf(i.status) !== -1);
+  toolbar($("readyTool"), app.readyF, READY, all, renderReady, "productions");
+  const rows = filterRows(all, app.readyF);
+  const info = paginate(rows, app.readyF);
+
+  const drafted = all.filter(i => i.status === "DRAFTED").length;
+  $("readySub").textContent = app.sample
+    ? "Sample rows, shown only until the state endpoint is set. Nothing here is real."
+    : drafted
+      ? drafted + " finished production" + (drafted === 1 ? "" : "s") + " waiting on you."
+      : "Finished productions land here with their treatment and packet.";
+
+  if(!info.slice.length){
+    $("ready").innerHTML = '<p class="empty">' + (
+      app.loadError ? "Could not load your catalog. " + esc(app.loadError)
+                    : all.length ? "Nothing matches these filters." : "Nothing is drafted yet."
+    ) + "</p>";
+    $("readyPager").innerHTML = "";
+    return;
+  }
+
+  const pubGate = needs("notes");
+
+  $("ready").innerHTML = info.slice.map(i => {
+    const p = checkPacket(i.ig_packet_json, i);
+    const a = actionFor(i);
+    const busy = app.busy === i.idea_id;
+    const badge = !p.present
+      ? '<span class="faint" style="font-size:11.5px">No packet</span>'
+      : p.ok
+        ? '<span style="font-size:11.5px;color:#9db1ff">IG PACKET &#10003; ncs_ig_v3</span>'
+        : '<span style="font-size:11.5px;color:#ff8f78">IG PACKET &#9888; ' + p.issues.length + " issue" + (p.issues.length===1?"":"s") + "</span>";
+
+    return '<article class="row"><div class="rmain"><div>' +
+      '<div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px">' +
+        "<h3>" + esc(titleOf(i)) + "</h3>" + badge + "</div>" +
+      '<p class="prem">' + esc(i.premise) + "</p>" +
+      rowMeta(i) +
+      (i.published_url ? '<p class="note mute"><a href="' + esc(i.published_url) + '" target="_blank" rel="noopener" style="color:inherit">View the published post</a></p>' : "") +
+    "</div>" +
+    '<div class="acts">' +
+      (i.draft_url ? '<button class="btn sm" data-treat="' + esc(i.draft_url) + '">Open treatment</button>' : '<span class="faint" style="font-size:12px">No treatment</span>') +
+      '<button class="btn sm ' + (p.ok ? "primary" : "") + '" data-packet="' + esc(i.idea_id) + '"' + (p.present ? "" : " disabled") + ">View packet</button>" +
+      '<button class="btn ghost sm" data-pub="' + esc(i.idea_id) + '"' + (pubGate ? ' disabled title="' + esc(pubGate) + '"' : "") + ">" +
+        (i.status === "PUBLISHED" ? "Unpublish" : "Mark published") + "</button>" +
+      '<button class="btn danger sm" data-act="' + esc(i.idea_id) + '"' + (a.on && !busy ? "" : " disabled") +
+        (a.note ? ' title="' + esc(a.note) + '"' : "") + ">" + (busy ? "Sending" : esc(a.label)) + "</button>" +
+    "</div></div></article>";
+  }).join("");
+
+  pager($("readyPager"), app.readyF, info, renderReady);
+}
+
+/** Keeps the two Create buttons honest about what is wired. */
+function renderControls(){
+  const sp = needs("sparks");
+  const dir = $("direction");
+  $("btnExplore").disabled = !!sp || !dir.value.trim();
+  $("btnExplore").title = sp || "";
+  $("btnFresh").disabled = !!sp;
+  $("btnFresh").title = sp || "";
+}
+
+function renderAll(){
+  renderHeader(); renderControls(); renderSparks();
+  renderIdeas(); renderReady(); syncPolling();
+}
+
+/* ==================================================================
+   12. LOAD AND POLLING
+   The unified webhook answers immediately and the run continues in n8n,
+   so progress comes from the activity resource. There is no visible
+   activity feed; it drives the row states and the header indicator.
+   ================================================================== */
+
+async function refresh(){
+  if(!url("state")){
+    app.sample = true; app.loadError = null;
+    app.ideas = SAMPLE_IDEAS.slice();
+    app.activity = [];
+    renderAll(); return;
+  }
+  const btn = $("btnRefresh");
+  btn.disabled = true; btn.textContent = "Refreshing";
+  app.sample = false;
+  try {
+    const [a, b] = await Promise.all([
+      callEndpoint("state", { method:"GET", query:{ resource:"ideas" } }),
+      callEndpoint("state", { method:"GET", query:{ resource:"activity" } })
+    ]);
+    app.ideas = (a.ideas || []).map(normalizeIdea);
+    app.activity = b.runs || b.activity || [];
+    app.loadError = null;
+  } catch(e){
+    // Show nothing rather than samples. Stale or fake rows are worse than empty.
+    app.ideas = []; app.activity = []; app.loadError = e.message;
+    toast(e.message, true);
+  } finally {
+    btn.disabled = false; btn.textContent = "Refresh";
+    renderAll();
+  }
+}
+
+function anyRunning(){ return app.activity.some(r => r.status === "RUNNING"); }
+
+function syncPolling(){
+  clearInterval(app.poll); app.poll = null;
+  if(anyRunning() && !document.hidden && url("state")){
+    app.poll = setInterval(pollActivity, 10000);
+  }
+}
+
+async function pollActivity(){
+  if(!url("state")) return;
+  try {
+    const d = await callEndpoint("state", { method:"GET", query:{ resource:"activity" } });
+    const runs = d.runs || d.activity || [];
+    const was = {};
+    app.activity.forEach(r => { was[r.run_id] = r.status; });
+    const settled = runs.some(r => was[r.run_id] === "RUNNING" && r.status !== "RUNNING");
+    app.activity = runs;
+    if(settled){
+      // A run finished, so the Ideas rows it touched have moved on.
+      await refresh();
+    } else {
+      renderHeader(); renderIdeas(); renderReady(); syncPolling();
+    }
+  } catch(e){
+    // A dropped poll is not a failed load. Keep the last good list and retry.
+  }
+}
+
+document.addEventListener("visibilitychange", () => {
+  if(document.hidden){ clearInterval(app.poll); app.poll = null; }
+  else { if(anyRunning()) pollActivity(); syncPolling(); }
+});
+
+/* ==================================================================
+   13. OVERLAYS
+   ================================================================== */
+
+function closeOverlay(){ $("overlay").innerHTML = ""; }
+
+function confirmBox(title, body, label, danger, field, onYes){
+  $("overlay").innerHTML =
+    '<div class="scrim"><button class="back" aria-label="Close" data-close="1"></button>' +
+    '<div class="modal" role="dialog" aria-modal="true" aria-label="' + esc(title) + '">' +
+      "<h3>" + esc(title) + "</h3><p>" + esc(body) + "</p>" +
+      (field ? '<div style="margin-top:16px"><label class="lab" for="cf">' + esc(field) + '</label><input class="inp" id="cf" /></div>' : "") +
+      '<div class="a"><button class="btn ghost" data-close="1">Cancel</button>' +
+      '<button class="btn ' + (danger ? "danger" : "primary") + '" id="cy">' + esc(label) + "</button></div>" +
+    "</div></div>";
+  $("cy").onclick = () => { const v = $("cf") ? $("cf").value : ""; closeOverlay(); onYes(v); };
+}
+
+function notesDrawer(idea){
+  const gate = needs("notes");
+  $("overlay").innerHTML =
+    '<div class="scrim"><button class="back" aria-label="Close" data-close="1"></button>' +
+    '<aside class="drawer" role="dialog" aria-modal="true" aria-label="Notes">' +
+      '<p class="faint" style="font-size:11.5px">' + esc(idea.idea_id) + "</p>" +
+      "<h2>" + esc(titleOf(idea)) + "</h2>" +
+      '<p class="dim" style="font-size:13.5px;margin-top:11px;line-height:1.6">' + esc(idea.premise) + "</p>" +
+      '<div style="margin-top:22px"><label class="lab" for="nt">Your notes</label>' +
+      '<textarea class="big-note" id="nt"' + (gate ? " readonly" : "") +
+        ' placeholder="Love the setting, lose the breakup.">' + esc(idea.human_notes || "") + "</textarea>" +
+      '<p class="help">' + (gate ? esc(gate) + " Notes are read-only until it is set."
+                                 : "Saved to the human notes column. Development and generation read it.") + "</p></div>" +
+      '<div style="display:flex;gap:8px;margin-top:22px">' +
+        '<button class="btn primary" id="ns"' + (gate ? ' disabled title="' + esc(gate) + '"' : "") + ">Save notes</button>" +
+        '<button class="btn ghost" data-close="1">' + (gate ? "Close" : "Cancel") + "</button></div>" +
+    "</aside></div>";
+
+  if(gate) return;
+  $("nt").focus();
+  $("ns").onclick = async () => {
+    const value = $("nt").value;
+    const btn = $("ns"); btn.disabled = true; btn.textContent = "Saving";
+    try {
+      await callEndpoint("notes", { method:"POST", body:{ idea_id:idea.idea_id, human_notes:value } });
+      idea.human_notes = value.trim() || null;
+      closeOverlay(); renderIdeas(); renderReady();
+      toast("Notes saved on " + titleOf(idea) + ".");
+    } catch(e){
+      toast(e.message, true); btn.disabled = false; btn.textContent = "Save notes";
+    }
+  };
+}
+
+function packetDrawer(idea){
+  const p = idea.ig_packet_json;
+  const c = checkPacket(p, idea);
+  const raw = JSON.stringify(p, null, 2);
+
+  const field = (l, v, mute) => v ? '<div><p class="dlab">' + l + '</p><p class="fval' + (mute ? " mute" : "") + '">' + esc(v) + "</p></div>" : "";
+  const slide = (n, name, inner) =>
+    '<div class="slide"><div class="sh"><h3>' + name + '</h3><span class="faint" style="font-size:11px">' + n + "</span></div>" + inner + "</div>";
+
+  $("overlay").innerHTML =
+    '<div class="scrim"><button class="back" aria-label="Close" data-close="1"></button>' +
+    '<aside class="drawer" role="dialog" aria-modal="true" aria-label="Social packet">' +
+      '<p class="faint" style="font-size:11.5px">' + esc(idea.idea_id) + "</p>" +
+      "<h2>" + esc(titleOf(idea)) + "</h2>" +
+      '<p id="packetVerdict" style="font-size:12px;margin-top:6px;color:' + (c.ok ? "#9db1ff" : "#ff8f78") + '">' +
+        (c.ok ? "Valid ncs_ig_v3" : c.issues.length + " issue" + (c.issues.length===1?"":"s")) + "</p>" +
+      (c.ok ? "" : '<div class="warn" style="margin-top:16px"><p style="font-size:12.5px;color:#ff8f78;margin-bottom:8px">Fix upstream and repackage rather than editing by hand.</p>' +
+        c.issues.map(x => '<p style="font-size:12.5px;color:rgba(245,238,223,.8);line-height:1.6">' + esc(x) + "</p>").join("") + "</div>") +
+      '<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">' +
+        '<button class="btn primary" id="cpAll">Copy packet</button>' +
+        (c.present && typeof p === "object" ? '<button class="btn" id="cpCap">Copy caption</button>' +
+        '<button class="btn" id="cpImg">Copy poster prompt</button>' : "") +
+      "</div>" +
+      (c.present && typeof p === "object" ?
+      '<div style="display:grid;gap:18px;margin-top:24px">' +
+        field("Caption", p.caption) +
+        slide("01 / 03", "Hook", field("Label", p.slide_1 && p.slide_1.label) + field("Title", p.slide_1 && p.slide_1.title) + field("Hook copy", p.slide_1 && p.slide_1.hook_copy) + field("Layout", p.slide_1 && p.slide_1.layout_direction, true)) +
+        slide("02 / 03", "The plot", field("Kicker", p.slide_2 && p.slide_2.title_kicker) + field("Body copy", p.slide_2 && p.slide_2.body_copy) + field("Layout", p.slide_2 && p.slide_2.layout_direction, true)) +
+        slide("03 / 03", "Poster", field("Title", p.slide_3 && p.slide_3.title) + field("Tagline", p.slide_3 && p.slide_3.tagline) + field("Rating", p.slide_3 && (p.slide_3.rating + " / " + p.slide_3.format_descriptor)) + field("Footer", p.slide_3 && p.slide_3.footer_copy) + field("Art direction", p.slide_3 && p.slide_3.art_direction, true) + field("Image prompt", p.slide_3 && p.slide_3.image_prompt, true)) +
+      "</div>" : "") +
+      '<div style="margin-top:22px;border-top:1px solid var(--line);padding-top:16px">' +
+        '<button class="btn ghost" id="rawToggle">Show raw JSON</button>' +
+        '<pre class="raw hide" id="rawJson">' + esc(raw) + "</pre></div>" +
+      '<p class="help" style="margin-top:20px">Asset generation happens outside the console. Copy the packet and take it into the manual workflow.</p>' +
+    "</aside></div>";
+
+  const copy = async (text, btn, word) => {
+    try { await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }
+    catch(e){ btn.textContent = "Blocked"; }
+    setTimeout(() => { btn.textContent = word; }, 1600);
+  };
+  $("cpAll").onclick = e => copy(raw, e.target, "Copy packet");
+  if($("cpCap")) $("cpCap").onclick = e => copy(p.caption, e.target, "Copy caption");
+  if($("cpImg")) $("cpImg").onclick = e => copy(p.slide_3.image_prompt, e.target, "Copy poster prompt");
+  $("rawToggle").onclick = e => {
+    const pre = $("rawJson"); const hidden = pre.classList.toggle("hide");
+    e.target.textContent = hidden ? "Show raw JSON" : "Hide raw JSON";
+  };
+}
+
+function endpointsDrawer(){
+  const cfg = loadCfg();
+  $("overlay").innerHTML =
+    '<div class="scrim"><button class="back" aria-label="Close" data-close="1"></button>' +
+    '<aside class="drawer" role="dialog" aria-modal="true" aria-label="Endpoints">' +
+      "<h2>Endpoints</h2>" +
+      '<p class="dim" style="font-size:13.5px;margin-top:11px;line-height:1.6">Saved in this browser only. Leave one blank and that capability shows as unconfigured.</p>' +
+      '<div style="display:grid;gap:15px;margin-top:20px">' +
+        FIELDS.map(f =>
+          '<div><label class="lab" for="e-' + f[0] + '">' + esc(f[1]) + "</label>" +
+          '<input class="inp" id="e-' + f[0] + '" type="url" spellcheck="false" placeholder="https://n8n.example.com/webhook/..." value="' + esc(cfg[f[0]] || "") + '" />' +
+          '<p class="help">' + esc(f[2]) + "</p></div>"
+        ).join("") +
+        '<div style="display:grid;gap:10px;grid-template-columns:1fr 1fr">' +
+          '<div><label class="lab" for="e-hn">Auth header name</label><input class="inp" id="e-hn" spellcheck="false" placeholder="x-ncs-dashboard-secret" value="' + esc(cfg.headerName || "") + '" /></div>' +
+          '<div><label class="lab" for="e-hv">Value</label><input class="inp" id="e-hv" type="password" autocomplete="off" value="' + esc(cfg.headerValue || "") + '" /></div>' +
+        "</div>" +
+      "</div>" +
+      '<p class="help" style="margin-top:18px">Wiring note: a browser calling n8n directly needs n8n to send CORS headers for this page and answer the OPTIONS preflight. If that is awkward, put any small proxy in front and point these at the proxy.</p>' +
+      '<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:20px">' +
+        '<button class="btn primary" id="epSave">Save</button>' +
+        '<button class="btn ghost" data-close="1">Cancel</button>' +
+        '<button class="btn ghost" id="epClear">Clear all</button></div>' +
+    "</aside></div>";
+
+  $("epSave").onclick = () => {
+    const next = {};
+    FIELDS.forEach(f => { const v = $("e-" + f[0]).value.trim(); if(v) next[f[0]] = v; });
+    const hn = $("e-hn").value.trim(), hv = $("e-hv").value.trim();
+    if(hn && hv){ next.headerName = hn; next.headerValue = hv; }
+    saveCfg(next); closeOverlay(); toast("Endpoints saved."); refresh();
+  };
+  $("epClear").onclick = () => {
+    saveCfg({}); closeOverlay(); toast("Endpoints cleared.");
+    app.sample = true; app.sparks = []; app.sparkSample = false; refresh();
+  };
+}
+
+/* ==================================================================
+   14. ACTIONS
+   ================================================================== */
+
+function findIdea(id){ return app.ideas.filter(i => i.idea_id === id)[0]; }
+
+function doAction(idea){
+  const a = actionFor(idea);
+  if(!a.on) return;
+
+  const body = a.redevelop
+    ? "Builds replacement canon, treatment and packet. The current package stays intact until the replacement succeeds."
+    : "Runs Production Builder and Social Release Builder. It ends at drafted.";
+
+  confirmBox(a.label.replace("…","") + " for " + titleOf(idea) + "?", body, a.label.replace("…",""), !!a.danger,
+    "Campaign direction for this run (optional)", async campaign => {
+      app.busy = idea.idea_id; renderIdeas(); renderReady();
+      try {
+        await postRun({
+          run_type:"EXISTING_IDEA", idea_id:idea.idea_id,
+          force_redevelopment: !!a.redevelop,
+          human_override: true,
+          human_campaign_notes: campaign || null
+        });
+      } catch(e){ toast(e.message, true); }
+      app.busy = null; renderIdeas(); renderReady();
+    });
+}
+
+function togglePublished(idea){
+  if(needs("notes")) return;
+  const on = idea.status !== "PUBLISHED";
+  confirmBox(
+    on ? "Mark " + titleOf(idea) + " published?" : "Move " + titleOf(idea) + " back to drafted?",
+    on ? "Bookkeeping only. This records that you published it and posts nothing anywhere."
+       : "Clears the published URL and returns the row to drafted.",
+    on ? "Mark published" : "Unpublish", !on,
+    on ? "Published URL (optional)" : null,
+    async link => {
+      try {
+        await callEndpoint("notes", { method:"POST", body: on
+          ? { idea_id: idea.idea_id, action:"mark_published", published_url: link.trim() || null }
+          : { idea_id: idea.idea_id, action:"unpublish" }
+        });
+        idea.status = on ? "PUBLISHED" : "DRAFTED";
+        idea.published_url = on ? (link.trim() || null) : null;
+        renderIdeas(); renderReady();
+        toast(on ? titleOf(idea) + " marked published." : titleOf(idea) + " back to drafted.");
+      } catch(e){ toast(e.message, true); }
+    });
+}
+
+/* ==================================================================
+   15. WIRING
+   ================================================================== */
+
+function buildControls(){
+  $("segFormat").innerHTML = FORMATS.map(f =>
+    '<button type="button" role="radio" aria-checked="' + (app.explore.format === f[0]) + '" data-fmt="' + f[0] + '">' + f[1] + "</button>"
+  ).join("");
+  $("segAnchor").innerHTML = ANCHORS.map(a =>
+    '<button type="button" role="radio" aria-checked="' + (app.explore.anchor === a[0]) + '" data-anc="' + a[0] + '">' + a[1] + "</button>"
+  ).join("");
+  $("anchorHelp").textContent = (ANCHORS.filter(a => a[0] === app.explore.anchor)[0] || [])[2] || "";
+  $("mode").innerHTML = MODES.map(m =>
+    '<option value="' + m[0] + '"' + (app.explore.mode === m[0] ? " selected" : "") + ">" + m[1] + "</option>"
+  ).join("");
+  $("genres").innerHTML = GENRES.map(g => '<option value="' + esc(g) + '"></option>').join("");
+}
+
+function init(){
+  buildControls();
+  // Opening the page reads state. It never generates concepts.
+  refresh();
+
+  const dir = $("direction");
+  dir.addEventListener("input", () => {
+    dir.style.height = "auto";
+    dir.style.height = Math.min(dir.scrollHeight, 300) + "px";
+    renderControls();
+  });
+  dir.addEventListener("keydown", e => {
+    if((e.metaKey || e.ctrlKey) && e.key === "Enter" && dir.value.trim()) { e.preventDefault(); $("btnExplore").click(); }
+  });
+
+  $("segFormat").onclick = e => {
+    const b = e.target.closest("[data-fmt]"); if(!b) return;
+    app.explore.format = b.getAttribute("data-fmt"); buildControls();
+  };
+  $("segAnchor").onclick = e => {
+    const b = e.target.closest("[data-anc]"); if(!b) return;
+    app.explore.anchor = b.getAttribute("data-anc"); buildControls();
+  };
+  $("mode").onchange = e => { app.explore.mode = e.target.value; };
+
+  $("btnAdvanced").onclick = () => {
+    const open = $("advanced").classList.toggle("hide");
+    $("btnAdvanced").setAttribute("aria-expanded", String(!open));
+  };
+
+  $("btnExplore").onclick = () => generate(true, $("btnExplore"), "Generate 5 concepts");
+  $("btnFresh").onclick = () => generate(false, $("btnFresh"), "5 fresh ideas");
+
+  $("sparks").onclick = async e => {
+    const dis = e.target.closest("[data-dis]");
+    if(dis){ app.dismissed.push(Number(dis.getAttribute("data-dis"))); renderSparks(); return; }
+    const dev = e.target.closest("[data-dev]");
+    if(!dev) return;
+    const s = app.sparks.filter(x => x.spark_id === Number(dev.getAttribute("data-dev")))[0];
+    if(!s) return;
+    dev.disabled = true; dev.textContent = "Sending";
+    try {
+      // This is the human gate. Everything expensive starts here.
+      await postRun({ run_type:"CONCEPT_INTAKE", concept_text:s.concept, target_format:s.format, target_genre:s.genre });
+    } catch(e2){ toast(e2.message, true); }
+    dev.disabled = false; dev.textContent = "Develop this";
+  };
+
+  const rowClick = e => {
+    const o = e.target.closest("[data-open]");
+    if(o){ const id = o.getAttribute("data-open"); app.open = app.open === id ? null : id; renderIdeas(); return; }
+    const n = e.target.closest("[data-notes]");
+    if(n){ const i = findIdea(n.getAttribute("data-notes")); if(i) notesDrawer(i); return; }
+    const a = e.target.closest("[data-act]");
+    if(a){ const i = findIdea(a.getAttribute("data-act")); if(i) doAction(i); return; }
+    const p = e.target.closest("[data-packet]");
+    if(p){ const i = findIdea(p.getAttribute("data-packet")); if(i && i.ig_packet_json) packetDrawer(i); return; }
+    const t = e.target.closest("[data-treat]");
+    if(t){ window.open(t.getAttribute("data-treat"), "_blank", "noopener"); return; }
+    const pb = e.target.closest("[data-pub]");
+    if(pb){ const i = findIdea(pb.getAttribute("data-pub")); if(i) togglePublished(i); }
+  };
+  $("ideas").onclick = rowClick;
+  $("ready").onclick = rowClick;
+
+  $("btnRefresh").onclick = refresh;
+  $("btnEndpoints").onclick = endpointsDrawer;
+  $("noticeLink").onclick = endpointsDrawer;
+
+  document.addEventListener("click", e => { if(e.target.closest("[data-close]")) closeOverlay(); });
+  document.addEventListener("keydown", e => { if(e.key === "Escape") closeOverlay(); });
+}
+
+init();
+</script>
+</body>
+</html>
