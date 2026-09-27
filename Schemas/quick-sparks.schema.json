@@ -1,5 +1,6 @@
 {
   "title": "NCS Quick Sparks",
+  "description": "Canonical output contract for the Console Quick Sparks endpoint. Exactly five disposable concept sparks for human review. Not canonical NCS ideas until the human picks one and sends it through Concept Intake (UNIFIED run_type CONCEPT_INTAKE). Runtime enforcement (exactly-5, format/genre coercion to the request's target_format/target_genre, defaulting) lives in the n8n Quick Sparks workflow; this schema describes the canonical shape. spark_id, concept, format and genre are required; working_title and why_it_works are optional and must stay short so they do not materially increase length or cost.",
   "type": "object",
   "additionalProperties": false,
   "required": ["sparks"],
@@ -13,10 +14,12 @@
         "additionalProperties": false,
         "required": ["spark_id", "concept", "format", "genre"],
         "properties": {
-          "spark_id": {"type": "integer", "minimum": 1, "maximum": 5},
-          "concept": {"type": "string", "minLength": 1},
-          "format": {"type": "string", "enum": ["FILM", "SERIES", "LIMITED_SERIES"]},
-          "genre": {"type": "string", "minLength": 1}
+          "spark_id": { "type": "integer", "minimum": 1, "maximum": 5 },
+          "concept": { "type": "string", "minLength": 1, "description": "The canonical field: a concise 1-2 sentence premise with enough of the real premise to decide if it is worth developing." },
+          "format": { "type": "string", "enum": ["FILM", "SERIES", "LIMITED_SERIES"] },
+          "genre": { "type": "string", "minLength": 1 },
+          "working_title": { "type": "string", "description": "Optional short working title. Keep brief." },
+          "why_it_works": { "type": "string", "description": "Optional single short sentence on the appeal. Keep brief." }
         }
       }
     }
