@@ -12,6 +12,7 @@ The default arc is **tell me the idea → tell me the movie → show me the arti
 - Extract the exact title, format, hook, plot paragraphs, poster tagline, rating, format descriptor, footer copy, art direction, image prompt, and slide/page instructions. Keep a copy of the source text alongside work files for comparison.
 - Preserve packet copy **verbatim**, including capitalization, punctuation, accents, and paragraph boundaries. Never silently shorten, summarize, polish, invent, or substitute copy. Place exact text with deterministic typography when image generation cannot reproduce it reliably.
 - The current user's explicit changes outrank the packet. If the packet is blank, malformed, or belongs to an older version, flag it for regeneration rather than translating legacy fields yourself.
+- The optional `suggested_audio` field is release metadata, not a fourth slide. Include the track, artist, preferred section, mood, rationale, and backup in the handoff if present. Do not assume Instagram music availability or API attachment support.
 - The caption is separate. It may ask for casting, viewing interest, or another story-native response. A dedicated engagement or traffic slide is retired. No default “LINK IN BIO.”
 
 ## Shared technical contract
@@ -47,7 +48,7 @@ Keep the NCS/page footer present because v3 requires it, but make it visually qu
 3. **Generate** key art or textures where needed. Reserve clean negative space for exact text. AI image generation is suited to imagery, not reliable spelling, complex footer typography, or surgery on an approved image.
 4. **Compose** type and repeatable editorial elements deterministically, including packet copy, rating, poster footer, NCS signature, and page numbers. Preserve source art when revising. Keep a layered or reproducible working source if practical.
 5. **Check** every line against the packet; image dimensions; paragraph breaks; number/order; text contrast; small-screen legibility; and footer alignment. Inspect each PNG individually, not only a montage.
-6. **Deliver** three numbered image files and a concise note about any unresolved packet conflict. A contact sheet may supplement review.
+6. **Deliver** the packet's audio suggestion alongside the caption and three numbered image files and a concise note about any unresolved packet conflict. A contact sheet may supplement review.
 
 ## Revision discipline
 
