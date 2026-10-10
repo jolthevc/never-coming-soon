@@ -103,7 +103,7 @@ Required:
 
 ### Copy
 
-Normally use roughly 110 to 170 words when the story supports it.
+Target 110 to 140 words for routine packets. At approximately 95 words, the approved design retains its intended body-text weight (cap height 33). Measurements suggest cap height 31 supports about 110 words, 29 about 134, 27 about 140, and the minimum legible cap height 25 about 191. Capacity depends on the actual copy and line wrapping. Past roughly 190 words the renderer returns BLOCKED: shorten copy upstream rather than shrink below the minimum or add a fourth slide.
 
 Prefer 2 to 3 short paragraphs.
 
@@ -246,13 +246,9 @@ The caption should complement the carousel rather than merely repeat Slide 2.
 
 Engagement prompts such as casting discussion or `Would you watch it?` belong naturally in the caption when useful rather than requiring a dedicated CTA slide.
 
-## 12. Suggested Instagram audio
+## 12. Instagram music suggestions
 
-Every newly generated IG packet should include `suggested_audio` as release metadata alongside the caption, not as a fourth slide or text overlay.
-
-Choose one real, identifiable track whose emotional tone, genre, and atmosphere strengthen the fictional production. Favor story-specific musical fit over generic trends. Include `song_title`, `artist`, `preferred_section` (descriptive, without invented timestamps), `mood`, `rationale`, and optional `backup_song` (song title and artist, or null). Do not invent recordings or assert their licensing status.
-
-Existing `ncs_ig_v3` packets without `suggested_audio` remain valid. Newly produced packets should include it. The publishing workflow must check actual account-specific music availability and permitted usage. If the publishing API cannot attach Instagram-licensed carousel audio, retain the recommendation for manual use; do not block the three-image carousel or silently substitute unlicensed audio.
+Each newly generated packet includes `music` with one primary song and two alternates. Choose real, well-known commercially released clean recordings for emotional tone rather than literal subject matter. `primary` contains `track`, `artist`, `why` (one line, maximum 200 characters), and optional `start_hint` timestamp only when confident. Each alternate has `track` and `artist`. These are human-facing recommendations, not public carousel copy, and availability on Instagram varies by account and region. Choose the song inside Instagram's native music library; the carousel publishing API does not provide Instagram-library audio attachment. Existing packets without `music` remain valid.
 
 ## 13. Integrity
 
@@ -278,7 +274,7 @@ Before persistence, verify:
 - Slide 2 does not depend on a bespoke cinematic image
 - Slide 3 works as a genuine poster payoff
 - every slide has the NCS footer and correct page number
-- new packets include story-appropriate suggested audio with an identifiable artist and track
+- new packets include one tone-appropriate primary music suggestion and two alternates
 - all exact public copy is final and execution-ready
 - the final object matches `Schemas/ig-asset-packet.schema.json`
 
