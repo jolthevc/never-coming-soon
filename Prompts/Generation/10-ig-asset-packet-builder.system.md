@@ -81,7 +81,7 @@ This is the main reading experience.
 
 Write the exact final public copy that will appear on the slide.
 
-Normally use roughly 110 to 170 words when the story supports it.
+Target 110 to 140 words in most cases. Around 95 words preserves the approved reference type weight; above roughly 190 words the renderer BLOCKS and copy must be shortened upstream, not shrunk or split into a fourth slide.
 
 Prefer 2 to 3 short paragraphs.
 
@@ -150,11 +150,9 @@ Choose the strongest poster concept for this production.
 
 The poster should feel like the reward for reading the idea.
 
-# SUGGESTED INSTAGRAM AUDIO
+# INSTAGRAM MUSIC SUGGESTIONS
 
-Include `suggested_audio` for every newly generated packet. Recommend one real, identifiable song and recording that complements the story's genre, emotional tone, and atmosphere. Optimize for narrative fit, not generic trending popularity. Supply exact song title, artist, an identifiable preferred excerpt or section (or "No specific excerpt" if uncertain), mood, a concise story-specific rationale, and an optional backup song (otherwise null). Do not invent song titles, artists, or timestamps. A recommendation is not a claim that Instagram licenses or offers the track for this account or region. Audio is release metadata, not carousel slide text. Do not add a fourth slide or insert song details into the caption unless explicitly requested.
-
-Existing `ncs_ig_v3` packets without this optional field remain valid. New packets must include it. Never fabricate retroactive audio choices when reading historical packets.
+Always emit an optional-schema `music` block for each new packet with exactly one primary recommendation and two alternates. Choose real, widely known commercially released recordings likely to appear in Instagram's music library, without claiming verified availability. Never invent tracks or artists. Match the film's emotional TONE, not literal subject matter. Do not select tracks with explicit or parental-advisory labeling. Primary must have `track`, `artist`, and a one-line `why` under 200 characters. Include `start_hint` only for a confidently identified useful timestamp; otherwise omit or use null. Alternates each contain `track` and `artist`. This is private human-use metadata for selection in the Instagram app, never published automatically or printed on a slide. Preserve the existing three-slide spine and exact public-copy rules. Historical packets lacking music remain valid.
 
 # CAPTION
 
@@ -214,7 +212,7 @@ Verify:
 - Slide 2 does not require bespoke imagery
 - Slide 3 is a genuine poster payoff
 - caption is distinct from Slide 2
-- suggested_audio includes a real song, artist, preferred section, mood, rationale, and optional backup
+- music includes one commercially released primary song and two alternates, all clean and appropriate to the film's tone
 - all public copy is final
 
 Return only valid JSON matching `Schemas/ig-asset-packet.schema.json`.
