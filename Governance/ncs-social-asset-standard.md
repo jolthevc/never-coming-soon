@@ -246,7 +246,15 @@ The caption should complement the carousel rather than merely repeat Slide 2.
 
 Engagement prompts such as casting discussion or `Would you watch it?` belong naturally in the caption when useful rather than requiring a dedicated CTA slide.
 
-## 12. Integrity
+## 12. Suggested Instagram audio
+
+Every newly generated IG packet should include `suggested_audio` as release metadata alongside the caption, not as a fourth slide or text overlay.
+
+Choose one real, identifiable track whose emotional tone, genre, and atmosphere strengthen the fictional production. Favor story-specific musical fit over generic trends. Include `song_title`, `artist`, `preferred_section` (descriptive, without invented timestamps), `mood`, `rationale`, and optional `backup_song` (song title and artist, or null). Do not invent recordings or assert their licensing status.
+
+Existing `ncs_ig_v3` packets without `suggested_audio` remain valid. Newly produced packets should include it. The publishing workflow must check actual account-specific music availability and permitted usage. If the publishing API cannot attach Instagram-licensed carousel audio, retain the recommendation for manual use; do not block the three-image carousel or silently substitute unlicensed audio.
+
+## 13. Integrity
 
 All public copy must:
 
@@ -257,7 +265,7 @@ All public copy must:
 - avoid false real-world participation claims
 - avoid explicit spoiler-management language
 
-## 13. Packet quality test
+## 14. Packet quality test
 
 Before persistence, verify:
 
@@ -270,6 +278,7 @@ Before persistence, verify:
 - Slide 2 does not depend on a bespoke cinematic image
 - Slide 3 works as a genuine poster payoff
 - every slide has the NCS footer and correct page number
+- new packets include story-appropriate suggested audio with an identifiable artist and track
 - all exact public copy is final and execution-ready
 - the final object matches `Schemas/ig-asset-packet.schema.json`
 
