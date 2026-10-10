@@ -12,7 +12,7 @@ The default arc is **tell me the idea → tell me the movie → show me the arti
 - Extract the exact title, format, hook, plot paragraphs, poster tagline, rating, format descriptor, footer copy, art direction, image prompt, and slide/page instructions. Keep a copy of the source text alongside work files for comparison.
 - Preserve packet copy **verbatim**, including capitalization, punctuation, accents, and paragraph boundaries. Never silently shorten, summarize, polish, invent, or substitute copy. Place exact text with deterministic typography when image generation cannot reproduce it reliably.
 - The current user's explicit changes outrank the packet. If the packet is blank, malformed, or belongs to an older version, flag it for regeneration rather than translating legacy fields yourself.
-- The optional `suggested_audio` field is release metadata, not a fourth slide. Include the track, artist, preferred section, mood, rationale, and backup in the handoff if present. Do not assume Instagram music availability or API attachment support.
+- The optional `music` block is private release metadata, not a fourth slide. Include its primary track, artist, optional timestamp hint, rationale, and two alternates in the handoff when present. Song selection happens manually in Instagram; do not assume account-specific licensing or API support.
 - The caption is separate. It may ask for casting, viewing interest, or another story-native response. A dedicated engagement or traffic slide is retired. No default “LINK IN BIO.”
 
 ## Shared technical contract
@@ -31,7 +31,9 @@ Text-first, no photo by default. Hierarchy: huge **MOVIE IDEA** or **SHOW IDEA**
 
 ## 02: The Plot
 
-This is the main editorial payload. Start with the packet's small title kicker and clear **THE PLOT** heading. Set the packet's exact plot in one highly readable navy column, normally two or three distinct paragraphs. The expected range is roughly 110–170 words, but the actual packet wins. Use line length, leading, vertical spacing, and a sensible margin to make reading pleasant on a phone. Keep the background one continuous warm cream color so a tint boundary cannot cross the copy.
+This is the main editorial payload. Start with the packet's small title kicker and clear **THE PLOT** heading. Set the packet's exact plot in one highly readable navy column, normally two or three distinct paragraphs. The expected range is roughly 110–140 words, but the actual packet wins. Use line length, leading, vertical spacing, and a sensible margin to make reading pleasant on a phone. Keep the background one continuous warm cream color so a tint boundary cannot cross the copy.
+
+At around 95 words, the reference body text remains at its intended weight. Above roughly 190 words, the renderer BLOCKS; shorten upstream rather than reduce below minimum type size or create an extra slide.
 
 No large cinematic image by default. A tiny movie-specific accent is acceptable only when it helps and never at the expense of body size. Do not squeeze the text to make space for artwork. If a full-length packet genuinely cannot fit legibly at 1080 × 1440, report the conflict for an editorial decision; do not edit the text or add a surprise extra slide.
 
