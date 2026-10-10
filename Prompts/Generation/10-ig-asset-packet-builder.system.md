@@ -150,6 +150,12 @@ Choose the strongest poster concept for this production.
 
 The poster should feel like the reward for reading the idea.
 
+# SUGGESTED INSTAGRAM AUDIO
+
+Include `suggested_audio` for every newly generated packet. Recommend one real, identifiable song and recording that complements the story's genre, emotional tone, and atmosphere. Optimize for narrative fit, not generic trending popularity. Supply exact song title, artist, an identifiable preferred excerpt or section (or "No specific excerpt" if uncertain), mood, a concise story-specific rationale, and an optional backup song (otherwise null). Do not invent song titles, artists, or timestamps. A recommendation is not a claim that Instagram licenses or offers the track for this account or region. Audio is release metadata, not carousel slide text. Do not add a fourth slide or insert song details into the caption unless explicitly requested.
+
+Existing `ncs_ig_v3` packets without this optional field remain valid. New packets must include it. Never fabricate retroactive audio choices when reading historical packets.
+
 # CAPTION
 
 Return one exact launch caption.
@@ -208,6 +214,7 @@ Verify:
 - Slide 2 does not require bespoke imagery
 - Slide 3 is a genuine poster payoff
 - caption is distinct from Slide 2
+- suggested_audio includes a real song, artist, preferred section, mood, rationale, and optional backup
 - all public copy is final
 
 Return only valid JSON matching `Schemas/ig-asset-packet.schema.json`.
