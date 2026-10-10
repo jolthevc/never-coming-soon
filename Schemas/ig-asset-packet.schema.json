@@ -17,7 +17,9 @@
   "properties": {
     "version": {
       "type": "string",
-      "enum": ["ncs_ig_v3"]
+      "enum": [
+        "ncs_ig_v3"
+      ]
     },
     "title": {
       "type": "string",
@@ -25,11 +27,18 @@
     },
     "format": {
       "type": "string",
-      "enum": ["FILM", "SERIES", "LIMITED_SERIES"]
+      "enum": [
+        "FILM",
+        "SERIES",
+        "LIMITED_SERIES"
+      ]
     },
     "idea_label": {
       "type": "string",
-      "enum": ["MOVIE IDEA", "SHOW IDEA"]
+      "enum": [
+        "MOVIE IDEA",
+        "SHOW IDEA"
+      ]
     },
     "genre": {
       "type": "string",
@@ -55,11 +64,16 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["hook"]
+          "enum": [
+            "hook"
+          ]
         },
         "label": {
           "type": "string",
-          "enum": ["MOVIE IDEA", "SHOW IDEA"]
+          "enum": [
+            "MOVIE IDEA",
+            "SHOW IDEA"
+          ]
         },
         "title": {
           "type": "string",
@@ -76,11 +90,15 @@
         },
         "footer_brand": {
           "type": "string",
-          "enum": ["Never Coming Soon"]
+          "enum": [
+            "Never Coming Soon"
+          ]
         },
         "page_number": {
           "type": "string",
-          "enum": ["01 / 03"]
+          "enum": [
+            "01 / 03"
+          ]
         }
       }
     },
@@ -99,11 +117,15 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["plot"]
+          "enum": [
+            "plot"
+          ]
         },
         "section_label": {
           "type": "string",
-          "enum": ["THE PLOT"]
+          "enum": [
+            "THE PLOT"
+          ]
         },
         "title_kicker": {
           "type": "string",
@@ -120,11 +142,15 @@
         },
         "footer_brand": {
           "type": "string",
-          "enum": ["Never Coming Soon"]
+          "enum": [
+            "Never Coming Soon"
+          ]
         },
         "page_number": {
           "type": "string",
-          "enum": ["02 / 03"]
+          "enum": [
+            "02 / 03"
+          ]
         }
       }
     },
@@ -146,7 +172,9 @@
       "properties": {
         "type": {
           "type": "string",
-          "enum": ["poster"]
+          "enum": [
+            "poster"
+          ]
         },
         "title": {
           "type": "string",
@@ -178,11 +206,69 @@
         },
         "footer_brand": {
           "type": "string",
-          "enum": ["Never Coming Soon"]
+          "enum": [
+            "Never Coming Soon"
+          ]
         },
         "page_number": {
           "type": "string",
-          "enum": ["03 / 03"]
+          "enum": [
+            "03 / 03"
+          ]
+        }
+      }
+    },
+    "suggested_audio": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "song_title",
+        "artist",
+        "preferred_section",
+        "mood",
+        "rationale"
+      ],
+      "properties": {
+        "song_title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artist": {
+          "type": "string",
+          "minLength": 1
+        },
+        "preferred_section": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mood": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "backup_song": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "required": [
+            "song_title",
+            "artist"
+          ],
+          "properties": {
+            "song_title": {
+              "type": "string",
+              "minLength": 1
+            },
+            "artist": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
         }
       }
     }
