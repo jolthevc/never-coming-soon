@@ -271,6 +271,67 @@
           }
         }
       }
+    },
+    "music": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary"
+      ],
+      "properties": {
+        "primary": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "track",
+            "artist",
+            "why"
+          ],
+          "properties": {
+            "track": {
+              "type": "string",
+              "minLength": 1
+            },
+            "artist": {
+              "type": "string",
+              "minLength": 1
+            },
+            "start_hint": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "why": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            }
+          }
+        },
+        "alternates": {
+          "type": "array",
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "track",
+              "artist"
+            ],
+            "properties": {
+              "track": {
+                "type": "string",
+                "minLength": 1
+              },
+              "artist": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
