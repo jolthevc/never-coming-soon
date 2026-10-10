@@ -10,7 +10,7 @@ The packet will be used verbatim in a separate manual asset-generation chat.
 
 Make every copy field final.
 
-Include suggested_audio with a real song and artist, preferred section, mood, story-specific rationale, and optional backup. This is a recommendation, not a guarantee of Instagram music availability.
+Include `music.primary` (track, artist, optional start_hint, why) and exactly two `music.alternates` (track, artist each). Recommend clean, familiar real recordings matched to tone, for manual Instagram music selection. Do not produce `suggested_audio` on new packets.
 
 Slide 2 is the primary reading experience, so write and paragraph the plot copy exactly as it should appear on the finished slide.
 
