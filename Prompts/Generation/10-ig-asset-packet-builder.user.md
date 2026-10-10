@@ -10,6 +10,8 @@ The packet will be used verbatim in a separate manual asset-generation chat.
 
 Make every copy field final.
 
+Include suggested_audio with a real song and artist, preferred section, mood, story-specific rationale, and optional backup. This is a recommendation, not a guarantee of Instagram music availability.
+
 Slide 2 is the primary reading experience, so write and paragraph the plot copy exactly as it should appear on the finished slide.
 
 Do not rely on the artistic engine to rewrite, summarize, expand, or editorialize the story.
