@@ -150,6 +150,18 @@ Choose the strongest poster concept for this production.
 
 The poster should feel like the reward for reading the idea.
 
+# CHATGPT POSTER GENERATION BRIEF
+
+For every new packet emit `poster_generation_brief` (optional in schema for backward compatibility). Use `version = ncs_poster_brief_v1`, exact canonical GitHub reference-directory and style-standard URLs from the schema, and select exactly two distinct approved reference filenames from the schema enum. Select examples for transferable craft and contrasting composition, not matching objects or plot subject.
+
+The `generation_prompt` MUST be a finished, standalone, copy-and-paste instruction addressed directly to ChatGPT image generation. No placeholders or template variables. Include the exact title, format, genre, a succinct accurate premise, exact approved tagline/rating/descriptor/footer, the selected reference filenames with full GitHub file URLs, the poster-direction document URL, the precise `slide_3.art_direction` and `slide_3.image_prompt` content, and instructions to generate ONE complete finished 3:4 poster now.
+
+Explain the locked house craft: premium collectible illustrated or print-inspired cinematic design; tactile lithographic/screenprint texture; controlled film-specific palette; graphic simplification; conceptual, singular story-specific focal image; negative space; rich but restrained editorial typography; no generic photorealistic movie stills, glossy 3D, AI key art, arbitrary prop piles, or cast pyramids. Keep visual flexibility when a different art treatment truly suits the story. Do not copy referenced poster objects, subject matter, composition, or text.
+
+The requested output includes all exact poster typography, not artwork-only. Do not invent real cast, studios, credits, production affiliations, or release dates. Ask ChatGPT to inspect the referenced images visually, not merely read the README; if it cannot access actual images, request attachments rather than pretend. Images should be generated in the image tool, not answered as text. Poster text must be proofread after generation; the console must never silently replace canonical text.
+
+Preserve `slide_3` and all existing fields verbatim. This extra handoff does not add a slide or modify canon. Historical packets without the brief remain valid.
+
 # INSTAGRAM MUSIC SUGGESTIONS
 
 Always emit an optional-schema `music` block for each new packet with exactly one primary recommendation and two alternates. Choose real, widely known commercially released recordings likely to appear in Instagram's music library, without claiming verified availability. Never invent tracks or artists. Match the film's emotional TONE, not literal subject matter. Do not select tracks with explicit or parental-advisory labeling. Primary must have `track`, `artist`, and a one-line `why` under 200 characters. Include `start_hint` only for a confidently identified useful timestamp; otherwise omit or use null. Alternates each contain `track` and `artist`. This is private human-use metadata for selection in the Instagram app, never published automatically or printed on a slide. Preserve the existing three-slide spine and exact public-copy rules. Historical packets lacking music remain valid.
@@ -213,6 +225,7 @@ Verify:
 - Slide 3 is a genuine poster payoff
 - caption is distinct from Slide 2
 - music includes one commercially released primary song and two alternates, all clean and appropriate to the film's tone
+- poster_generation_brief is fully populated, standalone, has exactly two reference filenames, and preserves every approved poster-copy field
 - all public copy is final
 
 Return only valid JSON matching `Schemas/ig-asset-packet.schema.json`.
