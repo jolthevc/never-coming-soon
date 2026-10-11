@@ -43,6 +43,14 @@ The payoff is a poster somebody could save or share on its own. Develop a singul
 
 Keep the NCS/page footer present because v3 requires it, but make it visually quiet enough that the poster still reads as the fictional production's artifact.
 
+## Console-first ChatGPT poster workflow
+
+The current default deliberately renders Slides 1 and 2 in the HTML/CSS console, then uses ChatGPT to generate ONE complete illustrated film poster including its exact typography. The packet's `poster_generation_brief.generation_prompt` is ready to copy. The console provides direct links to two selected approved reference PNGs and the poster-direction standard. If ChatGPT cannot inspect the linked actual PNGs, attach them manually. A pasted URL alone is not guaranteed visual conditioning.
+
+The user uploads an approved finished poster into the console, which treats it as Slide 3, without overlaying duplicate typography. Verify exact title, tagline, rating, genre descriptor, footer, and NCS page marker. Render a final 1080 x 1440 output, and package three ordered PNGs, exact caption, and music suggestions in both a preview and downloadable package. The image upload is the intentional human approval step; don't require another approval of Slides 1 and 2 unless they fail layout QA. Retain drafts and uploaded posters on refresh.
+
+The earlier artwork-only automatic image-generation approach is an optional future path, not this production default.
+
 ## Production workflow
 
 1. **Read** the v3 packet, this guide, and the approved example limitations. Identify exact fields and conflicts before designing.
