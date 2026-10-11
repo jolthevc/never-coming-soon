@@ -332,6 +332,56 @@
           }
         }
       }
+    },
+    "poster_generation_brief": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "reference_directory",
+        "style_standard",
+        "primary_references",
+        "generation_prompt"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "enum": [
+            "ncs_poster_brief_v1"
+          ]
+        },
+        "reference_directory": {
+          "type": "string",
+          "const": "https://github.com/jolthevc/never-coming-soon/tree/main/AssetGeneration/examples/approved-posters"
+        },
+        "style_standard": {
+          "type": "string",
+          "const": "https://github.com/jolthevc/never-coming-soon/blob/main/AssetGeneration/poster-direction.md"
+        },
+        "primary_references": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "sundays-2-4.png",
+              "five-hundred-bucks.png",
+              "doorbuster.png",
+              "the-membership.png",
+              "saturday-league.png",
+              "off-season.png",
+              "one-eighty-nights.png"
+            ]
+          }
+        },
+        "generation_prompt": {
+          "type": "string",
+          "minLength": 300,
+          "maxLength": 10000
+        }
+      }
     }
   }
 }
