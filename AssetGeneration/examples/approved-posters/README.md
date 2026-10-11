@@ -22,4 +22,4 @@ For reference-guided API generation, pass the actual image bytes, not just a fil
 
 ## Asset status
 
-The seven approved PNG originals are packaged as `ncs-approved-poster-references.zip` for upload to this directory. Binary assets are not yet committed here. Do not claim they are available by repository path until uploaded.
+The seven approved PNGs in this folder are the reference library. For each production, select two contrastive examples and provide direct links to the actual PNGs. These are style and professional-quality calibration references, not objects, narratives, or layouts to copy. Verify actual binary availability before promising the images can be inspected.
