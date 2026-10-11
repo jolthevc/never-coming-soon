@@ -250,7 +250,15 @@ Engagement prompts such as casting discussion or `Would you watch it?` belong na
 
 Each newly generated packet includes `music` with one primary song and two alternates. Choose real, well-known commercially released clean recordings for emotional tone rather than literal subject matter. `primary` contains `track`, `artist`, `why` (one line, maximum 200 characters), and optional `start_hint` timestamp only when confident. Each alternate has `track` and `artist`. These are human-facing recommendations, not public carousel copy, and availability on Instagram varies by account and region. Choose the song inside Instagram's native music library; the carousel publishing API does not provide Instagram-library audio attachment. Existing packets without `music` remain valid.
 
-## 13. Integrity
+## 13. ChatGPT poster handoff and console assembly
+
+New packets include `poster_generation_brief`, a copy-ready ChatGPT image-generation instruction with two specifically selected approved poster references, canonical GitHub links, full story-specific art direction, exact approved poster text, and the house style constraints. Unlike the earlier automated artwork-only API experiment, ChatGPT produces ONE finished poster with integrated typography. The human approves it; the console takes the uploaded poster as Slide 3 without recompositing its title or other poster copy.
+
+The console should implement one linear production experience: choose a ready idea and click Create; render Slides 1 and 2 immediately from unchanged canonical packet text and locked HTML/CSS; copy the standalone poster prompt to the clipboard as part of an explicitly labeled user gesture; offer Open ChatGPT and reference links; then advance to a waiting-for-poster upload view. A browser cannot automatically inject the clipboard into a different website or recover a generated image from a separate ChatGPT conversation. The user pastes the prompt and uploads the approved finished PNG into NCS. After upload, the console checks aspect ratio, resolution, legibility and exact poster copy, then packages the three numbered 1080 x 1440 PNGs, caption, and `music` suggestions for handoff/download. Keep all states recoverable on refresh; never silently regenerate or rewrite content.
+
+Reference images must actually exist on GitHub and be visually inspected when possible. A link alone does not guarantee ChatGPT will ingest the bytes; the console should link to direct PNGs and allow the user to attach them in ChatGPT if necessary. No direct API poster generation is required in this path.
+
+## 14. Integrity
 
 All public copy must:
 
@@ -261,7 +269,7 @@ All public copy must:
 - avoid false real-world participation claims
 - avoid explicit spoiler-management language
 
-## 14. Packet quality test
+## 15. Packet quality test
 
 Before persistence, verify:
 
@@ -275,6 +283,7 @@ Before persistence, verify:
 - Slide 3 works as a genuine poster payoff
 - every slide has the NCS footer and correct page number
 - new packets include one tone-appropriate primary music suggestion and two alternates
+- new packets include a complete standalone ChatGPT poster_generation_brief with two reference filenames
 - all exact public copy is final and execution-ready
 - the final object matches `Schemas/ig-asset-packet.schema.json`
 
