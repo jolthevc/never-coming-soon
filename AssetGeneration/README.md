@@ -8,7 +8,8 @@ Read in this order:
 
 1. [Production playbook](production-playbook.md): intake, copy authority, layouts, production, QA, and revisions.
 2. [Poster direction](poster-direction.md): the iconic image standard and convincing poster furniture.
-3. [Shared Leash reference](examples/shared-leash/README.md): images and their exact approval limits.
+3. [Approved poster collection](examples/approved-posters/README.md): complete poster visual calibration for ChatGPT manual generation.
+4. [Shared Leash reference](examples/shared-leash/README.md): images and their exact approval limits.
 
 ## Source precedence
 
@@ -32,6 +33,10 @@ The current upstream source of truth is:
 - `Prompts/Generation/10-ig-asset-packet-builder.system.md`
 
 Do not translate older packets into v3 yourself. If a Sheet row has a blank packet or a legacy packet such as `ncs_ig_v1` or `ncs_ig_v2`, flag it for regeneration rather than inventing missing hook or plot copy.
+
+## Current console-first production handoff
+
+The preferred flow is: click Create on an idea in the NCS console; the console renders Slides 1 and 2 with locked HTML/CSS; copy the packet's `poster_generation_brief.generation_prompt`; open ChatGPT, paste and generate a complete Slide 3 poster; return and upload the approved image; receive a single three-image carousel package with exact caption and music suggestions. The console should provide individual PNG downloads and a ZIP. Do not expect ChatGPT to read clipboard or automatically transfer files between browser tabs. If visual references are not actually accessible to ChatGPT, attach two approved reference PNGs before generation. This path does not call n8n or the image API for artwork generation.
 
 ## Starting a new chat
 
